@@ -1,2 +1,35 @@
 @import "tailwindcss";
 
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Step rotation (90° every 4s) */
+@keyframes rotateSteps {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tailwind-style utility classes */
+@layer utilities {
+  .animate-rotate-slow {
+    animation: rotateSlow 12s linear infinite;
+  }
+
+  .animate-rotate-steps {
+    animation: rotateSteps 16s ease-in-out infinite;
+  }
+
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+}

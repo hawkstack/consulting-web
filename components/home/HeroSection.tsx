@@ -5,7 +5,6 @@ export default function HeroSection(): JSX.Element {
   return (
     <section className="relative h-[568px] bg-gradient-to-r from-[#081b3d] via-[#0b1f4d] to-[#091d44]">
       <div className="max-w-5xl mx-18 h-full px-4 grid grid-cols-1 lg:grid-cols-2 items-center gap-">
-
         {/* LEFT CONTENT */}
         <div className="text-white z-10">
           <h1 className="font-lexend text-[40px] leading-[50px] font-normal tracking-normal mb-5">
@@ -14,8 +13,13 @@ export default function HeroSection(): JSX.Element {
           </h1>
 
           <p className="font-poppins text-[14px] leading-[1.5] tracking-[-0.03em] font-normal mb-10">
-            <span className="block">HawkStack modernizes enterprise applications, automates operations,</span>
-            <span className="block">and builds secure, scalable cloud-native Kubernetes platforms.</span>
+            <span className="block">
+              HawkStack modernizes enterprise applications, automates
+              operations,
+            </span>
+            <span className="block">
+              and builds secure, scalable cloud-native Kubernetes platforms.
+            </span>
           </p>
 
           <div className="flex gap-4">
@@ -28,7 +32,20 @@ export default function HeroSection(): JSX.Element {
             </button>
           </div>
         </div>
+        {/* LEFT VERTICAL NAV (UP / DOWN) */}
+        <div className="absolute left-10 top-62 -translate-y-1/2 z-30 flex flex-col items-center gap-18">
+          <button
+            className="w-6 h-6 rounded-full border border-white
+            flex items-center justify-center text-white ">
+            ↑
+          </button>
 
+          <button
+            className="w-6 h-6 rounded-full border border-white
+            flex items-center justify-center text-white">
+            ↓
+          </button>
+        </div>
         {/* RIGHT IMAGE (CLIPPED & SAFE) */}
         <div className="relative  h-full w-[825px] overflow-hidden">
           <img
@@ -40,7 +57,6 @@ export default function HeroSection(): JSX.Element {
           {/* GRADIENT FADE */}
           <div className="absolute inset-y-0 left-0 w-[35%] bg-gradient-to-r from-[#0B1F4B] to-transparent pointer-events-none" />
         </div>
-
       </div>
     </section>
   );

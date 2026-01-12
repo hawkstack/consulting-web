@@ -2,6 +2,7 @@
 import React from "react";
 import { seoMeta } from "../components/seo/seoMeta"
 import HeroSection from "@/components/home/HeroSection";
+import RotatingCircle from "@/components/circle-rotation/Rotating-circle";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -12,7 +13,10 @@ export const metadata = seoMeta({
 
 const Home = () => {
   return (
+    <>
     <HeroSection />
+    <RotatingCircle />
+    </>
   )
 }
 export default Home;
