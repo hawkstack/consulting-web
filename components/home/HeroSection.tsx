@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { JSX } from "react";
 
 export default function HeroSection(): JSX.Element {
@@ -6,7 +5,7 @@ export default function HeroSection(): JSX.Element {
     <section className="relative h-[568px] bg-gradient-to-r from-[#081b3d] via-[#0b1f4d] to-[#091d44]">
       <div className="max-w-5xl mx-18 h-full px-4 grid grid-cols-1 lg:grid-cols-2 items-center gap-">
         {/* LEFT CONTENT */}
-        <div className="text-white z-10">
+        <div className="text-white z-10 w-[590px] h-[284.32px]">
           <h1 className="font-lexend text-[40px] leading-[50px] font-normal tracking-normal mb-5">
             <span className="block">Digital Transformation Built</span>
             <span className="block">on Enterprise Platforms</span>
@@ -49,7 +48,7 @@ export default function HeroSection(): JSX.Element {
         {/* RIGHT IMAGE (CLIPPED & SAFE) */}
         <div className="relative  h-full w-[825px] overflow-hidden">
           <img
-            src="/hero-visual.png"
+            src="/images/hero-visual.webp"
             alt="Enterprise Platform"
             className="h-[662px] w-[860px] object-cover scale-110"
           />
