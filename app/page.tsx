@@ -1,6 +1,7 @@
 // app/page.tsx
 import React from "react";
 import { seoMeta } from "../components/seo/seoMeta"
+import HeroSection from "@/components/home/HeroSection";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -11,7 +12,7 @@ export const metadata = seoMeta({
 
 const Home = () => {
   return (
-    <div>Hiiii</div>
+    <HeroSection />
   )
 }
 export default Home;
