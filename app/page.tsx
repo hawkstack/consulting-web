@@ -1,7 +1,6 @@
 // app/page.tsx
 import React from "react";
 import { seoMeta } from "../components/seo/seoMeta";
-import { Header } from "@/components/layout/Header";
 import HeroSection from "@/components/home/HeroSection";
 import VisionApproach from "@/components/home/VisionApproach";
 import WhyHawkStack from "@/components/home/WhyHawkStack";
@@ -12,7 +11,6 @@ import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
 import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactCTA";
-import { Footer } from "@/components/layout/Footer";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -24,7 +22,6 @@ export const metadata = seoMeta({
 const Home = () => {
   return (
     <div>
-      <Header />
       <HeroSection />
       <VisionApproach />
       <WhyHawkStack />
@@ -35,7 +32,6 @@ const Home = () => {
       <WhyWorkWithUs />
       <Industries />
       <ContactCTA />
-      <Footer />
     </div>
   );
 };
