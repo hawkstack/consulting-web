@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font utility */
+.font-lexend {
+  font-family: var(--font-lexend-deca), sans-serif;
+}
+
+/* Improve Figma-like rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* carousel css start */
+.partner-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 80px;
+  width: max-content;
+  animation: partner-scroll 20s linear infinite;
+}
+
+.partner-logo {
+  height: 188px;
+  width: auto;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+/* carousel css end */
+
+@keyframes partner-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
