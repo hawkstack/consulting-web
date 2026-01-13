@@ -1,10 +1,8 @@
 // app/page.tsx
 import React from "react";
-import { seoMeta } from "../components/seo/seoMeta"
-import HeroSection from "@/components/home/HeroSection";
-import RotatingCircle from "@/components/circle-rotation/Rotating-circle";
 import { seoMeta } from "../components/seo/seoMeta";
 import HeroSection from "@/components/home/HeroSection";
+import RotatingCircle from "@/components/circle-rotation/Rotating-circle";
 import VisionApproach from "@/components/home/VisionApproach";
 import WhyHawkStack from "@/components/home/WhyHawkStack";
 import OurSolutions from "@/components/home/OurSolutions";
@@ -24,14 +22,9 @@ export const metadata = seoMeta({
 
 const Home = () => {
   return (
-    <>
-    <HeroSection />
-    <RotatingCircle />
-    </>
-  )
-}
     <div>
       <HeroSection />
+      <RotatingCircle />
       <VisionApproach />
       <WhyHawkStack />
       <OurSolutions />
