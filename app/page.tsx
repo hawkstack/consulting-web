@@ -2,6 +2,7 @@
 import React from "react";
 import { seoMeta } from "../components/seo/seoMeta"
 import WhyHawkstackCircle from "@/components/whyHawkstack/WhyHawkstackSVG";
+import WhyHawkstackSction from "@/components/whyHawkstack/whyHawkstackSction";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -12,7 +13,9 @@ export const metadata = seoMeta({
 
 const Home = () => {
   return (
-    <WhyHawkstackCircle />
+    <>
+      <WhyHawkstackSction title={"Why HawkStack"} discription={"HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."} />
+    </>
   )
 }
 export default Home;
