@@ -19,7 +19,11 @@ body {
   flex-wrap: nowrap;
   gap: 80px;
   width: max-content;
-  animation: partner-scroll 20s linear infinite;
+  animation: partner-scroll 12s linear infinite;
+}
+
+.partner-track:hover {
+  animation-play-state: paused;
 }
 
 .partner-logo {
