@@ -49,7 +49,7 @@ const WhyHawkstackSvg: React.FC = () => {
       {/* Center white circle ABOVE segments */}
       <div className="absolute inset-0 z-[100] pointer-events-none">
         <div className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none">
-          <div className="w-[242.16px] h-[242.16px] rounded-full bg-white shadow-[0_10px_40px_rgba(0,0,0,0.55)]" />
+          <div className="w-[242.16px] h-[242.16px] rounded-full bg-white shadow-[0_10px_40px_rgba(0,0,0,0.55)] pointer-events-none" />
         </div>
 
         {/* TOP white/grey circle */}
@@ -75,28 +75,31 @@ const WhyHawkstackSvg: React.FC = () => {
         </div>
 
         {/* Center logo/image (hover swap) */}
-        <div className="absolute inset-0 z-50 flex items-center justify-center">
-          {/* NON-interactive circle area */}
-          <div className="pointer-events-none absolute inset-0" />
+        <div
+          className="relative top-40 left-40 z-70 w-[112px] h-[110px] pointer-events-auto"
+          onMouseEnter={() => setIsCenterHovered(true)}
+          onMouseLeave={() => setIsCenterHovered(false)}>
+          {/* Default image */}
+          <Image
+            src="/images/image.hover.webp"
+            alt="center logo"
+            fill
+            className={`absolute inset-0 object-contain transition-opacity duration-300 ${
+              isCenterHovered ? "opacity-0" : "opacity-100"
+            }`}
+            priority
+          />
 
-          {/* Interactive image ONLY */}
-          <div
-            className="relative pointer-events-auto hover:scale-130"
-            onMouseEnter={() => setIsCenterHovered(true)}
-            onMouseLeave={() => setIsCenterHovered(false)}>
-            <Image
-              src={
-                isCenterHovered
-                  ? "/images/image.hover.webp"
-                  : "/images/image.circle.webp"
-              }
-              alt="center logo"
-              width={112}
-              height={110}
-              className="object-contain transition-opacity duration-300"
-              priority
-            />
-          </div>
+          {/* Hover image */}
+          <Image
+            src="/images/image.circle.webp"
+            alt="center logo hover"
+            fill
+            className={`absolute inset-0 object-contain transition-opacity duration-300 ${
+              isCenterHovered ? "opacity-100" : "opacity-0"
+            }`}
+            priority
+          />
         </div>
       </div>
 
