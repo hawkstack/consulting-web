@@ -1,7 +1,64 @@
-import React from "react";
+// WhatWeDeliver.tsx
 
-const WhatWeDeliver = () => {
-  return <div></div>;
-};
+const deliverItems = [
+  {
+    title: "App Modernization",
+    desc: "We modernize applications using cloud-native technologies.",
+  },
+  {
+    title: "KubeVirt",
+    desc: "We help you unify VMs and containers on a single platform.",
+  },
+  {
+    title: "Cloud Platform Operations",
+    desc: "We manage, optimize and support enterprise cloud platforms.",
+  },
+  {
+    title: "Automation",
+    desc: "We design and implement automation for faster delivery.",
+  },
+  {
+    title: "Consulting Service",
+    desc: "We guide enterprises through complex cloud journeys.",
+  },
+  {
+    title: "Kubernetes as a Service (KaaS)",
+    desc: "We modernize applications using managed Kubernetes platforms.",
+  },
+];
 
-export default WhatWeDeliver;
+export default function WhatWeDeliver() {
+  return (
+    <section className="h-[837px] pt-24 bg-gradient-to-b from-[#000000] to-[#04092E]">
+      {/* Heading */}
+      <div className="max-w-[1200px] mx-auto text-center mb-20 px-4">
+        <h2 className="font-lexend text-[40px] font-normal leading-[150%] tracking-[-0.03em] text-[#FFFFFF] mb-[-10]">
+          What We Deliver
+        </h2>
+
+        <p className="font-lexend text-[16px] font-normal leading-[125%] tracking-[0] text-center max-w-[720px] mx-auto text-[#FFFFFF] mb-[70]">
+          End-to-end cloud and DevOps solutions tailored for modern enterprise
+          needs.
+        </p>
+      </div>
+
+      {/* GRID */}
+      <div className="max-w-[1300px] mx-auto px-4 grid grid-cols-3 gap-x-[10px] gap-y-[70px]">
+        {deliverItems.map((item, index) => (
+          <div
+            key={index}
+            className="w-[406px] h-[247px] rounded-[16px] p-8 bg-gradient-to-b from-[#0F172B] to-[#1D293D] border border-white/10 backdrop-blur-md"
+          >
+            <h3 className="font-lexend text-[24px] font-medium leading-[27px] tracking-[-0.44px] mb-3 mx-[25] text-[#FFFFFF]">
+              {item.title}
+            </h3>
+
+            <p className="font-lexend text-[16px] font-medium leading-[27px] tracking-[-0.44px] mx-[25] text-[#90A1B9]">
+              {item.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
