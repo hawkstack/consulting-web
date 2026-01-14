@@ -32,6 +32,7 @@ const SEGMENT_POSITIONS = {
 };
 
 const WhyHawkstackSvg: React.FC = () => {
+  const [isCenterHovered, setIsCenterHovered] = useState(false);
   const [activeSegment, setActiveSegment] = React.useState<
     keyof typeof SEGMENTS | null
   >(null);
@@ -73,15 +74,29 @@ const WhyHawkstackSvg: React.FC = () => {
           </svg>
         </div>
 
-        {/* Center logo/image */}
-        <div className="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
-          <Image
-            src="/images/logo.circle.webp"
-            alt="center logo"
-            width={112}
-            height={110}
-            className="object-contain opacity-100"
-          />
+        {/* Center logo/image (hover swap) */}
+        <div className="absolute inset-0 z-50 flex items-center justify-center">
+          {/* NON-interactive circle area */}
+          <div className="pointer-events-none absolute inset-0" />
+
+          {/* Interactive image ONLY */}
+          <div
+            className="relative pointer-events-auto hover:scale-130"
+            onMouseEnter={() => setIsCenterHovered(true)}
+            onMouseLeave={() => setIsCenterHovered(false)}>
+            <Image
+              src={
+                isCenterHovered
+                  ? "/images/image.hover.webp"
+                  : "/images/image.circle.webp"
+              }
+              alt="center logo"
+              width={112}
+              height={110}
+              className="object-contain transition-opacity duration-300"
+              priority
+            />
+          </div>
         </div>
       </div>
 
