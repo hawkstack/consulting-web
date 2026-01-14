@@ -139,7 +139,7 @@ const WhyHawkstackSvg: React.FC = () => {
             />
 
             {/* 🔥 Hover dashed border */}
-            <path
+            {/* <path
               d="M0.0273467 219.878C-0.43477 191.465 4.70392 163.24 15.15 136.813C25.5961 110.386 41.1451 86.2758 60.9091 65.8582C80.6731 45.4407 104.265 29.1159 130.338 17.8159C156.411 6.51593 184.455 0.462055 212.867 -5.837e-05L216.386 216.359L0.0273467 219.878Z"
               fill="none"
               stroke="white"
@@ -149,7 +149,7 @@ const WhyHawkstackSvg: React.FC = () => {
               vectorEffect="non-scaling-stroke"
               style={{ transformOrigin: "108.5px 108.5px" }}
               className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            />
+            /> */}
 
             {/* Curved text */}
             <path

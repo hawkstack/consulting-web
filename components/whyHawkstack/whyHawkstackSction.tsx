@@ -12,19 +12,7 @@ export default function WhyHawkstackSction({
   discription,
 }: DeliverCardProps) {
   return (
-    <div
-      className="
-        w-[1440px]
-        h-[824px]
-        bg-gradient-to-b
-        from-[#03143E] from-[45%]
-        to-[#010002] to-[100%]
-        flex
-        flex-col
-        items-center
-        gap-4
-        relative
-      ">
+    <div className="w-full h-[824px] bg-gradient-to-b from-[#03143E] from-[45%] to-[#010002] to-[100%] flex flex-col items-center  gap-4 relative">
       <div className="font-lexend text-[40px] mt-6 text-white leading-[150%] tracking-[-0.03em]">
         {title}
       </div>
