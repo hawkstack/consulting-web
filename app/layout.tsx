@@ -24,8 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} min-h-screen bg-white text-slate-900 antialiased`}
-      >
+        className={`${inter.variable} min-h-screen bg-white text-slate-900 antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

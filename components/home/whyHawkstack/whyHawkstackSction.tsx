@@ -1,4 +1,3 @@
-import image from "next/image";
 import Image from "next/image";
 import WhyHawkstackCircle from "./WhyHawkstackSVG";
 
@@ -13,22 +12,22 @@ export default function WhyHawkstackSction({
 }: DeliverCardProps) {
   return (
     <div className="w-full h-[824px] bg-gradient-to-b from-[#03143E] from-[45%] to-[#010002] to-[100%] flex flex-col items-center  gap-4 relative">
-      <div className="font-lexend text-[40px] mt-6 text-white leading-[150%] tracking-[-0.03em]">
+      <div className="font-lexend text-[40px] mt-4 mb-[-8] text-white  ">
         {title}
       </div>
 
-      <div className="font-lexend text-[16px] text-white leading-[150%] tracking-[-0.03em]">
-        {discription}
-      </div>
+      <div className="font-lexend  text-[16px] text-white ">{discription}</div>
 
       {/* 🔴 FORCE VISIBILITY */}
-      <div className="z-10 my-6"></div>
+      <div className=" my-8"></div>
 
       {/* Image goes BEHIND */}
-      <img
+      <Image
         src={"/images/map.webp"}
         alt="image"
-        className="w-[1224px] h-[721px] absolute bottom-0 z-0"
+        className="absolute bottom-0 z-0"
+        width={1224}
+        height={721}
       />
       <WhyHawkstackCircle />
     </div>

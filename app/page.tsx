@@ -4,7 +4,6 @@ import { seoMeta } from "../components/seo/seoMeta";
 
 import HeroSection from "@/components/home/HeroSection";
 import VisionApproach from "@/components/home/VisionApproach";
-import WhyHawkStack from "@/components/home/WhyHawkStack";
 import OurSolutions from "@/components/home/OurSolutions";
 import WhatWeDeliver from "@/components/home/WhatWeDeliver";
 import StrategicPartners from "@/components/home/StrategicPartners";
@@ -12,7 +11,7 @@ import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
 import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactCTA";
-import WhyHawkstackSction from "@/components/whyHawkstack/whyHawkstackSction";
+import WhyHawkstackSction from "@/components/home/whyHawkstack/whyHawkstackSction";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -32,7 +31,6 @@ const Home = () => {
         discription="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
       />
 
-      <WhyHawkStack />
       <OurSolutions />
       <WhatWeDeliver />
       <StrategicPartners />

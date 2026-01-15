@@ -45,7 +45,7 @@ const WhyHawkstackSvg: React.FC = () => {
     setActiveSegment(null);
   };
   return (
-    <div className="relative z-20 mt-6 ml-6.5 w-[443px] h-[443px] rounded-full ">
+    <div className="relative z-20 mt-6 ml-6.5 w-[443px] h-[443px] rounded-full  ">
       {/* Center white circle ABOVE segments */}
       <div className="absolute inset-0 z-[100] pointer-events-none">
         <div className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none">
@@ -128,13 +128,14 @@ const WhyHawkstackSvg: React.FC = () => {
 
         {/* Segment 1 – top-left */}
         <div
-          className="absolute top-[-1%] left-[-1%] w-[52%] h-[52%] z-10 group "
+          // className="absolute top-[0%] w-[50%] h-[50%] z-10"
+          className="absolute top-0 left-0  w-[50%] h-[50%] z-10"
           onMouseEnter={() => handleEnter("continuity")}
           onMouseLeave={handleLeave}>
           <svg
-            viewBox="0 0 217 217"
+            viewBox="0 0 213 217"
             preserveAspectRatio="none"
-            className="w-full h-full scale-[1.03] origin-bottom-right transition-transform duration-700 ease-out group-hover:scale-[1.3]">
+            className="w-full h-full scale-[1.02] origin-bottom-right transition-transform duration-700 ease-out hover:scale-[1.3]">
             {/* Filled segment */}
             <path
               d="M0.0273467 219.878C-0.43477 191.465 4.70392 163.24 15.15 136.813C25.5961 110.386 41.1451 86.2758 60.9091 65.8582C80.6731 45.4407 104.265 29.1159 130.338 17.8159C156.411 6.51593 184.455 0.462055 212.867 -5.837e-05L216.386 216.359L0.0273467 219.878Z"
@@ -151,7 +152,7 @@ const WhyHawkstackSvg: React.FC = () => {
               transform="scale(1.08)"
               vectorEffect="non-scaling-stroke"
               style={{ transformOrigin: "108.5px 108.5px" }}
-              className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className="opacity-0 hover:opacity-100 transition-opacity duration-300"
             /> */}
 
             {/* Curved text */}
@@ -182,14 +183,24 @@ const WhyHawkstackSvg: React.FC = () => {
 
         {/* Segment 2 – top-right */}
         <div
-          className="absolute top-[-1%] right-[-1%] w-[52%] h-[52%] z-10"
+          // className="absolute right-[0%] w-[50%] h-[50%] z-10"
+          className="absolute top-0 right-0  w-[50%] h-[50%] z-10 group"
           onMouseEnter={() => handleEnter("unified")}
           onMouseLeave={handleLeave}>
           <svg
-            viewBox="0 0 218 219"
+            viewBox="1 0 219 215"
             className="w-full h-full scale-[1.02] origin-bottom-left transition-transform duration-700 ease-out hover:scale-[1.3]"
             preserveAspectRatio="none">
             {/* Segment shape */}
+            <g transform="translate(108.5 108.5) scale(1.06) translate(-108.5 -108.5)">
+              <path
+                d="M-0.00118755 0.0106292C28.4138 -0.271821 56.6062 5.04524 82.9663 15.6582C109.326 26.2712 133.338 41.9723 153.63 61.865C173.922 81.7578 190.098 105.453 201.233 131.596C212.367 157.74 218.244 185.822 218.526 214.237L2.14962 216.387L-0.00118755 0.0106292Z"
+                fill="none"
+                stroke="#ff0000"
+                strokeWidth="2"
+                vectorEffect="non-scaling-stroke"
+              />
+            </g>
             <path
               d="M-0.00118755 0.0106292C28.4138 -0.271821 56.6062 5.04524 82.9663 15.6582C109.326 26.2712 133.338 41.9723 153.63 61.865C173.922 81.7578 190.098 105.453 201.233 131.596C212.367 157.74 218.244 185.822 218.526 214.237L2.14962 216.387L-0.00118755 0.0106292Z"
               fill="white"
@@ -219,14 +230,16 @@ const WhyHawkstackSvg: React.FC = () => {
           </svg>
         </div>
 
-        {/* Segment 3 – bottom-right */}
+        {/* Segment 3 – bottom-left */}
         <div
-          className="absolute bottom-0 left-0 w-1/2 h-1/2 z-10 "
+          // className="absolute bottom-0 left-0 w-1/2 h-1/2 z-10 "
+          // className="absolute top-[49%] w-[50%] h-[50%] z-10"
+          className="absolute bottom-0 left-0 w-1/2 h-1/2 z-10"
           onMouseEnter={() => handleEnter("vision")}
           onMouseLeave={handleLeave}>
           <svg
-            viewBox="0 0 216 217"
-            className="w-full h-full scale-[1.05] origin-top-right transition-transform duration-700 ease-out hover:scale-[1.3]"
+            viewBox="0 9 216 217"
+            className="w-full h-full scale-[1.02] origin-top-right transition-transform duration-700 ease-out hover:scale-[1.3]"
             preserveAspectRatio="none">
             {/* Segment shape */}
             <path
@@ -258,14 +271,15 @@ const WhyHawkstackSvg: React.FC = () => {
           </svg>
         </div>
 
-        {/* Segment 4 – bottom-left */}
+        {/* Segment 4 – bottom-right */}
         <div
-          className="absolute bottom-[-1%] right-[-1%] w-[52%] h-[52%] z-10 hover:z-10 pointer-events-auto"
+          // className="absolute bottom-[0%] right-[0%] w-[50%] h-[50%] z-10 hover:z-10 pointer-events-auto"
+          className="absolute bottom-0 right-0 w-1/2 h-1/2 z-10"
           onMouseEnter={() => handleEnter("assurance")}
           onMouseLeave={handleLeave}>
           <svg
-            viewBox="0 0 217 217"
-            className="w-full h-full scale-[1.03] origin-top-left transition-transform duration-700 ease-out hover:scale-[1.3]"
+            viewBox="1 9 217 217"
+            className="w-full h-full scale-[1.02] origin-top-left transition-transform duration-700 ease-out hover:scale-[1.3]"
             preserveAspectRatio="none">
             {/* Segment shape */}
             <path
