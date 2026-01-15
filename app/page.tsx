@@ -28,7 +28,7 @@ const Home = () => {
 
       <WhyHawkstackSction
         title="Why HawkStack"
-        discription="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
+        description="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
       />
 
       <OurSolutions />

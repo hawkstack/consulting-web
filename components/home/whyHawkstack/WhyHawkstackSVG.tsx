@@ -81,7 +81,7 @@ const WhyHawkstackSvg: React.FC = () => {
           onMouseLeave={() => setIsCenterHovered(false)}>
           {/* Default image */}
           <Image
-            src="/images/image.hover.webp"
+            src="/images/hawkstack-image-logo.webp"
             alt="center logo"
             fill
             className={`absolute inset-0 object-contain transition-opacity duration-300 ${
@@ -92,7 +92,7 @@ const WhyHawkstackSvg: React.FC = () => {
 
           {/* Hover image */}
           <Image
-            src="/images/image.circle.webp"
+            src="/images/hawkstack-logo.webp"
             alt="center logo hover"
             fill
             className={`absolute inset-0 object-contain transition-opacity duration-300 ${

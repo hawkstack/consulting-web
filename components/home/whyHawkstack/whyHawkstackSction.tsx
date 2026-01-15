@@ -3,12 +3,12 @@ import WhyHawkstackCircle from "./WhyHawkstackSVG";
 
 type DeliverCardProps = {
   title: string;
-  discription: string;
+  description: string;
 };
 
 export default function WhyHawkstackSction({
   title,
-  discription,
+  description,
 }: DeliverCardProps) {
   return (
     <div className="w-full h-[824px] bg-gradient-to-b from-[#03143E] from-[45%] to-[#010002] to-[100%] flex flex-col items-center  gap-4 relative">
@@ -16,7 +16,7 @@ export default function WhyHawkstackSction({
         {title}
       </div>
 
-      <div className="font-lexend  text-[16px] text-white ">{discription}</div>
+      <div className="font-lexend  text-[16px] text-white ">{description}</div>
 
       {/* 🔴 FORCE VISIBILITY */}
       <div className=" my-8"></div>
