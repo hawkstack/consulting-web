@@ -192,15 +192,6 @@ const WhyHawkstackSvg: React.FC = () => {
             className="w-full h-full scale-[1.02] origin-bottom-left transition-transform duration-700 ease-out hover:scale-[1.3]"
             preserveAspectRatio="none">
             {/* Segment shape */}
-            <g transform="translate(108.5 108.5) scale(1.06) translate(-108.5 -108.5)">
-              <path
-                d="M-0.00118755 0.0106292C28.4138 -0.271821 56.6062 5.04524 82.9663 15.6582C109.326 26.2712 133.338 41.9723 153.63 61.865C173.922 81.7578 190.098 105.453 201.233 131.596C212.367 157.74 218.244 185.822 218.526 214.237L2.14962 216.387L-0.00118755 0.0106292Z"
-                fill="none"
-                stroke="#ff0000"
-                strokeWidth="2"
-                vectorEffect="non-scaling-stroke"
-              />
-            </g>
             <path
               d="M-0.00118755 0.0106292C28.4138 -0.271821 56.6062 5.04524 82.9663 15.6582C109.326 26.2712 133.338 41.9723 153.63 61.865C173.922 81.7578 190.098 105.453 201.233 131.596C212.367 157.74 218.244 185.822 218.526 214.237L2.14962 216.387L-0.00118755 0.0106292Z"
               fill="white"
