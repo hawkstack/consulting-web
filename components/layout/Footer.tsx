@@ -5,20 +5,50 @@ import { JSX } from "react";
 export const Footer = (): JSX.Element => {
   return (
     <footer className="footer-bg text-white w-full ">
-      <div className=" px-6 py-20 px-[83px] py-[53px]">
+      <div className=" px-[83px] py-[53px] ">
         {/* Top section */}
+        <div className="flex justify-between ">
+          <Image
+            src="/images/hawkstack.logo.webp"
+            alt="HawkStack"
+            width={140}
+            height={40}
+            className="mb-8 bg-white rounded-[10px] "
+          />
+          <div className="flex gap-4 h-10  ">
+            <Image
+              src="/images/socialmedia/facebook-logo.webp"
+              alt="HawkStack Footer Image"
+              width={40}
+              height={10}
+              className="bg-white rounded-full p-2"
+            />
+            <Image
+              src="/images/socialmedia/linkedin-logo.webp"
+              alt="HawkStack Footer Image"
+              width={40}
+              height={10}
+              className="bg-white rounded-full p-2"
+            />
+            <Image
+              src="/images/socialmedia/twitter-logo.webp"
+              alt="HawkStack Footer Image"
+              width={40}
+              height={10}
+              className="bg-white rounded-full p-2"
+            />
+            <Image
+              src="/images/socialmedia/instagram-logo.webp"
+              alt="HawkStack Footer Image"
+              width={40}
+              height={10}
+              className="bg-white rounded-full p-2"
+            />
+          </div>
+        </div>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
-          
           {/* Logo + Services */}
           <div>
-            <Image
-              src="/logo.svg"
-              alt="HawkStack"
-              width={140}
-              height={40}
-              className="mb-8"
-            />
-
             <h4 className="mb-4 text-sm font-semibold">Services</h4>
             <ul className="space-y-3 text-sm text-gray-300">
               <li>App Modernization</li>
@@ -96,4 +126,3 @@ export const Footer = (): JSX.Element => {
     </footer>
   );
 };
-
