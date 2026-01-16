@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Font utility */
 .font-lexend {
@@ -11,6 +9,15 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+/* background image for join our team section */
+.section-bg {
+  background-image: url('/images/team-background.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 574px;
+  width: 100%; /* adjust as needed */
 }
 
 /* carousel css start */
@@ -42,3 +49,4 @@ body {
     transform: translateX(-50%);
   }
 }
+

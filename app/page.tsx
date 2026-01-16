@@ -11,6 +11,7 @@ import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
 import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactCTA";
+import { SOLUTIONS } from "@/constants";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -29,7 +30,11 @@ const Home = () => {
       <WhatWeDeliver />
       <StrategicPartners />
       <JoinOurTeam />
-      <WhyWorkWithUs />
+      <WhyWorkWithUs
+        title="Why Work with us"
+        description="Innovate,Grow and Succeed Together"
+        solutions={SOLUTIONS}
+      />
       <Industries />
       <ContactCTA />
     </div>
