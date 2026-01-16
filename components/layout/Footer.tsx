@@ -2,11 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { JSX } from "react";
 
+const socialIcons = [
+  { src: "/images/socialmedia/facebook.webp", alt: "Facebook" },
+  { src: "/images/socialmedia/linkedin.webp", alt: "LinkedIn" },
+  { src: "/images/socialmedia/twitter.webp", alt: "Twitter" },
+  { src: "/images/socialmedia/instagram.webp", alt: "Instagram" },
+];
+
 export const Footer = (): JSX.Element => {
   return (
-    <footer className="footer-bg text-[18px] text-white w-full ">
-      <div className=" px-[83px] py-[53px] ">
-        {/* Top section */}
+    <footer className="footer-bg relative overflow-hidden text-[18px] text-white w-full ">
+      {/* Blur gradient layer */}
+      <div className="absolute right-[-200px] bottom-[-200px] w-[649px] h-[649px] rounded-full bg-[#0E245AB2] blur-[200px] z-0" />
+      {/* Content layer */}
+      <div className=" relative z-10 px-[83px] py-[53px] ">
         <div className="flex justify-between ">
           <Image
             src="/images/hawkstack.logo.webp"
@@ -15,37 +24,18 @@ export const Footer = (): JSX.Element => {
             height={40}
             className="mb-8 bg-white rounded-[10px] "
           />
-          <div className="flex gap-4 h-10  ">
-            <Image
-              src="/images/socialmedia/facebook-logo.webp"
-              alt="HawkStack Footer Image"
-              width={40}
-              height={10}
-              className="bg-white rounded-full p-2"
-            />
-            <Image
-              src="/images/socialmedia/icon.webp"
-              alt="HawkStack Footer Image"
-              width={40}
-              height={10}
-              className="bg-white rounded-full p-2"
-            />
-            <Image
-              src="/images/socialmedia/twitter-logo.webp"
-              alt="HawkStack Footer Image"
-              width={40}
-              height={10}
-              className="bg-white rounded-full p-2"
-            />
-            <Image
-              src="/images/socialmedia/instagram-logo.webp"
-              alt="HawkStack Footer Image"
-              width={40}
-              height={10}
-              className="bg-white rounded-full p-2"
-            />
+          {/* Social Icons */}
+          <div className="flex gap-4 ">
+            {socialIcons.map((icon) => (
+              <div
+                key={icon.alt}
+                className="w-8 h-8  bg-white rounded-full flex items-center justify-center">
+                <Image src={icon.src} alt={icon.alt} width={20} height={20} />
+              </div>
+            ))}
           </div>
         </div>
+
         <div className=" mt-2 grid grid-cols-1  md:grid-cols-4">
           {/* Logo + Services */}
           <div>
@@ -108,17 +98,16 @@ export const Footer = (): JSX.Element => {
         </div>
 
         {/* Bottom links */}
-        {/* <div className="  p-10 gap-6 text-sm text-blue-400 md:flex-row md:justify-between"> */}
-          <div className=" flex justify-center gap-[45px]  px-[208px] pt-20 mt-5  text-blue-400 md:flex-row ">
-            <Link href="#">Privacy Policy</Link>
-            <Link href="#">Terms & Conditions</Link>
-            <Link href="#">Cookie Policy</Link>
-            <Link href="#">Terms of Use</Link>
-            <Link href="#">Code of Conduct</Link>
-          </div>
-        {/* </div> */}
+        <div className=" flex justify-center gap-[45px]  px-[208px] pt-20 mt-5  text-blue-400 md:flex-row ">
+          <Link href="#">Privacy Policy</Link>
+          <Link href="#">Terms & Conditions</Link>
+          <Link href="#">Cookie Policy</Link>
+          <Link href="#">Terms of Use</Link>
+          <Link href="#">Code of Conduct</Link>
+        </div>
+
         <div className="text-center text-sm mt-[72px]  text-gray-300">
-        <p>© 2025 HawkStack. All Rights Reserved.</p>
+          <p>© 2025 HawkStack. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
