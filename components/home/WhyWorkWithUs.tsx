@@ -29,7 +29,7 @@ const WhyWorkWithUs = ({
           {description}
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {solutions.map((solution, index) => (
           <div
             key={solution.title}
@@ -41,8 +41,8 @@ const WhyWorkWithUs = ({
                 <Image
                   src={solution.icon}
                   alt={solution.title}
-                  width={65}
-                  height={65}
+                  width={85}
+                  height={75}
                 />
               </div>
               <h3 className="text-white text-md font-medium mb-2">

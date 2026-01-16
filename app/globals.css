@@ -20,6 +20,11 @@ body {
   width: 100%; /* adjust as needed */
 }
 
+/* Font utility */
+.font-lexend {
+  font-family: var(--font-lexend-deca), sans-serif;
+}
+
 /* carousel css start */
 .partner-track {
   display: flex;
@@ -50,3 +55,17 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}

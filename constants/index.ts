@@ -5,12 +5,12 @@ export const SOLUTIONS = [
     subtitle: "Work on innovative and impactful projects",
   },
   {
-    icon: "/images/cutting-technology.webp",
+    icon: "/images/collaborative-culture.webp",
     title: "Collaborative Culture",
     subtitle: "Thrive in a supportive and dynamic team",
   },
   {
-    icon: "/images/cutting-technology.webp",
+    icon: "/images/Career-Development.webp",
     title: "Career Development",
     subtitle: "Advance Your skills and career opportunities.",
   },
