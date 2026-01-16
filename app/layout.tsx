@@ -25,8 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lexendDeca.variable} min-h-screen bg-white text-slate-900 antialiased`}
-      >
+        className={`${lexendDeca.variable} min-h-screen bg-white text-slate-900 antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

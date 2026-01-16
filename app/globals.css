@@ -1,16 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Font utility */
-.font-lexend {
-  font-family: var(--font-lexend-deca), sans-serif;
-}
+@import "tailwindcss";
 
 /* Improve Figma-like rendering */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font utility */
+.font-lexend {
+  font-family: var(--font-lexend-deca), sans-serif;
 }
 
 /* carousel css start */
@@ -41,4 +39,19 @@ body {
   to {
     transform: translateX(-50%);
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
 }
