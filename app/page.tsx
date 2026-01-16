@@ -11,7 +11,7 @@ import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
 import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactCTA";
-import WhyHackstackSction from "@/components/home/whyHawkstack/whyHackstackSction";
+import WhyHawkstackSection from "@/components/home/whyHawkstack/whyHawkstackSection";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -26,7 +26,7 @@ const Home = () => {
       <HeroSection />
       <VisionApproach />
 
-      <WhyHackstackSction
+      <WhyHawkstackSection
         title="Why HawkStack"
         description="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
       />

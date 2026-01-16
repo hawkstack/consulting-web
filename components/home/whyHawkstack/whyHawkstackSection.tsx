@@ -1,12 +1,12 @@
 import Image from "next/image";
-import WhyHackstackCircle from "./WhyHackstackSVG";
+import WhyHackstackCircle from "./WhyHawkstackSVG";
 
 type DeliverCardProps = {
   title: string;
   description: string;
 };
 
-export default function WhyHackstackSction({
+export default function WhyHawkstackSection({
   title,
   description,
 }: DeliverCardProps) {
