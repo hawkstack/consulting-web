@@ -1,5 +1,5 @@
 import Image from "next/image";
-import WhyHackstackCircle from "./WhyHawkstackSVG";
+import WhyHawkstackCircle from "./WhyHawkstackSVG";
 
 type DeliverCardProps = {
   title: string;
@@ -29,7 +29,7 @@ export default function WhyHawkstackSection({
         width={1224}
         height={721}
       />
-      <WhyHackstackCircle />
+      <WhyHawkstackCircle />
     </div>
   );
 }
