@@ -12,7 +12,7 @@ body {
 }
 /* background image for join our team section */
 .section-bg {
-  background-image: url('/images/team-background.webp');
+  background-image: url("/images/team-background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,6 +70,6 @@ body {
   animation: fadeIn 0.4s ease-out forwards;
 }
 
-.footer-bg{
-  background-color:#040B10;
+.footer-bg {
+  background-color: #040b10;
 }
