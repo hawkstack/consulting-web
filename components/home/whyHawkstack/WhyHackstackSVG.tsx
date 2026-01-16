@@ -128,7 +128,6 @@ const WhyHawkstackSvg: React.FC = () => {
 
         {/* Segment 1 – top-left */}
         <div
-          // className="absolute top-[0%] w-[50%] h-[50%] z-10"
           className="absolute top-0 left-0  w-[50%] h-[50%] z-10"
           onMouseEnter={() => handleEnter("continuity")}
           onMouseLeave={handleLeave}>
@@ -141,19 +140,6 @@ const WhyHawkstackSvg: React.FC = () => {
               d="M0.0273467 219.878C-0.43477 191.465 4.70392 163.24 15.15 136.813C25.5961 110.386 41.1451 86.2758 60.9091 65.8582C80.6731 45.4407 104.265 29.1159 130.338 17.8159C156.411 6.51593 184.455 0.462055 212.867 -5.837e-05L216.386 216.359L0.0273467 219.878Z"
               fill="url(#g1)"
             />
-
-            {/* 🔥 Hover dashed border */}
-            {/* <path
-              d="M0.0273467 219.878C-0.43477 191.465 4.70392 163.24 15.15 136.813C25.5961 110.386 41.1451 86.2758 60.9091 65.8582C80.6731 45.4407 104.265 29.1159 130.338 17.8159C156.411 6.51593 184.455 0.462055 212.867 -5.837e-05L216.386 216.359L0.0273467 219.878Z"
-              fill="none"
-              stroke="white"
-              strokeWidth="1"
-              strokeDasharray="6 6"
-              transform="scale(1.08)"
-              vectorEffect="non-scaling-stroke"
-              style={{ transformOrigin: "108.5px 108.5px" }}
-              className="opacity-0 hover:opacity-100 transition-opacity duration-300"
-            /> */}
 
             {/* Curved text */}
             <path
@@ -183,7 +169,6 @@ const WhyHawkstackSvg: React.FC = () => {
 
         {/* Segment 2 – top-right */}
         <div
-          // className="absolute right-[0%] w-[50%] h-[50%] z-10"
           className="absolute top-0 right-0  w-[50%] h-[50%] z-10 group"
           onMouseEnter={() => handleEnter("unified")}
           onMouseLeave={handleLeave}>
@@ -223,8 +208,6 @@ const WhyHawkstackSvg: React.FC = () => {
 
         {/* Segment 3 – bottom-left */}
         <div
-          // className="absolute bottom-0 left-0 w-1/2 h-1/2 z-10 "
-          // className="absolute top-[49%] w-[50%] h-[50%] z-10"
           className="absolute bottom-0 left-0 w-1/2 h-1/2 z-10"
           onMouseEnter={() => handleEnter("vision")}
           onMouseLeave={handleLeave}>
@@ -264,7 +247,6 @@ const WhyHawkstackSvg: React.FC = () => {
 
         {/* Segment 4 – bottom-right */}
         <div
-          // className="absolute bottom-[0%] right-[0%] w-[50%] h-[50%] z-10 hover:z-10 pointer-events-auto"
           className="absolute bottom-0 right-0 w-1/2 h-1/2 z-10"
           onMouseEnter={() => handleEnter("assurance")}
           onMouseLeave={handleLeave}>
