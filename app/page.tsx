@@ -20,17 +20,22 @@ export const metadata = seoMeta({
     "We help enterprises modernize applications, automate operations, and build secure cloud-native platforms.",
 });
 
+const cardsData = [
+  {
+    title: "Vision",
+    iconSrc: "/icons/vision.png",
+    texts: ["Evolution", "Innovation", "Growth"],
+  },
+];
+
 const Home = () => {
   return (
     <div>
       <HeroSection />
-      <VisionApproach />
-
       <WhyHawkstackSection
         title="Why HawkStack"
         description="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
       />
-
       <OurSolutions />
       <WhatWeDeliver />
       <StrategicPartners />
