@@ -1,61 +1,159 @@
-import { JSX } from "react";
+"use client";
 
-export default function HeroSection(): JSX.Element {
+import { useEffect, useState } from "react";
+
+const slides = [
+  {
+    title: "Digital Transformation Built on Enterprise Platforms",
+    desc: "We modernize applications and automate operations for enterprises, while HawkStack builds secure, scalable cloud-native Kubernetes platforms.",
+  },
+  {
+    title: "Enterprise-Grade Platform Services",
+    desc: "HawkStack modernizes applications, automates operations, and delivers secure, cloud-native Kubernetes platforms that scale with your enterprise business.",
+  },
+  {
+    title: "Digital Futures Engineered with modern platform",
+    desc: "HawkStack modernizes enterprise applications, automates operations, and builds secure, scalable cloud-native Kubernetes platforms.",
+  },
+];
+
+export default function EnterpriseSection() {
+  const [active, setActive] = useState(0);
+
+  const nextSlide = () => {
+    setActive((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setActive((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative h-[568px] bg-gradient-to-r from-[#081b3d] via-[#0b1f4d] to-[#091d44]">
-      <div className="max-w-5xl mx-18 h-full px-4 grid grid-cols-1 lg:grid-cols-2 items-center gap-">
-        {/* LEFT CONTENT */}
-        <div className="text-white z-10 w-[590px] h-[284.32px]">
-          <h1 className="font-lexend text-[40px] leading-[50px] font-normal tracking-normal mb-5">
-            <span className="block">Digital Transformation Built</span>
-            <span className="block">on Enterprise Platforms</span>
-          </h1>
+    <section className="relative h-[568px]  bg-[#0B1F4B] text-white overflow-hidden">
+      {/* LEFT CONTENT */}
+      <div className="relative z-20  pt-[134px] pl-[38px] ">
+        <div className="relative w-1/2 ">
+          <div className="flex items-start gap-6">
+            {/* LEFT ARROWS */}
+            <div className="flex flex-col items-center gap-[80px] pt-3">
+              <button
+                onClick={prevSlide}
+                className="w-8 h-8 rounded-full border border-white/40 
+            flex items-center justify-center 
+            hover:bg-white/10 hover:border-white/70 
+            transition-all duration-300">
+                ↑
+              </button>
 
-          <p className="font-poppins text-[14px] leading-[1.5] tracking-[-0.03em] font-normal mb-10">
-            <span className="block">
-              HawkStack modernizes enterprise applications, automates
-              operations,
-            </span>
-            <span className="block">
-              and builds secure, scalable cloud-native Kubernetes platforms.
-            </span>
-          </p>
+              <button
+                onClick={nextSlide}
+                className="w-8 h-8 rounded-full border border-white/40 
+            flex items-center justify-center 
+            hover:bg-white/10 hover:border-white/70 
+            transition-all duration-300">
+                ↓
+              </button>
+            </div>
 
-          <div className="flex gap-4">
-            <button className="w-[265.99px] h-[51.12px] flex items-center justify-center gap-[7.57px] rounded-full bg-[#5272FF] px-[30.29px] py-[14.2px] text-white shadow-[0_7.57px_22.72px_0_rgba(108,99,255,0.35)]">
-              ▶ Schedule a Consultation
-            </button>
+            {/* CONTENT */}
+            <div className="relative w-full ">
+              {/* SLIDES */}
+              <div className="relative h-[180px]">
+                {slides.map((slide, i) => (
+                  <div
+                    key={i}
+                    className={`
+                absolute left-0 top-0 transition-all duration-900
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                ${
+                  i === active
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-6 pointer-events-none"
+                }
+              `}>
+                    <h2 className="text-[40px] font-normal leading-tight mb-6  max-w-[540px]">
+                      {slide.title}
+                    </h2>
 
-            <button className="rounded-full bg-white px-6 py-3 font-medium text-indigo-600 shadow-[0_7.57px_22.72px_0_rgba(108,99,255,0.35)]">
-              → View Our Solutions
-            </button>
+                    <p className="text-[14px] text-white/80 max-w-[540px]">
+                      {slide.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA BUTTONS */}
+              <div className="flex items-center  gap-5 mt-[62px] ">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 transition
+                   px-5 py-2.5 rounded-full font-normal text-white
+                   flex items-center gap-2 shadow-[0_7.57px_22.72px_0_rgba(108,99,255,0.35)]">
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4.73438 2.36621L15.778 9.46566L4.73438 16.5651V2.36621Z"
+                      stroke="white"
+                      strokeWidth="1.57765"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  Schedule a Consultation
+                </button>
+
+                <button
+                  className="bg-white text-blue-700 px-5 py-2.5 rounded-full
+                   font-normal hover:bg-gray-100 transition
+                   flex items-center gap-2 shadow-[0_7.57px_22.72px_0_rgba(108,99,255,0.35)]">
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.94922 9.46582H14.9928"
+                      stroke="#6C63FF"
+                      strokeWidth="1.57765"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M9.46875 3.94434L14.9905 9.46613L9.46875 14.9879"
+                      stroke="#6C63FF"
+                      strokeWidth="1.57765"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  View Our Solutions
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        {/* LEFT VERTICAL NAV (UP / DOWN) */}
-        <div className="absolute left-10 top-62 -translate-y-1/2 z-30 flex flex-col items-center gap-18">
-          <button
-            className="w-6 h-6 rounded-full border border-white
-            flex items-center justify-center text-white ">
-            ↑
-          </button>
+      </div>
 
-          <button
-            className="w-6 h-6 rounded-full border border-white
-            flex items-center justify-center text-white">
-            ↓
-          </button>
-        </div>
-        {/* RIGHT IMAGE (CLIPPED & SAFE) */}
-        <div className="relative  h-full w-[825px] overflow-hidden">
-          <img
-            src="/images/hero-visual.webp"
-            alt="Enterprise Platform"
-            className="h-[662px] w-[860px] object-cover scale-110"
-          />
+      {/* RIGHT IMAGE */}
+      <div className="absolute top-0 right-0 h-[680px] w-[65vw] z-0 overflow-hidden hero-mask">
+        <img
+          src="/images/hero-visual.webp"
+          alt="Enterprise Platform"
+          className="w-full h-full object-cover "
+        />
+        {/* box */}
 
-          {/* GRADIENT FADE */}
-          <div className="absolute inset-y-0 left-0 w-[35%] bg-gradient-to-r from-[#0B1F4B] to-transparent pointer-events-none" />
-        </div>
+        {/* BLUR OVERLAY (LEFT PART OF IMAGE) */}
+        <div className="absolute top-0 left-0 h-full w-[35%]  z-10 bg-gradient-to-r from-[#0B1F4B]/100 via-[#0B1F4B]/80 to-transparent backdrop-blur-[1px] pointer-events-none" />
       </div>
     </section>
   );
