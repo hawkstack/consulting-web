@@ -144,14 +144,12 @@ export default function EnterpriseSection() {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="absolute top-0 right-0 h-[680px] w-[65vw] z-0 overflow-hidden hero-mask">
+      <div className="absolute top-0 right-0 h-[680px] w-[65vw] z-0 overflow-hidden ">
         <img
           src="/images/hero-visual.webp"
           alt="Enterprise Platform"
           className="w-full h-full object-cover "
         />
-        {/* box */}
-
         {/* BLUR OVERLAY (LEFT PART OF IMAGE) */}
         <div className="absolute top-0 left-0 h-full w-[35%]  z-10 bg-gradient-to-r from-[#0B1F4B]/100 via-[#0B1F4B]/80 to-transparent backdrop-blur-[1px] pointer-events-none" />
       </div>
