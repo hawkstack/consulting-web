@@ -41,7 +41,6 @@ body {
   }
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -57,4 +56,3 @@ body {
 .animate-fadeIn {
   animation: fadeIn 250ms ease-out forwards;
 }
-

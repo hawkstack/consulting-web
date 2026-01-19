@@ -4,46 +4,46 @@ import { useEffect, useRef, useState } from "react";
 
 const slides = [
   {
-    title: "Managed MSP Public Cloud",
-    heading: "High-margin managed cloud for MSP customer projects",
-    desc: "MULTI-TENANT · PAYG · 24×7 SUPPORT · LOW COST",
-    image: "/Homepage1.jpg",
+    title: "CNCF",
+    heading: "CNCF",
+    desc: "Built on open standards and cloud-native best practices, aligned with the global ecosystem shaping Kubernetes and modern platforms.",
+    image: "/images/oursolution/Cncf.webp",
   },
   {
-    title: "Alternative to VMware",
+    title: "Mirantis",
     heading: "Business-ready OpenStack for enterprises",
-    desc: "Secure · Open · Scalable",
-    image: "/Office.png",
+    desc: "Power cloud-native platforms and container operations, designed for enterprise Kubernetes, OpenStack, and platform engineering teams.",
+    image: "/images/oursolution/Mirantis.webp",
   },
   {
-    title: "High Performance Storage",
-    heading: "Scalable object, block and file storage",
-    desc: "Optimized for speed and efficiency",
-    image: "/Mobile.jpg",
+    title: "Openshift",
+    heading: "Openshift",
+    desc: "Run, scale, and secure containerized applications with enterprise Kubernetes built for DevSecOps, automation, and hybrid cloud environments.",
+    image: "/images/oursolution/Openshift.webp",
   },
   {
-    title: "Application Multi-Cloud",
-    heading: "DevOps automation & cost reduction",
-    desc: "Build once, run anywhere",
-    image: "/Stars.jpg",
+    title: "Openstack",
+    heading: "Openstack",
+    desc: "Create and manage private clouds at scale with full control overcompute, storage, and networking for modern infrastructure.",
+    image: "/images/oursolution/Openstack.webp",
   },
   {
-    title: "Enterprise Security",
-    heading: "Zero-trust cloud security platform",
-    desc: "Protected · Monitored · Compliant",
-    image: "/Security.jpg",
+    title: "RHEL",
+    heading: "RHEL",
+    desc: "Build a stable, secure enterprise Linux foundation optimized for performance, compliance, and long-term production workloads.",
+    image: "/images/oursolution/Rhel.webp",
   },
   {
-    title: "AI & Analytics",
-    heading: "Data-driven insights with AI",
-    desc: "Predict · Optimize · Automate",
-    image: "/AI.jpg",
+    title: "Anisble",
+    heading: "Anisble",
+    desc: "Automate everything with confidence—from infrastructure provisioning to application deployment, fast, repeatable, and agentless.",
+    image: "/images/oursolution/Ansible.webp",
   },
 ];
 
 const AUTO_DELAY = 5000;
-const CONTENT_DELAY = 700; // big card content delay
-const RELEASE_DELAY = 300; // hidden card delay
+const CONTENT_DELAY = 700;
+const RELEASE_DELAY = 300;
 const VISIBLE_COUNT = 4;
 
 export default function OurSolutions() {
@@ -53,7 +53,6 @@ export default function OurSolutions() {
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // ▶ Auto slide
   const startAuto = () => {
     stopAuto();
     timerRef.current = setInterval(() => {
@@ -71,7 +70,6 @@ export default function OurSolutions() {
     return stopAuto;
   }, []);
 
-  // ▶ Click handler
   const handleClick = (index: number) => {
     if (index === active) return;
     setLeavingBig(active);
@@ -79,7 +77,6 @@ export default function OurSolutions() {
     startAuto();
   };
 
-  // ▶ Timing control
   useEffect(() => {
     const releaseTimer = setTimeout(() => {
       setLeavingBig(null);
@@ -95,18 +92,15 @@ export default function OurSolutions() {
     };
   }, [active]);
 
-  // ▶ Relative position
   const getPosition = (index: number) =>
     (index - active + slides.length) % slides.length;
 
-  // ▶ Visible card calculation
   const orderedIndexes = slides
     .map((_, i) => i)
     .sort((a, b) => getPosition(a) - getPosition(b));
 
   const visibleIndexes = orderedIndexes.slice(0, VISIBLE_COUNT);
 
-  // ▶ Position styles (FIXED TEMPLATE STRINGS)
   const positionStyles = (pos: number) => {
     const base = "transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]";
 
@@ -125,18 +119,24 @@ export default function OurSolutions() {
   };
 
   return (
-    <section className="relative h-[650px] bg-[#0B2458] overflow-hidden">
-      <div className="max-w-[1600px] mx-auto h-full relative">
-        <div className="absolute inset-0 flex items-center ">
+    <section className="relative h-[700px] font-lexend bg-[black] overflow-hidden">
+      <div className="text-white flex flex-col items-center justify-center mt-10">
+        <h1 className="text-[40px]">Our Solution</h1>
+        <div>
+          <p>
+            End-to-end cloud and DevOps solutions tailored for modern enterprise
+            needs.
+          </p>
+        </div>
+      </div>
+      <div className="max-w-[1600px] mt-[-60] mx-auto h-full relative">
+        <div className="absolute inset-0 flex items-center">
           {slides.map((slide, i) => {
             const pos = getPosition(i);
             const isBig = showBigContent === i;
             const isVisible = visibleIndexes.includes(i);
 
-            // ❌ hide leaving big card briefly
             if (leavingBig === i && pos !== 0) return null;
-
-            // ❌ hide non-visible cards
             if (!isVisible) return null;
 
             return (
@@ -146,25 +146,19 @@ export default function OurSolutions() {
                 className={`absolute rounded-2xl overflow-hidden cursor-pointer ${positionStyles(
                   pos
                 )}`}>
-                {/* Background */}
                 <div
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${slide.image})` }}
                 />
-                <div className="absolute inset-0 bg-blue-900/50" />
+                <div className="absolute inset-0 bg-blue/20" />
 
-                {/* Content */}
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   {isBig && pos === 0 ? (
-                    <div className="animate-fadeIn">
-                      <p className="text-sm opacity-80 mb-2">{slide.title}</p>
+                    <div className="animate-fadeIn bg-black/50 px-8 py-2 rounded-2xl">
                       <h2 className="text-4xl font-semibold leading-tight mb-4">
                         {slide.heading}
                       </h2>
                       <p className="opacity-80 mb-4">{slide.desc}</p>
-                      <button className="bg-white text-red-600 px-6 py-3 rounded-md font-semibold w-fit">
-                        GET STARTED
-                      </button>
                     </div>
                   ) : pos !== 0 ? (
                     <div className="w-full bg-black/30 p-4">
