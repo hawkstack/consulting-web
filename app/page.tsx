@@ -35,7 +35,11 @@ const Home = () => {
       <WhatWeDeliver />
       <StrategicPartners />
       <JoinOurTeam />
-      <WhyWorkWithUs />
+      <WhyWorkWithUs
+        title="Why Work with us"
+        description="Innovate,Grow and Succeed Together"
+        solutions={SOLUTIONS}
+      />
       <Industries />
       <ContactCTA />
     </div>
