@@ -11,7 +11,7 @@ const socialIcons = [
 
 export const Footer = (): JSX.Element => {
   return (
-    <footer className="footer-bg relative overflow-hidden text-[18px] text-white w-full ">
+    <footer className=" font-lexend font-light  footer-bg relative overflow-hidden text-[18px] text-white w-full ">
       {/* Blur gradient layer */}
       <div className="absolute right-[-200px] bottom-[-200px] w-[649px] h-[649px] rounded-full bg-[#0E245AB2] blur-[200px] z-0" />
       {/* Content layer */}
@@ -36,7 +36,7 @@ export const Footer = (): JSX.Element => {
           </div>
         </div>
 
-        <div className=" mt-2 grid grid-cols-1  md:grid-cols-4">
+        <div className=" mt-2 grid grid-cols-1  md:grid-cols-4 gap-x-4">
           {/* Logo + Services */}
           <div>
             <h4 className="mb-4  font-semibold">Services</h4>
@@ -52,8 +52,8 @@ export const Footer = (): JSX.Element => {
           </div>
 
           {/* Solution */}
-          <div>
-            <h4 className="mb-4 font-semibold">Solution</h4>
+          <div className=" ml-10">
+            <h4 className="mb-4 font-semibold ">Solution</h4>
             <ul className="space-y-3  text-gray-300">
               <li>RedHat</li>
               <li>CNCF</li>
@@ -65,7 +65,7 @@ export const Footer = (): JSX.Element => {
           </div>
 
           {/* Training */}
-          <div>
+          <div className="-ml-6">
             <h4 className="mb-4  font-semibold">Training</h4>
             <ul className="space-y-3  text-gray-300">
               <li>Mirantis</li>
@@ -77,7 +77,7 @@ export const Footer = (): JSX.Element => {
           </div>
 
           {/* About */}
-          <div className="-ml-6">
+          <div className="-ml-10">
             <h4 className="mb-4 text-[16px] font-semibold ">About us</h4>
             <p className="mb-6 text-sm leading-relaxed text-gray-300 leading-[150%] tracking-[-0.03em] ">
               HawkStack helps businesses accelerate digital transformation
@@ -86,7 +86,7 @@ export const Footer = (): JSX.Element => {
               scalable, and ready for the future.
             </p>
 
-            <div className="grid grid-cols-2 gap-x-8 gap-4 text-blue-400">
+            <div className="grid grid-cols-2 gap-x-1 gap-4  text-blue-400">
               <Link href="#">Blog</Link>
               <Link href="#">Career</Link>
               <Link href="#">Gallery</Link>
@@ -98,7 +98,7 @@ export const Footer = (): JSX.Element => {
         </div>
 
         {/* Bottom links */}
-        <div className=" flex justify-center gap-[45px]  px-[208px] pt-20 mt-5  text-blue-400 md:flex-row ">
+        <div className=" flex justify-center   px-[208px] pt-20 mt-5  text-blue-400 md:flex-row gap-x-9 ">
           <Link href="#">Privacy Policy</Link>
           <Link href="#">Terms & Conditions</Link>
           <Link href="#">Cookie Policy</Link>
