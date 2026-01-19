@@ -20,7 +20,7 @@ const WhyWorkWithUs = ({
   solutions,
 }: WhyWorkWithUsProps): JSX.Element => {
   return (
-    <div className="w-full p-12 bg-[linear-gradient(0deg,_#000C27,_#000C27),linear-gradient(180deg,_rgba(26,38,52,0)_0%,_rgba(26,38,52,0.4)_100%),linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.2)_100%)] bg-[#000C27]">
+    <div className="w-full font-lexend p-12 bg-[linear-gradient(0deg,_#000C27,_#000C27),linear-gradient(180deg,_rgba(26,38,52,0)_0%,_rgba(26,38,52,0.4)_100%),linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.2)_100%)] bg-[#000C27]">
       <div className="flex flex-col items-center justify-center mb-15">
         <h2 className="text-[40px] text-white font-medium leading-[125%] mb-2 ">
           {title}

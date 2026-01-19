@@ -1,6 +1,6 @@
 const JoinOurTeam = () => {
   return (
-    <section className="section-bg">
+    <section className="section-bg font-lexend">
       <div className="pt-20 md:pt-25 px-5 md:px-18">
         <h1 className="text-[48px] text-white font-medium mb-[10px]">
           Join Our Team
