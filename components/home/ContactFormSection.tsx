@@ -1,11 +1,90 @@
-import React from "react";
+"use client";
+
+import React, { useState, ChangeEvent, FormEvent } from "react";
+
+/* ---------------- Types ---------------- */
+
+interface ContactFormData {
+  firstname: string;
+  lastname: string;
+  email: string;
+  phone: string;
+}
+
+interface ApiResponse {
+  message?: string;
+}
+
+/* ---------------- Component ---------------- */
 
 const ContactForm: React.FC = (): JSX.Element => {
+  const [formData, setFormData] = useState<ContactFormData>({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+  });
+
+  const [loading, setLoading] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>("");
+
+  const isFormValid: boolean =
+    Boolean(formData.firstname.trim()) &&
+    Boolean(formData.lastname.trim()) &&
+    Boolean(formData.email.trim()) &&
+    Boolean(formData.phone.trim());
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+    e.preventDefault();
+    if (!isFormValid) return;
+
+    setLoading(true);
+    setMessage("");
+
+    // Safe fallback for now + future backend ready
+    const API_BASE_URL: string = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
+
+    try {
+      const response: Response = await fetch(`${API_BASE_URL}/api/contacts`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result: ApiResponse = await response.json();
+
+      if (response.ok) {
+        setMessage("✅ Contact saved successfully");
+        setFormData({
+          firstname: "",
+          lastname: "",
+          email: "",
+          phone: "",
+        });
+      } else {
+        setMessage(result.message ?? "❌ Failed to save contact");
+      }
+    } catch (error: unknown) {
+      setMessage("❌ Server error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="w-full bg-white">
-      {/* Parent Section */}
       <div className="relative w-full bg-[#0E245A]">
-        {/* Content Wrapper */}
         <div className="flex flex-col items-center px-4 pt-20 md:pt-28 pb-20 md:pb-28 text-white">
           {/* Heading */}
           <div className="text-center">
@@ -21,8 +100,10 @@ const ContactForm: React.FC = (): JSX.Element => {
           </div>
 
           {/* Form Card */}
-          <div className="mt-12 md:mt-16 w-full max-w-[713px] rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,#111B2D_0%,#0E1726_45%,#0A1220_100%)] px-6 md:px-10 py-8">
-            {/* Inputs */}
+          <form
+            onSubmit={handleSubmit}
+            className="mt-12 md:mt-16 w-full max-w-[713px] rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,#111B2D_0%,#0E1726_45%,#0A1220_100%)] px-6 md:px-10 py-8"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
@@ -30,6 +111,9 @@ const ContactForm: React.FC = (): JSX.Element => {
                 </label>
                 <input
                   type="text"
+                  name="firstname"
+                  value={formData.firstname}
+                  onChange={handleChange}
                   placeholder="Enter your first name"
                   className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
                 />
@@ -41,6 +125,9 @@ const ContactForm: React.FC = (): JSX.Element => {
                 </label>
                 <input
                   type="text"
+                  name="lastname"
+                  value={formData.lastname}
+                  onChange={handleChange}
                   placeholder="Enter your last name"
                   className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
                 />
@@ -52,6 +139,9 @@ const ContactForm: React.FC = (): JSX.Element => {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Enter your work email"
                   className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
                 />
@@ -63,13 +153,15 @@ const ContactForm: React.FC = (): JSX.Element => {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Enter your phone number"
                   className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
                 />
               </div>
             </div>
 
-            {/* Footer */}
             <div className="mt-8 text-center">
               <h4 className="text-[16px] md:text-[18px] font-bold text-[#DDDEDF]">
                 Schedule a Demo Call
@@ -79,10 +171,16 @@ const ContactForm: React.FC = (): JSX.Element => {
               </p>
             </div>
 
-            <button className="mt-8 w-full h-12 rounded-full bg-[#0E245A] hover:bg-[#1b3a8f] transition">
-              Submit
+            <button
+              type="submit"
+              disabled={!isFormValid || loading}
+              className="mt-8 w-full h-12 rounded-full bg-[#0E245A] hover:bg-[#1b3a8f] transition disabled:opacity-50"
+            >
+              {loading ? "Submitting..." : "Submit"}
             </button>
-          </div>
+
+            {message && <p className="mt-4 text-center text-sm">{message}</p>}
+          </form>
         </div>
       </div>
     </div>
