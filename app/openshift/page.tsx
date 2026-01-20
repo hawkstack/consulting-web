@@ -1,4 +1,4 @@
-import WhatWeDeliver from "@/components/home/WhatWeDeliver";
+import WhatWeDeliver from "@/components/openshift/WhatWeDeliver";
 import HeroSection from "@/components/openshift/HeroSection";
 
 export default function OpenShiftPage() {
@@ -6,7 +6,6 @@ export default function OpenShiftPage() {
     <>
       <HeroSection />
       <WhatWeDeliver />
-
     </>
   );
 }
