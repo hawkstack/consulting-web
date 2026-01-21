@@ -34,7 +34,7 @@ export default function EnterpriseSection() {
   }, []);
 
   return (
-    <section className="relative h-[568px]  bg-[#0B1F4B] text-white overflow-hidden">
+    <section className="relative h-[568px]  bg-[#0B1F4B] text-white overflow-hidden font-lexend ">
       {/* LEFT CONTENT */}
       <div className="relative z-20  pt-[134px] pl-[38px] ">
         <div className="relative w-1/2 ">
