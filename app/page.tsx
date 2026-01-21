@@ -3,7 +3,6 @@ import React from "react";
 import { seoMeta } from "../components/seo/seoMeta";
 
 import HeroSection from "@/components/home/HeroSection";
-// import RotatingCircle from "@/components/circle-rotation/Rotating-circle";
 import VisionApproach from "@/components/home/VisionApproach";
 import OurSolutions from "@/components/home/OurSolutions";
 import WhatWeDeliver from "@/components/home/WhatWeDeliver";
@@ -26,7 +25,6 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
-      {/* <RotatingCircle /> */}
       <VisionApproach />
 
       <WhyHawkstackSection
