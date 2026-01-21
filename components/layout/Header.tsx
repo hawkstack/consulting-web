@@ -23,7 +23,7 @@ export function Header(): JSX.Element {
         {/* Logo */}
         <div className="flex items-center justify-center w-[152px] h-[41.74px] rounded-[7.92px] border border-white bg-white">
           <Image
-            src="/images/hawkstack-logo.webp"
+            src="/images/hawkstack.logo.webp"
             alt="HawkStack Logo"
             width={124}
             height={38}
