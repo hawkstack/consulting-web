@@ -108,8 +108,9 @@ body {
   }
 }
 
+/* Utility class */
 .animate-fadeIn {
-  animation: fadeIn 0.4s ease-out forwards;
+  animation: fadeIn 250ms ease-out forwards;
 }
 
 .footer-bg {

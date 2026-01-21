@@ -39,9 +39,9 @@ const deliverItems: DeliverItem[] = [
   },
 ];
 
-export default function WhatWeDeliver(): JSX.Element {
+export default function WhatWeDeliver() {
   return (
-    <section className="h-[837px] pt-24 bg-gradient-to-b from-[#000000] to-[#04092E]">
+    <section className="h-[937px] pt-24 bg-gradient-to-b from-[#000000] to-[#04092E]">
       {/* Heading */}
       <div className="max-w-[1200px] mx-auto text-center mb-20 px-4">
         <h2 className="font-lexend text-[40px] font-normal leading-[150%] tracking-[-0.03em] text-[#FFFFFF] mb-[-10]">
@@ -68,16 +68,14 @@ export default function WhatWeDeliver(): JSX.Element {
               rounded-[16px] p-8
               bg-gradient-to-b from-[#0F172B] to-[#1D293D]
               border border-white/10 backdrop-blur-md
-            "
-          >
+            ">
             {/*INNER WRAPPER (ANTI-STRETCH FIX) */}
             <div
               className="
                 transition-transform duration-300 ease-in-out
                 group-hover:scale-y-[0.877]
                 origin-top
-              "
-            >
+              ">
               {/* ICON */}
               <div className="w-[56px] h-[56px] rounded-[14px] bg-[#1D293D]/50 border border-[#314158]/50 flex items-center justify-center mb-6 ml-[20] mt-[20]">
                 <Image
