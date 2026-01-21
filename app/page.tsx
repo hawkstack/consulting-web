@@ -10,9 +10,9 @@ import StrategicPartners from "@/components/home/StrategicPartners";
 import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
 import Industries from "@/components/home/Industries";
-import ContactCTA from "@/components/home/ContactCTA";
-import { SOLUTIONS } from "@/constants";
+import ContactCTA from "@/components/home/ContactFormSection";
 import WhyHawkstackSection from "@/components/home/whyHawkstack/whyHawkstackSection";
+import { SOLUTIONS } from "@/constants";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
