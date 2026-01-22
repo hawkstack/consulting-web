@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-
-/* ---------------- Types ---------------- */
+import { validateEmail, validatePhone } from "../utils/validations";
 
 interface ContactFormData {
   firstname: string;
@@ -11,11 +10,7 @@ interface ContactFormData {
   phone: string;
 }
 
-interface ApiResponse {
-  message?: string;
-}
-
-/* ---------------- Component ---------------- */
+type SubmitStatus = "idle" | "success" | "error" | "oops";
 
 const ContactForm: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -26,16 +21,29 @@ const ContactForm: React.FC = (): JSX.Element => {
   });
 
   const [loading, setLoading] = useState<boolean>(false);
-  const [message, setMessage] = useState<string>("");
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
+  const [phoneError, setPhoneError] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
 
   const isFormValid: boolean =
     Boolean(formData.firstname.trim()) &&
     Boolean(formData.lastname.trim()) &&
     Boolean(formData.email.trim()) &&
-    Boolean(formData.phone.trim());
+    Boolean(formData.phone.trim()) &&
+    !phoneError &&
+    !emailError;
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
+
+    if (name === "phone") {
+      if (!/^\d*$/.test(value)) return;
+      setPhoneError(validatePhone(value));
+    }
+
+    if (name === "email") {
+      setEmailError(validateEmail(value));
+    }
 
     setFormData((prev) => ({
       ...prev,
@@ -45,12 +53,20 @@ const ContactForm: React.FC = (): JSX.Element => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
+
+    const phoneValidationError = validatePhone(formData.phone);
+    const emailValidationError = validateEmail(formData.email);
+    if (phoneValidationError || emailValidationError) {
+      setPhoneError(phoneValidationError);
+      setEmailError(emailValidationError);
+      return;
+    }
+
     if (!isFormValid) return;
 
     setLoading(true);
-    setMessage("");
+    setSubmitStatus("idle");
 
-    // Safe fallback for now + future backend ready
     const API_BASE_URL: string = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
 
     try {
@@ -62,21 +78,23 @@ const ContactForm: React.FC = (): JSX.Element => {
         body: JSON.stringify(formData),
       });
 
-      const result: ApiResponse = await response.json();
+      await response.json();
 
       if (response.ok) {
-        setMessage("✅ Contact saved successfully");
+        setSubmitStatus("success");
         setFormData({
           firstname: "",
           lastname: "",
           email: "",
           phone: "",
         });
+        setPhoneError("");
+        setEmailError("");
       } else {
-        setMessage(result.message ?? "❌ Failed to save contact");
+        setSubmitStatus("error");
       }
-    } catch (error: unknown) {
-      setMessage("❌ Server error");
+    } catch {
+      setSubmitStatus("oops");
     } finally {
       setLoading(false);
     }
@@ -145,6 +163,10 @@ const ContactForm: React.FC = (): JSX.Element => {
                   placeholder="Enter your work email"
                   className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
                 />
+                {/* Inline email error */}
+                {emailError && (
+                  <p className="mt-1 pl-4 text-xs text-red-400">{emailError}</p>
+                )}
               </div>
 
               <div>
@@ -156,9 +178,13 @@ const ContactForm: React.FC = (): JSX.Element => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="Enter your phone number"
+                  placeholder="Enter your contact number"
                   className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
                 />
+                {/* Inline phone error */}
+                {phoneError && (
+                  <p className="mt-1 pl-4 text-xs text-red-400">{phoneError}</p>
+                )}
               </div>
             </div>
 
@@ -178,10 +204,27 @@ const ContactForm: React.FC = (): JSX.Element => {
             >
               {loading ? "Submitting..." : "Submit"}
             </button>
-
-            {message && <p className="mt-4 text-center text-sm">{message}</p>}
           </form>
         </div>
+        {/* IMAGE ONLY OVERLAY */}
+        {submitStatus !== "idle" && (
+          <div
+            className="absolute inset-0 z-50 grid place-items-center bg-black/50 px-4"
+            onClick={() => setSubmitStatus("idle")}
+          >
+            <img
+              src={`/images/form-feedback/${
+                submitStatus === "success"
+                  ? "success"
+                  : submitStatus === "error"
+                  ? "error"
+                  : "oops"
+              }.webp`}
+              alt={submitStatus}
+              className="max-w-full max-h-[80%] object-contain"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
