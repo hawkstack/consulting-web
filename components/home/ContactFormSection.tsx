@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { validateEmail, validatePhone } from "../utils/validations";
 
 interface ContactFormData {
   firstname: string;
@@ -31,33 +32,6 @@ const ContactForm: React.FC = (): JSX.Element => {
     Boolean(formData.phone.trim()) &&
     !phoneError &&
     !emailError;
-
-  // phone validation
-  const validatePhone = (value: string): string => {
-    if (!value) return "Contact number is required";
-
-    if (!/^\d+$/.test(value)) {
-      return "Only numbers are allowed";
-    }
-
-    if (value.length < 7 || value.length > 15) {
-      return "Enter a valid contact number";
-    }
-
-    return "";
-  };
-
-  // email validation
-  const validateEmail = (value: string): string => {
-    if (!value) return "Email is required";
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(value)) {
-      return "Enter a valid email address";
-    }
-
-    return "";
-  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
