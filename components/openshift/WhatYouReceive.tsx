@@ -1,46 +1,7 @@
 "use client";
+import { DELIVERABLE_ITEMS } from "@/constants/deliverables.data";
+import type { DeliverableItem } from "@/app/types/deliverables";
 import Image from "next/image";
-
-import React from "react";
-
-interface DeliverableItem {
-  title: string;
-  desc: string;
-  icon: string;
-}
-
-const items: DeliverableItem[] = [
-  {
-    title: "Production-Ready OpenShift Cluster",
-    desc: "A highly available, enterprise-grade OpenShift architecture built for reliability across multiple availability zones.",
-    icon: "/images/openshift/Cluster.webp",
-  },
-  {
-    title: "High-Availability Configuration",
-    desc: "A fully deployed Red Hat OpenShift cluster on your infrastructure, configured to meet business and technical needs.",
-    icon: "/images/openshift/Configuration.webp",
-  },
-  {
-    title: "Storage & Security Integration",
-    desc: "Integration with persistent storage to protect application data, along with essential security configurations aligned to enterprise best practices.",
-    icon: "/images/openshift/Integration.webp",
-  },
-  {
-    title: "Sample Application Deployment",
-    desc: "A containerized application deployed and running on the OpenShift cluster to demonstrate platform functionality and operational readiness.",
-    icon: "/images/openshift/Deployment.webp",
-  },
-  {
-    title: "Documentation",
-    desc: "Comprehensive documentation covering platform architecture, configuration details, security settings, and operational guidelines.",
-    icon: "/images/openshift/Documentation.webp",
-  },
-  {
-    title: "Knowledge Transfer Sessions",
-    desc: "Hands-on enablement sessions to ensure your platform, operations, and application teams can confidently manage and operate OpenShift.",
-    icon: "/images/openshift/Session.webp",
-  },
-];
 
 const WhatYouWillReceive: React.FC = () => {
   return (
@@ -58,7 +19,7 @@ const WhatYouWillReceive: React.FC = () => {
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full md:w-[855px] lg:w-[1200px] lg:h-[450px] mx-auto justify-items-center">
 
-        {items.map((item: DeliverableItem, idx: number) => (
+        {DELIVERABLE_ITEMS.map((item: DeliverableItem, idx: number) => (
           <div
             key={idx}
             className="bg-white rounded-2xl shadow-2xl hover:shadow-[0_50px_60px_rgba(0,0,8,0.20)] flex flex-row md:flex-col gap-4 items-start w-[400px] max-w-full md:w-[325px] p-[18px] md:pt-[12px] md:pr-[6px] md:pb-[16px] md:pl-[16px] lg:w-[368px] lg:px-10">
