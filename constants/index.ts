@@ -15,3 +15,26 @@ export const SOLUTIONS = [
     subtitle: "Advance Your skills and career opportunities.",
   },
 ];
+
+// vision 
+
+ export const cards = [
+    {
+      id: 1,
+      image: "/images/visionApproach/vision.webp",
+      title: "Vision",
+      desc: ["Evolution", "Leadership", "Sustainability"],
+    },
+    {
+      id: 2,
+      image: "/images/visionApproach/approach.webp",
+      title: "Approach",
+      desc: ["Precision", "1000+", "Discipline"],
+    },
+    {
+      id: 3,
+      image: "/images/visionApproach/mission.webp",
+      title: "Mission",
+      desc: ["Acceleration", "Transformation", "Empowerment"],
+    },
+  ];

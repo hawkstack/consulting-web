@@ -1,55 +1,20 @@
 "use client";
-
 import { useEffect, useState } from "react";
+import { cards } from "@/constants/index";
 
 export default function VisionApproach() {
-
-  const positions = [
-  // BIG (top)
-  "top-8 left-1/2 -translate-x-1/2 scale-100 z-20",
-
-  // SMALL (down-left)
-  "bottom-0 left-[-60px] scale-75 z-10",
-
-  // SMALL (down-right)
-  "bottom-70 right-88 scale-75 z-10",
-];
-
-  const cards = [
-    {
-      id: 1,
-      image: "/images/visionApproach/vision.webp",
-      title: "Vision",
-      desc: ["Evolution", "Leadership", "Sustainability"],
-    },
-    {
-      id: 2,
-      image: "/images/visionApproach/approach.webp",
-      title: "Approach",
-      desc: ["Precision", "1000+", "Discipline"],
-    },
-    {
-      id: 3,
-      image: "/images/visionApproach/mission.webp",
-      title: "Mission",
-      desc: ["Acceleration", "Transformation", "Empowerment"],
-    },
-  ];
-
   const [order, setOrder] = useState(cards);
   const [index, setIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
 
   /* clockwise rotation */
-const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    const rotate = setInterval(() => {
+      setOrder((p) => [p[2], p[0], p[1]]);
+    }, 9000);
+    return () => clearInterval(rotate);
+  }, []);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setOffset((o) => (o + 1) % 3);
-  }, 3000);
-
-  return () => clearInterval(interval);
-}, []);
   /* text animation */
   useEffect(() => {
     const wait = setTimeout(() => {
@@ -103,8 +68,7 @@ useEffect(() => {
               <div className="w-[130px] h-[130px] rounded-xl bg-white shadow-md flex items-center justify-center">
                 <img
                   src={order[1].image}
-                  className={`w-24 h-24 object-contain rounded-lg border-2 border-dashed border-blue-400 p-2
-    ${order[1].title === "Vision" ? "invert brightness-90" : ""}`}
+                  className={`w-24 h-24 object-contain rounded-lg border-2 border-dashed border-blue-400 p-2 ${order[1].title === "Vision" ? "invert brightness-90" : ""}`}
                 />
               </div>
             </div>
@@ -114,8 +78,7 @@ useEffect(() => {
               <div className="w-[130px] h-[130px] rounded-xl bg-white shadow-md flex items-center justify-center">
                 <img
                   src={order[2].image}
-                  className={`w-24 h-24 object-contain rounded-lg border-2 border-dashed border-blue-400 p-2
-    ${order[2].title === "Vision" ? "invert brightness-90" : ""}`}
+                  className={`w-24 h-24 object-contain rounded-lg border-2 border-dashed border-blue-400 p-2 ${order[2].title === "Vision" ? "invert brightness-90" : ""}`}
                 />
               </div>
             </div>
