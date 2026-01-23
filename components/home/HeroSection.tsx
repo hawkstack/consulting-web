@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const slides = [
   {
@@ -38,10 +39,12 @@ export default function EnterpriseSection() {
 
       {/* ===== MOBILE HERO IMAGE (ONLY MOBILE) ===== */}
       <div className="relative flex justify-center pt-10 md:hidden">
-        <img
+        <Image
           src="/images/hero-mobile-visual.webp"
           alt="Mobile Platform"
-          className="w-[280px]"
+          width = {280}
+          height = {280}
+          className="object-cover"
         />
       </div>
 
@@ -130,10 +133,11 @@ export default function EnterpriseSection() {
 
       {/* ===== DESKTOP + TABLET RIGHT IMAGE ===== */}
       <div className="hidden md:block absolute top-0 right-0 h-[680px] w-[65vw] z-0 overflow-hidden">
-        <img
+        <Image
           src="/images/hero-visual.webp"
           alt="Enterprise Platform"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div
           className="absolute top-0 left-0 h-full w-[35%]
