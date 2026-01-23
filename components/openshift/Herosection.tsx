@@ -1,11 +1,10 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import heroBg from "@/public/images/openshift/hero-bg-tablet.webp";
-import heroCircle from "@/public/images/openshift/vm-circle.webp";
-import vmcircle from "@/public/images/openshift/vm-circle-image.webp";
+import heroCircle from "@/public/images/openshift/hero-circle.webp";
+import vmcircle from "@/public/images/openshift/hero-circle-image.webp";
 import rightBG from "@/public/images/openshift/hero-bg-rigth.webp";
-
-import { useEffect, useState } from "react";
 
 export default function HeroSection() {
   const colors = ["border-red-500", "border-green-500", "border-blue-500"];
@@ -194,10 +193,10 @@ export default function HeroSection() {
                           ? i === 14
                             ? "translate(118%, 110%)"
                             : i === 21
-                            ? "translate(-118%, -110%)"
-                            : i === 15
-                            ? "translate(-118%, 110%)"
-                            : "translate(118%, -110%)"
+                              ? "translate(-118%, -110%)"
+                              : i === 15
+                                ? "translate(-118%, 110%)"
+                                : "translate(118%, -110%)"
                           : "translate(0,0)"
                         : "translate(0,0)";
 
@@ -258,4 +257,3 @@ export default function HeroSection() {
     </main>
   );
 }
-
