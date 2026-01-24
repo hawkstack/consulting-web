@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-export default function StrategicChallengeMobile(){
+export default function StrategicChallengeMobile() {
   const card1Ref = useRef<HTMLDivElement | null>(null);
   const card2Ref = useRef<HTMLDivElement | null>(null);
 
@@ -21,7 +21,9 @@ export default function StrategicChallengeMobile(){
           }
         });
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0.3, // card must be clearly in view
+      }
     );
 
     if (card1Ref.current) observer.observe(card1Ref.current);
@@ -33,6 +35,7 @@ export default function StrategicChallengeMobile(){
   return (
     <section className="w-full bg-[#f7fbff] px-[40px] py-[33px] font-lexend">
       <div className="mx-auto max-w-[440px] md:max-w-[800px] space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-[60px]">
+        {/* CARD 1 */}
         <div
           ref={card1Ref}
           className={`relative overflow-hidden rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] transform transition-all duration-700 ease-out md:w-[330px] ${
@@ -60,6 +63,7 @@ export default function StrategicChallengeMobile(){
           </div>
         </div>
 
+        {/* CARD 2 */}
         <div
           ref={card2Ref}
           className={`relative overflow-hidden rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] transform transition-all duration-700 ease-out delay-150 md:w-[330px] ${
