@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 const YourInfrastructure: React.FC = () => {
   return (
@@ -69,73 +70,72 @@ const YourInfrastructure: React.FC = () => {
 
         {/* RIGHT: Illustration (Tablet only) */}
         <div className="relative hidden md:flex items-center justify-center w-[600px] lg:h-[300px] mx-auto">
-          {/* Center Infrastructure */}
-          <img
+          <Image
             src="/images/openshift/cta/infrastructure-icon.webp"
             alt="Infrastructure"
-            className=" absolute w-[145px] right-[466px] z-10 lg:w-[194px] lg:left-52"
+            width={194}
+            height={194}
+            className="absolute w-[145px] right-[466px] z-10 lg:w-[194px] lg:left-52"
           />
 
-          {/* Left image */}
           <div
             className="absolute left-[-66px] top-[22px] lg:left-[132px] lg:top-[216px]"
             style={{
               animation: "node1DiagonalLeftUp 5s ease-in-out infinite",
             }}>
-            <img
+            <Image
               src="/images/openshift/cta/node1-icon.webp"
               alt=""
+              width={90}
+              height={90}
               className="w-[67px] lg:w-[90px] lg:-translate-y-1/2"
             />
           </div>
 
-          {/* Right image */}
           <div
             className="absolute left-[133px] top-[13px] lg:left-[402px] lg:top-[201px]"
-            style={{
-              animation: "nodeDiagonalLeft 5s ease-in-out infinite",
-            }}>
-            <img
+            style={{ animation: "nodeDiagonalLeft 5s ease-in-out infinite" }}>
+            <Image
               src="/images/openshift/cta/node2-icon.webp"
               alt=""
+              width={74}
+              height={74}
               className="w-[58px] lg:w-[74px] lg:-translate-y-1/2"
             />
           </div>
 
-          {/* Top image */}
           <div
             className="absolute top-[-42px] left-[97px] lg:top-[83px] lg:left-[404px]"
-            style={{
-              animation: "floatRight 5s ease-in-out infinite",
-            }}>
-            <img
+            style={{ animation: "floatRight 5s ease-in-out infinite" }}>
+            <Image
               src="/images/openshift/cta/cloud-icon.webp"
               alt=""
+              width={120}
+              height={120}
               className="w-[78px] lg:w-[120px] lg:-translate-x-1/2"
             />
           </div>
 
-          {/* Top image */}
           <div
             className="absolute left-[-67px] top-[-27px] lg:left-[166px] lg:top-[97px]"
-            style={{
-              animation: "floatDiagonalUp 5s ease-in-out infinite",
-            }}>
-            <img
+            style={{ animation: "floatDiagonalUp 5s ease-in-out infinite" }}>
+            <Image
               src="/images/openshift/cta/database-icon.webp"
               alt=""
+              width={80}
+              height={80}
               className="w-[50px] lg:w-[80px] lg:-translate-x-1/2"
             />
           </div>
 
-          {/* Bottom image */}
-          <div className="absolute left-[17px] top-[88px] lg:top-[264px] lg:left-[296px] float-down"
-           style={{
-              animation: "floatDiagonalUp 5s ease-in-out infinite",
-            }}>
-            <img
+          <div
+            className="absolute left-[17px] top-[88px] lg:top-[264px] lg:left-[296px]"
+            style={{ animation: "floatDiagonalUp 5s ease-in-out infinite" }}>
+            <Image
               src="/images/openshift/cta/cube-icon.webp"
               alt=""
+              width={84}
+              height={84}
               className="w-[55px] lg:w-[84px] lg:-translate-x-1/2"
             />
           </div>
