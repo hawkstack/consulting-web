@@ -2,8 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-// Mobile-only section: Strategic Challenge & Hawkstack Solution
-export default function StrategicChallengeMobile() {
+export default function StrategicChallengeMobile(){
   const card1Ref = useRef<HTMLDivElement | null>(null);
   const card2Ref = useRef<HTMLDivElement | null>(null);
 
@@ -22,7 +21,7 @@ export default function StrategicChallengeMobile() {
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.3 }
     );
 
     if (card1Ref.current) observer.observe(card1Ref.current);
@@ -32,65 +31,59 @@ export default function StrategicChallengeMobile() {
   }, []);
 
   return (
-    <section className="w-full bg-[#f7fbff] px-4 py-6 font-lexend">
-      <div className="mx-auto max-w-[440px] space-y-6">
-        {/* Card 1: Strategic Challenge */}
+    <section className="w-full bg-[#f7fbff] px-[40px] py-[33px] font-lexend">
+      <div className="mx-auto max-w-[440px] md:max-w-[800px] space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-[60px]">
         <div
           ref={card1Ref}
-          className={`relative overflow-hidden rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] transform transition-all duration-700 ease-out ${
+          className={`relative overflow-hidden rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] transform transition-all duration-700 ease-out md:w-[330px] ${
             card1Visible
               ? "translate-x-0 opacity-100 scale-100"
               : "-translate-x-16 opacity-0 scale-95"
-          }`}>
-          {/* Red accent line (starts below header) */}
-          <span className="absolute left-0 top-[54px] h-[calc(94%-38px)] w-[4px] bg-red-500" />
+          }`}
+        >
+          <span className="absolute left-0 top-[64px] h-[calc(100%-64px)] w-[4px] bg-red-500" />
 
-          {/* Header */}
           <div className="bg-gradient-to-b from-[#1b2f55] to-[#0b1f3a] px-4 py-3">
             <h3 className="text-[20px] font-[600] text-white">
               The Strategic Challenge
             </h3>
           </div>
 
-          {/* Body */}
-          <div className="px-[22px] pt-[8px] pb-[13px] text-[12px] font-[400] leading-relaxed text-[#2b2b2b] text-justify">
-            Organizations often run legacy virtual machines and containerized
-            workloads on separate platforms, leading to siloed tools and teams,
-            higher infrastructure and management costs, and increased
-            operational complexity. This fragmented approach results in
-            inconsistent security, governance, and visibility, making compliance
-            more challenging and modernization initiatives slower, riskier, and
-            harder to scale.
+          <div className="px-[22px] pt-[8px] pb-[13px] text-[10px] font-[400] leading-relaxed text-[#2b2b2b] text-justify">
+            Organizations are under constant pressure to modernize application
+            platforms to improve speed to market, operational efficiency, and
+            business resilience. While Red Hat OpenShift enables these outcomes,
+            adopting it without the right foundation can result in project
+            delays, rising costs, security gaps, and long-term operational risk.
+            Enterprises need to move fast—without creating technical debt that
+            limits scalability and future innovation.
           </div>
         </div>
 
-        {/* Card 2: Hawkstack Solution */}
         <div
           ref={card2Ref}
-          className={`relative overflow-hidden rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] transform transition-all duration-700 ease-out delay-150 ${
+          className={`relative overflow-hidden rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] transform transition-all duration-700 ease-out delay-150 md:w-[330px] ${
             card2Visible
               ? "translate-x-0 opacity-100 scale-100"
               : "translate-x-16 opacity-0 scale-95"
-          }`}>
-          {/* Blue accent line (starts below header) */}
-          <span className="absolute left-0 top-[54px] h-[calc(94%-38px)] w-[4px] bg-[#155DFC]" />
+          }`}
+        >
+          <span className="absolute left-0 top-[64px] h-[calc(100%-64px)] w-[4px] bg-[#155DFC]" />
 
-          {/* Header */}
           <div className="bg-gradient-to-b from-[#1b2f55] to-[#0b1f3a] px-4 py-3">
             <h3 className="text-[20px] font-[600] text-white">
               The Hawkstack Solution
             </h3>
           </div>
 
-          {/* Body */}
-          <div className="px-[22px] pt-[8px] pb-[13px] text-[12px] font-[400] leading-relaxed text-[#2b2b2b] text-justify">
-            HawkStack provides a unified OpenShift platform that enables VMs and
-            containers to run side by side with Kubernetes-native lifecycle
-            management. It delivers enterprise-grade availability, security, and
-            consistent governance while unifying operations under a single
-            control plane. With a phased, low-risk adoption approach, HawkStack
-            helps organizations modernize efficiently while reducing cost and
-            complexity.
+          <div className="px-[22px] pt-[8px] pb-[13px] text-[10px] font-[400] leading-relaxed text-[#2b2b2b] text-justify">
+            HawkStack’s Red Hat OpenShift Container Platform Pilot provides a
+            low-risk, accelerated path to enterprise adoption. Delivered in a
+            focused 2–4-week engagement, Red Hat–certified experts design and
+            deploy a production-ready OpenShift platform aligned with business
+            and operational priorities. This approach removes guesswork,
+            reduces risk, and creates a strong foundation for scale—allowing
+            organizations to confidently move from pilot to production.
           </div>
         </div>
       </div>
