@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ArrowUp, ArrowDown } from "lucide-react";
 
 const slides = [
   {
@@ -35,8 +36,7 @@ export default function EnterpriseSection() {
   }, []);
 
   return (
-    <section className="relative h-[560px] md:h-[568px] lg:h-[568px] bg-[#0B1F4B] text-white overflow-hidden font-lexend">
-
+    <section className="relative h-[560px] md:h-[568px] lg:h-[568px] bg-[#0B1F4B] text-white overflow-hidden">
       {/* ===== MOBILE HERO IMAGE (ONLY MOBILE) ===== */}
       <div className="relative flex justify-center pt-10 md:hidden">
         <Image
@@ -47,38 +47,28 @@ export default function EnterpriseSection() {
           className="object-cover"
         />
       </div>
-
       {/* ===== CONTENT ===== */}
       <div className="relative z-20 pt-10 pb-10 px-4 md:pt-[134px] md:pl-[38px] lg:pt-[134px] lg:pl-[38px]">
         <div className="relative w-full md:w-1/2 lg:w-1/2">
           <div className="flex items-start gap-6">
-
             {/* ===== ARROWS ===== */}
-            <div className="flex flex-col items-center gap-[60px] pt-3">
-              <button
-                onClick={prevSlide}
-                className="w-5 h-5 rounded-full border border-white/40 
-                flex items-center justify-center 
-                hover:bg-white/10 transition"
-              >
-                ↑
+            <div className="flex flex-col items-center gap-[50px] pt-[12px] md:gap-[75px] md:pt-[16px] lg:gap-[80px] lg:pt-[20px]">
+              <button onClick={prevSlide}
+                className="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full border border-white/40 flex items-center justify-center text-[10px] md:text-[12px] hover:bg-white/10 transition">
+                  <ArrowUp className="w-2.5 h-2.5 md:w-3 md:h-3"
+                    strokeWidth={2} />
               </button>
 
-              <button
-                onClick={nextSlide}
-                className="w-5 h-5 rounded-full border border-white/40 
-                flex items-center justify-center 
-                hover:bg-white/10 transition"
-              >
-                ↓
+              <button onClick={nextSlide}
+                 className="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full border border-white/40 flex items-center justify-center text-[10px] md:text-[12px] hover:bg-white/10 transition">
+                  <ArrowDown className="w-2.5 h-2.5 md:w-3 md:h-3"
+                    strokeWidth={2} />
               </button>
             </div>
-
             {/* ===== TEXT CONTENT ===== */}
             <div className="relative w-full">
-
               {/* SLIDES */}
-              <div className="relative h-[180px] md:h-[180px] lg:h-[180px]">
+              <div className="relative h-[160px] md:h-[160px] lg:h-[160px]">
                 {slides.map((slide, i) => (
                   <div
                     key={i}
@@ -89,43 +79,30 @@ export default function EnterpriseSection() {
                         : "opacity-0 translate-y-6 pointer-events-none"
                     }`}
                   >
-                    <h2 className="text-[18px] md:text-[40px] lg:text-[40px] leading-tight mb-4 max-w-[540px]">
+                    <h2 className="font-lexend text-[18px] leading-[26px] md:text-[32px] md:leading-[42px] lg:text-[40px] lg:leading-[50px] tracking-normal mb-4 max-w-[540px]">
                       {slide.title}
                     </h2>
 
-                    <p className="text-[14px] text-white/80 max-w-[540px]">
+                    <p className="font-poppins font-normal text-[13px] leading-[19.5px] md:text-[14px] md:leading-[21px] lg:text-[14px] lg:leading-[21px] tracking-[-0.03em] text-white/80 max-w-[540px]">
                       {slide.desc}
                     </p>
                   </div>
                 ))}
               </div>
-
               {/* ===== CTA BUTTONS ===== */}
               <div className="flex flex-row ml-[-20px] items-center gap-4 w-full md:mt-[62px] md:pl-0 lg:mt-[62px] lg:pl-0">
                 <button
-                  className="w-1/2 bg-blue-600 hover:bg-blue-500 transition
-                  px-2 py-2 rounded-full
-                  flex items-center justify-center gap-2
-                  text-[10px] md:px-5 md:py-2.5 md:text-[14px]
-                  lg:px-5 lg:py-2.5 lg:text-[14px]
-                  whitespace-nowrap overflow-hidden"
-                >
+                  className=" bg-blue-600 hover:bg-blue-500 transition px-3 py-2 rounded-full flex items-center justify-center 
+                  gap-2 text-[10px] md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] whitespace-nowrap overflow-hidden">
                   ▶ Schedule a Consultation
                 </button>
 
                 <button
-                  className="w-1/2 bg-white text-blue-700
-                  px-2 py-2 rounded-full
-                  flex items-center justify-center gap-2
-                  text-[11px] md:px-5 md:py-2.5 md:text-[14px]
-                  lg:px-5 lg:py-2.5 lg:text-[14px]
-                  hover:bg-gray-100 transition
-                  whitespace-nowrap overflow-hidden"
-                >
+                  className=" bg-white text-blue-700 px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
+                  md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] hover:bg-gray-100 transition whitespace-nowrap overflow-hidden">
                   → View Our Solutions
                 </button>
               </div>
-
             </div>
           </div>
         </div>
