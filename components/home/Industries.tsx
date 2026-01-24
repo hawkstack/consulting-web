@@ -88,13 +88,13 @@ const Industries = (): JSX.Element => {
   };
 
   return (
-    <section className="w-full bg-[#EEF1FF] py-24 h-[823px]">
+    <section className="w-full bg-[#EEF1FF] py-16 lg:py-24">
       {/* Heading */}
-      <div className="text-center max-w-3xl mx-auto">
-        <h2 className="font-['Lexend_Deca'] h-[60px] w-[818px] text-[40px] leading-[60px] font-normal tracking-[-0.03em] text-center text-[#213174]">
+      <div className="text-center max-w-3xl mx-auto px-4">
+        <h2 className="font-['Lexend_Deca'] text-[28px] sm:text-[32px] lg:text-[40px] leading-tight lg:leading-[60px] text-[#213174]">
           Powering Industries with Red Hat Consulting
         </h2>
-        <p className="mt-4 h-[40px] w-[669px] text-[16px] text-[#213174] leading-[24px]">
+        <p className="mt-4 text-[14px] sm:text-[15px] lg:text-[16px] text-[#213174] leading-[22px] lg:leading-[24px]">
           Design enterprise platforms that scale with confidence.
           <br />
           Modernise workloads with expert Red Hat architects and real-world
@@ -103,8 +103,8 @@ const Industries = (): JSX.Element => {
       </div>
 
       {/* Carousel */}
-      <div className="relative flex items-center justify-center">
-        <div className="relative w-[1428px] h-[560px] flex flex-col items-center justify-end">
+      <div className="relative flex items-center justify-center mt-14">
+        <div className="relative w-full max-w-[1428px] h-[420px] sm:h-[480px] lg:h-[560px] flex flex-col items-center justify-end">
           {/* Cards */}
           <div className="absolute inset-0 flex items-center justify-center">
             {carouselData.map((item, index) => {
@@ -119,38 +119,44 @@ const Industries = (): JSX.Element => {
                   key={item.id}
                   className={`
                     absolute transition-all duration-500 ease-in-out
-                    rounded-[28px] overflow-hidden
+                    overflow-hidden
+                    rounded-[20px] sm:rounded-[24px] lg:rounded-[28px]
                     ${position !== "center" ? "pointer-events-none" : ""}
+
                     ${
                       position === "center" &&
-                      "w-[454px] z-30 opacity-100 translate-x-0 shadow-[0_30px_80px_rgba(0,0,0,0.25)]"
+                      "w-[90vw] sm:w-[380px] lg:w-[470px] z-30 opacity-100 translate-x-0 shadow-[0_30px_80px_rgba(0,0,0,0.25)]"
                     }
+
                     ${
                       position === "left1" &&
-                      "w-[360px] h-[320px] z-20 opacity-90 -translate-x-[320px]"
+                      "hidden sm:block w-[300px] h-[280px] lg:w-[300px] lg:h-[320px] z-20 opacity-90 sm:-translate-x-[220px] -translate-x-[320px] lg:-translate-x-[310px]"
                     }
+
                     ${
                       position === "right1" &&
-                      "w-[360px] h-[320px] z-20 opacity-90 translate-x-[320px]"
+                      "hidden sm:block w-[300px] h-[280px] lg:w-[300px] lg:h-[320px] z-20 opacity-90 sm:translate-x-[220px] -translate-x-[320px] lg:translate-x-[310px]"
                     }
+
                     ${
                       position === "left2" &&
-                      "w-[320px] h-[240px] z-10 opacity-40 -translate-x-[420px]"
+                      "hidden lg:block w-[320px] h-[240px] lg:w-[160px] z-10 opacity-40 -translate-x-[420px]"
                     }
+
                     ${
                       position === "right2" &&
-                      "w-[320px] h-[240px] z-10 opacity-40 translate-x-[420px]"
+                      "hidden lg:block w-[320px] lg:w-[160px] h-[240px] z-10 opacity-40 translate-x-[420px]"
                     }
                   `}
                 >
-                  {/* Image wrapper required for next/image fill */}
+                  {/* Image */}
                   <div
                     className={`relative w-full
                       ${
                         position === "center"
-                          ? "h-[280px]"
+                          ? "h-[220px] sm:h-[250px] lg:h-[280px]"
                           : position === "left1" || position === "right1"
-                          ? "h-[320px]"
+                          ? "h-[260px] sm:h-[280px] lg:h-[320px]"
                           : "h-[240px]"
                       }
                     `}
@@ -160,17 +166,17 @@ const Industries = (): JSX.Element => {
                       alt={item.title}
                       fill
                       priority={position === "center"}
-                      sizes="(min-width: 1024px) 454px, 90vw"
+                      sizes="(min-width:1024px) 454px, (min-width:640px) 380px, 90vw"
                       className="object-cover"
                     />
                   </div>
 
                   {position === "center" && (
-                    <div className="bg-white px-6 py-5 rounded-b-[28px]">
-                      <h3 className="font-['Lexend_Deca'] text-[20.36px] leading-[20.36px] font-normal tracking-[0] text-[#000000]">
+                    <div className="bg-white px-4 sm:px-5 lg:px-6 py-4 lg:py-5 rounded-b-[20px] sm:rounded-b-[24px] lg:rounded-b-[28px]">
+                      <h3 className="font-['Lexend_Deca'] text-[16px] sm:text-[18px] lg:text-[20.36px] text-black">
                         {item.title}
                       </h3>
-                      <p className="mt-2 font-['Lexend_Deca'] text-[13.57px] leading-[13.57px] font-light tracking-[0] text-[#000000]">
+                      <p className="mt-2 font-['Lexend_Deca'] text-[12px] sm:text-[13px] lg:text-[13.57px] font-light text-black">
                         {item.description}
                       </p>
                     </div>
@@ -180,12 +186,9 @@ const Industries = (): JSX.Element => {
             })}
           </div>
 
-          {/* Dots + Arrows (INSIDE carousel) */}
-          <div className="relative z-50 mb-4 flex items-center gap-6">
-            <button
-              onClick={handlePrev}
-              className="text-2xl text-[#999999] hover:text-gray-600 cursor-pointer"
-            >
+          {/* Controls */}
+          <div className="relative z-50 mb-0 sm:mb-2 lg:mb-6 flex items-center gap-6">
+            <button onClick={handlePrev} className="text-2xl text-[#999999]">
               ←
             </button>
 
@@ -194,17 +197,14 @@ const Industries = (): JSX.Element => {
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
-                  className={`w-3 h-3 rounded-full transition ${
+                  className={`w-3 h-3 rounded-full ${
                     index === activeIndex ? "bg-[#3015BD]" : "bg-[#999999]"
                   }`}
                 />
               ))}
             </div>
 
-            <button
-              onClick={handleNext}
-              className="text-2xl text-[#999999] hover:text-gray-600 cursor-pointer"
-            >
+            <button onClick={handleNext} className="text-2xl text-[#999999]">
               →
             </button>
           </div>

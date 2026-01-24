@@ -97,22 +97,85 @@ body {
     animation-play-state: paused;
   }
 }
-@keyframes fadeIn {
+
+@keyframes slideUpOut {
   from {
-    opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(0%);
+    opacity: 1;
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-100%);
+    opacity: 0;
   }
 }
 
-/* Utility class */
-.animate-fadeIn {
-  animation: fadeIn 250ms ease-out forwards;
+@keyframes slideUpIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
-.footer-bg {
-  background-color: #040b10;
+/* openshift */
+
+@keyframes floatDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.float-down {
+  animation: floatDown 3s ease-in-out infinite;
+}
+
+@keyframes floatDiagonalUp {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(12px, -12px);
+  }
+}
+
+/* =========================
+   FLOAT RIGHT (wait at origin)
+   ========================= */
+@keyframes floatRight {
+  0%, 60%, 100% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(12px);
+  }
+}
+
+/* =========================
+   NODE DIAGONAL LEFT (wait at origin)
+   ========================= */
+@keyframes nodeDiagonalLeft {
+  0%, 60%, 100% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-14px, -10px);
+  }
+}
+
+/* =========================
+   NODE1 DIAGONAL LEFT UP (wait at origin)
+   ========================= */
+@keyframes node1DiagonalLeftUp {
+  0%, 60%, 100% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-14px, -12px);
+  }
 }
