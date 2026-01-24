@@ -97,24 +97,27 @@ body {
     animation-play-state: paused;
   }
 }
-@keyframes fadeIn {
+
+@keyframes slideUpOut {
   from {
-    opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(0%);
+    opacity: 1;
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-100%);
+    opacity: 0;
   }
 }
 
-/* Utility class */
-.animate-fadeIn {
-  animation: fadeIn 250ms ease-out forwards;
-}
-
-.footer-bg {
-  background-color: #040b10;
+@keyframes slideUpIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 /* openshift */
