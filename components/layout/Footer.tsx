@@ -11,7 +11,7 @@ const socialIcons = [
 
 export const Footer = (): JSX.Element => {
   return (
-    <footer className="font-lexend font-light footer-bg relative overflow-hidden text-white w-full">
+    <footer className="font-lexend font-light bg-black relative overflow-hidden text-white w-full">
       {/* Blur */}
       <div className="absolute right-[-200px] bottom-[-200px] w-[649px] h-[649px] rounded-full bg-[#0E245AB2] blur-[200px] z-0" />
 
