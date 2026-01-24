@@ -52,7 +52,7 @@ export default function EnterpriseSection() {
         <div className="relative w-full md:w-1/2 lg:w-1/2">
           <div className="flex items-start gap-6">
             {/* ===== ARROWS ===== */}
-            <div className="flex flex-col items-center gap-[50px] pt-[12px] md:gap-[75px] md:pt-[16px] lg:gap-[80px] lg:pt-[20px]">
+            <div className="flex flex-col items-center gap-[50px] pt-[12px] md:gap-[70px] md:pt-[16px] lg:gap-[80px] lg:pt-[20px]">
               <button onClick={prevSlide}
                 className="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full border border-white/40 flex items-center justify-center text-[10px] md:text-[12px] hover:bg-white/10 transition">
                   <ArrowUp className="w-2.5 h-2.5 md:w-3 md:h-3"
@@ -79,7 +79,7 @@ export default function EnterpriseSection() {
                         : "opacity-0 translate-y-6 pointer-events-none"
                     }`}
                   >
-                    <h2 className="font-lexend text-[18px] leading-[26px] md:text-[32px] md:leading-[42px] lg:text-[40px] lg:leading-[50px] tracking-normal mb-4 max-w-[540px]">
+                    <h2 className="font-lexend text-[18px] leading-[26px] md:text-[28px] md:leading-[32px] lg:text-[40px] lg:leading-[50px] tracking-normal mb-4 max-w-[540px]">
                       {slide.title}
                     </h2>
 
