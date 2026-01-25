@@ -36,7 +36,7 @@ export default function EnterpriseSection() {
   }, []);
 
   return (
-    <section className="relative h-[560px] md:h-[568px] lg:h-[568px] bg-[#0B1F4B] text-white overflow-hidden">
+    <section className="relative h-[560px] md:h-[568px] lg:h-[568px] bg-[#0B1F4B] text-white overflow-hidden font-lexend ">
       {/* ===== MOBILE HERO IMAGE (ONLY MOBILE) ===== */}
       <div className="relative flex justify-center pt-10 md:hidden">
         <Image
@@ -49,8 +49,8 @@ export default function EnterpriseSection() {
       </div>
       {/* ===== CONTENT ===== */}
       <div className="relative z-20 pt-10 pb-10 px-4 md:pt-[134px] md:pl-[38px] lg:pt-[134px] lg:pl-[38px]">
-        <div className="relative w-full md:w-1/2 lg:w-1/2">
-          <div className="flex items-start gap-6">
+        <div className="relative w-full md:w-[380px] lg:w-[600px]">
+          <div className="flex items-start gap-5">
             {/* ===== ARROWS ===== */}
             <div className="flex flex-col items-center gap-[50px] pt-[12px] md:gap-[70px] md:pt-[16px] lg:gap-[80px] lg:pt-[20px]">
               <button onClick={prevSlide}
@@ -68,7 +68,7 @@ export default function EnterpriseSection() {
             {/* ===== TEXT CONTENT ===== */}
             <div className="relative w-full">
               {/* SLIDES */}
-              <div className="relative h-[160px] md:h-[160px] lg:h-[160px]">
+              <div className="relative min-h-[160px] md:min-h-[160px] lg:min-h-[160px]">
                 {slides.map((slide, i) => (
                   <div
                     key={i}
@@ -79,11 +79,11 @@ export default function EnterpriseSection() {
                         : "opacity-0 translate-y-6 pointer-events-none"
                     }`}
                   >
-                    <h2 className="font-lexend text-[18px] leading-[26px] md:text-[28px] md:leading-[32px] lg:text-[40px] lg:leading-[50px] tracking-normal mb-4 max-w-[540px]">
+                    <h2 className="text-[18px] leading-[26px] md:text-[28px] md:leading-[32px] lg:text-[40px] lg:leading-[50px] tracking-normal mb-4 max-w-[540px]">
                       {slide.title}
                     </h2>
 
-                    <p className="font-poppins font-normal text-[13px] leading-[19.5px] md:text-[14px] md:leading-[21px] lg:text-[14px] lg:leading-[21px] tracking-[-0.03em] text-white/80 max-w-[540px]">
+                    <p className="font-normal text-[13px] leading-[19.5px] md:text-[14px] md:leading-[21px] lg:text-[14px] lg:leading-[21px] tracking-[-0.03em] text-white/80 max-w-[540px]">
                       {slide.desc}
                     </p>
                   </div>
