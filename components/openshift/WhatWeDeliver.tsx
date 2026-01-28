@@ -1,16 +1,16 @@
 "use client";
 
+import DiscussRedHat from "./Form";
+
 export default function WhatWeDeliver() {
   return (
     <section className="bg-white px-4 pt-6 md:pt-6 font-lexend overflow-hidden">
       <div className="mx-auto max-w-7xl md:flex md:items-start md:gap-16">
-
         {/* LEFT COLUMN */}
-        <div className="md:w-[480px] lg:w-[600px]">
-
+        <div className=" lg:w-[600px] md:w-[300px]">
           {/* Title + Description */}
           <div className="mb-8 lg:mb-15">
-                {/* Description hidden on mobile */}
+            {/* Description hidden on mobile */}
             <p className="hidden md:block  mb-1max-w-xl text-[12px] text-black text-justify lg:text-[16px]">
               Rapidly validate Red Hat OpenShift and build a production-ready,
               enterprise-grade container platform on Kubernetes. Our approach
@@ -22,14 +22,11 @@ export default function WhatWeDeliver() {
             <h2 className="text-3xl mt-2 lg:mt-6 font-bold text-black text-center  animate-[fadeUp_0.8s_ease-out_forwards] lg:text-[32px]">
               What we deliver
             </h2>
-
-        
           </div>
 
           {/* Diamonds */}
           <div className="flex justify-center md:justify-start">
             <div className="relative w-full max-w-sm h-[380px]">
-
               {/* Soft background diamonds */}
               <div
                 className="absolute top-40 left-10 w-[100px] h-[100px] lg:absolute lg:left-28 rotate-45 bg-gradient-to-br from-[#cfdcff] to-[#9fb6ff] rounded-3xl blur-[8px]
@@ -43,13 +40,13 @@ export default function WhatWeDeliver() {
 
               {/* Center Dark Diamond */}
               <div
-                className="absolute inset-0 left-4 flex items-center justify-center z-30 
+                className="absolute inset-0 left-4 flex items-center justify-center z-30 md:absolute md:right-[-50px]
                 animate-[fadeUp_0.8s_ease-out_forwards_0.2s] lg:absolute lg:left-50 md:absolute md:left-6 md:top-[-10px]">
                 <div
                   className="w-[100px] h-[100px] lg:w-[140px]  lg:h-[140px] rotate-45 bg-gradient-to-br from-[#0b1e3a] to-[#132f5e] rounded-3xl flex items-center justify-center
                   animate-[floatSlow_10s_ease-in-out_infinite]">
                   <p className="-rotate-45 text-white text-[10px] font-semibold text-center leading-snug px-4 lg:text-[14px]">
-                   Cluster Design & Setup
+                    Cluster Design & Setup
                   </p>
                 </div>
               </div>
@@ -73,7 +70,7 @@ export default function WhatWeDeliver() {
 
               {/* Right Diamond */}
               <div
-                className="absolute left-[236px] top-[151px]  -translate-y-1/2 z-20
+                className="absolute left-[236px] top-[151px]  -translate-y-1/2 z-20 md:absolute md:left-50 lg:absolute lg:left-64
                 animate-[fadeUp_0.8s_ease-out_forwards_0.45s]">
                 <div
                   className="w-[100px] h-[100px] lg:w-[140px]  lg:h-[140px]  rotate-45 bg-gradient-to-br from-[#cfdcff] to-[#9fb6ff] rounded-3xl flex items-center justify-center
@@ -115,8 +112,9 @@ export default function WhatWeDeliver() {
             </div>
           </div>
         </div>
-
-        {/* RIGHT COLUMN — empty / form later */}
+        <div className=" hidden md:block lg:absolute lg:top-146 lg:right-35 md:absolute md:right-0 md:top-140  " >
+          <DiscussRedHat />
+        </div>
         <div className="hidden md:block md:w-1/2"></div>
       </div>
     </section>
