@@ -7,7 +7,7 @@ import WhatYouWillReceive from "@/components/openshift/WhatYouReceive";
 export default function OpenShiftPage() {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <WhatWeDeliver />
       <ChallengeSolution />
       <YourInfrastructure />
