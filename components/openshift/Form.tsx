@@ -131,7 +131,7 @@ export default function DiscussRedHat() {
 
   return (
     <section className="w-full flex justify-center py-6 font-lexend">
-      <div className="w-full max-w-[440px] px-4">
+      <div className="w-full max-w-[440px] lg:max-w-[565px] px-4">
         <div className="bg-white rounded-2xl border border-[#BDBDBD] shadow-[0_8px_24px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="bg-gradient-to-b from-[#1b2f55] to-[#0b1f3a] px-6 py-4">
             <h2 className="text-white text-[18px] font-semibold">
@@ -160,8 +160,8 @@ export default function DiscussRedHat() {
               setLoading(true);
 
               try {
-                const  Response = await fetch(
-               `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/openshift`,
+                const Response = await fetch(
+                  `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/openshift`,
                   {
                     method: "POST",
                     headers: {
@@ -201,13 +201,13 @@ export default function DiscussRedHat() {
                 setLoading(false);
               }
             }}
-            className="p-[25px] space-y-4 w-[353px] mx-auto">
+            className="p-[25px] space-y-4 w-[353px] md:w-[470px] mx-auto">
             <div className="grid grid-cols-2 gap-3">
               <input
                 placeholder="First Name*"
                 value={form.first}
                 onChange={(e) => setForm({ ...form, first: e.target.value })}
-                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                className={`w-full h-[33px] md:w-[222px] rounded-lg px-3 text-[12px] border outline-none ${
                   error.first && !form.first
                     ? "border-red-500 animate-shake"
                     : form.first
@@ -219,7 +219,7 @@ export default function DiscussRedHat() {
                 placeholder="Last Name*"
                 value={form.last}
                 onChange={(e) => setForm({ ...form, last: e.target.value })}
-                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                className={`w-full h-[33px] md:w-[222px] rounded-lg px-3 text-[12px] border outline-none ${
                   error.last && !form.last
                     ? "border-red-500 animate-shake"
                     : form.last
@@ -234,7 +234,7 @@ export default function DiscussRedHat() {
                 placeholder="Business Email*"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                className={`w-full h-[33px] md:w-[222px] rounded-lg px-3 text-[12px] border outline-none ${
                   error.email && !form.email
                     ? "border-red-500 animate-shake"
                     : form.email
@@ -246,7 +246,7 @@ export default function DiscussRedHat() {
                 placeholder="Job Title*"
                 value={form.job}
                 onChange={(e) => setForm({ ...form, job: e.target.value })}
-                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                className={`w-full h-[33px] md:w-[222px] rounded-lg px-3 text-[12px] border outline-none ${
                   error.job && !form.job
                     ? "border-red-500 animate-shake"
                     : form.job
@@ -261,7 +261,7 @@ export default function DiscussRedHat() {
                 placeholder="Company*"
                 value={form.company}
                 onChange={(e) => setForm({ ...form, company: e.target.value })}
-                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                className={`w-full h-[33px] md:w-[222px] rounded-lg px-3 text-[12px] border outline-none ${
                   error.company && !form.company
                     ? "border-red-500 animate-shake"
                     : form.company
