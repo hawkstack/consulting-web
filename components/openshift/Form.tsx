@@ -159,30 +159,27 @@ export default function DiscussRedHat() {
               setSubmitError("");
               setLoading(true);
 
-              const API_BASE_URL: string =
-                process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-
               try {
-                const response: Response = await fetch(
-                  `${API_BASE_URL}/api/contacts`,
+                const  Response = await fetch(
+               `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/openshift`,
                   {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                      firstName: form.first,
-                      lastName: form.last,
+                      firstname: form.first,
+                      lastname: form.last,
                       email: form.email,
-                      jobTitle: form.job,
+                      jobtitle: form.job,
                       company: form.company,
                       country: form.country.code,
-                      message: message,
+                      query: message,
                     }),
                   },
                 );
 
-                if (!response.ok) throw new Error();
+                if (!Response.ok) throw new Error();
 
                 setSuccess(true);
                 setForm({
@@ -198,7 +195,6 @@ export default function DiscussRedHat() {
                 setTimeout(() => {
                   setSuccess(false);
                 }, 3000);
-
               } catch {
                 setSubmitError("Something went wrong. Please try again.");
               } finally {
