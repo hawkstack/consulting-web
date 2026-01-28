@@ -198,7 +198,7 @@ export default function DiscussRedHat() {
                 setTimeout(() => {
                   setSuccess(false);
                 }, 3000);
-                
+
               } catch {
                 setSubmitError("Something went wrong. Please try again.");
               } finally {
