@@ -86,8 +86,8 @@ export default function HeroSection() {
             </filter>
 
             <linearGradient id="edgeHighlight" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
-              <stop offset="100%" stop-color="" stop-opacity="10" />
+              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.45" />
+              <stop offset="100%" stopColor="" stopOpacity="10" />
             </linearGradient>
           </defs>
 
@@ -111,7 +111,7 @@ export default function HeroSection() {
             transform="rotate(-45 30 40)"
             fill="none"
             stroke="url(#edgeHighlight)"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
 
           <g transform="translate(200 0) scale(-1 1)">
@@ -136,7 +136,7 @@ export default function HeroSection() {
               transform="rotate(-45 30 240)"
               fill="none"
               stroke="url(#edgeHighlight)"
-              stroke-width="1"
+              strokeWidth="1"
               opacity="0.5"
             />
           </g>
@@ -162,7 +162,7 @@ export default function HeroSection() {
               transform="rotate(-45 30 240)"
               fill="none"
               stroke="url(#edgeHighlight)"
-              stroke-width="1"
+              strokeWidth="1"
               opacity="0.5"
             />
           </g>
@@ -188,7 +188,7 @@ export default function HeroSection() {
               transform="rotate(-45 30 240)"
               fill="none"
               stroke="url(#edgeHighlight)"
-              stroke-width="1"
+              strokeWidth="1"
               opacity="0.5"
             />
           </g>
@@ -214,7 +214,7 @@ export default function HeroSection() {
               transform="rotate(-45 30 240)"
               fill="none"
               stroke="url(#edgeHighlight)"
-              stroke-width="1"
+              strokeWidth="1"
               opacity="0.5"
             />
           </g>
