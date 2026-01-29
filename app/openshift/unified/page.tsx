@@ -1,3 +1,4 @@
+import DiscussRedHat from "@/components/openshift/Form";
 import ChallengeSolution from "@/components/unified/ChallengeSolutionSection";
 import HeroSection from "@/components/unified/HeroSection";
 import WhatYouWillReceive from "@/components/unified/WhatYouReceive";
@@ -8,6 +9,9 @@ export default function OpenShiftPage() {
       <HeroSection />
       <ChallengeSolution />
       <WhatYouWillReceive />
+      <div className="block md:hidden">
+        <DiscussRedHat />
+      </div>
       <YourInfrastructure />
     </>
   );
