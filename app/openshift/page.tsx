@@ -8,7 +8,7 @@ import DiscussRedHat from "@/components/openshift/Form";
 export default function OpenShiftPage() {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <WhatWeDeliver />
       <ChallengeSolution />
       <YourInfrastructure />
