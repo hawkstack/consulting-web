@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowUp, ArrowDown } from "lucide-react";
 
 const slides = [
   {
@@ -54,15 +53,21 @@ export default function EnterpriseSection() {
             {/* ===== ARROWS ===== */}
             <div className="flex flex-col items-center gap-[50px] pt-[12px] md:gap-[70px] md:pt-[16px] lg:gap-[80px] lg:pt-[20px]">
               <button onClick={prevSlide}
-                className="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full border border-white/40 flex items-center justify-center text-[10px] md:text-[12px] hover:bg-white/10 transition">
-                  <ArrowUp className="w-2.5 h-2.5 md:w-3 md:h-3"
-                    strokeWidth={2} />
+                className="relative w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95">
+                <Image 
+                  src="/images/arrow-up.svg" 
+                  alt="Previous Slide" 
+                  fill
+                  className="object-contain"/>
               </button>
 
               <button onClick={nextSlide}
-                 className="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full border border-white/40 flex items-center justify-center text-[10px] md:text-[12px] hover:bg-white/10 transition">
-                  <ArrowDown className="w-2.5 h-2.5 md:w-3 md:h-3"
-                    strokeWidth={2} />
+                className="relative  w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95">
+                <Image 
+                  src="/images/arrow-down.svg" 
+                  alt="Next Slide" 
+                  fill
+                  className="object-contain"/>
               </button>
             </div>
             {/* ===== TEXT CONTENT ===== */}
