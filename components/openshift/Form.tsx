@@ -7,6 +7,9 @@ import ReactCountryFlag from "react-country-flag";
 import { validateEmail } from "@/components/utils/validations";
 
 countriesLib.registerLocale(enLocale);
+type DiscussRedHatProps = {
+  source: "openshift" | "unified";
+};
 
 const countries: { code: string; name: string }[] = Object.entries(
   countriesLib.getNames("en", { select: "official" }),
@@ -101,7 +104,7 @@ function CountrySelect({
   );
 }
 
-export default function DiscussRedHat() {
+export default function DiscussRedHat({ source }: DiscussRedHatProps) {
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [success, setSuccess] = useState(false);
@@ -168,10 +171,11 @@ export default function DiscussRedHat() {
                       "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                      firstname: form.first,
-                      lastname: form.last,
+                      source,
+                      firstName: form.first,
+                      lastName: form.last,
                       email: form.email,
-                      jobtitle: form.job,
+                      jobTitle: form.job,
                       company: form.company,
                       country: form.country.code,
                       query: message,

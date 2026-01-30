@@ -13,7 +13,7 @@ export default function OpenShiftPage() {
       <ChallengeSolution />
       <WhatYouWillReceive />
       <div className="block md:hidden">
-        <DiscussRedHat />
+        <DiscussRedHat source="openshift"/>
       </div>
       <YourInfrastructure />
     </>
