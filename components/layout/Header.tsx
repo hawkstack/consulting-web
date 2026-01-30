@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { JSX, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,18 +12,17 @@ import {
 } from "@/components/navigation/menuData";
 import { MegaItem } from "@/components/navigation/types";
 
-type MenuKey = "solutions" | "services" | "company" | "training" | null;
+type MenuKey = "solutions" | "services" | "company" | "training" | any;
 
 const menuMap: Record<MenuKey, MegaItem[] | null> = {
   solutions,
   services,
   company,
-  training,
-  null: null,
+  training
 };
 
 export function Header(): JSX.Element {
-  const [openMenu, setOpenMenu] = useState<MenuKey>(null);
+  const [openMenu, setOpenMenu] = useState<MenuKey>();
   const [activeItem, setActiveItem] = useState<MegaItem | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 

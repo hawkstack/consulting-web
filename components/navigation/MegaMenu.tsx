@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { MegaItem } from "./types";
+import { JSX } from "react";
 
 type Props = {
   items: MegaItem[];
