@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { JSX } from "react";
 
 const logos: readonly string[] = [
   "/images/partners/Hawkstack-Logo.webp",

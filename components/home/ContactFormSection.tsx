@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent, JSX } from "react";
 import { validateEmail, validatePhone } from "../utils/validations";
 
 interface ContactFormData {
