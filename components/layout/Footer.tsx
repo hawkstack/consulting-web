@@ -19,7 +19,7 @@ export const Footer = (): JSX.Element => {
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
           <Image
-            src="/images/hawkstack.logo.webp"
+            src="/images/hawkstack-logo.webp"
             alt="HawkStack"
             width={120}
             height={40}

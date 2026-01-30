@@ -34,7 +34,7 @@ export function Header(): JSX.Element {
         {/* LOGO */}
         <div className="flex items-center justify-center w-[85.96px] h-[28.28px] md:w-[120px] md:h-[36px] lg:w-[152px] lg:h-[42px] rounded-[5.66px] md:rounded-[7px] lg:rounded-[7.92px] border border-white bg-white">
           <Image
-            src="/images/hawkstack.logo.webp"
+            src="/images/hawkstack-logo.webp"
             alt="HawkStack Logo"
             width={124}
             height={38}
