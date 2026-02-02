@@ -160,7 +160,7 @@ export const Footer = (): JSX.Element => {
         </div>
 
         {/* ================= DESKTOP (lg+) ================= */}
-        <div className="hidden lg:grid mt-2 grid-cols-4 gap-x-4 text-[18px]">
+        <div className="hidden lg:grid mt-2 grid-cols-4 gap-x-4 text-[16px]">
           <div>
             <h4 className="mb-4 font-semibold">Services</h4>
             <ul className="space-y-3 text-gray-300">
