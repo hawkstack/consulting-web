@@ -1,43 +1,5 @@
+import { deliverItems } from "@/constants/deliverItems";
 import Image from "next/image";
-
-type DeliverItem = {
-  title: string;
-  desc: string;
-  logo: string;
-};
-
-const deliverItems: DeliverItem[] = [
-  {
-    title: "App Modernization",
-    desc: "We modernize applications using cloud-native technologies.",
-    logo: "/icons/app-modernization.svg",
-  },
-  {
-    title: "KubeVirt",
-    desc: "We help you unify VMs and containers on a single platform.",
-    logo: "/icons/Kubevirt.svg",
-  },
-  {
-    title: "Cloud Platform Operations",
-    desc: "We manage, optimize and support enterprise cloud platforms.",
-    logo: "/icons/cloud-ops.svg",
-  },
-  {
-    title: "Automation",
-    desc: "We design and implement automation for faster delivery.",
-    logo: "/icons/automation.svg",
-  },
-  {
-    title: "Consulting Service",
-    desc: "We guide enterprises through complex cloud journeys.",
-    logo: "/icons/consulting.svg",
-  },
-  {
-    title: "Kubernetes as a Service (KaaS)",
-    desc: "We modernize applications using managed Kubernetes platforms.",
-    logo: "/icons/Kubevirt.svg",
-  },
-];
 
 export default function WhatWeDeliver(): JSX.Element {
   return (
@@ -62,14 +24,7 @@ export default function WhatWeDeliver(): JSX.Element {
           {deliverItems.slice(0, 1).map((item, index) => (
             <div
               key={index}
-              className="
-          w-full rounded-[16px] p-6
-          bg-gradient-to-b from-[#0F172B]/50 to-[#1D293D]/30
-          border-[1.64px] border-[#2B7FFF]/40
-          backdrop-blur-md
-          flex flex-col
-          shadow-[0_6.56px_9.84px_-6.56px_rgba(43,127,255,0.2)]
-        "
+              className="w-full rounded-[16px] p-6 bg-gradient-to-b from-[#0F172B]/50 to-[#1D293D]/30 border-[1.64px] border-[#2B7FFF]/40 backdrop-blur-md flex flex-col shadow-[0_6.56px_9.84px_-6.56px_rgba(43,127,255,0.2)]"
             >
               {/* ICON */}
               <div className="w-[56px] h-[56px] rounded-[14px] bg-[#1D293D]/50 border border-[#314158]/50 flex items-center justify-center mb-5">
@@ -108,17 +63,7 @@ export default function WhatWeDeliver(): JSX.Element {
 
           {/* ===== CTA ===== */}
           <div className="mt-10">
-            <div
-              className="
-          w-full h-[72px]
-          rounded-[26px]
-          bg-gradient-to-b from-[#0F172B]/50 to-[#1D293D]/30
-          border-[1.64px] border-[#2B7FFF]/40
-          flex items-center justify-between
-          px-6
-          shadow-[0_6.56px_9.84px_-6.56px_rgba(43,127,255,0.2)]
-        "
-            >
+            <div className="w-full h-[72px] rounded-[26px] bg-gradient-to-b from-[#0F172B]/50 to-[#1D293D]/30 border-[1.64px] border-[#2B7FFF]/40 flex items-center justify-between px-6 shadow-[0_6.56px_9.84px_-6.56px_rgba(43,127,255,0.2)]">
               <span className="font-lexend text-[20px] text-[#FFFFFF]">
                 Know more
               </span>
