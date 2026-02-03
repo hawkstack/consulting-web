@@ -1,243 +1,122 @@
+import { deliverItems } from "@/constants/deliverItems";
 import Image from "next/image";
 
-type DeliverItem = {
-  title: string;
-  desc: string;
-  logo: string;
-};
-
-const deliverItems: DeliverItem[] = [
-  {
-    title: "App Modernization",
-    desc: "Modernize legacy apps into scalable, cloud-native, API-first systems.",
-    logo: "/icons/app-modernization.svg",
-  },
-  {
-    title: "KubeVirt",
-    desc: "We help you unify VMs and containers on a single platform.",
-    logo: "/icons/kubevirt.svg",
-  },
-  {
-    title: "Cloud Platform Operations",
-    desc: "We manage, optimize and support enterprise cloud platforms.",
-    logo: "/icons/cloud-ops.svg",
-  },
-  {
-    title: "Automation",
-    desc: "We design and implement automation for faster delivery.",
-    logo: "/icons/automation.svg",
-  },
-  {
-    title: "Consulting Service",
-    desc: "We guide enterprises through complex cloud journeys.",
-    logo: "/icons/consulting.svg",
-  },
-  {
-    title: "Kubernetes as a Service (KaaS)",
-    desc: "We modernize applications using managed Kubernetes platforms.",
-    logo: "/icons/kaas.svg",
-  },
-];
-
-export default function WhatWeDeliver() {
+export default function WhatWeDeliver(): JSX.Element {
   return (
-    <section className="bg-gradient-to-b from-black to-[#04092E] py-[clamp(4rem,8vw,7rem)]">
-      <div className="max-w-[1750px] mx-auto px-[clamp(1rem,4vw,2.5rem)]">
+    <section className="lg:min-h-[840px] pt-10 pb-10 bg-gradient-to-b from-[#000000] to-[#04092E]">
+      {/* Heading */}
+      <div className="max-w-[1200px] mx-auto text-center px-4">
+        <h2 className="font-lexend text-[28px] md:text-[32px] lg:text-[40px] font-normal leading-[150%] tracking-[-0.03em] text-[#FFFFFF] mb-2">
+          What We Deliver
+        </h2>
 
-        {/* ================= HEADING ================= */}
-        <div className="text-center max-w-4xl mx-auto mb-[clamp(3rem,6vw,5rem)]">
-          <h2 className="font-lexend text-white text-[clamp(2.2rem,5vw,3.2rem)]">
-            What We Deliver
-          </h2>
-          <p className="mt-4 text-[#C7D2E2] text-[clamp(1rem,2.5vw,1.15rem)]">
-            End-to-end cloud and DevOps solutions tailored for modern enterprise needs.
-          </p>
-        </div>
+        <p className="font-lexend text-[14px] md:text-[15px] lg:text-[16px] leading-[125%] max-w-[720px] mx-auto text-[#FFFFFF] mt-2 mb-12">
+          End-to-end cloud and DevOps solutions tailored for modern enterprise
+          needs.
+        </p>
+      </div>
 
-        {/* ================= MOBILE ONLY ================= */}
-        <div className="block sm:hidden space-y-6">
-          <div className="rounded-2xl px-[clamp(1.25rem,6vw,1.75rem)] py-[clamp(1.5rem,7vw,2rem)] bg-gradient-to-b from-[#0F172B] to-[#1D293D] border border-[#2E85FF]/80">
-            <div className="flex flex-col">
-              <div className="w-[clamp(3rem,14vw,3.75rem)] h-[clamp(3rem,14vw,3.75rem)] rounded-xl bg-[#1D293D]/60 border border-[#314158]/50 flex items-center justify-center mb-5">
+      {/* ================= MOBILE : ONLY ONE CARD ================= */}
+      <div className="md:hidden max-w-[1300px] mx-auto px-4">
+        {/* COMMON WIDTH WRAPPER */}
+        <div className="mx-auto w-[370px] max-w-full">
+          {/* ===== CARD ===== */}
+          {deliverItems.slice(0, 1).map((item, index) => (
+            <div
+              key={index}
+              className="w-full rounded-[16px] p-6 bg-gradient-to-b from-[#0F172B]/50 to-[#1D293D]/30 border-[1.64px] border-[#2B7FFF]/40 backdrop-blur-md flex flex-col shadow-[0_6.56px_9.84px_-6.56px_rgba(43,127,255,0.2)]"
+            >
+              {/* ICON */}
+              <div className="w-[56px] h-[56px] rounded-[14px] bg-[#1D293D]/50 border border-[#314158]/50 flex items-center justify-center mb-5">
                 <Image
-                  src={deliverItems[0].logo}
-                  alt={deliverItems[0].title}
-                  width={26}
-                  height={26}
+                  src={item.logo}
+                  alt={item.title}
+                  width={24}
+                  height={24}
                 />
               </div>
 
-              <h3 className="font-poppins font-semibold text-white text-[clamp(1.2rem,5vw,1.45rem)] mb-3">
-                {deliverItems[0].title}
+              {/* TITLE */}
+              <h3 className="font-lexend text-[20px] font-medium text-[#FFFFFF] mb-2">
+                {item.title}
               </h3>
 
-              <p className="font-poppins text-[#9FB0C8] text-[clamp(0.95rem,4.5vw,1.05rem)] leading-relaxed">
-                {deliverItems[0].desc}
+              {/* DESCRIPTION */}
+              <p className="font-lexend text-[14px] leading-[20px] text-[#90A1B9] mb-4">
+                {item.desc}
               </p>
-            </div>
-          </div>
 
-          <button className="w-full rounded-full py-[clamp(1rem,5vw,1.25rem)] px-6 bg-[#1D293D]/70 border border-[#2E85FF]/60 font-poppins text-white text-[clamp(0.95rem,4.5vw,1.05rem)] flex items-center justify-between shadow-[0_0_30px_rgba(46,133,255,0.35)]">
-            Know more
-            <span className="text-[#2E85FF] text-3xl">→</span>
-          </button>
-        </div>
-
-        {/* ================= TABLET → DESKTOP GRID ================= */}
-        <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-36 xl:relative">
-          {deliverItems.map((item, index) => (
-            <div
-              key={index}
-              className="
-                 group
-    min-h-[165px]
-    rounded-2xl
-    px-[clamp(1.5rem,3vw,2.25rem)]
-    py-[clamp(1.75rem,3.5vw,2.5rem)]
-
-    sm:border sm:border-[#2E85FF]
-    sm:shadow-[0_0_45px_rgba(46,133,255,0.45)]
-    sm:bg-gradient-to-br sm:from-[#0C1429] sm:to-[#182444]
-
-    md:border md:border-[#2E85FF]
-    md:shadow-[0_0_45px_rgba(46,133,255,0.45)]
-    md:bg-gradient-to-br md:from-[#0C1429] md:to-[#182444]
-
-    lg:border lg:border-[#2E85FF]
-    lg:shadow-[0_0_45px_rgba(46,133,255,0.45)]
-    lg:bg-gradient-to-br lg:from-[#0C1429] lg:to-[#182444]
-
-    /* ===== DESKTOP ONLY (xl+) ===== */
-    xl:border-white/10
-    xl:bg-gradient-to-b xl:from-[#0F172B] xl:to-[#1D293D]
-    xl:h-[350px]
-
-    /* ✅ FIX: DOWNWARD EXPANSION WITHOUT GRID SHIFT */
-    xl:relative
-    xl:origin-top
-    xl:transition-all xl:duration-300 xl:ease-out
-    xl:hover:scale-y-[1.10]
-
-    xl:hover:border-[#2E85FF]/100
-    xl:hover:shadow-[0_22px_50px_-15px_rgba(46,133,255,0.45)]
-              "
-            >
-              <div className="flex flex-col h-full">
-
-                {/* Icon */}
-                <div
-                  className="
-                   w-[clamp(3rem,4vw,3.75rem)]
-    h-[clamp(3rem,4vw,3.75rem)]
-    rounded-xl
-    bg-[#1D293D]/60
-    border border-[#314158]/50
-    flex items-center justify-center
-    mb-6
-    shrink-0
-
-    transition-none
-    transform-none
-                  "
-                >
-                  <Image
-                    src={item.logo}
-                    alt={item.title}
-                    width={30}
-                    height={30}
-                  />
+              {/* LINE + KNOW MORE */}
+              <div>
+                <div className="h-[1px] bg-[#90A1B9] mb-3" />
+                <div className="flex items-center justify-between">
+                  <span className="font-lexend text-[16px] text-[#FFFFFF]">
+                    Know more
+                  </span>
+                  <span className="text-[28px] text-[#2B7FFF] leading-none">
+                    →
+                  </span>
                 </div>
-
-                {/* Content */}
-                <div className=" flex-grow
-    transition-all duration-500 ease-out
-
-    /* ===== DESKTOP DEFAULT (place content at footer aligned to icon) ===== */
-    xl:absolute
-    xl:left-[clamp(1.5rem,3vw,2.25rem)]
-    xl:right-[clamp(1.5rem,3vw,2.25rem)]
-    xl:bottom-[4.75rem]
-
-    /* ===== HOVER → MOVE BACK TO ORIGINAL POSITION ===== */
-    xl:group-hover:static
-    xl:group-hover:translate-y-0">
-                  <h3 className="font-lexend
-    
-    text-white
-    mt-4
-
-    /* Default size */
-    text-[2rem]
-
-   
-    /* Desktop hover: slightly smaller text */
-    xl:group-hover:text-[1.5rem]">
-                    {item.title}
-                  </h3>
-
-                  {/* BEFORE & AFTER HOVER DESCRIPTION */}
-                  <p
-                    className="
-                      text-[#9FB0C8]
-    leading-relaxed
-    overflow-hidden
-    
-
-    /* ===== TABLET & iPAD (sm → lg) ===== */
-    sm:max-h-none
-    sm:text-[clamp(1rem,1.6vw,1.15rem)]
-    sm:mt-0
-
-    /* ===== DESKTOP / LAPTOP (xl+) ===== */
-    xl:text-[clamp(1.15rem,1.2vw,1.3rem)]
-    xl:max-h-[1.6em]
-    xl:display-none;
-    xl:group-hover:display-block;
-    xl:group-hover:max-h-[10rem]"
-                  >
-                    {item.desc}
-                  </p>
-                </div>
-
-                {/* FOOTER – ONLY ON HOVER */}
-                <div
-                  className="
-                        pt-6
-    xl:mt-0
-
-    /* Tablet + ALL iPads */
-    sm:opacity-100
-    md:opacity-100
-    lg:opacity-100
-
-    /* Desktop only */
-    // xl:opacity-0
-    // xl:group-hover:opacity-100
-
-    transition-opacity duration-300
-
-                  "
-                >
-                  <div className="h-px w-full bg-[#90A1B9]/40 " />
-                  <div className="flex items-center justify-between">
-                    <span className="text-white
-    text-[clamp(0.9rem,1.2vw,1rem)]
-    xl:text-[1.5rem]">
-                      Know more
-                    </span>
-                    <span className="text-[#2E85FF]
-    text-[clamp(1.25rem,2vw,1.6rem)]
-    xl:text-[3rem]">
-                      →
-                    </span>
-                  </div>
-                </div>
-
               </div>
             </div>
           ))}
-        </div>
 
+          {/* ===== CTA ===== */}
+          <div className="mt-10">
+            <div className="w-full h-[72px] rounded-[26px] bg-gradient-to-b from-[#0F172B]/50 to-[#1D293D]/30 border-[1.64px] border-[#2B7FFF]/40 flex items-center justify-between px-6 shadow-[0_6.56px_9.84px_-6.56px_rgba(43,127,255,0.2)]">
+              <span className="font-lexend text-[20px] text-[#FFFFFF]">
+                Know more
+              </span>
+              <span className="text-[28px] text-[#2B7FFF] leading-none">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ================= TABLET + DESKTOP GRID ================= */}
+      <div className="hidden md:grid max-w-[1300px] mx-auto grid-cols-3 lg:grid-cols-3 gap-x-6 md:gap-y-[50px] lg:gap-y-[72px] px-4">
+        {deliverItems.map((item, index) => (
+          <div
+            key={index}
+            className="group w-full xl:w-[406px] h-auto lg:h-[260px] rounded-[16px] p-6 lg:p-8 bg-gradient-to-b from-[#0F172B] to-[#1D293D] border-[1px] border-[#2B7FFF]/40 backdrop-blur-md transition-transform duration-300 ease-in-out xl:hover:scale-y-[1.10] origin-top"
+          >
+            <div className="transition-transform duration-300 ease-in-out xl:group-hover:scale-y-[0.877] origin-top  xl:-translate-x-[30px]">
+              {/* ICON */}
+              <div className="md:w-[30px] md:h-[30px] w-[56px] h-[56px] rounded-[14px] bg-[#1D293D]/50 border border-[#314158]/50 flex items-center justify-center mb-6 xl:ml-[20]">
+                <Image
+                  src={item.logo}
+                  alt={item.title}
+                  width={24}
+                  height={24}
+                />
+              </div>
+
+              {/* TITLE + DESCRIPTION */}
+              <div className="transform transition-transform duration-300 lg:translate-y-14 xl:translate-y-14 xl:group-hover:translate-y-0">
+                <h3 className="font-lexend text-[15px] lg:text-[22px] font-medium text-[#FFFFFF] mb-2 xl:mx-[25px] line-clamp-1">
+                  {item.title}
+                </h3>
+
+                <p className="font-lexend text-[10px] lg:text-[16px] text-[#90A1B9] xl:mx-[25px] line-clamp-1 xl:group-hover:line-clamp-none transition-all duration-300">
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* FOOTER – desktop only */}
+              <div className="hidden xl:block mt-6 w-full lg:w-[342px] lg:mx-[25px] opacity-0 xl:group-hover:opacity-100 transition-opacity duration-300">
+                <div className="h-[1px] bg-[#90A1B9] mb-4" />
+                <div className="flex items-center justify-between">
+                  <span className="font-lexend text-[15px] lg:text-[16px] text-[#FFFFFF]">
+                    Know more
+                  </span>
+                  <span className="text-[22px] lg:text-[32px] text-[#2E85FF]">
+                    →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
