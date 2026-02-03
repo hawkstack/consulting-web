@@ -88,13 +88,13 @@ const Industries = (): JSX.Element => {
   };
 
   return (
-    <section className="w-full bg-[#EEF1FF] py-16 lg:py-24">
+    <section className="w-full bg-[#EEF1FF] py-16 lg:py-14">
       {/* Heading */}
-      <div className="text-center max-w-3xl mx-auto px-4">
-        <h2 className="font-['Lexend_Deca'] text-[28px] sm:text-[32px] lg:text-[40px] leading-tight lg:leading-[60px] text-[#213174]">
+      <div className="mx-auto flex max-w-3xl flex-col items-center justify-center px-4 text-center">
+        <h2 className="font-['Lexend_Deca'] text-[24px] md:text-[32px] lg:text-[40px] leading-tight lg:leading-[60px] text-[#213174] lg:whitespace-nowrap">
           Powering Industries with Red Hat Consulting
         </h2>
-        <p className="mt-4 text-[14px] sm:text-[15px] lg:text-[16px] text-[#213174] leading-[22px] lg:leading-[24px]">
+        <p className="mt-0 max-w-3xl text-[10px] md:text-[14px] lg:text-[16px] text-[#213174] leading-[22px] lg:leading-[24px] text-center">
           Design enterprise platforms that scale with confidence.
           <br />
           Modernise workloads with expert Red Hat architects and real-world
@@ -103,7 +103,7 @@ const Industries = (): JSX.Element => {
       </div>
 
       {/* Carousel */}
-      <div className="relative flex items-center justify-center mt-14">
+      <div className="relative flex items-center justify-center mt-0">
         <div className="relative w-full max-w-[1428px] h-[420px] sm:h-[480px] lg:h-[560px] flex flex-col items-center justify-end">
           {/* Cards */}
           <div className="absolute inset-0 flex items-center justify-center">
