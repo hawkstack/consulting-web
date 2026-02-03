@@ -41,7 +41,7 @@ const deliverItems: DeliverItem[] = [
 
 export default function WhatWeDeliver(): JSX.Element {
   return (
-    <section className="min-h-[837px] pt-10 bg-gradient-to-b from-[#000000] to-[#04092E]">
+    <section className="min-h-[840px] pt-10 bg-gradient-to-b from-[#000000] to-[#04092E]">
       {/* Heading */}
       <div className="max-w-[1200px] mx-auto text-center px-4">
         <h2 className="font-lexend text-[40px] font-normal leading-[150%] tracking-[-0.03em] text-[#FFFFFF] mb-[-10]">
@@ -55,7 +55,7 @@ export default function WhatWeDeliver(): JSX.Element {
       </div>
 
       {/* GRID */}
-      <div className="max-w-[1300px] mx-auto grid grid-cols-3 gap-x-[15px] gap-y-[80px]">
+      <div className="max-w-[1300px] mx-auto grid grid-cols-3 gap-x-[15px] gap-y-[75px]">
         {deliverItems.map((item, index) => (
           <div
             key={index}
@@ -79,7 +79,7 @@ export default function WhatWeDeliver(): JSX.Element {
               "
             >
               {/* ICON */}
-              <div className="w-[56px] h-[56px] rounded-[14px] bg-[#1D293D]/50 border border-[#314158]/50 flex items-center justify-center mb-6 ml-[20]">
+              <div className="w-[56px] h-[56px] rounded-[14px] bg-[#1D293D]/50 border border-[#314158]/50 flex items-center justify-center mb-6 ml-[20] my-[-10]">
                 <Image
                   src={item.logo}
                   alt={item.title}
@@ -101,7 +101,7 @@ export default function WhatWeDeliver(): JSX.Element {
 
               {/* LINE + KNOW MORE (ON HOVER) */}
               <div className="mx-[25] mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-[342px] h-[1px] bg-[#90A1B9] my-4" />
+                <div className="w-[342px] h-[1px] bg-[#90A1B9] mb-4" />
 
                 <div className="flex items-end justify-between w-[342px]">
                   <span className="font-lexend text-[16px] text-[#FFFFFF]">
