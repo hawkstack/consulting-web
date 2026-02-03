@@ -1,5 +1,6 @@
 import { deliverItems } from "@/constants/deliverItems";
 import Image from "next/image";
+import { JSX } from "react";
 
 export default function WhatWeDeliver(): JSX.Element {
   return (
