@@ -10,7 +10,7 @@ export const SOLUTIONS = [
     subtitle: "Thrive in a supportive and dynamic team",
   },
   {
-    icon: "/images/career-development.webp",
+    icon: "/images/career-develop.webp",
     title: "Career Development",
     subtitle: "Advance Your skills and career opportunities.",
   },
