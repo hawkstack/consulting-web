@@ -13,7 +13,7 @@ export const deliverItems: DeliverItem[] = [
   {
     title: "KubeVirt",
     desc: "We help you unify VMs and containers on a single platform.",
-    logo: "/icons/Kubevirt.svg",
+    logo: "/icons/kubevirt.svg",
   },
   {
     title: "Cloud Platform Operations",
@@ -33,6 +33,6 @@ export const deliverItems: DeliverItem[] = [
   {
     title: "Kubernetes as a Service (KaaS)",
     desc: "We modernize applications using managed Kubernetes platforms.",
-    logo: "/icons/Kubevirt.svg",
+    logo: "/icons/kubevirt.svg",
   },
 ];
