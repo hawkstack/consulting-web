@@ -16,7 +16,7 @@ export default function WhyHawkstackSection({
         {title}
       </div>
 
-      <div className="font-lexend  text-[16px] text-white ">{description}</div>
+      <div className="font-lexend text-center text-[16px] text-white ">{description}</div>
 
       {/* 🔴 FORCE VISIBILITY */}
       <div className=" my-8"></div>
