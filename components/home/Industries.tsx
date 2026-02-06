@@ -176,7 +176,7 @@ const Industries = (): JSX.Element => {
                       <h3 className="font-['Lexend_Deca'] text-[16px] sm:text-[18px] lg:text-[20.36px] text-black">
                         {item.title}
                       </h3>
-                      <p className="mt-2 font-['Lexend_Deca'] text-[12px] sm:text-[13px] lg:text-[13.57px] font-light text-black">
+                      <p className="mt-2 font-['Lexend_Deca'] text-[12px] sm:text-[13px] lg:text-[13.50  px] font-light text-black">
                         {item.description}
                       </p>
                     </div>
