@@ -83,7 +83,7 @@ export default function WhatWeDeliver(): JSX.Element {
           >
             <div className="transition-transform duration-300 ease-in-out xl:group-hover:scale-y-[0.877] origin-top  xl:-translate-x-[30px]">
               {/* ICON */}
-              <div className="md:w-[30px] md:h-[30px] w-[56px] h-[56px] rounded-[14px] bg-[#1D293D]/50 border border-[#314158]/50 flex items-center justify-center mb-6 xl:ml-[20]">
+              <div className="w-[56px] h-[56px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] rounded-[10px] bg-[#1D293D]/50 border border-[#314158]/50 flex items-center justify-center mb-6 xl:ml-[20]">
                 <Image
                   src={item.logo}
                   alt={item.title}

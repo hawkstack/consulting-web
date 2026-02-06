@@ -41,8 +41,8 @@ export default function EnterpriseSection() {
         <Image
           src="/images/hero-mobile-visual.webp"
           alt="Mobile Platform"
-          width = {280}
-          height = {280}
+          width={280}
+          height={280}
           className="object-cover"
         />
       </div>
@@ -52,22 +52,28 @@ export default function EnterpriseSection() {
           <div className="flex items-start gap-5">
             {/* ===== ARROWS ===== */}
             <div className="flex flex-col items-center gap-[50px] pt-[12px] md:gap-[70px] md:pt-[16px] lg:gap-[80px] lg:pt-[20px]">
-              <button onClick={prevSlide}
-                className="relative w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95">
-                <Image 
-                  src="/images/arrow-up.svg" 
-                  alt="Previous Slide" 
+              <button
+                onClick={prevSlide}
+                className="relative w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95"
+              >
+                <Image
+                  src="/images/arrow-up.svg"
+                  alt="Previous Slide"
                   fill
-                  className="object-contain"/>
+                  className="object-contain"
+                />
               </button>
 
-              <button onClick={nextSlide}
-                className="relative  w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95">
-                <Image 
-                  src="/images/arrow-down.svg" 
-                  alt="Next Slide" 
+              <button
+                onClick={nextSlide}
+                className="relative  w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95"
+              >
+                <Image
+                  src="/images/arrow-down.svg"
+                  alt="Next Slide"
                   fill
-                  className="object-contain"/>
+                  className="object-contain"
+                />
               </button>
             </div>
             {/* ===== TEXT CONTENT ===== */}
@@ -98,13 +104,15 @@ export default function EnterpriseSection() {
               <div className="flex flex-row ml-[-20px] items-center gap-4 w-full md:mt-[62px] md:pl-0 lg:mt-[62px] lg:pl-0">
                 <button
                   className=" bg-blue-600 hover:bg-blue-500 transition px-3 py-2 rounded-full flex items-center justify-center 
-                  gap-2 text-[10px] md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] whitespace-nowrap overflow-hidden">
+                  gap-2 text-[10px] md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] whitespace-nowrap overflow-hidden"
+                >
                   ▶ Schedule a Consultation
                 </button>
 
                 <button
-                  className=" bg-white text-blue-700 px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
-                  md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] hover:bg-gray-100 transition whitespace-nowrap overflow-hidden">
+                  className=" bg-white text-[#6C63FF] px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
+                  md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] hover:bg-gray-100 transition whitespace-nowrap overflow-hidden"
+                >
                   → View Our Solutions
                 </button>
               </div>
@@ -129,4 +137,3 @@ export default function EnterpriseSection() {
     </section>
   );
 }
-
