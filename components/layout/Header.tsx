@@ -65,33 +65,24 @@ export function Header(): JSX.Element {
           </li>
 
           {(["solutions", "services", "company", "training"] as MenuKey[]).map(
-            (key) => {
-              if (key === "training") {
-                return (
-                  <li key={key}>
-                    <a
-                      href={process.env.NEXT_PUBLIC_TRAINING_URL}
-                      className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
-                    >
-                      training
-                    </a>
-                  </li>
-                );
-              }
-
-              return (
-                <li
-                  key={key}
-                  onMouseEnter={() => {
-                    setOpenMenu(key);
-                    setActiveItem(menuMap[key]?.[0] || null);
-                  }}
-                  className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
-                >
-                  {key}
-                </li>
-              );
-            }
+            (key) => (
+              <li
+                key={key}
+                onMouseEnter={() => {
+                  setOpenMenu(key);
+                  setActiveItem(menuMap[key]?.[0] || null);
+                }}
+                onClick={() => {
+                  if (key === "training") {
+                    window.location.href = process.env
+                      .NEXT_PUBLIC_TRAINING_URL as string;
+                  }
+                }}
+                className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
+              >
+                {key}
+              </li>
+            )
           )}
         </ul>
 
