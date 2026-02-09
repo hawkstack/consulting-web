@@ -65,18 +65,33 @@ export function Header(): JSX.Element {
           </li>
 
           {(["solutions", "services", "company", "training"] as MenuKey[]).map(
-            (key) => (
-              <li
-                key={key}
-                onMouseEnter={() => {
-                  setOpenMenu(key);
-                  setActiveItem(menuMap[key]?.[0] || null);
-                }}
-                className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
-              >
-                {key}
-              </li>
-            )
+            (key) => {
+              if (key === "training") {
+                return (
+                  <li key={key}>
+                    <a
+                      href={process.env.NEXT_PUBLIC_TRAINING_URL}
+                      className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
+                    >
+                      training
+                    </a>
+                  </li>
+                );
+              }
+
+              return (
+                <li
+                  key={key}
+                  onMouseEnter={() => {
+                    setOpenMenu(key);
+                    setActiveItem(menuMap[key]?.[0] || null);
+                  }}
+                  className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
+                >
+                  {key}
+                </li>
+              );
+            }
           )}
         </ul>
 
@@ -99,7 +114,7 @@ export function Header(): JSX.Element {
           {mobileOpen ? "✕" : "☰"}
         </button>
 
-        {/* ✅ MEGA MENU — SAME AS PEHLE (CENTERED) */}
+        {/* MEGA MENU */}
         {items && activeItem && openMenu && (
           <div
             className="absolute left-1/2 top-full -translate-x-1/2 hidden lg:block"
@@ -121,17 +136,33 @@ export function Header(): JSX.Element {
         <div className="lg:hidden w-full bg-[#0B2458] px-6 pb-6">
           <ul className="flex flex-col gap-6 pt-6">
             {["Home", "Solutions", "Services", "Company", "Training"].map(
-              (item) => (
-                <li key={item}>
-                  <Link
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-white text-[16px]"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              )
+              (item) => {
+                if (item === "Training") {
+                  return (
+                    <li key={item}>
+                      <a
+                        href={process.env.NEXT_PUBLIC_TRAINING_URL}
+                        onClick={() => setMobileOpen(false)}
+                        className="text-white text-[16px]"
+                      >
+                        Training
+                      </a>
+                    </li>
+                  );
+                }
+
+                return (
+                  <li key={item}>
+                    <Link
+                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-white text-[16px]"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                );
+              }
             )}
           </ul>
 
