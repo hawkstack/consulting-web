@@ -26,9 +26,9 @@ const SEGMENTS = {
 };
 
 const SEGMENT_POSITIONS = {
-  continuity: "top-[-125] right-40 md:right-[240px] lg:right-[400px]",
-  unified: "top-[-108] right-[-145] md:top-[-108px] md:right-[-180px] lg:bottom-90 lg:left-130",
-  vision: "top-96 right-40 md:top-[380px] md:right-[240px] lg:bottom-1 lg:right-100",
+  continuity: "top-[-130] right-40 md:right-[270px] lg:right-[400px]",
+  unified: "top-[-130] right-[-145] md:top-[-108px] md:right-[-180px] lg:bottom-90 lg:left-130",
+  vision: "top-98 right-45 md:top-[380px] md:right-[270px] lg:bottom-1 lg:right-100",
   assurance: "top-98 left-60 md:bottom-[-50px] md:left-90 lg:bottom-1 lg:left-130",
 };
 
@@ -101,7 +101,7 @@ const WhyHawkstackSvg: React.FC = () => {
       </div>
 
       {/* Segments */}
-      <div className="absolute inset-0 max-sm:scale-[1]">
+     <div className="absolute inset-0 max-sm:scale-[1]">
   {(Object.keys(SEGMENTS) as Array<keyof typeof SEGMENTS>).map((key) => {
     const isRightAligned = key === "continuity" || key === "vision";
 
