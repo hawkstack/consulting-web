@@ -54,13 +54,15 @@ export function MegaMenu({
               {activeItem.title}
             </h3>
 
-            <Image
+            <div className="w-[312px] h-[195px] rounded-2xl overflow-hidden mb-6 relative">
+              <Image
               src={activeItem.image}
               alt={activeItem.title}
-               width={312}
-              height={195}
-              className="rounded-2xl mb-6"
-            />
+              fill
+              className="object-cover"
+              sizes="312px"
+              />
+            </div>
 
             <p className="font-lexend text-[12px] md:text-[14px] justify-between lg:text-[16px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] max-w-[555px]">
               {activeItem.description}
