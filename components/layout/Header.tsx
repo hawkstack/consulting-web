@@ -72,10 +72,13 @@ export function Header(): JSX.Element {
                   setOpenMenu(key);
                   setActiveItem(menuMap[key]?.[0] || null);
                 }}
-                onClick={() => {
+                onClick={(e) => {
                   if (key === "training") {
-                    window.location.href = process.env
-                      .NEXT_PUBLIC_TRAINING_URL as string;
+                    e.stopPropagation();
+                    window.open(
+                      process.env.NEXT_PUBLIC_TRAINING_URL as string,
+                      "_blank"
+                    );
                   }
                 }}
                 className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
@@ -133,6 +136,7 @@ export function Header(): JSX.Element {
                     <li key={item}>
                       <a
                         href={process.env.NEXT_PUBLIC_TRAINING_URL}
+                        target="_blank"
                         onClick={() => setMobileOpen(false)}
                         className="text-white text-[16px]"
                       >
