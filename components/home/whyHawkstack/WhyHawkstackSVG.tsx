@@ -26,9 +26,9 @@ const SEGMENTS = {
 };
 
 const SEGMENT_POSITIONS = {
-  continuity: "top-[-108] right-38 md:right-[240px] lg:right-[400px]",
-  unified: "top-[-108] right-[-145] md:top-[-108px] md:right-[-180px] lg:bottom-90 lg:left-130",
-  vision: "top-90 right-25 md:top-[380px] md:right-[240px] lg:bottom-1 lg:right-100",
+  continuity: "top-[-130] right-40 md:right-[270px] lg:right-[400px]",
+  unified: "top-[-130] right-[-145] md:top-[-108px] md:right-[-180px] lg:bottom-90 lg:left-130",
+  vision: "top-98 right-45 md:top-[380px] md:right-[270px] lg:bottom-1 lg:right-100",
   assurance: "top-98 left-60 md:bottom-[-50px] md:left-90 lg:bottom-1 lg:left-130",
 };
 
@@ -101,27 +101,37 @@ const WhyHawkstackSvg: React.FC = () => {
       </div>
 
       {/* Segments */}
-      <div className="absolute inset-0 max-sm:scale-[1]">
-        {(Object.keys(SEGMENTS) as Array<keyof typeof SEGMENTS>).map((key) => (
-          <div
-            key={key}
-            className={`absolute ${
-              SEGMENT_POSITIONS[key]
-            } w-[280px] transition-all duration-300 ease-out
-              ${
-                activeSegment === key
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 pointer-events-none translate-y-2"
-              }
-            `}>
-            <h3 className="text-white md:text-[20px] text-xl font-extrabold font-semibold mb-2">
-              {SEGMENTS[key].title}
-            </h3>
-            <p className="text-white/80 md:text-sm text-[12px] w-[180px] leading-relaxed">
-              {SEGMENTS[key].description}
-            </p>
-          </div>
-        ))}
+     <div className="absolute inset-0 max-sm:scale-[1]">
+  {(Object.keys(SEGMENTS) as Array<keyof typeof SEGMENTS>).map((key) => {
+    const isRightAligned = key === "continuity" || key === "vision";
+
+    return (
+      <div
+        key={key}
+        className={`absolute ${SEGMENT_POSITIONS[key]} w-[280px] transition-all duration-300 ease-out
+          ${
+            activeSegment === key
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 pointer-events-none translate-y-2"
+          }
+        `}
+      >
+        <div
+          className={`w-[180px] ${
+            isRightAligned ? "text-right" : "text-left"
+          }`}
+        >
+          <h3 className="text-white md:text-[20px] text-xl font-extrabold mb-2">
+            {SEGMENTS[key].title}
+          </h3>
+
+          <p className="text-white/80 md:text-sm text-[12px] leading-relaxed">
+            {SEGMENTS[key].description}
+          </p>
+        </div>
+      </div>
+    );
+  })}
 
         {/* Segment 1 – top-left */}
         <div
