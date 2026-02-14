@@ -164,7 +164,7 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
 
               try {
                 const Response = await fetch(
-                  `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/openshift`,
+                  `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/openshift_unified`,
                   {
                     method: "POST",
                     headers: {
@@ -175,7 +175,7 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
                       firstName: form.first,
                       lastName: form.last,
                       email: form.email,
-                      jobTitle: form.job,
+                      jobtitle: form.job,
                       company: form.company,
                       country: form.country.code,
                       query: message,
