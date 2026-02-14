@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { JSX, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,34 +12,47 @@ import {
 } from "@/components/navigation/menuData";
 import { MegaItem } from "@/components/navigation/types";
 
-type MenuKey = "solutions" | "services" | "company" | "training" | null;
+type MenuKey = "solutions" | "services" | "company" | "training" | any;
 
 const menuMap: Record<MenuKey, MegaItem[] | null> = {
   solutions,
   services,
   company,
   training,
-  null: null,
 };
 
 export function Header(): JSX.Element {
-  const [openMenu, setOpenMenu] = useState<MenuKey>(null);
+  const [openMenu, setOpenMenu] = useState<MenuKey>();
   const [activeItem, setActiveItem] = useState<MegaItem | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const items = openMenu ? menuMap[openMenu] : null;
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F]">
+    <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F]">
       <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[105px] px-4 md:px-8 lg:px-24 flex items-center">
         {/* LOGO */}
-        <div className="flex items-center justify-center w-[85.96px] h-[28.28px] md:w-[120px] md:h-[36px] lg:w-[152px] lg:h-[42px] rounded-[5.66px] md:rounded-[7px] lg:rounded-[7.92px] border border-white bg-white">
+        <div
+          className="
+          w-[85.96px] h-[28.28px]
+          md:w-[120px] md:h-[36px]
+          lg:w-[152px] lg:h-[42px]
+          xl:w-[170px] xl:h-[45px]
+          rounded-[5.66px]
+          md:rounded-[7px]
+          lg:rounded-[7.92px]
+          xl:rounded-[9px]
+          border border-white bg-white
+          flex items-center justify-center
+        "
+        >
           <Image
-            src="/images/hawkstack.logo.webp"
+            src="/images/hawkstack-logo.webp"
             alt="HawkStack Logo"
-            width={124}
-            height={38}
+            width={170}
+            height={40}
             priority
+            className="object-contain"
           />
         </div>
 

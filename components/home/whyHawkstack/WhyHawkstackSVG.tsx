@@ -24,15 +24,15 @@ const SEGMENTS = {
       "Enterprise-grade security, compliance, and reliability across your cloud-native ecosystem.",
   },
 };
+
 const SEGMENT_POSITIONS = {
-  continuity: " bottom-90 right-130 ",
-  unified: "bottom-90 left-130 ",
-  vision: "bottom-1 right-130 ",
-  assurance: "bottom-1 left-130 ",
+  continuity: "top-[-130] right-40 md:right-[270px] lg:right-[400px]",
+  unified: "top-[-130] right-[-145] md:top-[-108px] md:right-[-180px] lg:bottom-90 lg:left-130",
+  vision: "top-98 right-45 md:top-[380px] md:right-[270px] lg:bottom-1 lg:right-100",
+  assurance: "top-98 left-60 md:bottom-[-50px] md:left-90 lg:bottom-1 lg:left-130",
 };
 
 const WhyHawkstackSvg: React.FC = () => {
-  const [isCenterHovered, setIsCenterHovered] = useState(false);
   const [activeSegment, setActiveSegment] = React.useState<
     keyof typeof SEGMENTS | null
   >(null);
@@ -44,10 +44,22 @@ const WhyHawkstackSvg: React.FC = () => {
   const handleLeave = () => {
     setActiveSegment(null);
   };
+
   return (
-    <div className="relative z-20 mt-6 ml-6.5 w-[443px] h-[443px] rounded-full  ">
+    <div
+      className="    relative z-20 mt-6 ml-6.5
+    w-[400px] h-[400px]         
+    rounded-full
+    sm:h-[400px]
+    sm:w-[400px]               
+    md:w-[443px]              
+    md:h-[443px] 
+    max-sm:scale-[0.8]
+    max-sm:origin-top
+    max-sm:mx-auto
+    max-sm:ml-0">
       {/* Center white circle ABOVE segments */}
-      <div className="absolute inset-0 z-[100] pointer-events-none">
+      <div className="absolute inset-0 z-[100] pointer-events-none max-sm:scale-[0.9]">
         <div className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none">
           <div className="w-[242.16px] h-[242.16px] rounded-full bg-white shadow-[0_10px_40px_rgba(0,0,0,0.55)] pointer-events-none" />
         </div>
@@ -74,74 +86,67 @@ const WhyHawkstackSvg: React.FC = () => {
           </svg>
         </div>
 
-        {/* Center logo/image (hover swap) */}
-        <div
-          className="relative top-40 left-40 z-70 w-[112px] h-[110px] pointer-events-auto"
-          onMouseEnter={() => setIsCenterHovered(true)}
-          onMouseLeave={() => setIsCenterHovered(false)}>
-          {/* Default image */}
-          <Image
-            src="/images/hawkstack-image-logo.webp"
-            alt="center logo"
-            fill
-            className={`absolute inset-0 object-contain transition-opacity duration-300 ${
-              isCenterHovered ? "opacity-0" : "opacity-100"
-            }`}
-            priority
-          />
-
-          {/* Hover image */}
-          <Image
-            src="/images/hawkstack-logo.webp"
-            alt="center logo hover"
-            fill
-            className={`absolute inset-0 object-contain transition-opacity duration-300 ${
-              isCenterHovered ? "opacity-100" : "opacity-0"
-            }`}
-            priority
-          />
+        {/* Center logo/image (STATIC — no hover) */}
+        <div className="absolute inset-0 z-70 flex items-center justify-center pointer-events-none">
+          <div className="w-[112px] h-[110px] relative">
+            <Image
+              src="/images/hawkstack-image-logo.webp"
+              alt="center logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       </div>
 
       {/* Segments */}
-      <div className="absolute inset-0">
-        {(Object.keys(SEGMENTS) as Array<keyof typeof SEGMENTS>).map((key) => (
-          <div
-            key={key}
-            className={`absolute ${
-              SEGMENT_POSITIONS[key]
-            } w-[280px] transition-all duration-300 ease-out
-      ${
-        activeSegment === key
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 pointer-events-none translate-y-2"
-      }
-    `}>
-            <h3 className="text-white text-[20px] text-5xl font-extrabold font-semibold mb-2">
-              {SEGMENTS[key].title}
-            </h3>
-            <p className="text-white/80 text-sm leading-relaxed">
-              {SEGMENTS[key].description}
-            </p>
-          </div>
-        ))}
+     <div className="absolute inset-0 max-sm:scale-[1]">
+  {(Object.keys(SEGMENTS) as Array<keyof typeof SEGMENTS>).map((key) => {
+    const isRightAligned = key === "continuity" || key === "vision";
+
+    return (
+      <div
+        key={key}
+        className={`absolute ${SEGMENT_POSITIONS[key]} w-[280px] transition-all duration-300 ease-out
+          ${
+            activeSegment === key
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 pointer-events-none translate-y-2"
+          }
+        `}
+      >
+        <div
+          className={`w-[180px] ${
+            isRightAligned ? "text-right" : "text-left"
+          }`}
+        >
+          <h3 className="text-white md:text-[20px] text-xl font-extrabold mb-2">
+            {SEGMENTS[key].title}
+          </h3>
+
+          <p className="text-white/80 md:text-sm text-[12px] leading-relaxed">
+            {SEGMENTS[key].description}
+          </p>
+        </div>
+      </div>
+    );
+  })}
 
         {/* Segment 1 – top-left */}
         <div
-          className="absolute top-0 left-0  w-[50%] h-[50%] z-10"
+          className="absolute top-0 left-0 w-[50%] h-[50%] z-10"
           onMouseEnter={() => handleEnter("continuity")}
           onMouseLeave={handleLeave}>
           <svg
             viewBox="0 0 213 217"
             preserveAspectRatio="none"
             className="w-full h-full scale-[1.02] origin-bottom-right transition-transform duration-700 ease-out hover:scale-[1.3]">
-            {/* Filled segment */}
             <path
               d="M0.0273467 219.878C-0.43477 191.465 4.70392 163.24 15.15 136.813C25.5961 110.386 41.1451 86.2758 60.9091 65.8582C80.6731 45.4407 104.265 29.1159 130.338 17.8159C156.411 6.51593 184.455 0.462055 212.867 -5.837e-05L216.386 216.359L0.0273467 219.878Z"
               fill="url(#g1)"
             />
 
-            {/* Curved text */}
             <path
               id="curveText"
               d="M62 180 C62 150, 100 65, 190 60"
@@ -169,27 +174,24 @@ const WhyHawkstackSvg: React.FC = () => {
 
         {/* Segment 2 – top-right */}
         <div
-          className="absolute top-0 right-0  w-[50%] h-[50%] z-10 group"
+          className="absolute top-0 right-0 w-[50%] h-[50%] z-10"
           onMouseEnter={() => handleEnter("unified")}
           onMouseLeave={handleLeave}>
           <svg
             viewBox="1 0 219 215"
             className="w-full h-full scale-[1.02] origin-bottom-left transition-transform duration-700 ease-out hover:scale-[1.3]"
             preserveAspectRatio="none">
-            {/* Segment shape */}
             <path
               d="M-0.00118755 0.0106292C28.4138 -0.271821 56.6062 5.04524 82.9663 15.6582C109.326 26.2712 133.338 41.9723 153.63 61.865C173.922 81.7578 190.098 105.453 201.233 131.596C212.367 157.74 218.244 185.822 218.526 214.237L2.14962 216.387L-0.00118755 0.0106292Z"
               fill="white"
             />
 
-            {/* 🔥 Text curve path */}
             <path
               id="curveText2"
               d="M40 40 C30 60, 110 50, 160 160"
               fill="none"
             />
 
-            {/* Curved text */}
             <text
               fill="#0B1C45"
               fontSize="20"
@@ -215,20 +217,17 @@ const WhyHawkstackSvg: React.FC = () => {
             viewBox="0 9 216 217"
             className="w-full h-full scale-[1.02] origin-top-right transition-transform duration-700 ease-out hover:scale-[1.3]"
             preserveAspectRatio="none">
-            {/* Segment shape */}
             <path
               d="M221.131 216.334C192.721 216.964 164.466 211.992 137.978 201.702C111.49 191.411 87.2887 176.005 66.755 156.362C46.2213 136.718 29.7577 113.223 18.3041 87.217C6.85063 61.211 0.63152 33.2038 0.00189737 4.79438L216.336 -0.000123503L221.131 216.334Z"
               fill="white"
             />
 
-            {/* 🔥 Curved text path */}
             <path
               id="curveTextBottomLeft"
               d="M185 155 C130 140, 110 160, 50 40"
               fill="none"
             />
 
-            {/* Curved text */}
             <text
               fill="#0B1C45"
               fontSize="20"
@@ -254,20 +253,17 @@ const WhyHawkstackSvg: React.FC = () => {
             viewBox="1 9 217 217"
             className="w-full h-full scale-[1.02] origin-top-left transition-transform duration-700 ease-out hover:scale-[1.3]"
             preserveAspectRatio="none">
-            {/* Segment shape */}
             <path
               d="M216.379 0.000192423C216.635 28.4154 211.292 56.6029 200.655 82.9533C190.018 109.304 174.295 133.301 154.383 153.575C134.472 173.849 110.763 190.002 84.6084 201.113C58.4542 212.224 30.3677 218.075 1.9525 218.331L0.000217099 1.95248L216.379 0.000192423Z"
               fill="url(#g2)"
             />
 
-            {/* 🔥 Text curve path */}
             <path
               id="curveText3"
               d="M150 20 C150 80, 120 130, 0 185"
               fill="none"
             />
 
-            {/* Curved text */}
             <text
               fill="white"
               fontSize="20"

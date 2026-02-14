@@ -38,10 +38,10 @@ body {
 }
 
 .partner-logo {
-  height: 188px;
+  height: 180px;
   width: auto;
   flex-shrink: 0;
-  opacity: 0.8;
+  opacity: 1;
 }
 /* carousel css end */
 
@@ -122,7 +122,8 @@ body {
 /* openshift */
 
 @keyframes floatDown {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -135,7 +136,8 @@ body {
 }
 
 @keyframes floatDiagonalUp {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0);
   }
   50% {
@@ -147,7 +149,9 @@ body {
    FLOAT RIGHT (wait at origin)
    ========================= */
 @keyframes floatRight {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     transform: translateX(0);
   }
   30% {
@@ -159,7 +163,9 @@ body {
    NODE DIAGONAL LEFT (wait at origin)
    ========================= */
 @keyframes nodeDiagonalLeft {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     transform: translate(0, 0);
   }
   30% {
@@ -171,7 +177,9 @@ body {
    NODE1 DIAGONAL LEFT UP (wait at origin)
    ========================= */
 @keyframes node1DiagonalLeftUp {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     transform: translate(0, 0);
   }
   30% {
@@ -191,7 +199,8 @@ body {
   animation: shake 0.4s ease-in-out;
 }
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -200,7 +209,8 @@ body {
 }
 
 @keyframes floatSlow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
