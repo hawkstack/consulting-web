@@ -59,10 +59,10 @@ const WhyWorkWithUs = ({
                 height={78}
                 className="mx-auto mb-4"
               />
-              <h3 className="text-white text-base font-medium mb-2">
+              <h3 className="text-white text-[22px] text-base font-medium mb-2">
                 {solution.title}
               </h3>
-              <p className="text-sm text-white/70 w-2/3 mx-auto">
+              <p className="text-[15px] text-white/70 w-2/3 mx-auto">
                 {solution.subtitle}
               </p>
             </div>
