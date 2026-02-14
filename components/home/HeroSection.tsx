@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const slides = [
   {
@@ -34,108 +35,85 @@ export default function EnterpriseSection() {
   }, []);
 
   return (
-    <section className="relative h-[568px]  bg-[#0B1F4B] text-white overflow-hidden font-lexend ">
-      {/* LEFT CONTENT */}
-      <div className="relative z-20  pt-[134px] pl-[38px] ">
-        <div className="relative w-1/2 ">
-          <div className="flex items-start gap-6">
-            {/* LEFT ARROWS */}
-            <div className="flex flex-col items-center gap-[80px] pt-3">
+    <section className="relative h-[560px] md:h-[568px] lg:h-[568px] bg-[#0B1F4B] text-white overflow-hidden font-lexend ">
+      {/* ===== MOBILE HERO IMAGE (ONLY MOBILE) ===== */}
+      <div className="relative flex justify-center pt-10 md:hidden">
+        <Image
+          src="/images/hero-mobile-visual.webp"
+          alt="Mobile Platform"
+          width={280}
+          height={280}
+          className="object-cover"
+        />
+      </div>
+      {/* ===== CONTENT ===== */}
+      <div className="relative z-20 pt-10 pb-10 px-4 md:pt-[134px] md:pl-[38px] lg:pt-[134px] lg:pl-[38px]">
+        <div className="relative w-full md:w-[380px] lg:w-[600px]">
+          <div className="flex items-start gap-5">
+            {/* ===== ARROWS ===== */}
+            <div className="flex flex-col items-center gap-[50px] pt-[12px] md:gap-[70px] md:pt-[16px] lg:gap-[80px] lg:pt-[20px]">
               <button
                 onClick={prevSlide}
-                className="w-8 h-8 rounded-full border border-white/40 
-            flex items-center justify-center 
-            hover:bg-white/10 hover:border-white/70 
-            transition-all duration-300">
-                ↑
+                className="relative w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95"
+              >
+                <Image
+                  src="/images/arrow-up.svg"
+                  alt="Previous Slide"
+                  fill
+                  className="object-contain"
+                />
               </button>
 
               <button
                 onClick={nextSlide}
-                className="w-8 h-8 rounded-full border border-white/40 
-            flex items-center justify-center 
-            hover:bg-white/10 hover:border-white/70 
-            transition-all duration-300">
-                ↓
+                className="relative  w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95"
+              >
+                <Image
+                  src="/images/arrow-down.svg"
+                  alt="Next Slide"
+                  fill
+                  className="object-contain"
+                />
               </button>
             </div>
-
-            {/* CONTENT */}
-            <div className="relative w-full ">
+            {/* ===== TEXT CONTENT ===== */}
+            <div className="relative w-full">
               {/* SLIDES */}
-              <div className="relative h-[180px]">
+              <div className="relative min-h-[160px] md:min-h-[160px] lg:min-h-[160px]">
                 {slides.map((slide, i) => (
                   <div
                     key={i}
-                    className={`
-                absolute left-0 top-0 transition-all duration-900
-                ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${
-                  i === active
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-6 pointer-events-none"
-                }
-              `}>
-                    <h2 className="text-[40px] font-normal leading-tight mb-6  max-w-[540px]">
+                    className={`absolute left-0 top-0 transition-all duration-700
+                    ${
+                      i === active
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-6 pointer-events-none"
+                    }`}
+                  >
+                    <h2 className="text-[18px] leading-[26px] md:text-[28px] md:leading-[32px] lg:text-[40px] lg:leading-[50px] tracking-normal mb-4 max-w-[540px]">
                       {slide.title}
                     </h2>
 
-                    <p className="text-[14px] text-white/80 max-w-[540px]">
+                    <p className="font-normal text-[13px] leading-[19.5px] md:text-[14px] md:leading-[21px] lg:text-[14px] lg:leading-[21px] tracking-[-0.03em] text-white/80 max-w-[540px]">
                       {slide.desc}
                     </p>
                   </div>
                 ))}
               </div>
-
-              {/* CTA BUTTONS */}
-              <div className="flex items-center  gap-5 mt-[62px] ">
+              {/* ===== CTA BUTTONS ===== */}
+              <div className="flex flex-row ml-[-20px] items-center gap-4 w-full md:mt-[62px] md:pl-0 lg:mt-[62px] lg:pl-0">
                 <button
-                  className="bg-blue-600 hover:bg-blue-500 transition
-                   px-5 py-2.5 rounded-full font-normal text-white
-                   flex items-center gap-2 shadow-[0_7.57px_22.72px_0_rgba(108,99,255,0.35)]">
-                  <svg
-                    width="19"
-                    height="19"
-                    viewBox="0 0 19 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.73438 2.36621L15.778 9.46566L4.73438 16.5651V2.36621Z"
-                      stroke="white"
-                      strokeWidth="1.57765"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  Schedule a Consultation
+                  className=" bg-blue-600 hover:bg-blue-500 transition px-3 py-2 rounded-full flex items-center justify-center 
+                  gap-2 text-[10px] md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] whitespace-nowrap overflow-hidden"
+                >
+                  ▶ Schedule a Consultation
                 </button>
 
                 <button
-                  className="bg-white text-blue-700 px-5 py-2.5 rounded-full
-                   font-normal hover:bg-gray-100 transition
-                   flex items-center gap-2 shadow-[0_7.57px_22.72px_0_rgba(108,99,255,0.35)]">
-                  <svg
-                    width="19"
-                    height="19"
-                    viewBox="0 0 19 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M3.94922 9.46582H14.9928"
-                      stroke="#6C63FF"
-                      strokeWidth="1.57765"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9.46875 3.94434L14.9905 9.46613L9.46875 14.9879"
-                      stroke="#6C63FF"
-                      strokeWidth="1.57765"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  View Our Solutions
+                  className=" bg-white text-[#6C63FF] px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
+                  md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] hover:bg-gray-100 transition whitespace-nowrap overflow-hidden"
+                >
+                  → View Our Solutions
                 </button>
               </div>
             </div>
@@ -143,15 +121,18 @@ export default function EnterpriseSection() {
         </div>
       </div>
 
-      {/* RIGHT IMAGE */}
-      <div className="absolute top-0 right-0 h-[680px] w-[65vw] z-0 overflow-hidden ">
-        <img
+      {/* ===== DESKTOP + TABLET RIGHT IMAGE ===== */}
+      <div className="hidden md:block absolute top-0 right-0 h-[680px] w-[65vw] z-0 overflow-hidden">
+        <Image
           src="/images/hero-visual.webp"
           alt="Enterprise Platform"
-          className="w-full h-full object-cover "
+          fill
+          className="object-cover"
         />
-        {/* BLUR OVERLAY (LEFT PART OF IMAGE) */}
-        <div className="absolute top-0 left-0 h-full w-[35%]  z-10 bg-gradient-to-r from-[#0B1F4B]/100 via-[#0B1F4B]/80 to-transparent backdrop-blur-[1px] pointer-events-none" />
+        <div
+          className="absolute top-0 left-0 h-full w-[35%]
+          bg-gradient-to-r from-[#0B1F4B]/100 via-[#0B1F4B]/80 to-transparent"
+        />
       </div>
     </section>
   );

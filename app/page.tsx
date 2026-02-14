@@ -16,9 +16,9 @@ import { SOLUTIONS } from "@/constants";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
-  title: "Enterprise Cloud & Automation Consulting",
+  title: "Red Hat Training & Certification Courses | Bengaluru ",
   description:
-    "We help enterprises modernize applications, automate operations, and build secure cloud-native platforms.",
+    "Red Hat Training & Certification Courses | Bengaluru",
 });
 
 const cardsData = [

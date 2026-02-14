@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { JSX } from "react";
 
 const logos: readonly string[] = [
   "/images/partners/Hawkstack-Logo.webp",
@@ -14,12 +15,12 @@ export default function StrategicPartners(): JSX.Element {
       {/* TOP CONTENT */}
       <div className="max-w-[1200px] mx-auto px-4 flex flex-col items-center text-center">
         {/* Heading */}
-        <h2 className="font-lexend text-[40px] font-normal leading-[150%] tracking-[-0.02em] text-[#052BC7] mb-4">
+        <h2 className="font-lexend text-[40px] font-normal leading-[150%] tracking-[-0.02em] text-[#213174] mb-4">
           Our Strategic Partners
         </h2>
 
         {/* Subtitle */}
-        <p className="font-lexend text-[16px] font-normal leading-[150%] tracking-[-0.025em] text-[#052BC7] max-w-[666px] mt-[-18]">
+        <p className="font-lexend text-[16px] font-normal leading-[150%] tracking-[-0.025em] text-[#213174] max-w-[666px] mt-[-18]">
           We partner with leading technology providers to deliver scalable
           cloud-native solutions.
         </p>
