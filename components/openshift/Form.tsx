@@ -111,23 +111,24 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
   const [message, setMessage] = useState("");
 
   const [form, setForm] = useState({
-    first: "",
-    last: "",
+    source,
+    firstName: "",
+    lastName: "",
     email: "",
-    job: "",
+    jobtitle: "",
     company: "",
     country: null as { code: string; name: string } | null,
   });
 
   const [currentErrorField, setCurrentErrorField] = useState<
-    "first" | "last" | "email" | "job" | "company" | "country" | null
+    "firstName" | "lastName" | "email" | "jobtitle" | "company" | "country" | null
   >(null);
 
   const error = {
-    first: currentErrorField === "first",
-    last: currentErrorField === "last",
+    firstName: currentErrorField === "firstName",
+    lastName: currentErrorField === "lastName",
     email: currentErrorField === "email",
-    job: currentErrorField === "job",
+    jobtitle: currentErrorField === "jobtitle",
     company: currentErrorField === "company",
     country: currentErrorField === "country",
   };
@@ -147,14 +148,14 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
             onSubmit={async (e) => {
               e.preventDefault();
 
-              if (!form.first) return setCurrentErrorField("first");
-              if (!form.last) return setCurrentErrorField("last");
+              if (!form.firstName) return setCurrentErrorField("firstName");
+              if (!form.lastName) return setCurrentErrorField("lastName");
               if (!form.email) return setCurrentErrorField("email");
               console.log("EMAIL:", form.email, validateEmail(form.email));
 
               if (validateEmail(form.email))
                 return setSubmitError("Please enter a valid email address");
-              if (!form.job) return setCurrentErrorField("job");
+              if (!form.jobtitle) return setCurrentErrorField("jobtitle");
               if (!form.company) return setCurrentErrorField("company");
               if (!form.country) return setCurrentErrorField("country");
 
@@ -172,10 +173,10 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
                     },
                     body: JSON.stringify({
                       source,
-                      firstName: form.first,
-                      lastName: form.last,
+                      firstName: form.firstName,
+                      lastName: form.lastName,
                       email: form.email,
-                      jobtitle: form.job,
+                      jobtitle: form.jobtitle,
                       company: form.company,
                       country: form.country.code,
                       query: message,
@@ -187,10 +188,11 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
 
                 setSuccess(true);
                 setForm({
-                  first: "",
-                  last: "",
+                  source,
+                  firstName: "",
+                  lastName: "",
                   email: "",
-                  job: "",
+                  jobtitle: "",
                   company: "",
                   country: null,
                 });
@@ -209,24 +211,24 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
             <div className="grid grid-cols-2 gap-3">
               <input
                 placeholder="First Name*"
-                value={form.first}
-                onChange={(e) => setForm({ ...form, first: e.target.value })}
+                value={form.firstName}
+                onChange={(e) => setForm({ ...form, firstName: e.target.value })}
                 className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
-                  error.first && !form.first
+                  error.firstName && !form.firstName
                     ? "border-red-500 animate-shake"
-                    : form.first
+                    : form.firstName
                       ? "border-green-500"
                       : "border-[#828282]"
                 }`}
               />
               <input
                 placeholder="Last Name*"
-                value={form.last}
-                onChange={(e) => setForm({ ...form, last: e.target.value })}
+                value={form.lastName}
+                onChange={(e) => setForm({ ...form, lastName: e.target.value })}
                 className={`w-full h-[33px]  rounded-lg px-3 text-[12px] border outline-none ${
-                  error.last && !form.last
+                  error.lastName && !form.lastName
                     ? "border-red-500 animate-shake"
-                    : form.last
+                    : form.lastName
                       ? "border-green-500"
                       : "border-[#828282]"
                 }`}
@@ -248,12 +250,12 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
               />
               <input
                 placeholder="Job Title*"
-                value={form.job}
-                onChange={(e) => setForm({ ...form, job: e.target.value })}
+                value={form.jobtitle}
+                onChange={(e) => setForm({ ...form, jobtitle: e.target.value })}
                 className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
-                  error.job && !form.job
+                  error.jobtitle && !form.jobtitle
                     ? "border-red-500 animate-shake"
-                    : form.job
+                    : form.jobtitle
                       ? "border-green-500"
                       : "border-[#828282]"
                 }`}
