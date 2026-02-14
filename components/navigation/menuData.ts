@@ -40,7 +40,7 @@ export const solutions: MegaItem[] = [
         title: "CNCF",
         description:
           "A leading open-source foundation that fosters cloud-native innovation by supporting projects like Kubernetes and driving industry standards.",
-        image: "/images/solutions/cncf.webp",
+        image: "/images/solutions/CNCF.webp",
       },
       {
         id: "mirantis",

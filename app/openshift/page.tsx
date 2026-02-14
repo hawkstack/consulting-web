@@ -11,6 +11,7 @@ export default function OpenShiftPage() {
       <HeroSection />
       <WhatWeDeliver />
       <ChallengeSolution />
+      <YourInfrastructure />
       <WhatYouWillReceive />
       <div className="block md:hidden">
         <DiscussRedHat />
