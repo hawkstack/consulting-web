@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent, JSX } from "react";
 import { validateEmail, validatePhone } from "../utils/validations";
 
 interface ContactFormData {
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
 }
@@ -14,8 +14,8 @@ type SubmitStatus = "idle" | "success" | "error" | "oops";
 
 const ContactForm: React.FC = ()=>{
   const [formData, setFormData] = useState<ContactFormData>({
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
   });
@@ -25,11 +25,14 @@ const ContactForm: React.FC = ()=>{
   const [phoneError, setPhoneError] = useState<string>("");
   const [emailError, setEmailError] = useState<string>("");
 
+  //  Destructure formData
+  const { firstName, lastName, email, phone } = formData;
+
   const isFormValid: boolean =
-    Boolean(formData.firstname.trim()) &&
-    Boolean(formData.lastname.trim()) &&
-    Boolean(formData.email.trim()) &&
-    Boolean(formData.phone.trim()) &&
+    Boolean(firstName.trim()) &&
+    Boolean(lastName.trim()) &&
+    Boolean(email.trim()) &&
+    Boolean(phone.trim()) &&
     !phoneError &&
     !emailError;
 
@@ -51,11 +54,14 @@ const ContactForm: React.FC = ()=>{
     }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+  const handleSubmit = async (
+    e: FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
 
-    const phoneValidationError = validatePhone(formData.phone);
-    const emailValidationError = validateEmail(formData.email);
+    const phoneValidationError = validatePhone(phone);
+    const emailValidationError = validateEmail(email);
+
     if (phoneValidationError || emailValidationError) {
       setPhoneError(phoneValidationError);
       setEmailError(emailValidationError);
@@ -67,34 +73,51 @@ const ContactForm: React.FC = ()=>{
     setLoading(true);
     setSubmitStatus("idle");
 
-    const API_BASE_URL: string = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
+    const API_BASE_URL: string =
+      process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
 
     try {
-      const response: Response = await fetch(`${API_BASE_URL}/api/contacts`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response: Response = await fetch(
+        `${API_BASE_URL}/api/scheduleDemo`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       await response.json();
 
       if (response.ok) {
         setSubmitStatus("success");
+
+        // Reset form
         setFormData({
-          firstname: "",
-          lastname: "",
+          firstName: "",
+          lastName: "",
           email: "",
           phone: "",
         });
+
         setPhoneError("");
         setEmailError("");
       } else {
         setSubmitStatus("error");
       }
+
+      // auto-close popup (success + error)
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 2000);
     } catch {
       setSubmitStatus("oops");
+
+      // auto-close popup (network error)
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 2000);
     } finally {
       setLoading(false);
     }
@@ -120,37 +143,46 @@ const ContactForm: React.FC = ()=>{
           {/* Form Card */}
           <form
             onSubmit={handleSubmit}
-            className="mt-12 md:mt-16 w-full max-w-[713px] rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,#111B2D_0%,#0E1726_45%,#0A1220_100%)] px-6 md:px-10 py-8"
+            className="mt-12 md:mt-16 w-full max-w-[713px] rounded-[24px]
+              border border-white/10
+              bg-[linear-gradient(180deg,#111B2D_0%,#0E1726_45%,#0A1220_100%)]
+              px-6 md:px-10 py-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* First Name */}
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
                   First Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
-                  name="firstname"
-                  value={formData.firstname}
+                  name="firstName"
+                  value={firstName}
                   onChange={handleChange}
                   placeholder="Enter your first name"
-                  className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
+                  className="w-full h-12 rounded-lg bg-[#0B1220]
+                    px-4 text-sm outline-none"
                 />
               </div>
 
+              {/* Last Name */}
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
                   Last Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
-                  name="lastname"
-                  value={formData.lastname}
+                  name="lastName"
+                  value={lastName}
                   onChange={handleChange}
                   placeholder="Enter your last name"
-                  className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
+                  className="w-full h-12 rounded-lg bg-[#0B1220]
+                    px-4 text-sm outline-none"
                 />
               </div>
 
+              {/* Email */}
+              
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
                   Work Email <span className="text-red-500">*</span>
@@ -158,17 +190,23 @@ const ContactForm: React.FC = ()=>{
                 <input
                   type="email"
                   name="email"
-                  value={formData.email}
+                  value={email}
                   onChange={handleChange}
                   placeholder="Enter your work email"
-                  className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
+                  className="w-full h-12 rounded-lg bg-[#0B1220]
+                    px-4 text-sm outline-none"
                 />
+
                 {/* Inline email error */}
+
                 {emailError && (
-                  <p className="mt-1 pl-4 text-xs text-red-400">{emailError}</p>
+                  <p className="mt-1 pl-4 text-xs text-red-400">
+                    {emailError}
+                  </p>
                 )}
               </div>
 
+               {/* Phone  */}
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
                   Contact Number <span className="text-red-500">*</span>
@@ -176,14 +214,16 @@ const ContactForm: React.FC = ()=>{
                 <input
                   type="tel"
                   name="phone"
-                  value={formData.phone}
+                  value={phone}
                   onChange={handleChange}
                   placeholder="Enter your contact number"
-                  className="w-full h-12 rounded-lg bg-[#0B1220] px-4 text-sm outline-none"
+                  className="w-full h-12 rounded-lg bg-[#0B1220]
+                    px-4 text-sm outline-none"
                 />
-                {/* Inline phone error */}
                 {phoneError && (
-                  <p className="mt-1 pl-4 text-xs text-red-400">{phoneError}</p>
+                  <p className="mt-1 pl-4 text-xs text-red-400">
+                    {phoneError}
+                  </p>
                 )}
               </div>
             </div>
@@ -200,18 +240,17 @@ const ContactForm: React.FC = ()=>{
             <button
               type="submit"
               disabled={!isFormValid || loading}
-              className="mt-8 w-full h-12 rounded-full bg-[#0E245A] hover:bg-[#1b3a8f] transition disabled:opacity-50"
+              className="mt-8 w-full h-12 rounded-full bg-[#0E245A]
+                hover:bg-[#1b3a8f] transition disabled:opacity-50"
             >
               {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
         </div>
-        {/* IMAGE ONLY OVERLAY */}
+
+        {/* Popup Overlay */}
         {submitStatus !== "idle" && (
-          <div
-            className="absolute inset-0 z-50 grid place-items-center bg-black/50 px-4"
-            onClick={() => setSubmitStatus("idle")}
-          >
+          <div className="absolute inset-0 z-50 grid place-items-center bg-black/50 px-4">
             <img
               src={`/images/form-feedback/${
                 submitStatus === "success"
