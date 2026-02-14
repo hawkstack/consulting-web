@@ -12,7 +12,7 @@ interface ContactFormData {
 
 type SubmitStatus = "idle" | "success" | "error" | "oops";
 
-const ContactForm: React.FC = (): JSX.Element => {
+const ContactForm: React.FC = ()=>{
   const [formData, setFormData] = useState<ContactFormData>({
     firstName: "",
     lastName: "",
