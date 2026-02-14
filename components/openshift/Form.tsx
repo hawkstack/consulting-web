@@ -131,7 +131,7 @@ export default function DiscussRedHat() {
 
   return (
     <section className="w-full flex justify-center py-6 font-lexend">
-      <div className="w-full max-w-[440px] px-4">
+      <div className="w-full max-w-[440px] lg:w-[540px] px-4">
         <div className="bg-white rounded-2xl border border-[#BDBDBD] shadow-[0_8px_24px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="bg-gradient-to-b from-[#1b2f55] to-[#0b1f3a] px-6 py-4">
             <h2 className="text-white text-[18px] font-semibold">
