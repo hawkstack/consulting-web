@@ -9,7 +9,7 @@ export default function OpenShiftPage() {
   return (
     <>
       <HeroSection />
-      <WhatWeDeliver />
+      <WhatWeDeliver source={"openshift"} />
       <ChallengeSolution />
       <WhatYouWillReceive />
       <div className="block md:hidden">

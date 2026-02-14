@@ -1,121 +1,315 @@
 "use client";
 
-import DiscussRedHat from "./Form";
+import { useState, useRef, useEffect } from "react";
+import countriesLib from "i18n-iso-countries";
+import enLocale from "i18n-iso-countries/langs/en.json";
+import ReactCountryFlag from "react-country-flag";
+import { validateEmail } from "@/components/utils/validations";
 
-export default function WhatWeDeliver() {
+countriesLib.registerLocale(enLocale);
+type DiscussRedHatProps = {
+  source: "openshift" | "unified";
+};
+
+const countries: { code: string; name: string }[] = Object.entries(
+  countriesLib.getNames("en", { select: "official" }),
+).map(([code, name]) => ({ code, name }));
+
+function CountrySelect({
+  value,
+  error,
+  onSelect,
+}: {
+  value: { code: string; name: string } | null;
+  error: boolean;
+  onSelect: (v: { code: string; name: string } | null) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
+
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  const filteredCountries = countries.filter((country) =>
+    country.name.toLowerCase().includes(search.toLowerCase()),
+  );
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        ref.current &&
+        e.target instanceof Node &&
+        !ref.current.contains(e.target)
+      ) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <section className="bg-white px-4 pt-6 md:pt-6 font-lexend overflow-hidden">
-      <div className="mx-auto max-w-7xl md:flex md:items-start md:gap-16">
-        {/* LEFT COLUMN */}
-        <div className=" lg:w-[600px] md:w-[300px]">
-          {/* Title + Description */}
-          <div className="mb-8 lg:mb-15">
-            {/* Description hidden on mobile */}
-            <p className="hidden md:block  mb-1max-w-xl text-[12px] text-black text-justify lg:text-[16px]">
-              Rapidly validate Red Hat OpenShift and build a production-ready,
-              enterprise-grade container platform on Kubernetes. Our approach
-              ensures a secure, scalable, and resilient foundation—designed,
-              deployed, and enabled by Red Hat–certified experts—so your teams
-              can confidently accelerate application modernization, streamline
-              operations, and achieve faster time-to-value.
-            </p>
-            <h2 className="text-3xl mt-2 lg:mt-6 font-bold text-black text-center  animate-[fadeUp_0.8s_ease-out_forwards] lg:text-[32px]">
-              What we deliver
+    <div className="relative" ref={ref}>
+      <div
+        onClick={() => setOpen(true)}
+        className={`w-full h-[33px] rounded-lg px-3 text-[12px] flex items-center gap-2 cursor-text bg-white 
+        border ${error ? "border-red-500 animate-shake" : "border-[#828282]"}`}>
+        {value ? (
+          <>
+            <ReactCountryFlag
+              svg
+              countryCode={value.code}
+              style={{ width: "1.1em", height: "1.1em" }}
+            />
+            <span>{value.name}</span>
+          </>
+        ) : (
+          <span className={error ? "text-red-500" : "text-gray-400"}>
+            Country*
+          </span>
+        )}
+      </div>
+
+      {open && (
+        <div className="absolute z-50 mt-1 w-full max-h-40 overflow-y-auto rounded-lg border border-[#BDBDBD] bg-white shadow-lg">
+          <input
+            autoFocus
+            value={search}
+            placeholder="Search country..."
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full px-3 py-2 text-[12px] border-b outline-none"
+          />
+
+          {filteredCountries.map((country) => (
+            <div
+              key={country.code}
+              onMouseDown={() => {
+                onSelect(country);
+                setSearch("");
+                setOpen(false);
+              }}
+              className="px-3 py-2 text-[12px] cursor-pointer hover:bg-[#f2f2f2]">
+              <div className="flex items-center gap-2">
+                <ReactCountryFlag
+                  svg
+                  countryCode={country.code}
+                  style={{ width: "1.25em", height: "1.25em" }}
+                />
+                <span>{country.name}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function DiscussRedHat({ source }: DiscussRedHatProps) {
+  const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const [form, setForm] = useState({
+    source,
+    firstName: "",
+    lastName: "",
+    email: "",
+    jobtitle: "",
+    company: "",
+    country: null as { code: string; name: string } | null,
+  });
+
+  const [currentErrorField, setCurrentErrorField] = useState<
+    "firstName" | "lastName" | "email" | "jobtitle" | "company" | "country" | null
+  >(null);
+
+  const error = {
+    firstName: currentErrorField === "firstName",
+    lastName: currentErrorField === "lastName",
+    email: currentErrorField === "email",
+    jobtitle: currentErrorField === "jobtitle",
+    company: currentErrorField === "company",
+    country: currentErrorField === "country",
+  };
+
+  return (
+    <section className="w-full flex justify-center py-6 font-lexend">
+      <div className="w-full max-w-[440px] lg:w-[540px] px-4">
+        <div className="bg-white rounded-2xl border border-[#BDBDBD] shadow-[0_8px_24px_rgba(0,0,0,0.15)] overflow-hidden">
+          <div className="bg-gradient-to-b from-[#1b2f55] to-[#0b1f3a] px-6 py-4">
+            <h2 className="text-white text-[18px] font-semibold">
+              Discuss RedHat Openshift
             </h2>
           </div>
 
-          {/* Diamonds */}
-          <div className="flex justify-center md:justify-start">
-            <div className="relative w-full max-w-sm h-[380px]">
-              {/* Soft background diamonds */}
-              <div
-                className="absolute top-40 left-10 w-[100px] h-[100px] lg:absolute lg:left-28 rotate-45 bg-gradient-to-br from-[#cfdcff] to-[#9fb6ff] rounded-3xl blur-[8px]
-                animate-[floatSlow_5s_ease-in-out_infinite]"
+          <form
+            noValidate
+            onSubmit={async (e) => {
+              e.preventDefault();
+
+              if (!form.firstName) return setCurrentErrorField("firstName");
+              if (!form.lastName) return setCurrentErrorField("lastName");
+              if (!form.email) return setCurrentErrorField("email");
+              console.log("EMAIL:", form.email, validateEmail(form.email));
+
+              if (validateEmail(form.email))
+                return setSubmitError("Please enter a valid email address");
+              if (!form.jobtitle) return setCurrentErrorField("jobtitle");
+              if (!form.company) return setCurrentErrorField("company");
+              if (!form.country) return setCurrentErrorField("country");
+
+              setCurrentErrorField(null);
+              setSubmitError("");
+              setLoading(true);
+
+              try {
+                const Response = await fetch(
+                  `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/openshift_unified`,
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                      source,
+                      firstName: form.firstName,
+                      lastName: form.lastName,
+                      email: form.email,
+                      jobtitle: form.jobtitle,
+                      company: form.company,
+                      country: form.country.code,
+                      query: message,
+                    }),
+                  },
+                );
+
+                if (!Response.ok) throw new Error();
+
+                setSuccess(true);
+                setForm({
+                  source,
+                  firstName: "",
+                  lastName: "",
+                  email: "",
+                  jobtitle: "",
+                  company: "",
+                  country: null,
+                });
+                setMessage("");
+
+                setTimeout(() => {
+                  setSuccess(false);
+                }, 4000);
+              } catch {
+                setSubmitError("Something went wrong. Please try again.");
+              } finally {
+                setLoading(false);
+              }
+            }}
+            className="p-[25px] space-y-4 max-w-[403px] lg:w-[600px] mx-auto">
+            <div className="grid grid-cols-2 gap-3">
+              <input
+                placeholder="First Name*"
+                value={form.firstName}
+                onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                  error.firstName && !form.firstName
+                    ? "border-red-500 animate-shake"
+                    : form.firstName
+                      ? "border-green-500"
+                      : "border-[#828282]"
+                }`}
               />
-
-              <div
-                className="absolute top-[190px] right-[39px] w-[100px] h-[100px]  lg:absolute lg:left-86 rotate-45 bg-gradient-to-br from-[#cfdcff] to-[#9fb6ff] rounded-3xl blur-[8px]
-                 animate-[floatDiagonal_5s_ease-in-out_infinite]"
-              />
-
-              {/* Center Dark Diamond */}
-              <div
-                className="absolute inset-0 left-4 flex items-center justify-center z-30 md:absolute md:right-[-50px]
-                animate-[fadeUp_0.8s_ease-out_forwards_0.2s] lg:absolute lg:left-50 md:absolute md:left-6 md:top-[-10px]">
-                <div
-                  className="w-[100px] h-[100px] lg:w-[140px]  lg:h-[140px] rotate-45 bg-gradient-to-br from-[#0b1e3a] to-[#132f5e] rounded-3xl flex items-center justify-center
-                  animate-[floatSlow_10s_ease-in-out_infinite]">
-                  <p className="-rotate-45 text-white text-[10px] font-semibold text-center leading-snug px-4 lg:text-[14px]">
-                    Cluster Design & Setup
-                  </p>
-                </div>
-              </div>
-
-              {/* Top Diamond */}
-              <div
-                className="absolute top-[43px] left-[152px]   -translate-x-1/2 z-20
-                animate-[fadeUp_0.9s_ease-out_forwards_0.6s] ">
-                <div
-                  className="w-[100px] h-[100px] lg:w-[140px]  lg:h-[140px] rotate-45 bg-gradient-to-br from-[#cfdcff] to-[#9fb6ff] rounded-3xl flex items-center justify-center
-                  animate-[float_3s_ease-in-out_infinite] lg:absolute lg:left-[30px] lg:top-[-60px] md:absolute md:top-[-10px] md:left-[-30px]">
-                  <p className="-rotate-45 text-black text-[10px] font-medium text-center leading-snug px-3 lg:text-[14px]">
-                    OpenShift
-                    <br />
-                    Virtualization
-                    <br />
-                    Enablement
-                  </p>
-                </div>
-              </div>
-
-              {/* Right Diamond */}
-              <div
-                className="absolute left-[236px] top-[151px]  -translate-y-1/2 z-20 md:absolute md:left-50 lg:absolute lg:left-64
-                animate-[fadeUp_0.8s_ease-out_forwards_0.45s]">
-                <div
-                  className="w-[100px] h-[100px] lg:w-[140px]  lg:h-[140px]  rotate-45 bg-gradient-to-br from-[#cfdcff] to-[#9fb6ff] rounded-3xl flex items-center justify-center
-                  animate-[float_4s_ease-in-out_infinite_0.2s] lg:absolute lg:left-[152px] lg:top-[-80px] md:absolute md:left-8 md:top-[-60]">
-                  <p className="-rotate-45 text-black text-[10px] font-medium text-center leading-snug px-3 lg:text-[14px] ">
-                    Networking & Storage Configuration
-                  </p>
-                </div>
-              </div>
-
-              {/* Left Diamond */}
-              <div
-                className="absolute left-[1px] top-[46%]  -translate-y-1/2 z-20
-                animate-[fadeUp_0.8s_ease-out_forwards_0.6s] ">
-                <div
-                  className="w-[100px] h-[100px] lg:w-[140px]  lg:h-[140px] rotate-45 bg-gradient-to-br from-[#cfdcff] to-[#9fb6ff] rounded-3xl flex items-center justify-center
-                  animate-[float_3s_ease-in-out_infinite_0.2s] lg:absolute lg:left-5 lg:top-[-80] ">
-                  <p className="-rotate-45 text-black text-[10px] font-medium text-center leading-snug px-3 lg:text-[14px]">
-                    Day-2 Operations Readiness
-                  </p>
-                </div>
-              </div>
-
-              {/* Accent red diamonds */}
-              <div
-                className="absolute bottom-[71px] left-1/2 -translate-x-1/2 w-[40px] h-[40px] bg-red-400 rotate-45 rounded-md
-                animate-[float_3s_ease-in-out_infinite] lg:absolute lg:bottom-10 "
-              />
-
-              <div
-                className="absolute top-10 left-14 w-[40px] h-[40px] bg-red-400 rotate-45 rounded-md opacity-80
-                animate-[floatSlow_4s_ease-in-out_infinite] lg:absolute lg:top-1"
-              />
-
-              <div
-                className="absolute top-20 left-1 w-[25px] h-[25px] bg-[#132f5e] rotate-45 rounded-md opacity-80 blur-sm
-                animate-[floatSlow_4s_ease-in-out_infinite] lg:absolute lg:top-1 lg:absolute lg:left-0 lg:top-15 md:absolute md:top-20 md:left-[10]"
+              <input
+                placeholder="Last Name*"
+                value={form.lastName}
+                onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+                className={`w-full h-[33px]  rounded-lg px-3 text-[12px] border outline-none ${
+                  error.lastName && !form.lastName
+                    ? "border-red-500 animate-shake"
+                    : form.lastName
+                      ? "border-green-500"
+                      : "border-[#828282]"
+                }`}
               />
             </div>
-          </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <input
+                placeholder="Business Email*"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                  error.email && !form.email
+                    ? "border-red-500 animate-shake"
+                    : form.email
+                      ? "border-green-500"
+                      : "border-[#828282]"
+                }`}
+              />
+              <input
+                placeholder="Job Title*"
+                value={form.jobtitle}
+                onChange={(e) => setForm({ ...form, jobtitle: e.target.value })}
+                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                  error.jobtitle && !form.jobtitle
+                    ? "border-red-500 animate-shake"
+                    : form.jobtitle
+                      ? "border-green-500"
+                      : "border-[#828282]"
+                }`}
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <input
+                placeholder="Company*"
+                value={form.company}
+                onChange={(e) => setForm({ ...form, company: e.target.value })}
+                className={`w-full h-[33px] rounded-lg px-3 text-[12px] border outline-none ${
+                  error.company && !form.company
+                    ? "border-red-500 animate-shake"
+                    : form.company
+                      ? "border-green-500"
+                      : "border-[#828282]"
+                }`}
+              />
+              <CountrySelect
+                value={form.country}
+                error={error.country}
+                onSelect={(v) => setForm((prev) => ({ ...prev, country: v }))}
+              />
+            </div>
+
+            <textarea
+              rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Get expert help building a secure Enterprise Linux foundation..."
+              className="w-full rounded-lg border border-[#828282] px-3 py-2 text-[12px] outline-none"
+            />
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full mt-4 rounded-full bg-gradient-to-b from-[#1b2f55] to-[#0b1f3a] py-3 text-white text-[14px] font-semibold disabled:opacity-60">
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+
+            {submitError && (
+              <p className="text-red-500 text-[12px] text-center">
+                {submitError}
+              </p>
+            )}
+
+            {success && (
+              <p className="text-green-600 text-[12px] text-center">
+                Message sent successfully!
+              </p>
+            )}
+          </form>
         </div>
-        <div className=" hidden md:block lg:absolute lg:top-146 lg:right-35 md:absolute md:right-0 md:top-140  " >
-          <DiscussRedHat source={"openshift"} />
-        </div>
-        <div className="hidden md:block md:w-1/2"></div>
       </div>
     </section>
   );
