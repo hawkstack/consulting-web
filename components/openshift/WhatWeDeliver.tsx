@@ -105,6 +105,7 @@ function CountrySelect({
 }
 
 export default function DiscussRedHat({ source }: DiscussRedHatProps) {
+  console.log("WhatWeDeliver mounted");
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [success, setSuccess] = useState(false);
