@@ -592,116 +592,116 @@ const GetStarted = () => {
               {/* First Name */}
               <input
                 className="
-        h-[42px]
-        rounded-xl
-        border
-        border-[#1E2B5C]
-        px-4
-        text-[14px]
-        text-[#0F172A]
-        placeholder:text-[#64748B]
-        outline-none
-        focus:border-[#09173A]
-      "
+                rounded-xl
+                border
+                border-[#1E2B5C]
+                px-4
+                text-[14px]
+                text-[#0F172A]
+                placeholder:text-[#64748B]
+                outline-none
+                focus:border-[#09173A]
+                h-[42px]
+            "
                 placeholder="First Name*"
               />
 
               {/* Last Name */}
               <input
                 className="
-        h-[42px]
-        rounded-xl
-        border
-        border-[#A3A3A3]
-        px-4
-        text-[14px]
-        placeholder:text-[#7A7A7A]
-        outline-none
-        focus:border-[#09173A]
-      "
+                rounded-xl
+                border
+                border-[#A3A3A3]
+                px-4
+                text-[14px]
+                placeholder:text-[#7A7A7A]
+                outline-none
+                focus:border-[#09173A]
+                h-[42px]
+            "
                 placeholder="Last Name*"
               />
 
               {/* Phone */}
               <input
                 className="
-        h-[42px]
-        rounded-xl
-        border
-        border-[#A3A3A3]
-        px-4
-        text-[14px]
-        placeholder:text-[#7A7A7A]
-        outline-none
-        focus:border-[#09173A]
-      "
+                rounded-xl
+                border
+                border-[#A3A3A3]
+                px-4
+                text-[14px]
+                placeholder:text-[#7A7A7A]
+                outline-none
+                focus:border-[#09173A]
+                h-[42px]
+            "
                 placeholder="Phone no.*"
               />
 
               {/* Job Title */}
               <input
                 className="
-        h-[42px]
-        rounded-xl
-        border
-        border-[#A3A3A3]
-        px-4
-        text-[14px]
-        placeholder:text-[#7A7A7A]
-        outline-none
-        focus:border-[#09173A]
-      "
+                rounded-xl
+                border
+                border-[#A3A3A3]
+                px-4
+                text-[14px]
+                placeholder:text-[#7A7A7A]
+                outline-none
+                focus:border-[#09173A]
+                h-[42px]
+            "
                 placeholder="Job Title*"
               />
 
               {/* Company */}
               <input
                 className="
-        h-[42px]
-        rounded-xl
-        border
-        border-[#A3A3A3]
-        px-4
-        text-[14px]
-        placeholder:text-[#7A7A7A]
-        outline-none
-        focus:border-[#09173A]
-      "
+                rounded-xl
+                border
+                border-[#A3A3A3]
+                px-4
+                text-[14px]
+                placeholder:text-[#7A7A7A]
+                outline-none
+                focus:border-[#09173A]
+                h-[42px]
+            "
                 placeholder="Company*"
               />
 
               {/* Country */}
               <input
                 className="
-        h-[42px]
-        rounded-xl
-        border
-        border-[#A3A3A3]
-        px-4
-        text-[14px]
-        placeholder:text-[#7A7A7A]
-        outline-none
-        focus:border-[#09173A]
-      "
+                rounded-xl
+                border
+                border-[#A3A3A3]
+                px-4
+                text-[14px]
+                placeholder:text-[#7A7A7A]
+                outline-none
+                focus:border-[#09173A]
+                h-[42px]
+            "
                 placeholder="Country*"
               />
 
               {/* Message */}
               <textarea
                 className="
-        col-span-full
-        min-h-[160px]
-        resize-none
-        rounded-xl
-        border
-        border-[#A3A3A3]
-        px-4
-        py-3
-        text-[14px]
-        placeholder:text-[#7A7A7A]
-        outline-none
-        focus:border-[#09173A]
-      "
+                min-h-[160px]
+                resize-none
+                rounded-xl
+                border
+                border-[#A3A3A3]
+                px-4
+                py-3
+                text-[14px]
+                placeholder:text-[#7A7A7A]
+                outline-none
+                focus:border-[#09173A]
+                col-span-full
+            "
                 placeholder="Let’s Talk what you’re planning......"
               />
 
@@ -709,19 +709,19 @@ const GetStarted = () => {
               <button
                 type="submit"
                 className="
-        col-span-full
-        mt-4
-        h-[46px]
-        rounded-full
-        bg-gradient-to-r
-        from-[#03070D]
-        to-[#09173A]
-        text-[14px]
-        font-semibold
-        tracking-wide
-        text-white
-        shadow-[0_8px_20px_rgba(0,0,0,0.35)]
-      "
+                mt-4
+                h-[46px]
+                rounded-full
+                bg-gradient-to-r
+                from-[#03070D]
+                to-[#09173A]
+                text-[14px]
+                font-semibold
+                tracking-wide
+                text-white
+                shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+                col-span-full
+            "
               >
                 SUBMIT
               </button>
