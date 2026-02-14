@@ -25,11 +25,14 @@ const ContactForm: React.FC = (): JSX.Element => {
   const [phoneError, setPhoneError] = useState<string>("");
   const [emailError, setEmailError] = useState<string>("");
 
+  //  Destructure formData
+  const { firstName, lastName, email, phone } = formData;
+
   const isFormValid: boolean =
-    Boolean(formData.firstName.trim()) &&
-    Boolean(formData.lastName.trim()) &&
-    Boolean(formData.email.trim()) &&
-    Boolean(formData.phone.trim()) &&
+    Boolean(firstName.trim()) &&
+    Boolean(lastName.trim()) &&
+    Boolean(email.trim()) &&
+    Boolean(phone.trim()) &&
     !phoneError &&
     !emailError;
 
@@ -56,8 +59,9 @@ const ContactForm: React.FC = (): JSX.Element => {
   ): Promise<void> => {
     e.preventDefault();
 
-    const phoneValidationError = validatePhone(formData.phone);
-    const emailValidationError = validateEmail(formData.email);
+    const phoneValidationError = validatePhone(phone);
+    const emailValidationError = validateEmail(email);
+
     if (phoneValidationError || emailValidationError) {
       setPhoneError(phoneValidationError);
       setEmailError(emailValidationError);
@@ -81,20 +85,22 @@ const ContactForm: React.FC = (): JSX.Element => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
-      });
+        }
+      );
 
       await response.json();
 
       if (response.ok) {
         setSubmitStatus("success");
 
-        // reset form for next submission
+        // Reset form
         setFormData({
           firstName: "",
           lastName: "",
           email: "",
           phone: "",
         });
+
         setPhoneError("");
         setEmailError("");
       } else {
@@ -143,6 +149,7 @@ const ContactForm: React.FC = (): JSX.Element => {
               px-6 md:px-10 py-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* First Name */}
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
                   First Name <span className="text-red-500">*</span>
@@ -150,7 +157,7 @@ const ContactForm: React.FC = (): JSX.Element => {
                 <input
                   type="text"
                   name="firstName"
-                  value={formData.firstName}
+                  value={firstName}
                   onChange={handleChange}
                   placeholder="Enter your first name"
                   className="w-full h-12 rounded-lg bg-[#0B1220]
@@ -158,6 +165,7 @@ const ContactForm: React.FC = (): JSX.Element => {
                 />
               </div>
 
+              {/* Last Name */}
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
                   Last Name <span className="text-red-500">*</span>
@@ -165,7 +173,7 @@ const ContactForm: React.FC = (): JSX.Element => {
                 <input
                   type="text"
                   name="lastName"
-                  value={formData.lastName}
+                  value={lastName}
                   onChange={handleChange}
                   placeholder="Enter your last name"
                   className="w-full h-12 rounded-lg bg-[#0B1220]
@@ -173,6 +181,8 @@ const ContactForm: React.FC = (): JSX.Element => {
                 />
               </div>
 
+              {/* Email */}
+              
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
                   Work Email <span className="text-red-500">*</span>
@@ -180,13 +190,15 @@ const ContactForm: React.FC = (): JSX.Element => {
                 <input
                   type="email"
                   name="email"
-                  value={formData.email}
+                  value={email}
                   onChange={handleChange}
                   placeholder="Enter your work email"
                   className="w-full h-12 rounded-lg bg-[#0B1220]
                     px-4 text-sm outline-none"
                 />
+
                 {/* Inline email error */}
+
                 {emailError && (
                   <p className="mt-1 pl-4 text-xs text-red-400">
                     {emailError}
@@ -194,6 +206,7 @@ const ContactForm: React.FC = (): JSX.Element => {
                 )}
               </div>
 
+               {/* Phone  */}
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
                   Contact Number <span className="text-red-500">*</span>
@@ -201,13 +214,12 @@ const ContactForm: React.FC = (): JSX.Element => {
                 <input
                   type="tel"
                   name="phone"
-                  value={formData.phone}
+                  value={phone}
                   onChange={handleChange}
                   placeholder="Enter your contact number"
                   className="w-full h-12 rounded-lg bg-[#0B1220]
                     px-4 text-sm outline-none"
                 />
-                {/* Inline phone error */}
                 {phoneError && (
                   <p className="mt-1 pl-4 text-xs text-red-400">
                     {phoneError}
