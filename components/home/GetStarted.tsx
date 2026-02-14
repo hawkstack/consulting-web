@@ -552,6 +552,183 @@ const GetStarted = () => {
           </div>
         </div>
       </div>
+      {/* ================= Second Section. ================= */}
+      <div className="-mx-4 mt-10 w-screen overflow-hidden bg-gradient-to-br from-[#03070D] via-[#09173A] to-[#09173A] px-6 py-16 md:px-12">
+        {/* Decorative circles */}
+        <div className="pointer-events-none absolute right-[-120px] top-[-120px] h-[280px] w-[280px] rounded-full bg-white/10 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-[-120px] left-[-120px] h-[240px] w-[240px] rounded-full bg-white/10 blur-3xl" />
+
+        <div className="relative mx-auto grid max-w-[1100px] grid-cols-1 gap-12 md:grid-cols-2">
+          {/* LEFT CONTENT */}
+          <div>
+            <h4 className="font-lexend text-[32px] font-semibold leading-[100%] text-white">
+              Let’s Talk
+            </h4>
+
+            <h2 className="mt-4 font-lexend text-[20px] font-medium leading-[130%] text-white">
+              Contact us to see how HawkStack accelerates your journey.
+            </h2>
+
+            <div className="relative mt-6 pl-5">
+              {/* Left accent line */}
+              <span className="absolute left-0 top-1 h-full w-[3px] bg-[#9B96FF]" />
+
+              <p className="font-lexend text-[14px] font-normal leading-[160%] text-[#E5E7EB]">
+                HawkStack delivers production-ready Red Hat OpenShift platforms
+                with built-in security, automation, and lifecycle
+                management—empowering teams to deploy, scale, and manage
+                workloads with consistency across environments.
+              </p>
+
+              <p className="mt-4 font-lexend text-[14px] font-normal leading-[160%] text-[#E5E7EB]">
+                Partner with HawkStack to modernize your cloud platforms.
+              </p>
+            </div>
+          </div>
+
+          {/* RIGHT FORM */}
+          <div className="rounded-2xl bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+            <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              {/* First Name */}
+              <input
+                className="
+        h-[42px]
+        rounded-xl
+        border
+        border-[#1E2B5C]
+        px-4
+        text-[14px]
+        text-[#0F172A]
+        placeholder:text-[#64748B]
+        outline-none
+        focus:border-[#09173A]
+      "
+                placeholder="First Name*"
+              />
+
+              {/* Last Name */}
+              <input
+                className="
+        h-[42px]
+        rounded-xl
+        border
+        border-[#A3A3A3]
+        px-4
+        text-[14px]
+        placeholder:text-[#7A7A7A]
+        outline-none
+        focus:border-[#09173A]
+      "
+                placeholder="Last Name*"
+              />
+
+              {/* Phone */}
+              <input
+                className="
+        h-[42px]
+        rounded-xl
+        border
+        border-[#A3A3A3]
+        px-4
+        text-[14px]
+        placeholder:text-[#7A7A7A]
+        outline-none
+        focus:border-[#09173A]
+      "
+                placeholder="Phone no.*"
+              />
+
+              {/* Job Title */}
+              <input
+                className="
+        h-[42px]
+        rounded-xl
+        border
+        border-[#A3A3A3]
+        px-4
+        text-[14px]
+        placeholder:text-[#7A7A7A]
+        outline-none
+        focus:border-[#09173A]
+      "
+                placeholder="Job Title*"
+              />
+
+              {/* Company */}
+              <input
+                className="
+        h-[42px]
+        rounded-xl
+        border
+        border-[#A3A3A3]
+        px-4
+        text-[14px]
+        placeholder:text-[#7A7A7A]
+        outline-none
+        focus:border-[#09173A]
+      "
+                placeholder="Company*"
+              />
+
+              {/* Country */}
+              <input
+                className="
+        h-[42px]
+        rounded-xl
+        border
+        border-[#A3A3A3]
+        px-4
+        text-[14px]
+        placeholder:text-[#7A7A7A]
+        outline-none
+        focus:border-[#09173A]
+      "
+                placeholder="Country*"
+              />
+
+              {/* Message */}
+              <textarea
+                className="
+        col-span-full
+        min-h-[160px]
+        resize-none
+        rounded-xl
+        border
+        border-[#A3A3A3]
+        px-4
+        py-3
+        text-[14px]
+        placeholder:text-[#7A7A7A]
+        outline-none
+        focus:border-[#09173A]
+      "
+                placeholder="Let’s Talk what you’re planning......"
+              />
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="
+        col-span-full
+        mt-4
+        h-[46px]
+        rounded-full
+        bg-gradient-to-r
+        from-[#03070D]
+        to-[#09173A]
+        text-[14px]
+        font-semibold
+        tracking-wide
+        text-white
+        shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+      "
+              >
+                SUBMIT
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
