@@ -113,11 +113,7 @@ export default function WhatWeDeliver() {
           </div>
         </div>
         <div className=" hidden md:block lg:absolute lg:top-146 lg:right-35 md:absolute md:right-0 md:top-140  " >
-<<<<<<< HEAD
-         <DiscussRedHat source="openshift" />
-=======
           <DiscussRedHat source={"openshift"} />
->>>>>>> 5b19cec74080434005c17954b7fc6b24f9f06947
         </div>
         <div className="hidden md:block md:w-1/2"></div>
       </div>
