@@ -28,6 +28,19 @@ export function Header(): JSX.Element {
 
   const items = openMenu ? menuMap[openMenu] : null;
 
+  const handleTrainingClick = (
+    e: React.MouseEvent<HTMLLIElement, MouseEvent>,
+    key: MenuKey
+  ) => {
+    if (key === "training") {
+      e.stopPropagation();
+      window.open(
+        process.env.NEXT_PUBLIC_TRAINING_URL as string,
+        "_blank"
+      );
+    }
+  }
+
   return (
     <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F]">
       <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[105px] px-4 md:px-8 lg:px-24 flex items-center">
@@ -73,6 +86,7 @@ export function Header(): JSX.Element {
                   setActiveItem(menuMap[key]?.[0] || null);
                 }}
                 className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
+                onClick={(e) => handleTrainingClick(e, key)}
               >
                 {key}
               </li>
