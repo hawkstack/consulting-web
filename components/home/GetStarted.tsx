@@ -23,35 +23,50 @@ const GetStarted = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#050B16] to-[#09173A] px-4 py-10 md:px-12 md:py-16 text-white">
-      {/* Heading */}
-      <h1
-        className="
+    <section className="bg-gradient-to-b from-[#09173A] to-[black] text-white">
+      <div className="xl:min-h-[900px] px-4 py-10 md:px-12 md:py-16">
+        {/* Heading */}
+        <h1
+          className="
         w-[95%]
         mx-auto
         text-center
         font-lexend
         text-[22px]
         md:text-[30px]
+        lg:text-[40px]
+        xl:text-[42px]
         font-medium
         leading-[100%]
         tracking-[0]
         text-[#FFFFFF]
        "
-      >
-        Get Started With Hawkstack’s
-        <br />
-        <span className="inline-block mt-2">Technology Solutions</span>
-      </h1>
+        >
+          Get Started With Hawkstack’s
+          <br />
+          <span className="inline-block mt-2 mb-10">Technology Solutions</span>
+        </h1>
 
-      <div className="mt-10 space-y-12">
-        {/* ================= CARD 1 ================= */}
         <div
-          className="
+          className="mt-10 space-y-12 
+        xl:space-y-0
+        xl:grid
+        xl:grid-cols-3
+        xl:gap-12
+        xl:max-w-[1320px]
+        xl:mx-auto
+        xl:items-stretch
+        "
+        >
+          {/* ================= CARD 1 ================= */}
+          <div
+            className="
           overflow-visible
           rounded-2xl
           border
           border-[#569F4C]
+          md:border-[#569F4C]
+          lg:border-[#8DEAF0]
           bg-gradient-to-b
           from-[#0A1A33]
           to-[#050B16]
@@ -63,26 +78,27 @@ const GetStarted = () => {
 
           md:px-10
           md:pb-10
-          md:max-w-[900px]
-          md:mx-auto
+          xl:scale-100
+        lg:border-[#8DEAF0]
+          lg:shadow-[0_20px_60px_rgba(74,222,128,0.35)]
         "
-        >
-          {/* Top pill */}
-          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
-            <span className="h-px w-full bg-[#3AFF7C]/40" />
-            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
-              HawkStack Technical Consulting
+          >
+            {/* Top pill */}
+            <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
+              <span className="h-0 w-full bg-[#3AFF7C]/40" />
+              <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
+                HawkStack Technical Consulting
+              </div>
+              <span className="h-0 w-full bg-[#3AFF7C]/40" />
             </div>
-            <span className="h-px w-full bg-[#3AFF7C]/40" />
-          </div>
 
-          <div className="text-center">
-            <h3 className="font-lexend text-[12px] md:text-[18px] font-medium leading-[100%] text-white flex justify-center">
-              Connect with Technical Consultants
-            </h3>
+            <div className="text-center">
+              <h3 className="font-lexend text-[12px] md:text-[18px] font-medium leading-[100%] text-white flex justify-center">
+                Connect with Technical Consultants
+              </h3>
 
-            <p
-              className="
+              <p
+                className="
               mt-3
               text-[13px]
               md:text-[15px]
@@ -92,14 +108,14 @@ const GetStarted = () => {
               text-white
               font-lexend
               "
-            >
-              Our technical consultants don’t just recommend—they design,
-              deploy, & operate alongside your teams.
-            </p>
+              >
+                Our technical consultants don’t just recommend—they design,
+                deploy, & operate alongside your teams.
+              </p>
 
-            <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
-              <div
-                className="
+              <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 xl:block xl:space-y-4">
+                <div
+                  className="
                 bg-[#0E2547]
                 px-4
                 py-3
@@ -112,11 +128,11 @@ const GetStarted = () => {
                 text-[#FFFFFF]
                 rounded-xl
                 "
-              >
-                Validate your current stack and identify gaps before they become
-                outages
-                <div
-                  className="
+                >
+                  Validate your current stack and identify gaps before they
+                  become outages
+                  <div
+                    className="
                   font-lexend
                   text-[12px]
                   font-semibold
@@ -125,13 +141,13 @@ const GetStarted = () => {
                   text-[#8EC5FF]
                   mt-1
                 "
-                >
-                  Hands-on Implementation
+                  >
+                    Hands-on Implementation
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="
+                <div
+                  className="
                 rounded-xl
                 px-4
                 py-3
@@ -144,11 +160,11 @@ const GetStarted = () => {
                 bg-[#0E2547]
                 text-[#FFFFFF]
                 "
-              >
-                Help your teams adopt GitOps, SRE, and cloud-native operating
-                models.
-                <div
-                  className="
+                >
+                  Help your teams adopt GitOps, SRE, and cloud-native operating
+                  models.
+                  <div
+                    className="
                   font-lexend
                   text-[12px]
                   font-semibold
@@ -157,15 +173,15 @@ const GetStarted = () => {
                   text-[#8EC5FF]
                   mt-1
                 "
-                >
-                  Production Readiness & Optimization
+                  >
+                    Production Readiness & Optimization
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-6 text-left">
-              <p
-                className="
+              <div className="mt-6 text-left">
+                <p
+                  className="
                 font-lexend
                 text-[12px]
                 md:text-[14px]
@@ -173,12 +189,12 @@ const GetStarted = () => {
                 text-white
                 mb-4
                 "
-              >
-                Performance tuning, reliability improvements, and cost
-                optimization.Ideal for:
-              </p>
-              <ul
-                className="
+                >
+                  Performance tuning, reliability improvements, and cost
+                  optimization.Ideal for:
+                </p>
+                <ul
+                  className="
                 text-[12px]
                 md:text-[14px]
                 font-lexend
@@ -188,33 +204,37 @@ const GetStarted = () => {
                 md:grid-cols-2
                 md:gap-x-10
                 space-y-2
-                md:gap-y-3"
-              >
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  Cloud & Kubernetes adoption
-                </li>
+                md:gap-y-3
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  Platform engineering teams
-                </li>
+                xl:grid-cols-1
+                xl:gap-x-0
+                "
+                >
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    Cloud & Kubernetes adoption
+                  </li>
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  DevOps & SRE transformation
-                </li>
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    Platform engineering teams
+                  </li>
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  Migration & modernization projects
-                </li>
-              </ul>
-            </div>
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    DevOps & SRE transformation
+                  </li>
 
-            <button
-              onClick={scrollToForm}
-              className="
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    Migration & modernization projects
+                  </li>
+                </ul>
+              </div>
+
+              <button
+                onClick={scrollToForm}
+                className="
               flex
               h-[36px]
               md:h-[38px]
@@ -235,15 +255,15 @@ const GetStarted = () => {
               mt-8
               mx-auto
             "
-            >
-              Talk to a Technical Consultant
-            </button>
+              >
+                Talk to a Technical Consultant
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* ================= CARD 2 ================= */}
-        <div
-          className="
+          {/* ================= CARD 2 ================= */}
+          <div
+            className="
           overflow-visible
           rounded-2xl
           border
@@ -259,22 +279,21 @@ const GetStarted = () => {
           
           md:px-10
           md:pb-10
-          md:max-w-[900px]
-          md:mx-auto
+          xl:scale-110
   "
-        >
-          {/* Top pill */}
-          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
-            <span className="h-px w-full bg-[#3AFF7C]/40" />
-            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
-              HawkStack OEM Connect
+          >
+            {/* Top pill */}
+            <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
+              <span className="h-0 w-full bg-[#3AFF7C]/40" />
+              <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
+                HawkStack OEM Connect
+              </div>
+              <span className="h-0 w-full bg-[#3AFF7C]/40" />
             </div>
-            <span className="h-px w-full bg-[#3AFF7C]/40" />
-          </div>
 
-          <div className="text-center">
-            <h3
-              className="
+            <div className="text-center">
+              <h3
+                className="
               font-lexend
               text-[12px]
               md:text-[18px]
@@ -284,12 +303,12 @@ const GetStarted = () => {
               flex
               justify-center
       "
-            >
-              Connect with OEM Partners
-            </h3>
+              >
+                Connect with OEM Partners
+              </h3>
 
-            <p
-              className="
+              <p
+                className="
               mt-3
               text-[13px]
               md:text-[15px]
@@ -299,15 +318,15 @@ const GetStarted = () => {
               text-white
               font-lexend
       "
-            >
-              Direct, friction-free access to leading technology OEMs—powered by
-              Hawkstack
-            </p>
+              >
+                Direct, friction-free access to leading technology OEMs—powered
+                by Hawkstack
+              </p>
 
-            {/* Feature cards */}
-            <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
-              <div
-                className="
+              {/* Feature cards */}
+              <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 xl:block xl:space-y-4">
+                <div
+                  className="
                 bg-[#0E2547]
                 px-4
                 py-3
@@ -319,16 +338,16 @@ const GetStarted = () => {
                 text-white
                 rounded-xl
         "
-              >
-                Reduce evaluation and procurement cycles with pre-aligned
-                solution blueprints.
-                <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
-                  Enterprise-Ready Implementations
+                >
+                  Reduce evaluation and procurement cycles with pre-aligned
+                  solution blueprints.
+                  <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
+                    Enterprise-Ready Implementations
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="
+                <div
+                  className="
                 bg-[#0E2547]
                 px-4
                 py-3
@@ -340,19 +359,19 @@ const GetStarted = () => {
                 text-white
                 rounded-xl
         "
-              >
-                Security, scalability, compliance, & performance built-in from
-                day one.
-                <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
-                  Single Point of Accountability
+                >
+                  Security, scalability, compliance, & performance built-in from
+                  day one.
+                  <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
+                    Single Point of Accountability
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Ideal for */}
-            <div className="mt-6 text-left">
-              <p
-                className="
+              {/* Ideal for */}
+              <div className="mt-6 text-left">
+                <p
+                  className="
                 font-lexend
                 text-[12px]
                 md:text-[14px]
@@ -360,13 +379,13 @@ const GetStarted = () => {
                 text-white
                 mb-4
         "
-              >
-                One partner for design, deployment, and post-implementation
-                success. Ideal for:
-              </p>
+                >
+                  One partner for design, deployment, and post-implementation
+                  success. Ideal for:
+                </p>
 
-              <ul
-                className="
+                <ul
+                  className="
                 space-y-2
                 text-[12px]
                 md:text-[14px]
@@ -377,34 +396,37 @@ const GetStarted = () => {
                 md:grid-cols-2
                 md:gap-x-10
                 md:gap-y-3
+
+                xl:grid-cols-1
+                xl:gap-x-0
         "
-              >
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  Platform modernization
-                </li>
+                >
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    Platform modernization
+                  </li>
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  Kubernetes & cloud platforms
-                </li>
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    Kubernetes & cloud platforms
+                  </li>
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  AI / GPU infrastructure
-                </li>
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    AI / GPU infrastructure
+                  </li>
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  Enterprise open-source stacks
-                </li>
-              </ul>
-            </div>
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    Enterprise open-source stacks
+                  </li>
+                </ul>
+              </div>
 
-            {/* CTA */}
-            <button
-              onClick={scrollToForm}
-              className="
+              {/* CTA */}
+              <button
+                onClick={scrollToForm}
+                className="
               flex
               h-[36px]
               md:h-[38px]
@@ -425,19 +447,21 @@ const GetStarted = () => {
               mt-8
               mx-auto
       "
-            >
-              Connect with OEM Experts
-            </button>
+              >
+                Connect with OEM Experts
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* ================= CARD 3 ================= */}
-        <div
-          className="
+          {/* ================= CARD 3 ================= */}
+          <div
+            className="
           overflow-visible
           rounded-2xl
           border
           border-[#569F4C]
+          md:border-[#569F4C]
+          xl:border-[#9B96FF]
           bg-gradient-to-b
           from-[#0A1A33]
           to-[#050B16]
@@ -449,22 +473,22 @@ const GetStarted = () => {
           
           md:px-10
           md:pb-10
-          md:max-w-[900px]
-          md:mx-auto
-  "
-        >
-          {/* Top pill */}
-          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
-            <span className="h-px w-full bg-[#3AFF7C]/40" />
-            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
-              HawkStack Solution Advisory
-            </div>
-            <span className="h-px w-full bg-[#3AFF7C]/40" />
-          </div>
 
-          <div className="text-center">
-            <h3
-              className="
+          xl:scale-100
+  "
+          >
+            {/* Top pill */}
+            <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
+              <span className="h-0 w-full bg-[#3AFF7C]/40" />
+              <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
+                HawkStack Solution Advisory
+              </div>
+              <span className="h-0 w-full bg-[#3AFF7C]/40" />
+            </div>
+
+            <div className="text-center">
+              <h3
+                className="
               font-lexend
               text-[12px]
               md:text-[18px]
@@ -474,12 +498,12 @@ const GetStarted = () => {
               flex
               justify-center
       "
-            >
-              Strategic Technology Advisory
-            </h3>
+              >
+                Strategic Technology Advisory
+              </h3>
 
-            <p
-              className="
+              <p
+                className="
               mt-3
               text-[13px]
               md:text-[15px]
@@ -489,15 +513,15 @@ const GetStarted = () => {
               text-white
               font-lexend
       "
-            >
-              Align your cloud, platforms, and teams with measurable business
-              outcomes.
-            </p>
+              >
+                Align your cloud, platforms, and teams with measurable business
+                outcomes.
+              </p>
 
-            {/* Feature cards */}
-            <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
-              <div
-                className="
+              {/* Feature cards */}
+              <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 xl:block xl:space-y-4">
+                <div
+                  className="
                 bg-[#0E2547]
                 px-4
                 py-3
@@ -509,15 +533,15 @@ const GetStarted = () => {
                 text-white
                 rounded-xl
         "
-              >
-                Clear, phased plans aligned to growth, scale, and budget.
-                <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
-                  Use-Case Driven Solutions
+                >
+                  Clear, phased plans aligned to growth, scale, and budget.
+                  <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
+                    Use-Case Driven Solutions
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="
+                <div
+                  className="
                 bg-[#0E2547]
                 px-4
                 py-3
@@ -529,18 +553,18 @@ const GetStarted = () => {
                 text-white
                 rounded-xl
         "
-              >
-                Every recommendation tied to measurable outcomes.
-                <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
-                  Cost & Value Optimization
+                >
+                  Every recommendation tied to measurable outcomes.
+                  <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
+                    Cost & Value Optimization
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Ideal for */}
-            <div className="mt-6 text-left">
-              <p
-                className="
+              {/* Ideal for */}
+              <div className="mt-6 text-left">
+                <p
+                  className="
                 font-lexend
                 text-[12px]
                 md:text-[14px]
@@ -548,13 +572,13 @@ const GetStarted = () => {
                 text-white
                 mb-4
         "
-              >
-                From advisory to execution — we stay with you post go-live.
-                Ideal for:
-              </p>
+                >
+                  From advisory to execution — we stay with you post go-live.
+                  Ideal for:
+                </p>
 
-              <ul
-                className="
+                <ul
+                  className="
                 space-y-2
                 text-[12px]
                 md:text-[14px]
@@ -565,34 +589,37 @@ const GetStarted = () => {
                 md:grid-cols-2
                 md:gap-x-10
                 md:gap-y-3
+
+                xl:grid-cols-1
+                xl:gap-x-0
         "
-              >
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  CTOs & Engineering leaders
-                </li>
+                >
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    CTOs & Engineering leaders
+                  </li>
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  Enterprises scaling platforms
-                </li>
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    Enterprises scaling platforms
+                  </li>
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  Startups moving to production
-                </li>
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    Startups moving to production
+                  </li>
 
-                <li className="flex items-center gap-2">
-                  <GradientTick />
-                  AI / Cloud / Kubernetes strategy
-                </li>
-              </ul>
-            </div>
+                  <li className="flex items-center gap-2 xl:text-[12px]">
+                    <GradientTick />
+                    AI / Cloud / Kubernetes strategy
+                  </li>
+                </ul>
+              </div>
 
-            {/* CTA */}
-            <button
-              onClick={scrollToForm}
-              className="
+              {/* CTA */}
+              <button
+                onClick={scrollToForm}
+                className="
               flex
               h-[36px]
               md:h-[38px]
@@ -613,28 +640,29 @@ const GetStarted = () => {
               mt-8
               mx-auto
       "
-            >
-              Start a Strategy Discussion
-            </button>
+              >
+                Start a Strategy Discussion
+              </button>
+            </div>
           </div>
         </div>
       </div>
       {/* ================= Second Section. ================= */}
       <div
         className="
-        -mx-4 
         mt-10 w-screen 
         overflow-hidden 
-        bg-gradient-to-b from-[#050B16] to-[#09173A] 
-        px-6 
+        bg-gradient-to-b from-[#193551] to-[#040B10] 
+        px-6
+        md:px-4
+        lg:px-8
+        xl:px-24 
         py-16
-        md:px-4 
         md:mx-0 
         md:relative
         md:left-1/2
-        md:-translate-x-1/2
+        md:-translate-x-1/2 
         scroll-mt-[80px]
-        rounded-2xl
       bg-white
         p-8
         shadow-[0_20px_60px_rgba(0,0,0,0.35)]
@@ -657,26 +685,89 @@ const GetStarted = () => {
         >
           {/* LEFT CONTENT */}
           <div>
-            <h4 className="font-lexend text-[32px] font-semibold leading-[100%] text-white">
+            <h4
+              className="
+              text-[28px]
+              md:text-[32px]
+              lg:text-[38px]
+              xl:text-[42px]
+              font-semibold
+              leading-[110%]
+              font-lexend
+              text-white"
+            >
               Let’s Talk
             </h4>
 
-            <h2 className="mt-4 font-lexend text-[20px] font-medium leading-[130%] text-white">
+            <h2
+              className="
+              font-lexend
+              text-[16px]
+              md:text-[20px]
+              lg:text-[22px]
+              xl:text-[26px]
+              font-medium
+              leading-[140%]
+              text-white
+              max-w-[520px]
+              mt-4
+            "
+            >
               Contact us to see how HawkStack accelerates your journey.
             </h2>
 
-            <div className="relative mt-6 pl-5">
+            <div
+              className="
+              mt-6
+              pl-5
+              lg:pl-6
+              max-w-[560px]
+              relative
+            "
+            >
               {/* Left accent line */}
-              <span className="absolute left-0 top-1 h-full w-[3px] bg-[#9B96FF]" />
+              <span
+                className="
+                left-0
+                top-1
+                h-full
+                w-[3px]
+                lg:w-[4px]
+                bg-[#9B96FF]
+                rounded-full
+                absolute
+              "
+              />
 
-              <p className="font-lexend text-[14px] font-normal leading-[160%] text-[#E5E7EB]">
+              <p
+                className="
+                text-[13px]
+                md:text-[14px]
+                lg:text-[20px]
+                font-normal
+                leading-[160%]
+                text-[#E5E7EB]
+                font-lexend
+              "
+              >
                 HawkStack delivers production-ready Red Hat OpenShift platforms
                 with built-in security, automation, and lifecycle
                 management—empowering teams to deploy, scale, and manage
                 workloads with consistency across environments.
               </p>
 
-              <p className="mt-4 font-lexend text-[14px] font-normal leading-[160%] text-[#E5E7EB]">
+              <p
+                className="
+                font-lexend
+                text-[13px]
+                md:text-[14px]
+                lg:text-[20px]
+                font-normal
+                leading-[160%]
+                text-[#E5E7EB]
+                mt-4
+              "
+              >
                 Partner with HawkStack to modernize your cloud platforms.
               </p>
             </div>
@@ -685,7 +776,7 @@ const GetStarted = () => {
           {/* RIGHT FORM */}
           <div
             ref={formRef}
-            className="rounded-2xl bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+            className="rounded-2xl bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] xl:min-h-[540px]"
           >
             <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
               {/* First Name */}
@@ -789,6 +880,7 @@ const GetStarted = () => {
               <textarea
                 className="
                 min-h-[160px]
+                xl:min-h-[280px]
                 resize-none
                 rounded-xl
                 border
