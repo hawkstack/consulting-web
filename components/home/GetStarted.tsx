@@ -6,14 +6,24 @@ const GetStarted = () => {
   const formRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToForm = () => {
-    formRef.current?.scrollIntoView({
+    if (!formRef.current) return;
+
+    const navbarHeight = document.querySelector("nav")?.offsetHeight || 80;
+
+    const y =
+      formRef.current.getBoundingClientRect().top +
+      window.pageYOffset -
+      navbarHeight -
+      16;
+
+    window.scrollTo({
+      top: y,
       behavior: "smooth",
-      block: "start",
     });
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#050B16] to-[#09173A] px-4 py-10 text-white">
+    <section className="bg-gradient-to-b from-[#050B16] to-[#09173A] px-4 py-10 md:px-12 md:py-16 text-white">
       {/* Heading */}
       <h1
         className="
@@ -22,6 +32,7 @@ const GetStarted = () => {
         text-center
         font-lexend
         text-[22px]
+        md:text-[30px]
         font-medium
         leading-[100%]
         tracking-[0]
@@ -49,19 +60,24 @@ const GetStarted = () => {
           pt-10
           relative
           shadow-[-9.36px_9.36px_30px_rgba(152,249,255,0.32)]
+
+          md:px-10
+          md:pb-10
+          md:max-w-[900px]
+          md:mx-auto
         "
         >
           {/* Top pill */}
-          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4">
+          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
             <span className="h-px w-full bg-[#3AFF7C]/40" />
-            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 text-[12px] font-semibold text-black">
+            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
               HawkStack Technical Consulting
             </div>
             <span className="h-px w-full bg-[#3AFF7C]/40" />
           </div>
 
           <div className="text-center">
-            <h3 className="font-lexend text-[12px] font-medium leading-[100%] tracking-[0] text-white flex items-center justify-center">
+            <h3 className="font-lexend text-[12px] md:text-[18px] font-medium leading-[100%] text-white flex justify-center">
               Connect with Technical Consultants
             </h3>
 
@@ -69,12 +85,11 @@ const GetStarted = () => {
               className="
               mt-3
               text-[13px]
-              font-normal
-              leading-[100%]
-              tracking-[0]
+              md:text-[15px]
+              md:max-w-[700px]
+              md:mx-auto
+              leading-[140%]
               text-white
-              flex
-              items-center
               font-lexend
               "
             >
@@ -82,7 +97,7 @@ const GetStarted = () => {
               deploy, & operate alongside your teams.
             </p>
 
-            <div className="mt-6 space-y-4">
+            <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
               <div
                 className="
                 bg-[#0E2547]
@@ -153,18 +168,28 @@ const GetStarted = () => {
                 className="
                 font-lexend
                 text-[12px]
-                font-normal
-                leading-[100%]
-                tracking-[0]
+                md:text-[14px]
+                leading-[140%]
                 text-white
-                flex
-                mb-3
+                mb-4
                 "
               >
                 Performance tuning, reliability improvements, and cost
                 optimization.Ideal for:
               </p>
-              <ul className="space-y-2 text-[12px] font-lexend text-white">
+              <ul
+                className="
+                text-[12px]
+                md:text-[14px]
+                font-lexend
+                text-white
+                
+                md:grid
+                md:grid-cols-2
+                md:gap-x-10
+                space-y-2
+                md:gap-y-3"
+              >
                 <li className="flex items-center gap-2">
                   <GradientTick />
                   Cloud & Kubernetes adoption
@@ -190,24 +215,25 @@ const GetStarted = () => {
             <button
               onClick={scrollToForm}
               className="
-              mx-auto
               flex
-              h-[37.3px]
+              h-[36px]
+              md:h-[38px]
               w-[246.37px]
+              md:w-[280px]
               items-center
               justify-center
-              rounded-[19.63px]
+              rounded-full
               bg-gradient-to-r
               from-[#09173A]
               to-[#03070D]
               font-lexend
               text-[12px]
+              md:text-[14px]
               font-medium
-              leading-[100%]
-              tracking-[0]
               text-white
               shadow-[5px_5px_10px_0px_#132943]
-              mt-6
+              mt-8
+              mx-auto
             "
             >
               Talk to a Technical Consultant
@@ -217,7 +243,8 @@ const GetStarted = () => {
 
         {/* ================= CARD 2 ================= */}
         <div
-          className="overflow-visible
+          className="
+          overflow-visible
           rounded-2xl
           border
           border-[#569F4C]
@@ -228,120 +255,130 @@ const GetStarted = () => {
           pb-6
           pt-10
           relative
-          shadow-[-9.36px_9.36px_30px_rgba(152,249,255,0.32)]"
+          shadow-[-9.36px_9.36px_30px_rgba(152,249,255,0.32)]
+          
+          md:px-10
+          md:pb-10
+          md:max-w-[900px]
+          md:mx-auto
+  "
         >
           {/* Top pill */}
-          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4">
+          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
             <span className="h-px w-full bg-[#3AFF7C]/40" />
-            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 text-[12px] font-semibold text-black">
+            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
               HawkStack OEM Connect
             </div>
             <span className="h-px w-full bg-[#3AFF7C]/40" />
           </div>
 
           <div className="text-center">
-            <h3 className="font-lexend text-[12px] font-medium leading-[100%] tracking-[0] text-white flex items-center justify-center">
+            <h3
+              className="
+              font-lexend
+              text-[12px]
+              md:text-[18px]
+              font-medium
+              leading-[100%]
+              text-white
+              flex
+              justify-center
+      "
+            >
               Connect with OEM Partners
             </h3>
 
             <p
-              className="mt-3
+              className="
+              mt-3
               text-[13px]
-              font-normal
-              leading-[100%]
-              tracking-[0]
+              md:text-[15px]
+              md:max-w-[700px]
+              md:mx-auto
+              leading-[140%]
               text-white
-              flex
-              items-center
-              font-lexend"
+              font-lexend
+      "
             >
               Direct, friction-free access to leading technology OEMs—powered by
               Hawkstack
             </p>
 
-            <div className="mt-6 space-y-4">
+            {/* Feature cards */}
+            <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
               <div
                 className="
-              bg-[#0E2547]
+                bg-[#0E2547]
                 px-4
                 py-3
                 text-center
                 font-lexend
                 text-[12px]
-                font-normal
-                leading-[100%]
-                tracking-[0]
-                text-[#FFFFFF]
+                md:text-[13px]
+                leading-[140%]
+                text-white
                 rounded-xl
-              "
+        "
               >
                 Reduce evaluation and procurement cycles with pre-aligned
                 solution blueprints.
-                <div
-                  className="
-                  font-lexend
-                  text-[12px]
-                  font-semibold
-                  leading-[19.63px]
-                  tracking-[0]
-                  text-[#8EC5FF]
-                  mt-1
-                "
-                >
+                <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
                   Enterprise-Ready Implementations
                 </div>
               </div>
 
               <div
                 className="
-                rounded-xl
+                bg-[#0E2547]
                 px-4
                 py-3
                 text-center
                 font-lexend
                 text-[12px]
-                font-normal
-                leading-[100%]
-                tracking-[0]
-                bg-[#0E2547]
-                text-[#FFFFFF]
-              "
+                md:text-[13px]
+                leading-[140%]
+                text-white
+                rounded-xl
+        "
               >
                 Security, scalability, compliance, & performance built-in from
                 day one.
-                <div
-                  className="
-                  font-lexend
-                  text-[12px]
-                  font-semibold
-                  leading-[19.63px]
-                  tracking-[0]
-                  text-[#8EC5FF]
-                  mt-1
-                "
-                >
+                <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
                   Single Point of Accountability
                 </div>
               </div>
             </div>
 
+            {/* Ideal for */}
             <div className="mt-6 text-left">
               <p
                 className="
                 font-lexend
                 text-[12px]
-                font-normal
-                leading-[100%]
-                tracking-[0]
+                md:text-[14px]
+                leading-[140%]
                 text-white
-                flex
-                mb-3
-              "
+                mb-4
+        "
               >
                 One partner for design, deployment, and post-implementation
-                success.Ideal for:
+                success. Ideal for:
               </p>
-              <ul className="space-y-2 text-[12px] font-lexend text-white">
+
+              <ul
+                className="
+                space-y-2
+                text-[12px]
+                md:text-[14px]
+                font-lexend
+                text-white
+                
+                md:grid
+                md:grid-cols-2
+                md:gap-x-10
+                md:gap-y-3
+        "
+              >
                 <li className="flex items-center gap-2">
                   <GradientTick />
                   Platform modernization
@@ -364,28 +401,30 @@ const GetStarted = () => {
               </ul>
             </div>
 
+            {/* CTA */}
             <button
               onClick={scrollToForm}
               className="
-              mx-auto
               flex
-              h-[37.3px]
+              h-[36px]
+              md:h-[38px]
               w-[246.37px]
+              md:w-[280px]
               items-center
               justify-center
-              rounded-[19.63px]
+              rounded-full
               bg-gradient-to-r
               from-[#09173A]
               to-[#03070D]
               font-lexend
               text-[12px]
+              md:text-[14px]
               font-medium
-              leading-[100%]
-              tracking-[0]
               text-white
               shadow-[5px_5px_10px_0px_#132943]
-              mt-6
-            "
+              mt-8
+              mx-auto
+      "
             >
               Connect with OEM Experts
             </button>
@@ -394,7 +433,9 @@ const GetStarted = () => {
 
         {/* ================= CARD 3 ================= */}
         <div
-          className="overflow-visible rounded-2xl
+          className="
+          overflow-visible
+          rounded-2xl
           border
           border-[#569F4C]
           bg-gradient-to-b
@@ -404,118 +445,128 @@ const GetStarted = () => {
           pb-6
           pt-10
           relative
-          shadow-[-9.36px_9.36px_30px_rgba(152,249,255,0.32)]"
+          shadow-[-9.36px_9.36px_30px_rgba(152,249,255,0.32)]
+          
+          md:px-10
+          md:pb-10
+          md:max-w-[900px]
+          md:mx-auto
+  "
         >
           {/* Top pill */}
-          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4">
+          <div className="absolute -top-4 left-1/2 flex w-full -translate-x-1/2 items-center gap-2 px-4 md:px-10">
             <span className="h-px w-full bg-[#3AFF7C]/40" />
-            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 text-[12px] font-semibold text-black">
+            <div className="whitespace-nowrap rounded-full bg-gradient-to-r from-[#4ADE80] to-[#22D3EE] px-4 py-1.5 md:px-6 md:py-2 text-[12px] md:text-[14px] font-semibold text-black">
               HawkStack Solution Advisory
             </div>
             <span className="h-px w-full bg-[#3AFF7C]/40" />
           </div>
 
           <div className="text-center">
-            <h3 className="font-lexend text-[12px] font-medium leading-[100%] tracking-[0] text-white flex items-center justify-center">
+            <h3
+              className="
+              font-lexend
+              text-[12px]
+              md:text-[18px]
+              font-medium
+              leading-[100%]
+              text-white
+              flex
+              justify-center
+      "
+            >
               Strategic Technology Advisory
             </h3>
 
             <p
-              className="mt-3
+              className="
+              mt-3
               text-[13px]
-              font-normal
-              leading-[100%]
-              tracking-[0]
+              md:text-[15px]
+              md:max-w-[700px]
+              md:mx-auto
+              leading-[140%]
               text-white
-              flex
-              items-center
-              font-lexend"
+              font-lexend
+      "
             >
               Align your cloud, platforms, and teams with measurable business
               outcomes.
             </p>
 
-            <div className="mt-6 space-y-4">
+            {/* Feature cards */}
+            <div className="mt-6 space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
               <div
                 className="
-              bg-[#0E2547]
+                bg-[#0E2547]
                 px-4
                 py-3
                 text-center
                 font-lexend
                 text-[12px]
-                font-normal
-                leading-[100%]
-                tracking-[0]
-                text-[#FFFFFF]
+                md:text-[13px]
+                leading-[140%]
+                text-white
                 rounded-xl
-              "
+        "
               >
                 Clear, phased plans aligned to growth, scale, and budget.
-                <div
-                  className="
-                  font-lexend
-                  text-[12px]
-                  font-semibold
-                  leading-[19.63px]
-                  tracking-[0]
-                  text-[#8EC5FF]
-                  mt-1
-                "
-                >
+                <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
                   Use-Case Driven Solutions
                 </div>
               </div>
 
               <div
                 className="
-                rounded-xl
+                bg-[#0E2547]
                 px-4
                 py-3
                 text-center
                 font-lexend
                 text-[12px]
-                font-normal
-                leading-[100%]
-                tracking-[0]
-                bg-[#0E2547]
-                text-[#FFFFFF]
-              "
+                md:text-[13px]
+                leading-[140%]
+                text-white
+                rounded-xl
+        "
               >
                 Every recommendation tied to measurable outcomes.
-                <div
-                  className="
-                  font-lexend
-                  text-[12px]
-                  font-semibold
-                  leading-[19.63px]
-                  tracking-[0]
-                  text-[#8EC5FF]
-                  mt-1
-                "
-                >
+                <div className="mt-1 text-[12px] font-semibold text-[#8EC5FF]">
                   Cost & Value Optimization
                 </div>
               </div>
             </div>
 
+            {/* Ideal for */}
             <div className="mt-6 text-left">
               <p
                 className="
                 font-lexend
                 text-[12px]
-                font-normal
-                leading-[100%]
-                tracking-[0]
+                md:text-[14px]
+                leading-[140%]
                 text-white
-                flex
-                mb-3
-              "
+                mb-4
+        "
               >
-                From advisory to execution — we stay with you post go-live.Ideal
-                for:
+                From advisory to execution — we stay with you post go-live.
+                Ideal for:
               </p>
-              <ul className="space-y-2 text-[12px] font-lexend text-white">
+
+              <ul
+                className="
+                space-y-2
+                text-[12px]
+                md:text-[14px]
+                font-lexend
+                text-white
+                
+                md:grid
+                md:grid-cols-2
+                md:gap-x-10
+                md:gap-y-3
+        "
+              >
                 <li className="flex items-center gap-2">
                   <GradientTick />
                   CTOs & Engineering leaders
@@ -538,28 +589,30 @@ const GetStarted = () => {
               </ul>
             </div>
 
+            {/* CTA */}
             <button
               onClick={scrollToForm}
               className="
-              mx-auto
               flex
-              h-[37.3px]
+              h-[36px]
+              md:h-[38px]
               w-[246.37px]
+              md:w-[280px]
               items-center
               justify-center
-              rounded-[19.63px]
+              rounded-full
               bg-gradient-to-r
               from-[#09173A]
               to-[#03070D]
               font-lexend
               text-[12px]
+              md:text-[14px]
               font-medium
-              leading-[100%]
-              tracking-[0]
               text-white
               shadow-[5px_5px_10px_0px_#132943]
-              mt-6
-            "
+              mt-8
+              mx-auto
+      "
             >
               Start a Strategy Discussion
             </button>
@@ -567,12 +620,41 @@ const GetStarted = () => {
         </div>
       </div>
       {/* ================= Second Section. ================= */}
-      <div className="-mx-4 mt-10 w-screen overflow-hidden bg-gradient-to-br from-[#03070D] via-[#09173A] to-[#09173A] px-6 py-16 md:px-12">
+      <div
+        className="
+        -mx-4 
+        mt-10 w-screen 
+        overflow-hidden 
+        bg-gradient-to-b from-[#050B16] to-[#09173A] 
+        px-6 
+        py-16
+        md:px-4 
+        md:mx-0 
+        md:relative
+        md:left-1/2
+        md:-translate-x-1/2
+        scroll-mt-[80px]
+        rounded-2xl
+      bg-white
+        p-8
+        shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+        "
+      >
         {/* Decorative circles */}
         <div className="pointer-events-none absolute right-[-120px] top-[-120px] h-[280px] w-[280px] rounded-full bg-white/10 blur-3xl" />
         <div className="pointer-events-none absolute bottom-[-120px] left-[-120px] h-[240px] w-[240px] rounded-full bg-white/10 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-[1100px] grid-cols-1 gap-12 md:grid-cols-2">
+        <div
+          className="
+          relative
+          grid
+          grid-cols-1
+          gap-12
+          
+          md:grid-cols-2
+          md:max-w-none
+          md:mx-10"
+        >
           {/* LEFT CONTENT */}
           <div>
             <h4 className="font-lexend text-[32px] font-semibold leading-[100%] text-white">
@@ -728,7 +810,7 @@ const GetStarted = () => {
                 className="
                 mt-4
                 h-[42px]
-                rounded-full
+                rounded-2xl
                 bg-gradient-to-r
                 from-[#03070D]
                 to-[#09173A]
