@@ -1,6 +1,17 @@
+"use client";
+import { useRef } from "react";
 import GradientTick from "../icons/GradientTick";
 
 const GetStarted = () => {
+  const formRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section className="bg-gradient-to-b from-[#050B16] to-[#09173A] px-4 py-10 text-white">
       {/* Heading */}
@@ -177,6 +188,7 @@ const GetStarted = () => {
             </div>
 
             <button
+              onClick={scrollToForm}
               className="
               mx-auto
               flex
@@ -353,6 +365,7 @@ const GetStarted = () => {
             </div>
 
             <button
+              onClick={scrollToForm}
               className="
               mx-auto
               flex
@@ -526,6 +539,7 @@ const GetStarted = () => {
             </div>
 
             <button
+              onClick={scrollToForm}
               className="
               mx-auto
               flex
@@ -587,7 +601,10 @@ const GetStarted = () => {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="rounded-2xl bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+          <div
+            ref={formRef}
+            className="rounded-2xl bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+          >
             <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
               {/* First Name */}
               <input
@@ -710,15 +727,15 @@ const GetStarted = () => {
                 type="submit"
                 className="
                 mt-4
-                h-[46px]
+                h-[42px]
                 rounded-full
                 bg-gradient-to-r
                 from-[#03070D]
                 to-[#09173A]
-                text-[14px]
+                text-[10px]
                 font-semibold
                 tracking-wide
-                text-white
+                text-[#FFFFFF]
                 shadow-[0_8px_20px_rgba(0,0,0,0.35)]
                 col-span-full
             "
