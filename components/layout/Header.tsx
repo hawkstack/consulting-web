@@ -30,7 +30,7 @@ export function Header(): JSX.Element {
 
   return (
     <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F]">
-      <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[105px] px-4 md:px-8 lg:px-24 flex items-center">
+      <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[105px] px-4 md:px-8 lg:px-10  xl:px-24 flex items-center">
         {/* LOGO */}
         <div
           className="
@@ -44,8 +44,7 @@ export function Header(): JSX.Element {
           xl:rounded-[9px]
           border border-white bg-white
           flex items-center justify-center
-        "
-        >
+        ">
           <Image
             src="/images/hawkstack-logo.webp"
             alt="HawkStack Logo"
@@ -65,27 +64,33 @@ export function Header(): JSX.Element {
           </li>
 
           {(["solutions", "services", "company", "training"] as MenuKey[]).map(
-            (key) => (
-              <li
-                key={key}
-                onMouseEnter={() => {
-                  setOpenMenu(key);
-                  setActiveItem(menuMap[key]?.[0] || null);
-                }}
-                className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
-              >
-                {key}
-              </li>
-            )
+            (key) => {
+              const isTraining = key === "training";
+
+              return (
+                <li
+                  key={key}
+                  onMouseEnter={() => {
+                    setOpenMenu(key);
+                    setActiveItem(menuMap[key]?.[0] || null);
+                  }}
+                  className={
+                    isTraining
+                      ? " inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] px-5 py-2  bg-[#5272FF] text-white capitalize cursor-pointer"
+                      : "cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
+                  }>
+                  {key}
+                </li>
+              );
+            },
           )}
         </ul>
 
         {/* DESKTOP CTA */}
-        <div className="ml-16 hidden lg:block">
+        <div className="ml-4 hidden lg:block">
           <Link
             href="/get-started"
-            className="inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] border border-white text-white"
-          >
+            className="inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] border border-white text-white">
             Get Started
           </Link>
         </div>
@@ -94,8 +99,7 @@ export function Header(): JSX.Element {
         <button
           className="ml-auto lg:hidden text-white text-2xl"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle Menu"
-        >
+          aria-label="Toggle Menu">
           {mobileOpen ? "✕" : "☰"}
         </button>
 
@@ -104,8 +108,7 @@ export function Header(): JSX.Element {
           <div
             className="absolute left-1/2 top-full -translate-x-1/2 hidden lg:block"
             onMouseEnter={() => setOpenMenu(openMenu)}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
+            onMouseLeave={() => setOpenMenu(null)}>
             <MegaMenu
               items={items}
               activeItem={activeItem}
@@ -126,20 +129,18 @@ export function Header(): JSX.Element {
                   <Link
                     href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                     onClick={() => setMobileOpen(false)}
-                    className="text-white text-[16px]"
-                  >
+                    className="text-white text-[16px]">
                     {item}
                   </Link>
                 </li>
-              )
+              ),
             )}
           </ul>
 
           <Link
             href="/get-started"
             onClick={() => setMobileOpen(false)}
-            className="mt-6 inline-flex items-center justify-center w-full h-[44px] rounded-[14px] border border-white text-white text-[14px]"
-          >
+            className="mt-6 inline-flex items-center justify-center w-full h-[44px] rounded-[14px] border border-white text-white text-[14px]">
             Get Started
           </Link>
         </div>
