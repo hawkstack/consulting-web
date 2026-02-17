@@ -19,7 +19,7 @@ export function MegaMenu({
 }: Props): JSX.Element {
   return (
     <div
-      className="absolute left-1/2 top-full -translate-x-1/2 w-[1100px] xl:w-[1221px] xl:h-[464px]"
+      className="absolute left-1/2 top-full -translate-x-1/2 w-[1100px] lg:w-[1000px] xl:w-[1221px] xl:h-[464px]"
       onMouseLeave={onClose}
     >
      
