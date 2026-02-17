@@ -87,9 +87,10 @@ export function Header(): JSX.Element {
                     setOpenMenu(key);
                     setActiveItem(menuMap[key]?.[0] || null);
                   }}
+                  onClick={(e) => handleTrainingClick(e, key)} 
                   className={
                     isTraining
-                      ? " inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] px-5 py-2  bg-[#5272FF] text-white capitalize cursor-pointer"
+                      ? "inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] px-5 py-2 bg-[#5272FF] text-white capitalize cursor-pointer"
                       : "cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
                   }>
                   {key}
