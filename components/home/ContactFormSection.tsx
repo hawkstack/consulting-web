@@ -145,7 +145,7 @@ const ContactForm: React.FC = ()=>{
             onSubmit={handleSubmit}
             className="mt-12 md:mt-16 w-full max-w-[713px] rounded-[24px]
               border border-white/10
-              bg-[linear-gradient(180deg,#111B2D_0%,#0E1726_45%,#0A1220_100%)]
+              bg-[#101927]
               px-6 md:px-10 py-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -160,7 +160,7 @@ const ContactForm: React.FC = ()=>{
                   value={firstName}
                   onChange={handleChange}
                   placeholder="Enter your first name"
-                  className="w-full h-12 rounded-lg bg-[#0B1220]
+                  className="w-full h-12 rounded-xl bg-[#020916]
                     px-4 text-sm outline-none"
                 />
               </div>
@@ -176,7 +176,7 @@ const ContactForm: React.FC = ()=>{
                   value={lastName}
                   onChange={handleChange}
                   placeholder="Enter your last name"
-                  className="w-full h-12 rounded-lg bg-[#0B1220]
+                  className="w-full h-12 rounded-xl bg-[#020916]
                     px-4 text-sm outline-none"
                 />
               </div>
@@ -185,7 +185,7 @@ const ContactForm: React.FC = ()=>{
               
               <div>
                 <label className="block mb-2 pl-4 text-[12px] font-medium">
-                  Work Email <span className="text-red-500">*</span>
+                  Work Email Address <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="email"
@@ -193,7 +193,7 @@ const ContactForm: React.FC = ()=>{
                   value={email}
                   onChange={handleChange}
                   placeholder="Enter your work email"
-                  className="w-full h-12 rounded-lg bg-[#0B1220]
+                  className="w-full h-12 rounded-xl bg-[#020916]
                     px-4 text-sm outline-none"
                 />
 
@@ -217,7 +217,7 @@ const ContactForm: React.FC = ()=>{
                   value={phone}
                   onChange={handleChange}
                   placeholder="Enter your contact number"
-                  className="w-full h-12 rounded-lg bg-[#0B1220]
+                  className="w-full h-12 rounded-xl bg-[#020916]
                     px-4 text-sm outline-none"
                 />
                 {phoneError && (
@@ -240,8 +240,8 @@ const ContactForm: React.FC = ()=>{
             <button
               type="submit"
               disabled={!isFormValid || loading}
-              className="mt-8 w-full h-12 rounded-full bg-[#0E245A]
-                hover:bg-[#1b3a8f] transition disabled:opacity-50"
+              className=" font-semibold text-center mt-8 w-full h-12 rounded-full bg-[#0E245A]
+                hover:bg-[#1b3a8f] "
             >
               {loading ? "Submitting..." : "Submit"}
             </button>
