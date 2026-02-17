@@ -9,7 +9,7 @@ export default function OpenShiftPage() {
   return (
     <>
       <HeroSection />
-      <WhatWeDeliver source={"openshift"}  />
+      <WhatWeDeliver />
       <ChallengeSolution />
       <YourInfrastructure />
       <WhatYouWillReceive />

@@ -86,8 +86,8 @@ export default function HeroSection() {
             </filter>
 
             <linearGradient id="edgeHighlight" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
-              <stop offset="100%" stop-color="" stop-opacity="10" />
+              <stop off-set="0%" stop-color="#ffffff" stop-opacity="0.45" />
+              <stop off-set="100%" stop-color="" stop-opacity="10" />
             </linearGradient>
           </defs>
 
