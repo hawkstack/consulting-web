@@ -4,10 +4,28 @@ import { useEffect, useRef, useState } from "react";
 
 const slides = [
   {
-    title: "CNCF",
-    heading: "CNCF",
-    desc: "Built on open standards and cloud-native best practices, aligned with the global ecosystem shaping Kubernetes and modern platforms.",
-    image: "/images/oursolution/Cncf.webp",
+    title: "RHEL",
+    heading: "RHEL",
+    desc: "Build a stable, secure enterprise Linux foundation optimized for performance, compliance, and long-term production Workloads.",
+    image: "/images/oursolution/Rhel.webp",
+  },
+  {
+    title: "Ansible",
+    heading: "Ansible",
+    desc: "Automate everything with confidence—from infrastructure provisioning to application deployment, fast, repeatable, and agentless.",
+    image: "/images/oursolution/Ansible.webp",
+  },
+  {
+    title: "OpenShift",
+    heading: "OpenShift",
+    desc: "Run, scale, and secure containerized applications with enterprise Kubernetes built for DevSecOps, automation, and hybrid cloud environments.",
+    image: "/images/oursolution/Openshift.webp",
+  },
+  {
+    title: "OpenStack",
+    heading: "OpenStack",
+    desc: "Create and manage private clouds at scale with full control over compute, storage, and networking for modern Infrastructure.",
+    image: "/images/oursolution/Openstack.webp",
   },
   {
     title: "Mirantis",
@@ -16,28 +34,10 @@ const slides = [
     image: "/images/oursolution/Mirantis.webp",
   },
   {
-    title: "Openshift",
-    heading: "Openshift",
-    desc: "Run, scale, and secure containerized applications with enterprise Kubernetes built for DevSecOps, automation, and hybrid cloud environments.",
-    image: "/images/oursolution/Openshift.webp",
-  },
-  {
-    title: "Openstack",
-    heading: "Openstack",
-    desc: "Create and manage private clouds at scale with full control overcompute, storage, and networking for modern infrastructure.",
-    image: "/images/oursolution/Openstack.webp",
-  },
-  {
-    title: "RHEL",
-    heading: "RHEL",
-    desc: "Build a stable, secure enterprise Linux foundation optimized for performance, compliance, and long-term production workloads.",
-    image: "/images/oursolution/Rhel.webp",
-  },
-  {
-    title: "Anisble",
-    heading: "Anisble",
-    desc: "Automate everything with confidence—from infrastructure provisioning to application deployment, fast, repeatable, and agentless.",
-    image: "/images/oursolution/Ansible.webp",
+    title: "CNCF",
+    heading: "CNCF",
+    desc: "Built on open standards and cloud-native best practices, aligned with the global ecosystem shaping Kubernetes and modern platforms.",
+    image: "/images/oursolution/Cncf.webp",
   },
 ];
 
