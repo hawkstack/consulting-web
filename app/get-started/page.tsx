@@ -1,4 +1,4 @@
-import GetStarted from "@/components/home/GetStarted";
+import GetStarted from "@/components/home/get-started/GetStarted";
 import React from "react";
 
 const GetStartedPage = () => {
