@@ -7,7 +7,7 @@ export default function WhatWeDeliver() {
     <section className="bg-white px-4 pt-6 md:pt-6 font-lexend overflow-hidden">
       <div className="mx-auto max-w-7xl md:flex md:items-start md:gap-16">
         {/* LEFT COLUMN */}
-        <div className=" lg:w-[600px] md:w-[300px]">
+        <div className="md:w-[480px] lg:w-[600px]">
           {/* Title + Description */}
           <div className="mb-8 lg:mb-15">
             {/* Description hidden on mobile */}
@@ -40,7 +40,7 @@ export default function WhatWeDeliver() {
 
               {/* Center Dark Diamond */}
               <div
-                className="absolute inset-0 left-4 flex items-center justify-center z-30 md:absolute md:right-[-50px]
+                className="absolute inset-0 left-4 flex items-center justify-center z-30 
                 animate-[fadeUp_0.8s_ease-out_forwards_0.2s] lg:absolute lg:left-50 md:absolute md:left-6 md:top-[-10px]">
                 <div
                   className="w-[100px] h-[100px] lg:w-[140px]  lg:h-[140px] rotate-45 bg-gradient-to-br from-[#0b1e3a] to-[#132f5e] rounded-3xl flex items-center justify-center
@@ -70,7 +70,7 @@ export default function WhatWeDeliver() {
 
               {/* Right Diamond */}
               <div
-                className="absolute left-[236px] top-[151px]  -translate-y-1/2 z-20 md:absolute md:left-50 lg:absolute lg:left-64
+                className="absolute left-[236px] top-[151px]  -translate-y-1/2 z-20
                 animate-[fadeUp_0.8s_ease-out_forwards_0.45s]">
                 <div
                   className="w-[100px] h-[100px] lg:w-[140px]  lg:h-[140px]  rotate-45 bg-gradient-to-br from-[#cfdcff] to-[#9fb6ff] rounded-3xl flex items-center justify-center
@@ -112,9 +112,11 @@ export default function WhatWeDeliver() {
             </div>
           </div>
         </div>
-        <div className=" hidden md:block lg:absolute lg:top-146 lg:right-35 md:absolute md:right-0 md:top-140  " >
+        <div className=" hidden md:block lg:absolute lg:top-148 lg:right-10 xl:right-35 md:absolute md:right-0 md:top-140  ">
           <DiscussRedHat source={"openshift"} />
         </div>
+
+        {/* RIGHT COLUMN — empty / form later */}
         <div className="hidden md:block md:w-1/2"></div>
       </div>
     </section>

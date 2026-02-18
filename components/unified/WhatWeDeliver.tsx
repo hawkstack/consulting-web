@@ -113,7 +113,7 @@ export default function WhatWeDeliver() {
           </div>
         </div>
         <div className=" hidden md:block lg:absolute lg:top-160 lg:right-10 xl:right-35 md:absolute md:right-0 md:top-140  " >
-          <DiscussRedHat source="unified" />
+          <DiscussRedHat source={"unified"} />
         </div>
         <div className="hidden md:block md:w-1/2"></div>
       </div>

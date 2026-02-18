@@ -8,6 +8,7 @@ export default function OpenShiftPage() {
   return (
     <>
       <HeroSection />
+      <WhatWeDeliver  />
       <ChallengeSolution />
       <WhatYouWillReceive />
       <div className="block md:hidden">
