@@ -1,7 +1,94 @@
 "use client";
 
-import { forwardRef, useState, ChangeEvent, FormEvent } from "react";
+import {
+  forwardRef,
+  useState,
+  ChangeEvent,
+  FormEvent,
+  useRef,
+  useEffect,
+} from "react";
 import { validatePhone } from "../../utils/validations";
+import countriesLib from "i18n-iso-countries";
+import enLocale from "i18n-iso-countries/langs/en.json";
+import ReactCountryFlag from "react-country-flag";
+
+countriesLib.registerLocale(enLocale);
+
+const countries: { code: string; name: string }[] = Object.entries(
+  countriesLib.getNames("en", { select: "official" })
+).map(([code, name]) => ({ code, name }));
+
+function CountrySelect({
+  value,
+  onSelect,
+}: {
+  value: { code: string; name: string } | null;
+  onSelect: (v: { code: string; name: string } | null) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  const filteredCountries = countries.filter((c) =>
+    c.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div className="relative" ref={ref}>
+      <div
+        onClick={() => setOpen(true)}
+        className="h-[42px] rounded-xl border border-[#A3A3A3] px-4 flex items-center gap-2 text-[14px] text-[#7A7A7A] cursor-text"
+      >
+        {value ? (
+          <>
+            <ReactCountryFlag svg countryCode={value.code} />
+            <span>{value.name}</span>
+          </>
+        ) : (
+          <span className="text-[#7A7A7A]">Country*</span>
+        )}
+      </div>
+
+      {open && (
+        <div className="absolute z-50 mt-1 w-full max-h-40 overflow-y-auto rounded-xl border  bg-white shadow-lg">
+          <input
+            autoFocus
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search country..."
+            className="w-full px-3 py-2 text-[12px] text-black border-b outline-none"
+          />
+
+          {filteredCountries.map((country) => (
+            <div
+              key={country.code}
+              onMouseDown={() => {
+                onSelect(country);
+                setSearch("");
+                setOpen(false);
+              }}
+              className="px-3 py-2 text-[12px] cursor-pointer flex items-center gap-2"
+            >
+              <ReactCountryFlag svg countryCode={country.code} />
+              <span className="text-[#7A7A7A]">{country.name}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface ContactFormData {
   firstName: string;
@@ -9,7 +96,7 @@ interface ContactFormData {
   phone: string;
   jobTitle: string;
   company: string;
-  country: string;
+  country: { code: string; name: string } | null;
   message: string;
 }
 
@@ -22,7 +109,7 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
     phone: "",
     jobTitle: "",
     company: "",
-    country: "",
+    country: null,
     message: "",
   });
 
@@ -39,7 +126,7 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
     phone.trim() &&
     jobTitle.trim() &&
     company.trim() &&
-    country.trim() &&
+    country &&
     !phoneError;
 
   const handleChange = (
@@ -52,10 +139,7 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
       setPhoneError(validatePhone(value));
     }
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -75,10 +159,13 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
     const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/scheduleDemo`, {
+      const response = await fetch(`${API_BASE_URL}/api/openshift_unified`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          country: formData.country?.code,
+        }),
       });
 
       if (response.ok) {
@@ -90,7 +177,7 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
           phone: "",
           jobTitle: "",
           company: "",
-          country: "",
+          country: null,
           message: "",
         });
 
@@ -99,10 +186,10 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
         setSubmitStatus("error");
       }
 
-      setTimeout(() => setSubmitStatus("idle"), 2000);
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     } catch {
       setSubmitStatus("oops");
-      setTimeout(() => setSubmitStatus("idle"), 2000);
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     } finally {
       setLoading(false);
     }
@@ -133,7 +220,7 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
           placeholder="Last Name*"
         />
 
-        <div className="col-span-1">
+        <div>
           <input
             name="phone"
             value={phone}
@@ -162,12 +249,14 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
           placeholder="Company*"
         />
 
-        <input
-          name="country"
+        <CountrySelect
           value={country}
-          onChange={handleChange}
-          className="rounded-xl border border-[#A3A3A3] px-4 text-[14px] placeholder:text-[#7A7A7A] outline-none focus:border-[#09173A] h-[42px]"
-          placeholder="Country*"
+          onSelect={(v) =>
+            setFormData((prev) => ({
+              ...prev,
+              country: v,
+            }))
+          }
         />
 
         <textarea
