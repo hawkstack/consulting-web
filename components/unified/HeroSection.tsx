@@ -84,12 +84,11 @@ export default function HeroSection() {
             <filter id="frostBlur" x="-30%" y="-30%" width="160%" height="160%">
               <feGaussianBlur stdDeviation="10" />
             </filter>
-
-            <linearGradient id="edgeHighlight" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
-              <stop offset="100%" stop-color="" stop-opacity="10" />
-            </linearGradient>
-          </defs>
+              <linearGradient id="edgeHighlight" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.45" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.1" />
+              </linearGradient>
+            </defs>
 
           <rect
             x="30"

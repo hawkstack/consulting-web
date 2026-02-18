@@ -14,7 +14,7 @@ export default function OpenShiftPage() {
       <YourInfrastructure />
       <WhatYouWillReceive />
       <div className="block md:hidden">
-        <DiscussRedHat />
+        <DiscussRedHat source="openshift"/>
       </div>
       <YourInfrastructure />
     </>
