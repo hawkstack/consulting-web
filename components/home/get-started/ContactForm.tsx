@@ -270,9 +270,14 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
         <button
           type="submit"
           disabled={!isFormValid || loading}
-          className="mt-4 h-[42px] rounded-2xl bg-gradient-to-r from-[#03070D] to-[#09173A] text-[10px] font-semibold tracking-wide text-[#FFFFFF] shadow-[0_8px_20px_rgba(0,0,0,0.35)] col-span-full disabled:opacity-50"
+          className="relative mt-4 h-[42px] rounded-2xl bg-gradient-to-r from-[#03070D] to-[#09173A] text-[10px] font-semibold tracking-wide text-white shadow-[0_8px_20px_rgba(0,0,0,0.35)] col-span-full disabled:cursor-not-allowed"
         >
-          {loading ? "SUBMITTING..." : "SUBMIT"}
+          {(!isFormValid || loading) && (
+            <span className="absolute inset-0 rounded-2xl bg-white/10"></span>
+          )}
+          <span className="relative z-10">
+            {loading ? "SUBMITTING..." : "SUBMIT"}
+          </span>
         </button>
       </form>
 
