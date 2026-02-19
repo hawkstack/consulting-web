@@ -72,7 +72,7 @@ const GetStarted = () => {
           </div>
 
           {/* RIGHT FORM SECTION */}
-          <ContactForm ref={formRef} />
+          <ContactForm source="get_started" ref={formRef} />
         </div>
       </div>
     </section>

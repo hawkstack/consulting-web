@@ -14,6 +14,8 @@ import enLocale from "i18n-iso-countries/langs/en.json";
 import ReactCountryFlag from "react-country-flag";
 
 countriesLib.registerLocale(enLocale);
+type FormSource = "openshift" | "unified" | "get_started";
+
 
 const countries: { code: string; name: string }[] = Object.entries(
   countriesLib.getNames("en", { select: "official" })
@@ -94,7 +96,7 @@ interface ContactFormData {
   firstName: string;
   lastName: string;
   phone: string;
-  jobTitle: string;
+  jobtitle: string;
   company: string;
   country: { code: string; name: string } | null;
   message: string;
@@ -102,29 +104,36 @@ interface ContactFormData {
 
 type SubmitStatus = "idle" | "success" | "error" | "oops";
 
-const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
-  const [formData, setFormData] = useState<ContactFormData>({
-    firstName: "",
-    lastName: "",
-    phone: "",
-    jobTitle: "",
-    company: "",
-    country: null,
-    message: "",
-  });
+type ContactFormProps = {
+  source: FormSource;
+};
+
+const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
+  ({ source }, ref) => {
+const [formData, setFormData] = useState<ContactFormData & { source: FormSource }>({
+  source,
+  firstName: "",
+  lastName: "",
+  phone: "",
+  jobtitle: "",
+  company: "",
+  country: null,
+  message: "",
+});
+
 
   const [loading, setLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
   const [phoneError, setPhoneError] = useState("");
 
-  const { firstName, lastName, phone, jobTitle, company, country, message } =
+  const { firstName, lastName, phone, jobtitle: jobtitle, company, country, message } =
     formData;
 
   const isFormValid =
     firstName.trim() &&
     lastName.trim() &&
     phone.trim() &&
-    jobTitle.trim() &&
+    jobtitle.trim() &&
     company.trim() &&
     country &&
     !phoneError;
@@ -164,6 +173,7 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
+          source,
           country: formData.country?.code,
         }),
       });
@@ -172,10 +182,11 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
         setSubmitStatus("success");
 
         setFormData({
+          source,
           firstName: "",
           lastName: "",
           phone: "",
-          jobTitle: "",
+          jobtitle: "",
           company: "",
           country: null,
           message: "",
@@ -234,8 +245,8 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
         </div>
 
         <input
-          name="jobTitle"
-          value={jobTitle}
+          name="jobtitle"
+          value={jobtitle}
           onChange={handleChange}
           className="rounded-xl border border-[#A3A3A3] px-4 text-[14px] text-[#0F172A] placeholder:text-[#7A7A7A] outline-none focus:border-[#09173A] h-[42px]"
           placeholder="Job Title*"

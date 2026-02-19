@@ -110,7 +110,7 @@ export default function HeroSection() {
             transform="rotate(-45 30 40)"
             fill="none"
             stroke="url(#edgeHighlight)"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
 
           <g transform="translate(200 0) scale(-1 1)">
@@ -135,7 +135,7 @@ export default function HeroSection() {
               transform="rotate(-45 30 240)"
               fill="none"
               stroke="url(#edgeHighlight)"
-              stroke-width="1"
+              strokeWidth="1"
               opacity="0.5"
             />
           </g>
@@ -161,7 +161,7 @@ export default function HeroSection() {
               transform="rotate(-45 30 240)"
               fill="none"
               stroke="url(#edgeHighlight)"
-              stroke-width="1"
+              strokeWidth="1"
               opacity="0.5"
             />
           </g>
@@ -187,7 +187,7 @@ export default function HeroSection() {
               transform="rotate(-45 30 240)"
               fill="none"
               stroke="url(#edgeHighlight)"
-              stroke-width="1"
+              strokeWidth="1"
               opacity="0.5"
             />
           </g>
@@ -213,7 +213,7 @@ export default function HeroSection() {
               transform="rotate(-45 30 240)"
               fill="none"
               stroke="url(#edgeHighlight)"
-              stroke-width="1"
+              strokeWidth="1"
               opacity="0.5"
             />
           </g>
