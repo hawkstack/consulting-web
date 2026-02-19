@@ -99,7 +99,7 @@ interface ContactFormData {
   jobtitle: string;
   company: string;
   country: { code: string; name: string } | null;
-  message: string;
+  query: string;
 }
 
 type SubmitStatus = "idle" | "success" | "error" | "oops";
@@ -118,7 +118,7 @@ const [formData, setFormData] = useState<ContactFormData & { source: FormSource 
   jobtitle: "",
   company: "",
   country: null,
-  message: "",
+  query: "",
 });
 
 
@@ -126,7 +126,7 @@ const [formData, setFormData] = useState<ContactFormData & { source: FormSource 
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
   const [phoneError, setPhoneError] = useState("");
 
-  const { firstName, lastName, phone, jobtitle: jobtitle, company, country, message } =
+  const { firstName, lastName, phone, jobtitle, company, country, query } =
     formData;
 
   const isFormValid =
@@ -189,7 +189,7 @@ const [formData, setFormData] = useState<ContactFormData & { source: FormSource 
           jobtitle: "",
           company: "",
           country: null,
-          message: "",
+          query: "",
         });
 
         setPhoneError("");
@@ -271,8 +271,8 @@ const [formData, setFormData] = useState<ContactFormData & { source: FormSource 
         />
 
         <textarea
-          name="message"
-          value={message}
+          name="query"
+          value={query}
           onChange={handleChange}
           className="min-h-[160px] xl:min-h-[280px] resize-none rounded-xl border border-[#A3A3A3] px-4 py-3 text-[14px] text-[#0F172A] placeholder:text-[#7A7A7A] outline-none focus:border-[#09173A] col-span-full"
           placeholder="Let’s Talk what you’re planning......"
