@@ -93,6 +93,7 @@ function CountrySelect({
 }
 
 interface ContactFormData {
+  source : FormSource;
   firstName: string;
   lastName: string;
   phone: string;
@@ -168,7 +169,7 @@ const [formData, setFormData] = useState<ContactFormData & { source: FormSource 
     const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/openshift_unified`, {
+      const response = await fetch(`${API_BASE_URL}/api/consultingForms`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
