@@ -25,7 +25,7 @@ interface ContactFormData {
 type SubmitStatus = "idle" | "success" | "error" | "oops";
 
 type ContactFormProps = {
-  source: FormSource;
+  source?: FormSource;
 };
 
 const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
