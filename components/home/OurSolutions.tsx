@@ -4,9 +4,33 @@ import { useEffect, useRef, useState } from "react";
 
 const slides = [
   {
+    title: "CNCF",
+    heading: "CNCF",
+    desc: "Built on open standards and cloud-native best practices, aligned with the global ecosystem shaping Kubernetes and modern platforms.",
+    image: "/images/oursolution/Cncf.webp",
+  },
+  {
+    title: "Mirantis",
+    heading: "Mirantis",
+    desc: "Power cloud-native platforms and container operations, designed for enterprise Kubernetes, OpenStack, and platform engineering teams.",
+    image: "/images/oursolution/Mirantis.webp",
+  },
+  {
+    title: "Openshift",
+    heading: "Openshift",
+    desc: "Run, scale, and secure containerized applications with enterprise Kubernetes built for DevSecOps, automation, and hybrid cloud environments.",
+    image: "/images/oursolution/Openshift.webp",
+  },
+  {
+    title: "Openstack",
+    heading: "Openstack",
+    desc: "Create and manage private clouds at scale with full control over compute, storage, and networking for modern infrastructure.",
+    image: "/images/oursolution/Openstack.webp",
+  },
+  {
     title: "RHEL",
     heading: "RHEL",
-    desc: "Build a stable, secure enterprise Linux foundation optimized for performance, compliance, and long-term production Workloads.",
+    desc: "Build a stable, secure enterprise Linux foundation optimized for performance, compliance, and long-term production workloads.",
     image: "/images/oursolution/Rhel.webp",
   },
   {
@@ -14,30 +38,6 @@ const slides = [
     heading: "Ansible",
     desc: "Automate everything with confidence—from infrastructure provisioning to application deployment, fast, repeatable, and agentless.",
     image: "/images/oursolution/Ansible.webp",
-  },
-  {
-    title: "OpenShift",
-    heading: "OpenShift",
-    desc: "Run, scale, and secure containerized applications with enterprise Kubernetes built for DevSecOps, automation, and hybrid cloud environments.",
-    image: "/images/oursolution/Openshift.webp",
-  },
-  {
-    title: "OpenStack",
-    heading: "OpenStack",
-    desc: "Create and manage private clouds at scale with full control over compute, storage, and networking for modern Infrastructure.",
-    image: "/images/oursolution/Openstack.webp",
-  },
-  {
-    title: "Mirantis",
-    heading: "Business-ready OpenStack for enterprises",
-    desc: "Power cloud-native platforms and container operations, designed for enterprise Kubernetes, OpenStack, and platform engineering teams.",
-    image: "/images/oursolution/Mirantis.webp",
-  },
-  {
-    title: "CNCF",
-    heading: "CNCF",
-    desc: "Built on open standards and cloud-native best practices, aligned with the global ecosystem shaping Kubernetes and modern platforms.",
-    image: "/images/oursolution/Cncf.webp",
   },
 ];
 
@@ -72,12 +72,11 @@ export default function OurSolutions() {
   };
 
   useEffect(() => {
-  const update = () => setVisibleCount(getVisibleCount());
-  update();
-  window.addEventListener("resize", update);
-  return () => window.removeEventListener("resize", update);
-}, []);
-
+    const update = () => setVisibleCount(getVisibleCount());
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   useEffect(() => {
     startAuto();
@@ -113,18 +112,17 @@ export default function OurSolutions() {
     .map((_, i) => i)
     .sort((a, b) => getPosition(a) - getPosition(b));
 
-const visibleIndexes = orderedIndexes.slice(0, visibleCount);
+  const visibleIndexes = orderedIndexes.slice(0, visibleCount);
 
+  const positionStyles = (pos: number) => {
+    const base =
+      "transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] absolute";
 
-const positionStyles = (pos: number) => {
-  const base =
-    "transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] absolute";
-
-  /* ---------------- MOBILE ---------------- */
-if (visibleCount === 2) {
-  switch (pos) {
-    case 0:
-      return `${base}
+    /* ---------------- MOBILE ---------------- */
+    if (visibleCount === 2) {
+      switch (pos) {
+        case 0:
+          return `${base}
         left-[40%] 
         top-1/2 -translate-x-1/2 -translate-y-1/2
         scale-100 z-50
@@ -132,69 +130,68 @@ if (visibleCount === 2) {
         max-w-[520px]
         h-[420px]`;
 
-    case 1:
-      return `${base}
+        case 1:
+          return `${base}
         left-[77%] 
         top-1/2 -translate-y-1/2
         scale-90 z-40
         w-[80px] sm:w-[170px]
         h-[468px]`;
 
-    default:
-      return "hidden";
-  }
-}
-  /* ---------------- TABLET / IPAD ---------------- */
-  if (visibleCount === 2) {
-    switch (pos) {
-      case 0:
-        return `${base} 
+        default:
+          return "hidden";
+      }
+    }
+    /* ---------------- TABLET / IPAD ---------------- */
+    if (visibleCount === 2) {
+      switch (pos) {
+        case 0:
+          return `${base} 
           left-[45%] top-1/2 -translate-y-1/2 -translate-x-1/2
           scale-100 z-50 
           w-[62vw] max-w-[560px] h-[440px]`;
 
-      case 1:
-        return `${base} 
+        case 1:
+          return `${base} 
           left-[78%] top-1/2 -translate-y-1/2
           scale-90 z-40 
           w-[170px] h-[460px]`;
 
-      default:
-        return "hidden";
+        default:
+          return "hidden";
+      }
     }
-  }
 
-/* ---------------- DESKTOP ---------------- */
-switch (pos) {
-  case 0:
-    return `${base} 
-      left-0 top-1/2 -translate-y-1/2
+    /* ---------------- DESKTOP ---------------- */
+    switch (pos) {
+      case 0:
+        return `${base} 
+      left-8 top-1/2 -translate-y-1/2
       scale-100 z-50 
       w-[800px] h-[480px]`;
 
-  case 1:
-    return `${base} 
+      case 1:
+        return `${base} 
       left-[840px] top-1/2 -translate-y-1/2
       scale-95 z-40 
       w-[180px] h-[500px]`;
 
-  case 2:
-    return `${base} 
+      case 2:
+        return `${base} 
       left-[1020px] top-1/2 -translate-y-1/2
       scale-90 z-30 
       w-[180px] h-[530px]`;
 
-  case 3:
-    return `${base} 
+      case 3:
+        return `${base} 
       left-[1190px] top-1/2 -translate-y-1/2
       scale-85 z-20 
       w-[180px] h-[560px]`;
 
-  default:
-    return "";
-}
-
-};
+      default:
+        return "";
+    }
+  };
 
   return (
     <section className="relative h-[700px] font-lexend bg-[black] overflow-hidden">
@@ -207,7 +204,7 @@ switch (pos) {
           </p>
         </div>
       </div>
-<div className="max-w-[1600px] mt-[-60] mx-auto h-full relative px-4 md:px-6 lg:px-0 overflow-visible md:overflow-hidden">
+      <div className="max-w-[1600px] mt-[-60] mx-auto h-full relative px-4 md:px-6 lg:px-0 overflow-visible md:overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           {slides.map((slide, i) => {
             const pos = getPosition(i);
@@ -222,7 +219,7 @@ switch (pos) {
                 key={i}
                 onClick={() => !isBig && handleClick(i)}
                 className={`absolute rounded-2xl overflow-hidden cursor-pointer ${positionStyles(
-                  pos
+                  pos,
                 )}`}>
                 <div
                   className="absolute inset-0 bg-cover bg-center"
@@ -236,7 +233,9 @@ switch (pos) {
                       <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-3">
                         {slide.heading}
                       </h2>
-                      <p className="opacity-80 mb-2 text-xs md:text-sm lg:text-base">{slide.desc}</p>
+                      <p className="opacity-80 mb-2 text-xs md:text-sm lg:text-base">
+                        {slide.desc}
+                      </p>
                     </div>
                   ) : pos !== 0 ? (
                     <div className="w-full bg-black/30 p-4">
@@ -254,4 +253,3 @@ switch (pos) {
     </section>
   );
 }
-
