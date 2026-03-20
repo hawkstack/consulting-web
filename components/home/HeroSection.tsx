@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const slides = [
   {
@@ -102,19 +103,23 @@ export default function EnterpriseSection() {
               </div>
               {/* ===== CTA BUTTONS ===== */}
               <div className="flex flex-row ml-[-20px] items-center gap-4 w-full md:mt-[62px] md:pl-0 lg:mt-[62px] lg:pl-0">
-                <button
-                  className=" bg-blue-600 hover:bg-blue-500 transition px-3 py-2 rounded-full flex items-center justify-center 
+                <Link href="/get-started">
+                  <button
+                    className=" bg-blue-600 hover:bg-blue-500 transition px-3 py-2 rounded-full flex items-center justify-center 
                   gap-2 text-[10px] md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] whitespace-nowrap overflow-hidden"
-                >
-                  ▶ Schedule a Consultation
-                </button>
+                  >
+                    ▶ Schedule a Consultation
+                  </button>
+                </Link>
 
-                <button
-                  className=" bg-white text-[#6C63FF] px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
+                <Link href="/get-started">
+                  <button
+                    className=" bg-white text-[#6C63FF] px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
                   md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] hover:bg-gray-100 transition whitespace-nowrap overflow-hidden"
-                >
-                  → View Our Solutions
-                </button>
+                  >
+                    → View Our Solutions
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
