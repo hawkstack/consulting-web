@@ -17,8 +17,7 @@ import { SOLUTIONS } from "@/constants";
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
   title: "Red Hat Training & Certification Courses | Bengaluru ",
-  description:
-    "Red Hat Training & Certification Courses | Bengaluru",
+  description: "Red Hat Training & Certification Courses | Bengaluru",
 });
 
 const cardsData = [
