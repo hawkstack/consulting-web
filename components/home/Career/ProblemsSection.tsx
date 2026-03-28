@@ -18,16 +18,16 @@ export default function ProblemsSection() {
   ];
 
   return (
-    <section className="relative bg-[#FFFFFF] py-20 px-32">
+    <section className="relative bg-[#FFFFFF] xl:py-20 xl:px-32 lg:py-12 lg:px-6">
       {/* Gradient Blur Shape */}
       <div className="pointer-events-none absolute bottom-[-100px] right-[-100px] w-[160px] h-[160px] opacity-90 blur-[220px] bg-gradient-to-br from-[#002EA3] to-[#009DFF] rounded-full" />
       {/* Heading */}
-      <h2 className="text-center text-5xl font-medium text-[#0048FF] mb-16">
+      <h2 className="text-center xl:text-5xl lg:text-4xl font-medium text-[#0048FF] mb-16">
         Are You Running Into These Problems
       </h2>
 
       {/* Cards */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 xl:gap-2 lg:gap-4">
         {data.map((item) => (
           <div
             key={item.id}
@@ -39,10 +39,12 @@ export default function ProblemsSection() {
             </h3>
 
             {/* Title */}
-            <h4 className="font-medium text-xl mb-2">{item.title}</h4>
+            <h4 className="font-medium xl:text-xl lg:text-lg mb-2">
+              {item.title}
+            </h4>
 
             {/* Description */}
-            <p className="text-[#2F2F2F] font-normal text-sm leading-relaxed mb-4">
+            <p className="text-[#2F2F2F] font-normal text-sm leading-relaxed xl:mb-4">
               {item.desc}
             </p>
           </div>
