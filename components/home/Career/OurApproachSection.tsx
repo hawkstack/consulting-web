@@ -2,7 +2,9 @@ import Arrow from "@/components/icons/Arrow";
 
 export default function OurApproachSection() {
   return (
-    <section className="w-full bg-[#FFFFFF] py-18 px-6 md:px-12 lg:px-20 border">
+    <section className="relative overflow-hidden w-full bg-[#FFFFFF] py-20 px-6 md:px-12 lg:px-20">
+      {/* Gradient Blur Shape */}
+      <div className="pointer-events-none absolute top-[-80px] left-[-100px] w-[200px] h-[200px] opacity-90 blur-[220px] bg-gradient-to-br from-[#002EA3] to-[#009DFF] rounded-full" />
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between">
         {/* LEFT SIDE */}
         <div className="flex flex-col gap-6">
