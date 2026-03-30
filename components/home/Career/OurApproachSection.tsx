@@ -29,7 +29,7 @@ export default function OurApproachSection() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="max-w-[54%] text-[#2F2F2F] font-normal text-lg leading-relaxed mt-42">
+        <div className="max-w-[54%] text-[#2F2F2F] font-normal text-lg leading-relaxed mt-34">
           <p>
             At HawkStack, we focus on people first. We create an environment
             where you can learn, take ownership, and grow through meaningful
