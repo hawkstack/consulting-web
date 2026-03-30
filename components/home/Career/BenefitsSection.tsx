@@ -2,7 +2,7 @@ import { benefits } from "./Benefitsdata";
 
 export default function BenefitsSection() {
   return (
-    <section className="relative w-full bg-[#FFFFFF] xl:py-20 xl:px-30 md:px-18 md:py-16 py-10 px-10 overflow-hidden border">
+    <section className="relative w-full bg-[#FFFFFF] xl:py-20 xl:px-30 md:px-18 md:py-16 py-10 px-10 overflow-hidden">
       {/* Gradient Blur Shape */}
       <div className="pointer-events-none absolute top-[80px] left-[100px] xl:w-[150px] xl:h-[150px] lg:w-[110px] lg:h-[110px] opacity-90 blur-[220px] bg-gradient-to-br from-[#002EA3] to-[#009DFF] rounded-full" />
       <div className="max-full mx-auto xl:text-left text-center">
