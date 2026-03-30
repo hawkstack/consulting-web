@@ -10,12 +10,12 @@ export default function OurApproachSection() {
         <div className="flex flex-col gap-6">
           {/* Heading + Arrow */}
           <div className="relative flex items-center gap-3">
-            <h2 className="text-[#0048FF] text-6xl  font-medium leading-tight">
+            <h2 className="text-[#0048FF] text-6xl  font-medium leading-none">
               Our <br /> Approach
             </h2>
 
             {/* Arrow */}
-            <Arrow className="absolute top-16 left-[216px] w-7 h-7" />
+            <Arrow className="absolute top-10 left-[216px] w-7 h-7" />
           </div>
 
           {/* Image */}
