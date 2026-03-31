@@ -1,9 +1,29 @@
+"use client";
+
+import { useState } from "react";
 import ArrowRight from "@/components/icons/career/ArrowRight";
 import YourClockIcon from "@/components/icons/career/YourClockIcon";
 import YourLocationIcon from "@/components/icons/career/YourLocationIcon";
 import { jobs } from "./Jobdata";
 
 export default function JobOpeningsSection() {
+  const [activeTab, setActiveTab] = useState("View all");
+
+  const tabs = [
+    "View all",
+    "Technical Consultant",
+    "Development",
+    "Human Resources",
+    "Digital Marketing",
+    "Operations",
+    "UI/UX Designer",
+  ];
+
+  const filteredJobs =
+    activeTab === "View all"
+      ? jobs
+      : jobs.filter((job) => job.category === activeTab);
+
   return (
     <section className="w-full bg-[#FFFFFF] xl:py-18 xl:px-30">
       {/* Heading */}
@@ -18,19 +38,12 @@ export default function JobOpeningsSection() {
 
         {/* Tabs */}
         <div className="flex flex-wrap gap-3 mt-6">
-          {[
-            "View all",
-            "Technical Consultant",
-            "Development",
-            "Human Resources",
-            "Digital Marketing",
-            "Operations",
-            "UI/UX Designer",
-          ].map((tab, i) => (
+          {tabs.map((tab, i) => (
             <button
               key={i}
+              onClick={() => setActiveTab(tab)}
               className={`px-4 py-1.5 rounded-full font-medium xl:text-sm border ${
-                i === 0
+                activeTab === tab
                   ? "bg-[#0048FF] text-white"
                   : "bg-white text-[#000000] border-[#2B2B2B]"
               }`}
@@ -41,8 +54,8 @@ export default function JobOpeningsSection() {
         </div>
 
         {/* Job List */}
-        <div className="xl:mt-10 space-y-6">
-          {jobs.map((job, i) => (
+        <div className="xl:mt-10 space-y-6 transition-all duration-300">
+          {filteredJobs.map((job, i) => (
             <div
               key={i}
               className="border-t border-blue-500 pt-6 flex flex-col md:flex-row md:items-start md:justify-between gap-4"
