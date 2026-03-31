@@ -18,9 +18,9 @@ export default function ProblemsSection() {
   ];
 
   return (
-    <section className="relative bg-[#FFFFFF] xl:py-20 xl:px-32 lg:py-12 lg:px-10 md:px-10 md:py-12 px-14 py-8">
+    <section className="relative bg-[#FFFFFF] xl:py-20 xl:px-32 lg:py-12 lg:px-10 md:px-10 md:py-12 px-14 py-8 oberflow-hidden">
       {/* Gradient Blur Shape */}
-      <div className="pointer-events-none absolute bottom-[-100px] right-[-100px] w-[160px] h-[160px] opacity-90 blur-[220px] bg-gradient-to-br from-[#002EA3] to-[#009DFF] rounded-full" />
+      <div className="pointer-events-none absolute bottom-[-100px] right-[100px] w-[160px] h-[160px] opacity-90 blur-[220px] bg-gradient-to-br from-[#002EA3] to-[#009DFF] rounded-full" />
       {/* Heading */}
       <h2 className="text-center xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-medium text-[#0048FF] mb-16">
         Are You Running Into These Problems
