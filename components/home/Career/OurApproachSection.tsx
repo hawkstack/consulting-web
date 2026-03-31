@@ -1,4 +1,4 @@
-import Arrow from "@/components/icons/Arrow";
+import Arrow from "@/components/icons/career/Arrow";
 import Image from "next/image";
 
 export default function OurApproachSection() {
