@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ArrowRight from "@/components/icons/career/ArrowRight";
 import YourClockIcon from "@/components/icons/career/YourClockIcon";
 import YourLocationIcon from "@/components/icons/career/YourLocationIcon";
@@ -25,6 +25,18 @@ export default function JobOpeningsSection() {
     activeTab === "View all"
       ? jobs
       : jobs.filter((job) => job.category === activeTab);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
 
   return (
     <>
