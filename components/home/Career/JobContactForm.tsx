@@ -1,5 +1,9 @@
-"use client";
 import { useRef, useState } from "react";
+import {
+  validateEmail,
+  validateName,
+  validateRequired,
+} from "@/utils/validation";
 
 type JobContactFormProps = {
   onClose: () => void;
@@ -18,18 +22,98 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [fileName, setFileName] = useState("No file chosen");
 
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    jobRole: "",
+    availability: "30/12/2021",
+    ctc: "",
+    location: "",
+    experience: "",
+    interviewAvailability: "",
+    reason: "",
+  });
+
+  const [errors, setErrors] = useState<any>({});
+
   const handleClick = () => {
     fileInputRef.current?.click();
   };
 
-  const handleFileChange = (e) => {
-    if (e.target.files[0]) {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    if (e.target.files?.[0]) {
       setFileName(e.target.files[0].name);
     }
   };
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+
+    let error = "";
+
+    if (name === "firstName") {
+      error = validateName(value, "First Name");
+    }
+
+    if (name === "lastName") {
+      error = validateName(value, "Last Name");
+    }
+
+    if (name === "email") {
+      error = validateEmail(value);
+    }
+
+    if (name === "jobRole") {
+      error = validateRequired(value, "Job Role");
+    }
+
+    if (name === "availability") {
+      error = validateRequired(value, "Availability");
+    }
+
+    if (name === "ctc") {
+      error = validateRequired(value, "CTC");
+    }
+
+    if (name === "experience") {
+      error = validateRequired(value, "Experience");
+    }
+
+    setErrors((prev: Record<string, string>) => ({
+      ...prev,
+      [name]: error,
+    }));
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    const newErrors: any = {
+      firstName: validateName(formData.firstName, "First Name"),
+      lastName: validateName(formData.lastName, "Last Name"),
+      email: validateEmail(formData.email),
+      jobRole: validateRequired(formData.jobRole, "Job Role"),
+      availability: validateRequired(formData.availability, "Availability"),
+      ctc: validateRequired(formData.ctc, "CTC"),
+      experience: validateRequired(formData.experience, "Experience"),
+    };
+
+    setErrors(newErrors);
+
+    const hasError = Object.values(newErrors).some((err) => err);
+
+    if (hasError) return;
+  };
+
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm xl:pt-20 xl:px-80 lg:px-40 md:px-20 sm:px-10 px-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm xl:pt-26 pt-10 xl:px-80 lg:px-40 md:px-20 sm:px-10 px-4"
       onClick={onClose}
     >
       <div
@@ -42,16 +126,25 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
         </div>
 
         {/* Form */}
-        <div className="px-4 py-4 grid grid-cols-2 gap-x-3 gap-y-2 text-[12px] text-[#2F2F2F]">
+        <form
+          onSubmit={handleSubmit}
+          className="px-4 py-4 grid grid-cols-2 gap-x-3 gap-y-2 text-[12px] text-[#2F2F2F]"
+        >
           {/* First Name */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               First Name<span className="text-red-500 ml-[2px]">*</span>
             </label>
             <input
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
               placeholder="Enter First Name..."
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
+            {errors.firstName && (
+              <p className="text-[10px] text-red-500">{errors.firstName}</p>
+            )}
           </div>
 
           {/* Last Name */}
@@ -60,9 +153,15 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               Last Name<span className="text-red-500 ml-[2px]">*</span>
             </label>
             <input
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
               placeholder="Enter Last Name..."
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
+            {errors.lastName && (
+              <p className="text-[10px] text-red-500">{errors.lastName}</p>
+            )}
           </div>
 
           {/* Email */}
@@ -71,9 +170,15 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               Email<span className="text-red-500 ml-[2px]">*</span>
             </label>
             <input
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Enter Email..."
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px ] outline-none border-none"
             />
+            {errors.email && (
+              <p className="text-[10px] text-red-500">{errors.email}</p>
+            )}
           </div>
 
           {/* Job Role */}
@@ -81,14 +186,22 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
             <label className="block font-medium mb-[3px] text-[12px]">
               Job Role<span className="text-red-500 ml-[2px]">*</span>
             </label>
-            <select className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none">
-              <option>Select Domain</option>
+            <select
+              name="jobRole"
+              value={formData.jobRole}
+              onChange={handleChange}
+              className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
+            >
+              <option value="">Select Domain</option>
               {jobRoles.map((role, index) => (
                 <option key={index} value={role}>
                   {role}
                 </option>
               ))}
             </select>
+            {errors.jobRole && (
+              <p className="text-[10px] text-red-500">{errors.jobRole}</p>
+            )}
           </div>
 
           {/* Availability */}
@@ -98,9 +211,14 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               <span className="text-red-500 ml-[2px]">*</span>
             </label>
             <input
-              defaultValue="30/12/2021"
+              name="availability"
+              value={formData.availability}
+              onChange={handleChange}
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
+            {errors.availability && (
+              <p className="text-[10px] text-red-500">{errors.availability}</p>
+            )}
           </div>
 
           {/* CTC */}
@@ -109,9 +227,15 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               Current CTC<span className="text-red-500 ml-[2px]">*</span>
             </label>
             <input
+              name="ctc"
+              value={formData.ctc}
+              onChange={handleChange}
               placeholder="Enter in LPA"
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
+            {errors.ctc && (
+              <p className="text-[10px] text-red-500">{errors.ctc}</p>
+            )}
           </div>
 
           {/* Location */}
@@ -120,6 +244,9 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               Current Location
             </label>
             <input
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
               placeholder="Enter City..."
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
@@ -131,9 +258,15 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               Experience<span className="text-red-500 ml-[2px]">*</span>
             </label>
             <input
+              name="experience"
+              value={formData.experience}
+              onChange={handleChange}
               placeholder="In years"
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
+            {errors.experience && (
+              <p className="text-[10px] text-red-500">{errors.experience}</p>
+            )}
           </div>
 
           {/* Virtual Interview */}
@@ -183,16 +316,24 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
             <label className="block font-medium mb-[3px] text-[12px]">
               Reason for leaving current role
             </label>
-            <textarea className="w-full h-[55px] px-[6px] pt-[5px] bg-[#E3E3E3] rounded-[4px] text-[12px] resize-none outline-none border-none" />
+            <textarea
+              name="reason"
+              value={formData.reason}
+              onChange={handleChange}
+              className="w-full h-[55px] px-[6px] pt-[5px] bg-[#E3E3E3] rounded-[4px] text-[12px] resize-none outline-none border-none"
+            />
           </div>
 
           {/* Button */}
           <div className="col-span-2 flex justify-end mt-1">
-            <button className="bg-[#1B52DF] text-white px-[14px] py-[5px] rounded-[4px] text-[12px]">
+            <button
+              type="submit"
+              className="bg-[#1B52DF] text-white px-[14px] py-[5px] rounded-[4px] text-[12px]"
+            >
               Apply Now
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
