@@ -1,6 +1,13 @@
+"use client";
 import Image from "next/image";
 
 export default function HeroSection() {
+  const handleScroll = () => {
+    const section = document.getElementById("career-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="relative w-full xl:min-h-[700px] lg:min-h-[450px] md:min-h-[450px] min-h-[240px] overflow-hidden bg-[#f5f7fb] border-black">
       <Image
@@ -27,7 +34,10 @@ export default function HeroSection() {
         </p>
 
         {/* Button */}
-        <button className="xl:mt-6 lg:mt-6 md:mt-6 xl:px-6 xl:py-2.5 px-2 py-1 bg-[#0048FF] text-white xl:text-sm lg:text-xs md:text-xs text-[8px] rounded-xl shadow-md hover:bg-blue-700 transition">
+        <button
+          onClick={handleScroll}
+          className="xl:mt-6 lg:mt-6 md:mt-6 xl:px-6 xl:py-2.5 px-2 py-1 bg-[#0048FF] text-white xl:text-sm lg:text-xs md:text-xs text-[8px] rounded-xl shadow-md hover:bg-blue-700 transition"
+        >
           Explore career opportunities
         </button>
       </div>

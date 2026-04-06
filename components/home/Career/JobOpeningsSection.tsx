@@ -40,7 +40,10 @@ export default function JobOpeningsSection() {
 
   return (
     <>
-      <section className="w-full bg-[#FFFFFF] xl:py-18 xl:px-30 lg:py-16 lg:px-20 md:py-12 md:px-16 px-6 py-6">
+      <section
+        id="career-section"
+        className="scroll-md:mt-[80px] scroll-mt-[70px] w-full bg-[#FFFFFF] xl:py-18 xl:px-30 lg:py-16 lg:px-20 md:py-12 md:px-16 px-6 py-6"
+      >
         <div className="w-full mx-auto">
           {/* Heading */}
           <div className="mx-auto text-center md:text-left">
