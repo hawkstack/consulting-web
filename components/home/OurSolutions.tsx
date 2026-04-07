@@ -194,7 +194,10 @@ export default function OurSolutions() {
   };
 
   return (
-    <section className="relative h-[700px] font-lexend bg-[black] overflow-hidden">
+    <section
+      id="oursolution-section"
+      className="xl:scroll-mt-[80px] lg:scroll-mt-[10px] md:scroll-mt-[60px] relative h-[700px] font-lexend bg-[black] overflow-hidden"
+    >
       <div className="text-white flex flex-col items-center justify-center mt-10">
         <h1 className="text-[40px] justify-center">Our Solution</h1>
         <div>
@@ -220,7 +223,8 @@ export default function OurSolutions() {
                 onClick={() => !isBig && handleClick(i)}
                 className={`absolute rounded-2xl overflow-hidden cursor-pointer ${positionStyles(
                   pos,
-                )}`}>
+                )}`}
+              >
                 <div
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${slide.image})` }}

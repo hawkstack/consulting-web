@@ -35,6 +35,13 @@ export default function EnterpriseSection() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleScroll = () => {
+    const section = document.getElementById("oursolution-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative h-[560px] md:h-[568px] lg:h-[568px] bg-[#0B1F4B] text-white overflow-hidden font-lexend ">
       {/* ===== MOBILE HERO IMAGE (ONLY MOBILE) ===== */}
@@ -112,14 +119,13 @@ export default function EnterpriseSection() {
                   </button>
                 </Link>
 
-                <Link href="/get-started">
-                  <button
-                    className=" bg-white text-[#6C63FF] px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
+                <button
+                  onClick={handleScroll}
+                  className=" bg-white text-[#6C63FF] px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
                   md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] hover:bg-gray-100 transition whitespace-nowrap overflow-hidden"
-                  >
-                    → View Our Solutions
-                  </button>
-                </Link>
+                >
+                  → View Our Solutions
+                </button>
               </div>
             </div>
           </div>
