@@ -3,10 +3,26 @@ import Link from "next/link";
 import { JSX } from "react";
 
 const socialIcons = [
-  { src: "/images/socialmedia/facebook.webp", alt: "Facebook" },
-  { src: "/images/socialmedia/linkedin.webp", alt: "LinkedIn" },
-  { src: "/images/socialmedia/twitter.webp", alt: "Twitter" },
-  { src: "/images/socialmedia/instagram.webp", alt: "Instagram" },
+  {
+    src: "/images/socialmedia/facebook.webp",
+    alt: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61560462899701",
+  },
+  {
+    src: "/images/socialmedia/linkedin.webp",
+    alt: "LinkedIn",
+    href: "https://www.linkedin.com/company/hawkstack-technologies/?viewAsMember=true",
+  },
+  {
+    src: "/images/socialmedia/twitter.webp",
+    alt: "Twitter",
+    href: "https://x.com/hawkstack_tech",
+  },
+  {
+    src: "/images/socialmedia/instagram.webp",
+    alt: "Instagram",
+    href: "https://www.instagram.com/hawkstack_technologies?fbclid=IwY2xjawRBswFleHRuA2FlbQIxMABicmlkETF1NnRJMlJKZ04wQjA5Zm53c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHmxSybTnC9oBeX64YhLA6SF-yFdo51O1ohTkZuAUJXZU04Y31a6qUTInJrQ3_aem_94dcfMKmjWHbuzbLsDZXSw",
+  },
 ];
 
 export const Footer = (): JSX.Element => {
@@ -28,11 +44,15 @@ export const Footer = (): JSX.Element => {
 
           <div className="flex gap-3">
             {socialIcons.map((icon) => (
-              <div
+              <Link
                 key={icon.alt}
-                className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                href={icon.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-white rounded-full flex items-center justify-center"
+              >
                 <Image src={icon.src} alt={icon.alt} width={18} height={18} />
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -115,28 +135,28 @@ export const Footer = (): JSX.Element => {
           </div>
 
           <div className="col-span-2 grid grid-cols-5 gap-x-35">
-          <div>
-            <h4 className="mb-4 font-semibold">Solution</h4>
-            <ul className="space-y-3 text-gray-300">
-              <li>RedHat</li>
-              <li>CNCF</li>
-              <li>Mirantis</li>
-              <li>AWS</li>
-              <li>GCP</li>
-              <li>Azure</li>
-            </ul>
-          </div>
+            <div>
+              <h4 className="mb-4 font-semibold">Solution</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>RedHat</li>
+                <li>CNCF</li>
+                <li>Mirantis</li>
+                <li>AWS</li>
+                <li>GCP</li>
+                <li>Azure</li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="mb-4 font-semibold">Training</h4>
-            <ul className="space-y-3 text-gray-300">
-              <li>Mirantis</li>
-              <li>CNCF</li>
-              <li>Redhat Solution</li>
-              <li>The Linux Foundation</li>
-              <li>Customised Training</li>
-            </ul>
-          </div>
+            <div>
+              <h4 className="mb-4 font-semibold">Training</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>Mirantis</li>
+                <li>CNCF</li>
+                <li>Redhat Solution</li>
+                <li>The Linux Foundation</li>
+                <li>Customised Training</li>
+              </ul>
+            </div>
           </div>
 
           <div>
@@ -227,7 +247,7 @@ export const Footer = (): JSX.Element => {
         </div>
 
         <div className="text-center text-sm mt-12 text-gray-300">
-          © 2025 HawkStack. All Rights Reserved.
+          © 2026 HawkStack. All Rights Reserved.
         </div>
       </div>
     </footer>
