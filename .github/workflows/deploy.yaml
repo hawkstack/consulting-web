@@ -17,7 +17,7 @@ jobs:
     environment: ${{ github.event.inputs.environment }}
 
     steps:
-      # 1. Set branch based on environment
+      # 1. Set branch
       - name: Set branch
         run: |
           if [ "${{ github.event.inputs.environment }}" == "prod" ]; then
@@ -26,23 +26,23 @@ jobs:
             echo "BRANCH=test" >> $GITHUB_ENV
           fi
 
-      # 2. Checkout correct branch
+      # 2. Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH }}
 
-      # 3. Setup Node (match EC2)
+      # 3. Setup Node
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      # 4. Install dependencies
+      # 4. Install deps
       - name: Install dependencies
         run: npm ci
 
-      # 5. Build Next.js app
+      # 5. Build
       - name: Build application
         run: npm run build
 
@@ -56,7 +56,7 @@ jobs:
           cp package.json deploy/
           cp package-lock.json deploy/
 
-      # 7. Copy files to EC2 (temporary new folder)
+      # 7. Copy to EC2
       - name: Copy files to EC2
         uses: appleboy/scp-action@v0.1.4
         with:
@@ -67,7 +67,7 @@ jobs:
           target: "/var/www/frontend/consulting-web-ci-new"
           rm: true
 
-      # 8. Deploy with rollback
+      # 8. Deploy + rollback
       - name: Deploy and restart app
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -89,7 +89,6 @@ jobs:
             NEW_DIR="consulting-web-ci-new"
             BACKUP_DIR="consulting-web-ci-backup"
 
-            # Safety check
             if [ ! -d "$NEW_DIR" ]; then
               echo "ERROR: New build not found!"
               exit 1
@@ -108,13 +107,12 @@ jobs:
 
             cd $APP_DIR
 
-            # Check .env
             if [ ! -f ".env" ]; then
               echo "WARNING: .env file missing!"
             fi
 
             echo "Installing production dependencies..."
-            npm ci --only=production
+            npm ci --omit=dev   # ✅ updated (better than --only=production)
 
             echo "Restarting PM2..."
             PORT=3001 pm2 reload consulting-web-ci || PORT=3001 pm2 start "npm run start" --name consulting-web-ci
