@@ -1,0 +1,124 @@
+name: CI Deploy (Test/Prod with Rollback)
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select environment"
+        required: true
+        type: choice
+        options:
+          - test
+          - prod
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+
+    steps:
+      # 1. Select branch
+      - name: Set branch
+        run: |
+          if [ "${{ github.event.inputs.environment }}" == "prod" ]; then
+            echo "BRANCH=main" >> $GITHUB_ENV
+          else
+            echo "BRANCH=test" >> $GITHUB_ENV
+          fi
+
+      # 2. Checkout repo
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ env.BRANCH }}
+
+      # 3. Setup Node (MATCH EC2)
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # 4. Install deps
+      - name: Install dependencies
+        run: npm ci
+
+      # 5. Build app
+      - name: Build Next.js
+        run: npm run build
+
+      # 6. Prepare deploy package
+      - name: Prepare files
+        run: |
+          rm -rf deploy
+          mkdir deploy
+          cp -r .next deploy/
+          cp -r public deploy/
+          cp package.json deploy/
+          cp package-lock.json deploy/
+
+      # 7. Copy to EC2 (NEW folder)
+      - name: Copy to EC2
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "deploy/*"
+          target: "/var/www/frontend/consulting-web-ci-new"
+          rm: true
+
+      # 8. Deploy with rollback
+      - name: Deploy & Restart
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            nvm use 20
+
+            echo "Node version: $(node -v)"
+
+            cd /var/www/frontend
+
+            APP_DIR="consulting-web-ci"
+            NEW_DIR="consulting-web-ci-new"
+            BACKUP_DIR="consulting-web-ci-backup"
+
+            # Safety check
+            if [ ! -d "$NEW_DIR" ]; then
+              echo "New build not found! Aborting."
+              exit 1
+            fi
+
+            echo "Cleaning old backup..."
+            rm -rf $BACKUP_DIR
+
+            echo "Backing up current version..."
+            if [ -d "$APP_DIR" ]; then
+              mv $APP_DIR $BACKUP_DIR
+            fi
+
+            echo "Deploying new version..."
+            mv $NEW_DIR $APP_DIR
+
+            cd $APP_DIR
+
+            # Ensure env exists
+            if [ ! -f ".env" ]; then
+              echo "WARNING: .env file missing!"
+            fi
+
+            echo "Installing production dependencies..."
+            npm ci --only=production
+
+            echo "Restarting PM2..."
+            PORT=3001 pm2 reload consulting-web-ci || PORT=3001 pm2 start "npm run start" --name consulting-web-ci
+
+            pm2 save
+
+            echo "Deployment completed successfully!"
