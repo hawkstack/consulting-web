@@ -38,6 +38,7 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
   const [errors, setErrors] = useState<any>({});
   const [submitMessage, setSubmitMessage] = useState("");
   const [isError, setIsError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleClick = () => {
     fileInputRef.current?.click();
@@ -93,7 +94,7 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     const newErrors: any = {
@@ -116,11 +117,53 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
       return;
     }
 
-    // Success case
-    setIsError(false);
-    setSubmitMessage(
-      "Hi, we have got your details. Our team will contact you soon.",
-    );
+    try {
+      setLoading(true);
+      // FormData for file upload
+      const payload = new FormData();
+
+      Object.entries(formData).forEach(([key, value]) => {
+        payload.append(key, value as string);
+      });
+
+      if (fileInputRef.current?.files?.[0]) {
+        payload.append("resume", fileInputRef.current.files[0]);
+      }
+
+      const res = await fetch(`/api/jobApplication`, {
+        method: "POST",
+        body: payload,
+      });
+
+      if (!res.ok) {
+        throw new Error("Something went wrong");
+      }
+
+      setIsError(false);
+      setSubmitMessage(
+        "Hi, we have got your details. Our team will contact you soon.",
+      );
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        jobRole: "",
+        availability: "",
+        ctc: "",
+        location: "",
+        experience: "",
+        interviewAvailability: "",
+        reason: "",
+      });
+
+      setFileName("No file chosen");
+    } catch (err) {
+      setIsError(true);
+      setSubmitMessage("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -356,9 +399,10 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               {/* Button */}
               <button
                 type="submit"
+                disabled={loading}
                 className="bg-[#1B52DF] text-white px-[14px] py-[5px] rounded-[4px] text-[12px]"
               >
-                Apply Now
+                {loading ? "Submitting..." : "Apply Now"}
               </button>
             </div>
           </div>
