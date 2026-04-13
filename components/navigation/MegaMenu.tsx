@@ -22,7 +22,6 @@ export function MegaMenu({
       className="absolute left-1/2 top-full -translate-x-1/2 w-[1100px] lg:w-[1000px] xl:w-[1221px] xl:h-[464px]"
       onMouseLeave={onClose}
     >
-     
       <div className="rounded-[20px] bg-[#2B3859]/90 backdrop-blur-md p-12 shadow-2xl overflow-hidden">
         <div className="flex gap-16 relative">
           {/* LEFT LIST */}
@@ -33,6 +32,13 @@ export function MegaMenu({
                 <li
                   key={item.id}
                   onMouseEnter={() => onHoverItem(item)}
+                  onClick={() => {
+                    if (item.external && item.href) {
+                      window.open(item.href, "_blank", "noopener,noreferrer");
+                    } else if (item.href) {
+                      window.open(item.href, "_blank", "noopener,noreferrer");
+                    }
+                  }}
                   className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] cursor-pointer transition-colors duration-200
                     ${isActive ? "text-[#5272FF]" : "text-white/90 hover:text-white"}`}
                 >
@@ -56,11 +62,11 @@ export function MegaMenu({
 
             <div className="w-[312px] h-[195px] rounded-2xl overflow-hidden mb-6 relative">
               <Image
-              src={activeItem.image}
-              alt={activeItem.title}
-              fill
-              className="object-cover"
-              sizes="312px"
+                src={activeItem.image}
+                alt={activeItem.title}
+                fill
+                className="object-cover"
+                sizes="312px"
               />
             </div>
 
