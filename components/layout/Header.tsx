@@ -140,17 +140,36 @@ export function Header(): JSX.Element {
         <div className="lg:hidden w-full bg-[#0B2458] px-6 pb-6">
           <ul className="flex flex-col gap-6 pt-6">
             {["Home", "Products", "Services", "Company", "Training"].map(
-              (item) => (
-                <li key={item}>
-                  <Link
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-white text-[16px]"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ),
+              (item) => {
+                const isTraining = item === "Training";
+
+                return (
+                  <li key={item}>
+                    {isTraining ? (
+                      <span
+                        onClick={() => {
+                          setMobileOpen(false);
+                          window.open(
+                            process.env.NEXT_PUBLIC_TRAINING_URL as string,
+                            "_blank",
+                          );
+                        }}
+                        className="text-white text-[16px] cursor-pointer"
+                      >
+                        {item}
+                      </span>
+                    ) : (
+                      <Link
+                        href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                        onClick={() => setMobileOpen(false)}
+                        className="text-white text-[16px]"
+                      >
+                        {item}
+                      </Link>
+                    )}
+                  </li>
+                );
+              },
             )}
           </ul>
 
