@@ -142,7 +142,8 @@ export function Header(): JSX.Element {
             {["Home", "Products", "Services", "Company", "Training"].map(
               (item) => {
                 const isTraining = item === "Training";
-
+                const isRedirectToGetStarted =
+                  item === "Products" || "Services" || "Company";
                 return (
                   <li key={item}>
                     {isTraining ? (
@@ -160,7 +161,13 @@ export function Header(): JSX.Element {
                       </span>
                     ) : (
                       <Link
-                        href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                        href={
+                          item === "Home"
+                            ? "/"
+                            : isRedirectToGetStarted
+                              ? "/get-started"
+                              : `/${item.toLowerCase()}`
+                        }
                         onClick={() => setMobileOpen(false)}
                         className="text-white text-[16px]"
                       >
