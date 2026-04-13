@@ -121,6 +121,8 @@ export const company: MegaItem[] = [
     description:
       "HawkStack builds, modernizes, and operates scalable cloud-native platforms and applications",
     image: "/images/company/About-Us.webp",
+    href: `${process.env.NEXT_PUBLIC_TRAINING_URL}/about`,
+    external: true,
   },
   {
     id: "partner",
@@ -129,6 +131,7 @@ export const company: MegaItem[] = [
     description:
       "Our partner ecosystem combines leading technologies and expertise to accelerate innovation and business success.",
     image: "/images/company/Partner.webp",
+    href: "/coming-soon",
   },
   {
     id: "blog",
@@ -137,6 +140,7 @@ export const company: MegaItem[] = [
     description:
       "Thought leadership, technical insights, and real-world lessons from modern cloud engineering",
     image: "/images/company/Blog.webp",
+    href: "/coming-soon",
   },
   {
     id: "career",
@@ -145,6 +149,7 @@ export const company: MegaItem[] = [
     description:
       "Build meaningful technology. Grow your career with modern cloud and platform engineering.",
     image: "/images/company/Career.webp",
+    href: "/career",
   },
   {
     id: "contact us",
@@ -153,6 +158,7 @@ export const company: MegaItem[] = [
     description:
       "Let’s connect to discuss how we can help you build and scale modern cloud solutions.",
     image: "/images/company/Contact-Us.webp",
+    href: "/get-started",
   },
 ];
 
