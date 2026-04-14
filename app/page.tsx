@@ -13,6 +13,7 @@ import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactFormSection";
 import WhyHawkstackSection from "@/components/home/whyHawkstack/whyHawkstackSection";
 import { SOLUTIONS } from "@/constants";
+import { homePageData } from "@/data/home/home";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -28,10 +29,13 @@ const cardsData = [
   },
 ];
 
-const Home = () => {
+export default function HomePage () {
+  const { 
+    hero
+  } = homePageData;
   return (
     <div>
-      <HeroSection />
+      <HeroSection data = {hero}/>
       <VisionApproach />
       <WhyHawkstackSection
         title="Why HawkStack"
@@ -51,5 +55,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
