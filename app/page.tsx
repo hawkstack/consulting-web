@@ -5,7 +5,7 @@ import { seoMeta } from "../components/seo/seoMeta";
 import HeroSection from "@/components/home/HeroSection";
 import VisionApproach from "@/components/home/VisionApproach";
 import OurSolutions from "@/components/home/OurSolutions";
-import WhatWeDeliver from "@/components/home/WhatWeDeliver";
+import EngineeringDrivenCloudServices from "@/components/home/EngineeringDrivenCloudServices";
 import StrategicPartners from "@/components/home/StrategicPartners";
 import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
@@ -20,14 +20,6 @@ export const metadata = seoMeta({
   description: "Red Hat Training & Certification Courses | Bengaluru",
 });
 
-const cardsData = [
-  {
-    title: "Vision",
-    iconSrc: "/icons/vision.png",
-    texts: ["Evolution", "Innovation", "Growth"],
-  },
-];
-
 const Home = () => {
   return (
     <div>
@@ -38,7 +30,7 @@ const Home = () => {
         description="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
       />
       <OurSolutions />
-      <WhatWeDeliver />
+      <EngineeringDrivenCloudServices />
       <StrategicPartners />
       <JoinOurTeam />
       <WhyWorkWithUs
