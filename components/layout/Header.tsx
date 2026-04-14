@@ -12,7 +12,7 @@ import {
 } from "@/components/navigation/menuData";
 import { MegaItem } from "@/components/navigation/types";
 
-type MenuKey = "products" | "services" | "company" | "training" | any;
+type MenuKey = "products" | "services" | "company" | "training";
 
 const menuMap: Record<MenuKey, MegaItem[] | null> = {
   products,
@@ -21,8 +21,10 @@ const menuMap: Record<MenuKey, MegaItem[] | null> = {
   training,
 };
 
+type OpenMenuState = MenuKey | null;
+
 export function Header(): JSX.Element {
-  const [openMenu, setOpenMenu] = useState<MenuKey>();
+  const [openMenu, setOpenMenu] = useState<OpenMenuState>(null);
   const [activeItem, setActiveItem] = useState<MegaItem | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -77,6 +79,10 @@ export function Header(): JSX.Element {
           {(["products", "services", "company", "training"] as MenuKey[]).map(
             (key) => {
               const isTraining = key === "training";
+              const label =
+                key === "products"
+                  ? "Product Reseller"
+                  : key.charAt(0).toUpperCase() + key.slice(1);
 
               return (
                 <li
@@ -92,7 +98,7 @@ export function Header(): JSX.Element {
                       : "cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
                   }
                 >
-                  {key}
+                  {label}
                 </li>
               );
             },
@@ -139,11 +145,13 @@ export function Header(): JSX.Element {
       {mobileOpen && (
         <div className="lg:hidden w-full bg-[#0B2458] px-6 pb-6">
           <ul className="flex flex-col gap-6 pt-6">
-            {["Home", "Products", "Services", "Company", "Training"].map(
+            {["Home", "Product Reseller", "Services", "Company", "Training"].map(
               (item) => {
                 const isTraining = item === "Training";
                 const isRedirectToGetStarted =
-                  item === "Products" || "Services" || "Company";
+                  item === "Product Reseller" ||
+                  item === "Services" ||
+                  item === "Company";
                 return (
                   <li key={item}>
                     {isTraining ? (
