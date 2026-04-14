@@ -47,8 +47,8 @@ export default function HeroSection({ data }: HeroSectionProps) {
         <div className="flex items-start gap-6 md:gap-10 lg:gap-8">
           
           <div className="flex flex-col md:gap-10 xl:gap-15 md:mt-3 lg:mt-6 xl:mt-10">
-            <button onClick={prevSlide} className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all" dangerouslySetInnerHTML={{ __html: data.icons[0] }} />
-            <button onClick={nextSlide} className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all" dangerouslySetInnerHTML={{ __html: data.icons[1] }} />
+            <button onClick={prevSlide} className="w-[48px] h-[48px] rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all" dangerouslySetInnerHTML={{ __html: data.icons[0] }} />
+            <button onClick={nextSlide} className="w-[48px] h-[48px]  rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all" dangerouslySetInnerHTML={{ __html: data.icons[1] }} />
           </div>
 
           <div className="flex flex-col md:w-[500px] xl:w-[650px]">
