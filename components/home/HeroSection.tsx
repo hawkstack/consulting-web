@@ -8,7 +8,7 @@ interface HeroSectionProps {
   data: Hero;
 }
 
-export default function EnterpriseSection({ data }: HeroSectionProps) {
+export default function HeroSection({ data }: HeroSectionProps) {
   const [active, setActive] = useState(0);
   const { slides } = data;
 
