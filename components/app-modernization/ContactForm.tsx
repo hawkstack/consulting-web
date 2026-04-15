@@ -133,9 +133,9 @@ export default function AppModernizationContactForm({
   return (
     <div
       id="app-modernization-form"
-      className="w-full max-w-[360px] rounded-[20px] bg-[#F5F5F5] p-4 text-[#20283A] shadow-[0_18px_45px_rgba(0,0,0,0.28)] md:max-w-[396px] md:rounded-[18px] md:p-4 lg:p-4"
+      className="w-full rounded-[20px] bg-[#F5F5F5] p-4 text-[#20283A] shadow-[0_18px_45px_rgba(0,0,0,0.28)] md:max-w-[396px] md:rounded-[18px] md:p-4 lg:p-4"
     >
-      <h2 className="mb-4 text-center text-[28px] font-semibold tracking-[0.08em] md:text-[20px] lg:text-[18px]">
+      <h2 className="mb-4 xl:text-left text-center text-[28px] font-semibold md:text-[20px] lg:text-[18px] xl:text-[28px] ">
         {form.title}
       </h2>
 
@@ -145,7 +145,7 @@ export default function AppModernizationContactForm({
             <div key={field.name}>
               <label
                 htmlFor={field.name}
-                className="mb-1 block text-[10px] font-semibold text-[#3A4256]"
+                className="mb-1 block text-[13px] font-semibold text-[#3A4256]"
               >
                 {field.label}
                 {field.required ? " *" : ""}
@@ -158,7 +158,7 @@ export default function AppModernizationContactForm({
                   handleFieldChange(field.name, event.target.value)
                 }
                 placeholder={field.placeholder}
-                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[11px] text-[#20283A] outline-none transition ${
+                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[12px] text-[#20283A] outline-none transition ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#E3E5EA] focus:border-[#0EA5E9]"
@@ -177,7 +177,7 @@ export default function AppModernizationContactForm({
           <div key={field.name}>
             <label
               htmlFor={field.name}
-              className="mb-1 block text-[10px] font-semibold text-[#3A4256]"
+              className="mb-1 block text-[13px] font-semibold text-[#3A4256]"
             >
               {field.label}
               {field.required ? " *" : ""}
@@ -192,7 +192,7 @@ export default function AppModernizationContactForm({
                 }
                 placeholder={field.placeholder}
                 rows={4}
-                className={`min-h-[96px] w-full resize-none rounded-[10px] border bg-white px-3 py-3 text-[11px] text-[#20283A] outline-none transition ${
+                className={`min-h-[96px] w-full resize-none rounded-[12px] border bg-white px-3 py-3 text-[12px] text-[#20283A] outline-none transition ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#E3E5EA] focus:border-[#0EA5E9]"
@@ -226,7 +226,7 @@ export default function AppModernizationContactForm({
         <button
           type="submit"
           disabled={loading}
-          className="mt-2 h-11 w-full rounded-[10px] bg-[#13A7F3] text-[12px] font-semibold text-white transition hover:bg-[#0891d5] disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-2 h-11 w-full rounded-[12px] bg-[#13A7F3] text-[14px] font-semibold text-white transition hover:bg-[#0891d5] disabled:cursor-not-allowed disabled:opacity-70"
         >
           {loading ? "Sending..." : form.submitLabel}
         </button>
