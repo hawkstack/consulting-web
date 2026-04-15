@@ -94,31 +94,12 @@ export default function HeroSection({ data }: HeroSectionProps) {
                 </div>
               ))}
             </div>
-
-            <div className="hidden md:flex flex-row items-center md:gap-2 lg:gap-4 md:mt-0 xl:mt-5">
-              <Link href="/get-started">
-                <button className="flex items-center gap-2 md:px-4 xl:px-8 md:py-3 rounded-full bg-gradient-to-r from-[#219E5C] to-[#122FAD] text-white md:text-[12px] xl:text-[15px] font-medium whitespace-nowrap">
-                  <svg width="10" height="14" viewBox="0 0 12 16" fill="none"><path d="M0.789062 0.789062L10.7692 7.88851L0.789062 14.988L0.789062 0.789062Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  Schedule a Consultation
-                </button>
-              </Link>
-              
-              <button 
-                onClick={handleScroll}
-                className="flex items-center gap-2 md:px-4 xl:px-8 md:py-3 rounded-full bg-[#1331AD] text-white text-[12px] xl:text-[15px] font-medium whitespace-nowrap"
-              >
-                <span>
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3.33203 8H12.6654" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 3.33203L12.6667 7.9987L8 12.6654" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </span> 
-                View Our solutions
-              </button>
-            </div>
           </div>    
         </div>
         
-         <div className="md:hidden flex flex-row items-center gap-2 px-2">
+         <div className="flex flex-row items-center gap-2 px-2 lg:pl-18 md:pl-15 lg:gap-4 md:mt-0 xl:mt-5">
           <Link href="/get-started">
-            <button className="flex items-center gap-2 px-3 py-3 rounded-full bg-gradient-to-r from-[#219E5C] to-[#122FAD] text-white text-[11px] font-medium whitespace-nowrap">
+            <button className="flex items-center gap-2 px-3 py-3 md:px-4 xl:px-8 md:py-3 rounded-full bg-gradient-to-r from-[#219E5C] to-[#122FAD] text-white text-[11px] md:text-[12px] xl:text-[15px] font-medium whitespace-nowrap">
               <svg width="9" height="12" viewBox="0 0 12 16" fill="none"><path d="M0.789062 0.789062L10.7692 7.88851L0.789062 14.988L0.789062 0.789062Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               Schedule a Consultation
             </button>
@@ -126,10 +107,10 @@ export default function HeroSection({ data }: HeroSectionProps) {
           
           <button 
             onClick={handleScroll}
-            className="flex items-center gap-2 px-3 py-3 rounded-full bg-[#1331AD] text-white text-[11px] font-medium whitespace-nowrap"
+            className="flex items-center gap-2 px-3 py-3 md:px-4 xl:px-8 md:py-3 rounded-full bg-[#1331AD] text-white text-[11px] md:text-[12px] xl:text-[15px] font-medium whitespace-nowrap"
           >
             <span className="flex items-center gap-2">
-              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3.33203 8H12.6654" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 3.33203L12.6667 7.9987L8 12.6654" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3.33203 8H12.6654" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 3.33203L12.6667 7.9987L8 12.6654" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>
               View Our solutions
             </span> 
           </button>
