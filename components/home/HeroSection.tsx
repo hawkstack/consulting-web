@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Hero } from "@/types/home/home";
+import { HeroSectionData } from "@/types/home/home";
 
-type HeroSectionProps = {
-  data: Hero;
+type HeroProps = {
+  data: HeroSectionData;
 }
 
-export default function HeroSection({ data }: HeroSectionProps) {
+export default function HeroSection({ data }: HeroProps) {
   const [active, setActive] = useState(0);
   const { slides } = data;
 

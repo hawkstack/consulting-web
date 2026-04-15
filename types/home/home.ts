@@ -3,7 +3,7 @@ export type heroSlides = {
     desc: string;
 }
 
-export type Hero = {
+export type HeroSectionData = {
     slides: heroSlides[];
     bgVideo: string;
     bg: string;
@@ -25,6 +25,6 @@ export type PlatformSectionData = {
 };
 
 export type HomePageData = {
-    hero: Hero;
-    platform: PlatformSectionData;
+    heroSectionData: HeroSectionData;
+    platformSectionData: PlatformSectionData;
 };

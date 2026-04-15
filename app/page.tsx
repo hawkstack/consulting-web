@@ -31,18 +31,18 @@ const cardsData = [
 
 export default function HomePage () {
   const { 
-    hero, platform
+    heroSectionData, platformSectionData
   } = homePageData;
   return (
     <div>
-      <HeroSection data = {hero}/>
+      <HeroSection data = {heroSectionData}/>
       <VisionApproach />
       <WhyHawkstackSection
         title="Why HawkStack"
         description="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
       />
       <OurSolutions />
-      <PlatformSection data = {platform}/>
+      <PlatformSection data = {platformSectionData}/>
       <StrategicPartners />
       <JoinOurTeam />
       <WhyWorkWithUs

@@ -1,7 +1,7 @@
 import { HomePageData } from "@/types/home/home";
 
 export const homePageData: HomePageData = {
-    hero: {
+    heroSectionData: {
         slides: [
             {
                 title: "KubeVirtStack Virtualization Platform",
@@ -29,7 +29,7 @@ export const homePageData: HomePageData = {
         ]
     },
     
-    platform: {
+    platformSectionData: {
         bgImage: "/images/home/Border-bg.webp",
         title: [
             "A Simpler",
