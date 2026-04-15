@@ -5,7 +5,7 @@ import { seoMeta } from "../components/seo/seoMeta";
 import HeroSection from "@/components/home/HeroSection";
 import VisionApproach from "@/components/home/VisionApproach";
 import OurSolutions from "@/components/home/OurSolutions";
-import WhatWeDeliver from "@/components/home/WhatWeDeliver";
+import PlatformSection from "@/components/home/PlatformSection";
 import StrategicPartners from "@/components/home/StrategicPartners";
 import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
@@ -31,7 +31,7 @@ const cardsData = [
 
 export default function HomePage () {
   const { 
-    hero
+    hero, platform
   } = homePageData;
   return (
     <div>
@@ -42,7 +42,7 @@ export default function HomePage () {
         description="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
       />
       <OurSolutions />
-      <WhatWeDeliver />
+      <PlatformSection data = {platform}/>
       <StrategicPartners />
       <JoinOurTeam />
       <WhyWorkWithUs
