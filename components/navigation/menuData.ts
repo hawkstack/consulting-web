@@ -61,6 +61,7 @@ export const services: MegaItem[] = [
     description:
       "Upgrade and re-architect legacy applications using modern frameworks, cloud platforms, and microservices for agility and growth. ",
     image: "/images/services/App-Modernization.webp",
+    href: "/app-modernization",
   },
   {
     id: "kubeVirt",
