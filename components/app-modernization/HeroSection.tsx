@@ -18,7 +18,7 @@ export default function AppModernizationHeroSection({
               {content.badge}
             </span>
 
-            <h1 className="mt-4 max-w-[380px] text-[22px] font-[600px] text-[#ffffff] leading-[1.08] tracking-[-0.04em] md:text-[40px] xl:text-[60px]">
+            <h1 className="mt-4 max-w-[580px] text-[22px] font-[600px] text-[#ffffff] leading-[1.08] tracking-[-0.04em] md:text-[40px] xl:text-[60px]">
               {content.title}
             </h1>
 
