@@ -1,4 +1,7 @@
-import type { AppModernizationHeroContent } from "@/app/types/app-modernization";
+import type {
+  AppModernizationHeroContent,
+  AppModernizationWhySectionContent,
+} from "@/app/types/app-modernization";
 
 export const appModernizationHeroContent: AppModernizationHeroContent = {
   badge: "Strategic Partnership & Memberships",
@@ -62,3 +65,20 @@ export const appModernizationHeroContent: AppModernizationHeroContent = {
     ],
   },
 };
+
+export const appModernizationWhySectionContent: AppModernizationWhySectionContent =
+  {
+    badge: "Why App Modernization",
+    title: "Modern System Create Speed, Resilience and Growth",
+    description:
+      "Aging applications slow teams down, increase operating costs, and create barriers to innovation. Our app modernization services help organizations improve performance, simplify maintenance, and unlock faster business change.",
+    gainsTitle: "What you gain",
+    gains: [
+      "Faster release cycles",
+      "Lower maintenance cost",
+      "Improved application performance",
+      "Better scalability and uptime",
+      "Enhanced security posture",
+      "Stronger customer and employee experiences",
+    ],
+  };

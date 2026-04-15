@@ -28,3 +28,11 @@ export interface AppModernizationHeroContent {
   buttons: AppModernizationButton[];
   form: AppModernizationFormContent;
 }
+
+export interface AppModernizationWhySectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  gainsTitle: string;
+  gains: string[];
+}
