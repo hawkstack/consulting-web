@@ -5,7 +5,7 @@ import { seoMeta } from "../components/seo/seoMeta";
 import HeroSection from "@/components/home/HeroSection";
 import VisionApproach from "@/components/home/VisionApproach";
 import OurSolutions from "@/components/home/OurSolutions";
-import WhatWeDeliver from "@/components/home/WhatWeDeliver";
+import PlatformSection from "@/components/home/PlatformSection";
 import StrategicPartners from "@/components/home/StrategicPartners";
 import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
@@ -13,6 +13,7 @@ import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactFormSection";
 import WhyHawkstackSection from "@/components/home/whyHawkstack/whyHawkstackSection";
 import { SOLUTIONS } from "@/constants";
+import { homePageData } from "@/data/home/home";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -28,17 +29,20 @@ const cardsData = [
   },
 ];
 
-const Home = () => {
+export default function HomePage () {
+  const { 
+    heroSectionData, platformSectionData
+  } = homePageData;
   return (
     <div>
-      <HeroSection />
+      <HeroSection data = {heroSectionData}/>
       <VisionApproach />
       <WhyHawkstackSection
         title="Why HawkStack"
         description="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
       />
       <OurSolutions />
-      <WhatWeDeliver />
+      <PlatformSection data = {platformSectionData}/>
       <StrategicPartners />
       <JoinOurTeam />
       <WhyWorkWithUs
@@ -51,5 +55,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
