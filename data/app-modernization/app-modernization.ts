@@ -2,6 +2,7 @@ import type {
   AppModernizationCapabilitiesSectionContent,
   AppModernizationHeroContent,
   AppModernizationProcessSectionContent,
+  AppModernizationWhyHawkStackSectionContent,
   AppModernizationWhySectionContent,
 } from "@/app/types/app-modernization";
 
@@ -182,5 +183,19 @@ export const appModernizationProcessSectionContent: AppModernizationProcessSecti
         tabletOrder: 4,
         desktopOrder: 4,
       },
+    ],
+  };
+
+export const appModernizationWhyHawkStackSectionContent: AppModernizationWhyHawkStackSectionContent =
+  {
+    badge: "Why HawkStack",
+    title: "Practical modernization built around business outcomes",
+    description:
+      "We align modernization efforts with your operational goals, user needs, and technology landscape. That means less disruption, clearer priorities, and measurable outcomes.",
+    points: [
+      "Low risk phased delivery approach",
+      "Business first modernization strategy",
+      "Cloud, application, and DevOps expertise",
+      "Built for scale, security, and maintainability",
     ],
   };
