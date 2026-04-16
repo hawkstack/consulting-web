@@ -1,6 +1,7 @@
 import type {
   AppModernizationCapabilitiesSectionContent,
   AppModernizationHeroContent,
+  AppModernizationProcessSectionContent,
   AppModernizationWhySectionContent,
 } from "@/app/types/app-modernization";
 
@@ -137,5 +138,49 @@ export const appModernizationWhySectionContent: AppModernizationWhySectionConten
       "Better scalability and uptime",
       "Enhanced security posture",
       "Stronger customer and employee experiences",
+    ],
+  };
+
+export const appModernizationProcessSectionContent: AppModernizationProcessSectionContent =
+  {
+    badge: "Our Process",
+    title: "A phased approach that reduces risk and delivers value faster",
+    steps: [
+      {
+        stepNumber: "01.",
+        title: "Discover",
+        description:
+          "We assess your current systems, business priorities, risks, and modernization opportunities.",
+        mobileOrder: 1,
+        tabletOrder: 1,
+        desktopOrder: 1,
+      },
+      {
+        stepNumber: "02.",
+        title: "Prioritize",
+        description:
+          "We define a practical roadmap based on impact, complexity, budget, and time-to-value.",
+        mobileOrder: 2,
+        tabletOrder: 3,
+        desktopOrder: 2,
+      },
+      {
+        stepNumber: "03.",
+        title: "Modernize",
+        description:
+          "We execute migration, refactoring, UI upgrades, and platform improvements in focused phases.",
+        mobileOrder: 3,
+        tabletOrder: 2,
+        desktopOrder: 3,
+      },
+      {
+        stepNumber: "04.",
+        title: "Optimize",
+        description:
+          "We monitor, fine-tune, and continuously improve reliability, performance, and cost efficiency.",
+        mobileOrder: 4,
+        tabletOrder: 4,
+        desktopOrder: 4,
+      },
     ],
   };
