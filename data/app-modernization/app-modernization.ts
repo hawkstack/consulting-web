@@ -1,4 +1,5 @@
 import type {
+  AppModernizationCapabilitiesSectionContent,
   AppModernizationHeroContent,
   AppModernizationWhySectionContent,
 } from "@/app/types/app-modernization";
@@ -65,6 +66,62 @@ export const appModernizationHeroContent: AppModernizationHeroContent = {
     ],
   },
 };
+
+export const appModernizationCapabilitiesSectionContent: AppModernizationCapabilitiesSectionContent =
+  {
+    badge: "Capabilities",
+    title: "End to end application modernization services",
+    services: [
+      {
+        title: "Legacy Assessment",
+        description:
+          "Audit existing applications, dependencies, performance bottlenecks, and technical debt to define a modernization roadmap.",
+        mobileOrder: 1,
+        tabletOrder: 1,
+        desktopOrder: 1,
+      },
+      {
+        title: "Cloud Migration",
+        description:
+          "Replatform or refactor applications for AWS, Azure, or GCP with resilience, scalability, and cost control in mind.",
+        mobileOrder: 2,
+        tabletOrder: 2,
+        desktopOrder: 2,
+      },
+      {
+        title: "DevOps & Automation",
+        description:
+          "Implement CI/CD, IaC, observability, and automated testing to accelerate releases and reduce operational risk.",
+        mobileOrder: 3,
+        tabletOrder: 3,
+        desktopOrder: 5,
+      },
+      {
+        title: "Security & Compliance",
+        description:
+          "Embed security best practices, identity controls, monitoring, and governance into every modernization stage.",
+        mobileOrder: 4,
+        tabletOrder: 4,
+        desktopOrder: 6,
+      },
+      {
+        title: "Architecture Modernization",
+        description:
+          "Move from monoliths to modular, API-first, event-driven, or microservices-based architectures where it makes sense.",
+        mobileOrder: 5,
+        tabletOrder: 5,
+        desktopOrder: 3,
+      },
+      {
+        title: "UI/UX Refresh",
+        description:
+          "Modernize user interfaces and customer journeys to improve adoption, productivity, and satisfaction.",
+        mobileOrder: 6,
+        tabletOrder: 6,
+        desktopOrder: 4,
+      },
+    ],
+  };
 
 export const appModernizationWhySectionContent: AppModernizationWhySectionContent =
   {

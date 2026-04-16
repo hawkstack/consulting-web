@@ -29,6 +29,20 @@ export interface AppModernizationHeroContent {
   form: AppModernizationFormContent;
 }
 
+export interface AppModernizationCapabilitiesSectionContent {
+  badge: string;
+  title: string;
+  services: AppModernizationCapabilityItem[];
+}
+
+export interface AppModernizationCapabilityItem {
+  title: string;
+  description: string;
+  mobileOrder?: number;
+  tabletOrder?: number;
+  desktopOrder?: number;
+}
+
 export interface AppModernizationWhySectionContent {
   badge: string;
   title: string;
