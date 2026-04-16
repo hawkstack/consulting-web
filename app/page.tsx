@@ -11,7 +11,7 @@ import JoinOurTeam from "@/components/home/JoinOurTeam";
 import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
 import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactFormSection";
-import WhyHawkstackSection from "@/components/home/whyHawkstack/whyHawkstackSection";
+import ProductReseller from "@/components/home/ProductReseller";
 import { SOLUTIONS } from "@/constants";
 import { homePageData } from "@/data/home/home";
 
@@ -31,16 +31,13 @@ const cardsData = [
 
 export default function HomePage () {
   const { 
-    heroSectionData, platformSectionData
+    heroSectionData, productsSectionData, platformSectionData
   } = homePageData;
   return (
     <div>
       <HeroSection data = {heroSectionData}/>
       <VisionApproach />
-      <WhyHawkstackSection
-        title="Why HawkStack"
-        description="HawkStack delivers real, hands-on cloud skills that translate directly into real-world impact."
-      />
+      <ProductReseller data = {productsSectionData} />
       <OurSolutions />
       <PlatformSection data = {platformSectionData}/>
       <StrategicPartners />
