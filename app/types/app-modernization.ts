@@ -65,3 +65,10 @@ export interface AppModernizationProcessSectionContent {
   title: string;
   steps: AppModernizationProcessItem[];
 }
+
+export interface AppModernizationWhyHawkStackSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  points: string[];
+}
