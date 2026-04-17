@@ -137,9 +137,18 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
     };
 
     return (
-      <div ref={ref} className="w-full bg-white">
-        <div className="relative w-full bg-[#0E245A]">
-          <div className="flex flex-col items-center px-4 pt-20 md:pt-28 pb-20 md:pb-28 text-white">
+      <div ref={ref} className="w-full bg-white pt-8 xl:pt-20 overflow-hidden">
+        <div className="relative w-full">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[270%] md:w-[120%] lg:w-[150%] z-0 pointer-events-none">
+            <div className="relative w-full h-full aspect-square ">
+              <img 
+                src="/images/home/bg-circle.webp" 
+                alt="Background Glow" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="relative flex flex-col items-center px-4 pt-20 md:pt-28 pb-10 md:pb-15 z-10 text-white">
             {/* Heading */}
             <div className="text-center">
               <h2 className="font-['Lexend_Deca'] text-[24px] md:text-[32px] lg:text-[36px] font-medium leading-tight">
