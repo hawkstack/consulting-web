@@ -41,7 +41,7 @@ export function Header(): JSX.Element {
   };
 
   return (
-    <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F]">
+    <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F] font-lexend">
       <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[90px] px-4 md:px-8 lg:px-10  xl:px-24 flex items-center">
         {/* LOGO */}
         <div
@@ -81,7 +81,7 @@ export function Header(): JSX.Element {
               const isTraining = key === "training";
               const label =
                 key === "products"
-                  ? "Product Reseller"
+                  ? "What we Offer ?"
                   : key.charAt(0).toUpperCase() + key.slice(1);
 
               return (
@@ -147,11 +147,11 @@ export function Header(): JSX.Element {
       {mobileOpen && (
         <div className="lg:hidden w-full bg-[#0B2458] px-6 pb-6">
           <ul className="flex flex-col gap-6 pt-6">
-            {["Home", "Product Reseller", "Services", "Company", "Training"].map(
+            {["Home", "What we Offer ?", "Services", "Company", "Training"].map(
               (item) => {
                 const isTraining = item === "Training";
                 const isRedirectToGetStarted =
-                  item === "Product Reseller" ||
+                  item === "What we Offer ?" ||
                   item === "Services" ||
                   item === "Company";
                 return (
