@@ -6,8 +6,8 @@ import HeroSection from "@/components/home/HeroSection";
 import VisionApproach from "@/components/home/VisionApproach";
 import GlobalTechnology from "@/components/home/GlobalTechnology";
 import PlatformSection from "@/components/home/PlatformSection";
+import CloudInnovation from "@/components/home/CloudInnovation";
 import WhatWeDo from "@/components/home/WhatWeDo";
-import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactFormSection";
 import ProductReseller from "@/components/home/ProductReseller";
 import { homePageData } from "@/data/home/home";
@@ -28,7 +28,7 @@ const cardsData = [
 
 export default function HomePage () {
   const { 
-    heroSectionData, productsSectionData, globalSectionData, platformSectionData, whatWeDoSectionData
+    heroSectionData, productsSectionData, globalSectionData, platformSectionData, cloudSectionData, whatWeDoSectionData
   } = homePageData;
   return (
     <div>
@@ -37,8 +37,8 @@ export default function HomePage () {
       <ProductReseller data = {productsSectionData} />
       <GlobalTechnology data = {globalSectionData} />
       <PlatformSection data = {platformSectionData}/>
+      <CloudInnovation data = {cloudSectionData} />
       <WhatWeDo data = {whatWeDoSectionData} />
-      <Industries />
       <ContactCTA />
     </div>
   );

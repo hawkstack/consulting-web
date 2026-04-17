@@ -244,5 +244,15 @@ export const homePageData: HomePageData = {
                 link: ""
             }
         ],
+    },
+    cloudSectionData: {
+        title: {
+    main: "Build the",
+    highlight: "next wave",
+    suffix: "of cloud innovation."
+  },
+        desc: "As a silver member of CNCF, HawkStack actively with the cloud native community and contributes through initiatives like kubeVirtStack, focused on Modern virtualization on Kubernetes.",
+        videoDesktop: "/videos/Blue_Background.mp4",
+        videoMobile: "/videos/Blue_Background-mobile.mp4"
     }
 }
