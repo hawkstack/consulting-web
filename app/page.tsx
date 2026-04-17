@@ -6,9 +6,7 @@ import HeroSection from "@/components/home/HeroSection";
 import VisionApproach from "@/components/home/VisionApproach";
 import OurSolutions from "@/components/home/OurSolutions";
 import PlatformSection from "@/components/home/PlatformSection";
-import StrategicPartners from "@/components/home/StrategicPartners";
-import JoinOurTeam from "@/components/home/JoinOurTeam";
-import WhyWorkWithUs from "@/components/home/WhyWorkWithUs";
+import WhatWeDo from "@/components/home/WhatWeDo";
 import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactFormSection";
 import ProductReseller from "@/components/home/ProductReseller";
@@ -31,7 +29,7 @@ const cardsData = [
 
 export default function HomePage () {
   const { 
-    heroSectionData, productsSectionData, platformSectionData
+    heroSectionData, productsSectionData, platformSectionData, whatWeDoSectionData
   } = homePageData;
   return (
     <div>
@@ -40,13 +38,7 @@ export default function HomePage () {
       <ProductReseller data = {productsSectionData} />
       <OurSolutions />
       <PlatformSection data = {platformSectionData}/>
-      <StrategicPartners />
-      <JoinOurTeam />
-      <WhyWorkWithUs
-        title="Why Work with us"
-        description="Innovate,Grow and Succeed Together"
-        solutions={SOLUTIONS}
-      />
+      <WhatWeDo data = {whatWeDoSectionData} />
       <Industries />
       <ContactCTA />
     </div>
