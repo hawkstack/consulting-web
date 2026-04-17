@@ -72,3 +72,10 @@ export interface AppModernizationWhyHawkStackSectionContent {
   description: string;
   points: string[];
 }
+
+export interface AppModernizationCtaSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  buttons: AppModernizationButton[];
+}
