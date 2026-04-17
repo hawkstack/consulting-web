@@ -42,7 +42,7 @@ export function Header(): JSX.Element {
 
   return (
     <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F]">
-      <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[105px] px-4 md:px-8 lg:px-10  xl:px-24 flex items-center">
+      <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[90px] px-4 md:px-8 lg:px-10  xl:px-24 flex items-center">
         {/* LOGO */}
         <div
           className="
@@ -88,15 +88,17 @@ export function Header(): JSX.Element {
                 <li
                   key={key}
                   onMouseEnter={() => {
+                    if (key === "training") {
+                      setOpenMenu(null);
+                      setActiveItem(null);
+                      return;
+                    }
+
                     setOpenMenu(key);
                     setActiveItem(menuMap[key]?.[0] || null);
                   }}
                   onClick={(e) => handleTrainingClick(e, key)}
-                  className={
-                    isTraining
-                      ? "inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] px-5 py-2 bg-[#5272FF] text-white capitalize cursor-pointer"
-                      : "cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
-                  }
+                  className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
                 >
                   {label}
                 </li>
@@ -106,7 +108,7 @@ export function Header(): JSX.Element {
         </ul>
 
         {/* DESKTOP CTA */}
-        <div className="ml-4 hidden lg:block">
+        <div className="ml-10 hidden lg:block">
           <Link
             href="/get-started"
             className="inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] border border-white text-white"
