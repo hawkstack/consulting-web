@@ -1,4 +1,4 @@
-import { MegaItem } from "./types";
+import { MegaItem, OfferingsMenuContent } from "./types";
 
 /* ================= PRODUCTS ================= */
 export const products: MegaItem[] = [
@@ -51,6 +51,94 @@ export const products: MegaItem[] = [
     image: "/images/products/Mirantis.webp",
   },
 ];
+
+export const offeringsMenuContent: OfferingsMenuContent = {
+  tabs: {
+    product: "Product",
+    productResellers: "Product Resellers",
+  },
+  featured: {
+    title: "KubeVirtStack",
+    description:
+      "Explore KubeVirtStack solutions designed to unify virtualization and Kubernetes, enabling scalable, secure, and cloud-native infrastructure.",
+    image: "/images/products/KubeVirtStack-AI.webp",
+    href: "/get-started",
+  },
+  resellers: [
+    {
+      id: "redhat",
+      title: "RedHat",
+      description:
+        "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
+      image: "/images/home/Redhat.webp",
+      href: "/get-started",
+    },
+    {
+      id: "cncf",
+      title: "CNCF",
+      description:
+        "Cloud-native technologies and frameworks powering modern application development.",
+      image: "/images/home/cncf.webp",
+      href: "/get-started",
+    },
+    {
+      id: "mirantis",
+      title: "Mirantis",
+      description:
+        "Kubernetes and container solutions for scalable and secure cloud environments.",
+      image: "/images/home/Mirantis.webp",
+      href: "/get-started",
+    },
+    {
+      id: "lenovo",
+      title: "Lenovo",
+      description:
+        "High-performance infrastructure and hardware optimized for enterprise workloads.",
+      badge: "L",
+      href: "/get-started",
+    },
+    {
+      id: "aws",
+      title: "AWS",
+      description:
+        "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",
+      image: "/images/home/AWS.webp",
+      href: "/get-started",
+    },
+    {
+      id: "gcp",
+      title: "GCP",
+      description:
+        "Google Cloud solutions for data analytics, AI, and cloud-native innovation.",
+      image: "/images/home/google-cloud.webp",
+      href: "/get-started",
+    },
+    {
+      id: "azure",
+      title: "Azure",
+      description:
+        "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration.",
+      image: "/images/home/Azure.webp",
+      href: "/get-started",
+    },
+    {
+      id: "dell",
+      title: "Dell",
+      description:
+        "Reliable enterprise hardware and infrastructure for modern data centers.",
+      badge: "D",
+      href: "/get-started",
+    },
+    {
+      id: "veeam",
+      title: "Veeam",
+      description:
+        "Data protection, backup, and recovery solutions ensuring business continuity.",
+      badge: "V",
+      href: "/get-started",
+    },
+  ],
+};
 
 /* ================= SERVICES ================= */
 export const services: MegaItem[] = [

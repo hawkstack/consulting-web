@@ -78,7 +78,6 @@ export function Header(): JSX.Element {
 
           {(["products", "services", "company", "training"] as MenuKey[]).map(
             (key) => {
-              const isTraining = key === "training";
               const label =
                 key === "products"
                   ? "What we Offer ?"
@@ -138,6 +137,7 @@ export function Header(): JSX.Element {
               activeItem={activeItem}
               onHoverItem={setActiveItem}
               onClose={() => setOpenMenu(null)}
+              menuKey={openMenu}
             />
           </div>
         )}
