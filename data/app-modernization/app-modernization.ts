@@ -1,4 +1,5 @@
 import type {
+  AppModernizationCtaSectionContent,
   AppModernizationCapabilitiesSectionContent,
   AppModernizationHeroContent,
   AppModernizationProcessSectionContent,
@@ -197,5 +198,25 @@ export const appModernizationWhyHawkStackSectionContent: AppModernizationWhyHawk
       "Business first modernization strategy",
       "Cloud, application, and DevOps expertise",
       "Built for scale, security, and maintainability",
+    ],
+  };
+
+export const appModernizationCtaSectionContent: AppModernizationCtaSectionContent =
+  {
+    badge: "LET'S TALK",
+    title: "Ready to modernize your applications?",
+    description:
+      "We align modernization efforts with your operational goals, user needs, and technology landscape. That means less disruption, clearer priorities, and measurable outcomes.",
+    buttons: [
+      {
+        label: "Download Capability Overview",
+        href: "/get-started",
+        variant: "secondary",
+      },
+      {
+        label: "Talk to an Expert",
+        href: "#app-modernization-form",
+        variant: "primary",
+      },
     ],
   };

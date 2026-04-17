@@ -1,9 +1,11 @@
 import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
 import CapabilitiesSection from "@/components/app-modernization/CapabilitiesSection";
+import CtaSection from "@/components/app-modernization/CtaSection";
 import ProcessSection from "@/components/app-modernization/ProcessSection";
 import WhyHawkStackSection from "@/components/app-modernization/WhyHawkStackSection";
 import WhyAppModernizationSection from "@/components/app-modernization/WhyAppModernizationSection";
 import {
+  appModernizationCtaSectionContent,
   appModernizationCapabilitiesSectionContent,
   appModernizationHeroContent,
   appModernizationProcessSectionContent,
@@ -21,6 +23,7 @@ export default function AppModernizationPage() {
       />
       <ProcessSection content={appModernizationProcessSectionContent} />
       <WhyHawkStackSection content={appModernizationWhyHawkStackSectionContent} />
+      <CtaSection content={appModernizationCtaSectionContent} />
     </>
   );
 }
