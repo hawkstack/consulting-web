@@ -89,6 +89,65 @@ export const homePageData: HomePageData = {
             },
         ]
     },
+
+    globalSectionData: {
+        highlightText: "Strategic Partnership & Memberships",
+        title: "Trusted by Global Technology leaders",
+        desc: "HawkStack Partners with leading enterprise platform and opensource foundations to deliver trusted clud-native, virtualization, and infrastructure modernization solutions.",
+        items: [
+            {
+                id: 1, 
+                partnerName: "Red Hat",
+                status: "Certified Delivery & Support Partner",
+                logo: "/images/home/redhat-partners.webp",
+                tags: [
+                    "Cloud & Service Provider",
+                    "Training Provider",
+                    "Implementation",
+                    "Enterprise Support"
+                ],
+                link: ""
+            },
+            {
+                id: 2, 
+                partnerName: "CNCF",
+                status: "Silver member and ecosystem contributor",
+                logo: "/images/home/cncf-partners.webp",
+                tags: [
+                    "Silver Member",
+                    "Cloud-Native Focus",
+                    "KubeVirtStack Initiative",
+                    "Opensource Alignmnet"
+                ],
+                link: ""
+            },
+            {
+                id: 3, 
+                partnerName: "Mirantis",
+                status: "Certified Delivery Partner",
+                logo: "/images/home/mirantis-partners.webp",
+                tags: [
+                    "OpenStack Expertise",
+                    "Kubernetes Enablement",
+                    "Infrastructure Modernization"
+                ],
+                link: ""
+            },
+            {
+                id: 4, 
+                partnerName: "The Linux Foundation",
+                status: "Silver Partner",
+                logo: "/images/home/linux-partners.webp",
+                tags: [
+                    "Silver Partner",
+                    "Open Source Leadership",
+                    "Enterprise Reliability",
+                    "Future-Ready Platforms"
+                ],
+                link: ""
+            },
+        ],
+    },
     
     platformSectionData: {
         bgImage: "/images/home/Border-bg.webp",
