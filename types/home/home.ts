@@ -24,7 +24,22 @@ export type PlatformSectionData = {
     features: PlatformFeature[];
 };
 
+export type OfferingCard = {
+    id: number;
+    title: string;
+    desc: string;
+    image: string;
+    link: string;
+};
+
+export type WhatWeDoSection = {
+    title: string;
+    description: string;
+    cards: OfferingCard[];
+};
+
 export type HomePageData = {
     heroSectionData: HeroSectionData;
     platformSectionData: PlatformSectionData;
+    whatWeDoSectionData: WhatWeDoSection;
 };

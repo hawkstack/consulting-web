@@ -76,5 +76,53 @@ export const homePageData: HomePageData = {
                 link: "#" 
             },
         ],
+    },
+    whatWeDoSectionData: {
+        title: "What we do?",
+        description: "Innovative Digital Solutions Powering Modern Industries",
+        cards: [
+            {
+                id: 1, 
+                title: "E-commerce & Retail",
+                desc: "Scalable cloud and microservices solutions to enhance digital commerce and customer experience.",
+                image: "/images/home/retail.webp",
+                link: ""
+            },
+            {
+                id: 2, 
+                title: "Telecom & Connectivity",
+                desc: "Cloud-native and automated solutions to enhance telecom networks and connectivity.",
+                image: "/images/home/telecom.webp",
+                link: ""
+            },
+            {
+                id: 3, 
+                title: "DevOps & Automation",
+                desc: "CI/CD and automation solutions to accelerate development and improve system reliability.",
+                image: "/images/home/devops.webp",
+                link: ""
+            },
+            {
+                id: 4, 
+                title: "AI & Data Intelligence",
+                desc: "AI-driven analytics to turn data into actionable insights for smarter decision-making.",
+                image: "/images/home/ai-data.webp",
+                link: ""
+            },
+            {
+                id: 5, 
+                title: "Healthcare & Life Sciences",
+                desc: "Secure and scalable digital solutions to improve healthcare systems and patient outcomes.",
+                image: "/images/home/healthcare.webp",
+                link: ""
+            },
+            {
+                id: 6, 
+                title: "Manufacturing & Industry 4.0",
+                desc: "Smart automation and IoT-driven systems to boost industrial efficiency and innovation.",
+                image: "/images/home/industry.webp",
+                link: ""
+            }
+        ],
     }
 }
