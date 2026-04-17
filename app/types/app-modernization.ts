@@ -50,3 +50,18 @@ export interface AppModernizationWhySectionContent {
   gainsTitle: string;
   gains: string[];
 }
+
+export interface AppModernizationProcessItem {
+  stepNumber: string;
+  title: string;
+  description: string;
+  mobileOrder?: number;
+  tabletOrder?: number;
+  desktopOrder?: number;
+}
+
+export interface AppModernizationProcessSectionContent {
+  badge: string;
+  title: string;
+  steps: AppModernizationProcessItem[];
+}
