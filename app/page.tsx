@@ -4,13 +4,12 @@ import { seoMeta } from "../components/seo/seoMeta";
 
 import HeroSection from "@/components/home/HeroSection";
 import VisionApproach from "@/components/home/VisionApproach";
-import OurSolutions from "@/components/home/OurSolutions";
+import GlobalTechnology from "@/components/home/GlobalTechnology";
 import PlatformSection from "@/components/home/PlatformSection";
 import WhatWeDo from "@/components/home/WhatWeDo";
 import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/home/ContactFormSection";
 import ProductReseller from "@/components/home/ProductReseller";
-import { SOLUTIONS } from "@/constants";
 import { homePageData } from "@/data/home/home";
 
 // Page-level metadata (SEO)
@@ -29,14 +28,14 @@ const cardsData = [
 
 export default function HomePage () {
   const { 
-    heroSectionData, productsSectionData, platformSectionData, whatWeDoSectionData
+    heroSectionData, productsSectionData, globalSectionData, platformSectionData, whatWeDoSectionData
   } = homePageData;
   return (
     <div>
       <HeroSection data = {heroSectionData}/>
       <VisionApproach />
       <ProductReseller data = {productsSectionData} />
-      <OurSolutions />
+      <GlobalTechnology data = {globalSectionData} />
       <PlatformSection data = {platformSectionData}/>
       <WhatWeDo data = {whatWeDoSectionData} />
       <Industries />

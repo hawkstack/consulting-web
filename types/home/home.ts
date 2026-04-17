@@ -26,6 +26,22 @@ export type ProductsSectionData = {
   products: ProductCard[];
 };
 
+export type PartnerCards = {
+    id: number;
+    partnerName: string;
+    status: string;
+    logo: string;
+    tags: string[];
+    link: string;
+};
+
+export type GlobalSectionData = {
+    highlightText: string;
+    title: string;
+    desc: string;
+    items: PartnerCards[];
+};
+
 export type PlatformFeature = {
     id: number;
     title: string;
@@ -57,6 +73,7 @@ export type WhatWeDoSection = {
 export type HomePageData = {
     heroSectionData: HeroSectionData;
     productsSectionData: ProductsSectionData;
+    globalSectionData: GlobalSectionData;
     platformSectionData: PlatformSectionData;
     whatWeDoSectionData: WhatWeDoSection;
 };
