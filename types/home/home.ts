@@ -54,9 +54,21 @@ export type WhatWeDoSection = {
     cards: OfferingCard[];
 };
 
+export type CloudSectionData = {
+    title: {
+        main: string;
+        highlight: string;
+        suffix: string;
+    };
+    desc: string;
+    videoDesktop: string;
+    videoMobile: string;
+};
+
 export type HomePageData = {
     heroSectionData: HeroSectionData;
     productsSectionData: ProductsSectionData;
     platformSectionData: PlatformSectionData;
     whatWeDoSectionData: WhatWeDoSection;
+    cloudSectionData: CloudSectionData;
 };
