@@ -10,6 +10,22 @@ export type HeroSectionData = {
     icons: string[];
 };
 
+export type ProductCard = {
+  id: string;
+  count: string;
+  category: string;
+  title: string;
+  description: string;
+  logo: string;
+  link: string;
+};
+
+export type ProductsSectionData = {
+  title: string;
+  subtitle: string;
+  products: ProductCard[];
+};
+
 export type PlatformFeature = {
     id: number;
     title: string;
@@ -40,6 +56,7 @@ export type WhatWeDoSection = {
 
 export type HomePageData = {
     heroSectionData: HeroSectionData;
+    productsSectionData: ProductsSectionData;
     platformSectionData: PlatformSectionData;
     whatWeDoSectionData: WhatWeDoSection;
 };

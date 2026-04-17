@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+:root {
+  --font-lexend-deca: "Lexend Deca", "Segoe UI", Arial, sans-serif;
+}
+
 /* Font utility */
 .font-lexend {
   font-family: var(--font-lexend-deca), sans-serif;
