@@ -24,6 +24,7 @@ export interface AppModernizationFormContent {
 export interface AppModernizationHeroContent {
   badge: string;
   title: string;
+  highlightedLastLine?: string;
   description: string;
   buttons: AppModernizationButton[];
   form: AppModernizationFormContent;
