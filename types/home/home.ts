@@ -7,8 +7,22 @@ export type HeroSectionData = {
     slides: heroSlides[];
     bgVideo: string;
     bg: string;
-    icons: string[];
 };
+
+export interface CloudServiceItem {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  video: string;
+  imageAlt: string;
+  href: string;
+}
+
+export interface EngineeringDrivenCloudServicesProps {
+  title: string;
+  services: CloudServiceItem[];
+}
 
 export type ProductCard = {
   id: string;
@@ -83,6 +97,7 @@ export type CloudSectionData = {
 
 export type HomePageData = {
     heroSectionData: HeroSectionData;
+    cloudServicesSectionData: EngineeringDrivenCloudServicesProps;
     productsSectionData: ProductsSectionData;
     globalSectionData: GlobalSectionData;
     platformSectionData: PlatformSectionData;

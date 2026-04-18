@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { HeroSectionData } from "@/types/home/home";
+import { DownwardsArrow, UpwardsArrow, VideoIcon, StraightArrow } from "@/components/icons/Home/Home";
 
 type HeroProps = {
   data: HeroSectionData;
@@ -62,16 +63,16 @@ export default function HeroSection({ data }: HeroProps) {
           
           {/* Navigation Icons */}
           <div className="flex flex-col gap-6 md:gap-9 xl:gap-15 mt-1 xl:mt-6">
-            <button 
+            <button
               onClick={prevSlide} 
-              className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all shrink-0" 
-              dangerouslySetInnerHTML={{ __html: data.icons[0] }} 
-            />
+              className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all shrink-0"> 
+              <UpwardsArrow/>
+            </button>
             <button 
               onClick={nextSlide} 
-              className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all shrink-0" 
-              dangerouslySetInnerHTML={{ __html: data.icons[1] }} 
-            />
+              className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all shrink-0">
+                <DownwardsArrow/>
+            </button> 
           </div>
 
           {/* Text & Buttons */}
@@ -100,7 +101,7 @@ export default function HeroSection({ data }: HeroProps) {
          <div className="flex flex-row items-center gap-2 px-2 lg:pl-18 md:pl-15 lg:gap-4 md:mt-0 xl:mt-5">
           <Link href="/get-started">
             <button className="flex items-center gap-2 px-3 py-3 md:px-4 xl:px-8 md:py-3 rounded-full bg-gradient-to-r from-[#219E5C] to-[#122FAD] text-white text-[11px] md:text-[12px] xl:text-[15px] font-medium whitespace-nowrap">
-              <svg width="9" height="12" viewBox="0 0 12 16" fill="none"><path d="M0.789062 0.789062L10.7692 7.88851L0.789062 14.988L0.789062 0.789062Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <VideoIcon/>
               Schedule a Consultation
             </button>
           </Link>
@@ -110,7 +111,7 @@ export default function HeroSection({ data }: HeroProps) {
             className="flex items-center gap-2 px-3 py-3 md:px-4 xl:px-8 md:py-3 rounded-full bg-[#1331AD] text-white text-[11px] md:text-[12px] xl:text-[15px] font-medium whitespace-nowrap"
           >
             <span className="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3.33203 8H12.6654" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 3.33203L12.6667 7.9987L8 12.6654" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <StraightArrow/>
               View Our solutions
             </span> 
           </button>

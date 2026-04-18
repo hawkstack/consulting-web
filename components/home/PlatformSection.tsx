@@ -1,8 +1,8 @@
-import React from 'react';
-import { PlatformSectionData } from '@/types/home/home';
-import Link from 'next/link';
-import Image from 'next/image';
-import { PLATFORM_ICONS } from '@/components/icons/Platform/PlatformIcons';
+import { PlatformSectionData } from "@/types/home/home";
+import Link from "next/link";
+import Image from "next/image";
+import { PLATFORM_ICONS } from"@/components/icons/Home/PlatformIcons";
+import { RightArrow } from "@/components/icons/Home/Home";
 
 type PlatformProps = {
   data: PlatformSectionData;
@@ -62,7 +62,7 @@ export default function PlatformSection({ data } : PlatformProps) {
                   Know more
                 </Link>
                 <span>
-                  <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.7729 2.14103C14.6312 2.02843 14.5174 1.89247 14.4382 1.74126C14.359 1.59006 14.3161 1.4267 14.312 1.26094C14.3079 1.09518 14.3427 0.930411 14.4144 0.776464C14.4861 0.622516 14.5931 0.482544 14.7291 0.364896C14.8652 0.247248 15.0274 0.154336 15.2061 0.0917025C15.3848 0.0290687 15.5764 -0.00200336 15.7695 0.000339237C15.9625 0.00268183 16.153 0.038391 16.3296 0.105337C16.5062 0.172284 16.6653 0.269095 16.7974 0.389997L24.4909 6.95142C24.7611 7.18209 24.9136 7.49543 24.9149 7.8226C24.9163 8.14977 24.7663 8.46402 24.4981 8.69632L16.8584 15.304C16.7273 15.4257 16.569 15.5235 16.3929 15.5915C16.2169 15.6595 16.0267 15.6963 15.8337 15.6998C15.6407 15.7033 15.4488 15.6734 15.2696 15.6119C15.0903 15.5503 14.9274 15.4584 14.7904 15.3416C14.6534 15.2247 14.5452 15.0854 14.4723 14.9319C14.3994 14.7784 14.3632 14.6138 14.3659 14.4481C14.3686 14.2823 14.4102 14.1187 14.4882 13.967C14.5661 13.8153 14.6788 13.6787 14.8196 13.5652L20.0146 9.072L1.44221 9.12802C1.06096 9.12917 0.694796 9.0002 0.424266 8.76948C0.153738 8.53876 0.00100508 8.22519 -0.000333959 7.89776C-0.001673 7.57032 0.148491 7.25584 0.417126 7.02349C0.685763 6.79115 1.05086 6.65997 1.43211 6.65882L20.0045 6.60279L14.7729 2.14103Z" fill="#2E85FF"/></svg>
+                  <RightArrow className="text-[#2E85FF]"/>
                 </span>
               </div>
             </div>

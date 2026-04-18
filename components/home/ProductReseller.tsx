@@ -1,6 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 import { ProductsSectionData } from "@/types/home/home";
+import { StraightArrow } from "@/components/icons/Home/Home";
 
 type Props = {
   data: ProductsSectionData;
@@ -59,9 +59,7 @@ export default function ProductGrid({data}: Props) {
             >
               Learn More 
               <span className="ml-2">
-                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.33464 0.667969L8.66797 4.0013M8.66797 4.0013L5.33464 7.33464M8.66797 4.0013H0.667969" stroke="#1647C3" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <StraightArrow className = "text-[#1344AD]"/>
               </span>
             </Link>
           </div>
