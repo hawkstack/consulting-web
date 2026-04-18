@@ -18,8 +18,13 @@ export default function AppModernizationHeroSection({
               {content.badge}
             </span>
 
-            <h1 className="mt-4 max-w-[580px] text-[22px] font-[600px] text-[#ffffff] leading-[1.08] tracking-[-0.04em] md:text-[40px] xl:text-[60px]">
-              {content.title}
+            <h1 className="mt-4 max-w-[580px] text-[22px] font-[600] text-[#ffffff] leading-[1.08] tracking-[-0.04em] md:text-[40px] xl:text-[60px]">
+              <span>{content.title}</span>
+              {content.highlightedLastLine ? (
+                <span className="block text-[#1D6DFF]">
+                  {content.highlightedLastLine}
+                </span>
+              ) : null}
             </h1>
 
             <p className="mt-3 max-w-[620px] text-[14px] leading-7 text-[#ffffff] md:text-[16px] md:leading-8 xl:text-[20px]">

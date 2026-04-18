@@ -1,4 +1,69 @@
+import type { AppModernizationHeroContent } from "@/app/types/app-modernization";
 import type { AutomationCapabilitiesSectionContent } from "@/app/types/automation";
+
+export const automationHeroContent: AppModernizationHeroContent = {
+  badge: "Enterprise Grade Ansible Solutions",
+  title: "Automate infrastructure operations with enterprise grade",
+  highlightedLastLine: "Ansible solutions",
+  description:
+    "HawkStack helps teams eliminate repetitive manual work, standardize infrastructure changes, and accelerate deployments using scalable Ansible automation built for modern operations.",
+  buttons: [
+    {
+      label: "Book a Consultation",
+      href: "#app-modernization-form",
+      variant: "primary",
+    },
+    {
+      label: "Explore Services",
+      href: "/get-started",
+      variant: "secondary",
+    },
+  ],
+  form: {
+    title: "GET IN TOUCH",
+    submitLabel: "Send Message",
+    successMessage: "Message sent successfully.",
+    errorMessage: "Something went wrong. Please try again.",
+    source: "automation",
+    fields: [
+      {
+        name: "firstName",
+        label: "First Name",
+        placeholder: "Enter first name",
+        type: "text",
+        required: true,
+      },
+      {
+        name: "lastName",
+        label: "Last Name",
+        placeholder: "Enter last name",
+        type: "text",
+        required: true,
+      },
+      {
+        name: "email",
+        label: "Email",
+        placeholder: "Enter your email",
+        type: "email",
+        required: true,
+      },
+      {
+        name: "phone",
+        label: "Mobile Number",
+        placeholder: "Enter your mobile number",
+        type: "tel",
+        required: true,
+      },
+      {
+        name: "message",
+        label: "Your Message",
+        placeholder: "Enter your message",
+        type: "textarea",
+        required: true,
+      },
+    ],
+  },
+};
 
 export const automationCapabilitiesSectionContent: AutomationCapabilitiesSectionContent =
   {
