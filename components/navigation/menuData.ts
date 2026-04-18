@@ -166,6 +166,7 @@ export const services: MegaItem[] = [
     description:
       "Streamline infrastructure, CI/CD, and operational tasks through intelligent automation and orchestration.",
     image: "/images/services/Automation.webp",
+    href: "/automation",
   },
   {
     id: "cloud platform operation",
