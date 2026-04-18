@@ -1,5 +1,8 @@
 import type { AppModernizationHeroContent } from "@/app/types/app-modernization";
-import type { AutomationCapabilitiesSectionContent } from "@/app/types/automation";
+import type {
+  AutomationCapabilitiesSectionContent,
+  AutomationOfferSectionContent,
+} from "@/app/types/automation";
 
 export const automationHeroContent: AppModernizationHeroContent = {
   badge: "Enterprise Grade Ansible Solutions",
@@ -106,3 +109,28 @@ export const automationCapabilitiesSectionContent: AutomationCapabilitiesSection
       },
     ],
   };
+
+export const automationOfferSectionContent: AutomationOfferSectionContent = {
+  badge: "WHAT WE OFFER",
+  title: "Ansible automation services designed for reliability and scale",
+  description:
+    "From initial automation strategy to full implementation, HawkStack helps organizations transform infrastructure management into a repeatable, efficient, and auditable operating model.",
+  fitTitle: "Best fit for teams that need to:",
+  fitPoints: [
+    "Reduce manual server administration and repetitive operational tasks",
+    "Improve deployment speed and reliability across environments",
+    "Minimize downtime caused by inconsistent configurations",
+    "Scale infrastructure operations without scaling operational overhead",
+    "Strengthen governance with auditable, version-controlled automation",
+  ],
+  offerings: [
+    "Ansible playbook design and implementation",
+    "Server provisioning and configuration management",
+    "Patch management and update orchestration",
+    "Cloud, VM, and hybrid infrastructure automation",
+    "Application deployment automation",
+    "Runbook modernization and operational workflow automation",
+    "CI/CD and DevOps pipeline integration",
+    "Automation health review and optimization",
+  ],
+};

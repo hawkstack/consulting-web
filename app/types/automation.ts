@@ -12,3 +12,12 @@ export interface AutomationCapabilitiesSectionContent {
   title?: string;
   services: AutomationCapabilityItem[];
 }
+
+export interface AutomationOfferSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  fitTitle: string;
+  fitPoints: string[];
+  offerings: string[];
+}
