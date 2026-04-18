@@ -1,9 +1,7 @@
-// app/page.tsx
-import React from "react";
 import { seoMeta } from "../components/seo/seoMeta";
 
 import HeroSection from "@/components/home/HeroSection";
-import VisionApproach from "@/components/home/VisionApproach";
+import EngineeringDrivenCloudServices from "@/components/home/EngineeringDrivenCloudServices";
 import GlobalTechnology from "@/components/home/GlobalTechnology";
 import PlatformSection from "@/components/home/PlatformSection";
 import CloudInnovation from "@/components/home/CloudInnovation";
@@ -18,22 +16,14 @@ export const metadata = seoMeta({
   description: "Red Hat Training & Certification Courses | Bengaluru",
 });
 
-const cardsData = [
-  {
-    title: "Vision",
-    iconSrc: "/icons/vision.png",
-    texts: ["Evolution", "Innovation", "Growth"],
-  },
-];
-
 export default function HomePage () {
   const { 
-    heroSectionData, productsSectionData, globalSectionData, platformSectionData, cloudSectionData, whatWeDoSectionData
+    heroSectionData, cloudServicesSectionData, productsSectionData, globalSectionData, platformSectionData, cloudSectionData, whatWeDoSectionData
   } = homePageData;
   return (
     <div>
       <HeroSection data = {heroSectionData}/>
-      <VisionApproach />
+      <EngineeringDrivenCloudServices data = {cloudServicesSectionData} />
       <ProductReseller data = {productsSectionData} />
       <GlobalTechnology data = {globalSectionData} />
       <PlatformSection data = {platformSectionData}/>

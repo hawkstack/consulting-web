@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { GlobalSectionData } from "@/types/home/home";
-import ArrowIcon from "@/components/icons/Home/arrow";
+import { ArrowIcon } from "@/components/icons/Home/Home";
 
 type GlobalProps = {
   data: GlobalSectionData;
@@ -49,7 +49,7 @@ export default function OurSolutions({ data }: GlobalProps) {
               </div>
 
               <div className="absolute bottom-6 right-6 w-10 h-10 bg-[#D8E3FF] rounded-full flex items-center justify-center">
-                <ArrowIcon/>
+                <ArrowIcon className = "text-[#0048FF]"/>
               </div>
             </div>
           ))}
