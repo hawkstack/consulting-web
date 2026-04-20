@@ -27,6 +27,7 @@ export interface AppModernizationHeroContent {
   highlightedLastLine?: string;
   description: string;
   buttons: AppModernizationButton[];
+  tags?: string[];
   form: AppModernizationFormContent;
 }
 
