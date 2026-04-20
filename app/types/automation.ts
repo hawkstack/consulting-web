@@ -21,3 +21,13 @@ export interface AutomationOfferSectionContent {
   fitPoints: string[];
   offerings: string[];
 }
+
+export interface AutomationProcessStepItem {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface AutomationProcessSectionContent {
+  steps: AutomationProcessStepItem[];
+}

@@ -2,6 +2,7 @@ import type { AppModernizationHeroContent } from "@/app/types/app-modernization"
 import type {
   AutomationCapabilitiesSectionContent,
   AutomationOfferSectionContent,
+  AutomationProcessSectionContent,
 } from "@/app/types/automation";
 
 export const automationHeroContent: AppModernizationHeroContent = {
@@ -132,5 +133,28 @@ export const automationOfferSectionContent: AutomationOfferSectionContent = {
     "Runbook modernization and operational workflow automation",
     "CI/CD and DevOps pipeline integration",
     "Automation health review and optimization",
+  ],
+};
+
+export const automationProcessSectionContent: AutomationProcessSectionContent = {
+  steps: [
+    {
+      number: "01",
+      title: "Assessment & Planning",
+      description:
+        "We map your current infrastructure processes, identify repetitive work, and define the highest-value automation opportunities.",
+    },
+    {
+      number: "02",
+      title: "Implementation & Integration",
+      description:
+        "We build maintainable playbooks, roles, and automation workflows that align with your environments, tooling, and governance needs.",
+    },
+    {
+      number: "03",
+      title: "Optimization & Expansion",
+      description:
+        "We refine existing automations, improve coverage, and enable your team to scale with documented, reusable automation assets.",
+    },
   ],
 };
