@@ -44,6 +44,15 @@ export default function AppModernizationHeroSection({
                 </Link>
               ))}
             </div>
+            {content.tags && content.tags.length > 0 && (
+              <div className="flex flex-wrap gap-x-5 text-[#525252] text-[12px] lg:text-[14px] justify-center md:justify-start font-medium mt-5">
+                {content.tags.map((tech) => (
+                  <span key={tech}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="w-full md:mx-0 md:justify-self-end">
