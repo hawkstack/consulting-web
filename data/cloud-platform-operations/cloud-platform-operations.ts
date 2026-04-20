@@ -4,7 +4,7 @@ import { CloudIcon, WaveIcon, DevopsIcon, DecrementIcon } from "@/components/ico
 export const cloudPlatformOperationsPageData: CloudPlatformOperationsPageData = {
     heroSectionData: {
         badge: "Reliable. Scalable. Optimized.",
-        title: "Cloud PlatformOperations That Scale With Your Business",
+        title: "Cloud Platform Operations That Scale With Your Business",
         description:
             "We design, manage, and optimize cloud infrastructure for performance,resilience, security, and cost efficiency so your teams can move fasterwith confidence.",
         buttons: [
