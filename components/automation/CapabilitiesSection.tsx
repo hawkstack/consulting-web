@@ -57,15 +57,15 @@ function AutomationCard({
         centered
           ? "flex flex-col items-center text-center"
           : "flex flex-col items-start text-left"
-      } md:min-h-[230px] md:px-7 md:py-7 lg:min-h-[214px] lg:px-6 lg:py-6`}
+      } md:min-h-[230px] md:px-7 md:py-7 xl:min-h-[214px] xl:px-6 xl:py-6`}
     >
       <CapabilityIcon icon={service.icon} />
 
-      <h3 className="mt-3 max-w-[240px] text-[19px] font-semibold leading-[1.4] tracking-[-0.03em] text-[#111827] md:text-[20px] lg:text-[21px]">
+      <h3 className="mt-3 mb-2 max-w-[240px] md:max-w-[400px] text-[19px] font-semibold leading-[1.4] tracking-[-0.03em] text-[#111827] md:text-[20px] lg:text-[21px]">
         {service.title}
       </h3>
 
-      <p className="mt-3   max-w-[260px] text-[13px] leading-[1.8] text-[#374151] md:text-[14px] lg:text-[16px] lg:leading-[1.75]">
+      <p className="mt-auto max-w-[260px] md:max-w-[360px] text-[13px] leading-[1.8] text-[#374151] md:text-[14px] lg:text-[16px] lg:leading-[1.75]">
         {service.description}
       </p>
     </article>
@@ -111,13 +111,13 @@ export default function CapabilitiesSection({
             ))}
           </div>
 
-          <div className="hidden grid-cols-2 gap-6 md:grid lg:hidden">
+          <div className="hidden grid-cols-2 gap-6 md:grid xl:hidden">
             {tabletServices.map((service) => (
               <AutomationCard key={`tablet-${service.title}`} service={service} />
             ))}
           </div>
 
-          <div className="hidden grid-cols-4 gap-8 lg:grid">
+          <div className="hidden grid-cols-4 gap-4 xl:grid">
             {desktopServices.map((service) => (
               <AutomationCard key={`desktop-${service.title}`} service={service} />
             ))}

@@ -2,11 +2,13 @@ import AppModernizationHeroSection from "@/components/app-modernization/HeroSect
 import CapabilitiesSection from "@/components/automation/CapabilitiesSection";
 import OfferSection from "@/components/automation/OfferSection";
 import ProcessSection from "@/components/automation/ProcessSection";
+import WhyHawkstackSection from "@/components/automation/WhyHawkstackSection";
 import {
   automationHeroContent,
   automationCapabilitiesSectionContent,
   automationOfferSectionContent,
   automationProcessSectionContent,
+  automationWhyHawkstackSectionContent,
 } from "@/data/automation/automation";
 
 export default function AutomationPage() {
@@ -16,6 +18,7 @@ export default function AutomationPage() {
       <CapabilitiesSection content={automationCapabilitiesSectionContent} />
       <OfferSection content={automationOfferSectionContent} />
       <ProcessSection content={automationProcessSectionContent} />
+      <WhyHawkstackSection content={automationWhyHawkstackSectionContent} />
     </>
   );
 }
