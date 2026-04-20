@@ -26,22 +26,29 @@ function ServiceArrow({ active, className = "" }: { active: boolean; className?:
   );
 }
 
+
 function NumberBadge({ number, active }: { number: string; active: boolean }) {
   if (active) {
-    return (
-      <span className="relative inline-flex items-center justify-center text-[48px] leading-none">
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 text-[25px] lg:text-[31px] xl:text-[48px] leading-none"
-          style={{ color: "transparent", WebkitTextStroke: `1.4px ${activeBlue}`, textRendering: "geometricPrecision" }}
-        >
-          {number}
-        </span>
-        <span className="text-[25px] lg:text-[31px] xl:text-[48px] leading-none text-white">{number}</span>
+   return (
+      <span
+        className="inline-block text-[24px] lg:text-[31px] xl:text-[48px] leading-none font-semibold"
+        style={{
+          color: "#ffffff",
+          WebkitTextStroke: "2.5px #5272FF",
+          paintOrder: "stroke fill",
+          textRendering: "geometricPrecision",
+        }}
+      >
+        {number}
       </span>
     );
   }
-  return <span className="text-[25px] lg:text-[31px] xl:text-[48px] leading-none text-[#727272]/40">{number}</span>;
+
+  return (
+    <span className="text-[24px] lg:text-[31px] xl:text-[48px] leading-none text-[#727272]/40">
+      {number}
+    </span>
+  );
 }
 
 function DesktopServiceRow({ item, active, onClick }: { item: CloudServiceItem; active: boolean; onClick: () => void }) {
