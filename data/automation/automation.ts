@@ -3,6 +3,7 @@ import type {
   AutomationCapabilitiesSectionContent,
   AutomationOfferSectionContent,
   AutomationProcessSectionContent,
+  AutomationWhyHawkstackSectionContent,
 } from "@/app/types/automation";
 
 export const automationHeroContent: AppModernizationHeroContent = {
@@ -158,3 +159,25 @@ export const automationProcessSectionContent: AutomationProcessSectionContent = 
     },
   ],
 };
+
+export const automationWhyHawkstackSectionContent: AutomationWhyHawkstackSectionContent =
+  {
+    badge: "WHY HAWKSTACK",
+    title: "Build an automation-first operating model for modern infrastructure",
+    description:
+      "Whether you are modernizing server management, streamlining deployments, or reducing manual operational effort, HawkStack delivers Ansible automation that improves speed, control, and consistency.",
+    form: {
+      title: "Let’s build your automation roadmap",
+      description:
+        "Talk to HawkStack about creating a tailored Ansible automation solution for your infrastructure and operations teams.",
+      namePlaceholder: "Your name",
+      emailPlaceholder: "Work email",
+      messagePlaceholder: "Tell us about your automation goals",
+      submitLabel: "Request a Consultation",
+      helperText:
+        "Replace this form action with your CRM, mail workflow, or contact backend.",
+      successMessage: "Message sent successfully.",
+      errorMessage: "Something went wrong. Please try again.",
+      source: "automation-why-hawkstack",
+    },
+  };

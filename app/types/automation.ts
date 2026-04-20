@@ -31,3 +31,23 @@ export interface AutomationProcessStepItem {
 export interface AutomationProcessSectionContent {
   steps: AutomationProcessStepItem[];
 }
+
+export interface AutomationWhyHawkstackFormContent {
+  title: string;
+  description: string;
+  namePlaceholder: string;
+  emailPlaceholder: string;
+  messagePlaceholder: string;
+  submitLabel: string;
+  helperText: string;
+  successMessage: string;
+  errorMessage: string;
+  source: string;
+}
+
+export interface AutomationWhyHawkstackSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  form: AutomationWhyHawkstackFormContent;
+}
