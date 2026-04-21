@@ -14,7 +14,41 @@ export interface WhatWeDoContent {
     cards: WhatWeDoCards[];
 };
 
+export interface Hawkstack {
+    subTitle: string;
+    title: string;
+    description: string;
+    badges: string[];
+}
+
+export interface CloudOperationsStep {
+    id: number;
+    stepNumber: string;
+    title: string;
+    description: string;
+}
+
+export interface CloudOperationsMetric {
+    id: number;
+    label: string;
+    value: string;
+    description: string;
+}
+
+export interface CloudOperationsModelSection {
+    subTitle: string;
+    title: string;
+    steps: CloudOperationsStep[];
+    metrics: CloudOperationsMetric[];
+}
+
+export interface WhyHawkstackContent {
+    hawkstack: Hawkstack;
+    cloudOperations: CloudOperationsModelSection;
+}
+
 export interface CloudPlatformOperationsPageData {
     heroSectionData: AppModernizationHeroContent;
     whatWeDoSectionData: WhatWeDoContent;
+    whyHawkstackSectionData: WhyHawkstackContent;
 }
