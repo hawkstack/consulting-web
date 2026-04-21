@@ -1,10 +1,15 @@
 import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
-import { automationHeroContent } from "@/data/consulting-services/consulting-services";
+import WhatWeDoSection from "@/components/consulting-services/WhatWeDoSection";
+import {
+  consultingServicesHeroContent,
+  consultingServicesWhatWeDoSectionContent,
+} from "@/data/consulting-services/consulting-services";
 
 export default function ConsultingPage() {
   return (
     <>
-      <AppModernizationHeroSection content={automationHeroContent} />
+      <AppModernizationHeroSection content={consultingServicesHeroContent} />
+      <WhatWeDoSection content={consultingServicesWhatWeDoSectionContent} />
     </>
   );
 }
