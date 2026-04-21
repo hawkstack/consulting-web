@@ -183,6 +183,7 @@ export const services: MegaItem[] = [
     description:
       "Strategic guidance across cloud, platforms, and modern applications that turns decisions into measurable outcomes.",
     image: "/images/services/Consulting-Services.webp",
+    href: "/consulting-service",
   },
   {
     id: "training services",
