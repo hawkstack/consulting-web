@@ -93,4 +93,73 @@ export const cloudPlatformOperationsPageData: CloudPlatformOperationsPageData = 
             },
         ]
     },
+
+     whyHawkstackSectionData: {
+        hawkstack: {
+            subTitle: "WHY HAWKSTACK",
+            title: "Operate smarter in the cloud",
+            description: "We combine cloud engineering, DevOps practices, automation, and operational excellence to keep your platform resilient, secure, and efficient.",
+            badges: [
+                "Faster deployments",
+                "24/7 operational visibility",
+                "Scalable infrastructure",
+                "Reduced cloud costs",
+                "Enterprise-grade security",
+                "Automated workflows"
+            ],
+        },
+
+        cloudOperations: {
+            subTitle: "HOW IT WORKS",
+            title: "A proven cloud operations model",
+            steps: [
+                {
+                    id: 1,
+                    stepNumber: "01",
+                    title: "Assess",
+                    description: "We evaluate your current cloud architecture, operational bottlenecks, security posture, and cost drivers."
+                },
+                {
+                    id: 2,
+                    stepNumber: "02",
+                    title: "Design",
+                    description: "We design an operations model tailored to your workloads, growth plans, and compliance requirements."
+                },
+                {
+                    id: 3,
+                    stepNumber: "03",
+                    title: "Implement",
+                    description: "We deploy automation, monitoring, and best-practice cloud controls with minimal disruption."
+                },
+                {
+                    id: 4,
+                    stepNumber: "04",
+                    title: "Optimize",
+                    description: "We continuously improve performance, resilience, and spend through ongoing cloud operations."
+                },
+            ],
+
+            metrics: [
+                {
+                    id: 1,
+                    label: "Performance",
+                    value: "99.99%",
+                    description: "Designed for high availability and operationalresilience."
+                },
+                {
+                    id: 2,
+                    label: "Efficiency",
+                    value: "40%",
+                    description: "Potential cloud cost reduction through optimization and governance."
+                },
+                {
+                    id: 3,
+                    label: "Speed",
+                    value: "3x",
+                    description: "Fast releases with automation, IaC, and DevOps."
+                },
+            ],
+        }
+    }
+
 }
