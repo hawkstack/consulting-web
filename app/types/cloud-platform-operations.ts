@@ -14,7 +14,20 @@ export interface WhatWeDoContent {
     cards: WhatWeDoCards[];
 };
 
+export interface FaqItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export interface FaqContent {
+  subTitle: string;
+  title: string;
+  faqs: FaqItem[];
+}
+
 export interface CloudPlatformOperationsPageData {
     heroSectionData: AppModernizationHeroContent;
     whatWeDoSectionData: WhatWeDoContent;
+    faqSectionData: FaqContent;
 }
