@@ -24,7 +24,7 @@ export function MegaMenu({
 }: Props): JSX.Element {
   const [offeringsView, setOfferingsView] = useState<
     "product" | "productResellers"
-  >("productResellers");
+  >("product");
 
   if (menuKey === "products") {
     return (
@@ -36,12 +36,12 @@ export function MegaMenu({
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_center,rgba(29,120,255,0.12),transparent_34%)]" />
 
           <div className="relative flex gap-8">
-            <ul className="pr-8 pl-14 py-4 space-y-6">
+            <ul className="space-y-6 pr-8 pl-14 py-4">
               <li>
                 <button
                   type="button"
                   onMouseEnter={() => setOfferingsView("product")}
-                  className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] cursor-pointer transition-colors duration-200 ${
+                  className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] transition-colors duration-200 ${
                     offeringsView === "product"
                       ? "text-[#5272FF]"
                       : "text-white/90 hover:text-white"
@@ -60,7 +60,7 @@ export function MegaMenu({
                 <button
                   type="button"
                   onMouseEnter={() => setOfferingsView("productResellers")}
-                  className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] cursor-pointer transition-colors duration-200 ${
+                  className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] transition-colors duration-200 ${
                     offeringsView === "productResellers"
                       ? "text-[#5272FF]"
                       : "text-white/90 hover:text-white"
@@ -89,7 +89,7 @@ export function MegaMenu({
                     {offeringsMenuContent.featured.description}
                   </p>
 
-                  <div className="relative mb-6 mt-6 h-[86px] w-[312px] overflow-hidden rounded-2xl">
+                  <div className="relative mt-6 mb-6 h-[86px] w-[312px] overflow-hidden rounded-2xl">
                     <div className="relative h-full w-full">
                       <Image
                         src={offeringsMenuContent.featured.image}
@@ -166,15 +166,15 @@ export function MegaMenu({
 
   return (
     <div
-      className="absolute left-1/2 top-full -translate-x-1/2 w-[1100px] lg:w-[1000px] xl:w-[1221px] xl:h-[464px]"
+      className="absolute left-1/2 top-full -translate-x-1/2 w-[1100px] lg:w-[1000px] xl:h-[464px] xl:w-[1221px]"
       onMouseLeave={onClose}
     >
-      <div className="rounded-[20px] bg-[#2B3859]/90 backdrop-blur-md p-12 shadow-2xl overflow-hidden">
-        <div className="flex gap-16 relative">
-          {/* LEFT LIST */}
-          <ul className=" pr-8 pl-14 py-4 space-y-6">
+      <div className="overflow-hidden rounded-[20px] bg-[#2B3859]/90 p-12 shadow-2xl backdrop-blur-md">
+        <div className="relative flex gap-16">
+          <ul className="space-y-6 pr-8 pl-14 py-4">
             {items.map((item) => {
               const isActive = activeItem.id === item.id;
+
               return (
                 <li
                   key={item.id}
@@ -184,11 +184,12 @@ export function MegaMenu({
                       window.location.href = item.href;
                     }
                   }}
-                  className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] cursor-pointer transition-colors duration-200
-                    ${isActive ? "text-[#5272FF]" : "text-white/90 hover:text-white"}`}
+                  className={`flex gap-10 items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] cursor-pointer transition-colors duration-200 ${
+                    isActive ? "text-[#5272FF]" : "text-white/90 hover:text-white"
+                  }`}
                 >
-                  <span>{item.label}</span>
-                  <span className="text-[16px] pl-8 font-semibold">
+                  <span className="min-w-[150px] text-left">{item.label}</span>
+                  <span className="inline-flex w-8 shrink-0 justify-center text-[17px] font-medium leading-none">
                     {isActive ? "→" : "›"}
                   </span>
                 </li>
@@ -196,16 +197,14 @@ export function MegaMenu({
             })}
           </ul>
 
-          {/* VERTICAL DIVIDER */}
-          <div className="w-[1px] bg-white/100 self-stretch my-[-20px]" />
+          <div className="my-[-20px] w-[1px] self-stretch bg-white/100" />
 
-          {/* RIGHT CONTENT */}
-          <div className="flex-1 pl-30 pt-4 ">
-            <h3 className="font-lexend text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-[150%] tracking-[-0.03em] text-[#FFFFFF] mb-6">
+          <div className="flex-1 ">
+            <h3 className="mb-6 font-lexend text-[16px] font-medium leading-[150%] tracking-[-0.03em] text-[#FFFFFF] md:text-[18px] lg:text-[20px]">
               {activeItem.title}
             </h3>
 
-            <div className="w-[312px] h-[195px] rounded-2xl overflow-hidden mb-6 relative">
+            <div className="relative mb-6 h-[195px] w-[312px] overflow-hidden rounded-2xl">
               <Image
                 src={activeItem.image}
                 alt={activeItem.title}
@@ -215,9 +214,18 @@ export function MegaMenu({
               />
             </div>
 
-            <p className="font-lexend text-[12px] md:text-[14px] justify-between lg:text-[16px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] max-w-[555px]">
+            <p className="max-w-[555px] font-lexend text-[12px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] md:text-[14px] lg:text-[16px]">
               {activeItem.description}
             </p>
+
+            {menuKey === "services" && activeItem.href ? (
+              <Link
+                href={activeItem.href}
+                className="mt-2 inline-flex text-[12px] font-medium text-[#56A8FF] transition hover:text-white"
+              >
+                {"Know More ->"}
+              </Link>
+            ) : null}
           </div>
         </div>
       </div>
