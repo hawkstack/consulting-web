@@ -22,17 +22,20 @@ export interface AppModernizationFormContent {
 }
 
 export interface AppModernizationHeroContent {
-  badge: string;
+  badge?: string;
   title: string;
   highlightedLastLine?: string;
   description: string;
   buttons: AppModernizationButton[];
+  h1MaxWidth?: string;
+  titleMarginTop?: string;
+  descriptionWidth?: string;
   tags?: string[];
   form: AppModernizationFormContent;
 }
 
 export interface AppModernizationCapabilitiesSectionContent {
-  badge: string;
+  badge?: string;
   title: string;
   services: AppModernizationCapabilityItem[];
 }
