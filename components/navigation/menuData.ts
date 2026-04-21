@@ -175,6 +175,7 @@ export const services: MegaItem[] = [
     description:
       "Automate cloud infrastructure provisioning, configuration, and operations for consistent and scalable platforms.",
     image: "/images/services/Cloud-Platform-Operation.webp",
+    href: "/cloud-platform-operations",
   },
   {
     id: "consulting services",
@@ -192,6 +193,7 @@ export const services: MegaItem[] = [
     description:
       "Empower teams with industry-relevant training that accelerates learning and real-world application.",
     image: "/images/services/Training-Services.webp",
+    href: "/coming-soon"
   },
   {
     id: "kubernetes as a services",
@@ -200,6 +202,7 @@ export const services: MegaItem[] = [
     description:
       "End-to-end Kubernetes management with governance, monitoring, and lifecycle support.",
     image: "/images/services/Kubernetes-as-a-Services.webp",
+    href: "/coming-soon"
   },
 ];
 
@@ -224,15 +227,16 @@ export const company: MegaItem[] = [
     image: "/images/company/Partner.webp",
     href: "/coming-soon",
   },
-  {
-    id: "blog",
-    label: "Blog",
-    title: "Blog",
-    description:
-      "Thought leadership, technical insights, and real-world lessons from modern cloud engineering",
-    image: "/images/company/Blog.webp",
-    href: "/coming-soon",
-  },
+  // TODO: Add blog section in the future when we have content to share
+  // {
+  //   id: "blog",
+  //   label: "Blog",
+  //   title: "Blog",
+  //   description:
+  //     "Thought leadership, technical insights, and real-world lessons from modern cloud engineering",
+  //   image: "/images/company/Blog.webp",
+  //   href: "/coming-soon",
+  // },
   {
     id: "career",
     label: "Career",
@@ -242,15 +246,16 @@ export const company: MegaItem[] = [
     image: "/images/company/Career.webp",
     href: "/career",
   },
-  {
-    id: "contact us",
-    label: "Contact Us",
-    title: "Contact Us",
-    description:
-      "Let’s connect to discuss how we can help you build and scale modern cloud solutions.",
-    image: "/images/company/Contact-Us.webp",
-    href: "/get-started",
-  },
+  // TODO
+  // {
+  //   id: "contact us",
+  //   label: "Contact Us",
+  //   title: "Contact Us",
+  //   description:
+  //     "Let’s connect to discuss how we can help you build and scale modern cloud solutions.",
+  //   image: "/images/company/Contact-Us.webp",
+  //   href: "/get-started",
+  // },
 ];
 
 /* ================= TRAINING ================= */

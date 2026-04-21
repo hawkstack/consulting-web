@@ -30,6 +30,7 @@ export interface AppModernizationHeroContent {
   h1MaxWidth?: string;
   titleMarginTop?: string;
   descriptionWidth?: string;
+  tags?: string[];
   form: AppModernizationFormContent;
 }
 

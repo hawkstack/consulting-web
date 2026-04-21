@@ -180,10 +180,8 @@ export function MegaMenu({
                   key={item.id}
                   onMouseEnter={() => onHoverItem(item)}
                   onClick={() => {
-                    if (item.external && item.href) {
-                      window.open(item.href, "_blank", "noopener,noreferrer");
-                    } else if (item.href) {
-                      window.open(item.href, "_blank", "noopener,noreferrer");
+                    if (item.href) {
+                      window.location.href = item.href;
                     }
                   }}
                   className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] cursor-pointer transition-colors duration-200
