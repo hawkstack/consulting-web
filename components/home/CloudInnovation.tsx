@@ -8,7 +8,6 @@ type CloudProps = {
 export default function CloudInnovation({ data }: CloudProps) {
   return (
     <section className="relative w-full bg-white pb-16 md:py-24 overflow-hidden font-lexend">
-      {/* Video and Masks Layer */}
       <div className="absolute top-0 right-0 w-full h-full z-0 pointer-events-none overflow-hidden">
         {/* Mobile Rotated Video Container */}
         <div className="md:hidden block z-0 ">
@@ -34,11 +33,8 @@ export default function CloudInnovation({ data }: CloudProps) {
           <source src={data.videoDesktop} type="video/mp4" />
         </video>
 
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-white via-white/80 md:via-white/40 to-transparent z-10" />
-               
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-white via-white/80 md:via-white/40 to-transparent z-10" />               
        <div className="md:hidden absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
-
-        <div className="hidden md:block absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white via-white/30 to-transparent" />
       </div>
 
       {/* Content Layer */}

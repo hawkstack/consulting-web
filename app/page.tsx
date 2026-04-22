@@ -18,7 +18,7 @@ export const metadata = seoMeta({
 
 export default function HomePage () {
   const { 
-    heroSectionData, cloudServicesSectionData, productsSectionData, globalSectionData, platformSectionData, cloudSectionData, whatWeDoSectionData
+    heroSectionData, cloudServicesSectionData, productsSectionData, globalSectionData, platformSectionData, whatWeDoSectionData, cloudSectionData
   } = homePageData;
   return (
     <div>
@@ -27,8 +27,8 @@ export default function HomePage () {
       <ProductReseller data = {productsSectionData} />
       <GlobalTechnology data = {globalSectionData} />
       <PlatformSection data = {platformSectionData}/>
-      <CloudInnovation data = {cloudSectionData} />
       <WhatWeDo data = {whatWeDoSectionData} />
+      <CloudInnovation data = {cloudSectionData} />
       <ContactCTA />
     </div>
   );
