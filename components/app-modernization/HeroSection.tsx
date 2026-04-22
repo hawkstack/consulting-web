@@ -67,11 +67,11 @@ export default function AppModernizationHeroSection({
               </div>
             )}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-6">
+            <div className="hidden md:grid md:grid-cols-3 gap-3 mt-6">
               {content.statBadges?.map((item) => (
                 <div
                   key={item.id}
-                  className="rounded-[14px] bg-white/8 border border-white/10 px-4 py-3 backdrop-blur-[9.3506498336792px]"
+                  className="rounded-[14px] bg-white/8 border border-white/10 px-3 py-3 backdrop-blur-[9.3506498336792px]"
                 >
                   {item.value && (
                     <div className="text-white text-[18px] md:text-[20px] font-semibold leading-none">
@@ -79,12 +79,12 @@ export default function AppModernizationHeroSection({
                     </div>
                   )}
 
-                  <div className="text-white text-[14px] md:text-[15px] font-medium mt-1">
+                  <div className="text-white md:text-[14px] xl:text-[15px] font-medium mt-1">
                     {item.title}
                   </div>
 
                   {item.description && (
-                    <p className="text-white/55 text-[11px] md:text-[12px] mt-3 leading-snug">
+                    <p className="text-[#DBE4F2] md:text-[12px] mt-3 leading-snug">
                       {item.description}
                     </p>
                   )}
@@ -96,6 +96,31 @@ export default function AppModernizationHeroSection({
           <div className="w-full md:mx-0 md:justify-self-end">
             <AppModernizationContactForm form={content.form} />
           </div>
+
+          <div className="md:hidden grid grid-cols-3 gap-3 mt-6">
+            {content.statBadges?.map((item) => (
+                <div
+                  key={item.id}
+                  className="rounded-3xl bg-white/8 border border-white/10 p-3 text-center backdrop-blur-[9.3506498336792px]"
+                >
+                  {item.value && (
+                    <div className="text-white text-[18px] md:text-[20px] font-semibold leading-none">
+                      {item.value}
+                    </div>
+                  )}
+
+                  <div className="text-white text-[15px] font-medium mt-1">
+                    {item.title}
+                  </div>
+
+                  {item.description && (
+                    <p className="text-[#DBE4F2] text-[12px] mt-auto">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
         </div>
       </div>
     </section>
