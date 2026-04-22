@@ -5,7 +5,10 @@ import HeroSection from "@/components/kubernetes-as-a-services/HeroSection";
 import ProblemSection from "@/components/kubernetes-as-a-services/ProblemSection";
 import SolutionSection from "@/components/kubernetes-as-a-services/SolutionSection";
 import UseCasesSection from "@/components/kubernetes-as-a-services/UseCasesSection";
-import { ctaData } from "@/data/kubernetes-as-a-services/kubernetes-as-a-services";
+import {
+  benefitsData,
+  ctaData,
+} from "@/data/kubernetes-as-a-services/kubernetes-as-a-services";
 
 const page = () => {
   return (
@@ -15,7 +18,7 @@ const page = () => {
       <SolutionSection />
       <FeaturesSection />
       <UseCasesSection />
-      <BenefitsSection />
+      <BenefitsSection data={benefitsData} />
       <CtaSection data={ctaData} />
     </div>
   );

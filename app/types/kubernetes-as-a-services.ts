@@ -11,3 +11,16 @@ export interface CtaData {
   description: string;
   buttons: CtaButton[];
 }
+
+// benefits section
+
+export interface BenefitItem {
+  id: number;
+  text: string;
+}
+
+export interface BenefitsData {
+  subtitle: string;
+  title: string;
+  items: BenefitItem[];
+}
