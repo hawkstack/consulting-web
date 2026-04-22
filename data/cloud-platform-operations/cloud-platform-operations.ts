@@ -119,6 +119,33 @@ export const cloudPlatformOperationsPageData: CloudPlatformOperationsPageData = 
             },
         ]
     },
+    contactCtaData: {
+        subTitle: "Let's talk",
+        title: "Ready to optimize your cloud operations?",
+        description: "Partner with HawkStack to improve reliability, reduce operational overhead, and scale your cloud platform with confidence.",
+        buttonText: "Request a Consultation",
+        fields: [
+            {
+                id: 1,
+                name: "name",
+                type: "text",
+                placeholder: "Your Name"
+            },
+            {
+                id: 2,
+                name: "email",
+                type: "email",
+                placeholder: "Work Email"
+            },
+            {
+                id: 3,
+                name: "message",
+                type: "textarea",
+                placeholder: "Tell us about your cloud operations goals"
+            }
+        ]
+    }
+
 
      whyHawkstackSectionData: {
         hawkstack: {
