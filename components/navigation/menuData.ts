@@ -193,7 +193,7 @@ export const services: MegaItem[] = [
     description:
       "Empower teams with industry-relevant training that accelerates learning and real-world application.",
     image: "/images/services/Training-Services.webp",
-    href: "/coming-soon"
+    href: "/training-services"
   },
   {
     id: "kubernetes as a services",
