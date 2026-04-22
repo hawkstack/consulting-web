@@ -13,7 +13,31 @@ export interface WhatWeDoContent {
     desc: string;
     cards: WhatWeDoCards[];
 };
+export interface ContactFormField {
+  id: number;
+  name: string;
+  type: "text" | "email" | "textarea";
+  placeholder: string;
+}
 
+export interface ContactCtaContent {
+  subTitle: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  fields: ContactFormField[];
+}
+
+export interface FaqItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export interface FaqContent {
+  subTitle: string;
+  title: string;
+  faqs: FaqItem[];
 export interface Hawkstack {
     subTitle: string;
     title: string;
@@ -51,4 +75,6 @@ export interface CloudPlatformOperationsPageData {
     heroSectionData: AppModernizationHeroContent;
     whatWeDoSectionData: WhatWeDoContent;
     whyHawkstackSectionData: WhyHawkstackContent;
+    faqSectionData: FaqContent;
+    contactCtaData: ContactCtaContent;
 }
