@@ -7,13 +7,13 @@ interface Props {
 
 const CtaSection: React.FC<Props> = ({ data }) => {
   return (
-    <section className="w-full bg-[#020617] py-16 px-4 md:px-6 lg:px-20 xl:px-20">
+    <section className="w-full bg-[#020617] py-16 px-4 md:px-14 lg:px-20 xl:px-20">
       <div className="max-w-6xl mx-auto">
         <div
           className="
           relative rounded-4xl
           bg-[linear-gradient(90deg,rgba(34,211,238,0.1),rgba(255,255,255,0.05),rgba(168,85,247,0.12))]
-          py-12 md:py-14 lg:py-8 xl:py-8
+          py-12 md:py-4 lg:py-8 xl:py-8
           text-center
           border border-white/10
           shadow-lg
@@ -25,12 +25,12 @@ const CtaSection: React.FC<Props> = ({ data }) => {
           </p>
 
           {/* Title */}
-          <h2 className="text-white font-bold leading-tight text-[20px] md:text-[26px] lg:text-[28px] xl:text-[44px] max-w-[74%] xl:max-w-[80%] mx-auto">
+          <h2 className="text-white font-bold leading-tight text-[20px] md:text-[22px] lg:text-[28px] xl:text-[44px] max-w-[74%] xl:max-w-[80%] mx-auto">
             {data.title}
           </h2>
 
           {/* Description */}
-          <p className="text-[#CBD5E1] text-xs xl:text-base mt-2 max-w-3xl mx-auto">
+          <p className="text-[#CBD5E1] text-xs xl:text-base mt-2 md:max-w-xl lg:max-w-3xl mx-auto">
             {data.description}
           </p>
 
@@ -41,7 +41,7 @@ const CtaSection: React.FC<Props> = ({ data }) => {
                 key={index}
                 href={btn.link || "#"}
                 className={`
-                  lg:px-4 xl:px-6 lg:py-2 xl:py-3 rounded-2xl text-base font-semibold transition-all duration-300
+                  md:px-2 lg:px-4 xl:px-6 md:py-2 lg:py-2 xl:py-3 rounded-xl lg:rounded-2xl text-xs lg:text-sm xl:text-base font-semibold transition-all duration-300
                   ${
                     btn.variant === "primary"
                       ? "bg-white text-[#0F172A] hover:bg-gray-200"
