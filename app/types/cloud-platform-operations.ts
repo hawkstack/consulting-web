@@ -28,6 +28,16 @@ export interface ContactCtaContent {
   fields: ContactFormField[];
 }
 
+export interface FaqItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export interface FaqContent {
+  subTitle: string;
+  title: string;
+  faqs: FaqItem[];
 export interface Hawkstack {
     subTitle: string;
     title: string;
@@ -64,6 +74,7 @@ export interface WhyHawkstackContent {
 export interface CloudPlatformOperationsPageData {
     heroSectionData: AppModernizationHeroContent;
     whatWeDoSectionData: WhatWeDoContent;
-    contactCtaData: ContactCtaContent;
     whyHawkstackSectionData: WhyHawkstackContent;
+    faqSectionData: FaqContent;
+    contactCtaData: ContactCtaContent;
 }

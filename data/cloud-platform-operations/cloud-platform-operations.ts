@@ -93,6 +93,32 @@ export const cloudPlatformOperationsPageData: CloudPlatformOperationsPageData = 
             },
         ]
     },
+    faqSectionData: {
+        subTitle: "FAQ",
+	    title: "Common questions",
+	    faqs: [
+            {
+                id: 1,
+		        question: "Which cloud platforms do you support?",
+                answer: "We support AWS, Microsoft Azure, Google Cloud, and hybrid or multi-cloud environments."
+            },
+            {
+                id: 2,
+		        question: "Do you provide 24/7 monitoring?",
+                answer: "Yes. We help set up and manage proactive monitoring, alerting, dashboards, and incident response processes."
+            },
+            {
+                id: 3,
+		        question: "Can you help reduce our cloud bill?",
+                answer: "Yes. Our cloud operations approach includes cost analysis, resource optimization, governance, and usage tuning."
+            },
+            {
+                id: 4,
+		        question: "Do you work with existing DevOps teams?",
+                answer: "Absolutely. We can augment your internal teams, standardize processes, and improve operational efficiency."
+            },
+        ]
+    },
     contactCtaData: {
         subTitle: "Let's talk",
         title: "Ready to optimize your cloud operations?",
