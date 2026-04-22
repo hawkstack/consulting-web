@@ -46,3 +46,28 @@ export interface ConsultingServicesEngagementModelSectionContent {
   description: string;
   steps: ConsultingEngagementStepItem[];
 }
+
+export interface ConsultingServicesConversationFormField {
+  name:
+    | "fullName"
+    | "workEmail"
+    | "company"
+    | "areaOfInterest"
+    | "projectRequirement";
+  label: string;
+  placeholder: string;
+  type: "text" | "email" | "textarea";
+  required: boolean;
+}
+
+export interface ConsultingServicesConversationSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  points: string[];
+  submitLabel: string;
+  successMessage: string;
+  errorMessage: string;
+  source: string;
+  fields: ConsultingServicesConversationFormField[];
+}

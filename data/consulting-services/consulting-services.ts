@@ -1,5 +1,6 @@
 import { AppModernizationHeroContent } from "@/app/types/app-modernization";
 import {
+  ConsultingServicesConversationSectionContent,
   ConsultingServicesEngagementModelSectionContent,
   ConsultingServicesHowWeHelpSectionContent,
   ConsultingServicesWhatWeDoSectionContent,
@@ -230,6 +231,61 @@ export const consultingServicesEngagementModelSectionContent: ConsultingServices
         mobileOrder: 4,
         tabletOrder: 4,
         desktopOrder: 4,
+      },
+    ],
+  };
+
+export const consultingServicesConversationSectionContent: ConsultingServicesConversationSectionContent =
+  {
+    badge: "START THE CONVERSATION",
+    title: "Discuss your consulting requirement with HawkStack",
+    description:
+      "Whether you need architecture guidance, process optimization, implementation consulting, or transformation support, we can help define the right scope and next steps.",
+    points: [
+      "Ideal for teams evaluating systems, fixing execution gaps, or planning transformation initiatives.",
+      "Suitable for early-stage assessments, targeted consulting engagements, and ongoing advisory support.",
+      "Built to present HawkStack as a technical consulting partner with a clear and delivery-focused approach.",
+    ],
+    submitLabel: "Request Consultation",
+    successMessage: "Message sent successfully.",
+    errorMessage: "Something went wrong. Please try again.",
+    source: "consulting-services-conversation",
+    fields: [
+      {
+        name: "fullName",
+        label: "Full Name",
+        placeholder: "Your name",
+        type: "text",
+        required: true,
+      },
+      {
+        name: "workEmail",
+        label: "Work Email",
+        placeholder: "you@company.com",
+        type: "email",
+        required: true,
+      },
+      {
+        name: "company",
+        label: "Company",
+        placeholder: "Company name",
+        type: "text",
+        required: true,
+      },
+      {
+        name: "areaOfInterest",
+        label: "Area of interest",
+        placeholder: "Technology Advisory",
+        type: "text",
+        required: true,
+      },
+      {
+        name: "projectRequirement",
+        label: "Project or requirement",
+        placeholder:
+          "Tell us about your current challenge, systems, goals, or consulting requirement",
+        type: "textarea",
+        required: true,
       },
     ],
   };
