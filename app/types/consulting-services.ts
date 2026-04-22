@@ -30,3 +30,19 @@ export interface ConsultingServicesHowWeHelpSectionContent {
   cardDescription: string;
   outcomes: ConsultingClientOutcomeItem[];
 }
+
+export interface ConsultingEngagementStepItem {
+  stepLabel: string;
+  title: string;
+  description: string;
+  mobileOrder?: number;
+  tabletOrder?: number;
+  desktopOrder?: number;
+}
+
+export interface ConsultingServicesEngagementModelSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  steps: ConsultingEngagementStepItem[];
+}

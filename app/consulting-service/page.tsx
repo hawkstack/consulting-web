@@ -1,7 +1,9 @@
 import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
+import EngagementModelSection from "@/components/consulting-services/EngagementModelSection";
 import HowWeHelpClientsSection from "@/components/consulting-services/HowWeHelpClientsSection";
 import WhatWeDoSection from "@/components/consulting-services/WhatWeDoSection";
 import {
+  consultingServicesEngagementModelSectionContent,
   consultingServicesHeroContent,
   consultingServicesHowWeHelpSectionContent,
   consultingServicesWhatWeDoSectionContent,
@@ -14,6 +16,9 @@ export default function ConsultingPage() {
       <WhatWeDoSection content={consultingServicesWhatWeDoSectionContent} />
       <HowWeHelpClientsSection
         content={consultingServicesHowWeHelpSectionContent}
+      />
+      <EngagementModelSection
+        content={consultingServicesEngagementModelSectionContent}
       />
     </>
   );
