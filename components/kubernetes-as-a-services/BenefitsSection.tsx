@@ -6,7 +6,7 @@ interface Props {
 
 const BenefitsSection: React.FC<Props> = ({ data }) => {
   return (
-    <section className="bg-[#0b1225] text-white py-16 px-6 md:px-12 lg:px-20 xl:px-24">
+    <section className="bg-[#0b1225] text-white py-16 px-6 md:px-12 lg:px-24 xl:px-24">
       <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-20 items-start">
         {/* LEFT */}
         <div className="flex-1 text-center lg:text-left">
@@ -14,7 +14,7 @@ const BenefitsSection: React.FC<Props> = ({ data }) => {
             {data.subtitle}
           </p>
 
-          <h2 className="text-[20px] md:text-[22px] lg:text-[28px] xl:text-[44px] font-bold leading-none max-w-[480px] mx-auto lg:mx-0">
+          <h2 className="text-[20px] md:text-[22px] lg:text-[28px] xl:text-[44px] font-bold  xl:leading-none lg:max-w-[250px] xl:max-w-[480px] mx-auto lg:mx-0">
             {data.title}
           </h2>
         </div>
@@ -23,7 +23,7 @@ const BenefitsSection: React.FC<Props> = ({ data }) => {
           {data.items.map((item) => (
             <div
               key={item.id}
-              className="w-full max-w-[520px] bg-[#1a2032] border border-white/10 rounded-2xl pl-5 pr-8 py-4 text-base text-gray-300 leading-relaxed backdrop-blur-md hover:border-white/20 transition-all"
+              className="w-full max-w-[520px] bg-[#1a2032] border border-white/10 rounded-2xl pl-5 pr-8 py-4 text-xs xl:text-base text-gray-300 leading-relaxed backdrop-blur-md hover:border-white/20 transition-all"
             >
               {item.text}
             </div>
