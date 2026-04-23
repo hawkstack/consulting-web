@@ -25,7 +25,7 @@ export default function TrainingEcosystem ({ content }: Props) {
           {content.partners.map((item) => (
             <div
               key={item.id}
-              className="h-[39px] w-[calc(50%-12px)] max-w-[70px] md:max-w-[140px] lg:max-w-[110px] xl:max-w-[140px] md:h-[60px] rounded-xl bg-white flex items-center justify-center shadow-sm"
+              className="h-[40px] w-[calc(50%-12px)] max-w-[70px] md:max-w-[140px] lg:max-w-[110px] xl:max-w-[140px] md:h-[60px] rounded-xl bg-white flex items-center justify-center shadow-sm"
             >
               <Image
                 src={item.logo}
