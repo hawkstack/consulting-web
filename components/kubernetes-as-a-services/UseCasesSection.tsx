@@ -6,7 +6,7 @@ interface Props {
 
 const UseCasesSection = ({ data }: Props) => {
   return (
-    <section className="bg-[#020617] text-white py-16 md:py-20 lg:py-24 xl:py-20 px-6 lg:px-20 xl:px-24">
+    <section className="bg-[#020617] text-white py-16 md:py-16 lg:py-24 xl:py-20 px-6 md:px-14 lg:px-20 xl:px-24">
       <div className="max-w-[1400px] mx-auto">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -18,12 +18,12 @@ const UseCasesSection = ({ data }: Props) => {
             </p>
 
             {/* Heading */}
-            <h2 className="text-[24px] md:text-[24px] lg:text-[28px] xl:text-[44px] xl:max-w-[520px] font-semibold leading-none mb-4">
+            <h2 className="text-[24px] md:text-[24px] lg:text-[28px] xl:text-[44px] md:max-w-[290px] lg:max-w-[520px] font-semibold md:leading-tight lg:leading-none mb-4">
               Designed for teams building and scaling cloud-native applications.
             </h2>
 
             {/* Description */}
-            <p className="text-[#9BA3AF] text-sm md:text-base max-w-[520px] mx-auto md:mx-0">
+            <p className="text-[#9BA3AF] text-sm lg:text-base max-w-[520px] mx-auto md:mx-0">
               KaaS supports engineering teams that need reliable Kubernetes
               infrastructure without diverting valuable time into platform
               maintenance and operational firefighting.
@@ -31,7 +31,7 @@ const UseCasesSection = ({ data }: Props) => {
           </div>
 
           {/* RIGHT CARDS */}
-          <div className="grid grid-cols-1 grid-cols-2 gap-4 lg:gap-3 xl:gap-5">
+          <div className="grid grid-cols-1 grid-cols-2 gap-4 md:gap-2 lg:gap-3 xl:gap-5">
             {data.map((item) => (
               <div
                 key={item.id}
@@ -40,7 +40,7 @@ const UseCasesSection = ({ data }: Props) => {
                   rounded-2xl xl:rounded-3xl
                   border border-white/10
                   bg-[#1a2032]
-                  px-5 py-4 lg:p-3 xl:p-4 
+                  px-5 py-4 md:py-1 md:px-2 lg:p-3 xl:p-4 
                   text-xs xl:text-base
                   text-[#C9D1D9]
                   leading-relaxed
