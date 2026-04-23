@@ -184,5 +184,55 @@ export const trainingServicesPageData: TrainingServicesPageData = {
                 ]
             },
         ]
+    },
+    
+    trainingsWeGiveData: {
+        subTitle: "Trainings We Give",
+        title: "Practical programs for cloud, DevOps, Linux, automation, and Kubernetes teams",
+        description: "Our training portfolio is designed to support both individual learners and enterprise teams with structured technical programs that connect theory, labs, and real-world operational outcomes.",
+        programs: [
+            {
+                id: 1,
+                provider: "Red Hat",
+                title: "Red Hat OpenShift Administration",
+                description: "Deploy, manage, and troubleshoot enterprise Kubernetes platforms with practical OpenShift administration skills.",
+                buttonLink: "/get-started"
+            },
+             {
+                id: 2,
+                provider: "Red Hat",
+                title: "Red Hat Enterprise Linux",
+                description: "Build strong Linux administration capabilities for system operations, security, and enterprise reliability.",
+                buttonLink: "/get-started"
+            },
+             {
+                id: 3,
+                provider: "Red Hat",
+                title: "Ansible Automation",
+                description: "Automate infrastructure, configuration, and repetitive operational tasks using scalable Ansible workflows.",
+                buttonLink: "/get-started"
+            },
+             {
+                id: 4,
+                provider: "Mirantis",
+                title: "Mirantis Kubernetes Engine",
+                description: "Learn Kubernetes cluster deployment, operations, and lifecycle management for production environments.",
+                buttonLink: "/get-started"
+            },
+             {
+                id: 5,
+                provider: "CNCF",
+                title: "Cloud Native Operations",
+                description: "Gain working knowledge of observability, GitOps, resiliency, and day-2 cloud native operations.",
+                buttonLink: "/get-started"
+            },
+             {
+                id: 6,
+                provider: "The Linux Foundation",
+                title: "Kubernetes Certification Prep",
+                description: "Structured learning support for Kubernetes and Linux Foundation certification-aligned readiness.",
+                buttonLink: "/get-started"
+            },
+        ]
     }
 }
