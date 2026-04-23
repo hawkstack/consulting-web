@@ -5,6 +5,9 @@ export const trainingServicesPageData: TrainingServicesPageData = {
         heroBgClass: "bg-[linear-gradient(0deg,_#1F2D5A,_#1F2D5A),radial-gradient(121.54%_175.93%_at_0%_100%,_rgba(120,170,255,0.18)_0%,_rgba(120,170,255,0)_32%),radial-gradient(121.54%_175.93%_at_100%_0%,_rgba(85,126,255,0.28)_0%,_rgba(85,126,255,0)_28%)]",
         subTitle: "HawkStack Training",
         title: "Build cloud, Linux, automation and Kubernetes expertise with industry ready training.",
+        h1MaxWidth: "max-w-[700px]",
+        fontSize: "text-[22px] md:text-[40px] xl:text-[50px]",
+        descriptionWidth: "max-w-[680px]",
         description:
             "Empower engineers, platform teams, and enterprises with vendor-aligned programs across Red Hat, Mirantis, CNCF, and The Linux Foundation. Learn through practical labs, expert guidance, and real operational use cases.",
         buttons: [
@@ -82,4 +85,48 @@ export const trainingServicesPageData: TrainingServicesPageData = {
             ],
         },
     },
+
+    trainingEcosystemData: {
+        subTitle: "Training Ecosystem",
+        title: "Trusted learning paths across leading technology platforms",
+        description: "Build capability through recognized vendor and open source aligned programs that support enterprise learning, certifications, and practical implementation.",
+        partners: [
+            {
+                id: 1,
+                name: "Red Hat",
+                logo: "/images/training-services/redhat-logo.webp"
+            },
+            {
+                id: 2,
+                name: "Mirantis",
+                logo: "/images/training-services/mirantis-logo.webp"
+            },
+            {
+                id: 3,  
+                name: "CNCF",
+                logo: "/images/training-services/cncf-logo.webp"
+            },
+            {
+                id: 4,
+                name: "The Linux Foundation",
+                logo: "/images/training-services/Linux-logo.webp"
+            },
+            {
+                id: 5,
+                name: "AWS",
+                logo: "/images/home/product-reseller/AWS.webp"
+            },
+            {
+                id: 6,
+                name: "Google Cloud Platform",
+                logo: "/images/training-services/GCP-logo.webp",
+                scale: 1.5,
+            },
+            {
+                id: 7,
+                name: "Azure",
+                logo: "/images/training-services/Azure-logo.webp"
+            },
+        ]
+    }
 }

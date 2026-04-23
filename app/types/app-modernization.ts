@@ -38,6 +38,7 @@ export interface AppModernizationHeroContent {
   buttons: AppModernizationButton[];
   h1MaxWidth?: string;
   titleMarginTop?: string;
+  fontSize?: string;
   descriptionWidth?: string;
   tags?: string[];
   statBadges?: StatBadge[];
