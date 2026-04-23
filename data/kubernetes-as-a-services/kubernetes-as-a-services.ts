@@ -1,6 +1,10 @@
 // cta section
 
-import { BenefitsData, CtaData } from "@/app/types/kubernetes-as-a-services";
+import {
+  BenefitsData,
+  CtaData,
+  UseCaseItem,
+} from "@/app/types/kubernetes-as-a-services";
 
 export const ctaData: CtaData = {
   tag: "GET STARTED",
@@ -42,3 +46,32 @@ export const benefitsData: BenefitsData = {
     },
   ],
 };
+
+// use cases section
+
+export const useCasesData: UseCaseItem[] = [
+  {
+    id: 1,
+    title: "Managed Kubernetes platforms for growing teams",
+  },
+  {
+    id: 2,
+    title: "Application modernization and container migration",
+  },
+  {
+    id: 3,
+    title: "Multi-environment deployments for dev, staging, and production",
+  },
+  {
+    id: 4,
+    title: "Platform engineering support for internal teams",
+  },
+  {
+    id: 5,
+    title: "High-availability infrastructure for cloud-native apps",
+  },
+  {
+    id: 6,
+    title: "Secure scaling for enterprise workloads",
+  },
+];

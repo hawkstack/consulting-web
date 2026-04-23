@@ -13,7 +13,6 @@ export interface CtaData {
 }
 
 // benefits section
-
 export interface BenefitItem {
   id: number;
   text: string;
@@ -23,4 +22,10 @@ export interface BenefitsData {
   subtitle: string;
   title: string;
   items: BenefitItem[];
+}
+
+// use cases section
+export interface UseCaseItem {
+  id: number;
+  title: string;
 }

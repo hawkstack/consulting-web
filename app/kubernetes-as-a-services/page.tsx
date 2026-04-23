@@ -8,6 +8,7 @@ import UseCasesSection from "@/components/kubernetes-as-a-services/UseCasesSecti
 import {
   benefitsData,
   ctaData,
+  useCasesData,
 } from "@/data/kubernetes-as-a-services/kubernetes-as-a-services";
 
 const page = () => {
@@ -17,7 +18,7 @@ const page = () => {
       <ProblemSection />
       <SolutionSection />
       <FeaturesSection />
-      <UseCasesSection />
+      <UseCasesSection data={useCasesData} />
       <BenefitsSection data={benefitsData} />
       <CtaSection data={ctaData} />
     </div>
