@@ -31,17 +31,17 @@ const UseCasesSection = ({ data }: Props) => {
           </div>
 
           {/* RIGHT CARDS */}
-          <div className="grid grid-cols-1 grid-cols-2 gap-4 md:gap-5">
+          <div className="grid grid-cols-1 grid-cols-2 gap-4 lg:gap-3 xl:gap-5">
             {data.map((item) => (
               <div
                 key={item.id}
                 className="
                   w-full
-                  rounded-3xl
+                  rounded-2xl xl:rounded-3xl
                   border border-white/10
                   bg-[#1a2032]
-                  px-5 py-4 xl:px-4 xl:py-4 
-                  text-sm md:text-base
+                  px-5 py-4 lg:p-3 xl:p-4 
+                  text-xs xl:text-base
                   text-[#C9D1D9]
                   leading-relaxed
                   transition-all duration-300
