@@ -133,13 +133,13 @@ export default function AppModernizationContactForm({
   return (
     <div
       id="app-modernization-form"
-      className="w-full rounded-[20px] bg-[#F5F5F5] p-4 text-[#20283A] shadow-[0_18px_45px_rgba(0,0,0,0.28)] md:max-w-[396px] md:rounded-[18px] md:p-4 lg:p-4"
+      className="flex h-full w-full flex-col rounded-[20px] bg-[#F5F5F5] p-4 text-[#20283A] shadow-[0_18px_45px_rgba(0,0,0,0.28)] md:max-w-[396px] md:rounded-[18px] md:p-4 lg:p-4"
     >
       <h2 className="mb-4 xl:text-left text-center text-[28px] font-semibold md:text-[20px] lg:text-[18px] xl:text-[28px] ">
         {form.title}
       </h2>
 
-      <form onSubmit={handleSubmit} className="space-y-3">
+      <form onSubmit={handleSubmit} className="flex h-full flex-col space-y-3">
         <div className="grid grid-cols-2 gap-2.5">
           {form.fields.slice(0, 2).map((field) => (
             <div key={field.name}>
@@ -226,7 +226,7 @@ export default function AppModernizationContactForm({
         <button
           type="submit"
           disabled={loading}
-          className="mt-2 h-11 w-full rounded-[12px] bg-[#13A7F3] text-[14px] font-semibold text-white transition hover:bg-[#0891d5] disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-auto h-11 w-full rounded-[12px] bg-[#13A7F3] text-[14px] font-semibold text-white transition hover:bg-[#0891d5] disabled:cursor-not-allowed disabled:opacity-70"
         >
           {loading ? "Sending..." : form.submitLabel}
         </button>
