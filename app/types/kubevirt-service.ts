@@ -12,7 +12,22 @@ export interface KubevirtAdoptionSectionContent {
   cards: KubevirtAdoptionCard[];
 }
 
+export interface KubevirtServicesCard {
+  title: string;
+  description: string;
+}
+
+export interface KubevirtServicesSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  ctaLabel: string;
+  ctaHref: string;
+  cards: KubevirtServicesCard[];
+}
+
 export interface KubevirtServicePageData {
   heroSectionData: AppModernizationHeroContent;
   adoptionSectionData: KubevirtAdoptionSectionContent;
+  servicesSectionData: KubevirtServicesSectionContent;
 }
