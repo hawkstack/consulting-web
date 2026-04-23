@@ -4,6 +4,7 @@ export interface EcosystemPartner {
   id: number;
   name: string;
   logo: string;
+  scale?: number;
 }
 
 export interface TrainingEcosystemContent {

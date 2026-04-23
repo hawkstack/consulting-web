@@ -94,37 +94,38 @@ export const trainingServicesPageData: TrainingServicesPageData = {
             {
                 id: 1,
                 name: "Red Hat",
-                logo: "/images/partners/redhat.png"
+                logo: "/images/training-services/redhat-logo.webp"
             },
             {
                 id: 2,
                 name: "Mirantis",
-                logo: "/images/partners/mirantis.png"
+                logo: "/images/training-services/mirantis-logo.webp"
             },
             {
                 id: 3,  
                 name: "CNCF",
-                logo: "/images/partners/cncf.png"
+                logo: "/images/training-services/cncf-logo.webp"
             },
             {
                 id: 4,
                 name: "The Linux Foundation",
-                logo: "/images/partners/linux-foundation.png"
+                logo: "/images/training-services/Linux-logo.webp"
             },
             {
                 id: 5,
                 name: "AWS",
-                logo: "/images/partners/aws.png"
+                logo: "/images/home/product-reseller/AWS.webp"
             },
             {
                 id: 6,
                 name: "Google Cloud Platform",
-                logo: "/images/partners/google-cloud.png"
+                logo: "/images/training-services/GCP-logo.webp",
+                scale: 1.5,
             },
             {
                 id: 7,
                 name: "Azure",
-                logo: "/images/partners/azure.png"
+                logo: "/images/training-services/Azure-logo.webp"
             },
         ]
     }
