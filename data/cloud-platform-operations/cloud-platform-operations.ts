@@ -144,7 +144,7 @@ export const cloudPlatformOperationsPageData: CloudPlatformOperationsPageData = 
                 placeholder: "Tell us about your cloud operations goals"
             }
         ]
-    }
+    },
 
 
      whyHawkstackSectionData: {

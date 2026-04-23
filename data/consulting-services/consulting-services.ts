@@ -1,5 +1,8 @@
 import { AppModernizationHeroContent } from "@/app/types/app-modernization";
-import { ConsultingServicesWhatWeDoSectionContent } from "@/app/types/consulting-services";
+import {
+  ConsultingServicesHowWeHelpSectionContent,
+  ConsultingServicesWhatWeDoSectionContent,
+} from "@/app/types/consulting-services";
 
 export const consultingServicesHeroContent: AppModernizationHeroContent = {
   title:
@@ -130,6 +133,56 @@ export const consultingServicesWhatWeDoSectionContent: ConsultingServicesWhatWeD
         mobileOrder: 4,
         tabletOrder: 4,
         desktopOrder: 4,
+      },
+    ],
+  };
+
+export const consultingServicesHowWeHelpSectionContent: ConsultingServicesHowWeHelpSectionContent =
+  {
+    badge: "HOW WE HELP CLIENTS",
+    title:
+      "We focus on solving operational and technical problems with structured consulting work",
+    description:
+      "As a new consulting practice, our positioning should emphasize capability, clarity, and hands-on problem solving. This page is built to highlight what HawkStack does for clients instead of relying on social proof.",
+    cardTitle: "Typical client outcomes",
+    cardDescription:
+      "Examples of the business and technical areas this service page is designed to communicate clearly.",
+    outcomes: [
+      {
+        text: "Clearer architecture direction for new or evolving systems",
+        mobileOrder: 1,
+        tabletOrder: 1,
+        desktopOrder: 1,
+      },
+      {
+        text: "Better visibility into process inefficiencies and delivery gaps",
+        mobileOrder: 2,
+        tabletOrder: 2,
+        desktopOrder: 2,
+      },
+      {
+        text: "Practical execution plans with phased priorities",
+        mobileOrder: 3,
+        tabletOrder: 3,
+        desktopOrder: 3,
+      },
+      {
+        text: "Better alignment between business requirements and technical implementation",
+        mobileOrder: 4,
+        tabletOrder: 4,
+        desktopOrder: 4,
+      },
+      {
+        text: "Reduced uncertainty when selecting tools, platforms, or workflows",
+        mobileOrder: 5,
+        tabletOrder: 5,
+        desktopOrder: 5,
+      },
+      {
+        text: "Stronger delivery structure for transformation or optimization initiatives",
+        mobileOrder: 6,
+        tabletOrder: 6,
+        desktopOrder: 6,
       },
     ],
   };

@@ -14,3 +14,19 @@ export interface ConsultingServicesWhatWeDoSectionContent {
   description: string;
   services: ConsultingServiceItem[];
 }
+
+export interface ConsultingClientOutcomeItem {
+  text: string;
+  mobileOrder?: number;
+  tabletOrder?: number;
+  desktopOrder?: number;
+}
+
+export interface ConsultingServicesHowWeHelpSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  cardTitle: string;
+  cardDescription: string;
+  outcomes: ConsultingClientOutcomeItem[];
+}
