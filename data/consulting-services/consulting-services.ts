@@ -1,5 +1,6 @@
 import { AppModernizationHeroContent } from "@/app/types/app-modernization";
 import {
+  ConsultingServicesEngagementModelSectionContent,
   ConsultingServicesHowWeHelpSectionContent,
   ConsultingServicesWhatWeDoSectionContent,
 } from "@/app/types/consulting-services";
@@ -183,6 +184,52 @@ export const consultingServicesHowWeHelpSectionContent: ConsultingServicesHowWeH
         mobileOrder: 6,
         tabletOrder: 6,
         desktopOrder: 6,
+      },
+    ],
+  };
+
+export const consultingServicesEngagementModelSectionContent: ConsultingServicesEngagementModelSectionContent =
+  {
+    badge: "ENGAGEMENT MODEL",
+    title: "A structured process from assessment to execution support",
+    description:
+      "The page uses a technical, execution-oriented flow so prospective clients understand how HawkStack approaches consulting engagements.",
+    steps: [
+      {
+        stepLabel: "STEP 01",
+        title: "Discover",
+        description:
+          "Understand business goals, current systems, delivery constraints, stakeholder expectations, and known pain points.",
+        mobileOrder: 1,
+        tabletOrder: 1,
+        desktopOrder: 1,
+      },
+      {
+        stepLabel: "STEP 02",
+        title: "Assess",
+        description:
+          "Review architecture, workflows, tools, process maturity, dependencies, and operational bottlenecks in detail.",
+        mobileOrder: 2,
+        tabletOrder: 2,
+        desktopOrder: 2,
+      },
+      {
+        stepLabel: "STEP 03",
+        title: "Recommend",
+        description:
+          "Provide a structured plan covering priorities, technical options, process changes, implementation considerations, and next steps.",
+        mobileOrder: 3,
+        tabletOrder: 3,
+        desktopOrder: 3,
+      },
+      {
+        stepLabel: "STEP 04",
+        title: "Support",
+        description:
+          "Work with client teams during rollout, change execution, process refinement, or technical implementation phases.",
+        mobileOrder: 4,
+        tabletOrder: 4,
+        desktopOrder: 4,
       },
     ],
   };
