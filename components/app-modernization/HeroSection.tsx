@@ -30,7 +30,7 @@ export default function AppModernizationHeroSection({
             <h1
               className={`${content.titleMarginTop ?? "mt-4"} ${
                 content.h1MaxWidth ?? "max-w-[580px]"
-              } text-[22px] font-[600] text-[#ffffff] leading-[1.08] tracking-[0.02em] md:text-[40px] xl:text-[60px]`}>
+              } text-[22px] font-[600] text-[#ffffff] leading-[1.08] tracking-[0.02em]  ${content.fontSize ?? "xl:text-[60px] md:text-[40px]"}`}>
               <span>{content.title}</span>
               {content.highlightedLastLine ? (
                 <span className="block text-[#1D6DFF]">
@@ -39,7 +39,7 @@ export default function AppModernizationHeroSection({
               ) : null}
             </h1>
 
-            <p className= {`mt-3 ${content.descriptionWidth ?? "max-w-[620px]"} text-[14px] leading-7 text-[#ffffff] md:text-[16px] md:leading-8 xl:text-[20px]`}>
+            <p className= {`mt-3 ${content.descriptionWidth ?? "max-w-[620px]"} text-[14px] leading-7 text-[#ffffff] md:text-[16px] md:leading-8 xl:text-[18px]`}>
               {content.description}
             </p>
             <div className="mt-7 flex w-full flex-row items-center justify-center gap-3 md:justify-start">
