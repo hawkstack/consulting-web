@@ -95,4 +95,45 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
       },
     ],
   },
+  servicesSectionData: {
+    badge: "SERVICES",
+    title: "KubeVirt Services by HawkStack",
+    description:
+      "From architecture to migration to long-term operations, HawkStack helps teams move beyond evaluation and build KubeVirt platforms that are ready for real production environments.",
+    ctaLabel:
+      "Looking for a commercial platform? Visit KubeVirtStack",
+    ctaHref: "/get-started",
+    cards: [
+      {
+        title: "Architecture & Platform Design",
+        description:
+          "Design production-ready KubeVirt platforms aligned to your infrastructure, security, and workload requirements.",
+      },
+      {
+        title: "Migration Strategy & Execution",
+        description:
+          "Plan and execute migrations from traditional virtualization environments into KubeVirt with reduced risk and disruption.",
+      },
+      {
+        title: "Operations & Day-2 Engineering",
+        description:
+          "Implement observability, upgrades, backup strategies, lifecycle management, and performance tuning.",
+      },
+      {
+        title: "Automation & GitOps",
+        description:
+          "Standardize infrastructure and VM operations with Infrastructure as Code, CI/CD, and GitOps workflows.",
+      },
+      {
+        title: "Security & Governance",
+        description:
+          "Apply policy, multi-tenancy, network controls, and compliance-aligned operational guardrails.",
+      },
+      {
+        title: "Training & Enablement",
+        description:
+          "Upskill internal teams to operate KubeVirt confidently in production with clear processes and best practices.",
+      },
+    ],
+  },
 };
