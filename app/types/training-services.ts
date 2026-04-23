@@ -29,9 +29,24 @@ export interface TrainingPortfolioContent {
     items: PortfolioItem[];
 }
 
+export interface TrainingProgramItem {
+  id: number;
+  provider: string;
+  title: string;
+  description: string;
+  buttonLink: string;
+}
+
+export interface TrainingsWeGiveContent {
+  subTitle: string;
+  title: string;
+  description: string;
+  programs: TrainingProgramItem[];
+}
+
 export interface TrainingServicesPageData {
     heroSectionData: AppModernizationHeroContent;
     trainingEcosystemData: TrainingEcosystemContent;
     trainingPortfolioData: TrainingPortfolioContent;
-
+    trainingsWeGiveData: TrainingsWeGiveContent;
 }
