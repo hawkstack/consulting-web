@@ -1,12 +1,13 @@
-import { UseCaseItem } from "@/app/types/kubernetes-as-a-services";
+import { UseCasesData } from "@/app/types/kubernetes-as-a-services";
 
 interface Props {
-  data: UseCaseItem[];
+  data: UseCasesData;
 }
 
 const UseCasesSection = ({ data }: Props) => {
+  const { header, items } = data;
   return (
-    <section className="bg-[#020617] text-white py-16 md:py-16 lg:py-24 xl:py-20 px-4 md:px-14 lg:px-20 xl:px-24">
+    <section className="bg-[#020617] text-white py-12 md:py-16 lg:py-24 xl:py-20 px-4 md:px-14 lg:px-20 xl:px-24">
       <div className="max-w-[1400px] mx-auto">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -14,25 +15,23 @@ const UseCasesSection = ({ data }: Props) => {
           <div className="text-center md:text-left">
             {/* Tag */}
             <p className="text-[#22D3EE] text-xs xl:text-sm tracking-[2px] font-semibold mb-4">
-              USE CASES
+              {header.tag}
             </p>
 
             {/* Heading */}
             <h2 className="text-[22px] md:text-[24px] lg:text-[28px] xl:text-[44px] md:max-w-[290px] lg:max-w-[520px] font-semibold md:leading-tight lg:leading-none mb-4">
-              Designed for teams building and scaling cloud-native applications.
+              {header.title}
             </h2>
 
             {/* Description */}
             <p className="hidden md:block text-[#9BA3AF] text-sm lg:text-base max-w-[520px] mx-auto md:mx-0">
-              KaaS supports engineering teams that need reliable Kubernetes
-              infrastructure without diverting valuable time into platform
-              maintenance and operational firefighting.
+              {header.description}
             </p>
           </div>
 
           {/* RIGHT CARDS */}
           <div className="grid grid-cols-1 grid-cols-2 gap-2 md:gap-2 lg:gap-3 xl:gap-5 px-2 md:px-0 mt-[-24px] md:mt-0">
-            {data.map((item) => (
+            {items.map((item) => (
               <div
                 key={item.id}
                 className="
@@ -40,7 +39,7 @@ const UseCasesSection = ({ data }: Props) => {
                   rounded-2xl xl:rounded-3xl
                   border border-white/10
                   bg-[#1a2032]
-                  px-2 py-2 md:py-1 md:px-2 lg:p-3 xl:p-4 
+                  p-2 md:py-1 md:px-2 lg:p-3 xl:p-4 
                   text-xs xl:text-base
                   text-[#C9D1D9]
                   leading-relaxed

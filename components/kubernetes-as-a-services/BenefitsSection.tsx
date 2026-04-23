@@ -6,7 +6,7 @@ interface Props {
 
 const BenefitsSection: React.FC<Props> = ({ data }) => {
   return (
-    <section className="bg-[#0b1225] text-white py-16 px-4 md:px-12 lg:px-24 xl:px-24">
+    <section className="bg-[#0b1225] text-white py-12 md:py-16 px-4 md:px-12 lg:px-24 xl:px-24">
       <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row gap-10 lg:gap-20 items-start">
         {/* LEFT */}
         <div className="flex-1 text-center md:text-left">
