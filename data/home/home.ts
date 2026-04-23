@@ -235,50 +235,39 @@ export const homePageData: HomePageData = {
                 id: 1,
                 title: "Cloud Native Architecture", 
                 icon: "cloud", 
-                link: "#" 
+                desc: "Scalable, resilient systems built for the cloud." 
             },
             { 
                 id: 2, 
                 title: "Operational Excellence", 
                 icon: "medal", 
-                link: "#" 
+                desc: "Improve reliability, efficiency, and performance." 
             },
             { 
                 id: 3, 
                 title: "Observability", 
                 icon: "eye", 
-                link: "#" 
+                desc: "End-to-end visibility for faster issue resolution." 
             },
             { 
                 id: 4, 
                 title: "Security & Compliance", 
                 icon: "shield", 
-                link: "#" 
+                desc: "Enterprise-grade protection and regulatory alignment." 
             },
             { 
                 id: 5, 
                 title: "Continuity & Lifecycle", 
                 icon: "refresh", 
-                link: "#" 
+                desc: "Structured lifecycle management and continuous improvement." 
             },
             { 
                 id: 6, 
                 title: "Unified Platform", 
                 icon: "layers", 
-                link: "#" 
+                desc: "Seamlessly integrate tools, teams, and workflows." 
             },
         ],
-    },
-     
-    cloudSectionData: {
-        title: {
-            main: "Build the",
-            highlight: "next wave",
-            suffix: "of cloud innovation."
-        },
-        desc: "As a silver member of CNCF, HawkStack actively with the cloud native community and contributes through initiatives like kubeVirtStack, focused on Modern virtualization on Kubernetes.",
-        videoDesktop: "/videos/home/cloud/Blue_Background.mp4",
-        videoMobile: "/videos/home/cloud/Blue_Background-mobile.mp4"
     },
 
     whatWeDoSectionData: {
@@ -328,5 +317,16 @@ export const homePageData: HomePageData = {
                 link: ""
             }
         ],
-    }
+    },
+
+    cloudSectionData: {
+        title: {
+            main: "Build the",
+            highlight: "next wave",
+            suffix: "of cloud innovation."
+        },
+        desc: "As a silver member of CNCF, HawkStack actively with the cloud native community and contributes through initiatives like kubeVirtStack, focused on Modern virtualization on Kubernetes.",
+        videoDesktop: "/videos/home/cloud/Blue_Background.mp4",
+        videoMobile: "/videos/home/cloud/Blue_Background-mobile.mp4"
+    },
 }

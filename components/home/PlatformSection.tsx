@@ -57,13 +57,10 @@ export default function PlatformSection({ data } : PlatformProps) {
               
               <div className="border border-[#90A1B9] flex items-center justify-between mb-3"/>
 
-              <div className="flex items-center justify-between">
-                <Link href={feature.link} className="text-[12px] text-white font-Regular ">
-                  Know more
-                </Link>
-                <span>
-                  <RightArrow className="text-[#2E85FF]"/>
-                </span>
+              <div className="text-left">
+                <p className="text-[10px] md:text-[12px] text-[#DBEAFE] font-light ">
+                  {feature.desc}
+                </p>
               </div>
             </div>
           ))}

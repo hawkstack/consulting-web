@@ -11,13 +11,13 @@ export default function ProductGrid({data}: Props) {
     const whiteBgLogos = ["Azure", "AWS", "GCP"];
 
   return (
-    <section className="bg-[#020B1C] py-15 px-6 md:px-15 lg:px-6 xl:px-25 font-lexend">
+    <section className="bg-[#FFFFFF] py-15 px-6 md:px-15 lg:px-6 xl:px-25 font-lexend z-10 relative">
       {/* Header Section */}
       <div className="text-center mb-16">
-        <h2 className="text-white text-[24px] md:text-[32px] xl:text-[40px] font-semibold mb-4">
+        <h2 className="text-[#011235] text-[24px] md:text-[32px] xl:text-[40px] font-semibold mb-4">
           {data.title}
         </h2>
-        <p className="hidden md:block text-[#C3C3C3] md:text-[16px] xl:text-[20px] mx-auto">
+        <p className="hidden md:block text-[#767676] md:text-[16px] xl:text-[20px] mx-auto">
           {data.subtitle}
         </p>
       </div>
@@ -29,12 +29,12 @@ export default function ProductGrid({data}: Props) {
             return (
           <div 
             key={product.id}
-            className="relative group bg-[#0A1628] border border-white/10 p-4 md:p-6 xl:p-8 rounded-2xl"
+            className="relative group bg-[#FFFFFF]/5 border border-white/10 p-4 md:p-5 xl:p-8 rounded-2xl shadow-[2px_4px_4px_0px_#0271B52E]"
           >
             {/* Top Row: Logo and Number */}
             <div className="flex justify-between items-start mb-5">
               <div className={`w-[80px] h-[80px] rounded-lg flex items-center justify-center p-2
-              ${isWhiteBg ? "bg-[#E5E5E5]" : "bg-[linear-gradient(135deg,rgba(19,49,173,0.125)_0%,rgba(19,49,173,0.063)_100%)] border border-[#1331AD]/40"}
+              ${isWhiteBg ? "bg-[#E5E5E5]" : "bg-[linear-gradient(135deg,_rgba(19,49,173,0.125)_0%,_rgba(19,49,173,0.063)_100%)] border border-[#1331AD]/25"}
                 `}>
                 <img src={product.logo} alt={product.title} className="w-full h-full object-contain" />
               </div>
@@ -44,18 +44,18 @@ export default function ProductGrid({data}: Props) {
             </div>
 
             {/* Content */}
-            <h4 className="text-[#1647C3] text-[11px] md:text-[12px] font-semibold tracking-widest mb-1">
+            <h4 className="text-[#1344AD] text-[11px] md:text-[12px] font-semibold tracking-widest mb-1">
               {product.category}
             </h4>
-            <h3 className="text-white text-[25px] md:text-[36px] font-bold mb-4">{product.title}</h3>
-            <p className="hidden md:block text-[#99A1AF] text-[14px] leading-relaxed mb-5 max-w-[85%]">
+            <h3 className="text-[#000000] text-[25px] md:text-[36px] font-bold mb-1">{product.title}</h3>
+            <p className="hidden md:block text-[#616161] text-[12px] leading-relaxed mb-5 ">
               {product.description}
             </p>
 
             {/* CTA */}
             <Link 
               href={product.link}
-              className="inline-flex items-center text-[#1647C3] text-[14px] font-semibold"
+              className="inline-flex items-center text-[#1344AD] text-[14px] font-semibold"
             >
               Learn More 
               <span className="ml-2">
