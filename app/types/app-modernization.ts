@@ -21,7 +21,16 @@ export interface AppModernizationFormContent {
   fields: AppModernizationFormField[];
 }
 
+export interface StatBadge {
+  id: number;
+  value?: string;
+  title?: string;
+  description: string;
+}
+
 export interface AppModernizationHeroContent {
+  heroBgClass?: string;
+  subTitle?: string;
   badge?: string;
   title: string;
   highlightedLastLine?: string;
@@ -31,6 +40,7 @@ export interface AppModernizationHeroContent {
   titleMarginTop?: string;
   descriptionWidth?: string;
   tags?: string[];
+  statBadges?: StatBadge[];
   form: AppModernizationFormContent;
 }
 

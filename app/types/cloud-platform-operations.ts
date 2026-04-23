@@ -38,6 +38,8 @@ export interface FaqContent {
   subTitle: string;
   title: string;
   faqs: FaqItem[];
+}
+
 export interface Hawkstack {
     subTitle: string;
     title: string;
