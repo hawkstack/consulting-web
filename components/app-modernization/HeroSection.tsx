@@ -12,8 +12,8 @@ export default function AppModernizationHeroSection({
       ${content.heroBgClass ?? "bg-[#040A1D]"}`}>
       <div className="absolute inset-0 " />
 
-      <div className="relative mx-auto flex max-w-[1280px] items-center px-4 py-10 sm:px-6 md:px-8 lg:px-12 xl:py-20 ">
-        <div className="grid w-full items-center gap-10 md:grid-cols-[minmax(0,1fr)_360px] md:gap-8 lg:grid-cols-[minmax(0,1fr)_396px] lg:gap-12">
+      <div className="relative mx-auto flex max-w-[1280px] items-stretch px-4 py-10 sm:px-6 md:px-8 lg:px-12 xl:py-20 ">
+        <div className="grid w-full items-stretch gap-10 md:grid-cols-[minmax(0,1fr)_360px] md:gap-8 lg:grid-cols-[minmax(0,1fr)_396px] lg:gap-12">
           <div className="mx-auto flex max-w-[800px] flex-col items-center text-center md:mx-0 md:items-start md:text-left">
             {content.badge && (
               <span className="inline-flex rounded-full border border-[#019CFF] bg-[rgba(19,167,243,0.08)] px-4 py-1 text-[10px] font-normal text-[#009DFF] shadow-[0_0_0_1px_rgba(19,167,243,0.1)] md:text-[11px] xl:text-[16px]">
@@ -93,7 +93,7 @@ export default function AppModernizationHeroSection({
             </div>
           </div>
 
-          <div className="w-full md:mx-0 md:justify-self-end">
+          <div className="flex w-full md:mx-0 md:justify-self-end">
             <AppModernizationContactForm form={content.form} />
           </div>
 
