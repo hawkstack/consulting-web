@@ -82,4 +82,104 @@ export const trainingServicesPageData: TrainingServicesPageData = {
             ],
         },
     },
+
+    trainingEcosystemData: {
+        subTitle: "Training Ecosystem",
+        title: "Trusted learning paths across leading technology platforms",
+        description: "Build capability through recognized vendor and open source aligned programs that support enterprise learning, certifications, and practical implementation.",
+        partners: [
+            {
+                id: 1,
+                name: "Red Hat",
+                logo: "/images/training-services/redhat-logo.webp"
+            },
+            {
+                id: 2,
+                name: "Mirantis",
+                logo: "/images/training-services/mirantis-logo.webp"
+            },
+            {
+                id: 3,  
+                name: "CNCF",
+                logo: "/images/training-services/cncf-logo.webp"
+            },
+            {
+                id: 4,
+                name: "The Linux Foundation",
+                logo: "/images/training-services/Linux-logo.webp"
+            },
+            {
+                id: 5,
+                name: "AWS",
+                logo: "/images/home/product-reseller/AWS.webp"
+            },
+            {
+                id: 6,
+                name: "Google Cloud Platform",
+                logo: "/images/training-services/GCP-logo.webp",
+                scale: 1.5,
+            },
+            {
+                id: 7,
+                name: "Azure",
+                logo: "/images/training-services/Azure-logo.webp"
+            },
+        ]
+    },
+
+    trainingPortfolioData: {
+        subTitle: "Training Portfolio",
+        title: "Explore our training tracks",
+        description: "Each training path is designed to help learners move from concepts to implementation with structured modules, applied labs, and enterprise-ready outcomes.",
+        items: [
+            {
+                id: 1,
+                title: "Red Hat",
+                highLightedText: "Enterprise Linux, OpenShift, Ansible, and platform engineering training.",
+                desc: "Red Hat training programs are built for teams that want practical skills in Linux administration, container platforms, automation, and hybrid cloud operations.",
+                points:[
+                    "Red Hat Enterprise Linux administration and operations",
+                    "OpenShift platform deployment, management, and troubleshooting",
+                    "Ansible Automation Platform for scalable IT automation",
+                    "Certification-aligned learning for enterprise engineering teams"
+                ]
+            },
+            {
+                id: 2,
+                title: "Mirantis",
+                highLightedText: "Containers, Kubernetes, and cloud infrastructure learning paths.",
+                desc: "Mirantis training is designed for organizations adopting Kubernetes and container platforms that need strong operational capability across modern infrastructure environments.",
+                points:[
+                    "Kubernetes fundamentals and cluster operations",
+                    "Container runtime, image, and workload management",
+                    "Modern application deployment strategies",
+                    "Operational best practices for platform teams"
+                ]
+            },
+            {
+                id: 3,
+                title: "CNCF",
+                highLightedText: "Cloud native skills across Kubernetes, observability, security, and GitOps.",
+                desc: "CNCF-focused programs help learners build cloud native expertise using ecosystem tools, open standards, and modern operational practices trusted by leading engineering teams.",
+                points:[
+                    "Kubernetes administration and cloud native architecture",
+                    "Observability with logging, metrics, and tracing concepts",
+                    "GitOps, CI/CD, and release automation workflows",
+                    "Security, resilience, and production readiness practices"
+                ]
+            },
+            {
+                id: 4,
+                title: "The Linux Foundation",
+                highLightedText: "Open source, Linux, Kubernetes, and DevOps certification-oriented programs.",
+                desc: "The Linux Foundation training track supports professionals and enterprises looking to strengthen open source, Linux, Kubernetes, and DevOps capabilities with structured learning paths.",
+                points:[
+                    "Linux system administration and command-line proficiency",
+                    "Kubernetes and cloud native certification preparation",
+                    "Open source development and operational best practices",
+                    "DevOps workflows, automation, and engineering readiness"
+                ]
+            },
+        ]
+    }
 }
