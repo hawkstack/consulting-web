@@ -158,7 +158,7 @@ export const services: MegaItem[] = [
     description:
       "Modernize virtualization by managing VMs alongside containers with Kubernetes-native scalability and control.",
     image: "/images/services/KubeVirt.webp",
-    href: "/coming-soon",
+    href: "/kubevirt-service",
   },
   {
     id: "automation",
