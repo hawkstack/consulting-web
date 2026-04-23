@@ -116,13 +116,13 @@ export default function ConsultingConversationForm({
   };
 
   return (
-    <div className="w-full rounded-[20px] border border-[#263244] bg-[#1A2434] p-4 shadow-[0_18px_42px_rgba(3,11,24,0.35)] md:p-5 lg:max-w-[360px] lg:p-4 xl:max-w-[735px] xl:rounded-[18px] xl:p-3.5">
-      <form onSubmit={handleSubmit} className="space-y-3 lg:space-y-2.5 xl:space-y-2.5">
+    <div className="w-full rounded-[20px] border border-[#263244] bg-[#1A2434] p-4 shadow-[0_18px_42px_rgba(3,11,24,0.35)] md:p-5 xl:max-w-[735px] xl:rounded-[18px] xl:p-3.5">
+      <form onSubmit={handleSubmit} className="space-y-3 xl:space-y-2.5">
         {content.fields.map((field) => (
           <div key={field.name}>
             <label
               htmlFor={field.name}
-              className="mb-1.5 block text-[11px] font-normal text-[#F3F7FF] lg:mb-1 lg:text-[12px] xl:text-[14px]"
+              className="mb-1.5 block text-[11px] font-normal text-[#F3F7FF] xl:mb-1 xl:text-[14px]"
             >
               {field.label}
             </label>
@@ -136,7 +136,7 @@ export default function ConsultingConversationForm({
                 }
                 placeholder={field.placeholder}
                 rows={4}
-                className={`min-h-[104px] w-full resize-none rounded-[10px] border bg-[#2D3745] px-3 py-3 text-[12px] text-white outline-none placeholder:text-[#9AA5B5] lg:min-h-[96px] lg:rounded-[9px] lg:px-3 lg:py-2.5 lg:text-[11px] xl:min-h-[84px] xl:text-[12px] ${
+                className={`min-h-[104px] w-full resize-none rounded-[10px] border bg-[#2D3745] px-3 py-3 text-[12px] text-white outline-none placeholder:text-[#9AA5B5] xl:min-h-[84px] xl:text-[12px] ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#3A4659] focus:border-[#37B5FF]"
@@ -151,7 +151,7 @@ export default function ConsultingConversationForm({
                   handleFieldChange(field.name, event.target.value)
                 }
                 placeholder={field.placeholder}
-                className={`h-11 w-full rounded-[10px] border bg-[#2D3745] px-3 text-[12px] text-white outline-none placeholder:text-[#9AA5B5] lg:h-10 lg:rounded-[9px] lg:px-3 lg:text-[11px] xl:h-8 xl:text-[12px] ${
+                className={`h-11 w-full rounded-[10px] border bg-[#2D3745] px-3 text-[12px] text-white outline-none placeholder:text-[#9AA5B5] xl:h-8 xl:text-[12px] ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#3A4659] focus:border-[#37B5FF]"
@@ -168,7 +168,7 @@ export default function ConsultingConversationForm({
         <button
           type="submit"
           disabled={loading}
-          className="h-11 w-full rounded-[10px] bg-[#35B6F5] text-[12px] font-semibold text-[#03111F] transition hover:bg-[#26a7e7] disabled:cursor-not-allowed disabled:opacity-70 lg:h-10 lg:text-[12px] xl:h-8 xl:text-[13px]"
+          className="h-11 w-full rounded-[10px] bg-[#35B6F5] text-[12px] font-semibold text-[#03111F] transition hover:bg-[#26a7e7] disabled:cursor-not-allowed disabled:opacity-70 xl:h-8 xl:text-[13px]"
         >
           {loading ? "Sending..." : content.submitLabel}
         </button>
