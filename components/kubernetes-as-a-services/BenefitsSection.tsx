@@ -6,7 +6,7 @@ interface Props {
 
 const BenefitsSection: React.FC<Props> = ({ data }) => {
   return (
-    <section className="bg-[#0b1225] text-white py-16 px-4 md:px-12 lg:px-24 xl:px-24">
+    <section className="bg-[#0b1225] text-white py-12 md:py-16 px-4 md:px-14 lg:px-20 xl:px-24">
       <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row gap-10 lg:gap-20 items-start">
         {/* LEFT */}
         <div className="flex-1 text-center md:text-left">
@@ -19,11 +19,11 @@ const BenefitsSection: React.FC<Props> = ({ data }) => {
           </h2>
         </div>
 
-        <div className="flex-1 w-full flex flex-col gap-2 md:gap-2 lg:gap-4 items-start">
+        <div className="flex-1 w-full flex flex-col gap-2 md:gap-2 lg:gap-4 xl:justify-self-end">
           {data.items.map((item) => (
             <div
               key={item.id}
-              className="w-full max-w-[520px] bg-[#1a2032] border border-white/10 rounded-2xl pl-5 pr-8 py-2 lg:py-4 text-xs xl:text-base text-gray-300 leading-relaxed backdrop-blur-md hover:border-white/20 transition-all text-center md:text-left"
+              className="w-full max-w-[540px] bg-[#1a2032] border border-white/10 rounded-2xl pl-5 pr-8 py-2 lg:py-4 text-xs xl:text-base text-gray-300 leading-relaxed backdrop-blur-md hover:border-white/20 transition-all text-center md:text-left"
             >
               {item.text}
             </div>
