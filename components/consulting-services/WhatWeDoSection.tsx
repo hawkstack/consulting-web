@@ -1,13 +1,9 @@
 import type {
-  ConsultingServiceItem,
   ConsultingServicesWhatWeDoSectionContent,
+  ConsultingServiceItem,
 } from "@/app/types/consulting-services";
-import {
-  AdvisoryIcon,
-  ImplementationIcon,
-  OptimizationIcon,
-  TransformationIcon,
-} from "@/components/icons/consulting-services/ServiceIcons";
+
+import ServiceCard from "@/components/consulting-services/ServiceCard";
 
 function sortServices(
   services: ConsultingServiceItem[],
@@ -21,53 +17,6 @@ function sortServices(
 
     return aOrder - bOrder;
   });
-}
-
-function ServiceIcon({ icon }: { icon: ConsultingServiceItem["icon"] }) {
-  const iconClassName = "h-5 w-5 text-[#1D6DFF]";
-
-  return (
-    <div className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#EAF3FF]">
-      {icon === "advisory" ? <AdvisoryIcon className={iconClassName} /> : null}
-      {icon === "optimization" ? (
-        <OptimizationIcon className={iconClassName} />
-      ) : null}
-      {icon === "transformation" ? (
-        <TransformationIcon className={iconClassName} />
-      ) : null}
-      {icon === "implementation" ? (
-        <ImplementationIcon className={iconClassName} />
-      ) : null}
-    </div>
-  );
-}
-
-function ServiceCard({ service }: { service: ConsultingServiceItem }) {
-  return (
-    <article className="flex h-full flex-col rounded-[20px] border border-[#E4ECF7] bg-white px-5 py-7 shadow-[0_10px_30px_rgba(19,58,114,0.08)]">
-      <ServiceIcon icon={service.icon} />
-
-      <h3 className="xl:mt-6 mt-4 max-w-[260px] text-[22px] font-semibold leading-[1.18] tracking-[-0.03em] text-[#18233A] md:text-[24px] xl:min-h-[44px] xl:text-[18px] xl:w-[200px] lg:text-[18px]">
-        {service.title}
-      </h3>
-
-      <p className="xl:mt-5 mt-2 text-[13px] leading-[1.85] text-[#596579] md:text-[14px] xl:min-h-[122px]  md:w-[300px] xl:w-60  w-70 xl:text-[15px] lg:w-[400px] lg:text-[14px]">
-        {service.description}
-      </p>
-
-      <ul className=" space-y-3 mt-2 ">
-        {service.bullets.map((bullet) => (
-          <li
-            key={bullet}
-            className="flex items-start gap-3 text-[12px] leading-[1.55] text-[#30435F] w-70 md:text-[13px] xl:text-[14px] lg:text-[13px]"
-          >
-            <span className="mt-[7px] h-[5px] w-[5px] flex-none rounded-full bg-[#35A8FF]" />
-            <span>{bullet}</span>
-          </li>
-        ))}
-      </ul>
-    </article>
-  );
 }
 
 export default function WhatWeDoSection({

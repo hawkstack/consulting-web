@@ -70,7 +70,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       title: "RedHat",
       description:
         "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
-      image: "/images/home/Redhat.webp",
+      image: "/images/home/product-reseller/Redhat.webp",
       href: "/get-started",
     },
     {
@@ -78,7 +78,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       title: "CNCF",
       description:
         "Cloud-native technologies and frameworks powering modern application development.",
-      image: "/images/home/cncf.webp",
+      image: "/images/home/product-reseller/cncf.webp",
       href: "/get-started",
     },
     {
@@ -86,7 +86,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       title: "Mirantis",
       description:
         "Kubernetes and container solutions for scalable and secure cloud environments.",
-      image: "/images/home/Mirantis.webp",
+      image: "/images/home/product-reseller/Mirantis.webp",
       href: "/get-started",
     },
     {
@@ -102,7 +102,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       title: "AWS",
       description:
         "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",
-      image: "/images/home/AWS.webp",
+      image: "/images/home/product-reseller/AWS.webp",
       href: "/get-started",
     },
     {
@@ -110,7 +110,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       title: "GCP",
       description:
         "Google Cloud solutions for data analytics, AI, and cloud-native innovation.",
-      image: "/images/home/google-cloud.webp",
+      image: "/images/home/product-reseller/google-cloud.webp",
       href: "/get-started",
     },
     {
@@ -118,7 +118,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       title: "Azure",
       description:
         "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration.",
-      image: "/images/home/Azure.webp",
+      image: "/images/home/product-reseller/Azure.webp",
       href: "/get-started",
     },
     {
@@ -158,6 +158,7 @@ export const services: MegaItem[] = [
     description:
       "Modernize virtualization by managing VMs alongside containers with Kubernetes-native scalability and control.",
     image: "/images/services/KubeVirt.webp",
+    href: "/coming-soon",
   },
   {
     id: "automation",
