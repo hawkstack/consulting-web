@@ -60,7 +60,7 @@ export type PlatformFeature = {
     id: number;
     title: string;
     icon: string; 
-    link: string;
+    desc: string;
 };
 
 export type PlatformSectionData = {
@@ -68,6 +68,17 @@ export type PlatformSectionData = {
     title: string[];
     description: string;
     features: PlatformFeature[];
+};
+
+export type CloudSectionData = {
+    title: {
+        main: string;
+        highlight: string;
+        suffix: string;
+    };
+    desc: string;
+    videoDesktop: string;
+    videoMobile: string;
 };
 
 export type OfferingCard = {
@@ -84,23 +95,12 @@ export type WhatWeDoSection = {
     cards: OfferingCard[];
 };
 
-export type CloudSectionData = {
-    title: {
-        main: string;
-        highlight: string;
-        suffix: string;
-    };
-    desc: string;
-    videoDesktop: string;
-    videoMobile: string;
-};
-
 export type HomePageData = {
     heroSectionData: HeroSectionData;
     cloudServicesSectionData: EngineeringDrivenCloudServicesProps;
     productsSectionData: ProductsSectionData;
     globalSectionData: GlobalSectionData;
     platformSectionData: PlatformSectionData;
-    whatWeDoSectionData: WhatWeDoSection;
     cloudSectionData: CloudSectionData;
+    whatWeDoSectionData: WhatWeDoSection;
 };

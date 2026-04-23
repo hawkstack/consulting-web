@@ -8,8 +8,8 @@ type GlobalProps = {
 
 export default function OurSolutions({ data }: GlobalProps) {
   return (
-    <section className="relative w-full py-10 md:py-15 bg-white text-center">
-      <div className="absolute pointer-events-none rounded-full z-0 md:w-[926px] md:h-[792px] w-[449px] h-[278px] lg:-top-[236px] -top-[156px] left-[9px] lg:left-[253px] md:-top-[277px] md:-left-[67px] bg-[#0059FF] md:opacity-[7%] opacity-[26%] blur-[250px]" />
+    <section className="relative w-full py-10 md:py-15 bg-white text-center font-lexend">
+      <div className="absolute pointer-events-none rounded-full z-0 md:w-[926px] md:h-[792px] w-[449px] h-[278px] lg:-top-[236px] -top-[156px] left-[9px] lg:left-[253px] md:-top-[277px] md:-left-[67px] bg-[#0059FF] md:opacity-[10%] opacity-[26%] blur-[250px]" />
       <div className="max-w-7xl mx-auto px-6 lg:px-6 xl:px-15 z-10">
         <span className="px-6 py-1 rounded-full bg-[#F6FBFF] border border-[#2B7FFF] text-[#2B7FFF] text-[12px] xl:text-[16px] font-medium">
           {data.highlightText}
@@ -56,9 +56,9 @@ export default function OurSolutions({ data }: GlobalProps) {
         </div>
         <div className="mt-10 md:mt-16">
           <button 
-            className="px-8 py-3 bg-[#21A3E8] text-white font-semibold rounded-full text-[13px]"
+            className="px-6 py-1 bg-[#21A3E8] text-white font-semibold rounded-full text-[15px]"
           >
-            Explore open Roles
+            Explore Partners
           </button>
         </div>
       </div>
