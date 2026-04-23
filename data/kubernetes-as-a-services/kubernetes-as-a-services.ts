@@ -4,6 +4,7 @@ import {
   BenefitsData,
   CtaData,
   FeaturesData,
+  ProblemData,
   UseCasesData,
 } from "@/app/types/kubernetes-as-a-services";
 
@@ -113,5 +114,50 @@ export const howItWorksData: FeaturesData = {
       title: "Operate",
       desc: "We support continuous monitoring, upgrades, scaling, and platform reliability over time.",
     },
+  ],
+};
+
+// solutions section
+
+import { SolutionData } from "@/app/types/kubernetes-as-a-services";
+
+export const solutionData: SolutionData = {
+  header: {
+    tag: "THE SOLUTION",
+    title:
+      "KaaS by HawkStack gives your team a production-ready Kubernetes foundation without the burden of managing everything alone.",
+    description:
+      "We help organizations adopt Kubernetes with the right architecture, automation, governance, and operational support. From initial design to ongoing optimization, HawkStack provides a managed path to reliable, scalable cloud-native infrastructure.",
+  },
+  items: [
+    {
+      title: "Managed Kubernetes Operations",
+      desc: "Provision, operate, and optimize production ready Kubernetes clusters without the operational overhead.",
+    },
+    {
+      title: "Secure by Design",
+      desc: "Built with security best practices, policy controls, workload isolation, and continuous monitoring from day one.",
+    },
+    {
+      title: "Scalable Cloud Infrastructure",
+      desc: "Run containerized workloads across environments with reliability, observability, and predictable performance.",
+    },
+  ],
+};
+
+// problem section
+
+export const problemData: ProblemData = {
+  header: {
+    tag: "THE PROBLEM",
+    title: "Kubernetes is powerful, but operating it well is hard.",
+    description:
+      "Many teams want the flexibility of Kubernetes but struggle with cluster setup, upgrades, observability, security policies, and day-to-day operations. The result is delayed releases, fragile infrastructure, and growing platform overhead.",
+  },
+  items: [
+    { text: "Complex cluster operations and maintenance" },
+    { text: "Security and compliance gaps in cloud-native environments" },
+    { text: "Scaling challenges across workloads and environments" },
+    { text: "High internal overhead for platform engineering teams" },
   ],
 };

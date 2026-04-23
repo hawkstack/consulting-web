@@ -8,7 +8,7 @@ const UseCasesSection = ({ data }: Props) => {
   const { header, items } = data;
   return (
     <section className="bg-[#020617] text-white py-12 md:py-16 lg:py-24 xl:py-20 px-4 md:px-14 lg:px-20 xl:px-24">
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1300px] mx-auto">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* LEFT CONTENT */}

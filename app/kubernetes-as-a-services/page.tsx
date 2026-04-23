@@ -9,6 +9,8 @@ import {
   benefitsData,
   ctaData,
   howItWorksData,
+  problemData,
+  solutionData,
   useCasesData,
 } from "@/data/kubernetes-as-a-services/kubernetes-as-a-services";
 
@@ -16,8 +18,8 @@ const page = () => {
   return (
     <div>
       <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
+      <ProblemSection data={problemData} />
+      <SolutionSection data={solutionData} />
       <FeaturesSection data={howItWorksData} />
       <UseCasesSection data={useCasesData} />
       <BenefitsSection data={benefitsData} />

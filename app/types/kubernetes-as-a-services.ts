@@ -55,3 +55,37 @@ export interface FeaturesData {
   };
   items: FeatureItem[];
 }
+
+// solutions section
+
+export interface SolutionHeader {
+  tag: string;
+  title: string;
+  description: string;
+}
+
+export interface SolutionItem {
+  title: string;
+  desc: string;
+}
+
+export interface SolutionData {
+  header: SolutionHeader;
+  items: SolutionItem[];
+}
+
+// problem section
+export interface ProblemHeader {
+  tag: string;
+  title: string;
+  description: string;
+}
+
+export interface ProblemItem {
+  text: string;
+}
+
+export interface ProblemData {
+  header: ProblemHeader;
+  items: ProblemItem[];
+}
