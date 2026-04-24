@@ -39,7 +39,7 @@ const CtaSection: React.FC<Props> = ({ data }) => {
             {data.buttons.map((btn, index) => (
               <a
                 key={index}
-                href={btn.link || "#"}
+                // href={btn.link || "#"}
                 className={`
                   px-2 lg:px-4 xl:px-6 py-1 md:py-2 xl:py-3 rounded-lg md:rounded-xl lg:rounded-2xl text-xs lg:text-sm xl:text-base font-semibold transition-all duration-300
                   ${

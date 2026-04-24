@@ -15,15 +15,14 @@ export const ctaData: CtaData = {
   description:
     "Partner with HawkStack Consulting to build a Kubernetes platform that is secure, scalable, and ready for production.",
   buttons: [
-    {
-      label: "Contact Us",
-      variant: "primary",
-      link: "/contact",
-    },
+    // {
+    //   label: "Contact Us",
+    //   variant: "primary",
+    //   link: "/contact",
+    // },
     {
       label: "Schedule Consultation",
       variant: "secondary",
-      link: "/schedule",
     },
   ],
 };
@@ -176,11 +175,6 @@ export const heroSectionData: AppModernizationHeroContent = {
   description:
     "HawkStack Consulting delivers Kubernetes as a Service so your team can deploy, scale, and manage containerized applications with confidence—without building platform operations from scratch.",
   buttons: [
-    {
-      label: "Book a Consultation",
-      href: "",
-      variant: "primary",
-    },
     {
       label: "Explore KaaS",
       href: "",
