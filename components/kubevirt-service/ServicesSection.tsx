@@ -60,7 +60,7 @@ export default function ServicesSection({
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-[1110px] mt-10 md:mt-14 xl:max-w-[1170px]">
+        <div className="mx-auto max-w-[340px] md:max-w-[1170px] mt-10 md:mt-14 xl:max-w-[1170px]">
           <CommercialCtaSection content={content.commercialCta} />
           <AdoptionHighlightsSection content={adoptionContent} />
         </div>
