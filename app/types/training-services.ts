@@ -44,9 +44,36 @@ export interface TrainingsWeGiveContent {
   programs: TrainingProgramItem[];
 }
 
+export interface DeliveryOptionItem {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export interface DeliverOptionContent {
+  subTitle: string;
+  title: string;
+  options: DeliveryOptionItem[];
+
+  cta: {
+    badge: string;
+    title: string;
+    description: string;
+    primaryButton: {
+      label: string;
+      href: string;
+    };
+    secondaryButton: {
+      label: string;
+      href: string;
+    };
+  };
+}
+
 export interface TrainingServicesPageData {
     heroSectionData: AppModernizationHeroContent;
     trainingEcosystemData: TrainingEcosystemContent;
     trainingPortfolioData: TrainingPortfolioContent;
     trainingsWeGiveData: TrainingsWeGiveContent;
+    deliveryOptionData: DeliverOptionContent;
 }
