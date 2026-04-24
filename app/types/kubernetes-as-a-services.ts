@@ -1,3 +1,5 @@
+import { AppModernizationHeroContent } from "./app-modernization";
+
 // cta section
 export interface CtaButton {
   label: string;
@@ -88,4 +90,9 @@ export interface ProblemItem {
 export interface ProblemData {
   header: ProblemHeader;
   items: ProblemItem[];
+}
+
+// hero section
+export interface HeroSectionData {
+  heroSectionData: AppModernizationHeroContent;
 }

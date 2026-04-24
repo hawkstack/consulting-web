@@ -1,5 +1,6 @@
 // cta section
 
+import { AppModernizationHeroContent } from "@/app/types/app-modernization";
 import {
   BenefitsData,
   CtaData,
@@ -160,4 +161,95 @@ export const problemData: ProblemData = {
     { text: "Scaling challenges across workloads and environments" },
     { text: "High internal overhead for platform engineering teams" },
   ],
+};
+
+// hero section
+
+export const heroSectionData: AppModernizationHeroContent = {
+  heroBgClass:
+    "bg-[linear-gradient(0deg,_#020617,_#020617),radial-gradient(121.54%_175.93%_at_0%_100%,_rgba(168,85,247,0.12)_0%,_rgba(168,85,247,0)_25%),radial-gradient(121.54%_175.93%_at_100%_0%,_rgba(34,211,238,0.15)_0%,_rgba(34,211,238,0)_25%)]",
+  badge: "Cloud-native infrastructure managed for scale",
+  title: "Run Kubernetes without the operational complexity.",
+  h1MaxWidth: "max-w-[500px]",
+  fontSize: "text-[22px] md:text-[40px] xl:text-[50px]",
+  descriptionWidth: "max-w-[680px]",
+  description:
+    "HawkStack Consulting delivers Kubernetes as a Service so your team can deploy, scale, and manage containerized applications with confidence—without building platform operations from scratch.",
+  buttons: [
+    {
+      label: "Book a Consultation",
+      href: "",
+      variant: "primary",
+    },
+    {
+      label: "Explore KaaS",
+      href: "",
+      variant: "secondary",
+    },
+  ],
+  statBadges: [
+    {
+      id: 1,
+      title: "99.9%",
+      description: "Target platform reliability",
+      descWidth: "max-w-[120px]",
+    },
+    {
+      id: 2,
+      title: "24/7",
+      description: "Monitoring and operational visibility",
+      descWidth: "max-w-[120px]",
+    },
+    {
+      id: 3,
+      title: "Fast",
+      description: "Application deployment at scale",
+      descWidth: "max-w-[120px]",
+    },
+  ],
+
+  form: {
+    title: "GET IN TOUCH",
+    submitLabel: "Send Message",
+    successMessage: "Message sent successfully.",
+    errorMessage: "Something went wrong. Please try again.",
+    source: "automation",
+    fields: [
+      {
+        name: "firstName",
+        label: "First Name",
+        placeholder: "Enter first name",
+        type: "text",
+        required: true,
+      },
+      {
+        name: "lastName",
+        label: "Last Name",
+        placeholder: "Enter last name",
+        type: "text",
+        required: true,
+      },
+      {
+        name: "email",
+        label: "Email",
+        placeholder: "Enter your email",
+        type: "email",
+        required: true,
+      },
+      {
+        name: "phone",
+        label: "Mobile Number",
+        placeholder: "Enter your mobile number",
+        type: "tel",
+        required: true,
+      },
+      {
+        name: "message",
+        label: "Your Message",
+        placeholder: "Enter your message",
+        type: "textarea",
+        required: true,
+      },
+    ],
+  },
 };
