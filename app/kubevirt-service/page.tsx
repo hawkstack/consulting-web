@@ -11,7 +11,10 @@ export default function KubevirtServicePage() {
     <>
       <AppModernizationHeroSection content={heroSectionData} />
       <WhyKubevirtSection content={adoptionSectionData} />
-      <ServicesSection content={servicesSectionData} />
+      <ServicesSection
+        content={servicesSectionData}
+        adoptionContent={adoptionSectionData}
+      />
     </>
   );
 }
