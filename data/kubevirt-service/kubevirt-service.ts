@@ -100,9 +100,6 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
     title: "KubeVirt Services by HawkStack",
     description:
       "From architecture to migration to long-term operations, HawkStack helps teams move beyond evaluation and build KubeVirt platforms that are ready for real production environments.",
-    ctaLabel:
-      "Looking for a commercial platform? Visit KubeVirtStack",
-    ctaHref: "/get-started",
     cards: [
       {
         title: "Architecture & Platform Design",
@@ -135,5 +132,15 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
           "Upskill internal teams to operate KubeVirt confidently in production with clear processes and best practices.",
       },
     ],
+    commercialCta: {
+      badge: "COMMERCIAL OFFERING",
+      title: "Looking for a commercial KubeVirt platform?",
+      description:
+        "HawkStack also offers a dedicated commercial path for organizations that need an accelerated route to production, enterprise-focused capabilities, and platform support. Explore our dedicated offering on KubeVirtStack.",
+      primaryLabel: "Visit KubeVirtStack.com",
+      primaryHref: "https://kubevirtstack.com",
+      secondaryLabel: "Request a Demo",
+      secondaryHref: "/get-started",
+    },
   },
 };
