@@ -30,7 +30,7 @@ export default function AdoptionHighlightsSection({
               key={card.title}
               className="rounded-[16px] border border-white/8 bg-[#131A2B] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] md:min-h-[78px] md:px-[14px] md:py-[14px] xl:min-h-[90px] xl:rounded-[18px] xl:px-4 xl:pb-8 xl:pt-4"
             >
-              <div className="h-[6px] w-[40px] rounded-full bg-[#56D9FF]" />
+              <div className="h-[6px] w-[40px] rounded-full bg-[linear-gradient(90deg,#67E8F9_0%,#3B82F6_100%)]" />
               <h3 className="mt-3 max-w-[220px] text-[16px] font-semibold leading-[1.12] tracking-[-0.03em] text-white md:max-w-[150px] md:text-[12px] md:leading-[1.15] xl:max-w-[226px] xl:text-[16px]">
                 {card.title}
               </h3>
