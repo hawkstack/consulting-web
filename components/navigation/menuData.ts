@@ -216,8 +216,9 @@ export const company: MegaItem[] = [
     description:
       "HawkStack builds, modernizes, and operates scalable cloud-native platforms and applications",
     image: "/images/company/About-Us.webp",
-    href: `${process.env.NEXT_PUBLIC_TRAINING_URL}/about`,
-    external: true,
+    href: "/about-us"
+    // href: "`${process.env.NEXT_PUBLIC_TRAINING_URL}/about`",
+    // external: true,
   },
   {
     id: "partner",
