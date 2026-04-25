@@ -1,13 +1,14 @@
+import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
 import BenefitsSection from "@/components/kubernetes-as-a-services/BenefitsSection";
 import CtaSection from "@/components/kubernetes-as-a-services/CtaSection";
 import FeaturesSection from "@/components/kubernetes-as-a-services/FeaturesSection";
-import HeroSection from "@/components/kubernetes-as-a-services/HeroSection";
 import ProblemSection from "@/components/kubernetes-as-a-services/ProblemSection";
 import SolutionSection from "@/components/kubernetes-as-a-services/SolutionSection";
 import UseCasesSection from "@/components/kubernetes-as-a-services/UseCasesSection";
 import {
   benefitsData,
   ctaData,
+  heroSectionData,
   howItWorksData,
   problemData,
   solutionData,
@@ -17,7 +18,7 @@ import {
 const page = () => {
   return (
     <div>
-      <HeroSection />
+      <AppModernizationHeroSection content={heroSectionData} />
       <ProblemSection data={problemData} />
       <SolutionSection data={solutionData} />
       <FeaturesSection data={howItWorksData} />

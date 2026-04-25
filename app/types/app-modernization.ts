@@ -26,6 +26,7 @@ export interface StatBadge {
   value?: string;
   title?: string;
   description: string;
+  descWidth?: string;
 }
 
 export interface AppModernizationHeroContent {
