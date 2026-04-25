@@ -27,13 +27,13 @@ export default function AboutHero({ content }: Props) {
           </div>
 
           {/* Right Image */}
-          <div className="absolute bottom-[-140px] left-1/2 -translate-x-1/2 w-[280px] h-[350px] md:-top-3 lg:-top-18 z-10 md:bottom-auto md:left-auto md:translate-x-0 right-0 md:-right-[50px] lg:right-[90px] md:w-[520px] h-full pointer-events-none">
+          <div className="absolute bottom-[-140px] left-1/2 -translate-x-1/2 w-[280px] h-[350px] md:-top-3 xl:-top-18 z-10 md:bottom-auto md:left-auto md:translate-x-0 right-0 md:-right-[50px] lg:right-[50px] xl:right-[90px] md:w-[520px] h-full pointer-events-none">
             <Image
               src={content.image}
               alt="About HawkStack"
               width={484}
               height={726}
-              className="object-cover inset-0 pointer-events-none md:h-[580px] lg:h-[800px]"
+              className="object-cover inset-0 pointer-events-none md:h-[580px] lg:h-[650px] xl:h-[800px]"
             />
           </div>
         </div>
