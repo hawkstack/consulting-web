@@ -38,6 +38,17 @@ export interface KubevirtProcessSectionContent {
   title: string;
   description: string;
   steps: KubevirtProcessStep[];
+  cta: KubevirtProcessCtaContent;
+}
+
+export interface KubevirtProcessCtaContent {
+  badge: string;
+  title: string;
+  description: string;
+  primaryLabel: string;
+  primaryHref: string;
+  secondaryLabel: string;
+  secondaryHref: string;
 }
 
 export interface KubevirtCommercialCtaContent {

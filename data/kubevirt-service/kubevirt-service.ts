@@ -146,6 +146,16 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
           "Support upgrades, governance, reliability, and team enablement for long-term success.",
       },
     ],
+    cta: {
+      badge: "GET STARTED",
+      title: "Start your KubeVirt journey with HawkStack",
+      description:
+        "Whether you need advisory support, migration expertise, or a production-ready platform path, HawkStack can help you modernize virtualization with confidence.",
+      primaryLabel: "Talk to HawkStack",
+      primaryHref: "#app-modernization-form",
+      secondaryLabel: "Explore KubeVirtStack",
+      secondaryHref: "/get-started",
+    },
   },
   servicesSectionData: {
     badge: "SERVICES",

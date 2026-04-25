@@ -1,4 +1,5 @@
 import type { KubevirtProcessSectionContent } from "@/app/types/kubevirt-service";
+import GetStarted from "@/components/kubevirt-service/GetStarted";
 
 function ProcessCard({
   number,
@@ -59,6 +60,8 @@ export default function ProcessSection({ content }: ProcessSectionProps) {
               />
             ))}
           </div>
+
+          <GetStarted content={content.cta} />
         </div>
       </div>
     </section>
