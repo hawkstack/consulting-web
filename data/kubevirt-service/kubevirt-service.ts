@@ -115,6 +115,38 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
       },
     ],
   },
+  processSectionData: {
+    badge: "PROCESS",
+    title: "How we work",
+    description:
+      "A practical delivery model focused on reducing migration risk and building a platform your team can operate confidently.",
+    steps: [
+      {
+        number: "01",
+        title: "Assess",
+        description:
+          "Understand your virtualization landscape, platform goals, risks, and migration priorities.",
+      },
+      {
+        number: "02",
+        title: "Design",
+        description:
+          "Create the target KubeVirt architecture, operations model, and automation blueprint.",
+      },
+      {
+        number: "03",
+        title: "Implement",
+        description:
+          "Deploy and integrate networking, storage, security, observability, and automation layers.",
+      },
+      {
+        number: "04",
+        title: "Operate & Scale",
+        description:
+          "Support upgrades, governance, reliability, and team enablement for long-term success.",
+      },
+    ],
+  },
   servicesSectionData: {
     badge: "SERVICES",
     title: "KubeVirt Services by HawkStack",

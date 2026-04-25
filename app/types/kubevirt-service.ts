@@ -27,6 +27,19 @@ export interface KubevirtUseCasesSectionContent {
   items: KubevirtUseCaseItem[];
 }
 
+export interface KubevirtProcessStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface KubevirtProcessSectionContent {
+  badge: string;
+  title: string;
+  description: string;
+  steps: KubevirtProcessStep[];
+}
+
 export interface KubevirtCommercialCtaContent {
   badge: string;
   title: string;
@@ -49,5 +62,6 @@ export interface KubevirtServicePageData {
   heroSectionData: AppModernizationHeroContent;
   adoptionSectionData: KubevirtAdoptionSectionContent;
   useCasesSectionData: KubevirtUseCasesSectionContent;
+  processSectionData: KubevirtProcessSectionContent;
   servicesSectionData: KubevirtServicesSectionContent;
 }
