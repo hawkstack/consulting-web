@@ -1,4 +1,5 @@
 import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
+import ProcessSection from "@/components/kubevirt-service/ProcessSection";
 import ServicesSection from "@/components/kubevirt-service/ServicesSection";
 import UseCasesSection from "@/components/kubevirt-service/UseCasesSection";
 import WhyKubevirtSection from "@/components/kubevirt-service/WhyKubevirtSection";
@@ -9,6 +10,7 @@ export default function KubevirtServicePage() {
     heroSectionData,
     adoptionSectionData,
     useCasesSectionData,
+    processSectionData,
     servicesSectionData,
   } = kubevirtServicePageData;
 
@@ -21,6 +23,7 @@ export default function KubevirtServicePage() {
         adoptionContent={adoptionSectionData}
       />
       <UseCasesSection content={useCasesSectionData} />
+      <ProcessSection content={processSectionData} />
     </>
   );
 }
