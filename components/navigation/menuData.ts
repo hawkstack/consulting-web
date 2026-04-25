@@ -62,7 +62,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
     description:
       "Explore KubeVirtStack solutions designed to unify virtualization and Kubernetes, enabling scalable, secure, and cloud-native infrastructure.",
     image: "/images/products/KubeVirtStack-AI.webp",
-    href: "/get-started",
+    href: "/coming-soon",
   },
   resellers: [
     {
@@ -194,7 +194,7 @@ export const services: MegaItem[] = [
     description:
       "Empower teams with industry-relevant training that accelerates learning and real-world application.",
     image: "/images/services/Training-Services.webp",
-    href: "/training-services"
+    href: "/training-services",
   },
   {
     id: "kubernetes as a services",
@@ -203,7 +203,7 @@ export const services: MegaItem[] = [
     description:
       "End-to-end Kubernetes management with governance, monitoring, and lifecycle support.",
     image: "/images/services/Kubernetes-as-a-Services.webp",
-    href: "/coming-soon"
+    href: "/kubernetes-as-a-services",
   },
 ];
 
