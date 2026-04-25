@@ -17,6 +17,16 @@ export interface KubevirtServicesCard {
   description: string;
 }
 
+export interface KubevirtUseCaseItem {
+  title: string;
+}
+
+export interface KubevirtUseCasesSectionContent {
+  badge: string;
+  title: string;
+  items: KubevirtUseCaseItem[];
+}
+
 export interface KubevirtCommercialCtaContent {
   badge: string;
   title: string;
@@ -38,5 +48,6 @@ export interface KubevirtServicesSectionContent {
 export interface KubevirtServicePageData {
   heroSectionData: AppModernizationHeroContent;
   adoptionSectionData: KubevirtAdoptionSectionContent;
+  useCasesSectionData: KubevirtUseCasesSectionContent;
   servicesSectionData: KubevirtServicesSectionContent;
 }

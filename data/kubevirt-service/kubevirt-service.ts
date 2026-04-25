@@ -91,6 +91,30 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
       },
     ],
   },
+  useCasesSectionData: {
+    badge: "USE CASES",
+    title: "Common KubeVirt Use Cases",
+    items: [
+      {
+        title: "VM modernization on Kubernetes",
+      },
+      {
+        title: "Hybrid infrastructure platforms",
+      },
+      {
+        title: "Edge and distributed deployments",
+      },
+      {
+        title: "Legacy workload consolidation",
+      },
+      {
+        title: "Dev/test VM automation",
+      },
+      {
+        title: "Unified VM + container operations",
+      },
+    ],
+  },
   servicesSectionData: {
     badge: "SERVICES",
     title: "KubeVirt Services by HawkStack",
