@@ -89,14 +89,14 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       image: "/images/home/product-reseller/Mirantis.webp",
       href: "/get-started",
     },
-    {
-      id: "lenovo",
-      title: "Lenovo",
-      description:
-        "High-performance infrastructure and hardware optimized for enterprise workloads.",
-      badge: "L",
-      href: "/get-started",
-    },
+    // {
+    //   id: "lenovo",
+    //   title: "Lenovo",
+    //   description:
+    //     "High-performance infrastructure and hardware optimized for enterprise workloads.",
+    //   badge: "L",
+    //   href: "/get-started",
+    // },
     {
       id: "aws",
       title: "AWS",
@@ -121,22 +121,22 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       image: "/images/home/product-reseller/Azure.webp",
       href: "/get-started",
     },
-    {
-      id: "dell",
-      title: "Dell",
-      description:
-        "Reliable enterprise hardware and infrastructure for modern data centers.",
-      badge: "D",
-      href: "/get-started",
-    },
-    {
-      id: "veeam",
-      title: "Veeam",
-      description:
-        "Data protection, backup, and recovery solutions ensuring business continuity.",
-      badge: "V",
-      href: "/get-started",
-    },
+    // {
+    //   id: "dell",
+    //   title: "Dell",
+    //   description:
+    //     "Reliable enterprise hardware and infrastructure for modern data centers.",
+    //   badge: "D",
+    //   href: "/get-started",
+    // },
+    // {
+    //   id: "veeam",
+    //   title: "Veeam",
+    //   description:
+    //     "Data protection, backup, and recovery solutions ensuring business continuity.",
+    //   badge: "V",
+    //   href: "/get-started",
+    // },
   ],
 };
 
@@ -221,13 +221,13 @@ export const company: MegaItem[] = [
     // external: true,
   },
   {
-    id: "partner",
-    label: "Partner",
-    title: "Partner",
+    id: "career",
+    label: "Career",
+    title: "Career",
     description:
-      "Our partner ecosystem combines leading technologies and expertise to accelerate innovation and business success.",
-    image: "/images/company/Partner.webp",
-    href: "/coming-soon",
+      "Build meaningful technology. Grow your career with modern cloud and platform engineering.",
+    image: "/images/company/Career.webp",
+    href: "/career",
   },
   // TODO: Add blog section in the future when we have content to share
   // {
@@ -240,13 +240,13 @@ export const company: MegaItem[] = [
   //   href: "/coming-soon",
   // },
   {
-    id: "career",
-    label: "Career",
-    title: "Career",
+    id: "contact us",
+    label: "Contact Us",
+    title: "Contact Us",
     description:
-      "Build meaningful technology. Grow your career with modern cloud and platform engineering.",
-    image: "/images/company/Career.webp",
-    href: "/career",
+      "Let's connect to discuss how we can help you build and scale modern cloud solutions.",
+    image: "/images/company/Contact-Us.webp",
+    href: "/get-started",
   },
   // TODO
   // {
