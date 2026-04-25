@@ -1,3 +1,10 @@
+export interface AboutHeroContent {
+  subTitle: string;
+  title: string;
+  highlightedText: string;
+  image: string;
+} 
+
 export interface PlatformItem {
     id: number;
     number: string;
@@ -11,5 +18,6 @@ export interface EndtoEndServicesContent {
 }
 
 export interface AboutUsPageData {
+    aboutHeroData: AboutHeroContent;
     endtoendServicesData: EndtoEndServicesContent;
 }
