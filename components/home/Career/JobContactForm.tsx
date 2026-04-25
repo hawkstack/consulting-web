@@ -36,6 +36,9 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
   });
 
   const [errors, setErrors] = useState<any>({});
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [isError, setIsError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleClick = () => {
     fileInputRef.current?.click();
@@ -91,7 +94,7 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     const newErrors: any = {
@@ -108,7 +111,59 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
 
     const hasError = Object.values(newErrors).some((err) => err);
 
-    if (hasError) return;
+    if (hasError) {
+      setIsError(true);
+      setSubmitMessage("Please fix the errors above before submitting.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      // FormData for file upload
+      const payload = new FormData();
+
+      Object.entries(formData).forEach(([key, value]) => {
+        payload.append(key, value as string);
+      });
+
+      if (fileInputRef.current?.files?.[0]) {
+        payload.append("resume", fileInputRef.current.files[0]);
+      }
+
+      const res = await fetch(`/api/jobApplication`, {
+        method: "POST",
+        body: payload,
+      });
+
+      if (!res.ok) {
+        throw new Error("Something went wrong");
+      }
+
+      setIsError(false);
+      setSubmitMessage(
+        "Hi, we have got your details. Our team will contact you soon.",
+      );
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        jobRole: "",
+        availability: "",
+        ctc: "",
+        location: "",
+        experience: "",
+        interviewAvailability: "",
+        reason: "",
+      });
+
+      setFileName("No file chosen");
+    } catch (err) {
+      setIsError(true);
+      setSubmitMessage("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -325,13 +380,31 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
           </div>
 
           {/* Button */}
-          <div className="col-span-2 flex justify-end mt-1">
-            <button
-              type="submit"
-              className="bg-[#1B52DF] text-white px-[14px] py-[5px] rounded-[4px] text-[12px]"
-            >
-              Apply Now
-            </button>
+          <div className="col-span-2 relative">
+            {/* Mobile Layout */}
+            <div className="flex items-center justify-between md:flex md:justify-end">
+              {/* Message */}
+              {submitMessage && (
+                <div className="text-left md:absolute md:left-1/2 md:-translate-x-1/2">
+                  <p
+                    className={`text-[10px] ${
+                      isError ? "text-red-500" : "text-green-600"
+                    }`}
+                  >
+                    {submitMessage}
+                  </p>
+                </div>
+              )}
+
+              {/* Button */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="bg-[#1B52DF] text-white px-[14px] py-[5px] rounded-[4px] text-[12px]"
+              >
+                {loading ? "Submitting..." : "Apply Now"}
+              </button>
+            </div>
           </div>
         </form>
       </div>
