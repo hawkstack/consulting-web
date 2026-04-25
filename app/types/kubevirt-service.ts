@@ -17,13 +17,22 @@ export interface KubevirtServicesCard {
   description: string;
 }
 
+export interface KubevirtCommercialCtaContent {
+  badge: string;
+  title: string;
+  description: string;
+  primaryLabel: string;
+  primaryHref: string;
+  secondaryLabel: string;
+  secondaryHref: string;
+}
+
 export interface KubevirtServicesSectionContent {
   badge: string;
   title: string;
   description: string;
-  ctaLabel: string;
-  ctaHref: string;
   cards: KubevirtServicesCard[];
+  commercialCta: KubevirtCommercialCtaContent;
 }
 
 export interface KubevirtServicePageData {
