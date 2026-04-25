@@ -89,7 +89,7 @@ export default function AppModernizationHeroSection({
 
                   {item.description && (
                     <p
-                      className={`${item.descWidth ?? "max-w-[100px]"} text-[#DBE4F2] md:text-[12px] mt-3 leading-snug`}
+                      className={`${item.descWidth ?? "max-w-[120px]"} text-[#DBE4F2] md:text-[12px] mt-3 leading-snug`}
                     >
                       {item.description}
                     </p>
