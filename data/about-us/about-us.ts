@@ -1,6 +1,13 @@
 import type { AboutUsPageData } from "@/app/types/about-us";
 
 export const aboutusPageData: AboutUsPageData = {
+    aboutHeroData: {
+        subTitle: "About HawkStack",
+        title: "We help organizations modernize, automate and scale using",
+        highlightedText: "cloud-native technologies  and Kubernetes driven platforms.",
+        image: "/images/about/hero-image.webp",
+    },
+
     endtoendServicesData: {
         title: "End to end services for enterprise platform transformation.?",
         items: [
