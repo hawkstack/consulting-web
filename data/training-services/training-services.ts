@@ -234,5 +234,45 @@ export const trainingServicesPageData: TrainingServicesPageData = {
                 buttonLink: "/get-started"
             },
         ]
+    },
+
+    deliveryOptionData: {
+        subTitle: "DELIVERY OPTIONS",
+        title: "Training formats that fit your team and business goals",
+        options: [
+            {
+            id: 1,
+            title: "Corporate Training",
+            description:
+                "Private cohorts for internal engineering teams with business-aligned outcomes.",
+            },
+            {
+            id: 2,
+            title: "Certification Prep",
+            description:
+                "Structured programs that help learners prepare for role based and vendor exams.",
+            },
+            {
+            id: 3,
+            title: "Hands on Workshops",
+            description:
+                "Interactive labs and guided implementation sessions for real operational confidence.",
+            },
+        ],
+
+        cta: {
+            badge: "READY TO GET STARTED?",
+            title: "Launch a training journey tailored to your platform team.",
+            description:
+            "Whether you need a vendor-specific course, a certification track, or a customized workshop, HawkStack can help you shape the right learning experience.",
+            primaryButton: {
+            label: "Talk to an Expert",
+            href: "/contact",
+            },
+            secondaryButton: {
+            label: "Browse All Training",
+            href: "/training-services",
+            },
+        },
     }
 }
