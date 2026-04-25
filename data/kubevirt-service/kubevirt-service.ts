@@ -68,30 +68,26 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
     },
   },
   adoptionSectionData: {
-    badge: "WHY KUBEVIRT",
-    title: "Why organizations are adopting KubeVirt",
+    badge: "WHY HAWKSTACK",
+    title: "Built for real production environments",
     description:
-      "KubeVirt gives teams a practical path to modernize virtualization, run VMs and containers on one platform, and build infrastructure that is easier to scale, automate, and govern.",
+      "We help teams go beyond experimentation and build KubeVirt environments that are secure, scalable, and operationally ready. From advisory to migration to day-2 support, HawkStack brings the engineering depth needed to make KubeVirt work in real infrastructure environments.",
     cards: [
       {
-        title: "Reduce hypervisor lock-in and licensing pressure",
-        description:
-          "Organizations are looking for more control over infrastructure costs while moving away from rigid virtualization stacks.",
+        title: "Cloud-native and virtualization expertise",
+        description: "",
       },
       {
-        title: "Bring VMs and containers onto one operating model",
-        description:
-          "Platform teams can manage mixed workloads with shared tooling, policies, CI/CD workflows, and Kubernetes-native operations.",
+        title: "Production-first implementation approach",
+        description: "",
       },
       {
-        title: "Create a safer path for modernization and migration",
-        description:
-          "Business-critical applications can be modernized in stages without forcing disruptive rewrites or risky big-bang migrations.",
+        title: "Deep platform engineering focus",
+        description: "",
       },
       {
-        title: "Strengthen day-2 operations from the start",
-        description:
-          "Observability, backup, governance, scaling, and lifecycle management become part of the platform from day one.",
+        title: "From advisory to long-term operational support",
+        description: "",
       },
     ],
   },
