@@ -145,7 +145,7 @@ export default function AppModernizationContactForm({
             <div key={field.name}>
               <label
                 htmlFor={field.name}
-                className="mb-1 block text-[13px] font-semibold text-[#3A4256]"
+                className="mb-1 block text-[13px] font-normal text-[#3A4256]"
               >
                 {field.label}
                 {field.required ? " *" : ""}
@@ -158,7 +158,7 @@ export default function AppModernizationContactForm({
                   handleFieldChange(field.name, event.target.value)
                 }
                 placeholder={field.placeholder}
-                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[12px] text-[#20283A] outline-none transition ${
+                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[12px] text-[#20283A] outline-none placeholder:text-[#A5AFBD] transition ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#E3E5EA] focus:border-[#0EA5E9]"
@@ -177,7 +177,7 @@ export default function AppModernizationContactForm({
           <div key={field.name}>
             <label
               htmlFor={field.name}
-              className="mb-1 block text-[13px] font-semibold text-[#3A4256]"
+              className="mb-1 block text-[13px] font-normal text-[#3A4256]"
             >
               {field.label}
               {field.required ? " *" : ""}
@@ -192,7 +192,7 @@ export default function AppModernizationContactForm({
                 }
                 placeholder={field.placeholder}
                 rows={4}
-                className={`min-h-[96px] w-full resize-none rounded-[12px] border bg-white px-3 py-3 text-[12px] text-[#20283A] outline-none transition ${
+                className={`min-h-[96px] w-full resize-none rounded-[12px] border bg-white px-3 py-3 text-[12px] text-[#20283A] outline-none placeholder:text-[#A5AFBD] transition ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#E3E5EA] focus:border-[#0EA5E9]"
@@ -207,7 +207,7 @@ export default function AppModernizationContactForm({
                   handleFieldChange(field.name, event.target.value)
                 }
                 placeholder={field.placeholder}
-                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[11px] text-[#20283A] outline-none transition ${
+                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[11px] text-[#20283A] outline-none placeholder:text-[#A5AFBD] transition ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#E3E5EA] focus:border-[#0EA5E9]"

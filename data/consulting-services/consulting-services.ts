@@ -23,7 +23,7 @@ export const consultingServicesHeroContent: AppModernizationHeroContent = {
       variant: "secondary",
     },
   ],
-  h1MaxWidth: "max-w-[720px]",
+  h1MaxWidth: "max-w-[600px]",
   titleMarginTop: "mt-0",
   descriptionWidth: "max-w-[650px]",
 

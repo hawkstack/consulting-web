@@ -32,7 +32,7 @@ export default function AppModernizationHeroSection({
             <h1
               className={`${content.titleMarginTop ?? "mt-4"} ${
                 content.h1MaxWidth ?? "max-w-[580px]"
-              } text-[22px] font-[600] text-[#ffffff] leading-[1.08] tracking-[0.02em]  ${content.fontSize ?? "xl:text-[60px] md:text-[40px]"}`}
+              } text-[22px] font-[600] text-[#ffffff] leading-[1.08] tracking-[0.02em]  ${content.fontSize ?? "xl:text-[48px] md:text-[40px]"}`}
             >
               <span>{content.title}</span>
               {content.highlightedLastLine ? (
