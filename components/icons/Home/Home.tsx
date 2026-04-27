@@ -44,3 +44,9 @@ export const RightArrow  = ({className = ""}) => (
     13.5652L20.0146 9.072L1.44221 9.12802C1.06096 9.12917 0.694796 9.0002 0.424266 8.76948C0.153738 8.53876 0.00100508 8.22519 -0.000333959 7.89776C-0.001673 7.57032 0.148491 7.25584 0.417126 7.02349C0.685763 6.79115 1.05086 6.65997 1.43211 6.65882L20.0045 6.60279L14.7729 2.14103Z" fill="currentColor"/>
   </svg>
 );
+
+export const CrossDownArrow = ({ className = "" }) => (
+  <svg className={className} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.10267 12.9777L12.2341 12.2343M12.2341 12.2343L12.9775 2.10285M12.2341 12.2343L0.679595 0.67978" stroke="white" stroke-width="1.92241"/>
+  </svg>
+)
