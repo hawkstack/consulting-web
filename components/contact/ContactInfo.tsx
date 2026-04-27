@@ -13,10 +13,10 @@ const ContactInfo = ({ data }: Props) => {
     <div className="mt-4 md:mt-0 space-y-6">
       {/* Heading */}
       <div>
-        <h2 className="text-2xl xl:text-3xl font-semibold text-[#0F172A] text-center md:text:left">
+        <h2 className="text-2xl xl:text-3xl font-semibold text-[#0F172A] text-center md:text-left">
           {data.title}
         </h2>
-        <p className="text-[11px] lg:text-xs xl:text-base text-[#64748B]  max-w-[580px] mt-1 text-center md:text:left">
+        <p className="text-[11px] lg:text-xs xl:text-base text-[#64748B]  max-w-[580px] mt-1 text-center md:text-left">
           {data.description}
         </p>
       </div>
