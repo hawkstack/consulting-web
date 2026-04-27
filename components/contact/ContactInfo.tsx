@@ -57,7 +57,9 @@ const ContactInfo = ({ data }: Props) => {
             <Phone className="w-[28px] h-[28px] lg:w-[32px] lg:h-[32px] xl:w-[38px] xl:h-[38px]" />
           </div>
           <div>
-            <p className="text-xs lg:text-sm font-medium text-[#0F172A]">Phone</p>
+            <p className="text-xs lg:text-sm font-medium text-[#0F172A]">
+              Phone
+            </p>
             <p className="text-xs lg:text-sm text-[#64748B]">{data.phone}</p>
           </div>
         </div>
@@ -66,7 +68,9 @@ const ContactInfo = ({ data }: Props) => {
             <Work className="w-[28px] h-[28px] lg:w-[32px] lg:h-[32px] xl:w-[38px] xl:h-[38px]" />
           </div>
           <div>
-            <p className="text-xs lg:text-sm font-medium text-[#0F172A]">Work Hours</p>
+            <p className="text-xs lg:text-sm font-medium text-[#0F172A]">
+              Work Hours
+            </p>
             <p className="text-xs lg:text-sm text-[#64748B]">{data.hours}</p>
           </div>
         </div>
@@ -78,7 +82,9 @@ const ContactInfo = ({ data }: Props) => {
             <Email className="w-[28px] h-[28px] lg:w-[32px] lg:h-[32px] xl:w-[38px] xl:h-[38px]" />
           </div>
           <div>
-            <p className="text-xs lg:text-sm font-medium text-[#0F172A]">Email</p>
+            <p className="text-xs lg:text-sm font-medium text-[#0F172A]">
+              Email
+            </p>
             <p className="text-xs lg:text-sm text-[#64748B]">{data.email}</p>
           </div>
         </div>
@@ -86,7 +92,9 @@ const ContactInfo = ({ data }: Props) => {
 
       {/* Social */}
       <div className="flex items-center gap-3">
-        <p className="text-lg xl:text-xl font-medium text-[#0F172A]">Social Media:</p>
+        <p className="text-lg xl:text-xl font-medium text-[#0F172A]">
+          Social Media:
+        </p>
 
         <div className="flex gap-2">
           {data.socials.map((item, index) => {
@@ -97,7 +105,7 @@ const ContactInfo = ({ data }: Props) => {
                 key={index}
                 href={item.link}
                 target="_blank"
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 className="w-[25px] h-[25px] xl:w-[42px] xl:h-[42px] flex items-center justify-center rounded-2xl bg-[#2563EB]"
               >
                 <Icon />
