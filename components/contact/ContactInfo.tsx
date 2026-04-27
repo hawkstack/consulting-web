@@ -98,7 +98,7 @@ const ContactInfo = ({ data }: Props) => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="w-[25px] h-[25px] xl:w-[42px] xl:h-[42px] flex items-center justify-center rounded-md bg-[#2563EB]"
+                className="w-[25px] h-[25px] xl:w-[42px] xl:h-[42px] flex items-center justify-center rounded-2xl bg-[#2563EB]"
               >
                 <Icon />
               </a>
