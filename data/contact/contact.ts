@@ -40,19 +40,19 @@ export const contactInfoData: ContactInfoData = {
   socials: [
     {
       icon: Facebook,
-      link: "https://facebook.com",
+      link: "https://www.facebook.com/profile.php?id=61560462899701",
     },
     {
       icon: Twitter,
-      link: "https://twitter.com",
+      link: "https://x.com/hawkstack_tech",
     },
     {
       icon: Linkedin,
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/company/hawkstack-technologies/?viewAsMember=true",
     },
     {
       icon: Youtube,
-      link: "https://youtube.com",
+      link: "https://www.youtube.com/results?search_query=hawkstack+technologies",
     },
   ],
 };
