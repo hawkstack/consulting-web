@@ -5,8 +5,8 @@ import { appModernizationHeroContent } from "@/data/app-modernization/app-modern
 
 const ContactContent = () => {
   return (
-    <section className="bg-[#F8FAFC] py-12 px-4 lg:px-12">
-      <div className="max-w-[1100px] mx-auto grid md:grid-cols-2">
+    <section className="bg-[#F8FAFC] py-12 px-4 md:px-10 lg:px-12">
+      <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 md:gap-6 lg:gap-0">
         {/* LEFT */}
         <div className="self-start h-auto my-auto">
           <AppModernizationContactForm
