@@ -1,10 +1,22 @@
-import React from "react";
+import { contactInfoData } from "@/data/contact/contact";
+import ContactInfo from "./ContactInfo";
+import AppModernizationContactForm from "../app-modernization/ContactForm";
+import { appModernizationHeroContent } from "@/data/app-modernization/app-modernization";
 
 const ContactContent = () => {
   return (
-    <div>
-      <h1>Contact Content</h1>
-    </div>
+    <section className="bg-[#F8FAFC] py-12 px-4">
+      <div className="max-w-[1100px] mx-auto grid md:grid-cols-2">
+        {/* LEFT */}
+        <div className="self-start h-auto my-auto">
+          <AppModernizationContactForm
+            form={appModernizationHeroContent.form}
+          />
+        </div>
+        {/* RIGHT */}
+        <ContactInfo data={contactInfoData} />
+      </div>
+    </section>
   );
 };
 
