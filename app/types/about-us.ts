@@ -37,8 +37,18 @@ export interface WhatWeOfferContent {
   rows: OfferRowItem[];
 }
 
+export interface PlatformJourneyContent {
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  points: string[];
+  image: string;
+}
+
 export interface AboutUsPageData {
     aboutHeroData: AboutHeroContent;
     endtoendServicesData: EndtoEndServicesContent;
     whatWeOfferData: WhatWeOfferContent;
+    platformJourneyData: PlatformJourneyContent;
 }

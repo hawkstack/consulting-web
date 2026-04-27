@@ -98,6 +98,23 @@ export const aboutusPageData: AboutUsPageData = {
                 ],
             },
         ],
+    },
+
+    platformJourneyData: {
+         title: "LOOKING FOR A PARTNER TO MODERNIZE YOUR PLATFORM JOURNEY?",
+
+        description: "Whether you are modernizing applications, improving platform operations, adopting Kubernetes, or upskilling teams, HawkStack can help you move faster with a practical and scalable approach.",
+        buttonText: "Book a Discovery Call",
+        buttonLink: "/contact",
+
+        points: [
+            "Enterprise platform consulting",
+            "Cloud-native modernization",
+            "Automation and DevOps enablement",
+            "Hands-on team training",
+        ],
+
+        image: "/images/about/platform-image.webp",
     }
 }
 

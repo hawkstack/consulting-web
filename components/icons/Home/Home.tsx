@@ -47,6 +47,12 @@ export const RightArrow  = ({className = ""}) => (
 
 export const CrossDownArrow = ({ className = "" }) => (
   <svg className={className} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2.10267 12.9777L12.2341 12.2343M12.2341 12.2343L12.9775 2.10285M12.2341 12.2343L0.679595 0.67978" stroke="white" stroke-width="1.92241"/>
+    <path d="M2.10267 12.9777L12.2341 12.2343M12.2341 12.2343L12.9775 2.10285M12.2341 12.2343L0.679595 0.67978" stroke="white" strokeWidth="1.92241"/>
   </svg>
-)
+);
+
+export const CheckIcon = ({ className = "" }) => (
+  <svg className={className} width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-8.86917e-05 5.07384L1.8465 3.22725L4.35787 5.68748L10.0681 -2.28882e-05L11.9204 1.84657L4.35787 9.3693L-8.86917e-05 5.07384Z" fill="white"/>
+  </svg>
+);
