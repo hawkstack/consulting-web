@@ -36,7 +36,7 @@ export const homePageData: HomePageData = {
                 "Transform legacy applications into scalable, cloud-native architectures by refactoring monoliths into containerized microservices using Kubernetes enabling DevOps, CI/CD, and faster, more resilient deployments",
                 video: "/videos/home/services/app-modernization.mp4",
                 imageAlt: "App modernization service preview",
-                href: "/",
+                href: "/app-modernization",
             },
             {
                 id: "kubevirt",
@@ -46,7 +46,7 @@ export const homePageData: HomePageData = {
                 "Run virtual machines alongside containers on Kubernetes with unified orchestration using KubeVirt enabling seamless coexistence, workload portability, and efficient resource utilization through Kubernetes-native tools.",
                 video: "/videos/home/services/kubevirt.mp4 ",
                 imageAlt: "KubeVirt service preview",
-                href: "",
+                href: "/kubevirt-service",
             },
             {
                 id: "automation",
@@ -56,7 +56,7 @@ export const homePageData: HomePageData = {
                 "Accelerate operations with intelligent automation using IaC, GitOps, and CI/CD eliminating manual work, ensuring consistency, and enabling faster, reliable deployments at scale.",
                 video: "/videos/home/services/automation.mp4",
                 imageAlt: "Automation service preview",
-                href: "/",
+                href: "/automation",
             },
             {
                 id: "cloud-service-provider",
@@ -66,7 +66,7 @@ export const homePageData: HomePageData = {
                 "Operate and optimize Kubernetes and cloud platforms at scale with end-to-end management, ensuring high availability, scalability, and cost efficiency across multi-cloud and hybrid environments.",
                 video: "/videos/home/services/cloud-service-provider.mp4",
                 imageAlt: "Cloud service provider preview",
-                href: "/",
+                href: "/cloud-platform-operations",
             },
             {
                 id: "consulting-services",
@@ -76,7 +76,7 @@ export const homePageData: HomePageData = {
                 "Strategic guidance for cloud-native transformation and infrastructure design helping you build secure, scalable, compliant architectures with the right platforms and migration strategies aligned to your business goals.",
                 video: "/videos/home/services/consulting.mp4",
                 imageAlt: "Consulting services preview",
-                href: "/",
+                href: "/consulting-service",
             },
             {
                 id: "kaas",
@@ -86,7 +86,7 @@ export const homePageData: HomePageData = {
                 "Enterprise-ready Kubernetes, fully managed with security and observability so you can build while we handle provisioning, scaling, upgrades, and maintenance.",
                 video: "/videos/home/services/KAAS.mp4",
                 imageAlt: "Kubernetes as a Service preview",
-                href: "/",
+                href: "/kubernetes-as-a-services",
             },
             {
                 id: "training-services",
@@ -96,7 +96,7 @@ export const homePageData: HomePageData = {
                 "Upskill teams with hands-on cloud-native training covering Kubernetes, DevOps, automation, and cloud platforms through real-world labs empowering confident management of modern infrastructure.",
                 video: "/videos/home/services/Training.mp4",
                 imageAlt: "Training services preview",
-                href: "/",
+                href: "/training-services",
             },
         ],
     },

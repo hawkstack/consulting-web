@@ -20,7 +20,7 @@ export default function WhatWeDo({ data }: Props) {
               {data.description}
             </p>
           </div>
-          <a href="/offerings" className="hidden md:flex mt-4 md:mt-0 text-[#0048FF] font-medium text-[14px] flex items-center gap-1 group">
+          <a href="/coming-soon" className="hidden md:flex mt-4 md:mt-0 text-[#0048FF] font-medium text-[14px] flex items-center gap-1 group">
             SEE ALL OFFERINGS 
             <span>
               <ArrowIcon className="w-[18px] h-[18px]"/>
@@ -60,17 +60,17 @@ export default function WhatWeDo({ data }: Props) {
               <p className="text-[#6D6D6D] text-[12px] md:text-[13px] lg:text-[11.5px] xl:text-[14px] mb-2 md:mb-6 font-light">
                 {item.desc}
               </p>
-
-              <div className="inline-block">
+            {/* TODO : Implement CTA link */}
+              {/* <div className="inline-block">
                 <span className="text-[12px] xl:text-[14px] font-semibold text-[#000000]">
                   Read more
                 </span>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
         <div className="mt-8 flex justify-center md:hidden">
-          <a href="/" className=" font-bold text-xs text-[#0048FF] font-medium text-[14px] flex items-center gap-1 group">
+          <a href="/coming-soon" className=" font-bold text-xs text-[#0048FF] font-medium text-[14px] flex items-center gap-1 group">
            SEE ALL OFFERINGS 
             <span>
               <ArrowIcon className="w-[18px] h-[18px]"/>
