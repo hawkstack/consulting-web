@@ -20,12 +20,12 @@ const RedHatHeroSection = ({ data }: Props) => {
     <section className="w-full bg-[#ffffff] py-10 md:py-20 lg:py-10 xl:py-4">
       <div className="max-w-[1300px] mx-auto px-6 lg:px-8 xl:px-0 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* LEFT CONTENT */}
-        <div className="w-full lg:max-w-[450px] md:ml-[14px] lg:ml-[40px] xl:ml-[70px]">
-          <h1 className="text-xl md:text-2xl lg:text-[24px] xl:text-[48px] font-bold leading-none text-gray-900 lg:w-[200px] xl:max-w-[400px] text-center md:text-left">
+        <div className="w-full lg:max-w-[450px] xl:max-w-[500px] md:ml-[14px] lg:ml-[40px] xl:ml-[70px]">
+          <h1 className="text-xl md:text-2xl lg:text-[24px] xl:text-[48px] font-bold leading-none text-gray-900 md:w-[200px] lg:w-[200px] xl:w-[400px] text-center md:text-left">
             {title} <span className="text-[#E40000]">{highlightText}</span>
           </h1>
 
-          <h2 className="text-xl md:text-2xl lg:text-[24px] font-bold text-gray-900 mt-1 text-center md:text-left">
+          <h2 className="text-xl md:text-2xl lg:text-[24px] xl:text-[48px] font-bold text-gray-900 mt-1 text-center md:text-left">
             {subtitle}
           </h2>
 
