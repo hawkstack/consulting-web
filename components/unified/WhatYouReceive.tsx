@@ -1,6 +1,6 @@
 "use client";
 import { DELIVERABLE_ITEMS } from "@/constants/unified/whatYouWillReceive";
-import type { DeliverableItem } from "@/app/types/deliverables";
+import type { DeliverableItem } from "@/types/deliverables";
 import Image from "next/image";
 
 const WhatYouWillReceive: React.FC = () => {

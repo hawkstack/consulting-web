@@ -1,149 +1,121 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { HeroSectionData } from "@/types/home/home";
+import { DownwardsArrow, UpwardsArrow, VideoIcon, StraightArrow } from "@/components/icons/Home/Home";
 
-const slides = [
-  {
-    title: "Digital Transformation Built on Enterprise Platforms",
-    desc: "We modernize applications and automate operations for enterprises, while HawkStack builds secure, scalable cloud-native Kubernetes platforms.",
-  },
-  {
-    title: "Enterprise-Grade Platform Services",
-    desc: "HawkStack modernizes applications, automates operations, and delivers secure, cloud-native Kubernetes platforms that scale with your enterprise business.",
-  },
-  {
-    title: "Digital Futures Engineered with modern platform",
-    desc: "HawkStack modernizes enterprise applications, automates operations, and builds secure, scalable cloud-native Kubernetes platforms.",
-  },
-];
+type HeroProps = {
+  data: HeroSectionData;
+}
 
-export default function EnterpriseSection() {
+export default function HeroSection({ data }: HeroProps) {
   const [active, setActive] = useState(0);
+  const { slides } = data;
 
-  const nextSlide = () => {
-    setActive((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setActive((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
+  const nextSlide = () => setActive((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setActive((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   const handleScroll = () => {
-    const section = document.getElementById("oursolution-section");
+    const section = document.getElementById("our-solutions");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section className="relative h-[560px] md:h-[568px] lg:h-[568px] bg-[#0B1F4B] text-white overflow-hidden font-lexend ">
-      {/* ===== MOBILE HERO IMAGE (ONLY MOBILE) ===== */}
-      <div className="relative flex justify-center pt-10 md:hidden">
-        <Image
-          src="/images/hero-mobile-visual.webp"
-          alt="Mobile Platform"
-          width={280}
-          height={280}
-          className="object-cover"
-        />
+    <section className="relative w-full h-[600px] md:h-[450px] xl:h-[650px] overflow-hidden bg-[#020B1C] font-lexend flex flex-col">
+      {/* Desktop Video Layer */}
+      <div className="hidden md:block absolute inset-0 w-full h-full z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover object-right md:object-bottom"
+        >
+          <source src={data.bgVideo} type="video/mp4" />
+        </video>       
       </div>
-      {/* ===== CONTENT ===== */}
-      <div className="relative z-20 pt-10 pb-10 px-4 md:pt-[134px] md:pl-[38px] lg:pt-[134px] lg:pl-[38px]">
-        <div className="relative w-full md:w-[380px] lg:w-[600px]">
-          <div className="flex items-start gap-5">
-            {/* ===== ARROWS ===== */}
-            <div className="flex flex-col items-center gap-[50px] pt-[12px] md:gap-[70px] md:pt-[16px] lg:gap-[80px] lg:pt-[20px]">
-              <button
-                onClick={prevSlide}
-                className="relative w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95"
-              >
-                <Image
-                  src="/images/arrow-up.svg"
-                  alt="Previous Slide"
-                  fill
-                  className="object-contain"
-                />
-              </button>
 
-              <button
-                onClick={nextSlide}
-                className="relative  w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 transition hover:opacity-80 active:scale-95"
-              >
-                <Image
-                  src="/images/arrow-down.svg"
-                  alt="Next Slide"
-                  fill
-                  className="object-contain"
-                />
-              </button>
-            </div>
-            {/* ===== TEXT CONTENT ===== */}
-            <div className="relative w-full">
-              {/* SLIDES */}
-              <div className="relative min-h-[160px] md:min-h-[160px] lg:min-h-[160px]">
-                {slides.map((slide, i) => (
-                  <div
-                    key={i}
-                    className={`absolute left-0 top-0 transition-all duration-700
-                    ${
-                      i === active
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-6 pointer-events-none"
-                    }`}
-                  >
-                    <h2 className="text-[18px] leading-[26px] md:text-[28px] md:leading-[32px] lg:text-[40px] lg:leading-[50px] tracking-normal mb-4 max-w-[540px]">
-                      {slide.title}
-                    </h2>
+      {/* Mobile Video Layer */}
+      <div className="block md:hidden absolute inset-0 w-full h-full z-0 bg-[#020B1C]">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full object-cover"
+        >
+          <source src={data.bg} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,11,28,0)_0%,rgba(2,11,28,0.6)_50%,rgba(2,11,28,0.95)_75%,#020B1C_90%)]" />
+      </div>
 
-                    <p className="font-normal text-[13px] leading-[19.5px] md:text-[14px] md:leading-[21px] lg:text-[14px] lg:leading-[21px] tracking-[-0.03em] text-white/80 max-w-[540px]">
-                      {slide.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              {/* ===== CTA BUTTONS ===== */}
-              <div className="flex flex-row ml-[-20px] items-center gap-4 w-full md:mt-[62px] md:pl-0 lg:mt-[62px] lg:pl-0">
-                <Link href="/get-started">
-                  <button
-                    className=" bg-blue-600 hover:bg-blue-500 transition px-3 py-2 rounded-full flex items-center justify-center 
-                  gap-2 text-[10px] md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] whitespace-nowrap overflow-hidden"
-                  >
-                    ▶ Schedule a Consultation
-                  </button>
-                </Link>
-
-                <button
-                  onClick={handleScroll}
-                  className=" bg-white text-[#6C63FF] px-4 py-2 rounded-full flex items-center justify-center gap-2 text-[11px] 
-                  md:px-5 md:py-2.5 md:text-[14px] lg:px-6 lg:py-2.5 lg:text-[14px] hover:bg-gray-100 transition whitespace-nowrap overflow-hidden"
-                >
-                  → View Our Solutions
-                </button>
-              </div>
-            </div>
+      {/* Content Layer */}
+      <div className="relative z-20 h-full w-full px-5 md:px-12 lg:pl-15 flex flex-col justify-end pb-10 md:justify-center md:pb-0">
+        <div className="flex flex-row items-start gap-3 md:gap-5 lg:gap-8">
+          
+          {/* Navigation Icons */}
+          <div className="flex flex-col gap-6 md:gap-9 xl:gap-15 mt-1 xl:mt-6">
+            <button
+              onClick={prevSlide} 
+              className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all shrink-0"> 
+              <UpwardsArrow/>
+            </button>
+            <button 
+              onClick={nextSlide} 
+              className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/40 flex items-center justify-center bg-white/10 transition-all shrink-0">
+                <DownwardsArrow/>
+            </button> 
           </div>
-        </div>
-      </div>
 
-      {/* ===== DESKTOP + TABLET RIGHT IMAGE ===== */}
-      <div className="hidden md:block absolute top-0 right-0 h-[680px] w-[65vw] z-0 overflow-hidden">
-        <Image
-          src="/images/hero-visual.webp"
-          alt="Enterprise Platform"
-          fill
-          className="object-cover"
-        />
-        <div
-          className="absolute top-0 left-0 h-full w-[35%]
-          bg-gradient-to-r from-[#0B1F4B]/100 via-[#0B1F4B]/80 to-transparent"
-        />
+          {/* Text & Buttons */}
+          <div className="flex flex-col w-full max-w-[320px] md:max-w-[400px] xl:max-w-[650px]">
+            <div className="relative min-h-[150px] md:min-h-[140px] xl:min-h-[200px]">
+              {slides.map((slide, i) => (
+                <div
+                  key={i}
+                  className={`absolute transition-all duration-700 ease-in-out ${
+                    i === active ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 pointer-events-none"
+                  }`}
+                >
+                  <h1 className="text-[22px] md:text-[28px] xl:text-[46px] font-medium text-white mb-2 leading-tight">
+                    {slide.title}
+                  </h1>
+                  
+                  <p className="text-[12px] md:text-[12px] xl:text-[18px] text-[#DBEAFE] font-normal leading-relaxed">
+                    {slide.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>    
+        </div>
+        
+         <div className="flex flex-row items-center gap-2 px-2 lg:pl-18 md:pl-15 lg:gap-4 md:mt-0 xl:mt-5">
+          <Link href="/get-started">
+            <button className="flex items-center gap-2 px-3 py-3 md:px-4 xl:px-8 md:py-3 rounded-full bg-gradient-to-r from-[#219E5C] to-[#122FAD] text-white text-[11px] md:text-[12px] xl:text-[15px] font-medium whitespace-nowrap">
+              <VideoIcon/>
+              Schedule a Consultation
+            </button>
+          </Link>
+          
+          <button 
+            onClick={handleScroll}
+            className="flex items-center gap-2 px-3 py-3 md:px-4 xl:px-8 md:py-3 rounded-full bg-[#1331AD] text-white text-[11px] md:text-[12px] xl:text-[15px] font-medium whitespace-nowrap"
+          >
+            <span className="flex items-center gap-2">
+              <StraightArrow/>
+              View Our solutions
+            </span> 
+          </button>
+        </div>
       </div>
     </section>
   );

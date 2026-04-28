@@ -137,9 +137,17 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
     };
 
     return (
-      <div ref={ref} className="w-full bg-white">
-        <div className="relative w-full bg-[#0E245A]">
-          <div className="flex flex-col items-center px-4 pt-20 md:pt-28 pb-20 md:pb-28 text-white">
+      <div ref={ref} className="w-full bg-white pt-8 xl:pt-15 overflow-hidden">
+        <div className="relative w-full">
+          <div 
+            className="absolute -top-250 left-1/2 -translate-x-1/2 w-[250%] md:w-[190%] lg:w-[180%] xl:w-[160%] h-[2000px] 
+            bg-[#0E245A] shadow-[inset_0px_4px_16px_0px_#09A4FFB2,inset_0px_24px_240px_0px_#0057FF] transition-all duration-700" 
+            style={{
+              borderRadius: '90% 90% 0 0',
+              transform: 'translateX(0%) translateY(50%)' 
+            }}
+          />
+          <div className="relative flex flex-col items-center px-4 pt-20 md:pt-28 pb-10 md:pb-15 z-10 text-white">
             {/* Heading */}
             <div className="text-center">
               <h2 className="font-['Lexend_Deca'] text-[24px] md:text-[32px] lg:text-[36px] font-medium leading-tight">

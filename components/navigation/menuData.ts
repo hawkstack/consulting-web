@@ -1,4 +1,4 @@
-import { MegaItem } from "./types";
+import { MegaItem, OfferingsMenuContent } from "./types";
 
 /* ================= PRODUCTS ================= */
 export const products: MegaItem[] = [
@@ -52,6 +52,94 @@ export const products: MegaItem[] = [
   },
 ];
 
+export const offeringsMenuContent: OfferingsMenuContent = {
+  tabs: {
+    product: "Product",
+    productResellers: "Product Resellers",
+  },
+  featured: {
+    title: "KubeVirtStack",
+    description:
+      "Explore KubeVirtStack solutions designed to unify virtualization and Kubernetes, enabling scalable, secure, and cloud-native infrastructure.",
+    image: "/images/products/KubeVirtStack-AI.webp",
+    href: "/coming-soon",
+  },
+  resellers: [
+    {
+      id: "redhat",
+      title: "RedHat",
+      description:
+        "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
+      image: "/images/home/product-reseller/Redhat.webp",
+      href: "/get-started",
+    },
+    {
+      id: "cncf",
+      title: "CNCF",
+      description:
+        "Cloud-native technologies and frameworks powering modern application development.",
+      image: "/images/home/product-reseller/cncf.webp",
+      href: "/get-started",
+    },
+    {
+      id: "mirantis",
+      title: "Mirantis",
+      description:
+        "Kubernetes and container solutions for scalable and secure cloud environments.",
+      image: "/images/home/product-reseller/Mirantis.webp",
+      href: "/get-started",
+    },
+    // {
+    //   id: "lenovo",
+    //   title: "Lenovo",
+    //   description:
+    //     "High-performance infrastructure and hardware optimized for enterprise workloads.",
+    //   badge: "L",
+    //   href: "/get-started",
+    // },
+    {
+      id: "aws",
+      title: "AWS",
+      description:
+        "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",
+      image: "/images/home/product-reseller/AWS.webp",
+      href: "/get-started",
+    },
+    {
+      id: "gcp",
+      title: "GCP",
+      description:
+        "Google Cloud solutions for data analytics, AI, and cloud-native innovation.",
+      image: "/images/home/product-reseller/google-cloud.webp",
+      href: "/get-started",
+    },
+    {
+      id: "azure",
+      title: "Azure",
+      description:
+        "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration.",
+      image: "/images/home/product-reseller/Azure.webp",
+      href: "/get-started",
+    },
+    // {
+    //   id: "dell",
+    //   title: "Dell",
+    //   description:
+    //     "Reliable enterprise hardware and infrastructure for modern data centers.",
+    //   badge: "D",
+    //   href: "/get-started",
+    // },
+    // {
+    //   id: "veeam",
+    //   title: "Veeam",
+    //   description:
+    //     "Data protection, backup, and recovery solutions ensuring business continuity.",
+    //   badge: "V",
+    //   href: "/get-started",
+    // },
+  ],
+};
+
 /* ================= SERVICES ================= */
 export const services: MegaItem[] = [
   {
@@ -61,6 +149,7 @@ export const services: MegaItem[] = [
     description:
       "Upgrade and re-architect legacy applications using modern frameworks, cloud platforms, and microservices for agility and growth. ",
     image: "/images/services/App-Modernization.webp",
+    href: "/app-modernization",
   },
   {
     id: "kubeVirt",
@@ -69,6 +158,7 @@ export const services: MegaItem[] = [
     description:
       "Modernize virtualization by managing VMs alongside containers with Kubernetes-native scalability and control.",
     image: "/images/services/KubeVirt.webp",
+    href: "/kubevirt-service",
   },
   {
     id: "automation",
@@ -77,6 +167,7 @@ export const services: MegaItem[] = [
     description:
       "Streamline infrastructure, CI/CD, and operational tasks through intelligent automation and orchestration.",
     image: "/images/services/Automation.webp",
+    href: "/automation",
   },
   {
     id: "cloud platform operation",
@@ -85,6 +176,7 @@ export const services: MegaItem[] = [
     description:
       "Automate cloud infrastructure provisioning, configuration, and operations for consistent and scalable platforms.",
     image: "/images/services/Cloud-Platform-Operation.webp",
+    href: "/cloud-platform-operations",
   },
   {
     id: "consulting services",
@@ -93,6 +185,7 @@ export const services: MegaItem[] = [
     description:
       "Strategic guidance across cloud, platforms, and modern applications that turns decisions into measurable outcomes.",
     image: "/images/services/Consulting-Services.webp",
+    href: "/consulting-service",
   },
   {
     id: "training services",
@@ -101,6 +194,7 @@ export const services: MegaItem[] = [
     description:
       "Empower teams with industry-relevant training that accelerates learning and real-world application.",
     image: "/images/services/Training-Services.webp",
+    href: "/training-services",
   },
   {
     id: "kubernetes as a services",
@@ -109,6 +203,7 @@ export const services: MegaItem[] = [
     description:
       "End-to-end Kubernetes management with governance, monitoring, and lifecycle support.",
     image: "/images/services/Kubernetes-as-a-Services.webp",
+    href: "/kubernetes-as-a-services",
   },
 ];
 
@@ -121,26 +216,9 @@ export const company: MegaItem[] = [
     description:
       "HawkStack builds, modernizes, and operates scalable cloud-native platforms and applications",
     image: "/images/company/About-Us.webp",
-    href: `${process.env.NEXT_PUBLIC_TRAINING_URL}/about`,
-    external: true,
-  },
-  {
-    id: "partner",
-    label: "Partner",
-    title: "Partner",
-    description:
-      "Our partner ecosystem combines leading technologies and expertise to accelerate innovation and business success.",
-    image: "/images/company/Partner.webp",
-    href: "/coming-soon",
-  },
-  {
-    id: "blog",
-    label: "Blog",
-    title: "Blog",
-    description:
-      "Thought leadership, technical insights, and real-world lessons from modern cloud engineering",
-    image: "/images/company/Blog.webp",
-    href: "/coming-soon",
+    href: "/about-us"
+    // href: "`${process.env.NEXT_PUBLIC_TRAINING_URL}/about`",
+    // external: true,
   },
   {
     id: "career",
@@ -151,15 +229,35 @@ export const company: MegaItem[] = [
     image: "/images/company/Career.webp",
     href: "/career",
   },
+  // TODO: Add blog section in the future when we have content to share
+  // {
+  //   id: "blog",
+  //   label: "Blog",
+  //   title: "Blog",
+  //   description:
+  //     "Thought leadership, technical insights, and real-world lessons from modern cloud engineering",
+  //   image: "/images/company/Blog.webp",
+  //   href: "/coming-soon",
+  // },
   {
     id: "contact us",
     label: "Contact Us",
     title: "Contact Us",
     description:
-      "Let’s connect to discuss how we can help you build and scale modern cloud solutions.",
+      "Let's connect to discuss how we can help you build and scale modern cloud solutions.",
     image: "/images/company/Contact-Us.webp",
     href: "/get-started",
   },
+  // TODO
+  // {
+  //   id: "contact us",
+  //   label: "Contact Us",
+  //   title: "Contact Us",
+  //   description:
+  //     "Let’s connect to discuss how we can help you build and scale modern cloud solutions.",
+  //   image: "/images/company/Contact-Us.webp",
+  //   href: "/get-started",
+  // },
 ];
 
 /* ================= TRAINING ================= */

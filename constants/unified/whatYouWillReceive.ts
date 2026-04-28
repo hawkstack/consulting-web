@@ -1,4 +1,4 @@
-import type { DeliverableItem } from "@/app/types/deliverables";
+import type { DeliverableItem } from "@/types/deliverables";
 
 export const DELIVERABLE_ITEMS: DeliverableItem[] = [
   {
