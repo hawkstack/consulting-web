@@ -6,6 +6,7 @@ export const aboutusPageData: AboutUsPageData = {
         title: "We help organizations modernize, automate and scale using",
         highlightedText: "cloud-native technologies  and Kubernetes driven platforms.",
         image: "/images/about/hero-image.webp",
+        bgImage: "/images/about/background.webp"
     },
 
     endtoendServicesData: {
@@ -48,6 +49,55 @@ export const aboutusPageData: AboutUsPageData = {
                 description: "Reduce friction across environments with automation first workflows, standardized operations, and faster release cycles."
             },
         ]
+    },
+    whatWeOfferData: {
+        title: "WHAT WE OFFER ?",
+
+        rows: [
+            {
+                id: 1,
+                title: "KubeVirtStack",
+                logo: "/images/products/KubeVirtStack-AI.webp",
+                description: "Explore KubeVirtStack,your force for digital security with automation, virtalizatiom,  monitoring, resilience, security and observability."    
+            },
+
+            {
+                id: 2,
+                title: "Product Resellers",
+                partners: [
+                    { 
+                        id: 1, 
+                        name: "RedHat", 
+                        logo: "/images/home/product-reseller/Redhat.webp" 
+                    },
+                    { 
+                        id: 2, 
+                        name: "AWS", 
+                        logo: "/images/home/product-reseller/AWS.webp" 
+                    },
+                    { 
+                        id: 3, 
+                        name: "GCP", 
+                        logo: "/images/home/product-reseller/google-cloud.webp" 
+                    },
+                    { 
+                        id: 4, 
+                        name: "CNCF", 
+                        logo: "/images/home/product-reseller/cncf.webp" 
+                    },
+                    { 
+                        id: 5, 
+                        name: "Mirantis", 
+                        logo: "/images/about/mirantis-logo.webp" 
+                    },
+                    { 
+                        id: 6, 
+                        name: "Azure", 
+                        logo: "/images/home/product-reseller/Azure.webp" 
+                    },
+                ],
+            },
+        ],
     }
 }
 
