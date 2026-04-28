@@ -2,6 +2,7 @@
 
 import type { CloudServiceItem,EngineeringDrivenCloudServicesProps } from "@/types/home/home";
 import { useState } from "react";
+import Link from "next/link";
 import { RightArrow } from "@/components/icons/Home/Home";
 
 type Props = {
@@ -147,12 +148,14 @@ export default function EngineeringDrivenCloudServices({ data }: Props) {
                 className="h-full w-full rounded-[16px] object-cover shadow-lg"
               />
             </div>
-            <div className="mt-6 lg:mt-10 inline-flex items-center gap-2 rounded-full border border-[#5272FF] px-5 py-2 text-[12px] xl:text-[18px] font-medium text-[#5272FF]">
-              <span>Learn More</span>
-              <span aria-hidden="true">
-                <RightArrow className="text-[#5272FF] h-[10px]"/>
-              </span>
-            </div>
+            <Link href={activeService.href}>
+              <div className="mt-6 lg:mt-10 inline-flex items-center gap-2 rounded-full border border-[#5272FF] px-5 py-2 text-[12px] xl:text-[18px] font-medium text-[#5272FF]">
+                <span>Learn More</span>
+                <span aria-hidden="true">
+                  <RightArrow className="text-[#5272FF] h-[10px]"/>
+                </span>
+              </div>
+            </Link>
           </div>
 
           {/* Mobile View - Accordion Style */}

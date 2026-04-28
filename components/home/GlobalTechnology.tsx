@@ -54,13 +54,14 @@ export default function OurSolutions({ data }: GlobalProps) {
             </div>
           ))}
         </div>
-        <div className="mt-10 md:mt-16">
+        {/* TODO : Implement CTA link */}
+        {/* <div className="mt-10 md:mt-16">
           <button 
             className="px-6 py-1 bg-[#21A3E8] text-white font-semibold rounded-full text-[15px]"
           >
             Explore Partners
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ export default function HeroSection({ data }: HeroProps) {
   }, [slides.length]);
 
   const handleScroll = () => {
-    const section = document.getElementById("oursolution-section");
+    const section = document.getElementById("our-solutions");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
