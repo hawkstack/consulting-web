@@ -29,7 +29,7 @@ const RedHatHeroSection = ({ data }: Props) => {
             {subtitle}
           </h2>
 
-          <p className="text-gray-600 text-xs lg:text-sm xl:text-lg mt-4 leading-normal md:w-[260px] lg:w-[300px] xl:max-w-[400px] text-center md:text-left">
+          <p className="text-gray-600 text-xs lg:text-sm xl:text-lg mt-4 leading-normal md:w-[260px] lg:w-[300px] xl:w-[400px] text-center md:text-left">
             {description}
           </p>
 
