@@ -11,7 +11,7 @@ export default function ProductGrid({data}: Props) {
     const whiteBgLogos = ["Azure", "AWS", "GCP"];
 
   return (
-    <section id="our-solutions" className="bg-[#FFFFFF] py-15 px-6 md:px-15 lg:px-6 xl:px-25 font-lexend z-10 relative scroll-mt-20">
+    <section id="our-solutions" className="bg-[#FFFFFF] py-15 px-6 md:px-15 lg:px-6 xl:px-25 font-lexend z-10 relative md:scroll-mt-2 lg:scroll-mt-12">
       {/* Header Section */}
       <div className="text-center mb-16">
         <h2 className="text-[#011235] text-[24px] md:text-[32px] xl:text-[40px] font-semibold mb-4">
