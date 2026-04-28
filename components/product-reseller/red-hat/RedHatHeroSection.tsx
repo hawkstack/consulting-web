@@ -17,33 +17,33 @@ const RedHatHeroSection = ({ data }: Props) => {
   } = data;
 
   return (
-    <section className="w-full bg-[#ffffff] py-16 md:py-20 lg:py-10 xl:py-4">
-      <div className="max-w-[1300px] mx-auto px-6 lg:px-8 xl:px-0 flex flex-col lg:flex-row items-center justify-between gap-10">
+    <section className="w-full bg-[#ffffff] py-10 md:py-20 lg:py-10 xl:py-4">
+      <div className="max-w-[1300px] mx-auto px-6 lg:px-8 xl:px-0 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* LEFT CONTENT */}
-        <div className="w-full lg:max-w-[450px] lg:ml-[40px] xl:ml-[70px]">
-          <h1 className="text-3xl md:text-4xl lg:text-[24px] xl:text-[48px] font-bold leading-none text-gray-900 lg:w-[200px] xl:max-w-[400px]">
+        <div className="w-full lg:max-w-[450px] md:ml-[14px] lg:ml-[40px] xl:ml-[70px]">
+          <h1 className="text-xl md:text-2xl lg:text-[24px] xl:text-[48px] font-bold leading-none text-gray-900 lg:w-[200px] xl:max-w-[400px] text-center md:text-left">
             {title} <span className="text-[#E40000]">{highlightText}</span>
           </h1>
 
-          <h2 className="text-3xl md:text-4xl lg:text-[24px] font-bold text-gray-900 mt-1">
+          <h2 className="text-xl md:text-2xl lg:text-[24px] font-bold text-gray-900 mt-1 text-center md:text-left">
             {subtitle}
           </h2>
 
-          <p className="text-gray-600 text-base lg:text-sm xl:text-lg mt-4 leading-normal lg:w-[300px] xl:max-w-[400px]">
+          <p className="text-gray-600 text-xs lg:text-sm xl:text-lg mt-4 leading-normal md:w-[260px] lg:w-[300px] xl:max-w-[400px] text-center md:text-left">
             {description}
           </p>
 
           <div className="flex items-center gap-4 mt-6">
             <a
               href={ctaPrimary.link}
-              className="bg-[#E40000] text-white px-6 py-3 rounded-md text-xs xl:text-sm font-medium transition"
+              className="bg-[#E40000] text-white px-4 py-2 lg:px-6 lg:py-3 rounded-md text-[11px] md:text-xs xl:text-sm font-medium transition"
             >
               {ctaPrimary.text}
             </a>
 
             <a
               href={ctaSecondary.link}
-              className="border border-[#E40000] text-[#E40000] px-6 py-3 rounded-md text-xs xl:text-sm font-medium transition"
+              className="border border-[#E40000] text-[#E40000] px-4 py-2 lg:px-6 lg:py-3 rounded-md text-[11px] md:text-xs xl:text-sm font-medium transition"
             >
               {ctaSecondary.text}
             </a>
