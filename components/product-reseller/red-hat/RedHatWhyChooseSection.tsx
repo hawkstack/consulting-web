@@ -23,7 +23,7 @@ const RedHatWhyChooseSection = ({ data }: Props) => {
         </p>
 
         {/* Cards */}
-        <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-6 px-30 xl:px-0">
+        <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-6 md:px-30 xl:px-0">
           {cards.map((card, index) => {
             const isRed = card.variant === "red";
 
