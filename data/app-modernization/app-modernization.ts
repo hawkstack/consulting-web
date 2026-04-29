@@ -24,6 +24,7 @@ export const appModernizationHeroContent: AppModernizationHeroContent = {
       variant: "secondary",
     },
   ],
+  h1MaxWidth: "max-w-[420px]",
   form: {
     title: "GET IN TOUCH",
     submitLabel: "Send Message",

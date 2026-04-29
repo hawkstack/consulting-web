@@ -18,7 +18,7 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
         variant: "secondary",
       },
     ],
-    h1MaxWidth: "max-w-[575px]",
+    h1MaxWidth: "max-w-[455px]",
     titleMarginTop: "mt-0",
     descriptionWidth: "max-w-[700px]",
     form: {

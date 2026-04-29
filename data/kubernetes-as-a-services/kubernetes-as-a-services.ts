@@ -169,7 +169,6 @@ export const heroSectionData: AppModernizationHeroContent = {
     "bg-[linear-gradient(0deg,_#020617,_#020617),radial-gradient(121.54%_175.93%_at_0%_100%,_rgba(168,85,247,0.12)_0%,_rgba(168,85,247,0)_25%),radial-gradient(121.54%_175.93%_at_100%_0%,_rgba(34,211,238,0.15)_0%,_rgba(34,211,238,0)_25%)]",
   badge: "Cloud-native infrastructure managed for scale",
   title: "Run Kubernetes without the operational complexity.",
-  h1MaxWidth: "max-w-[500px]",
   fontSize: "text-[22px] md:text-[40px] xl:text-[50px]",
   descriptionWidth: "max-w-[680px]",
   description:
@@ -201,7 +200,7 @@ export const heroSectionData: AppModernizationHeroContent = {
       descWidth: "max-w-[120px]",
     },
   ],
-
+  h1MaxWidth: "max-w-[620px]",
   form: {
     title: "GET IN TOUCH",
     submitLabel: "Send Message",
