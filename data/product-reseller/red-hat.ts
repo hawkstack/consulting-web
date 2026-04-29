@@ -92,3 +92,35 @@ export const whyChooseData: WhyChooseSectionData = {
     },
   ],
 };
+
+// RedHatDeliverySection data file
+
+export const deliveryApproachData = {
+  header: {
+    title: "Our delivery approach",
+  },
+  idColor: "#FF4B4B",
+  variant: "darkCard",
+  items: [
+    {
+      id: "01",
+      title: "Assess",
+      desc: "Review current infrastructure, workloads, business goals, and migration readiness.",
+    },
+    {
+      id: "02",
+      title: "Design",
+      desc: "Create a secure, scalable  architecture aligned with Red Hat best practices.",
+    },
+    {
+      id: "03",
+      title: "Implement",
+      desc: "Deploy platforms, automate workflows, migrate workloads, and validate performance.",
+    },
+    {
+      id: "04",
+      title: "Support",
+      desc: "Provide ongoing optimization, troubleshooting, upgrades, and team enablement.",
+    },
+  ],
+};

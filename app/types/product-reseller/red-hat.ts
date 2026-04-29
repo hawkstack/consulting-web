@@ -42,3 +42,24 @@ export interface WhyChooseSectionData {
   highlightText?: string;
   cards: WhyChooseCard[];
 }
+
+// RedHatDeliverySection Types file
+export interface FeatureItem {
+  id: string;
+  title: string;
+  desc: string;
+}
+
+export interface FeatureHeader {
+  title: string;
+  tag?: string;
+}
+
+export type FeatureVariant = "default" | "darkCard";
+
+export interface FeaturesData {
+  header: FeatureHeader;
+  items: FeatureItem[];
+
+  variant?: FeatureVariant;
+}
