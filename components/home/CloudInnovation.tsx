@@ -28,7 +28,7 @@ export default function CloudInnovation({ data }: CloudProps) {
           muted
           loop
           playsInline
-          className="hidden md:block w-full h-full object-contain object-right"
+          className="hidden md:block w-full h-full object-contain object-right md:scale-[1] lg:scale-[1.4]"
         >
           <source src={data.videoDesktop} type="video/mp4" />
         </video>
