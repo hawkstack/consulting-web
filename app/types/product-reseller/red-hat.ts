@@ -22,3 +22,23 @@ export interface RedHatOverviewData {
   highlightTitle: string;
   description: string;
 }
+
+// RedHatWhyChooseSection Types file
+
+export interface WhyChooseItem {
+  id: number;
+  text: string;
+}
+
+export interface WhyChooseCard {
+  title: string;
+  items: WhyChooseItem[];
+  variant: "dark" | "red";
+}
+
+export interface WhyChooseSectionData {
+  heading: string;
+  subheading: string;
+  highlightText?: string;
+  cards: WhyChooseCard[];
+}
