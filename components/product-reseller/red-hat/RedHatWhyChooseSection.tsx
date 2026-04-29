@@ -11,14 +11,14 @@ const RedHatWhyChooseSection = ({ data }: Props) => {
     <section className="w-full bg-[#0A0F1C] text-[#FFFFFF] py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+        <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold">
           {heading}{" "}
           {highlightText && (
             <span className="text-[#C40000]">{highlightText}</span>
           )}
         </h2>
 
-        <p className="mt-3 text-sm md:text-base text-[#FFFFFF] lg:max-w-xl xl:max-w-3xl mx-auto">
+        <p className="mt-3 text-sm md:text-base text-[#FFFFFF] max-w-lg lg:max-w-xl xl:max-w-3xl mx-auto">
           {subheading}
         </p>
 
@@ -36,7 +36,7 @@ const RedHatWhyChooseSection = ({ data }: Props) => {
                     : "bg-[#171c28] border border-gray-800"
                 }`}
               >
-                <h3 className="text-lg md:text-xl font-semibold mb-4">
+                <h3 className="text-2xl xl:text-xl font-semibold mb-4">
                   {card.title}
                 </h3>
 
