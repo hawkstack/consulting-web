@@ -12,24 +12,30 @@ import { homePageData } from "@/data/home/home";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
-  title: "Red Hat Training & Certification Courses | Bengaluru ",
-  description: "Red Hat Training & Certification Courses | Bengaluru",
+  title: "HawkStack Consulting | Digital Transformation & Growth ",
+  description: "HawkStack Consulting | Digital Transformation & Growth",
 });
 
-export default function HomePage () {
-  const { 
-    heroSectionData, cloudServicesSectionData, productsSectionData, globalSectionData, platformSectionData, whatWeDoSectionData, cloudSectionData
+export default function HomePage() {
+  const {
+    heroSectionData,
+    cloudServicesSectionData,
+    productsSectionData,
+    globalSectionData,
+    platformSectionData,
+    whatWeDoSectionData,
+    cloudSectionData,
   } = homePageData;
   return (
     <div>
-      <HeroSection data = {heroSectionData}/>
-      <EngineeringDrivenCloudServices data = {cloudServicesSectionData} />
-      <ProductReseller data = {productsSectionData} />
-      <GlobalTechnology data = {globalSectionData} />
-      <PlatformSection data = {platformSectionData}/>
-      <WhatWeDo data = {whatWeDoSectionData} />
-      <CloudInnovation data = {cloudSectionData} />
+      <HeroSection data={heroSectionData} />
+      <EngineeringDrivenCloudServices data={cloudServicesSectionData} />
+      <ProductReseller data={productsSectionData} />
+      <GlobalTechnology data={globalSectionData} />
+      <PlatformSection data={platformSectionData} />
+      <WhatWeDo data={whatWeDoSectionData} />
+      <CloudInnovation data={cloudSectionData} />
       <ContactCTA />
     </div>
   );
-};
+}
