@@ -18,12 +18,12 @@ const RedHatWhyChooseSection = ({ data }: Props) => {
           )}
         </h2>
 
-        <p className="mt-3 text-sm md:text-base text-[#FFFFFF] max-w-3xl mx-auto">
+        <p className="mt-3 text-sm md:text-base text-[#FFFFFF] lg:max-w-xl xl:max-w-3xl mx-auto">
           {subheading}
         </p>
 
         {/* Cards */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-6 px-30 xl:px-0">
           {cards.map((card, index) => {
             const isRed = card.variant === "red";
 
