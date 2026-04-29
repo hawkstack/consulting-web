@@ -14,3 +14,11 @@ export interface RedHatHeroData {
   };
   image: string;
 }
+
+// Redhat overview Types file
+export interface RedHatOverviewData {
+  badge: string;
+  title: string;
+  highlightTitle: string;
+  description: string;
+}

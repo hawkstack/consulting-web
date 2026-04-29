@@ -4,13 +4,13 @@ import RedHatDeliverySection from "@/components/product-reseller/red-hat/RedHatD
 import RedHatHeroSection from "@/components/product-reseller/red-hat/RedHatHeroSection";
 import RedHatOverviewSection from "@/components/product-reseller/red-hat/RedHatOverviewSection";
 import RedHatWhyChooseSection from "@/components/product-reseller/red-hat/RedHatWhyChooseSection";
-import { redHatHeroData } from "@/data/product-reseller/red-hat";
+import { redHatHeroData, redhatOverviewData } from "@/data/product-reseller/red-hat";
 
 const page = () => {
   return (
     <div>
       <RedHatHeroSection data={redHatHeroData} />
-      <RedHatOverviewSection />
+      <RedHatOverviewSection data={redhatOverviewData} />
       <RedHatWhyChooseSection />
       <RedHatClientsSection />
       <RedHatDeliverySection />

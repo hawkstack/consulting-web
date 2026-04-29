@@ -1,6 +1,9 @@
 // Redhat Hero data file
 
-import { RedHatHeroData } from "@/app/types/product-reseller/red-hat";
+import {
+  RedHatHeroData,
+  RedHatOverviewData,
+} from "@/app/types/product-reseller/red-hat";
 
 export const redHatHeroData: RedHatHeroData = {
   title: "Your business runs",
@@ -17,4 +20,14 @@ export const redHatHeroData: RedHatHeroData = {
     link: "#",
   },
   image: "/images/product-seller/redhat-hero.webp", // your figma image
+};
+
+// Redhat overview data file
+
+export const redhatOverviewData: RedHatOverviewData = {
+  badge: "OUR SOLUTIONS",
+  title: "Build on a reliable foundation.",
+  highlightTitle: "Take your apps anywhere.",
+  description:
+    "Power your business with the industry’s leading enterprise open source solutions built for security, performance and flexibility.",
 };
