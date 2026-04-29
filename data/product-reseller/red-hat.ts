@@ -1,6 +1,7 @@
 // Redhat Hero data file
 
 import {
+  RedHatCTAData,
   RedHatHeroData,
   RedHatOverviewData,
   WhyChooseSectionData,
@@ -123,4 +124,13 @@ export const deliveryApproachData = {
       desc: "Provide ongoing optimization, troubleshooting, upgrades, and team enablement.",
     },
   ],
+};
+
+// RedHatCTASection data file
+
+export const redHatCTAData: RedHatCTAData = {
+  heading: "Ready to modernize with HawkStack?",
+  description:
+    "Talk to HawkStack Technologies for Red Hat consulting, implementation, migration, support, and enterprise platform enablement.",
+  buttonText: "Contact HawkStack →",
 };

@@ -63,3 +63,10 @@ export interface FeaturesData {
 
   variant?: FeatureVariant;
 }
+
+// RedHatCTASection Types file
+export interface RedHatCTAData {
+  heading: string;
+  description: string;
+  buttonText: string;
+}
