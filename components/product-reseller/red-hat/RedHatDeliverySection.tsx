@@ -1,9 +1,8 @@
+import FeaturesSection from "@/components/kubernetes-as-a-services/FeaturesSection";
+import { deliveryApproachData } from "@/data/product-reseller/red-hat";
+
 const RedHatDeliverySection = () => {
-  return (
-    <div>
-      <h1>RedHatDeliverySection</h1>
-    </div>
-  );
+  return <FeaturesSection data={deliveryApproachData} />;
 };
 
 export default RedHatDeliverySection;

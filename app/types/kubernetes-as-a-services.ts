@@ -52,10 +52,11 @@ export interface FeatureItem {
 
 export interface FeaturesData {
   header: {
-    tag: string;
+    tag?: string;
     title: string;
   };
   items: FeatureItem[];
+  idColor?: string;
 }
 
 // solutions section
