@@ -70,3 +70,16 @@ export interface RedHatCTAData {
   description: string;
   buttonText: string;
 }
+
+// RedHatClientsSection Types file
+export interface ClientLogo {
+  name: string;
+  logo: string;
+}
+
+export interface RedHatClientsSectionData {
+  heading: string;
+  highlightText: string;
+  description: string;
+  clients: ClientLogo[];
+}
