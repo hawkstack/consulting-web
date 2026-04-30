@@ -22,8 +22,8 @@ const RedHatClientsSection = ({ data }: Props) => {
         {[...logos, ...logos, ...logos].map((client, i) => (
           <div
             key={`${keyPrefix}-${i}`}
-            className="w-[130px] h-[50px]
-            rounded-xl
+            className="w-[42px] h-[16px] md:w-[74px] md:h-[27px] xl:w-[130px] xl:h-[50px]
+            rounded-md xl:rounded-xl
           bg-white
             shrink-0 overflow-hidden relative"
           >
@@ -32,7 +32,7 @@ const RedHatClientsSection = ({ data }: Props) => {
               alt={client.name}
               width={130}
               height={50}
-              className="object-cover justify-center items-center w-full h-full"
+              className="object-cover justify-center items-center "
             />
           </div>
         ))}
@@ -49,12 +49,12 @@ const RedHatClientsSection = ({ data }: Props) => {
         </h2>
 
         {/* Description */}
-        <p className="text-white mt-2 text-xs md:text-base max-w-2xl mx-auto">
+        <p className="text-white mt-2 text-xs md:text-base mx-auto w-xs md:w-lg lg:w-2xl">
           {description}
         </p>
 
         {/* ROWS */}
-        <div className="mt-10 space-y-6">
+        <div className="mt-10 space-y-2 md:space-y-3 lg:space-y-5 xl:space-y-6">
           {renderRow(row1, false, "row1")}
           {renderRow(row2, true, "row2")}
           {renderRow(row3, false, "row3")}
