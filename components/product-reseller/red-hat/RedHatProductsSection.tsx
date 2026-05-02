@@ -12,7 +12,7 @@ const RedHatProductsSection = ({ data }: Props) => {
         src="/images/product-seller/redhat-bg.webp"
         alt="background"
         fill
-        className="object-cover object-left pointer-events-none"
+        className="object-cover object-center md:object-left pointer-events-none"
         priority
       />
 
@@ -38,16 +38,16 @@ const RedHatProductsSection = ({ data }: Props) => {
             </div>
 
             {/* RIGHT GRID */}
-            <div className="xl:col-span-4 relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:border-x border-r border-gray-800">
+            <div className="xl:col-span-4 relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:border-x md:border-r border-gray-800">
               {/* TOP RED LINE (md + lg only) */}
-              <div className="absolute top-0 left-0 w-full h-[1px] bg-[#EE0000] hidden md:block xl:hidden"></div>
+              <div className="absolute top-0 left-0 w-full h-[1px] bg-[#EE0000] block xl:hidden"></div>
 
               {/* MIDDLE RED LINE (between rows) */}
               {data.products.map((item, i) => (
                 <div
                   key={i}
                   className={`
-                  p-4 border-[#FFFFFF29] relative
+                  p-4 border-[#EE0000] md:border-[#FFFFFF29] relative
                   ${i % 2 !== 1 ? "md:border-r" : ""} 
                   ${i !== 3 ? "xl:border-r" : ""}
                   ${i < 2 ? "md:border-b xl:border-b-0" : ""}
