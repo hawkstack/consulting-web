@@ -7,7 +7,7 @@ interface Props {
 
 const RedHatProductsSection = ({ data }: Props) => {
   return (
-    <section className="relative text-white py-16 px-6 lg:px-16 overflow-hidden">
+    <section className="relative text-white py-16 px-6 lg:px-14 xl:px-16 overflow-hidden">
       <Image
         src="/images/product-seller/redhat-bg.webp"
         alt="background"
@@ -15,12 +15,14 @@ const RedHatProductsSection = ({ data }: Props) => {
         className="object-cover object-left pointer-events-none"
         priority
       />
+
       <div className="relative z-10">
-        <div className="max-w-6xl border-y border-gray-800 mx-auto">
-          <div className="grid lg:grid-cols-5 gap-16">
+        <div className="max-w-6xl border-b xl:border-y border-gray-800 mx-auto">
+          {/* FIXED GRID */}
+          <div className="grid gap-12 xl:grid-cols-5">
             {/* LEFT CONTENT */}
-            <div className="lg:col-span-1">
-              <h2 className="text-[48px] font-semibold leading-none max-w-[100px]">
+            <div className="xl:col-span-1 xl:max-w-[400px] md:text-center xl:text-left">
+              <h2 className="text-[48px] font-semibold leading-none xl:max-w-[100px]">
                 {data.heading}
               </h2>
 
@@ -28,24 +30,31 @@ const RedHatProductsSection = ({ data }: Props) => {
                 {data.highlightText}
               </h3>
 
-              <div className="w-12 h-[2px] bg-[#EE0000] mt-5"></div>
+              <div className="w-12 h-[2px] bg-[#EE0000] mt-5 hidden xl:block"></div>
 
-              <p className="text-gray-400 text-base leading-tight mt-2 max-w-[190px]">
+              <p className="text-gray-400 text-base leading-tight mt-2 xl:max-w-[190px]">
                 {data.description}
               </p>
             </div>
 
             {/* RIGHT GRID */}
-            <div className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-x border-gray-800">
+            {/* <div className="xl:col-span-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border-x border-gray-800"> */}
+            <div className="xl:col-span-4 relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:border-x border-r border-gray-800">
+              {/* TOP RED LINE (md + lg only) */}
+              <div className="absolute top-0 left-0 w-full h-[1px] bg-[#EE0000] hidden md:block xl:hidden"></div>
+
+              {/* MIDDLE RED LINE (between rows) */}
+              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-[#EE0000] hidden md:block xl:hidden"></div>
               {data.products.map((item, i) => (
                 <div
                   key={i}
                   className={`
-                p-4 border-[#FFFFFF29] relative
-                ${i !== 3 ? "lg:border-r" : ""}
-                ${i < 2 ? "md:border-b lg:border-b-0" : ""}
-                border-b md:border-b-0
-              `}
+                  p-4 border-[#FFFFFF29] relative
+                  ${i % 2 !== 1 ? "md:border-r" : ""} 
+                  ${i !== 3 ? "xl:border-r" : ""}
+                  ${i < 2 ? "md:border-b xl:border-b-0" : ""}
+                  border-b md:border-b-0
+                  `}
                 >
                   {/* TOP DOT */}
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full border border-[#EE0000] flex items-center justify-center bg-black">
@@ -58,7 +67,7 @@ const RedHatProductsSection = ({ data }: Props) => {
                   </div>
 
                   {/* TITLE */}
-                  <h4 className="text-lg leading-tight font-semibold mb-2 min-h-[50px]">
+                  <h4 className="text-lg leading-tight font-semibold mb-2 xl:min-h-[50px]">
                     {item.title}
                   </h4>
 
@@ -66,7 +75,7 @@ const RedHatProductsSection = ({ data }: Props) => {
                   <div className="w-8 h-[2px] bg-[#EE0000] mb-3"></div>
 
                   {/* DESC */}
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4 min-h-[110px]">
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4 lg:w-[280px] xl:w-full xl:min-h-[110px]">
                     {item.description}
                   </p>
 
@@ -76,10 +85,10 @@ const RedHatProductsSection = ({ data }: Props) => {
                   </button>
 
                   {/* AVAILABLE ON */}
-                  <div className="w-[156px] h-[1px] bg-[#FFFFFF29] my-2"></div>
+                  <div className="w-[156px] h-[1px] bg-[#FFFFFF29] my-3 xl:my-2"></div>
 
-                  {/* TEXT */}
                   <p className="text-[11px] text-gray-400">Available on</p>
+
                   <div className="flex flex-wrap items-center gap-2">
                     {item.availableOn.map((cloud) => (
                       <Image
