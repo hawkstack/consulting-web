@@ -14,7 +14,11 @@ export default function ProductCncfOnePartnerSection({
           {content.cards.map((card) => (
             <article
               key={card.title}
-              className="rounded-[18px] border border-[#6F83AE]/10 bg-[#101A2E] px-4 py-3 shadow-[inset_0_1px_0_rgba(140,165,215,0.22),0_18px_45px_rgba(0,0,0,0.22)] md:rounded-[22px] md:px-4 md:py-4 lg:rounded-[28px] lg:px-5 lg:py-5"
+              className={`rounded-[18px] border border-[#6F83AE]/10 px-4 py-3 shadow-[inset_0_1px_0_rgba(140,165,215,0.22),0_18px_45px_rgba(0,0,0,0.22)] md:rounded-[22px] md:px-4 md:py-4 lg:rounded-[28px] lg:px-5 lg:py-5 ${
+                card.title === "Observability Stack"
+                  ? "bg-[#064465]/50"
+                  : "bg-[#101A2E]"
+              }`}
             >
               <div className="flex items-start justify-between gap-4">
                 <h2 className="text-[11px] font-semibold leading-tight text-white md:text-[15px] lg:text-[20px]">
