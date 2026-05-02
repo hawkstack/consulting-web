@@ -21,12 +21,12 @@ const RedHatProductsSection = ({ data }: Props) => {
           {/* FIXED GRID */}
           <div className="grid gap-12 xl:grid-cols-5">
             {/* LEFT CONTENT */}
-            <div className="xl:col-span-1 xl:max-w-[400px] md:text-center xl:text-left">
-              <h2 className="text-[48px] font-semibold leading-none xl:max-w-[100px]">
+            <div className="xl:col-span-1 xl:max-w-[400px] text-center xl:text-left">
+              <h2 className="text-[24px] md:text-[36px] xl:text-[48px] font-semibold leading-none xl:max-w-[100px]">
                 {data.heading}
               </h2>
 
-              <h3 className="text-[42px] font-semibold text-[#EE0000] mt-2 leading-none">
+              <h3 className=" text-[24px] md:text-[36px] xl:text-[42px] font-semibold text-[#EE0000] mt-2 leading-none">
                 {data.highlightText}
               </h3>
 
@@ -38,13 +38,11 @@ const RedHatProductsSection = ({ data }: Props) => {
             </div>
 
             {/* RIGHT GRID */}
-            {/* <div className="xl:col-span-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border-x border-gray-800"> */}
             <div className="xl:col-span-4 relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:border-x border-r border-gray-800">
               {/* TOP RED LINE (md + lg only) */}
               <div className="absolute top-0 left-0 w-full h-[1px] bg-[#EE0000] hidden md:block xl:hidden"></div>
 
               {/* MIDDLE RED LINE (between rows) */}
-              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-[#EE0000] hidden md:block xl:hidden"></div>
               {data.products.map((item, i) => (
                 <div
                   key={i}
@@ -56,6 +54,14 @@ const RedHatProductsSection = ({ data }: Props) => {
                   border-b md:border-b-0
                   `}
                 >
+                  {/* MIDDLE RED LINE (only 2nd row cards) */}
+                  <div
+                    className={`
+                    absolute left-0 top-0 w-full h-[1px] bg-[#EE0000]
+                    hidden md:block xl:hidden
+                    ${i < 2 ? "hidden" : ""}
+                    `}
+                  />
                   {/* TOP DOT */}
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full border border-[#EE0000] flex items-center justify-center bg-black">
                     <div className="w-2 h-2 bg-[#EE0000] rounded-full"></div>
@@ -63,7 +69,13 @@ const RedHatProductsSection = ({ data }: Props) => {
 
                   {/* ICON */}
                   <div className="mb-4">
-                    <Image src={item.icon} alt="" width={60} height={60} />
+                    <Image
+                      src={item.icon}
+                      alt=""
+                      width={60}
+                      height={60}
+                      className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[55px] lg:h-[55px] xl:w-[60px] xl:h-[60px]"
+                    />
                   </div>
 
                   {/* TITLE */}
