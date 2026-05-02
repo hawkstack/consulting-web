@@ -49,6 +49,7 @@ export const products: MegaItem[] = [
     description:
       "A cloud-native technology provider that delivers flexible Kubernetes and container solutions to run modern infrastructure at enterprise scale.",
     image: "/images/products/Mirantis.webp",
+    href:"productresellers/mirantis",
   },
 ];
 
@@ -71,7 +72,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
       image: "/images/home/product-reseller/Redhat.webp",
-      href: "/get-started",
+      href: "/product-reseller/redhat",
     },
     {
       id: "cncf",
@@ -79,7 +80,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Cloud-native technologies and frameworks powering modern application development.",
       image: "/images/home/product-reseller/cncf.webp",
-      href: "/get-started",
+      href: "/product-reseller/cncf",
     },
     {
       id: "mirantis",
