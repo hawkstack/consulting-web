@@ -247,7 +247,7 @@ export const company: MegaItem[] = [
     description:
       "Let's connect to discuss how we can help you build and scale modern cloud solutions.",
     image: "/images/company/Contact-Us.webp",
-    href: "/get-started",
+    href: "/contact-us",
   },
   // TODO
   // {

@@ -1,6 +1,6 @@
-import ContactContent from "@/components/contact/ContactContent";
-import ContactCta from "@/components/contact/ContactCta";
-import ContactHero from "@/components/contact/ContactHero";
+import ContactContent from "@/components/contact-us/ContactContent";
+import ContactCta from "@/components/contact-us/ContactCta";
+import ContactHero from "@/components/contact-us/ContactHero";
 import { contactHeroData, ctaSectionData } from "@/data/contact/contact";
 
 const page = () => {

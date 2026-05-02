@@ -28,7 +28,7 @@ export default function CloudInnovation({ data }: CloudProps) {
           muted
           loop
           playsInline
-          className="hidden md:block w-full h-full object-contain object-right"
+          className="hidden md:block w-full h-full object-contain object-right md:scale-[1] lg:scale-[1.4]"
         >
           <source src={data.videoDesktop} type="video/mp4" />
         </video>
@@ -57,17 +57,17 @@ export default function CloudInnovation({ data }: CloudProps) {
 
           {/* Buttons moved inside the container flow to prevent cutting */}
           <div className="flex flex-row items-center justify-center md:justify-start gap-3 w-full">
-            <Link href="/">
+            <Link href="/career">
               <button className="px-5 py-2 md:py-1 xl:px-6 xl:py-2 bg-[#21A3E8] text-white rounded-full font-medium text-[12px] xl:text-[14px] whitespace-nowrap">
                 Explore Open Roles
               </button>
             </Link>
-                  
-            <Link href="/">
+            {/* TODO : Implement CTA link */}   
+            {/* <Link href="/">
               <button className="px-5 py-2 md:py-1 xl:px-6 xl:py-2 border border-[#21A3E8] text-[#21A3E8] rounded-full font-medium text-[12px] xl:text-[14px] whitespace-nowrap">
                 See Life at HawkStack
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

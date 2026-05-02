@@ -1,3 +1,4 @@
+"use client";
 import { CTASectionData } from "@/app/types/contact";
 
 interface Props {
@@ -38,7 +39,14 @@ const ContactCta = ({ data }: Props) => {
           {description}
         </p>
 
-        <button className="px-6 lg:px-10 py-1 lg:py-2 text-xs md:text-base xl:text-lg rounded-full bg-[#3560FF] text-white font-medium hover:opacity-90 transition">
+        <button
+          onClick={() => {
+            document
+              .getElementById("contact-section")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="px-6 lg:px-10 py-1 lg:py-2 text-xs md:text-base xl:text-lg rounded-full bg-[#3560FF] text-white font-medium hover:opacity-90 transition"
+        >
           {buttonText}
         </button>
       </div>
