@@ -261,3 +261,36 @@ body {
     transform: translate(0, 0) rotate(45deg);
   }
 }
+
+/* =========================
+   RedHatClientsSection
+   ========================= */
+
+.rh-clients-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: rh-clients-scroll 20s linear infinite;
+}
+
+.rh-clients-track-reverse {
+  animation: rh-clients-scroll-reverse 20s linear infinite;
+}
+
+@keyframes rh-clients-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+@keyframes rh-clients-scroll-reverse {
+  0% {
+    transform: translateX(-33.33%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

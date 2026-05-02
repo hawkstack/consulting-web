@@ -5,6 +5,7 @@ import RedHatHeroSection from "@/components/product-reseller/red-hat/RedHatHeroS
 import RedHatOverviewSection from "@/components/product-reseller/red-hat/RedHatOverviewSection";
 import RedHatWhyChooseSection from "@/components/product-reseller/red-hat/RedHatWhyChooseSection";
 import {
+  redHatClientsData,
   redHatCTAData,
   redHatHeroData,
   redhatOverviewData,
@@ -17,7 +18,7 @@ const page = () => {
       <RedHatHeroSection data={redHatHeroData} />
       <RedHatOverviewSection data={redhatOverviewData} />
       <RedHatWhyChooseSection data={whyChooseData} />
-      <RedHatClientsSection />
+      <RedHatClientsSection data={redHatClientsData} />
       <RedHatDeliverySection />
       <RedHatCTASection data={redHatCTAData} />
     </div>
