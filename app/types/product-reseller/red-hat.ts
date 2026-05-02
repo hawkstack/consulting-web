@@ -83,3 +83,23 @@ export interface RedHatClientsSectionData {
   description: string;
   clients: ClientLogo[];
 }
+
+// RedHatProductsSection Types file
+export interface CloudProvider {
+  name: string;
+  logo: string;
+}
+
+export interface ProductItem {
+  title: string;
+  description: string;
+  icon: string;
+  availableOn: CloudProvider[];
+}
+
+export interface RedHatProductsSectionData {
+  heading: string;
+  highlightText: string;
+  description: string;
+  products: ProductItem[];
+}
