@@ -5,6 +5,7 @@ import {
   RedHatCTAData,
   RedHatHeroData,
   RedHatOverviewData,
+  RedHatProductsSectionData,
   WhyChooseSectionData,
 } from "@/app/types/product-reseller/red-hat";
 
@@ -16,13 +17,13 @@ export const redHatHeroData: RedHatHeroData = {
     "According to Red Hat, nearly 50% of the Fortune 100 top companies and over 30% of the Fortune Global 500 use Red Hat OpenShift.",
   ctaPrimary: {
     text: "Explore Red Hat products",
-    link: "#",
+    link: "#redhat-products",
   },
   ctaSecondary: {
     text: "Contact an expert",
-    link: "#",
+    link: "/contact-us",
   },
-  image: "/images/product-seller/redhat-hero.webp", // your figma image
+  image: "/images/product-seller/redhat-hero.webp",
 };
 
 // Redhat overview data file
@@ -134,6 +135,7 @@ export const redHatCTAData: RedHatCTAData = {
   description:
     "Talk to HawkStack Technologies for Red Hat consulting, implementation, migration, support, and enterprise platform enablement.",
   buttonText: "Contact HawkStack →",
+  buttonLink: "/contact-us",
 };
 
 // RedHatClientsSection data file
@@ -174,5 +176,67 @@ export const redHatClientsData: RedHatClientsSectionData = {
     { name: "PayPal", logo: "/images/company-logos/paypal.webp" },
     { name: "Nokia", logo: "/images/company-logos/nokia.webp" },
     { name: "Siemens", logo: "/images/company-logos/siemens.webp" },
+  ],
+};
+
+// RedHatProductsSection data file
+
+export const redHatProductsData: RedHatProductsSectionData = {
+  heading: "Four powerful products.",
+  highlightText: "Endless possibilities.",
+  description:
+    "From infrastructure to automation to AI, our solutions help you build, deploy, and scale with confidence.",
+
+  products: [
+    {
+      title: "Red Hat AI",
+      description:
+        "Expand your AI capabilities with optimized models and  efficient inference on a platform built for agentic  workflows.",
+      icon: "/images/product-seller/redhat-ai.webp",
+      availableOn: [
+        { name: "aws", logo: "/images/product-seller/aws.webp" },
+        { name: "azure", logo: "/images/product-seller/azure.webp" },
+        { name: "gcp", logo: "/images/product-seller/gcp.webp" },
+        { name: "ibm", logo: "/images/product-seller/ibm.webp" },
+      ],
+    },
+    {
+      title: "Red Hat Enterprise Linux",
+      description:
+        "Support application deployments from on premise to the cloud to the edge in a flexible operating environment.",
+      icon: "/images/product-seller/redhat-enterprise-linux.webp",
+      availableOn: [
+        { name: "aws", logo: "/images/product-seller/aws.webp" },
+        { name: "azure", logo: "/images/product-seller/azure.webp" },
+        { name: "gcp", logo: "/images/product-seller/gcp.webp" },
+        { name: "ibm", logo: "/images/product-seller/ibm.webp" },
+        { name: "oracle", logo: "/images/product-seller/oracle.webp" },
+      ],
+    },
+    {
+      title: "Red Hat OpenShift",
+      description:
+        "Quickly build and deploy applications at scale, while you modernize the ones you already have.",
+      icon: "/images/product-seller/redhat-openshift.webp",
+      availableOn: [
+        { name: "aws", logo: "/images/product-seller/aws.webp" },
+        { name: "azure", logo: "/images/product-seller/azure.webp" },
+        { name: "gcp", logo: "/images/product-seller/gcp.webp" },
+        { name: "ibm", logo: "/images/product-seller/ibm.webp" },
+        { name: "oracle", logo: "/images/product-seller/oracle.webp" },
+      ],
+    },
+    {
+      title: "Red Hat Ansible Automation Platform",
+      description:
+        "Create, manage, and dynamically scale automation across your entire enterprise.",
+      icon: "/images/product-seller/redhat-ansible.webp",
+      availableOn: [
+        { name: "aws", logo: "/images/product-seller/aws.webp" },
+        { name: "azure", logo: "/images/product-seller/azure.webp" },
+        { name: "gcp", logo: "/images/product-seller/gcp.webp" },
+        { name: "ibm", logo: "/images/product-seller/ibm.webp" },
+      ],
+    },
   ],
 };

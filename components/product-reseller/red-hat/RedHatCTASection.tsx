@@ -28,13 +28,14 @@ const RedHatCTASection = ({ data }: Props) => {
 
             {/* Button */}
             <div>
-              <button
+              <a
+                href={data.buttonLink}
                 className="px-5 py-2.5 md:px-4 md:py-3 rounded-2xl 
                 bg-white/10 border border-white/20 text-white text-sm
                 hover:bg-white/20 transition-all duration-300"
               >
                 {buttonText}
-              </button>
+              </a>
             </div>
           </div>
         </div>

@@ -69,6 +69,7 @@ export interface RedHatCTAData {
   heading: string;
   description: string;
   buttonText: string;
+  buttonLink: string;
 }
 
 // RedHatClientsSection Types file
@@ -82,4 +83,24 @@ export interface RedHatClientsSectionData {
   highlightText: string;
   description: string;
   clients: ClientLogo[];
+}
+
+// RedHatProductsSection Types file
+export interface CloudProvider {
+  name: string;
+  logo: string;
+}
+
+export interface ProductItem {
+  title: string;
+  description: string;
+  icon: string;
+  availableOn: CloudProvider[];
+}
+
+export interface RedHatProductsSectionData {
+  heading: string;
+  highlightText: string;
+  description: string;
+  products: ProductItem[];
 }
