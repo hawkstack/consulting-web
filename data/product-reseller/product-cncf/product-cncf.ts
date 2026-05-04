@@ -61,4 +61,38 @@ export const productCncfPageData: ProductCncfPageContent = {
       "Accelerate DevOps, automation, CI/CD, and platform engineering",
     ],
   },
+  kubeVirtPromo: {
+    title: "KubeVirtStack.com",
+    description:
+      "A dedicated HawkStack destination for enterprises that want to run virtual machines and containers side by side using KubeVirt, Kubernetes, and cloud native operations.",
+    actions: [
+      {
+        label: "Visit KubevirtStack",
+        href: "https://kubevirtstack.com",
+        ariaLabel: "Visit KubeVirtStack website",
+      },
+      {
+        label: "Plan a Migration",
+        href: "/contact-us",
+        ariaLabel: "Plan a KubeVirt migration with HawkStack",
+      },
+    ],
+    cards: [
+      {
+        title: "Dedicated KubeVirt domain",
+        description:
+          "Explore our focused virtualization and Kubernetes capability at kubevirtstack.com.",
+      },
+      {
+        title: "VMs + containers together",
+        description:
+          "Modernize legacy virtual machines while building new cloud native workloads on the same platform.",
+      },
+      {
+        title: "Enterprise ready adoption",
+        description:
+          "Get architecture, migration, security, and operations guidance from one experienced platform team.",
+      },
+    ],
+  },
 };
