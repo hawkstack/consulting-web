@@ -112,7 +112,7 @@ export const homePageData: HomePageData = {
                 title: "RedHat",
                 description: "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
                 logo: "/images/home/product-reseller/Redhat.webp",
-                link: "/"
+                link: "/product-reseller/redhat"
             },
             {
                 id: "2",
@@ -130,7 +130,7 @@ export const homePageData: HomePageData = {
                 title: "CNCF",
                 description: "Cloud-native technologies and frameworks powering modern application development.",
                 logo: "/images/home/product-reseller/cncf.webp",
-                link: "/"
+                link: "/product-reseller/cncf"
             },
             {
                 id: "4",
