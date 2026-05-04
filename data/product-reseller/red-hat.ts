@@ -17,13 +17,13 @@ export const redHatHeroData: RedHatHeroData = {
     "According to Red Hat, nearly 50% of the Fortune 100 top companies and over 30% of the Fortune Global 500 use Red Hat OpenShift.",
   ctaPrimary: {
     text: "Explore Red Hat products",
-    link: "#",
+    link: "#redhat-products",
   },
   ctaSecondary: {
     text: "Contact an expert",
-    link: "#",
+    link: "/contact-us",
   },
-  image: "/images/product-seller/redhat-hero.webp", // your figma image
+  image: "/images/product-seller/redhat-hero.webp",
 };
 
 // Redhat overview data file
@@ -135,6 +135,7 @@ export const redHatCTAData: RedHatCTAData = {
   description:
     "Talk to HawkStack Technologies for Red Hat consulting, implementation, migration, support, and enterprise platform enablement.",
   buttonText: "Contact HawkStack →",
+  buttonLink: "/contact-us",
 };
 
 // RedHatClientsSection data file

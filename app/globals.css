@@ -55,6 +55,11 @@ body {
   scroll-margin-top: 70px;
 }
 
+/* Products reseller RedhatProductsSection */
+#redhat-products {
+  scroll-margin-top: 80px;
+}
+
 @keyframes partner-scroll {
   from {
     transform: translateX(0);

@@ -1,3 +1,4 @@
+"use client";
 import { RedHatHeroData } from "@/app/types/product-reseller/red-hat";
 import Image from "next/image";
 
@@ -34,12 +35,18 @@ const RedHatHeroSection = ({ data }: Props) => {
           </p>
 
           <div className="flex items-center gap-4 mt-6">
-            <a
-              href={ctaPrimary.link}
+            <button
+              onClick={() => {
+                const section = document.getElementById("redhat-products");
+                section?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
               className="bg-[#E40000] text-white px-4 py-2 lg:px-6 lg:py-3 rounded-md text-[11px] md:text-xs xl:text-sm font-medium transition"
             >
               {ctaPrimary.text}
-            </a>
+            </button>
 
             <a
               href={ctaSecondary.link}

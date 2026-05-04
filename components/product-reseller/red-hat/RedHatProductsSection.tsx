@@ -7,7 +7,10 @@ interface Props {
 
 const RedHatProductsSection = ({ data }: Props) => {
   return (
-    <section className="relative text-white py-16 px-6 lg:px-14 xl:px-16 overflow-hidden">
+    <section
+      id="redhat-products"
+      className="relative text-white py-16 px-6 lg:px-14 xl:px-16 overflow-hidden"
+    >
       <Image
         src="/images/product-seller/redhat-bg.webp"
         alt="background"

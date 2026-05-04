@@ -69,6 +69,7 @@ export interface RedHatCTAData {
   heading: string;
   description: string;
   buttonText: string;
+  buttonLink: string;
 }
 
 // RedHatClientsSection Types file
