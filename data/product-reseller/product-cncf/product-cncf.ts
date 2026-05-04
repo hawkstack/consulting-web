@@ -61,7 +61,6 @@ export const productCncfPageData: ProductCncfPageContent = {
       "Accelerate DevOps, automation, CI/CD, and platform engineering",
     ],
   },
-<<<<<<< HEAD
   kubeVirtPromo: {
     title: "KubeVirtStack.com",
     description:
@@ -96,6 +95,4 @@ export const productCncfPageData: ProductCncfPageContent = {
       },
     ],
   },
-=======
->>>>>>> b8e0e02d942140fc5ae297c91e9f75a32b4528aa
 };
