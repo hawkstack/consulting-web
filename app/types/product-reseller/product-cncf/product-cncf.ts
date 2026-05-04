@@ -29,7 +29,26 @@ export interface ProductCncfOnePartnerContent {
   points: string[];
 }
 
+export interface ProductCncfKubeVirtCard {
+  title: string;
+  description: string;
+}
+
+export interface ProductCncfAction {
+  label: string;
+  href: string;
+  ariaLabel: string;
+}
+
+export interface ProductCncfKubeVirtPromoContent {
+  title: string;
+  description: string;
+  actions: ProductCncfAction[];
+  cards: ProductCncfKubeVirtCard[];
+}
+
 export interface ProductCncfPageContent {
   hero: ProductCncfHeroContent;
   onePartner: ProductCncfOnePartnerContent;
+  kubeVirtPromo: ProductCncfKubeVirtPromoContent;
 }
