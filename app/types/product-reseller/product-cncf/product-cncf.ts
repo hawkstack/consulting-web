@@ -29,6 +29,7 @@ export interface ProductCncfOnePartnerContent {
   points: string[];
 }
 
+<<<<<<< HEAD
 export interface ProductCncfKubeVirtCard {
   title: string;
   description: string;
@@ -51,4 +52,9 @@ export interface ProductCncfPageContent {
   hero: ProductCncfHeroContent;
   onePartner: ProductCncfOnePartnerContent;
   kubeVirtPromo: ProductCncfKubeVirtPromoContent;
+=======
+export interface ProductCncfPageContent {
+  hero: ProductCncfHeroContent;
+  onePartner: ProductCncfOnePartnerContent;
+>>>>>>> b8e0e02d942140fc5ae297c91e9f75a32b4528aa
 }
