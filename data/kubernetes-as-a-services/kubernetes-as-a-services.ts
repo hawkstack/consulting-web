@@ -206,7 +206,7 @@ export const heroSectionData: AppModernizationHeroContent = {
     submitLabel: "Send Message",
     successMessage: "Message sent successfully.",
     errorMessage: "Something went wrong. Please try again.",
-    source: "automation",
+    source: "kubernetes-as-a-services",
     fields: [
       {
         name: "firstName",
