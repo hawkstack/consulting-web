@@ -9,15 +9,15 @@ const RedHatAIOverviewSection = ({ data }: Props) => {
 
   return (
     <section className="w-full bg-[#f6f6f6] py-12 md:py-16 lg:py-20">
-      <div className="max-w-[1220px] mx-auto px-4 md:px-6 lg:px-8">
+      <div className="lg:w-[920px] xl:w-[1220px] mx-auto px-4 md:px-0">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* LEFT */}
           <div>
-            <p className="text-[#EE0000] text-xs md:text-sm font-bold tracking-widest uppercase mb-4">
+            <p className="text-[#EE0000] text-xs xl:text-sm font-bold tracking-widest uppercase mb-4">
               {tag}
             </p>
 
-            <h2 className="text-[22px] md:text-4xl lg:text-[42px] xl:text-[48px] font-bold text-[#111] leading-tight mb-5 max-w-[420px]">
+            <h2 className="text-[22px] md:text-4xl lg:text-[36px] xl:text-[48px] font-bold text-[#111] leading-tight mb-5 max-w-[420px]">
               {heading}
             </h2>
 
@@ -40,11 +40,11 @@ const RedHatAIOverviewSection = ({ data }: Props) => {
 
                 {/* Content */}
                 <div>
-                  <h3 className="text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-[#111] mb-1">
+                  <h3 className="text-sm md:text-base lg:text-base xl:text-xl font-semibold text-[#111] mb-1">
                     {card.title}
                   </h3>
 
-                  <p className="text-xs md:text-sm lg:text-base text-gray-600 leading-relaxed">
+                  <p className="text-xs md:text-xs xl:text-base text-gray-600 leading-relaxed">
                     {card.description}
                   </p>
                 </div>
