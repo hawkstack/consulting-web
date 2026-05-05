@@ -1,0 +1,70 @@
+
+> consulting-web@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+
+✓ Starting...
+Creating turbopack project {
+  dir: 'C:\\Users\\datta\\Desktop\\hawkstack-work\\consulting-web',
+  testMode: true
+}
+✓ Ready in 1093ms
+ GET / 200 in 3.0s (compile: 2.4s, render: 619ms)
+ GET /product-reseller/cncf 200 in 1127ms (compile: 804ms, generate-params: 406ms, render: 322ms)
+Persisting failed: Unable to write SST file 00000061.sst
+
+Caused by:
+    The system cannot find the path specified. (os error 3)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 263ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 223ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 492ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 413ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 160ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 200ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 329ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 354ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 228ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 227ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 266ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 349ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 271ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 299ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 265ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 256ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 384ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /product-reseller/cncf 200 in 358ms (compile: 73ms, generate-params: 5ms, render: 285ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /product-reseller/cncf 200 in 244ms (compile: 17ms, generate-params: 11ms, render: 227ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 296ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
