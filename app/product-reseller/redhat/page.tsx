@@ -1,10 +1,10 @@
-import RedHatClientsSection from "@/components/product-reseller/red-hat/RedHatClientsSection";
-import RedHatCTASection from "@/components/product-reseller/red-hat/RedHatCTASection";
-import RedHatDeliverySection from "@/components/product-reseller/red-hat/RedHatDeliverySection";
-import RedHatHeroSection from "@/components/product-reseller/red-hat/RedHatHeroSection";
-import RedHatOverviewSection from "@/components/product-reseller/red-hat/RedHatOverviewSection";
-import RedHatWhyChooseSection from "@/components/product-reseller/red-hat/RedHatWhyChooseSection";
-import RedHatProductsSection from "@/components/product-reseller/red-hat/RedHatProductsSection";
+import RedHatClientsSection from "@/components/product-reseller/redhat/RedHatClientsSection";
+import RedHatCTASection from "@/components/product-reseller/redhat/RedHatCTASection";
+import RedHatDeliverySection from "@/components/product-reseller/redhat/RedHatDeliverySection";
+import RedHatHeroSection from "@/components/product-reseller/redhat/RedHatHeroSection";
+import RedHatOverviewSection from "@/components/product-reseller/redhat/RedHatOverviewSection";
+import RedHatWhyChooseSection from "@/components/product-reseller/redhat/RedHatWhyChooseSection";
+import RedHatProductsSection from "@/components/product-reseller/redhat/RedHatProductsSection";
 import {
   redHatClientsData,
   redHatCTAData,
@@ -12,7 +12,7 @@ import {
   redhatOverviewData,
   redHatProductsData,
   whyChooseData,
-} from "@/data/product-reseller/red-hat";
+} from "@/data/product-reseller/redhat";
 
 const page = () => {
   return (
