@@ -5,7 +5,7 @@ import RedHatAIHeroSection from "@/components/product-reseller/product-redhat/re
 import RedHatAIOverviewSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIOverviewSection";
 import RedHatAIProductionSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIProductionSection";
 import RedHatAIStrategySection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIStrategySection";
-import { redHatAIOverviewData } from "@/data/product-reseller/product-redhat/redhat-ai/redhat-ai";
+import { redHatAICapabilitiesData, redHatAIOverviewData } from "@/data/product-reseller/product-redhat/redhat-ai/redhat-ai";
 
 const page = () => {
   return (
@@ -13,7 +13,7 @@ const page = () => {
       <RedHatAIHeroSection />
       <RedHatAIOverviewSection data={redHatAIOverviewData} />
       <RedHatAIFoundationSection />
-      <RedHatAICapabilitiesSection />
+      <RedHatAICapabilitiesSection data={redHatAICapabilitiesData} />
       <RedHatAIProductionSection />
       <RedHatAIStrategySection />
       <RedHatAICtaSection />

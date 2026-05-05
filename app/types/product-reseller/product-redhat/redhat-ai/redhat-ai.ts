@@ -11,3 +11,15 @@ export interface RedHatAIOverviewData {
   description: string;
   cards: RedHatAIOverviewCard[];
 }
+
+// RedHatAICapabilitiesSection types
+
+export interface RedHatAICapabilitiesCard {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export interface RedHatAICapabilitiesData {
+  cards: RedHatAICapabilitiesCard[];
+}

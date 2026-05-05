@@ -1,6 +1,9 @@
 // RedHatAIOverviewSection data
 
-import { RedHatAIOverviewData } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+import {
+  RedHatAICapabilitiesData,
+  RedHatAIOverviewData,
+} from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 
 export const redHatAIOverviewData: RedHatAIOverviewData = {
   tag: "PLATFORM OVERVIEW",
@@ -26,6 +29,29 @@ export const redHatAIOverviewData: RedHatAIOverviewData = {
       title: "Scale with governance",
       description:
         "Standardize AI operations with security, monitoring, lifecycle controls, and repeatable deployment patterns.",
+    },
+  ],
+};
+
+// RedHatAICapabilitiesSection data
+
+export const redHatAICapabilitiesData: RedHatAICapabilitiesData = {
+  cards: [
+    {
+      id: 1,
+      title: "Any",
+      description: "Model, framework, hardware, or deployment environment.",
+    },
+    {
+      id: 2,
+      title: "Hybrid",
+      description: "Cloud, on-premise, and edge-ready AI delivery.",
+    },
+    {
+      id: 3,
+      title: "Secure",
+      description:
+        "Enterprise-grade governance, control, and lifecycle support.",
     },
   ],
 };
