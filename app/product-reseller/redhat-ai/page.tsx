@@ -5,12 +5,13 @@ import RedHatAIHeroSection from "@/components/product-reseller/product-redhat/re
 import RedHatAIOverviewSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIOverviewSection";
 import RedHatAIProductionSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIProductionSection";
 import RedHatAIStrategySection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIStrategySection";
+import { redHatAIOverviewData } from "@/data/product-reseller/product-redhat/redhat-ai/redhat-ai";
 
 const page = () => {
   return (
     <div>
       <RedHatAIHeroSection />
-      <RedHatAIOverviewSection />
+      <RedHatAIOverviewSection data={redHatAIOverviewData} />
       <RedHatAIFoundationSection />
       <RedHatAICapabilitiesSection />
       <RedHatAIProductionSection />
