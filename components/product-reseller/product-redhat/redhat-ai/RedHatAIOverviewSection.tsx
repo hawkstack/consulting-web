@@ -9,7 +9,7 @@ const RedHatAIOverviewSection = ({ data }: Props) => {
 
   return (
     <section className="w-full bg-[#f6f6f6] py-12 md:py-16 lg:py-20">
-      <div className="md:w-[700px] lg:w-[920px] xl:w-[1220px] mx-auto px-4 md:px-0">
+      <div className="md:w-[700px] lg:w-[920px] xl:w-[1180px] mx-auto px-4 md:px-0">
         <div className="grid md:grid-cols-2 gap-2 md:gap-10 lg:gap-16 items-start">
           {/* LEFT */}
           <div>
@@ -21,7 +21,7 @@ const RedHatAIOverviewSection = ({ data }: Props) => {
               {heading}
             </h2>
 
-            <p className="text-gray-600 text-xs md:text-sm lg:text-lg leading-relaxed md:w-xs lg:w-md hidden md:">
+            <p className="text-gray-600 text-xs md:text-sm lg:text-lg leading-relaxed md:w-xs lg:w-md hidden md:block">
               {description}
             </p>
           </div>
