@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import type {
   AppModernizationFormContent,
   AppModernizationFormField,
@@ -57,6 +57,21 @@ export default function AppModernizationContactForm({
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
+  useEffect(() => {
+    if (status === "idle") {
+      return undefined;
+    }
+
+    const duration = status === "success" ? 5000 : 3000;
+    const timer = window.setTimeout(() => {
+      setStatus("idle");
+    }, duration);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [status]);
+
   const fieldMap = useMemo(
     () =>
       form.fields.reduce<Record<AppModernizationFormField["name"], AppModernizationFormField>>(
@@ -104,8 +119,11 @@ export default function AppModernizationContactForm({
     setLoading(true);
     setStatus("idle");
 
+    const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
+    const endpoint = `${API_BASE_URL}/api/consultingForms`;
+
     try {
-      const response = await fetch("/api/contacts", {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

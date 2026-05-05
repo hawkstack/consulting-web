@@ -45,7 +45,7 @@ export const trainingServicesPageData: TrainingServicesPageData = {
             submitLabel: "Send Message",
             successMessage: "Message sent successfully.",
             errorMessage: "Something went wrong. Please try again.",
-            source: "automation",
+            source: "training-services",
             fields: [
             {
                 name: "firstName",
