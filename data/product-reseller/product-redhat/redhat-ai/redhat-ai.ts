@@ -2,6 +2,7 @@
 
 import {
   RedHatAICapabilitiesData,
+  RedHatAICtaData,
   RedHatAIOverviewData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 
@@ -52,6 +53,27 @@ export const redHatAICapabilitiesData: RedHatAICapabilitiesData = {
       title: "Secure",
       description:
         "Enterprise-grade governance, control, and lifecycle support.",
+    },
+  ],
+};
+
+// RedHatAICtaSection data
+
+export const redHatAICtaData: RedHatAICtaData = {
+  tag: "START YOUR AI JOURNEY",
+  title: "Ready to build enterprise AI with Red Hat and HawkStack?",
+  description:
+    "Talk to our team about your AI use case, infrastructure, and deployment goals. We'll help you map the right solution.",
+  buttons: [
+    {
+      label: "Schedule a consultation",
+      href: "/contact",
+      variant: "primary",
+    },
+    {
+      label: "View products",
+      href: "/products",
+      variant: "secondary",
     },
   ],
 };
