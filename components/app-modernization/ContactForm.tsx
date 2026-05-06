@@ -1,28 +1,21 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import type {
   AppModernizationFormContent,
   AppModernizationFormField,
 } from "@/app/types/app-modernization";
 import { validateEmail, validateRequired } from "@/utils/validation";
 
-type FormState = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-};
+type FormState = Partial<Record<AppModernizationFormField["name"], string>>;
+type FormErrors = Partial<Record<AppModernizationFormField["name"], string>>;
 
-type FormErrors = Partial<Record<keyof FormState, string>>;
-
-const INITIAL_FORM_STATE: FormState = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  phone: "",
-  message: "",
+const buildInitialFormState = (fields: AppModernizationFormField[]) => {
+  const initialState: FormState = {};
+  fields.forEach((field) => {
+    initialState[field.name] = "";
+  });
+  return initialState;
 };
 
 function getFieldError(
@@ -52,10 +45,27 @@ export default function AppModernizationContactForm({
 }: {
   form: AppModernizationFormContent;
 }) {
-  const [values, setValues] = useState<FormState>(INITIAL_FORM_STATE);
+  const [values, setValues] = useState<FormState>(() =>
+    buildInitialFormState(form.fields),
+  );
   const [errors, setErrors] = useState<FormErrors>({});
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  useEffect(() => {
+    if (status === "idle") {
+      return undefined;
+    }
+
+    const duration = status === "success" ? 5000 : 3000;
+    const timer = window.setTimeout(() => {
+      setStatus("idle");
+    }, duration);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [status]);
 
   const fieldMap = useMemo(
     () =>
@@ -83,10 +93,11 @@ export default function AppModernizationContactForm({
   const validateForm = () => {
     const nextErrors: FormErrors = {};
 
-    (Object.keys(values) as Array<keyof FormState>).forEach((key) => {
-      const error = getFieldError(fieldMap[key], values[key]);
+    form.fields.forEach((field) => {
+      const value = values[field.name] ?? "";
+      const error = getFieldError(field, value);
       if (error) {
-        nextErrors[key] = error;
+        nextErrors[field.name] = error;
       }
     });
 
@@ -104,23 +115,33 @@ export default function AppModernizationContactForm({
     setLoading(true);
     setStatus("idle");
 
+    const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
+    const endpoint = `${API_BASE_URL}/api/consultingForms`;
+
     try {
-      const response = await fetch("/api/contacts", {
+      const payload = {
+        source: form.source,
+        ...values,
+      } as Record<string, string>;
+
+      if (values.message !== undefined) {
+        payload.query = values.query ?? values.message;
+        delete payload.message;
+      }
+
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          source: form.source,
-          ...values,
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
         throw new Error("Request failed");
       }
 
-      setValues(INITIAL_FORM_STATE);
+      setValues(buildInitialFormState(form.fields));
       setErrors({});
       setStatus("success");
     } catch {

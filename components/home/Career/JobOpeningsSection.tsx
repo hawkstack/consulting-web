@@ -4,27 +4,79 @@ import { useEffect, useState } from "react";
 import ArrowRight from "@/components/icons/career/ArrowRight";
 import YourClockIcon from "@/components/icons/career/YourClockIcon";
 import YourLocationIcon from "@/components/icons/career/YourLocationIcon";
-import { jobs } from "./Jobdata";
 import JobContactForm from "./JobContactForm";
+
+type Job = {
+  id: string;
+  domain: string;
+  category: string;
+  description: string;
+  site: string | null;
+  employment_type: string | null;
+};
+
+type JobsResponse = {
+  success: boolean;
+  data: Job[];
+};
 
 export default function JobOpeningsSection() {
   const [activeTab, setActiveTab] = useState("View all");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [isLoadingJobs, setIsLoadingJobs] = useState(true);
+  const [jobsError, setJobsError] = useState("");
 
   const tabs = [
     "View all",
-    "Technical Consultant",
-    "Development",
-    "Human Resources",
-    "Digital Marketing",
-    "Operations",
-    "UI/UX Designer",
+    ...Array.from(new Set(jobs.map((job) => job.domain))),
   ];
 
   const filteredJobs =
     activeTab === "View all"
       ? jobs
-      : jobs.filter((job) => job.category === activeTab);
+      : jobs.filter((job) => job.domain === activeTab);
+
+  const formatJobMeta = (
+    value: string | null,
+    fallback: string
+  ) => {
+    if (!value) return fallback;
+
+    return value
+      .split("-")
+      .map(
+        (word) =>
+          word.charAt(0).toUpperCase() +
+          word.slice(1)
+      )
+      .join("-");
+  };
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        setIsLoadingJobs(true);
+        setJobsError("");
+
+        const response = await fetch("/api/jobs");
+        const result = (await response.json()) as JobsResponse;
+
+        if (!response.ok || !result.success) {
+          throw new Error("Unable to load jobs.");
+        }
+
+        setJobs(result.data);
+      } catch {
+        setJobsError("Unable to load job openings right now.");
+      } finally {
+        setIsLoadingJobs(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
 
   useEffect(() => {
     if (isModalOpen) {
@@ -75,15 +127,31 @@ export default function JobOpeningsSection() {
 
           {/* Job List */}
           <div className="xl:mt-10 lg:mt-6 md:mt-6 mt-6 space-y-6 transition-all duration-300">
+            {isLoadingJobs && (
+              <p className="text-[#2F2F2F] font-medium">
+                Loading job openings...
+              </p>
+            )}
+
+            {!isLoadingJobs && jobsError && (
+              <p className="text-red-500 font-medium">{jobsError}</p>
+            )}
+
+            {!isLoadingJobs && !jobsError && filteredJobs.length === 0 && (
+              <p className="text-[#2F2F2F] font-medium">
+                No job openings found.
+              </p>
+            )}
+
             {filteredJobs.map((job, i) => (
               <div
-                key={i}
+                key={job.id ?? i}
                 className="border-t border-blue-500 pt-6 flex flex-col md:flex-row md:items-start md:justify-between gap-4"
               >
                 {/* Left Content */}
                 <div className="max-w-2xl">
                   <h3 className="text-[#0048FF] font-semibold xl:text-xl lg:text-xl md:text-md text-lg">
-                    {job.title}
+                    {job.category}
                   </h3>
                   <p className="text-[#2F2F2F] font-normal md:font-medium xl:text-sm xl:text-base md:text-sm text-sm xl:w-[90%] md:mt-4 mt-1">
                     {job.description}
@@ -93,18 +161,24 @@ export default function JobOpeningsSection() {
                   <div className="flex gap-3 mt-6">
                     <button className="flex items-center md:gap-2 gap-1 font-medium xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 md:px-2 md:py-1 px-4 py-1 border border-[#2B2B2B] rounded-full xl:text-sm md:text-xs text-xs text-black hover:bg-gray-100">
                       <YourLocationIcon className="md:w-4 md:h-4 w-3 h-3" />
-                      On-site
+                      {formatJobMeta(job.site, "On-site")}
                     </button>
                     <button className="flex items-center md:gap-2 gap-1 font-medium xl:px-4 xl:py-1.5 lg:px-3 lg:py-1 md:px-2 md:py-1 px-4 py-1 border border-[#2B2B2B] rounded-full xl:text-sm md:text-xs text-xs text-black hover:bg-gray-100">
                       <YourClockIcon className="md:w-4 md:h-4 w-3 h-3" />
-                      Full-time
+                      {formatJobMeta(
+                        job.employment_type,
+                        "Full-time"
+                      )}
                     </button>
                   </div>
                 </div>
 
                 {/* Apply Button */}
                 <div
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => {
+                    setSelectedJob(job);
+                    setIsModalOpen(true);
+                  }}
                   className="flex items-center text-base md:text-xl cursor-pointer"
                 >
                   Apply
@@ -116,7 +190,12 @@ export default function JobOpeningsSection() {
         </div>
       </section>
 
-      {isModalOpen && <JobContactForm onClose={() => setIsModalOpen(false)} />}
+      {isModalOpen && selectedJob && (
+        <JobContactForm
+          onClose={() => setIsModalOpen(false)}
+          selectedJob={selectedJob}
+        />
+      )}
     </>
   );
 }
