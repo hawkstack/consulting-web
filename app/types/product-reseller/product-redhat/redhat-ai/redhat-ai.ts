@@ -23,3 +23,18 @@ export interface RedHatAICapabilitiesCard {
 export interface RedHatAICapabilitiesData {
   cards: RedHatAICapabilitiesCard[];
 }
+
+// RedHatAICtaSection types
+
+export interface RedHatAICtaButton {
+  label: string;
+  href: string;
+  variant: "primary" | "secondary";
+}
+
+export interface RedHatAICtaData {
+  tag: string;
+  title: string;
+  description: string;
+  buttons: RedHatAICtaButton[];
+}
