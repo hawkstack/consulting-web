@@ -14,10 +14,10 @@ const RedHatAICtaSection = ({ data }: RedHatAICtaSectionProps) => {
       <div className="container relative z-10 mx-auto px-4">
         <div
           className="
-            relative mx-auto flex max-w-4xl flex-col items-center
+            relative mx-auto flex max-w-[896px] flex-col items-center
             rounded-[42px] border border-white/10
             bg-white/[0.06]
-            px-6 py-12
+            px-2 md:px-6 py-12
             text-center
             shadow-[0_0_60px_rgba(0,0,0,0.45)]
             backdrop-blur-xl
@@ -41,11 +41,11 @@ const RedHatAICtaSection = ({ data }: RedHatAICtaSectionProps) => {
 
             {/* Title */}
             <h2
-              className="
-                max-w-2xl
-                text-[34px] font-semibold leading-[1.1]
+              className=" 
+                w-full max-w-[710px]
+                font-semibold leading-[1.1]
                 text-white
-                lg:text-[32px] xl:text-[48px]
+                text-[24px] md:text-[30px] lg:text-[32px] xl:text-[48px]
               "
             >
               {data.title}
@@ -54,10 +54,11 @@ const RedHatAICtaSection = ({ data }: RedHatAICtaSectionProps) => {
             {/* Description */}
             <p
               className="
+                hidden md:block
                 mt-5 max-w-xl
-                text-sm leading-7
+                text-xs leading-4 md:leading-7
                 text-white/65
-                text-sm xl:text-lg
+                md:text-sm xl:text-lg
               "
             >
               {data.description}
@@ -70,7 +71,7 @@ const RedHatAICtaSection = ({ data }: RedHatAICtaSectionProps) => {
                   key={button.label}
                   href={button.href}
                   className={`
-                    rounded-full px-7 py-3 text-base font-semibold
+                    rounded-full px-7 py-3 text-sm lg:text-base font-semibold
                     transition-all duration-300
                     ${
                       button.variant === "primary"
