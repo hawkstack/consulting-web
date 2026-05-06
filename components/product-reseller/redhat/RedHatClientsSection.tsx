@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { RedHatClientsSectionData } from "@/app/types/product-reseller/red-hat";
+import { RedHatClientsSectionData } from "@/app/types/product-reseller/product-redhat/redhat";
 
 interface Props {
   data: RedHatClientsSectionData;

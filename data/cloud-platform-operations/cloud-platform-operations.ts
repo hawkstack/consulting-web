@@ -27,7 +27,7 @@ export const cloudPlatformOperationsPageData: CloudPlatformOperationsPageData = 
             submitLabel: "Send Message",
             successMessage: "Message sent successfully.",
             errorMessage: "Something went wrong. Please try again.",
-            source: "automation",
+            source: "cloud-platform-operations",
             fields: [
             {
                 name: "firstName",

@@ -1,4 +1,9 @@
-import { useRef, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  useRef,
+  useState,
+} from "react";
 import {
   validateEmail,
   validateName,
@@ -7,52 +12,73 @@ import {
 
 type JobContactFormProps = {
   onClose: () => void;
+  selectedJob: {
+    id: string | number;
+    domain: string;
+    category: string;
+  };
 };
 
-const jobRoles = [
-  "Frontend Developer",
-  "Backend Developer",
-  "Full Stack Developer",
-  "UI/UX Designer",
-  "Digital Marketing",
-  "Human Resources",
-];
+type JobApplicationFormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  jobId: string;
+  availability: string;
+  ctc: string;
+  location: string;
+  experience: string;
+  interviewAvailability: string;
+  reason: string;
+};
 
-export const JobContactForm = ({ onClose }: JobContactFormProps) => {
+type JobApplicationErrors = Partial<
+  Record<keyof JobApplicationFormData, string>
+>;
+
+const JobContactForm = ({
+  onClose,
+  selectedJob,
+}: JobContactFormProps) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [fileName, setFileName] = useState("No file chosen");
+  const [loading, setLoading] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [isError, setIsError] = useState(false);
+  const [errors, setErrors] = useState<JobApplicationErrors>({});
 
-  const [formData, setFormData] = useState({
+  const initialFormData: JobApplicationFormData = {
     firstName: "",
     lastName: "",
     email: "",
-    jobRole: "",
+    jobId: selectedJob.id.toString(),
     availability: "30/12/2021",
     ctc: "",
     location: "",
     experience: "",
-    interviewAvailability: "",
+    interviewAvailability: "30/12/2021",
     reason: "",
-  });
+  };
 
-  const [errors, setErrors] = useState<any>({});
-  const [submitMessage, setSubmitMessage] = useState("");
-  const [isError, setIsError] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] =
+    useState<JobApplicationFormData>(initialFormData);
 
   const handleClick = () => {
     fileInputRef.current?.click();
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleFileChange = (
+    e: ChangeEvent<HTMLInputElement>
+  ): void => {
     if (e.target.files?.[0]) {
       setFileName(e.target.files[0].name);
     }
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-
     let error = "";
 
     if (name === "firstName") {
@@ -67,10 +93,6 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
       error = validateEmail(value);
     }
 
-    if (name === "jobRole") {
-      error = validateRequired(value, "Job Role");
-    }
-
     if (name === "availability") {
       error = validateRequired(value, "Availability");
     }
@@ -83,7 +105,7 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
       error = validateRequired(value, "Experience");
     }
 
-    setErrors((prev: Record<string, string>) => ({
+    setErrors((prev) => ({
       ...prev,
       [name]: error,
     }));
@@ -94,73 +116,85 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
     }));
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (
+    e: FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
 
-    const newErrors: any = {
+    const newErrors: JobApplicationErrors = {
       firstName: validateName(formData.firstName, "First Name"),
       lastName: validateName(formData.lastName, "Last Name"),
       email: validateEmail(formData.email),
-      jobRole: validateRequired(formData.jobRole, "Job Role"),
-      availability: validateRequired(formData.availability, "Availability"),
+      availability: validateRequired(
+        formData.availability,
+        "Availability"
+      ),
       ctc: validateRequired(formData.ctc, "CTC"),
-      experience: validateRequired(formData.experience, "Experience"),
+      experience: validateRequired(
+        formData.experience,
+        "Experience"
+      ),
     };
 
     setErrors(newErrors);
 
-    const hasError = Object.values(newErrors).some((err) => err);
+    const hasError = Object.values(newErrors).some(Boolean);
 
     if (hasError) {
       setIsError(true);
-      setSubmitMessage("Please fix the errors above before submitting.");
+      setSubmitMessage(
+        "Please fix the errors above before submitting."
+      );
       return;
     }
 
     try {
       setLoading(true);
-      // FormData for file upload
       const payload = new FormData();
 
       Object.entries(formData).forEach(([key, value]) => {
-        payload.append(key, value as string);
+        payload.append(key, value);
       });
 
       if (fileInputRef.current?.files?.[0]) {
         payload.append("resume", fileInputRef.current.files[0]);
       }
 
-      const res = await fetch(`/api/jobApplication`, {
+      const response = await fetch("/api/job-application", {
         method: "POST",
         body: payload,
       });
 
-      if (!res.ok) {
-        throw new Error("Something went wrong");
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(
+          result?.message ?? "Something went wrong"
+        );
       }
 
       setIsError(false);
       setSubmitMessage(
-        "Hi, we have got your details. Our team will contact you soon.",
+        "Hi, we have got your details. Our team will contact you soon."
       );
 
       setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        jobRole: "",
+        ...initialFormData,
         availability: "",
-        ctc: "",
-        location: "",
-        experience: "",
         interviewAvailability: "",
-        reason: "",
       });
-
       setFileName("No file chosen");
-    } catch (err) {
+
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+    } catch (error) {
       setIsError(true);
-      setSubmitMessage("Something went wrong. Please try again.");
+      setSubmitMessage(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again."
+      );
     } finally {
       setLoading(false);
     }
@@ -175,17 +209,14 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
         className="bg-[#EFEFEF] w-full rounded-[10px] shadow-lg overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
         <div className="bg-[#1B52DF] text-white text-center py-2 lg:text-[18px] font-semibold">
           Job Application
         </div>
 
-        {/* Form */}
         <form
           onSubmit={handleSubmit}
           className="px-4 py-4 grid grid-cols-2 gap-x-3 gap-y-2 text-[12px] text-[#2F2F2F]"
         >
-          {/* First Name */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               First Name<span className="text-red-500 ml-[2px]">*</span>
@@ -198,11 +229,12 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
             {errors.firstName && (
-              <p className="text-[10px] text-red-500">{errors.firstName}</p>
+              <p className="text-[10px] text-red-500">
+                {errors.firstName}
+              </p>
             )}
           </div>
 
-          {/* Last Name */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Last Name<span className="text-red-500 ml-[2px]">*</span>
@@ -215,11 +247,12 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
             {errors.lastName && (
-              <p className="text-[10px] text-red-500">{errors.lastName}</p>
+              <p className="text-[10px] text-red-500">
+                {errors.lastName}
+              </p>
             )}
           </div>
 
-          {/* Email */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Email<span className="text-red-500 ml-[2px]">*</span>
@@ -229,37 +262,37 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter Email..."
-              className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px ] outline-none border-none"
+              className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
             {errors.email && (
-              <p className="text-[10px] text-red-500">{errors.email}</p>
+              <p className="text-[10px] text-red-500">
+                {errors.email}
+              </p>
             )}
           </div>
 
-          {/* Job Role */}
+          <div>
+            <label className="block font-medium mb-[3px] text-[12px]">
+              Domain<span className="text-red-500 ml-[2px]">*</span>
+            </label>
+            <input
+              value={selectedJob.domain}
+              readOnly
+              className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
+            />
+          </div>
+
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Job Role<span className="text-red-500 ml-[2px]">*</span>
             </label>
-            <select
-              name="jobRole"
-              value={formData.jobRole}
-              onChange={handleChange}
+            <input
+              value={selectedJob.category}
+              readOnly
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
-            >
-              <option value="">Select Domain</option>
-              {jobRoles.map((role, index) => (
-                <option key={index} value={role}>
-                  {role}
-                </option>
-              ))}
-            </select>
-            {errors.jobRole && (
-              <p className="text-[10px] text-red-500">{errors.jobRole}</p>
-            )}
+            />
           </div>
 
-          {/* Availability */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Availability to join
@@ -272,11 +305,12 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
             {errors.availability && (
-              <p className="text-[10px] text-red-500">{errors.availability}</p>
+              <p className="text-[10px] text-red-500">
+                {errors.availability}
+              </p>
             )}
           </div>
 
-          {/* CTC */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Current CTC<span className="text-red-500 ml-[2px]">*</span>
@@ -289,11 +323,12 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
             {errors.ctc && (
-              <p className="text-[10px] text-red-500">{errors.ctc}</p>
+              <p className="text-[10px] text-red-500">
+                {errors.ctc}
+              </p>
             )}
           </div>
 
-          {/* Location */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Current Location
@@ -307,7 +342,6 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
             />
           </div>
 
-          {/* Experience */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Experience<span className="text-red-500 ml-[2px]">*</span>
@@ -320,37 +354,38 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
             {errors.experience && (
-              <p className="text-[10px] text-red-500">{errors.experience}</p>
+              <p className="text-[10px] text-red-500">
+                {errors.experience}
+              </p>
             )}
           </div>
 
-          {/* Virtual Interview */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Availability for Virtual Interview
             </label>
             <input
-              defaultValue="30/12/2021"
+              name="interviewAvailability"
+              value={formData.interviewAvailability}
+              onChange={handleChange}
               className="w-full h-[26px] px-[6px] bg-[#E3E3E3] rounded-[4px] text-[12px] outline-none border-none"
             />
           </div>
 
-          {/* Upload */}
           <div>
             <label className="block font-medium mb-[3px] text-[12px]">
               Upload Your CV<span className="text-red-500 ml-[2px]">*</span>
             </label>
 
             <div className="flex items-center gap-[6px] bg-[#E3E3E3] px-[6px] py-[3px] rounded-[4px]">
-              {/* Hidden input */}
               <input
                 type="file"
+                accept=".pdf"
                 ref={fileInputRef}
                 className="hidden"
                 onChange={handleFileChange}
               />
 
-              {/* Button */}
               <button
                 type="button"
                 onClick={handleClick}
@@ -359,14 +394,12 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
                 Choose File
               </button>
 
-              {/* File name */}
               <span className="text-[10px] text-[#555] truncate max-w-[120px]">
                 {fileName}
               </span>
             </div>
           </div>
 
-          {/* Reason */}
           <div className="col-span-2">
             <label className="block font-medium mb-[3px] text-[12px]">
               Reason for leaving current role
@@ -379,11 +412,8 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
             />
           </div>
 
-          {/* Button */}
           <div className="col-span-2 relative">
-            {/* Mobile Layout */}
             <div className="flex items-center justify-between md:flex md:justify-end">
-              {/* Message */}
               {submitMessage && (
                 <div className="text-left md:absolute md:left-1/2 md:-translate-x-1/2">
                   <p
@@ -396,7 +426,6 @@ export const JobContactForm = ({ onClose }: JobContactFormProps) => {
                 </div>
               )}
 
-              {/* Button */}
               <button
                 type="submit"
                 disabled={loading}
