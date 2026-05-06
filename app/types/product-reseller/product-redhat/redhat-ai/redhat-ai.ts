@@ -38,3 +38,19 @@ export interface RedHatAICtaData {
   description: string;
   buttons: RedHatAICtaButton[];
 }
+
+// RedHatAIFoundationSection types
+
+export interface RedHatAIFoundationCard {
+  title: string;
+  description: string;
+  ctaText: string;
+  href: string;
+}
+
+export interface RedHatAIFoundationSectionData {
+  tag: string;
+  title: string;
+  description: string;
+  cards: RedHatAIFoundationCard[];
+}

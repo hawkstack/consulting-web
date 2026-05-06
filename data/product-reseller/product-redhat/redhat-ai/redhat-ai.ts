@@ -3,6 +3,7 @@
 import {
   RedHatAICapabilitiesData,
   RedHatAICtaData,
+  RedHatAIFoundationSectionData,
   RedHatAIOverviewData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 
@@ -74,6 +75,45 @@ export const redHatAICtaData: RedHatAICtaData = {
       label: "View products",
       href: "/products",
       variant: "secondary",
+    },
+  ],
+};
+
+// RedHatAIFoundationSection data
+
+export const redHatAIFoundationData: RedHatAIFoundationSectionData = {
+  tag: "RED HAT AI PORTFOLIO",
+  title: "Choose the right foundation for every AI workload.",
+  description:
+    "HawkStack helps you evaluate, implement, and optimize the Red Hat AI products that match your use case, infrastructure, and growth roadmap.",
+  cards: [
+    {
+      title: "Red Hat AI Enterprise",
+      description:
+        "Build, develop, and deploy AI-powered applications across hybrid cloud environments.",
+      ctaText: "Plan implementation →",
+      href: "/",
+    },
+    {
+      title: "Red Hat OpenShift AI",
+      description:
+        "Operationalize models and applications at scale using Kubernetes-based MLOps capabilities.",
+      ctaText: "Modernize MLOps →",
+      href: "/",
+    },
+    {
+      title: "Red Hat AI Inference Server",
+      description:
+        "Optimize model serving with fast, scalable, cost-efficient inference for production AI.",
+      ctaText: "Improve inference →",
+      href: "/",
+    },
+    {
+      title: "Red Hat Enterprise Linux AI",
+      description:
+        "Develop, test, and run generative AI models on a trusted enterprise Linux foundation.",
+      ctaText: "Deploy securely →",
+      href: "/",
     },
   ],
 };
