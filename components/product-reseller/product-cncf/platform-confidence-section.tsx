@@ -60,27 +60,27 @@ export default function ProductCncfPlatformConfidenceSection({
   return (
     <section className="relative overflow-hidden bg-[#050A17] font-lexend text-white">
       <div className="relative mx-auto max-w-[948px] px-6 py-5 sm:px-8 md:px-10 md:py-16 lg:max-w-[1220px] lg:px-14 lg:py-10">
-        <div className="grid gap-9 md:grid-cols-[minmax(0,1fr)_minmax(380px,420px)] md:items-start md:justify-between md:gap-8 lg:grid-cols-[minmax(0,460px)_minmax(380px,400px)] lg:gap-12 xl:grid-cols-[minmax(0,620px)_minmax(460px,1fr)] xl:gap-16">
+        <div className="grid gap-9 md:grid-cols-[minmax(0,1fr)_minmax(380px,340px)] md:items-start md:justify-between md:gap-8 lg:grid-cols-[minmax(0,460px)_minmax(380px,400px)] lg:gap-12 xl:grid-cols-[minmax(0,620px)_minmax(460px,1fr)] xl:gap-16">
           <div className="relative z-10">
-            <h2 className="mx-auto max-w-[230px] text-center text-[18px] font-semibold leading-[1.06] tracking-[-0.02em] sm:max-w-[280px] sm:text-[22px] md:mx-0 md:max-w-[340px] md:text-left md:text-[28px] lg:max-w-[430px] xl:max-w-[480px] lg:text-[42px]">
+            <h2 className="mx-auto max-w-[230px] text-center text-[18px] font-semibold leading-[1.06] tracking-[-0.02em] sm:max-w-[280px] sm:text-[22px] md:mx-0 md:max-w-[340px] md:text-left md:text-[28px] lg:max-w-[430px] xl:max-w-[480px] lg:text-[42px] xl:text-[48px]">
               Less tool chaos.
               <span className="text-[#83E9FF]"> More platform confidence.</span>
             </h2>
-            <p className="mt-5 hidden max-w-[360px] text-[13px] leading-[1.55] text-[#F3F7FF] sm:text-[14px] md:block md:text-[12px] lg:max-w-[430px] xl:max-w-[580px] lg:text-[16px]">
+            <p className="mt-5 hidden max-w-[360px] text-[13px] leading-[1.55] text-[#F3F7FF] sm:text-[14px] md:block md:text-[12px] lg:max-w-[430px] xl:max-w-[580px] lg:text-[16px] xl:text-[16px]">
               {content.description}
             </p>
 
             <div className="mt-5 hidden max-w-[500px] grid-cols-[2px_minmax(120px,140px)_minmax(160px,1fr)] items-center gap-3 sm:gap-5 md:grid md:max-w-[340px] md:grid-cols-[2px_120px_1fr] md:gap-4 lg:max-w-[430px] xl:max-w-[580px] lg:grid-cols-[2px_160px_1fr] xl:grid-cols-[2px_240px_1fr]">
-              <div className="h-[90px] w-[3px] bg-[#66E7FF] md:h-[100px] lg:h-[140px] xl:h-[160px]" />
-              <p className="text-[10px] leading-[1.35] text-[#E7F0FF] sm:text-[11px] md:text-[9px] lg:text-[12px]">
+              <div className="h-[90px] w-[3px] bg-[#66E7FF] md:h-[80px] lg:h-[110px] xl:h-[106px]" />
+              <p className="text-[10px] leading-[1.35] text-[#E7F0FF] sm:text-[11px] md:text-[9px] lg:text-[12px] xl:text-[14px]">
                 For organizations modernizing virtualization, HawkStack also operates a dedicated domain kubevirtstack.com focused on KubeVirt-led VM and container convergence.
               </p>
-              <div className="relative h-[100px] min-w-0 md:h-[100px] lg:h-[140px] xl:h-[160px]">
+              <div className="relative h-[100px] min-w-0 md:h-[100px] lg:h-[140px] xl:h-[140px]">
                 <Image
                   src="/images/products/cncf-platform-confidence.webp"
                   alt=""
                   fill
-                  className="object-contain object-center opacity-70 scale-122 transition group-hover:scale-[1.02]"
+                  className="object-contain object-center opacity-70 scale-132 transition group-hover:scale-[1.02]"
                   sizes="240px"
                   priority={false}
                 />
