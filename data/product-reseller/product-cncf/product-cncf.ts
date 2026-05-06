@@ -95,20 +95,26 @@ export const productCncfPageData: ProductCncfPageContent = {
       },
     ],
   },
-  cta: {
-    title: "Ready to make cloud native work for your business?",
+  platformConfidence: {
+    eyebrow: "More platform confidence.",
+    heading: "Less tool chaos. More platform confidence.",
     description:
-      "Start with a HawkStack CNCF readiness assessment and walk away with a practical roadmap for Kubernetes, automation, security, and observability.",
-    actions: [
+      "We help engineering teams choose the right CNCF-aligned building blocks, integrate them into enterprise workflows, and create a repeatable operating model for cloud native delivery.",
+    cards: [
       {
-        label: "Schedule a Consultation",
-        href: "/contact-us",
-        ariaLabel: "Schedule a CNCF consultation with HawkStack",
+        title: "Assess platform maturity",
+        description:
+          "Evaluate your current state and uncover gaps across people, process, and technology.",
       },
       {
-        label: "Visit HawkStack",
-        href: "/",
-        ariaLabel: "Visit the HawkStack home page",
+        title: "Engineer secure foundations",
+        description:
+          "Design resilient, compliant, and CNCF-aligned platform foundations that scale.",
+      },
+      {
+        title: "Operate, train, and scale",
+        description:
+          "Build operational readiness, capability, and support for growing cloud native platforms.",
       },
     ],
   },
