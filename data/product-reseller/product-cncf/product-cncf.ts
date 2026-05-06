@@ -95,4 +95,27 @@ export const productCncfPageData: ProductCncfPageContent = {
       },
     ],
   },
+  platformConfidence: {
+    eyebrow: "More platform confidence.",
+    heading: "Less tool chaos. More platform confidence.",
+    description:
+      "We help engineering teams choose the right CNCF-aligned building blocks, integrate them into enterprise workflows, and create a repeatable operating model for cloud native delivery.",
+    cards: [
+      {
+        title: "Assess platform maturity",
+        description:
+          "Evaluate your current state and uncover gaps across people, process, and technology.",
+      },
+      {
+        title: "Engineer secure foundations",
+        description:
+          "Design resilient, compliant, and CNCF-aligned platform foundations that scale.",
+      },
+      {
+        title: "Operate, train, and scale",
+        description:
+          "Build operational readiness, capability, and support for growing cloud native platforms.",
+      },
+    ],
+  },
 };
