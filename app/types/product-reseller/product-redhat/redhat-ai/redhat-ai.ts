@@ -54,3 +54,17 @@ export interface RedHatAIFoundationSectionData {
   description: string;
   cards: RedHatAIFoundationCard[];
 }
+
+// RedHatAIProductionSection types
+
+export interface RedHatAIProductionCard {
+  title: string;
+  description: string;
+}
+
+export interface RedHatAIProductionSectionData {
+  tag: string;
+  title: string;
+  description: string;
+  cards: RedHatAIProductionCard[];
+}

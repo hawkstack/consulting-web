@@ -10,6 +10,7 @@ import {
   redHatAICtaData,
   redHatAIFoundationData,
   redHatAIOverviewData,
+  redHatAIProductionData,
 } from "@/data/product-reseller/product-redhat/redhat-ai/redhat-ai";
 
 const page = () => {
@@ -19,7 +20,7 @@ const page = () => {
       <RedHatAIOverviewSection data={redHatAIOverviewData} />
       <RedHatAIFoundationSection data={redHatAIFoundationData} />
       <RedHatAICapabilitiesSection data={redHatAICapabilitiesData} />
-      <RedHatAIProductionSection />
+      <RedHatAIProductionSection data={redHatAIProductionData} />
       <RedHatAIStrategySection />
       <RedHatAICtaSection data={redHatAICtaData} />
     </div>
