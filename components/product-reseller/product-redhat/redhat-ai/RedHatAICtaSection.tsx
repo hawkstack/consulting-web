@@ -45,7 +45,7 @@ const RedHatAICtaSection = ({ data }: RedHatAICtaSectionProps) => {
                 max-w-2xl
                 text-[34px] font-semibold leading-[1.1]
                 text-white
-                md:text-[48px]
+                lg:text-[32px] xl:text-[48px]
               "
             >
               {data.title}
@@ -57,7 +57,7 @@ const RedHatAICtaSection = ({ data }: RedHatAICtaSectionProps) => {
                 mt-5 max-w-xl
                 text-sm leading-7
                 text-white/65
-                md:text-lg
+                text-sm xl:text-lg
               "
             >
               {data.description}
