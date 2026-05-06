@@ -45,6 +45,12 @@ export interface ProductCncfAction {
   ariaLabel: string;
 }
 
+export interface ProductCncfCtaContent {
+  title: string;
+  description: string;
+  actions: ProductCncfAction[];
+}
+
 export interface ProductCncfKubeVirtPromoContent {
   title: string;
   description: string;
