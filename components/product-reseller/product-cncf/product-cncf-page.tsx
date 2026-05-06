@@ -2,7 +2,7 @@ import type { ProductCncfPageContent } from "@/app/types/product-reseller/produc
 import ProductCncfHeroSection from "./herro-section";
 import ProductCncfKubeVirtPromoSection from "./kubevirt-promo-section";
 import ProductCncfOnePartnerSection from "./one-partner-section";
-import ProductCncfCtaSection from "./cta-section";
+import ProductCncfPlatformConfidenceSection from "./platform-confidence-section";
 
 type ProductCncfPageProps = {
   pageData: ProductCncfPageContent;
@@ -14,7 +14,7 @@ export default function ProductCncfPage({ pageData }: ProductCncfPageProps) {
       <ProductCncfHeroSection content={pageData.hero} />
       <ProductCncfOnePartnerSection content={pageData.onePartner} />
       <ProductCncfKubeVirtPromoSection content={pageData.kubeVirtPromo} />
-      <ProductCncfCtaSection content={pageData.cta} />
+      <ProductCncfPlatformConfidenceSection content={pageData.platformConfidence} />
     </>
   );
 }

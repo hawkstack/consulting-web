@@ -34,10 +34,21 @@ export interface ProductCncfKubeVirtCard {
   description: string;
 }
 
+export interface ProductCncfSectionCard {
+  title: string;
+  description: string;
+}
+
 export interface ProductCncfAction {
   label: string;
   href: string;
   ariaLabel: string;
+}
+
+export interface ProductCncfCtaContent {
+  title: string;
+  description: string;
+  actions: ProductCncfAction[];
 }
 
 export interface ProductCncfKubeVirtPromoContent {
@@ -47,15 +58,16 @@ export interface ProductCncfKubeVirtPromoContent {
   cards: ProductCncfKubeVirtCard[];
 }
 
-export interface ProductCncfCtaContent {
-  title: string;
+export interface ProductCncfPlatformConfidenceContent {
+  eyebrow: string;
+  heading: string;
   description: string;
-  actions: ProductCncfAction[];
+  cards: ProductCncfSectionCard[];
 }
 
 export interface ProductCncfPageContent {
   hero: ProductCncfHeroContent;
   onePartner: ProductCncfOnePartnerContent;
   kubeVirtPromo: ProductCncfKubeVirtPromoContent;
-  cta: ProductCncfCtaContent;
+  platformConfidence: ProductCncfPlatformConfidenceContent;
 }
