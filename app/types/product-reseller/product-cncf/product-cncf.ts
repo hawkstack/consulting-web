@@ -47,8 +47,15 @@ export interface ProductCncfKubeVirtPromoContent {
   cards: ProductCncfKubeVirtCard[];
 }
 
+export interface ProductCncfCtaContent {
+  title: string;
+  description: string;
+  actions: ProductCncfAction[];
+}
+
 export interface ProductCncfPageContent {
   hero: ProductCncfHeroContent;
   onePartner: ProductCncfOnePartnerContent;
   kubeVirtPromo: ProductCncfKubeVirtPromoContent;
+  cta: ProductCncfCtaContent;
 }

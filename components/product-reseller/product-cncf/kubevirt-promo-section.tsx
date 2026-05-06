@@ -25,7 +25,7 @@ export default function ProductCncfKubeVirtPromoSection({
                   key={action.label}
                   href={action.href}
                   aria-label={action.ariaLabel}
-                  className={`inline-flex min-h-8 items-center justify-center rounded-full border border-[#38DDF2] px-4 text-[8px] font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#38DDF2] md:min-h-9 md:px-5 md:text-[10px] lg:min-h-[42px] lg:px-6 lg:text-[16px] ${
+                  className={`inline-flex min-h-8 items-center justify-center rounded-full border border-[#38DDF2] px-4 text-[8px] font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#38DDF2] md:min-h-9 md:px-2 md:text-[10px] lg:min-h-[42px] lg:px-6 lg:text-[16px] ${
                     index === 0
                       ? "bg-[#42DCEB] text-[#03101B] hover:bg-[#29cada]"
                       : "bg-transparent text-[#16BBDA] hover:bg-white/55"

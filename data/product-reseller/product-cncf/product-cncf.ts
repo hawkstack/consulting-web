@@ -95,4 +95,21 @@ export const productCncfPageData: ProductCncfPageContent = {
       },
     ],
   },
+  cta: {
+    title: "Ready to make cloud native work for your business?",
+    description:
+      "Start with a HawkStack CNCF readiness assessment and walk away with a practical roadmap for Kubernetes, automation, security, and observability.",
+    actions: [
+      {
+        label: "Schedule a Consultation",
+        href: "/contact-us",
+        ariaLabel: "Schedule a CNCF consultation with HawkStack",
+      },
+      {
+        label: "Visit HawkStack",
+        href: "/",
+        ariaLabel: "Visit the HawkStack home page",
+      },
+    ],
+  },
 };
