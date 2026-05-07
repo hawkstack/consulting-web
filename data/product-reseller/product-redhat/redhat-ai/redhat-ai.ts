@@ -6,7 +6,12 @@ import {
   RedHatAIFoundationSectionData,
   RedHatAIOverviewData,
   RedHatAIProductionSectionData,
+  RedHatAIStrategySectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
+import AssessIcon from "@/components/icons/product-reseller/redhat-ai/AssessIcon";
+import ImplementIcon from "@/components/icons/product-reseller/redhat-ai/ImplementIcon";
+import OptimizeIcon from "@/components/icons/product-reseller/redhat-ai/OptimizeIcon";
 
 export const redHatAIOverviewData: RedHatAIOverviewData = {
   tag: "PLATFORM OVERVIEW",
@@ -156,6 +161,48 @@ export const redHatAIProductionData: RedHatAIProductionSectionData = {
       title: "AI modernization",
       description:
         "Move experiments into repeatable, governed, production-ready AI operations.",
+    },
+  ],
+};
+
+// RedHatAIStrategySection data
+
+export const redHatAIStrategyData: RedHatAIStrategySectionData = {
+  tag: "HAWKSTACK APPROACH",
+
+  heading: "From AI strategy to production delivery.",
+
+  description:
+    "We help you move from uncertainty to a working AI platform with a clear, structured delivery path.",
+
+  cards: [
+    {
+      id: 1,
+      title: "Assess",
+      description:
+        "Review your current infrastructure, data sources, AI goals, and security requirements.",
+      icon: AssessIcon,
+    },
+    {
+      id: 2,
+      title: "Architect",
+      description:
+        "Design the right Red Hat AI architecture for your workloads, teams, and deployment model.",
+      icon: ArchitectIcon,
+    },
+    {
+      id: 3,
+      title: "Implement",
+      description:
+        "Deploy the platform, configure integrations, build pipelines, and prepare production workloads.",
+      icon: ImplementIcon,
+    },
+    {
+      id: 4,
+      title: "Optimize",
+      description:
+        "Improve performance, reduce operational cost, and mature your AI governance model.",
+      icon: OptimizeIcon,
     },
   ],
 };
