@@ -1,4 +1,4 @@
-import { RedHatProductsSectionData } from "@/app/types/product-reseller/product-redhat/redhat";
+import { RedHatProductsSectionData } from "@/app/types/product-reseller/product-redhat/product-redhat";
 import Image from "next/image";
 
 interface Props {
