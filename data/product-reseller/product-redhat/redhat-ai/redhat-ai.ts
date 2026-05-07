@@ -2,7 +2,10 @@
 
 import {
   RedHatAICapabilitiesData,
+  RedHatAICtaData,
+  RedHatAIFoundationSectionData,
   RedHatAIOverviewData,
+  RedHatAIProductionSectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 
 export const redHatAIOverviewData: RedHatAIOverviewData = {
@@ -52,6 +55,107 @@ export const redHatAICapabilitiesData: RedHatAICapabilitiesData = {
       title: "Secure",
       description:
         "Enterprise-grade governance, control, and lifecycle support.",
+    },
+  ],
+};
+
+// RedHatAICtaSection data
+
+export const redHatAICtaData: RedHatAICtaData = {
+  tag: "START YOUR AI JOURNEY",
+  title: "Ready to build enterprise AI with Red Hat and HawkStack?",
+  description:
+    "Talk to our team about your AI use case, infrastructure, and deployment goals. We'll help you map the right solution.",
+  buttons: [
+    {
+      label: "Schedule a consultation",
+      href: "/contact",
+      variant: "primary",
+    },
+    {
+      label: "View products",
+      href: "/products",
+      variant: "secondary",
+    },
+  ],
+};
+
+// RedHatAIFoundationSection data
+
+export const redHatAIFoundationData: RedHatAIFoundationSectionData = {
+  tag: "RED HAT AI PORTFOLIO",
+  title: "Choose the right foundation for every AI workload.",
+  description:
+    "HawkStack helps you evaluate, implement, and optimize the Red Hat AI products that match your use case, infrastructure, and growth roadmap.",
+  cards: [
+    {
+      title: "Red Hat AI Enterprise",
+      description:
+        "Build, develop, and deploy AI-powered applications across hybrid cloud environments.",
+      ctaText: "Plan implementation →",
+      href: "/",
+    },
+    {
+      title: "Red Hat OpenShift AI",
+      description:
+        "Operationalize models and applications at scale using Kubernetes-based MLOps capabilities.",
+      ctaText: "Modernize MLOps →",
+      href: "/",
+    },
+    {
+      title: "Red Hat AI Inference Server",
+      description:
+        "Optimize model serving with fast, scalable, cost-efficient inference for production AI.",
+      ctaText: "Improve inference →",
+      href: "/",
+    },
+    {
+      title: "Red Hat Enterprise Linux AI",
+      description:
+        "Develop, test, and run generative AI models on a trusted enterprise Linux foundation.",
+      ctaText: "Deploy securely →",
+      href: "/",
+    },
+  ],
+};
+
+// RedHatAIProductionSection data
+
+export const redHatAIProductionData: RedHatAIProductionSectionData = {
+  tag: "USE CASES",
+  title: "Turn AI ideas into production systems.",
+  description:
+    "From pilots to enterprise rollouts, HawkStack helps you identify the right use cases, architecture, and delivery roadmap.",
+  cards: [
+    {
+      title: "Generative AI applications",
+      description:
+        "Launch copilots, assistants, content workflows, and knowledge search tools using your enterprise data.",
+    },
+    {
+      title: "AI inference at scale",
+      description:
+        "Improve performance and reduce serving costs with optimized model inference patterns.",
+    },
+    {
+      title: "Agentic automation",
+      description:
+        "Build intelligent workflows that connect AI models with business systems, APIs, and processes.",
+    },
+    {
+      title: "Predictive intelligence",
+      description:
+        "Use data science and machine learning to forecast outcomes, detect risks, and improve decisions.",
+    },
+    {
+      title: "Secure AI platforms",
+      description:
+        "Create controlled AI environments with governance, access control, monitoring, and compliance readiness.",
+    },
+    {
+      title: "AI modernization",
+      description:
+        "Move experiments into repeatable, governed, production-ready AI operations.",
     },
   ],
 };
