@@ -195,6 +195,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
       description:
         "Expand your AI capabilities with optimized models and  efficient inference on a platform built for agentic  workflows.",
       icon: "/images/product-seller/redhat-ai.webp",
+      href: "/product-reseller/redhat-ai",
       availableOn: [
         { name: "aws", logo: "/images/product-seller/aws.webp" },
         { name: "azure", logo: "/images/product-seller/azure.webp" },
@@ -207,6 +208,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
       description:
         "Support application deployments from on premise to the cloud to the edge in a flexible operating environment.",
       icon: "/images/product-seller/redhat-enterprise-linux.webp",
+      href: "/product-reseller/redhat-enterprise-linux",
       availableOn: [
         { name: "aws", logo: "/images/product-seller/aws.webp" },
         { name: "azure", logo: "/images/product-seller/azure.webp" },
