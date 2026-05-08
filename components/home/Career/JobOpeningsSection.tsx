@@ -13,6 +13,8 @@ type Job = {
   description: string;
   site: string | null;
   employment_type: string | null;
+  key_responsibilities?: string[];
+  requirements?: string[];
 };
 
 type JobsResponse = {
@@ -149,13 +151,52 @@ export default function JobOpeningsSection() {
                 className="border-t border-blue-500 pt-6 flex flex-col md:flex-row md:items-start md:justify-between gap-4"
               >
                 {/* Left Content */}
-                <div className="max-w-2xl">
+                <div className="w-full md:max-w-[78%]">
                   <h3 className="text-[#0048FF] font-semibold xl:text-xl lg:text-xl md:text-md text-lg">
                     {job.category}
                   </h3>
                   <p className="text-[#2F2F2F] font-normal md:font-medium xl:text-sm xl:text-base md:text-sm text-sm xl:w-[90%] md:mt-4 mt-1">
                     {job.description}
                   </p>
+
+                  {Boolean(
+                    job.key_responsibilities?.length ||
+                      job.requirements?.length
+                  ) && (
+                    <div className="grid gap-5 md:grid-cols-2 md:gap-10 mt-5 w-full">
+                      {job.key_responsibilities?.length ? (
+                        <div>
+                          <h4 className="text-[#0048FF] font-semibold xl:text-base md:text-sm text-sm">
+                            Key Responsibilities
+                          </h4>
+                          <ul className="mt-2 space-y-2 list-disc pl-5 text-[#2F2F2F] font-normal md:font-medium xl:text-sm md:text-sm text-sm">
+                            {job.key_responsibilities.map(
+                              (responsibility, index) => (
+                                <li key={index}>
+                                  {responsibility}
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      ) : null}
+
+                      {job.requirements?.length ? (
+                        <div>
+                          <h4 className="text-[#0048FF] font-semibold xl:text-base md:text-sm text-sm">
+                            Requirements
+                          </h4>
+                          <ul className="mt-2 space-y-2 list-disc pl-5 text-[#2F2F2F] font-normal md:font-medium xl:text-sm md:text-sm text-sm">
+                            {job.requirements.map(
+                              (requirement, index) => (
+                                <li key={index}>{requirement}</li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      ) : null}
+                    </div>
+                  )}
 
                   {/* Buttons */}
                   <div className="flex gap-3 mt-6">
