@@ -9,6 +9,7 @@ import {
   redHatAICapabilitiesData,
   redHatAICtaData,
   redHatAIFoundationData,
+  redHatAIHeroData,
   redHatAIOverviewData,
   redHatAIProductionData,
   redHatAIStrategyData,
@@ -17,7 +18,7 @@ import {
 const page = () => {
   return (
     <div>
-      <RedHatAIHeroSection />
+      <RedHatAIHeroSection data={redHatAIHeroData} />
       <RedHatAIOverviewSection data={redHatAIOverviewData} />
       <RedHatAIFoundationSection data={redHatAIFoundationData} />
       <RedHatAICapabilitiesSection data={redHatAICapabilitiesData} />

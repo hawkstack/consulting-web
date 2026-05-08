@@ -4,12 +4,14 @@ import {
   RedHatAICapabilitiesData,
   RedHatAICtaData,
   RedHatAIFoundationSectionData,
+  RedHatAIHeroData,
   RedHatAIOverviewData,
   RedHatAIProductionSectionData,
   RedHatAIStrategySectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
 import AssessIcon from "@/components/icons/product-reseller/redhat-ai/AssessIcon";
+import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";
 import ImplementIcon from "@/components/icons/product-reseller/redhat-ai/ImplementIcon";
 import OptimizeIcon from "@/components/icons/product-reseller/redhat-ai/OptimizeIcon";
 
@@ -203,6 +205,57 @@ export const redHatAIStrategyData: RedHatAIStrategySectionData = {
       description:
         "Improve performance, reduce operational cost, and mature your AI governance model.",
       icon: OptimizeIcon,
+    },
+  ],
+};
+
+// RedHatAIHeroSection data
+
+export const redHatAIHeroData: RedHatAIHeroData = {
+  heading: "Deliver enterprise AI with the",
+
+  highlightedText: "freedom",
+
+  description:
+    "HawkStack helps your teams design, deploy, and operationalize Red Hat AI across hybrid cloud, on-premise, and edge environments without locking your data, models, or infrastructure into one path.",
+
+  image: "/images/product-reseller/redhat/redhat-ai/hero-cube-image.webp",
+
+  mobileImage:
+    "/images/product-reseller/redhat/redhat-ai/mobile-hero-image.webp",
+
+  imageAlt: "Red Hat AI Hero Cube",
+
+  buttons: [
+    {
+      id: 1,
+      label: "Book a consultation",
+      link: "#",
+      variant: "primary",
+    },
+    {
+      id: 2,
+      label: "Explore Red Hat AI",
+      link: "#",
+      variant: "secondary",
+    },
+  ],
+
+  features: [
+    {
+      id: 1,
+      title: "Hybrid cloud ready",
+      icon: CheckIcon,
+    },
+    {
+      id: 2,
+      title: "Open source foundation",
+      icon: CheckIcon,
+    },
+    {
+      id: 3,
+      title: "Enterprise-grade control",
+      icon: CheckIcon,
     },
   ],
 };
