@@ -15,11 +15,11 @@ const page = () => {
     <div>
       <RedHatAIHeroSection />
       <RedHatAIOverviewSection data={redHatLinuxOverviewData} />
-      <RedHatAIFoundationSection />
+      {/* <RedHatAIFoundationSection /> */}
       <RedHatAICapabilitiesSection data={redHatLinuxCapabilitiesData} />
-      <RedHatAIProductionSection />
+      {/* <RedHatAIProductionSection /> */}
       <RedHatAIStrategySection />
-      <RedHatAICtaSection />
+      {/* <RedHatAICtaSection /> */}
     </div>
   );
 };
