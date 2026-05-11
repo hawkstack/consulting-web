@@ -8,10 +8,94 @@ import {
   RedHatAIProductionSectionData,
   RedHatAIStrategySectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+import { RedHatAnsibleHeroData } from "@/app/types/product-reseller/product-redhat/redhat-ansible/redhat-ansible";
 import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
 import AssessIcon from "@/components/icons/product-reseller/redhat-ai/AssessIcon";
 import ImplementIcon from "@/components/icons/product-reseller/redhat-ai/ImplementIcon";
 import OptimizeIcon from "@/components/icons/product-reseller/redhat-ai/OptimizeIcon";
+import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";
+
+// RedHatAnsibleHeroSection data
+
+export const redHatAnsibleHeroData: RedHatAnsibleHeroData = {
+  badge: "Red Hat Ansible Automation Platform by HawkStack",
+
+  heading: {
+    title: "Scale automation across your",
+    highlight: "entire enterprise.",
+  },
+
+  description:
+    "HawkStack helps organizations implement Red Hat Ansible Automation Platform to orchestrate infrastructure, applications, networks, security operations, cloud environments, and day-to-day IT workflows from one trusted automation foundation.",
+
+  primaryButtonText: "Book a consultation",
+
+  secondaryButtonText: "Explore automation",
+
+  features: [
+    {
+      id: 1,
+      text: "Enterprise-wide automation",
+      icon: CheckIcon,
+    },
+    {
+      id: 2,
+      text: "Governed workflows",
+      icon: CheckIcon,
+    },
+    {
+      id: 3,
+      text: "Hybrid cloud ready",
+      icon: CheckIcon,
+    },
+  ],
+
+  statusList: [
+    {
+      id: 1,
+      title: "Inventory synced",
+      status: "READY",
+    },
+    {
+      id: 2,
+      title: "Playbook approved",
+      status: "GOVERNED",
+    },
+    {
+      id: 3,
+      title: "Policy triggered",
+      status: "EVENT",
+    },
+    {
+      id: 4,
+      title: "Automation executed",
+      status: "SUCCESS",
+    },
+  ],
+
+  capabilityCards: [
+    {
+      id: 1,
+      title: "AIOps",
+      subtitle: "Automated response",
+    },
+    {
+      id: 2,
+      title: "VMs",
+      subtitle: "Lifecycle automation",
+    },
+    {
+      id: 3,
+      title: "Cloud",
+      subtitle: "Provisioning",
+    },
+    {
+      id: 4,
+      title: "Security",
+      subtitle: "Policy automation",
+    },
+  ],
+};
 
 export const redHatAnsibleOverviewData: RedHatAIOverviewData = {
   tag: "PLATFORM OVERVIEW",
