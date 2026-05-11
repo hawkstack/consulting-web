@@ -190,6 +190,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
   products: [
     {
       title: "Red Hat AI",
+      link: "/product-reseller/redhat-ai",
       description:
         "Expand your AI capabilities with optimized models and  efficient inference on a platform built for agentic  workflows.",
       icon: "/images/product-seller/redhat-ai.webp",
@@ -202,6 +203,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
     },
     {
       title: "Red Hat Enterprise Linux",
+      link: "/coming-soon",
       description:
         "Support application deployments from on premise to the cloud to the edge in a flexible operating environment.",
       icon: "/images/product-seller/redhat-enterprise-linux.webp",
@@ -215,6 +217,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
     },
     {
       title: "Red Hat OpenShift",
+      link: "/coming-soon",
       description:
         "Quickly build and deploy applications at scale, while you modernize the ones you already have.",
       icon: "/images/product-seller/redhat-openshift.webp",
@@ -228,6 +231,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
     },
     {
       title: "Red Hat Ansible Automation Platform",
+      link: "/coming-soon",
       description:
         "Create, manage, and dynamically scale automation across your entire enterprise.",
       icon: "/images/product-seller/redhat-ansible.webp",

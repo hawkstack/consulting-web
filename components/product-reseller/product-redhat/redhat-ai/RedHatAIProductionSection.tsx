@@ -36,10 +36,9 @@ const ProductionCard = ({ card }: { card: RedHatAIProductionCard }) => {
       <p
         className="
           mt-4
-          text-[12px]
           leading-6
           text-white/60
-          md:text-[12px]
+          text-[12px]
           lg:text-[14px]
           xl:text-base
         "
