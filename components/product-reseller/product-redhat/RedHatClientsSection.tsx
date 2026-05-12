@@ -1,5 +1,8 @@
 import Image from "next/image";
-import { RedHatClientsSectionData } from "@/app/types/product-reseller/product-redhat/redhat";
+import {
+  ClientLogo,
+  RedHatClientsSectionData,
+} from "@/app/types/product-reseller/product-redhat/product-redhat";
 
 interface Props {
   data: RedHatClientsSectionData;
@@ -14,7 +17,7 @@ const RedHatClientsSection = ({ data }: Props) => {
   const row2 = clients.slice(chunkSize, chunkSize * 2);
   const row3 = clients.slice(chunkSize * 2);
 
-  const renderRow = (logos: any[], reverse = false, keyPrefix = "") => (
+  const renderRow = (logos: ClientLogo[], reverse = false, keyPrefix = "") => (
     <div className="w-full overflow-hidden">
       <div
         className={`rh-clients-track ${reverse ? "rh-clients-track-reverse" : ""}`}

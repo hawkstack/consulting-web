@@ -1,4 +1,4 @@
-import { RedHatCTAData } from "@/app/types/product-reseller/product-redhat/redhat";
+import { RedHatCTAData } from "@/app/types/product-reseller/product-redhat/product-redhat";
 
 interface Props {
   data: RedHatCTAData;

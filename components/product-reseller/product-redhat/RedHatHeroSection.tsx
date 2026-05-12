@@ -1,5 +1,5 @@
 "use client";
-import { RedHatHeroData } from "@/app/types/product-reseller/product-redhat/redhat";
+import { RedHatHeroData } from "@/app/types/product-reseller/product-redhat/product-redhat";
 import Image from "next/image";
 
 interface Props {
