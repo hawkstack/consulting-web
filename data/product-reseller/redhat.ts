@@ -217,7 +217,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
     },
     {
       title: "Red Hat OpenShift",
-      link: "/coming-soon",
+      link: "/product-reseller/redhat-openshift",
       description:
         "Quickly build and deploy applications at scale, while you modernize the ones you already have.",
       icon: "/images/product-seller/redhat-openshift.webp",
