@@ -34,7 +34,7 @@ const FoundationCard = ({ card }: { card: RedHatAIFoundationCard }) => {
 
       <p
         className="
-          mt-4 xl:h-[80px] w-[280px] xl:w-full
+          mt-4 xl:h-[100px] w-[280px] xl:w-full
           text-xs xl:text-base
           leading-6
           text-[#676767] 
