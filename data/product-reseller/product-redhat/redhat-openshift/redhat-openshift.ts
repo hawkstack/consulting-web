@@ -18,7 +18,7 @@ import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";
 // RedHatOpenShiftHeroSection data
 
 export const redHatOpenShiftHeroData: RedHatAnsibleHeroData = {
-  badge: "Red Hat Ansible Automation Platform by HawkStack",
+  badge: "Red Hat OpenShift by HawkStack",
 
   heading: {
     title: "Build, modernize, and deploy apps at",
@@ -294,4 +294,3 @@ export const redHatOpenShiftCtaData: RedHatAICtaData = {
     },
   ],
 };
-
