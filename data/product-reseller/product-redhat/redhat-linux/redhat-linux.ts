@@ -1,6 +1,7 @@
 import {
   RedHatAICapabilitiesData,
   RedHatAICtaData,
+  RedHatAIFoundationSectionData,
   RedHatAIHeroData,
   RedHatAIOverviewData,
   RedHatAIProductionSectionData,
@@ -199,6 +200,43 @@ export const redHatLinuxProductionData: RedHatAIProductionSectionData = {
       title: "AI and data workloads",
       description:
         "Prepare secure, scalable infrastructure for analytics, machine learning, and enterprise AI platforms.",
+    },
+  ],
+};
+
+export const redHatLinuxFoundationData: RedHatAIFoundationSectionData = {
+  tag: "CORE CAPABILITIES",
+  title: "Everything your enterprise Linux platform needs to scale.",
+  description:
+    "From security and automation to containers and hybrid cloud, HawkStack helps you implement RHEL in a way that supports both current workloads and future growth.",
+  cards: [
+    {
+      title: "Enterprise security",
+      description:
+        "Strengthen systems with SELinux, security profiles, compliance tooling, vulnerability management, and controlled access.",
+      ctaText: "Improve security ->",
+      href: "#",
+    },
+    {
+      title: "Hybrid cloud consistency",
+      description:
+        "Run applications across bare metal, virtual machines, private cloud, and public cloud using one trusted Linux foundation.",
+      ctaText: "Plan hybrid cloud ->",
+      href: "#",
+    },
+    {
+      title: "Container readiness",
+      description:
+        "Build and operate modern applications with container tools such as Podman, Buildah, and cloud-native workflows.",
+      ctaText: "Modernize apps ->",
+      href: "#",
+    },
+    {
+      title: "Lifecycle management",
+      description:
+        "Simplify patching, updates, monitoring, system configuration, and long-term platform maintenance.",
+      ctaText: "Manage lifecycle ->",
+      href: "#",
     },
   ],
 };
