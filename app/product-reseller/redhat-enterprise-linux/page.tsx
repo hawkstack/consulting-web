@@ -1,11 +1,15 @@
 import RedHatAICapabilitiesSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAICapabilitiesSection";
+import RedHatAICtaSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAICtaSection";
 import RedHatAIHeroSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIHeroSection";
 import RedHatAIOverviewSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIOverviewSection";
+import RedHatAIProductionSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIProductionSection";
 import RedHatAIStrategySection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIStrategySection";
 import {
   redHatLinuxCapabilitiesData,
+  redHatLinuxCtaData,
   redHatLinuxHeroData,
   redHatLinuxOverviewData,
+  redHatLinuxProductionData,
   redHatLinuxStrategyData,
 } from "@/data/product-reseller/product-redhat/redhat-linux/redhat-linux";
 
@@ -16,9 +20,9 @@ const page = () => {
       <RedHatAIOverviewSection data={redHatLinuxOverviewData} />
       {/* <RedHatAIFoundationSection /> */}
       <RedHatAICapabilitiesSection data={redHatLinuxCapabilitiesData} />
-      {/* <RedHatAIProductionSection /> */}
+      <RedHatAIProductionSection data={redHatLinuxProductionData} />
       <RedHatAIStrategySection data={redHatLinuxStrategyData} />
-      {/* <RedHatAICtaSection /> */}
+      <RedHatAICtaSection data={redHatLinuxCtaData} />
     </div>
   );
 };

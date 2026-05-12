@@ -8,7 +8,10 @@ const RedHatAICapabilitiesSection = ({ data }: Props) => {
   const { cards } = data;
 
   return (
-    <section className="w-full bg-gradient-to-r from-[#EE0000] via-[#C80000] to-[#5B0000] py-12 md:py-16 lg:py-20">
+    <section
+      id="redhat-linux-capabilities"
+      className="w-full bg-gradient-to-r from-[#EE0000] via-[#C80000] to-[#5B0000] py-12 md:py-16 lg:py-20"
+    >
       <div className="w-[270px] md:w-[700px] lg:w-[920px] xl:w-[1160px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
           {cards.map((card) => (

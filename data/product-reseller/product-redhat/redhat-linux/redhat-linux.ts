@@ -1,7 +1,9 @@
 import {
   RedHatAICapabilitiesData,
+  RedHatAICtaData,
   RedHatAIHeroData,
   RedHatAIOverviewData,
+  RedHatAIProductionSectionData,
   RedHatAIStrategySectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
@@ -104,37 +106,99 @@ export const redHatLinuxCapabilitiesData: RedHatAICapabilitiesData = {
 
 export const redHatLinuxStrategyData: RedHatAIStrategySectionData = {
   tag: "HAWKSTACK APPROACH",
-  heading: "From Linux planning to production operations.",
+  heading: "Deploy RHEL with clarity, control, and confidence.",
   description:
-    "We help you establish a secure, repeatable Red Hat Enterprise Linux operating model that scales with your infrastructure.",
+    "We help you plan, migrate, implement, and optimize RHEL environments with a structured delivery model.",
   cards: [
     {
       id: 1,
       title: "Assess",
       description:
-        "Review workloads, operating standards, support needs, and migration priorities.",
+        "Review your current OS estate, workloads, security posture, and migration priorities.",
       icon: AssessIcon,
     },
     {
       id: 2,
-      title: "Architect",
+      title: "Design",
       description:
-        "Design the target Linux platform, security baseline, and hybrid deployment model.",
+        "Create the right RHEL architecture across cloud, on-premise, containers, and edge environments.",
       icon: ArchitectIcon,
     },
     {
       id: 3,
-      title: "Implement",
+      title: "Deploy",
       description:
-        "Configure systems, automation, patching, and operational handoff for production use.",
+        "Implement RHEL, configure policies, migrate workloads, and standardize operating procedures.",
       icon: ImplementIcon,
     },
     {
       id: 4,
       title: "Optimize",
       description:
-        "Improve consistency, reduce manual work, and strengthen lifecycle governance.",
+        "Improve security, performance, patching, automation, and long-term platform governance.",
       icon: OptimizeIcon,
+    },
+  ],
+};
+
+// RedHatAICtaSection data
+
+export const redHatLinuxCtaData: RedHatAICtaData = {
+  tag: "MODERNIZE YOUR LINUX PLATFORM",
+  title: "Ready to build on Red Hat Enterprise Linux with HawkStack?",
+  description:
+    "Talk to our team about your infrastructure goals, migration roadmap, and enterprise Linux requirements. We'll help you design the right path forward.",
+  buttons: [
+    {
+      label: "Schedule a consultation",
+      href: "/contact-us",
+      variant: "primary",
+    },
+    {
+      label: "View capabilities",
+      href: "#redhat-linux-capabilities",
+      variant: "secondary",
+    },
+  ],
+};
+
+// RedHatAIProductionSection data
+
+export const redHatLinuxProductionData: RedHatAIProductionSectionData = {
+  tag: "USE CASES",
+  title: "Power the workloads your business depends on.",
+  description:
+    "HawkStack helps you use RHEL as the foundation for enterprise applications, modernization programs, and cloud-ready infrastructure.",
+  cards: [
+    {
+      title: "Enterprise application hosting",
+      description:
+        "Run databases, middleware, business apps, and backend services on a trusted enterprise Linux platform.",
+    },
+    {
+      title: "Cloud migration",
+      description:
+        "Create a consistent operating environment as you move workloads to AWS, Azure, Google Cloud, or private cloud.",
+    },
+    {
+      title: "DevOps and automation",
+      description:
+        "Standardize provisioning, configuration, patching, and deployment workflows across IT teams.",
+    },
+    {
+      title: "Containerized workloads",
+      description:
+        "Support modern application delivery with containers, Kubernetes-aligned tooling, and OpenShift-ready foundations.",
+    },
+    {
+      title: "Edge infrastructure",
+      description:
+        "Extend reliable Linux operations to distributed locations, retail sites, factories, and remote environments.",
+    },
+    {
+      title: "AI and data workloads",
+      description:
+        "Prepare secure, scalable infrastructure for analytics, machine learning, and enterprise AI platforms.",
     },
   ],
 };
