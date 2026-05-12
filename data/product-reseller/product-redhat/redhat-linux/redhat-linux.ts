@@ -10,17 +10,18 @@ import {
 import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
 import AssessIcon from "@/components/icons/product-reseller/redhat-ai/AssessIcon";
 import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";
+
 import ImplementIcon from "@/components/icons/product-reseller/redhat-ai/ImplementIcon";
 import OptimizeIcon from "@/components/icons/product-reseller/redhat-ai/OptimizeIcon";
 
 export const redHatLinuxHeroData: RedHatAIHeroData = {
-  heading: "Run enterprise workloads on the",
-  highlightedText: "Linux",
+  heading: "The enterprise Linux foundation for ",
+  highlightedText: "hybrid cloud",
   description:
-    "HawkStack helps teams standardize, secure, and operate Red Hat Enterprise Linux across data center, cloud, and edge environments with a practical delivery roadmap.",
-  image: "/images/product-reseller/redhat-enterprise-linux.webp",
-  mobileImage: "/images/product-reseller/redhat-enterprise-linux.webp",
-  imageAlt: "Red Hat Enterprise Linux platform graphic",
+    "HawkStack helps organizations deploy, manage, and optimize Red Hat Enterprise Linux across data centers, public cloud, edge, and mission-critical enterprise environments.",
+  image: "/images/product-reseller/redhat/redhat-linux/container.webp",
+  mobileImage: "/images/product-reseller/redhat/redhat-linux/container.webp",
+  imageAlt: "Red Hat Enterprise Linux foundation diagram",
   buttons: [
     {
       id: 1,
@@ -30,29 +31,30 @@ export const redHatLinuxHeroData: RedHatAIHeroData = {
     },
     {
       id: 2,
-      label: "Explore Linux services",
-      link: "#",
+      label: "Explore capabilities",
+      link: "#redhat-linux-capabilities",
       variant: "secondary",
     },
   ],
   features: [
     {
       id: 1,
-      title: "Hybrid cloud ready",
+      title: "Secure by design",
       icon: CheckIcon,
     },
     {
       id: 2,
-      title: "Enterprise lifecycle support",
+      title: "Cloud-ready",
       icon: CheckIcon,
     },
     {
       id: 3,
-      title: "Security-focused operations",
+      title: "Built for critical workloads",
       icon: CheckIcon,
     },
   ],
 };
+
 
 export const redHatLinuxOverviewData: RedHatAIOverviewData = {
   tag: "PLATFORM OVERVIEW",
@@ -204,39 +206,39 @@ export const redHatLinuxProductionData: RedHatAIProductionSectionData = {
   ],
 };
 
-export const redHatLinuxFoundationData: RedHatAIFoundationSectionData = {
-  tag: "CORE CAPABILITIES",
-  title: "Everything your enterprise Linux platform needs to scale.",
+export const redHatAIFoundationData: RedHatAIFoundationSectionData = {
+  tag: "RED HAT AI PORTFOLIO",
+  title: "Choose the right foundation for every AI workload.",
   description:
-    "From security and automation to containers and hybrid cloud, HawkStack helps you implement RHEL in a way that supports both current workloads and future growth.",
+    "HawkStack helps you evaluate, implement, and optimize the Red Hat AI products that match your use case, infrastructure, and growth roadmap.",
   cards: [
     {
-      title: "Enterprise security",
+      title: "Red Hat AI Enterprise",
       description:
-        "Strengthen systems with SELinux, security profiles, compliance tooling, vulnerability management, and controlled access.",
-      ctaText: "Improve security ->",
-      href: "#",
+        "Build, develop, and deploy AI-powered applications across hybrid cloud environments.",
+      ctaText: "Plan implementation →",
+      href: "/",
     },
     {
-      title: "Hybrid cloud consistency",
+      title: "Red Hat OpenShift AI",
       description:
-        "Run applications across bare metal, virtual machines, private cloud, and public cloud using one trusted Linux foundation.",
-      ctaText: "Plan hybrid cloud ->",
-      href: "#",
+        "Operationalize models and applications at scale using Kubernetes-based MLOps capabilities.",
+      ctaText: "Modernize MLOps →",
+      href: "/",
     },
     {
-      title: "Container readiness",
+      title: "Red Hat AI Inference Server",
       description:
-        "Build and operate modern applications with container tools such as Podman, Buildah, and cloud-native workflows.",
-      ctaText: "Modernize apps ->",
-      href: "#",
+        "Optimize model serving with fast, scalable, cost-efficient inference for production AI.",
+      ctaText: "Improve inference →",
+      href: "/",
     },
     {
-      title: "Lifecycle management",
+      title: "Red Hat Enterprise Linux AI",
       description:
-        "Simplify patching, updates, monitoring, system configuration, and long-term platform maintenance.",
-      ctaText: "Manage lifecycle ->",
-      href: "#",
+        "Develop, test, and run generative AI models on a trusted enterprise Linux foundation.",
+      ctaText: "Deploy securely →",
+      href: "/",
     },
   ],
 };

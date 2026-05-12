@@ -6,9 +6,9 @@ import RedHatAIOverviewSection from "@/components/product-reseller/product-redha
 import RedHatAIProductionSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIProductionSection";
 import RedHatAIStrategySection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIStrategySection";
 import {
+  redHatAIFoundationData,
   redHatLinuxCapabilitiesData,
   redHatLinuxCtaData,
-  redHatLinuxFoundationData,
   redHatLinuxHeroData,
   redHatLinuxOverviewData,
   redHatLinuxProductionData,
@@ -20,7 +20,7 @@ const page = () => {
     <div>
       <RedHatAIHeroSection data={redHatLinuxHeroData} />
       <RedHatAIOverviewSection data={redHatLinuxOverviewData} />
-      <RedHatAIFoundationSection data={redHatLinuxFoundationData} />
+      <RedHatAIFoundationSection data={redHatAIFoundationData} />
       <RedHatAICapabilitiesSection data={redHatLinuxCapabilitiesData} />
       <RedHatAIProductionSection data={redHatLinuxProductionData} />
       <RedHatAIStrategySection data={redHatLinuxStrategyData} />
