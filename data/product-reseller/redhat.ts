@@ -217,11 +217,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
     },
     {
       title: "Red Hat OpenShift",
-<<<<<<< HEAD
-      link: "/coming-soon",
-=======
       link: "/product-reseller/redhat-openshift",
->>>>>>> f6e3dc8cc53f6373c4852be5108dde95b25766eb
       description:
         "Quickly build and deploy applications at scale, while you modernize the ones you already have.",
       icon: "/images/product-reseller/redhat-openshift.webp",
@@ -235,11 +231,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
     },
     {
       title: "Red Hat Ansible Automation Platform",
-<<<<<<< HEAD
-      link: "/coming-soon",
-=======
       link: "/product-reseller/redhat-ansible-automation",
->>>>>>> f6e3dc8cc53f6373c4852be5108dde95b25766eb
       description:
         "Create, manage, and dynamically scale automation across your entire enterprise.",
       icon: "/images/product-reseller/redhat-ansible.webp",
