@@ -1,14 +1,6 @@
 import "./globals.css";
-import { Lexend_Deca } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-
-const lexendDeca = Lexend_Deca({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-  variable: "--font-lexend-deca",
-});
 
 export default function RootLayout({
   children,
@@ -17,8 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${lexendDeca.variable} min-h-screen bg-white text-slate-900 antialiased`}>
+      <body className="min-h-screen bg-white text-slate-900 antialiased font-lexend">
         <Header />
         <main>{children}</main>
         <Footer />
