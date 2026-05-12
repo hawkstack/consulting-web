@@ -17,6 +17,8 @@ import OptimizeIcon from "@/components/icons/product-reseller/redhat-ai/Optimize
 export const redHatLinuxHeroData: RedHatAIHeroData = {
   heading: "The enterprise Linux foundation for ",
   highlightedText: "hybrid cloud",
+  titleSuffix: "",
+  variant: "linux",
   description:
     "HawkStack helps organizations deploy, manage, and optimize Red Hat Enterprise Linux across data centers, public cloud, edge, and mission-critical enterprise environments.",
   image: "/images/product-reseller/redhat/redhat-linux/container.webp",
