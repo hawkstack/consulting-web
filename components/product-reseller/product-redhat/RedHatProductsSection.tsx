@@ -96,6 +96,7 @@ const RedHatProductsSection = ({ data }: Props) => {
                   </p>
 
                   {/* BUTTON */}
+<<<<<<< HEAD:components/product-reseller/product-redhat/RedHatProductsSection.tsx
                   {item.href ? (
                     <Link
                       href={item.href}
@@ -108,6 +109,14 @@ const RedHatProductsSection = ({ data }: Props) => {
                       Explore product →
                     </button>
                   )}
+=======
+                  <Link
+                    href={item.link}
+                    className="inline-block border border-[#EE0000] text-sm px-5 py-1 transition hover:bg-[#EE0000]"
+                  >
+                    Explore product →
+                  </Link>
+>>>>>>> 6547cfa5090522e709aa8a55b076f5bc235757e0:components/product-reseller/redhat/RedHatProductsSection.tsx
 
                   {/* AVAILABLE ON */}
                   <div className="w-[156px] h-[1px] bg-[#FFFFFF29] my-3 xl:my-2"></div>
