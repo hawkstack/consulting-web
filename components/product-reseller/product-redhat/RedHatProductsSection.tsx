@@ -1,5 +1,6 @@
 import { RedHatProductsSectionData } from "@/app/types/product-reseller/product-redhat/product-redhat";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   data: RedHatProductsSectionData;
@@ -95,9 +96,12 @@ const RedHatProductsSection = ({ data }: Props) => {
                   </p>
 
                   {/* BUTTON */}
-                  <button className="border border-[#EE0000] text-sm px-5 py-1 transition">
+                  <Link
+                    href={item.link}
+                    className="inline-block border border-[#EE0000] text-sm px-5 py-1 transition hover:bg-[#EE0000]"
+                  >
                     Explore product →
-                  </button>
+                  </Link>
 
                   {/* AVAILABLE ON */}
                   <div className="w-[156px] h-[1px] bg-[#FFFFFF29] my-3 xl:my-2"></div>
