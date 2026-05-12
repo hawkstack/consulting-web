@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --font-lexend-deca: "Lexend Deca", "Segoe UI", Arial, sans-serif;
+  --font-lexend: "Lexend", "Segoe UI", Arial, sans-serif;
 }
 
 /* Font utility */
 .font-lexend {
-  font-family: var(--font-lexend-deca), sans-serif;
+  font-family: var(--font-lexend), sans-serif;
 }
 
 /* Improve Figma-like rendering */
@@ -22,11 +22,6 @@ body {
   background-repeat: no-repeat;
   height: 574px;
   width: 100%; /* adjust as needed */
-}
-
-/* Font utility */
-.font-lexend {
-  font-family: var(--font-lexend-deca), sans-serif;
 }
 
 /* carousel css start */
