@@ -17,11 +17,11 @@ const RedHatAIOverviewSection = ({ data }: Props) => {
               {tag}
             </p>
 
-            <h2 className="text-[22px] md:text-3xl lg:text-[36px] xl:text-[48px] font-bold text-[#111] leading-tight mb-5 md:max-w-[250px] lg:max-w-[420px] text-center md:text-left">
+            <h2 className="text-[22px] md:text-3xl lg:text-[36px] xl:text-[48px] font-bold text-[#111] leading-tight mb-5 md:max-w-[250px] lg:max-w-[420px] xl:max-w-[530px] text-center md:text-left">
               {heading}
             </h2>
 
-            <p className="text-gray-600 text-xs md:text-sm lg:text-lg leading-relaxed md:w-xs lg:w-md hidden md:block">
+            <p className="text-gray-600 text-xs md:text-sm lg:text-lg leading-relaxed md:w-xs lg:w-md xl:w-lg hidden md:block">
               {description}
             </p>
           </div>

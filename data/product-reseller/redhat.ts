@@ -231,7 +231,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
     },
     {
       title: "Red Hat Ansible Automation Platform",
-      link: "/coming-soon",
+      link: "/product-reseller/redhat-ansible-automation",
       description:
         "Create, manage, and dynamically scale automation across your entire enterprise.",
       icon: "/images/product-seller/redhat-ansible.webp",
