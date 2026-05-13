@@ -28,8 +28,9 @@ export function Header(): JSX.Element {
     <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F] font-lexend">
       <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[90px] px-4 md:px-8 lg:px-10  xl:px-24 flex items-center">
         {/* LOGO */}
-        <div
-          className="
+        <Link href="/" className="cursor-default">
+          <div
+            className="
           w-[85.96px] h-[28.28px]
           md:w-[120px] md:h-[36px]
           lg:w-[152px] lg:h-[42px]
@@ -41,16 +42,17 @@ export function Header(): JSX.Element {
           border border-white bg-white
           flex items-center justify-center
         "
-        >
-          <Image
-            src="/images/hawkstack-logo.webp"
-            alt="HawkStack Logo"
-            width={170}
-            height={40}
-            priority
-            className="object-contain"
-          />
-        </div>
+          >
+            <Image
+              src="/images/hawkstack-logo.webp"
+              alt="HawkStack Logo"
+              width={170}
+              height={40}
+              priority
+              className="object-contain"
+            />
+          </div>
+        </Link>
 
         {/* DESKTOP MENU */}
         <ul className="ml-auto hidden lg:flex items-center gap-14">
@@ -124,31 +126,29 @@ export function Header(): JSX.Element {
       {mobileOpen && (
         <div className="lg:hidden w-full bg-[#0B2458] px-6 pb-6">
           <ul className="flex flex-col gap-6 pt-6">
-            {["Home", "What we Offer ?", "Services", "Company"].map(
-              (item) => {
-                const isRedirectToGetStarted =
-                  item === "What we Offer ?" ||
-                  item === "Services" ||
-                  item === "Company";
-                return (
-                  <li key={item}>
-                    <Link
-                      href={
-                        item === "Home"
-                          ? "/"
-                          : isRedirectToGetStarted
-                            ? "/get-started"
-                            : `/${item.toLowerCase()}`
-                      }
-                      onClick={() => setMobileOpen(false)}
-                      className="text-white text-[16px]"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                );
-              },
-            )}
+            {["Home", "What we Offer ?", "Services", "Company"].map((item) => {
+              const isRedirectToGetStarted =
+                item === "What we Offer ?" ||
+                item === "Services" ||
+                item === "Company";
+              return (
+                <li key={item}>
+                  <Link
+                    href={
+                      item === "Home"
+                        ? "/"
+                        : isRedirectToGetStarted
+                          ? "/get-started"
+                          : `/${item.toLowerCase()}`
+                    }
+                    onClick={() => setMobileOpen(false)}
+                    className="text-white text-[16px]"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <a

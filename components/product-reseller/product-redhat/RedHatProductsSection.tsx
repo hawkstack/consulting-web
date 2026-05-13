@@ -135,12 +135,18 @@ const RedHatProductsSection = ({ data }: Props) => {
 
         {/* BOTTOM BUTTON */}
         <div className="flex justify-center mt-10">
+<<<<<<< HEAD
           <Link
             href="/product-reseller/redhat-application-services"
             className="border border-[#EE0000] px-6 py-3 text-sm transition hover:bg-[#EE0000]"
           >
             See all products -&gt;
           </Link>
+=======
+          <button className="border border-[#EE0000] px-6 py-3 text-sm transition">
+            See all products -&gt;
+          </button>
+>>>>>>> 84b9c7cb62e1c3eb80644673f838611aee705ec1
         </div>
       </div>
     </section>
