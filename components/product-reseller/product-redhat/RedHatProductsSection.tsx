@@ -96,13 +96,24 @@ const RedHatProductsSection = ({ data }: Props) => {
                   </p>
 
                   {/* BUTTON */}
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      className="inline-block border border-[#EE0000] text-sm px-5 py-1 transition"
+                    >
+                      Explore product →
+                    </Link>
+                  ) : (
+                    <button className="border border-[#EE0000] text-sm px-5 py-1 transition">
+                      Explore product →
+                    </button>
+                  )}
                   <Link
                     href={item.link}
                     className="inline-block border border-[#EE0000] text-sm px-5 py-1 transition hover:bg-[#EE0000]"
                   >
                     Explore product →
                   </Link>
-
                   {/* AVAILABLE ON */}
                   <div className="w-[156px] h-[1px] bg-[#FFFFFF29] my-3 xl:my-2"></div>
 
