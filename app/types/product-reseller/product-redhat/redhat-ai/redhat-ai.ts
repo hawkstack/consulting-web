@@ -103,6 +103,8 @@ export interface RedHatAIHeroButton {
 export interface RedHatAIHeroData {
   heading: string;
   highlightedText: string;
+  titleSuffix?: string;
+  variant?: "default" | "linux";
   description: string;
   image: string;
   mobileImage: string;

@@ -11,6 +11,8 @@ const RedHatAIHeroSection = ({ data }: Props) => {
   const {
     heading,
     highlightedText,
+    titleSuffix = "to build anywhere.",
+    variant = "default",
     description,
     image,
     imageAlt,
@@ -18,6 +20,7 @@ const RedHatAIHeroSection = ({ data }: Props) => {
     features,
     mobileImage,
   } = data;
+  const isLinuxHero = variant === "linux";
 
   return (
     <section className="relative overflow-hidden bg-black">
@@ -28,10 +31,14 @@ const RedHatAIHeroSection = ({ data }: Props) => {
         <div className="flex flex-col-reverse items-center gap-6 md:flex-row lg:justify-between md:gap-10">
           {/* left */}
           <div className="w-full text-center lg:max-w-[780px] md:text-left md:mt-4">
-            <h1 className="text-[22px] font-bold leading-tight text-white md:text-[28px] lg:text-[30px] xl:text-[42px]">
+            <h1
+              className={`text-[22px] font-bold leading-tight text-white md:text-[28px] lg:text-[30px] xl:text-[42px] ${
+                isLinuxHero ? "md:w-[50%]" : ""
+              }`}
+            >
               {heading}{" "}
-              <span className="text-[#EE0000]">{highlightedText}</span> to build
-              anywhere.
+              <span className="text-[#EE0000]">{highlightedText}</span>
+              {titleSuffix ? ` ${titleSuffix}` : ""}
             </h1>
 
             <p className="mx-auto mt-5 max-w-[620px] text-sm leading-relaxed text-[#CFCFCF] md:text-xs lg:mx-0 xl:text-lg hidden md:block">
@@ -44,7 +51,11 @@ const RedHatAIHeroSection = ({ data }: Props) => {
                 <Link
                   key={button.id}
                   href={button.link}
-                  className={`flex h-[30px] md:h-[46px] lg:h-[48px] xl:h-[52px] items-center justify-center rounded-full px-4 lg:px-7 text-xs lg:text-sm font-semibold transition-all duration-300 xl:text-base ${
+                  className={`flex items-center justify-center rounded-full text-xs lg:text-sm font-semibold transition-all duration-300 xl:text-base ${
+                    isLinuxHero
+                      ? "h-auto px-[10px] py-[10px]"
+                      : "h-[30px] px-4 md:h-[46px] lg:h-[48px] lg:px-7 xl:h-[52px]"
+                  } ${
                     button.variant === "primary"
                       ? "bg-[#EE0000] text-white hover:bg-[#d10000]"
                       : "border border-[#3A3A3A] bg-[#1A1A1A] text-white hover:bg-[#242424]"
@@ -91,7 +102,11 @@ const RedHatAIHeroSection = ({ data }: Props) => {
               width={400}
               height={400}
               priority
-              className="hidden md:block h-auto w-[180px] md:w-[340px] lg:w-[500px] xl:w-[500px] md:scale-100 lg:scale-100"
+              className={`hidden md:block h-auto ${
+                isLinuxHero
+                  ? "w-[220px] md:w-[420px] lg:w-[600px] xl:w-[750px] xl: scale-110 md:-translate-x-10 lg:-translate-x-20"
+                  : "w-[180px] md:w-[340px] lg:w-[500px] xl:w-[500px]"
+              }`}
             />
           </div>
         </div>

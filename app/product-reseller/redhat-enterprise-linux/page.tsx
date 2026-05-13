@@ -3,9 +3,12 @@ import RedHatAIHeroSection from "@/components/product-reseller/product-redhat/re
 import RedHatAIOverviewSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIOverviewSection";
 import RedHatAIStrategySection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIStrategySection";
 import {
+  redHatAIFoundationData,
   redHatLinuxCapabilitiesData,
+  redHatLinuxCtaData,
   redHatLinuxHeroData,
   redHatLinuxOverviewData,
+  redHatLinuxProductionData,
   redHatLinuxStrategyData,
 } from "@/data/product-reseller/product-redhat/redhat-linux/redhat-linux";
 
@@ -14,11 +17,11 @@ const page = () => {
     <div>
       <RedHatAIHeroSection data={redHatLinuxHeroData} />
       <RedHatAIOverviewSection data={redHatLinuxOverviewData} />
-      {/* <RedHatAIFoundationSection /> */}
+      <RedHatAIFoundationSection data={redHatAIFoundationData} />
       <RedHatAICapabilitiesSection data={redHatLinuxCapabilitiesData} />
-      {/* <RedHatAIProductionSection /> */}
+      <RedHatAIProductionSection data={redHatLinuxProductionData} />
       <RedHatAIStrategySection data={redHatLinuxStrategyData} />
-      {/* <RedHatAICtaSection /> */}
+      <RedHatAICtaSection data={redHatLinuxCtaData} />
     </div>
   );
 };
