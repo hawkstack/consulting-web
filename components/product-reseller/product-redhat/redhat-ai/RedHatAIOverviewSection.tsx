@@ -8,7 +8,7 @@ const RedHatAIOverviewSection = ({ data }: Props) => {
   const { tag, heading, description, cards } = data;
 
   return (
-    <section className="w-full bg-[#f6f6f6] py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-[#f6f6f6] py-12 md:py-16 lg:py-20 ">
       <div className="md:w-[700px] lg:w-[920px] xl:w-[1180px] mx-auto px-4 md:px-0">
         <div className="grid md:grid-cols-2 gap-2 md:gap-10 lg:gap-16 items-start">
           {/* LEFT */}
@@ -17,11 +17,11 @@ const RedHatAIOverviewSection = ({ data }: Props) => {
               {tag}
             </p>
 
-            <h2 className="text-[22px] md:text-3xl lg:text-[36px] xl:text-[48px] font-bold text-[#111] leading-tight mb-5 md:max-w-[250px] lg:max-w-[420px] text-center md:text-left">
+            <h2 className="text-[22px] md:text-3xl lg:text-[36px] xl:text-[48px] font-bold text-[#111] leading-tight mb-5 md:max-w-[250px] lg:max-w-[420px] xl:max-w-[530px] text-center md:text-left">
               {heading}
             </h2>
 
-            <p className="text-gray-600 text-xs md:text-sm lg:text-lg leading-relaxed md:w-xs lg:w-md hidden md:block">
+            <p className="text-gray-600 text-xs md:text-sm lg:text-lg leading-relaxed md:w-xs lg:w-md xl:w-lg hidden md:block">
               {description}
             </p>
           </div>
