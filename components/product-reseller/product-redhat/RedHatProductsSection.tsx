@@ -13,7 +13,7 @@ const RedHatProductsSection = ({ data }: Props) => {
       className="relative text-white py-16 px-6 lg:px-14 xl:px-16 overflow-hidden"
     >
       <Image
-        src="/images/product-seller/redhat-bg.webp"
+        src="/images/product-reseller/redhat-bg.webp"
         alt="background"
         fill
         className="object-cover object-center md:object-left pointer-events-none"
@@ -99,21 +99,16 @@ const RedHatProductsSection = ({ data }: Props) => {
                   {item.href ? (
                     <Link
                       href={item.href}
-                      className="inline-block border border-[#EE0000] text-sm px-5 py-1 transition"
+                      className="inline-block border border-[#EE0000] text-sm px-5 py-1 transition hover:bg-[#EE0000]"
                     >
-                      Explore product →
+                      Explore product -&gt;
                     </Link>
                   ) : (
-                    <button className="border border-[#EE0000] text-sm px-5 py-1 transition">
-                      Explore product →
+                    <button className="border border-[#EE0000] text-sm px-5 py-1 transition hover:bg-[#EE0000]">
+                      Explore product -&gt;
                     </button>
                   )}
-                  <Link
-                    href={item.link}
-                    className="inline-block border border-[#EE0000] text-sm px-5 py-1 transition hover:bg-[#EE0000]"
-                  >
-                    Explore product →
-                  </Link>
+
                   {/* AVAILABLE ON */}
                   <div className="w-[156px] h-[1px] bg-[#FFFFFF29] my-3 xl:my-2"></div>
 
@@ -141,7 +136,7 @@ const RedHatProductsSection = ({ data }: Props) => {
         {/* BOTTOM BUTTON */}
         <div className="flex justify-center mt-10">
           <button className="border border-[#EE0000] px-6 py-3 text-sm transition">
-            See all products →
+            See all products -&gt;
           </button>
         </div>
       </div>
