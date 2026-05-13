@@ -23,7 +23,7 @@ export const redHatHeroData: RedHatHeroData = {
     text: "Contact an expert",
     link: "/contact-us",
   },
-  image: "/images/product-seller/redhat-hero.webp",
+  image: "/images/product-reseller/redhat-hero.webp",
 };
 
 // Redhat overview data file
@@ -193,12 +193,12 @@ export const redHatProductsData: RedHatProductsSectionData = {
       link: "/product-reseller/redhat-ai",
       description:
         "Expand your AI capabilities with optimized models and  efficient inference on a platform built for agentic  workflows.",
-      icon: "/images/product-seller/redhat-ai.webp",
+      icon: "/images/product-reseller/redhat-ai.webp",
       availableOn: [
-        { name: "aws", logo: "/images/product-seller/aws.webp" },
-        { name: "azure", logo: "/images/product-seller/azure.webp" },
-        { name: "gcp", logo: "/images/product-seller/gcp.webp" },
-        { name: "ibm", logo: "/images/product-seller/ibm.webp" },
+        { name: "aws", logo: "/images/product-reseller/aws.webp" },
+        { name: "azure", logo: "/images/product-reseller/azure.webp" },
+        { name: "gcp", logo: "/images/product-reseller/gcp.webp" },
+        { name: "ibm", logo: "/images/product-reseller/ibm.webp" },
       ],
     },
     {
@@ -206,13 +206,13 @@ export const redHatProductsData: RedHatProductsSectionData = {
       link: "/coming-soon",
       description:
         "Support application deployments from on premise to the cloud to the edge in a flexible operating environment.",
-      icon: "/images/product-seller/redhat-enterprise-linux.webp",
+      icon: "/images/product-reseller/redhat-enterprise-linux.webp",
       availableOn: [
-        { name: "aws", logo: "/images/product-seller/aws.webp" },
-        { name: "azure", logo: "/images/product-seller/azure.webp" },
-        { name: "gcp", logo: "/images/product-seller/gcp.webp" },
-        { name: "ibm", logo: "/images/product-seller/ibm.webp" },
-        { name: "oracle", logo: "/images/product-seller/oracle.webp" },
+        { name: "aws", logo: "/images/product-reseller/aws.webp" },
+        { name: "azure", logo: "/images/product-reseller/azure.webp" },
+        { name: "gcp", logo: "/images/product-reseller/gcp.webp" },
+        { name: "ibm", logo: "/images/product-reseller/ibm.webp" },
+        { name: "oracle", logo: "/images/product-reseller/oracle.webp" },
       ],
     },
     {
@@ -220,13 +220,13 @@ export const redHatProductsData: RedHatProductsSectionData = {
       link: "/product-reseller/redhat-openshift",
       description:
         "Quickly build and deploy applications at scale, while you modernize the ones you already have.",
-      icon: "/images/product-seller/redhat-openshift.webp",
+      icon: "/images/product-reseller/redhat-openshift.webp",
       availableOn: [
-        { name: "aws", logo: "/images/product-seller/aws.webp" },
-        { name: "azure", logo: "/images/product-seller/azure.webp" },
-        { name: "gcp", logo: "/images/product-seller/gcp.webp" },
-        { name: "ibm", logo: "/images/product-seller/ibm.webp" },
-        { name: "oracle", logo: "/images/product-seller/oracle.webp" },
+        { name: "aws", logo: "/images/product-reseller/aws.webp" },
+        { name: "azure", logo: "/images/product-reseller/azure.webp" },
+        { name: "gcp", logo: "/images/product-reseller/gcp.webp" },
+        { name: "ibm", logo: "/images/product-reseller/ibm.webp" },
+        { name: "oracle", logo: "/images/product-reseller/oracle.webp" },
       ],
     },
     {
@@ -234,12 +234,12 @@ export const redHatProductsData: RedHatProductsSectionData = {
       link: "/product-reseller/redhat-ansible-automation",
       description:
         "Create, manage, and dynamically scale automation across your entire enterprise.",
-      icon: "/images/product-seller/redhat-ansible.webp",
+      icon: "/images/product-reseller/redhat-ansible.webp",
       availableOn: [
-        { name: "aws", logo: "/images/product-seller/aws.webp" },
-        { name: "azure", logo: "/images/product-seller/azure.webp" },
-        { name: "gcp", logo: "/images/product-seller/gcp.webp" },
-        { name: "ibm", logo: "/images/product-seller/ibm.webp" },
+        { name: "aws", logo: "/images/product-reseller/aws.webp" },
+        { name: "azure", logo: "/images/product-reseller/azure.webp" },
+        { name: "gcp", logo: "/images/product-reseller/gcp.webp" },
+        { name: "ibm", logo: "/images/product-reseller/ibm.webp" },
       ],
     },
   ],
