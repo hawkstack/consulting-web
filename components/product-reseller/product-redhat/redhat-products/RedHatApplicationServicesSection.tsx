@@ -29,7 +29,7 @@ const RedHatApplicationServicesSection = ({
       className="bg-[#f3f3f3] px-6 py-10 text-[#1d1d1f] sm:px-12 sm:py-12 lg:px-16 xl:px-25"
     >
       <div className="mx-auto w-full max-w-[1248px] ">
-        <h1 className="text-center text-[24px] font-semibold leading-tight sm:text-left sm:text-[32px] lg:text-[36px]">
+        <h1 className="text-center text-[24px] font-semibold leading-tight sm:text-left sm:text-[32px] lg:text-[46px]">
           {data.heading}
         </h1>
 
@@ -41,10 +41,10 @@ const RedHatApplicationServicesSection = ({
                 index > 2 && !showAllMobileCards ? "hidden sm:block" : ""
               }`}
             >
-              <h2 className="text-[16px] font-semibold leading-tight text-[#0066cc] sm:text-[15px] lg:text-[16px]">
+              <h2 className="text-[16px] font-semibold leading-tight text-[#0066cc] sm:text-[15px] lg:text-[20px]">
                 {product.title}
               </h2>
-              <p className="mt-2 text-[12px] leading-[1.55] text-[#333333] sm:text-[11px] lg:text-[12px]">
+              <p className="mt-2 text-[12px] leading-[1.55] text-[#333333] sm:text-[11px] lg:text-[14px]">
                 {product.description}
               </p>
             </article>
