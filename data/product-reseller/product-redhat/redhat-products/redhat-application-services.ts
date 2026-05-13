@@ -1,4 +1,4 @@
-import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-application-services/redhat-application-services";
+import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
 
 export const redHatApplicationServicesData: RedHatApplicationServicesData = {
   heading: "Application services",

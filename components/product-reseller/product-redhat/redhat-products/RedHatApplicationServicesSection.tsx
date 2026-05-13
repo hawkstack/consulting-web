@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-application-services/redhat-application-services";
+import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
 
 type RedHatApplicationServicesSectionProps = {
   data: RedHatApplicationServicesData;
