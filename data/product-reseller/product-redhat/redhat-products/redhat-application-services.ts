@@ -52,6 +52,89 @@ export const redHatApplicationServicesData: RedHatApplicationServicesData = {
   ],
 };
 
+export const redHatCloudComputingData: RedHatApplicationServicesData = {
+  heading: "Cloud computing",
+  showAllButtonText: "Explore all products",
+  showLessButtonText: "Less products",
+  products: [
+    {
+      title: "Microsoft Azure Red Hat OpenShift",
+      description:
+        "A fully managed Red Hat OpenShift service jointly engineered and supported by Microsoft and Red Hat.",
+    },
+    {
+      title: "Red Hat Advanced Developer Suite",
+      description:
+        "A suite for improving developer productivity, application security, and platform engineering workflows.",
+    },
+    {
+      title: "Red Hat Certificate System",
+      description:
+        "A security framework for managing user identities and secure communications.",
+    },
+    {
+      title: "Red Hat Developer Hub",
+      description:
+        "A developer portal platform that improves self-service, standards, and developer experience.",
+    },
+    {
+      title: "Red Hat Device Edge",
+      description:
+        "A platform for small, resource-constrained edge devices across remote and distributed environments.",
+    },
+    {
+      title: "Red Hat Directory Server",
+      description:
+        "An LDAP-based directory service that centralizes user access and identity data.",
+    },
+    {
+      title: "Red Hat OpenShift",
+      description:
+        "A unified application development platform for building, modernizing, and deploying apps at scale.",
+    },
+    {
+      title: "Red Hat OpenShift Container Platform",
+      description:
+        "A hybrid cloud platform for building and scaling containerized applications.",
+    },
+    {
+      title: "Red Hat OpenShift Dedicated",
+      description:
+        "A fully managed OpenShift service designed for teams that want cloud convenience with enterprise support.",
+    },
+    {
+      title: "Red Hat OpenShift Platform Plus",
+      description:
+        "An enterprise application platform with multi-cluster management, Kubernetes security, and image registry capabilities.",
+    },
+    {
+      title: "Red Hat OpenShift Service on AWS",
+      description:
+        "A fully managed OpenShift service running on AWS public cloud.",
+    },
+    {
+      title: "Red Hat OpenShift Virtualization",
+      description:
+        "Run and manage virtual machines alongside container workloads in OpenShift.",
+    },
+    {
+      title: "Red Hat OpenStack Services on OpenShift",
+      description:
+        "A platform that virtualizes hardware and organizes resources into private cloud services.",
+    },
+    {
+      title: "Red Hat Quay",
+      description:
+        "A container image registry for storing, building, and distributing container images.",
+    },
+    {
+      title: "Red Hat Service Interconnect",
+      description:
+        "A cross-platform connectivity solution for linking services across Red Hat and non-Red Hat environments.",
+    },
+  ],
+};
+
 export const redHatProductsCapabilitiesData: RedHatAICapabilitiesData = {
   cards: [
     {

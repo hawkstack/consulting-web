@@ -5,10 +5,12 @@ import type { RedHatApplicationServicesData } from "@/app/types/product-reseller
 
 type RedHatApplicationServicesSectionProps = {
   data: RedHatApplicationServicesData;
+  backgroundClassName?: string;
 };
 
 const RedHatApplicationServicesSection = ({
   data,
+  backgroundClassName = "bg-[#f3f3f3]",
 }: RedHatApplicationServicesSectionProps) => {
   const [showAllMobileCards, setShowAllMobileCards] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -26,7 +28,7 @@ const RedHatApplicationServicesSection = ({
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f3f3f3] px-6 py-10 text-[#1d1d1f] sm:px-12 sm:py-12 lg:px-16 xl:px-25"
+      className={`${backgroundClassName} px-6 py-10 text-[#1d1d1f] sm:px-12 sm:py-12 lg:px-16 xl:px-25`}
     >
       <div className="mx-auto w-full max-w-[1248px] ">
         <h1 className="text-center text-[24px] font-semibold leading-tight sm:text-left sm:text-[32px] lg:text-[46px]">
