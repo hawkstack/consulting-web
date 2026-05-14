@@ -1,4 +1,7 @@
-import { RedHatAICapabilitiesData } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+import {
+  RedHatAICapabilitiesData,
+  RedHatAICtaData,
+} from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
 
 export const redHatApplicationServicesData: RedHatApplicationServicesData = {
@@ -68,6 +71,20 @@ export const redHatProductsCapabilitiesData: RedHatAICapabilitiesData = {
       title: "Optimize",
       description:
         "Improve performance, automation, reliability, governance, security, and cost efficiency over time.",
+    },
+  ],
+};
+
+export const redHatProductsCtaData: RedHatAICtaData = {
+  tag: "Build your Red Hat roadmap",
+  title: "Ready to choose and deploy the right Red Hat solutions?",
+  description:
+    "Talk to HawkStack about your application, cloud, AI, automation, Linux, or management requirements. We'll help you build a practical product and implementation plan.",
+  buttons: [
+    {
+      label: "Schedule a consultation",
+      href: "/contact",
+      variant: "primary",
     },
   ],
 };
