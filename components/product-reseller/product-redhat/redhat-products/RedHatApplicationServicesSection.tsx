@@ -6,11 +6,17 @@ import type { RedHatApplicationServicesData } from "@/app/types/product-reseller
 type RedHatApplicationServicesSectionProps = {
   data: RedHatApplicationServicesData;
   backgroundClassName?: string;
+  headingClassName?: string;
+  cardClassName?: string;
+  descriptionClassName?: string;
 };
 
 const RedHatApplicationServicesSection = ({
   data,
   backgroundClassName = "bg-[#f3f3f3]",
+  headingClassName = "text-[#1d1d1f]",
+  cardClassName = "border-[#d2d2d2] bg-white",
+  descriptionClassName = "text-[#333333]",
 }: RedHatApplicationServicesSectionProps) => {
   const [showAllMobileCards, setShowAllMobileCards] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,7 +37,9 @@ const RedHatApplicationServicesSection = ({
       className={`${backgroundClassName} px-6 py-10 text-[#1d1d1f] sm:px-12 sm:py-12 lg:px-16 xl:px-25`}
     >
       <div className="mx-auto w-full max-w-[1248px] ">
-        <h1 className="text-center text-[24px] font-semibold leading-tight sm:text-left sm:text-[32px] lg:text-[46px]">
+        <h1
+          className={`text-center text-[24px] font-semibold leading-tight sm:text-left sm:text-[32px] lg:text-[46px] ${headingClassName}`}
+        >
           {data.heading}
         </h1>
 
@@ -39,14 +47,16 @@ const RedHatApplicationServicesSection = ({
           {data.products.map((product, index) => (
             <article
               key={product.title}
-              className={`min-h-[111px] border border-[#d2d2d2] bg-white px-5 py-5 shadow-[0_1px_0_rgba(0,0,0,0.02)] sm:min-h-[115px] sm:px-6 ${
+              className={`min-h-[111px] border px-5 py-5 shadow-[0_1px_0_rgba(0,0,0,0.02)] sm:min-h-[115px] sm:px-6 ${cardClassName} ${
                 index > 2 && !showAllMobileCards ? "hidden sm:block" : ""
               }`}
             >
               <h2 className="text-[16px] font-semibold leading-tight text-[#0066cc] sm:text-[15px] lg:text-[20px]">
                 {product.title}
               </h2>
-              <p className="mt-2 text-[12px] leading-[1.55] text-[#333333] sm:text-[11px] lg:text-[14px]">
+              <p
+                className={`mt-2 text-[12px] leading-[1.55] sm:text-[11px] lg:text-[14px] ${descriptionClassName}`}
+              >
                 {product.description}
               </p>
             </article>

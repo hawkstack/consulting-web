@@ -135,6 +135,44 @@ export const redHatCloudComputingData: RedHatApplicationServicesData = {
   ],
 };
 
+export const redHatArtificialIntelligenceData: RedHatApplicationServicesData = {
+  heading: "Artificial intelligence",
+  showAllButtonText: "Explore all products",
+  showLessButtonText: "Less products",
+  products: [
+    {
+      title: "Red Hat AI Enterprise",
+      description:
+        "An integrated platform for building and running efficient models, agents, and AI applications on any infrastructure.",
+    },
+    {
+      title: "Red Hat AI Factory with NVIDIA",
+      description:
+        "A co-engineered enterprise AI solution for building, deploying, and managing AI at scale across hybrid cloud.",
+    },
+    {
+      title: "Red Hat AI Inference Server",
+      description:
+        "An inference server designed to optimize model deployment across hybrid cloud environments.",
+    },
+    {
+      title: "Red Hat Ansible Lightspeed",
+      description:
+        "A generative AI service that helps IT teams create reliable Ansible automation code more efficiently.",
+    },
+    {
+      title: "Red Hat Enterprise Linux AI",
+      description:
+        "A generative AI server appliance built for fast, cost effective inference and Linux-based AI operations.",
+    },
+    {
+      title: "Red Hat OpenShift AI",
+      description:
+        "A platform for developing, training, serving, and monitoring AI models and AI-enabled applications.",
+    },
+  ],
+};
+
 export const redHatProductsCapabilitiesData: RedHatAICapabilitiesData = {
   cards: [
     {
