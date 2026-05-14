@@ -1,3 +1,4 @@
+import { RedHatAICapabilitiesData } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
 
 export const redHatApplicationServicesData: RedHatApplicationServicesData = {
@@ -44,6 +45,29 @@ export const redHatApplicationServicesData: RedHatApplicationServicesData = {
       title: "Red Hat Runtimes",
       description:
         "Products, tools, and components for developing, running, and maintaining cloud-native applications.",
+    },
+  ],
+};
+
+export const redHatProductsCapabilitiesData: RedHatAICapabilitiesData = {
+  cards: [
+    {
+      id: 1,
+      title: "Build",
+      description:
+        "Design application, cloud, AI, automation, and Linux solutions around real business outcomes.",
+    },
+    {
+      id: 2,
+      title: "Deploy",
+      description:
+        "Implement Red Hat platforms with secure architecture, migration planning, and integration support.",
+    },
+    {
+      id: 3,
+      title: "Optimize",
+      description:
+        "Improve performance, automation, reliability, governance, security, and cost efficiency over time.",
     },
   ],
 };
