@@ -135,6 +135,24 @@ export const redHatCloudComputingData: RedHatApplicationServicesData = {
   ],
 };
 
+export const redHatLinuxPlatformsData: RedHatApplicationServicesData = {
+  heading: "Linux platforms",
+  showAllButtonText: "Explore all products",
+  showLessButtonText: "Less products",
+  products: [
+    {
+      title: "Red Hat Enterprise Linux",
+      description:
+        "A stable, high-performance Linux platform with built-in security and management features for critical workloads.",
+    },
+    {
+      title: "Red Hat Enterprise Linux for SAP Solutions",
+      description:
+        "The reliability and power of Linux with technologies designed for SAP workload requirements.",
+    },
+  ],
+};
+
 export const redHatArtificialIntelligenceData: RedHatApplicationServicesData = {
   heading: "Artificial intelligence",
   showAllButtonText: "Explore all products",

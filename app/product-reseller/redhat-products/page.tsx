@@ -5,6 +5,7 @@ import {
   redHatApplicationServicesData,
   redHatArtificialIntelligenceData,
   redHatCloudComputingData,
+  redHatLinuxPlatformsData,
   redHatProductsCapabilitiesData,
   redHatProductsCtaData,
 } from "@/data/product-reseller/product-redhat/redhat-products/redhat-application-services";
@@ -25,6 +26,7 @@ const RedHatApplicationServicesPage = () => {
         data={redHatCloudComputingData}
         backgroundClassName="bg-white"
       />
+      <RedHatApplicationServicesSection data={redHatLinuxPlatformsData} />
       <RedHatAICtaSection data={redHatProductsCtaData} />
     </>
   );
