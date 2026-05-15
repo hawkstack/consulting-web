@@ -5,6 +5,43 @@ import {
   RedHatAIStrategySectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
+import type { RedHatProductsHeroData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-products-hero";
+
+export const redHatProductsHeroData: RedHatProductsHeroData = {
+  badge: "Red Hat product portfolio by HawkStack",
+  title: "One trusted portfolio for",
+  highlightedTitle: "hybrid cloud, AI, automation, and apps.",
+  description:
+    "HawkStack helps you choose, implement, and optimize Red Hat products across infrastructure, cloud-native applications, enterprise Linux, automation, AI, and application services.",
+  highlights: [
+    "Hybrid cloud solutions",
+    "Enterprise support",
+    "Implementation-ready services",
+  ],
+  cards: [
+    {
+      title: "Platforms",
+      description:
+        "Red Hat AI, Enterprise Linux, OpenShift, and Ansible Automation Platform.",
+      className:
+        "absolute left-[84px] top-0 w-[116px] md:left-auto md:right-0 md:top-0 md:w-[190px] lg:right-4 lg:w-[260px] xl:right-10 xl:w-[270px]",
+    },
+    {
+      title: "Cloud native",
+      description:
+        "Build and operate modern applications across containers, VMs, cloud, and edge.",
+      className:
+        "absolute left-[15px] top-[62px] w-[116px] md:left-0 md:top-[118px] md:w-[190px] lg:left-[10px] lg:top-[155px] lg:w-[260px] xl:left-[30px] xl:w-[270px]",
+    },
+    {
+      title: "Services",
+      description:
+        "Architecture, migration, deployment, automation, optimization, and managed support.",
+      className:
+        "absolute left-[86px] top-[124px] w-[122px] md:bottom-0 md:left-auto md:right-0 md:top-auto md:w-[190px] lg:right-0 lg:w-[260px] xl:right-0 xl:w-[270px]",
+    },
+  ],
+};
 
 export const redHatApplicationServicesData: RedHatApplicationServicesData = {
   heading: "Application services",
