@@ -76,7 +76,7 @@ export interface RedHatAIStrategyCard {
   id: number;
   title: string;
   description: string;
-  icon: ComponentType;
+  icon?: ComponentType;
 }
 
 export interface RedHatAIStrategySectionData {

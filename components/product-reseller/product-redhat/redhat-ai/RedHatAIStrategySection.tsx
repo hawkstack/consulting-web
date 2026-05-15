@@ -3,16 +3,20 @@ import { RedHatAIStrategySectionData } from "@/app/types/product-reseller/produc
 
 interface Props {
   data: RedHatAIStrategySectionData;
+  headingContainerClassName?: string;
 }
 
-const RedHatAIStrategySection = ({ data }: Props) => {
+const RedHatAIStrategySection = ({
+  data,
+  headingContainerClassName = "max-w-[790px]",
+}: Props) => {
   const { tag, heading, description, cards } = data;
 
   return (
     <section className="w-full bg-[#F4F4F4] py-12 md:py-16 lg:py-20">
       <div className="mx-auto w-full px-4 md:w-[620px] md:px-0 lg:w-[920px] xl:w-[1180px]">
         {/* top content */}
-        <div className="mx-auto max-w-[790px] text-center">
+        <div className={`mx-auto text-center ${headingContainerClassName}`}>
           <p className="mb-4 text-xs font-bold uppercase tracking-[2.5px] text-[#EE0000] text-xs xl:text-sm">
             {tag}
           </p>
@@ -36,9 +40,15 @@ const RedHatAIStrategySection = ({ data }: Props) => {
                 key={card.id}
                 className="rounded-2xl border border-[#E7E7E7] bg-white p-5 md:min-h-[190px] md:p-4 lg:p-5"
               >
-                {/* icon */}
-                <div className="flex md:h-[30px] md:w-[30px] lg:h-[34px] lg:w-[34px] xl:h-[40px] xl:w-[40px] items-left">
-                  <Icon />
+                {/* icon or step number */}
+                <div className="flex h-[34px] w-[34px] items-center justify-center xl:h-[40px] xl:w-[40px]">
+                  {Icon ? (
+                    <Icon />
+                  ) : (
+                    <span className="flex h-full w-full items-center justify-center rounded-full bg-[#000000] text-sm font-bold text-white xl:text-base">
+                      {card.id}
+                    </span>
+                  )}
                 </div>
 
                 {/* title */}

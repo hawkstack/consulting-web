@@ -1,6 +1,7 @@
 import {
   RedHatAICapabilitiesData,
   RedHatAICtaData,
+  RedHatAIStrategySectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
 
@@ -248,6 +249,39 @@ export const redHatProductsCapabilitiesData: RedHatAICapabilitiesData = {
       title: "Optimize",
       description:
         "Improve performance, automation, reliability, governance, security, and cost efficiency over time.",
+    },
+  ],
+};
+
+export const redHatProductsDeliveryModelData: RedHatAIStrategySectionData = {
+  tag: "HawkStack delivery model",
+  heading: "Not sure which Red Hat product fits your roadmap? We help you choose.",
+  description:
+    "HawkStack turns the Red Hat portfolio into a clear solution roadmap aligned with your infrastructure, applications, security requirements, and business goals.",
+  cards: [
+    {
+      id: 1,
+      title: "Discover",
+      description:
+        "Understand your current IT environment, application estate, cloud model, and operational challenges.",
+    },
+    {
+      id: 2,
+      title: "Map",
+      description:
+        "Identify the right Red Hat products, integrations, licensing path, and implementation sequence.",
+    },
+    {
+      id: 3,
+      title: "Deploy",
+      description:
+        "Implement platforms with security, governance, automation, migration, and platform engineering support.",
+    },
+    {
+      id: 4,
+      title: "Optimize",
+      description:
+        "Improve performance, reliability, cost, adoption, automation, and long-term operating maturity.",
     },
   ],
 };
