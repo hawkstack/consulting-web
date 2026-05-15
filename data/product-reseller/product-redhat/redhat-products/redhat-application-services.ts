@@ -153,6 +153,44 @@ export const redHatLinuxPlatformsData: RedHatApplicationServicesData = {
   ],
 };
 
+export const redHatManagementData: RedHatApplicationServicesData = {
+  heading: "Management",
+  showAllButtonText: "Explore all products",
+  showLessButtonText: "Less products",
+  products: [
+    {
+      title: "Red Hat Advanced Cluster Management for Kubernetes",
+      description:
+        "A single console for managing Kubernetes clusters and applications with governance and policies.",
+    },
+    {
+      title: "Red Hat Advanced Cluster Security for Kubernetes",
+      description:
+        "A Kubernetes-native security platform for building, deploying, and running cloud-native apps securely.",
+    },
+    {
+      title: "Red Hat Ansible Automation Platform",
+      description:
+        "A platform for implementing enterprise-wide automation across infrastructure, cloud, network, and security workflows.",
+    },
+    {
+      title: "Red Hat Ansible Automation Platform on Microsoft Azure",
+      description:
+        "A managed application for enterprise automation deployed in Azure and supported by Red Hat.",
+    },
+    {
+      title: "Red Hat Lightspeed",
+      description:
+        "Predictive analytics that helps identify and remediate security, performance, and availability risks.",
+    },
+    {
+      title: "Red Hat Satellite",
+      description:
+        "System management software that makes Red Hat infrastructure easier to deploy, scale, and manage.",
+    },
+  ],
+};
+
 export const redHatArtificialIntelligenceData: RedHatApplicationServicesData = {
   heading: "Artificial intelligence",
   showAllButtonText: "Explore all products",
