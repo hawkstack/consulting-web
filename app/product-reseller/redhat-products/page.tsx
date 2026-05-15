@@ -1,5 +1,6 @@
 import RedHatAICapabilitiesSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAICapabilitiesSection";
 import RedHatAICtaSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAICtaSection";
+import RedHatAIFoundationSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIFoundationSection";
 import RedHatAIStrategySection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIStrategySection";
 import RedHatApplicationServicesSection from "@/components/product-reseller/product-redhat/redhat-products/RedHatApplicationServicesSection";
 import {
@@ -11,11 +12,16 @@ import {
   redHatProductsCapabilitiesData,
   redHatProductsCtaData,
   redHatProductsDeliveryModelData,
+  redHatProductsFeaturedPlatformsData,
 } from "@/data/product-reseller/product-redhat/redhat-products/redhat-application-services";
 
 const RedHatApplicationServicesPage = () => {
   return (
     <>
+      <RedHatAIFoundationSection
+        data={redHatProductsFeaturedPlatformsData}
+        titleClassName="xl:w-[960px]"
+      />
       <RedHatAICapabilitiesSection data={redHatProductsCapabilitiesData} />
       <RedHatApplicationServicesSection data={redHatApplicationServicesData} />
       <RedHatApplicationServicesSection

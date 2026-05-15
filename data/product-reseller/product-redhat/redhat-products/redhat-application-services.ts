@@ -1,6 +1,7 @@
 import {
   RedHatAICapabilitiesData,
   RedHatAICtaData,
+  RedHatAIFoundationSectionData,
   RedHatAIStrategySectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
@@ -252,6 +253,48 @@ export const redHatProductsCapabilitiesData: RedHatAICapabilitiesData = {
     },
   ],
 };
+
+export const redHatProductsFeaturedPlatformsData: RedHatAIFoundationSectionData =
+  {
+    tag: "Featured platforms",
+    title: "Start with the Red Hat foundation that matches your business goal.",
+    description:
+      "These core platforms help organizations standardize infrastructure, build modern applications, scale automation, and accelerate AI adoption.",
+    cards: [
+      {
+        badge: "AI",
+        title: "Red Hat AI",
+        description:
+          "Develop, deploy, and manage AI models, inference, agents, and applications across hybrid environments.",
+        ctaText: "Explore AI →",
+        href: "/product-reseller/redhat-ai",
+      },
+      {
+        badge: "LX",
+        title: "Red Hat Enterprise Linux",
+        description:
+          "Run critical workloads on a secure, stable, and consistent Linux foundation across cloud and data center.",
+        ctaText: "Explore Linux →",
+        href: "/product-reseller/redhat-enterprise-linux",
+      },
+      {
+        badge: "OS",
+        title: "Red Hat OpenShift",
+        description:
+          "Build, modernize, and deploy applications at scale using an enterprise Kubernetes platform.",
+        ctaText: "Explore OpenShift →",
+        href: "/product-reseller/redhat-openshift",
+      },
+      {
+        badge: "AA",
+        title: "Red Hat Ansible Automation Platform",
+        description:
+          "Create, manage, and scale enterprise-wide automation across infrastructure, cloud, networks, and security.",
+        ctaText: "Explore automation →",
+        href: "/product-reseller/redhat-ansible-automation",
+      },
+    ],
+  };
 
 export const redHatProductsDeliveryModelData: RedHatAIStrategySectionData = {
   tag: "HawkStack delivery model",

@@ -44,6 +44,7 @@ export interface RedHatAICtaData {
 // RedHatAIFoundationSection types
 
 export interface RedHatAIFoundationCard {
+  badge?: string;
   title: string;
   description: string;
   ctaText: string;
