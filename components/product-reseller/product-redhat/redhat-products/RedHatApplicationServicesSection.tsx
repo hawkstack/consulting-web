@@ -20,6 +20,7 @@ const RedHatApplicationServicesSection = ({
 }: RedHatApplicationServicesSectionProps) => {
   const [showAllMobileCards, setShowAllMobileCards] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const hasHiddenMobileCards = data.products.length > 3;
 
   const handleToggleMobileCards = () => {
     if (showAllMobileCards) {
@@ -63,6 +64,7 @@ const RedHatApplicationServicesSection = ({
           ))}
         </div>
 
+        {hasHiddenMobileCards && (
         <div className="mt-7 flex justify-center sm:hidden">
           <button
             type="button"
@@ -74,6 +76,7 @@ const RedHatApplicationServicesSection = ({
               : data.showAllButtonText}
           </button>
         </div>
+        )}
       </div>
     </section>
   );
