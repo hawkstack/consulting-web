@@ -6,6 +6,7 @@ import Link from "next/link";
 
 interface RedHatAIFoundationSectionProps {
   data: RedHatAIFoundationSectionData;
+  titleClassName?: string;
 }
 
 const FoundationCard = ({ card }: { card: RedHatAIFoundationCard }) => {
@@ -21,6 +22,12 @@ const FoundationCard = ({ card }: { card: RedHatAIFoundationCard }) => {
         hover:-translate-y-1
       "
     >
+      {card.badge && (
+        <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-[15px] bg-[#000000] text-xs font-bold text-white">
+          {card.badge}
+        </div>
+      )}
+
       <h3
         className="
           text-base xl:text-xl xl:h-[38px]
@@ -61,6 +68,7 @@ const FoundationCard = ({ card }: { card: RedHatAIFoundationCard }) => {
 
 const RedHatAIFoundationSection = ({
   data,
+  titleClassName = "xl:w-[790px]",
 }: RedHatAIFoundationSectionProps) => {
   return (
     <section className="bg-[#F3F3F3] py-14 md:py-20">
@@ -80,14 +88,15 @@ const RedHatAIFoundationSection = ({
           </span>
 
           <h2
-            className="
+            className={`
               mx-auto mt-4
-              w-full xl:w-[790px]
+              w-full
               font-bold
               leading-[1.08]
               text-[#161616]
               text-[22px] md:text-3xl lg:text-[36px] xl:text-[48px]
-            "
+              ${titleClassName}
+            `}
           >
             {data.title}
           </h2>

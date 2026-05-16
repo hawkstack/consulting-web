@@ -44,6 +44,7 @@ export interface RedHatAICtaData {
 // RedHatAIFoundationSection types
 
 export interface RedHatAIFoundationCard {
+  badge?: string;
   title: string;
   description: string;
   ctaText: string;
@@ -76,7 +77,7 @@ export interface RedHatAIStrategyCard {
   id: number;
   title: string;
   description: string;
-  icon: ComponentType;
+  icon?: ComponentType;
 }
 
 export interface RedHatAIStrategySectionData {

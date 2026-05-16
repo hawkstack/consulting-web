@@ -1,8 +1,47 @@
 import {
   RedHatAICapabilitiesData,
   RedHatAICtaData,
+  RedHatAIFoundationSectionData,
+  RedHatAIStrategySectionData,
 } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
 import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
+import type { RedHatProductsHeroData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-products-hero";
+
+export const redHatProductsHeroData: RedHatProductsHeroData = {
+  badge: "Red Hat product portfolio by HawkStack",
+  title: "One trusted portfolio for",
+  highlightedTitle: "hybrid cloud, AI, automation, and apps.",
+  description:
+    "HawkStack helps you choose, implement, and optimize Red Hat products across infrastructure, cloud-native applications, enterprise Linux, automation, AI, and application services.",
+  highlights: [
+    "Hybrid cloud solutions",
+    "Enterprise support",
+    "Implementation-ready services",
+  ],
+  cards: [
+    {
+      title: "Platforms",
+      description:
+        "Red Hat AI, Enterprise Linux, OpenShift, and Ansible Automation Platform.",
+      className:
+        "absolute left-[126px] top-10 w-[124px] md:left-auto md:right-0 md:top-[-30] md:w-[190px] lg:right-4 lg:w-[260px] xl:right-10 xl:top-2 xl:w-[270px]",
+    },
+    {
+      title: "Cloud native",
+      description:
+        "Build and operate modern applications across containers, VMs, cloud, and edge.",
+      className:
+        "absolute left-1 top-[96px] w-[124px] md:left-0 md:top-[80px] md:w-[190px] lg:left-[10px] lg:top-[155px] lg:w-[260px] xl:left-[30px] xl:w-[270px]",
+    },
+    {
+      title: "Services",
+      description:
+        "Architecture, migration, deployment, automation, optimization, and managed support.",
+      className:
+        "absolute left-[116px] top-[170px] w-[134px] md:bottom-0 md:left-auto md:right-0 md:button-[10] md:w-[190px] lg:right-0 lg:w-[220px] xl:right-0 xl:w-[270px] xl:top-[250px]",
+    },
+  ],
+};
 
 export const redHatApplicationServicesData: RedHatApplicationServicesData = {
   heading: "Application services",
@@ -248,6 +287,81 @@ export const redHatProductsCapabilitiesData: RedHatAICapabilitiesData = {
       title: "Optimize",
       description:
         "Improve performance, automation, reliability, governance, security, and cost efficiency over time.",
+    },
+  ],
+};
+
+export const redHatProductsFeaturedPlatformsData: RedHatAIFoundationSectionData =
+  {
+    tag: "Featured platforms",
+    title: "Start with the Red Hat foundation that matches your business goal.",
+    description:
+      "These core platforms help organizations standardize infrastructure, build modern applications, scale automation, and accelerate AI adoption.",
+    cards: [
+      {
+        badge: "AI",
+        title: "Red Hat AI",
+        description:
+          "Develop, deploy, and manage AI models, inference, agents, and applications across hybrid environments.",
+        ctaText: "Explore AI →",
+        href: "/product-reseller/redhat-ai",
+      },
+      {
+        badge: "LX",
+        title: "Red Hat Enterprise Linux",
+        description:
+          "Run critical workloads on a secure, stable, and consistent Linux foundation across cloud and data center.",
+        ctaText: "Explore Linux →",
+        href: "/product-reseller/redhat-enterprise-linux",
+      },
+      {
+        badge: "OS",
+        title: "Red Hat OpenShift",
+        description:
+          "Build, modernize, and deploy applications at scale using an enterprise Kubernetes platform.",
+        ctaText: "Explore OpenShift →",
+        href: "/product-reseller/redhat-openshift",
+      },
+      {
+        badge: "AA",
+        title: "Red Hat Ansible Automation Platform",
+        description:
+          "Create, manage, and scale enterprise-wide automation across infrastructure, cloud, networks, and security.",
+        ctaText: "Explore automation →",
+        href: "/product-reseller/redhat-ansible-automation",
+      },
+    ],
+  };
+
+export const redHatProductsDeliveryModelData: RedHatAIStrategySectionData = {
+  tag: "HawkStack delivery model",
+  heading: "Not sure which Red Hat product fits your roadmap? We help you choose.",
+  description:
+    "HawkStack turns the Red Hat portfolio into a clear solution roadmap aligned with your infrastructure, applications, security requirements, and business goals.",
+  cards: [
+    {
+      id: 1,
+      title: "Discover",
+      description:
+        "Understand your current IT environment, application estate, cloud model, and operational challenges.",
+    },
+    {
+      id: 2,
+      title: "Map",
+      description:
+        "Identify the right Red Hat products, integrations, licensing path, and implementation sequence.",
+    },
+    {
+      id: 3,
+      title: "Deploy",
+      description:
+        "Implement platforms with security, governance, automation, migration, and platform engineering support.",
+    },
+    {
+      id: 4,
+      title: "Optimize",
+      description:
+        "Improve performance, reliability, cost, adoption, automation, and long-term operating maturity.",
     },
   ],
 };
