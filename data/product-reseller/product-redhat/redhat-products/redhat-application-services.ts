@@ -24,7 +24,7 @@ export const redHatProductsHeroData: RedHatProductsHeroData = {
       description:
         "Red Hat AI, Enterprise Linux, OpenShift, and Ansible Automation Platform.",
       className:
-        "absolute left-[126px] top-10 w-[124px] md:left-auto md:right-0 md:top-[-30] md:w-[190px] lg:right-4 lg:w-[260px] xl:right-10 xl:w-[270px]",
+        "absolute left-[126px] top-10 w-[124px] md:left-auto md:right-0 md:top-[-30] md:w-[190px] lg:right-4 lg:w-[260px] xl:right-10 xl:top-2 xl:w-[270px]",
     },
     {
       title: "Cloud native",
@@ -38,7 +38,7 @@ export const redHatProductsHeroData: RedHatProductsHeroData = {
       description:
         "Architecture, migration, deployment, automation, optimization, and managed support.",
       className:
-        "absolute left-[116px] top-[170px] w-[134px] md:bottom-0 md:left-auto md:right-0 md:button-[10] md:w-[190px] lg:right-0 lg:w-[260px] xl:right-0 xl:w-[270px]",
+        "absolute left-[116px] top-[170px] w-[134px] md:bottom-0 md:left-auto md:right-0 md:button-[10] md:w-[190px] lg:right-0 lg:w-[220px] xl:right-0 xl:w-[270px] xl:top-[250px]",
     },
   ],
 };
