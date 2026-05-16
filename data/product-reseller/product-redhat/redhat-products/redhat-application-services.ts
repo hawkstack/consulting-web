@@ -24,21 +24,21 @@ export const redHatProductsHeroData: RedHatProductsHeroData = {
       description:
         "Red Hat AI, Enterprise Linux, OpenShift, and Ansible Automation Platform.",
       className:
-        "absolute left-[84px] top-0 w-[116px] md:left-auto md:right-0 md:top-0 md:w-[190px] lg:right-4 lg:w-[260px] xl:right-10 xl:w-[270px]",
+        "absolute left-[126px] top-10 w-[124px] md:left-auto md:right-0 md:top-[-30] md:w-[190px] lg:right-4 lg:w-[260px] xl:right-10 xl:w-[270px]",
     },
     {
       title: "Cloud native",
       description:
         "Build and operate modern applications across containers, VMs, cloud, and edge.",
       className:
-        "absolute left-[15px] top-[62px] w-[116px] md:left-0 md:top-[118px] md:w-[190px] lg:left-[10px] lg:top-[155px] lg:w-[260px] xl:left-[30px] xl:w-[270px]",
+        "absolute left-1 top-[96px] w-[124px] md:left-0 md:top-[80px] md:w-[190px] lg:left-[10px] lg:top-[155px] lg:w-[260px] xl:left-[30px] xl:w-[270px]",
     },
     {
       title: "Services",
       description:
         "Architecture, migration, deployment, automation, optimization, and managed support.",
       className:
-        "absolute left-[86px] top-[124px] w-[122px] md:bottom-0 md:left-auto md:right-0 md:top-auto md:w-[190px] lg:right-0 lg:w-[260px] xl:right-0 xl:w-[270px]",
+        "absolute left-[116px] top-[170px] w-[134px] md:bottom-0 md:left-auto md:right-0 md:button-[10] md:w-[190px] lg:right-0 lg:w-[260px] xl:right-0 xl:w-[270px]",
     },
   ],
 };

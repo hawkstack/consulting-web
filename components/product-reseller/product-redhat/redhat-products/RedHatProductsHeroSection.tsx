@@ -24,7 +24,7 @@ const RedHatProductsHeroSection = ({
             <span className="text-[#ff4b55]">{data.highlightedTitle}</span>
           </h1>
 
-          <p className="mx-auto mt-[294px] max-w-[230px] text-center text-[10px] leading-4 text-white/72 sm:mt-[340px] sm:max-w-[560px] sm:text-xs sm:leading-5 md:mx-0 md:mt-5 md:text-left md:text-base md:leading-7">
+          <p className="mx-auto mt-[310px] max-w-[280px] text-center text-[10px] leading-4 text-white/72 sm:mt-[340px] sm:max-w-[560px] sm:text-xs sm:leading-5 md:mx-0 md:mt-5 md:text-left md:text-base md:leading-7">
             {data.description}
           </p>
 
@@ -38,24 +38,19 @@ const RedHatProductsHeroSection = ({
           </div>
         </div>
 
-        <div className="absolute left-1/2 top-[113px] min-h-[205px] w-[225px] -translate-x-1/2 md:relative md:left-auto md:top-auto md:min-h-[300px] md:w-auto md:translate-x-0 lg:min-h-[420px]">
-          <div className="absolute left-[68px] top-[78px] h-[92px] w-[92px] rounded-full bg-[radial-gradient(circle_at_35%_30%,#ff3535_0%,#ee0000_45%,#640000_100%)] shadow-[0_0_75px_rgba(238,0,0,0.55)] md:hidden" />
+        <div className="absolute left-1/2 top-[118px] min-h-[290px] w-[260px] -translate-x-1/2 md:relative md:left-auto md:top-auto md:min-h-[300px] md:w-auto md:translate-x-0 lg:min-h-[420px]">
+          <div className="absolute left-[80px] top-[96px] h-[104px] w-[104px] rounded-full bg-[radial-gradient(circle_at_35%_30%,#ff3535_0%,#ee0000_45%,#640000_100%)] shadow-[0_0_75px_rgba(238,0,0,0.55)] md:hidden" />
 
           <div className="grid gap-4 sm:grid-cols-3 md:block">
             {data.cards.map((card) => (
               <article
                 key={card.title}
-                className={`relative rounded-[9px] border border-white/16 bg-white/[0.12] p-3 shadow-[0_18px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl md:absolute md:w-[190px] md:rounded-[16px] md:p-4 lg:w-[260px] lg:rounded-[22px] lg:p-6 xl:w-[270px] ${card.className}`}
+                className={`rounded-[9px] border border-white/16 bg-white/[0.12] p-3 shadow-[0_18px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl md:absolute md:w-[190px] md:rounded-[16px] md:p-4 lg:w-[260px] lg:rounded-[22px] lg:p-6 xl:w-[270px] ${card.className}`}
               >
                 <h2 className="text-[10px] font-bold text-white md:text-sm lg:text-lg xl:text-xl">
                   {card.title}
                 </h2>
                 <p className="mt-2 text-[8px] leading-[1.35] text-white/72 md:mt-3 md:text-[10px] md:leading-5 lg:mt-4 lg:text-xs lg:leading-6">
-
-
-
-
-
                   {card.description}
                 </p>
               </article>
