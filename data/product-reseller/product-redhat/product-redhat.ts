@@ -222,6 +222,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
       description:
         "Quickly build and deploy applications at scale, while you modernize the ones you already have.",
       icon: "/images/product-reseller/redhat-openshift.webp",
+      href: "/product-reseller/redhat-openshift",
       availableOn: [
         { name: "aws", logo: "/images/product-reseller/aws.webp" },
         { name: "azure", logo: "/images/product-reseller/azure.webp" },
@@ -235,6 +236,7 @@ export const redHatProductsData: RedHatProductsSectionData = {
       description:
         "Create, manage, and dynamically scale automation across your entire enterprise.",
       icon: "/images/product-reseller/redhat-ansible.webp",
+      href: "/product-reseller/redhat-ansible-automation",
       availableOn: [
         { name: "aws", logo: "/images/product-reseller/aws.webp" },
         { name: "azure", logo: "/images/product-reseller/azure.webp" },
