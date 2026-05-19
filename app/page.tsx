@@ -2,7 +2,7 @@ import { seoMeta } from "../components/seo/seoMeta";
 
 import HeroSection from "@/components/home/HeroSection";
 import EngineeringDrivenCloudServices from "@/components/home/EngineeringDrivenCloudServices";
-import GlobalTechnology from "@/components/home/GlobalTechnology";
+// import GlobalTechnology from "@/components/home/GlobalTechnology";
 import PlatformSection from "@/components/home/PlatformSection";
 import CloudInnovation from "@/components/home/CloudInnovation";
 import WhatWeDo from "@/components/home/WhatWeDo";
@@ -21,7 +21,7 @@ export default function HomePage() {
     heroSectionData,
     cloudServicesSectionData,
     productsSectionData,
-    globalSectionData,
+    // globalSectionData,
     platformSectionData,
     whatWeDoSectionData,
     cloudSectionData,
@@ -31,7 +31,7 @@ export default function HomePage() {
       <HeroSection data={heroSectionData} />
       <EngineeringDrivenCloudServices data={cloudServicesSectionData} />
       <ProductReseller data={productsSectionData} />
-      <GlobalTechnology data={globalSectionData} />
+      {/* <GlobalTechnology data={globalSectionData} /> */}
       <PlatformSection data={platformSectionData} />
       <WhatWeDo data={whatWeDoSectionData} />
       <CloudInnovation data={cloudSectionData} />
