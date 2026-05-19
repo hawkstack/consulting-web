@@ -50,13 +50,6 @@ export type PartnerCards = {
   link: string;
 };
 
-export type GlobalSectionData = {
-  highlightText: string;
-  title: string;
-  desc: string;
-  items: PartnerCards[];
-};
-
 export type PlatformFeature = {
   id: number;
   title: string;
@@ -100,7 +93,6 @@ export type HomePageData = {
   heroSectionData: HeroSectionData;
   cloudServicesSectionData: EngineeringDrivenCloudServicesProps;
   productsSectionData: ProductsSectionData;
-  globalSectionData: GlobalSectionData;
   platformSectionData: PlatformSectionData;
   cloudSectionData: CloudSectionData;
   whatWeDoSectionData: WhatWeDoSection;

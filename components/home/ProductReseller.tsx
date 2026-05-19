@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ProductsSectionData } from "@/types/home/home";
-// import { StraightArrow } from "@/components/icons/Home/Home";
 
 type Props = {
   data: ProductsSectionData;
