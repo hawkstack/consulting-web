@@ -33,8 +33,8 @@ export default function ProcessSection({
 }) {
   return (
     <section className="bg-[#FDFDFD] font-lexend">
-      <div className="mx-auto max-w-[1280px] px-4 py-8 sm:px-6 md:px-8 md:py-10 lg:px-12 lg:py-10">
-        <div className="mx-auto max-w-[285px] md:max-w-[640px] lg:max-w-[1160px]">
+      <div className="px-4 py-12 md:px-14 md:py-16 lg:px-20 lg:py-24 xl:px-24 xl:py-20">
+        <div className="mx-auto max-w-[285px] md:max-w-[640px] lg:max-w-7xl">
           <div className="grid grid-cols-1 gap-y-[18px] md:hidden">
             {content.steps.map((step) => (
               <ProcessCard

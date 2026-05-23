@@ -7,10 +7,10 @@ type Props = {
 export default function WhyHawkstack({ content }: Props) {
   
     return (
-        <section className="bg-[#020817] text-white font-lexend py-10 lg:py-18 px-4 md:px-10 xl:px-18 overflow-hidden">
+        <section className="bg-[#020817] text-white font-lexend py-12 md:py-16 lg:py-24 xl:py-20 px-4 md:px-14 lg:px-20 xl:px-24 overflow-hidden">
             
             {/* 1. Operate Smarter Section */}
-            <div className="max-w-[1320px] mx-auto mb-10">
+            <div className="max-w-7xl mx-auto mb-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-6 md:items-start items-center">
                     <div>
                         <h5 className="text-[#00B6CC] text-[13px] text-center md:text-left font-bold mb-4">
@@ -44,7 +44,7 @@ export default function WhyHawkstack({ content }: Props) {
 
             {/* 3. Proven Cloud Operations Model */}
             <div className="mt-20">
-                <div className="max-w-[1200px] mx-auto items-center lg:items-start">
+                <div className="max-w-7xl mx-auto items-center lg:items-start">
                     <h5 className="text-[#A5F3FC] text-[13px] font-bold mb-1 text-center lg:text-left">
                         {content.cloudOperations.subTitle}
                     </h5>

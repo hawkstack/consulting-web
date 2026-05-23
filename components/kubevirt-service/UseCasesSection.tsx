@@ -27,8 +27,8 @@ type UseCasesSectionProps = {
 export default function UseCasesSection({ content }: UseCasesSectionProps) {
   return (
     <section className="bg-[#F8F8F8] font-lexend">
-      <div className="mx-auto max-w-[1280px] px-4 py-12 md:px-8 md:py-14 xl:px-6 xl:py-16">
-        <div className="mx-auto max-w-[1160px]">
+      <div className="px-4 py-12 md:px-14 md:py-16 lg:px-20 lg:py-24 xl:px-24 xl:py-20">
+        <div className="mx-auto max-w-7xl">
           <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#0AB7E8] md:text-[11px]">
             {content.badge}
           </p>

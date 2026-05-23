@@ -34,8 +34,8 @@ type ProcessSectionProps = {
 export default function ProcessSection({ content }: ProcessSectionProps) {
   return (
     <section className="bg-[#020617] font-lexend text-white">
-      <div className="mx-auto max-w-[1280px] px-4 py-10 md:px-8 md:py-12 xl:px-6 xl:py-14">
-        <div className="mx-auto max-w-[1160px]">
+      <div className="px-4 py-12 md:px-14 md:py-16 lg:px-20 lg:py-24 xl:px-24 xl:py-20">
+        <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-[340px] text-center md:max-w-[760px] xl:mx-0 xl:max-w-[780px] xl:text-left">
             <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#59E6FF] md:text-[12px] xl:text-[11px]">
               {content.badge}
