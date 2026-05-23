@@ -36,8 +36,8 @@ export default function OfferSection({
 }) {
   return (
     <section className="bg-[#081126] font-lexend text-white">
-      <div className="mx-auto max-w-[1280px] px-3 py-8 sm:px-6 md:px-8 md:py-12 lg:px-10 lg:py-13">
-        <div className="mx-auto grid max-w-[1160px] gap-8 lg:grid-cols-[470px_minmax(0,1fr)] lg:items-start lg:gap-10">
+      <div className="px-4 py-12 md:px-14 md:py-16 lg:px-20 lg:py-24 xl:px-24 xl:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[470px_minmax(0,1fr)] lg:items-start lg:gap-10">
           <div className="mx-auto max-w-[590px] text-center md:max-w-[690px] lg:mx-0 lg:max-w-[800px] lg:text-left">
             <span className="text-[9px] font-medium uppercase tracking-[0.28em] text-[#2D8CFF] md:text-[10px]">
               {content.badge}

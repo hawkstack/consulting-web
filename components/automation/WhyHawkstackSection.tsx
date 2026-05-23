@@ -104,8 +104,8 @@ export default function WhyHawkstackSection({
 
   return (
     <section className="bg-white font-lexend">
-      <div className="mx-auto max-w-[1280px] px-[11px] py-[18px] sm:px-6 md:px-3 md:py-5 lg:px-12 lg:py-10">
-        <div className="mx-auto rounded-[18px] bg-[linear-gradient(90deg,#CBDAFF_0%,#E4F7FF_52%,#CFE0FF_100%)] px-[16px] py-[24px]  md:max-w-[930px] md:rounded-[16px] md:px-[34px] md:py-[28px] lg:max-w-[1120px] lg:rounded-[22px] lg:px-[20px] lg:py-[18px]">
+      <div className="px-4 py-12 md:px-14 md:py-16 lg:px-20 lg:py-24 xl:px-24 xl:py-20">
+        <div className="mx-auto max-w-7xl rounded-[18px] bg-[linear-gradient(90deg,#CBDAFF_0%,#E4F7FF_52%,#CFE0FF_100%)] px-[16px] py-[24px] md:rounded-[16px] md:px-[34px] md:py-[28px] lg:rounded-[22px] lg:px-[20px] lg:py-[18px]">
           <div className="flex flex-col items-center text-center lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start lg:gap-[26px] lg:text-left">
             <div className="w-full max-w-[380px] md:max-w-[670px] lg:max-w-[700px] lg:pt-[25px]">
               <span className="block text-[10px] font-semibold uppercase tracking-[0.32em] text-[#111111] md:text-[11px] lg:text-[11px]">
