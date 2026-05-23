@@ -7,8 +7,8 @@ export default function WhyHawkStackSection({
 }) {
   return (
     <section className="bg-[#020618] font-lexend text-white">
-      <div className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6 md:px-8 md:py-11 lg:px-12 lg:py-14">
-        <div className="mx-auto max-w-[1116px]">
+      <div className="mx-auto max-w-[1280px] px-4 py-10 md:px-8 md:py-12 xl:px-6 xl:py-14">
+        <div className="mx-auto max-w-[1160px]">
           <div className="mx-auto max-w-[320px] text-center md:max-w-[560px] lg:max-w-[860px]">
             <span className="text-[12px] font-medium uppercase tracking-[0.18em] text-[#008DFF] md:text-[13px] xl:text-[16px]">
               {content.badge}
