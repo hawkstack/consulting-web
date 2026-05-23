@@ -19,13 +19,15 @@ export const Footer = (): JSX.Element => {
       <div className="relative z-10 px-6 md:px-10 lg:px-[83px] py-[53px]">
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
-          <Image
-            src="/images/hawkstack-logo.webp"
-            alt="HawkStack"
-            width={120}
-            height={40}
-            className="bg-white rounded-[10px]"
-          />
+          <Link href="/" className="inline-block">
+            <Image
+              src="/images/hawkstack-logo.webp"
+              alt="HawkStack"
+              width={120}
+              height={40}
+              className="bg-white rounded-[10px]"
+            />
+          </Link>
 
           <div className="flex gap-3">
             {socialIcons.map((icon) => (
@@ -223,11 +225,19 @@ export const Footer = (): JSX.Element => {
 
         {/* Bottom */}
         <div className="mt-16 flex flex-wrap justify-center gap-6 text-blue-400 text-[18px]">
-          {policyLinks.map((item) => (
-            <Link key={item.title} href={item.href}>
-              {item.title}
-            </Link>
-          ))}
+          {policyLinks.map((item) =>
+            item.href ? (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="cursor-pointer"
+              >
+                {item.title}
+              </Link>
+            ) : (
+              <span key={item.title}>{item.title}</span>
+            ),
+          )}
         </div>
 
         <div className="text-center text-sm mt-12 text-gray-300">
