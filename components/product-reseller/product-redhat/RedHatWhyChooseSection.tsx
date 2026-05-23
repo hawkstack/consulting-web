@@ -8,8 +8,8 @@ const RedHatWhyChooseSection = ({ data }: Props) => {
   const { heading, subheading, highlightText, cards } = data;
 
   return (
-    <section className="w-full bg-[#0A0F1C] text-[#FFFFFF] py-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="w-full bg-[#0A0F1C] text-[#FFFFFF] py-16 px-4 md:px-14 lg:px-20 xl:px-24">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold">
           {heading}{" "}
@@ -23,7 +23,7 @@ const RedHatWhyChooseSection = ({ data }: Props) => {
         </p>
 
         {/* Cards */}
-        <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-6 md:px-30 xl:px-0">
+        <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-6">
           {cards.map((card, index) => {
             const isRed = card.variant === "red";
 

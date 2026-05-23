@@ -8,7 +8,7 @@ const RedHatCTASection = ({ data }: Props) => {
   const { heading, description, buttonText } = data;
 
   return (
-    <section className="bg-[#020617] px-4 md:px-20 lg:px-30 xl:px-20 pb-12 md:pb-16">
+    <section className="bg-[#020617] px-4 md:px-14 lg:px-20 xl:px-20 pb-12 md:pb-16">
       <div className="max-w-6xl mx-auto">
         <div
           className="rounded-4xl px-6 py-4 md:px-10 md:py-5 lg:px-14 lg:py-6 xl:px-6 xl:py-12

@@ -19,9 +19,9 @@ const RedHatHeroSection = ({ data }: Props) => {
 
   return (
     <section className="w-full bg-[#ffffff] py-10 md:py-20 lg:py-10 xl:py-4">
-      <div className="max-w-[1300px] mx-auto px-6 lg:px-8 xl:px-0 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-10">
         {/* LEFT CONTENT */}
-        <div className="w-full lg:max-w-[450px] xl:max-w-[500px] md:ml-[14px] lg:ml-[40px] xl:ml-[70px]">
+        <div className="w-full lg:max-w-[450px] xl:max-w-[500px]">
           <h1 className="text-xl md:text-2xl lg:text-[24px] xl:text-[48px] font-bold leading-none text-gray-900 md:w-[200px] lg:w-[200px] xl:w-[400px] text-center md:text-left">
             {title} <span className="text-[#E40000]">{highlightText}</span>
           </h1>

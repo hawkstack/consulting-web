@@ -10,7 +10,7 @@ const RedHatProductsSection = ({ data }: Props) => {
   return (
     <section
       id="redhat-products"
-      className="relative text-white py-16 px-6 lg:px-14 xl:px-16 overflow-hidden"
+      className="relative text-white py-16 px-4 md:px-14 lg:px-20 xl:px-24 overflow-hidden"
     >
       <Image
         src="/images/product-reseller/redhat-bg.webp"
@@ -21,7 +21,7 @@ const RedHatProductsSection = ({ data }: Props) => {
       />
 
       <div className="relative z-10">
-        <div className="max-w-6xl border-b xl:border-y border-gray-800 mx-auto">
+        <div className="max-w-7xl border-b xl:border-y border-gray-800 mx-auto">
           {/* FIXED GRID */}
           <div className="grid gap-12 xl:grid-cols-5">
             {/* LEFT CONTENT */}

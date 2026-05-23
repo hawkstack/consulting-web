@@ -8,8 +8,8 @@ const RedHatOverviewSection = ({ data }: Props) => {
   const { badge, title, highlightTitle, description } = data;
 
   return (
-    <section className="w-full bg-[#f5f5f5] py-16 px-4 md:px-12 lg:px-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 items-center">
+    <section className="w-full bg-[#f5f5f5] py-16 px-4 md:px-14 lg:px-20 xl:px-24">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 items-center">
         {/* LEFT CONTENT */}
         <div>
           <p className="relative inline-block text-sm md:text-xs xl:text-sm font-bold text-[#EE0000] tracking-wide mb-3">
