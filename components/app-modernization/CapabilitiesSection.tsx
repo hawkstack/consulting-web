@@ -45,8 +45,8 @@ export default function CapabilitiesSection({
 
   return (
     <section className="bg-[#F8F9FB] font-lexend">
-      <div className="mx-auto max-w-[1280px] px-4 py-[44px] sm:px-6 md:px-8 md:py-[56px] lg:px-12 lg:py-[64px]">
-        <div className="mx-auto xl:max-w-[1116px] md:max-w-[1116px]  max-w-[300px]  lg:mx-0">
+      <div className="mx-auto max-w-[1280px] px-4 py-12 md:px-8 md:py-14 xl:px-6 xl:py-16">
+        <div className="mx-auto max-w-[300px] md:max-w-[1116px] xl:max-w-[1160px]">
           <div className="mx-auto max-w-[420px] text-center md:max-w-[560px] lg:mx-0 lg:max-w-[560px] lg:text-left">
             <span className="text-[12px] font-medium uppercase tracking-[0.18em] text-[#008DFF] md:text-[13px]">
               {content.badge}

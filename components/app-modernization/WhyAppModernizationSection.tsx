@@ -7,8 +7,8 @@ export default function WhyAppModernizationSection({
 }) {
   return (
     <section className="bg-white font-lexend">
-      <div className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6 md:px-8 md:py-12 lg:px-12 lg:py-14">
-        <div className="grid items-center gap-7 md:gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(320px,480px)] lg:gap-12">
+      <div className="mx-auto max-w-[1280px] px-4 py-12 md:px-8 md:py-14 xl:px-6 xl:py-16">
+        <div className="mx-auto grid max-w-[1160px] items-center gap-7 md:gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(320px,480px)] lg:gap-12">
           <div className="mx-auto flex max-w-[640px] flex-col text-center lg:mx-0 lg:text-left">
             <span className="text-[12px] font-medium uppercase tracking-[0.18em] text-[#008DFF] md:text-[13px]">
               {content.badge}
