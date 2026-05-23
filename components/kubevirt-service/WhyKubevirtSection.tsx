@@ -25,8 +25,8 @@ export default function WhyKubevirtSection({
 }) {
   return (
     <section className="bg-[linear-gradient(180deg,_#F7FBFF_0%,_#FFFFFF_30%,_#FFFFFF_100%)] font-lexend">
-      <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 md:px-8 md:py-14 lg:px-12 xl:py-16">
-        <div className="mx-auto max-w-[1190px]">
+      <div className="px-4 py-12 md:px-14 md:py-16 lg:px-20 lg:py-24 xl:px-24 xl:py-20">
+        <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-[760px] text-center xl:mx-0 xl:max-w-[990px] xl:text-left">
             <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#009FE3] md:text-[11px]">
               {content.badge}
