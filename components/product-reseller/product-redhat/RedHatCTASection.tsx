@@ -27,7 +27,7 @@ const RedHatCTASection = ({ data }: Props) => {
             </div>
 
             {/* Button */}
-            <div>
+            <div className="shrink-0">
               <a
                 href={data.buttonLink}
                 className="px-5 py-2.5 md:px-4 md:py-3 rounded-2xl 

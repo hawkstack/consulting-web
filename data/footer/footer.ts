@@ -132,22 +132,22 @@ export const companyLinks = [
 export const policyLinks = [
   {
     title: "Privacy Policy",
-    href: "/",
+    href: "",
   },
   {
     title: "Terms & Conditions",
-    href: "/",
+    href: "",
   },
   {
     title: "Cookie Policy",
-    href: "/",
+    href: "",
   },
   {
     title: "Terms of Use",
-    href: "/",
+    href: "",
   },
   {
     title: "Code of Conduct",
-    href: "/",
+    href: "",
   },
 ];

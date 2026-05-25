@@ -102,6 +102,7 @@ export const homePageData: HomePageData = {
   },
 
   productsSectionData: {
+    maintitle: "Trusted by Global Technology Leaders",
     title: "HawkStack - Product Resellers, Redefined",
     subtitle:
       "End-to-end cloud and DevOps solutions tailored for modern enterprise needs.",
@@ -114,7 +115,7 @@ export const homePageData: HomePageData = {
         description:
           "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
         logo: "/images/home/product-reseller/Redhat.webp",
-        link: "/product-reseller/redhat",
+        link: "https://catalog.redhat.com/en/partners/detail/hawkstack#overview",
       },
       {
         id: "2",
@@ -124,7 +125,7 @@ export const homePageData: HomePageData = {
         description:
           "Kubernetes and container solutions for scalable and secure cloud environments.",
         logo: "/images/home/product-reseller/Mirantis.webp",
-        link: "/",
+        link: "https://www.mirantis.com/partners/hawkstack/",
       },
       {
         id: "3",
@@ -134,7 +135,7 @@ export const homePageData: HomePageData = {
         description:
           "Cloud-native technologies and frameworks powering modern application development.",
         logo: "/images/home/product-reseller/cncf.webp",
-        link: "/product-reseller/cncf",
+        link: "https://landscape.cncf.io/?group=members&item=cncf-members--silver--hawkstack-member",
       },
       {
         id: "4",
@@ -166,67 +167,77 @@ export const homePageData: HomePageData = {
         logo: "/images/home/product-reseller/google-cloud.webp",
         link: "/",
       },
+      {
+        id: "7",
+        count: "07",
+        category: "CLOUD NATIVE",
+        title: "The Linux Foundation",
+        description:
+          "Empowering open-source innovation through Linux, AI, and cloud-native technologies.",
+        logo: "/images/home/global-leaders/linux-partners.webp",
+        link: "/",
+      },
     ],
   },
 
-  globalSectionData: {
-    highlightText: "Strategic Partnership & Memberships",
-    title: "Trusted by Global Technology leaders",
-    desc: "HawkStack Partners with leading enterprise platform and opensource foundations to deliver trusted clud-native, virtualization, and infrastructure modernization solutions.",
-    items: [
-      {
-        id: 1,
-        partnerName: "Red Hat",
-        status: "Certified Delivery & Support Partner",
-        logo: "/images/home/global-leaders/redhat-partners.webp",
-        tags: [
-          "Cloud & Service Provider",
-          "Training Provider",
-          "Implementation",
-          "Enterprise Support",
-        ],
-        link: "https://catalog.redhat.com/en/partners/detail/hawkstack#overview",
-      },
-      {
-        id: 2,
-        partnerName: "CNCF",
-        status: "Silver member and ecosystem contributor",
-        logo: "/images/home/global-leaders/cncf-partners.webp",
-        tags: [
-          "Silver Member",
-          "Cloud-Native Focus",
-          "KubeVirtStack Initiative",
-          "Opensource Alignmnet",
-        ],
-        link: "https://landscape.cncf.io/?group=members&item=cncf-members--silver--hawkstack-member",
-      },
-      {
-        id: 3,
-        partnerName: "Mirantis",
-        status: "Certified Delivery Partner",
-        logo: "/images/home/global-leaders/mirantis-partners.webp",
-        tags: [
-          "OpenStack Expertise",
-          "Kubernetes Enablement",
-          "Infrastructure Modernization",
-        ],
-        link: "https://www.mirantis.com/partners/hawkstack/",
-      },
-      {
-        id: 4,
-        partnerName: "The Linux Foundation",
-        status: "Silver Partner",
-        logo: "/images/home/global-leaders/linux-partners.webp",
-        tags: [
-          "Silver Partner",
-          "Open Source Leadership",
-          "Enterprise Reliability",
-          "Future-Ready Platforms",
-        ],
-        link: "",
-      },
-    ],
-  },
+  // globalSectionData: {
+  //   highlightText: "Strategic Partnership & Memberships",
+  //   title: "Trusted by Global Technology leaders",
+  //   desc: "HawkStack Partners with leading enterprise platform and opensource foundations to deliver trusted clud-native, virtualization, and infrastructure modernization solutions.",
+  //   items: [
+  //     {
+  //       id: 1,
+  //       partnerName: "Red Hat",
+  //       status: "Certified Delivery & Support Partner",
+  //       logo: "/images/home/global-leaders/redhat-partners.webp",
+  //       tags: [
+  //         "Cloud & Service Provider",
+  //         "Training Provider",
+  //         "Implementation",
+  //         "Enterprise Support",
+  //       ],
+  //       link: "https://catalog.redhat.com/en/partners/detail/hawkstack#overview",
+  //     },
+  //     {
+  //       id: 2,
+  //       partnerName: "CNCF",
+  //       status: "Silver member and ecosystem contributor",
+  //       logo: "/images/home/global-leaders/cncf-partners.webp",
+  //       tags: [
+  //         "Silver Member",
+  //         "Cloud-Native Focus",
+  //         "KubeVirtStack Initiative",
+  //         "Opensource Alignmnet",
+  //       ],
+  //       link: "https://landscape.cncf.io/?group=members&item=cncf-members--silver--hawkstack-member",
+  //     },
+  //     {
+  //       id: 3,
+  //       partnerName: "Mirantis",
+  //       status: "Certified Delivery Partner",
+  //       logo: "/images/home/global-leaders/mirantis-partners.webp",
+  //       tags: [
+  //         "OpenStack Expertise",
+  //         "Kubernetes Enablement",
+  //         "Infrastructure Modernization",
+  //       ],
+  //       link: "https://www.mirantis.com/partners/hawkstack/",
+  //     },
+  //     {
+  //       id: 4,
+  //       partnerName: "The Linux Foundation",
+  //       status: "Silver Partner",
+  //       logo: "/images/home/global-leaders/linux-partners.webp",
+  //       tags: [
+  //         "Silver Partner",
+  //         "Open Source Leadership",
+  //         "Enterprise Reliability",
+  //         "Future-Ready Platforms",
+  //       ],
+  //       link: "",
+  //     },
+  //   ],
+  // },
 
   platformSectionData: {
     bgImage: "/images/home/Border-bg.webp",
