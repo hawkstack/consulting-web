@@ -9,8 +9,8 @@ export default function ProductCncfKubeVirtPromoSection({
 }: ProductCncfKubeVirtPromoSectionProps) {
   return (
     <>
-      <section className="bg-white px-4 py-8 font-lexend text-[#050918] md:px-9 md:py-6 lg:px-9 lg:py-6">
-        <div className="mx-auto grid max-w-[1200px] overflow-hidden rounded-[30px] bg-[#F3F7FF] px-7 py-9 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] md:min-h-[264px] md:grid-cols-[minmax(0,1fr)_minmax(320px,1fr)] md:items-center md:gap-10 md:rounded-[38px] md:px-10 md:py-8 lg:min-h-[265px] lg:grid-cols-[minmax(0,1fr)_minmax(360px,1fr)] lg:gap-14 lg:px-[42px] xl:grid-cols-[minmax(0,1fr)_minmax(520px,1fr)] xl:px-[58px]">
+      <section className="bg-white px-4 py-8 font-lexend text-[#050918] sm:px-6 md:px-8 md:py-6 lg:px-12 lg:py-6 xl:px-24">
+        <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[30px] bg-[#F3F7FF] px-7 py-9 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] md:min-h-[264px] md:grid-cols-[minmax(0,1fr)_minmax(320px,1fr)] md:items-center md:gap-10 md:rounded-[38px] md:px-10 md:py-8 lg:min-h-[265px] lg:grid-cols-[minmax(0,1fr)_minmax(360px,1fr)] lg:gap-14 lg:px-[42px] xl:grid-cols-[minmax(0,1fr)_minmax(520px,1fr)] xl:px-[58px]">
           <div className="mx-auto max-w-[310px] text-center md:mx-0 md:max-w-[430px] md:text-left lg:max-w-[500px]">
             <h2 className="text-[23px] font-semibold leading-[1.1] tracking-normal md:text-[24px] lg:text-[40px]">
               {content.title}
