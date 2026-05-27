@@ -59,7 +59,7 @@ export default function ProductCncfPlatformConfidenceSection({
 }: ProductCncfPlatformConfidenceSectionProps) {
   return (
     <section className="relative overflow-hidden bg-[#050A17] font-lexend text-white">
-      <div className="relative mx-auto max-w-[948px] px-6 py-5 sm:px-8 md:px-10 md:py-16 lg:max-w-[1220px] lg:px-14 lg:py-10">
+      <div className="relative mx-auto max-w-7xl px-4 py-5 sm:px-6 md:px-8 md:py-16 lg:px-12 lg:py-10 xl:px-24">
         <div className="grid gap-9 md:grid-cols-[minmax(0,1fr)_minmax(380px,340px)] md:items-start md:justify-between md:gap-8 lg:grid-cols-[minmax(0,460px)_minmax(380px,400px)] lg:gap-12 xl:grid-cols-[minmax(0,620px)_minmax(460px,1fr)] xl:gap-16">
           <div className="relative z-10">
             <h2 className="mx-auto max-w-[230px] text-center text-[18px] font-semibold leading-[1.06] tracking-[-0.02em] sm:max-w-[280px] sm:text-[22px] md:mx-0 md:max-w-[340px] md:text-left md:text-[28px] lg:max-w-[430px] xl:max-w-[480px] lg:text-[42px] xl:text-[48px]">

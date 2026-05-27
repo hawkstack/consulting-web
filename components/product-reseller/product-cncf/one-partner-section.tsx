@@ -9,7 +9,7 @@ export default function ProductCncfOnePartnerSection({
 }: ProductCncfOnePartnerSectionProps) {
   return (
     <section className="bg-[#080E1D] font-lexend text-white">
-      <div className="mx-auto grid max-w-[1200px] gap-8 px-8 py-6 md:grid-cols-[minmax(300px,332px)_minmax(0,1fr)] md:items-center md:gap-12 md:px-12 md:py-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-10 lg:px-[7px] lg:py-16">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-6 sm:px-6 md:grid-cols-[minmax(300px,332px)_minmax(0,1fr)] md:items-center md:gap-12 md:px-8 md:py-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-10 lg:px-12 lg:py-16 xl:px-24">
         <div className="order-2 grid gap-3 md:order-1 md:gap-3 lg:gap-4">
           {content.cards.map((card) => (
             <article

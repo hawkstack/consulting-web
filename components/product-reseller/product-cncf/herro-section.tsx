@@ -10,7 +10,7 @@ export default function ProductCncfHeroSection({
 }: ProductCncfHeroProps) {
   return (
     <section className="bg-white font-lexend">
-      <div className="mx-auto grid max-w-[1300px] items-center gap-4 px-5 py-8 md:min-h-[300px] md:grid-cols-[minmax(0,1fr)_minmax(260px,330px)] md:gap-6 md:px-10 lg:min-h-[360px] lg:grid-cols-[minmax(0,1fr)_minmax(420px,400px)] lg:gap-8 lg:px-[76px] lg:py-12">
+      <div className="mx-auto grid max-w-7xl items-center gap-4 px-4 py-8 sm:px-6 md:min-h-[300px] md:grid-cols-[minmax(0,1fr)_minmax(260px,330px)] md:gap-6 md:px-8 lg:min-h-[360px] lg:grid-cols-[minmax(0,1fr)_minmax(420px,400px)] lg:gap-8 lg:px-12 lg:py-12 xl:px-24">
         <div className="mx-auto max-w-[640px] text-center md:mx-0 md:text-left">
           <h1 className="text-[22px] font-semibold leading-[1.18] tracking-normal text-[#030711] sm:text-[28px] md:text-[28px] md:leading-[1.08] lg:text-[44px] xl:text-[48px]">
             {content.titleLines.map((line, index) => (
