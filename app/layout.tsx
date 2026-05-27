@@ -20,9 +20,11 @@ export default function RootLayout({
       <body
         className={`${lexend.variable} min-h-screen bg-white text-slate-900 antialiased font-lexend`}
       >
+        <div className="mx-auto max-w-[1540px]">
         <Header />
         <main>{children}</main>
         <Footer />
+          </div>
       </body>
     </html>
   );
