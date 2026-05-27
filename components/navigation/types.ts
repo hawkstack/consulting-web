@@ -21,7 +21,7 @@ export type OfferingsMenuFeature = {
   title: string;
   description: string;
   image: string;
-  href?: string;
+  primaryHref: string;
 };
 
 export type OfferingsMenuContent = {

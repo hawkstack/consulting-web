@@ -63,7 +63,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
     description:
       "Explore KubeVirtStack solutions designed to unify virtualization and Kubernetes, enabling scalable, secure, and cloud-native infrastructure.",
     image: "/images/products/KubeVirtStack-AI.webp",
-    href: "/coming-soon",
+    primaryHref: "https://kubevirtstack.com",
   },
   resellers: [
     {
