@@ -42,7 +42,7 @@ export default function WhatWeDo({ data }: Props) {
               <div className="hidden lg:block absolute top-8 -bottom-12 left-2/3 w-px bg-[#A4D6EB]" />
               
               {/* Horizontal lines */}
-              <div className="absolute left-1/2 -translate-x-1/2 w-screen h-px bg-[#A4D6EB] " />
+              <div className="absolute left-1/2 -translate-x-1/2 w-[1540px] h-px bg-[#A4D6EB] " />
 
               <div className="relative aspect-[16/10] overflow-hidden mt-10 mb-6">
                 <Image 
