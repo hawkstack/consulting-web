@@ -10,7 +10,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
   return (
     <section className="bg-[#FFFFFF]">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-8 lg:px-[42px] xl:px-[72px] py-10 md:py-14 lg:py-16">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-8 lg:px-[42px] xl:px-[72px] py-10 md:py-14 lg:py-20">
         <div className="flex flex-col-reverse items-center justify-between gap-10 md:flex-row md:gap-8 lg:gap-4 xl:gap-4">
           {/* Left Content */}
           <div className="flex-1 text-center md:text-left">
