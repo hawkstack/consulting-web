@@ -49,7 +49,7 @@ export const products: MegaItem[] = [
     description:
       "A cloud-native technology provider that delivers flexible Kubernetes and container solutions to run modern infrastructure at enterprise scale.",
     image: "/images/products/Mirantis.webp",
-    href:"productresellers/mirantis",
+    href: "productresellers/mirantis",
   },
 ];
 
@@ -217,7 +217,7 @@ export const company: MegaItem[] = [
     description:
       "HawkStack builds, modernizes, and operates scalable cloud-native platforms and applications",
     image: "/images/company/About-Us.webp",
-    href: "/about-us"
+    href: "/about-us",
     // href: "`${process.env.NEXT_PUBLIC_TRAINING_URL}/about`",
     // external: true,
   },
@@ -248,6 +248,15 @@ export const company: MegaItem[] = [
       "Let's connect to discuss how we can help you build and scale modern cloud solutions.",
     image: "/images/company/Contact-Us.webp",
     href: "/contact-us",
+  },
+  {
+    id: "hire from us",
+    label: "Hire from us",
+    title: "Hire from us",
+    description:
+      "Access skilled professionals ready to drive innovation, productivity, and growth for your business.",
+    image: "/images/company/Hire-from-us.webp",
+    href: "/hire-from-us",
   },
   // TODO
   // {
