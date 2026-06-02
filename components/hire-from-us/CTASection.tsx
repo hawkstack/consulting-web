@@ -1,4 +1,12 @@
-export default function CTASection() {
+import { CTASectionData } from "@/app/types/hire-from-us/hire-from-us";
+
+interface CTASectionProps {
+  data: CTASectionData;
+}
+
+export default function CTASection({ data }: CTASectionProps) {
+  const { title, description, email, website, buttonText } = data;
+
   return (
     <section className="w-full bg-[#F5F5F5] py-8 lg:bg-white lg:py-10">
       <div className="mx-auto w-full lg:max-w-[1000px] xl:max-w-[1230px] px-4 md:px-8">
@@ -38,15 +46,13 @@ export default function CTASection() {
                 xl:leading-[60px]
               "
             >
-              Looking for your next infrastructure
-              <br />
-              superstar?
+              {title}
             </h2>
 
             <p
               className="
                 mt-4
-                mx-auto
+                mx-auto lg:mx-0
                 text-[14px]
                 leading-[22px]
                 text-[#555555]
@@ -62,9 +68,7 @@ export default function CTASection() {
                 xl:leading-[28px]
               "
             >
-              Stop filtering keyword-stuffed resumes. Start hiring vetted
-              open-source practitioners, DevOps engineers, cloud architects and
-              infrastructure specialists ready to contribute from day one.
+              {description}
             </p>
 
             <div
@@ -81,7 +85,7 @@ export default function CTASection() {
               "
             >
               <a
-                href="mailto:hr@hawkstack.com"
+                href={`mailto:${email}`}
                 className="
                   text-[13px]
                   font-semibold
@@ -104,11 +108,11 @@ export default function CTASection() {
                   lg:justify-center
                 "
               >
-                hr@hawkstack.com
+                {email}
               </a>
 
               <a
-                href="https://www.hawkstack.com"
+                href={`https://${website}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -133,7 +137,7 @@ export default function CTASection() {
                   lg:justify-center
                 "
               >
-                www.hawkstack.com
+                {website}
               </a>
             </div>
 
@@ -154,7 +158,7 @@ export default function CTASection() {
                 lg:hidden
               "
             >
-              Contact US
+              {buttonText}
             </button>
           </div>
 
@@ -177,7 +181,7 @@ export default function CTASection() {
               transition-colors
             "
           >
-            Contact Us
+            {buttonText}
           </button>
         </div>
       </div>
