@@ -5,7 +5,10 @@ import RiskReductionSection from "@/components/hire-from-us/RiskReductionSection
 import ServicesOverviewSection from "@/components/hire-from-us/ServicesOverviewSection";
 import SolutionsShowcaseSection from "@/components/hire-from-us/SolutionsShowcaseSection";
 import StatsAndBenefitsSection from "@/components/hire-from-us/StatsAndBenefitsSection";
-import { heroSectionData } from "@/data/hire-from-us/hire-from-us";
+import {
+  ctaSectionData,
+  heroSectionData,
+} from "@/data/hire-from-us/hire-from-us";
 
 const page = () => {
   return (
@@ -16,7 +19,7 @@ const page = () => {
       <SolutionsShowcaseSection />
       <StatsAndBenefitsSection />
       <RiskReductionSection />
-      <CTASection />
+      <CTASection data={ctaSectionData} />
     </div>
   );
 };
