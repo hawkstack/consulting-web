@@ -1,7 +1,7 @@
 export default function CTASection() {
   return (
     <section className="w-full bg-[#F5F5F5] py-8 lg:bg-white lg:py-10">
-      <div className="mx-auto w-full lg:max-w-[1000px] xl:max-w-[1220px] px-4 md:px-8">
+      <div className="mx-auto w-full lg:max-w-[1000px] xl:max-w-[1230px] px-4 md:px-8">
         <div
           className="
             rounded-[34px]
