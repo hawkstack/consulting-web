@@ -8,6 +8,7 @@ import StatsAndBenefitsSection from "@/components/hire-from-us/StatsAndBenefitsS
 import {
   ctaSectionData,
   heroSectionData,
+  solutionsShowcaseData,
 } from "@/data/hire-from-us/hire-from-us";
 
 const page = () => {
@@ -16,7 +17,7 @@ const page = () => {
       <HeroSection data={heroSectionData} />
       <HiringRequestFormSection />
       <ServicesOverviewSection />
-      <SolutionsShowcaseSection />
+      <SolutionsShowcaseSection data={solutionsShowcaseData} />
       <StatsAndBenefitsSection />
       <RiskReductionSection />
       <CTASection data={ctaSectionData} />

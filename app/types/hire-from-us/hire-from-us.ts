@@ -14,3 +14,18 @@ export interface CTASectionData {
   website: string;
   buttonText: string;
 }
+
+// Showcase Section
+export interface SolutionCard {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface SolutionsShowcaseSectionData {
+  tag: string;
+  title: string;
+  description: string;
+  solutions: SolutionCard[];
+}
