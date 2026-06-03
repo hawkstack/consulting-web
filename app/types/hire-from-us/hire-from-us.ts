@@ -29,3 +29,16 @@ export interface SolutionsShowcaseSectionData {
   description: string;
   solutions: SolutionCard[];
 }
+
+// Risk Reduction Section
+export interface RiskCard {
+  title: string;
+  items: string[];
+  variant: "light" | "dark";
+}
+
+export interface RiskReductionSectionData {
+  badge: string;
+  title: string;
+  cards: RiskCard[];
+}

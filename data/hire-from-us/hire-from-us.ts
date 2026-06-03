@@ -2,6 +2,7 @@
 import {
   CTASectionData,
   HeroSectionData,
+  RiskReductionSectionData,
   SolutionsShowcaseSectionData,
 } from "@/app/types/hire-from-us/hire-from-us";
 
@@ -76,6 +77,37 @@ export const solutionsShowcaseData: SolutionsShowcaseSectionData = {
       title: "Reduce Hiring Cost",
       description:
         "Access curated profiles and reduce time spent on irrelevant resumes and retraining.",
+    },
+  ],
+};
+
+// Risk Reduction Section
+
+export const riskReductionSectionData: RiskReductionSectionData = {
+  badge: "BUSINESS IMPACT",
+  title: "Reduce hiring risk and accelerate delivery",
+  cards: [
+    {
+      title: "The risks we help avoid",
+      variant: "light",
+      items: [
+        "Delayed deployments",
+        "Security vulnerabilities",
+        "Downtime risks",
+        "Operational inefficiencies",
+        "Project slowdowns",
+      ],
+    },
+    {
+      title: "What your team gains",
+      variant: "dark",
+      items: [
+        "Reduced onboarding time",
+        "Improved deployment speed",
+        "Higher operational reliability",
+        "Faster cloud transformation",
+        "Better engineering productivity",
+      ],
     },
   ],
 };

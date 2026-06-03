@@ -14,7 +14,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
         <div className="flex flex-col-reverse items-center justify-between gap-10 md:flex-row md:gap-8 lg:gap-4 xl:gap-4">
           {/* Left Content */}
           <div className="flex-1 text-center md:text-left">
-            <h1 className="max-w-[720px] text-[32px] font-bold leading-[38px] text-[#0048FF] md:text-[30px] lg:leading-[46px] lg:text-[34px] xl:text-[44px] xl:leading-[52px] xl:whitespace-nowrap">
+            <h1 className="max-w-[720px] text-[24px] font-bold leading-[30px] md:leading-[38px] text-[#0048FF] md:text-[30px] lg:leading-[46px] lg:text-[34px] xl:text-[44px] xl:leading-[52px] xl:whitespace-nowrap">
               {title}
             </h1>
 
