@@ -8,7 +8,7 @@ export default function CTASection({ data }: CTASectionProps) {
   const { title, description, email, website, buttonText } = data;
 
   return (
-    <section className="w-full bg-[#F5F5F5] py-8 lg:bg-white lg:py-10">
+    <section className="w-full bg-[#F5F5F5] py-8 lg:bg-white lg:py-10 xl:py-14">
       <div className="mx-auto w-full lg:max-w-[1000px] xl:max-w-[1230px] px-4 md:px-8">
         <div
           className="

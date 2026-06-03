@@ -11,7 +11,7 @@ export default function SolutionsShowcaseSection({
   const { tag, title, description, solutions } = data;
 
   return (
-    <section className="px-4 md:px-6 lg:px-0 py-8 lg:py-10">
+    <section className="px-4 md:px-6 lg:px-0 py-8 lg:py-10 xl:py-14">
       <div className="mx-auto lg:max-w-[940px] xl:max-w-[1160px] rounded-[28px] bg-[#001437] px-5 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">
         <div className="mx-auto max-w-[720px] text-center xl:mx-0 lg:max-w-[650px] xl:max-w-[1010px] xl:text-left">
           <p className="mb-3 text-[10px] lg:text-[12px] xl:text-[14px] font-semibold uppercase tracking-[2px] text-[#5F8CFF]">

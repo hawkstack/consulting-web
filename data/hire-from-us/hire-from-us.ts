@@ -4,6 +4,7 @@ import {
   HeroSectionData,
   RiskReductionSectionData,
   SolutionsShowcaseSectionData,
+  StatsAndBenefitsSectionData,
 } from "@/app/types/hire-from-us/hire-from-us";
 
 export const heroSectionData: HeroSectionData = {
@@ -108,6 +109,36 @@ export const riskReductionSectionData: RiskReductionSectionData = {
         "Faster cloud transformation",
         "Better engineering productivity",
       ],
+    },
+  ],
+};
+
+// stats and benefits section
+
+export const statsAndBenefitsSectionData: StatsAndBenefitsSectionData = {
+  badge: "OUR HIRING PROCESS",
+  statNumber: "3",
+  title: "Fast, simple and efficient recruitment",
+  description:
+    "No unnecessary delays. No irrelevant profiles. No hidden processes.",
+  steps: [
+    {
+      stepNumber: "01",
+      title: "Share Your Requirements",
+      description:
+        "Tell us your technology stack, team structure, project goals, experience needs and work culture.",
+    },
+    {
+      stepNumber: "02",
+      title: "Receive Curated Candidate Matches",
+      description:
+        "We shortlist professionals based on technical expertise, domain alignment, communication readiness and organizational fit.",
+    },
+    {
+      stepNumber: "03",
+      title: "Interview & Onboard",
+      description:
+        "You conduct your internal evaluation while Hawkstack supports coordination and onboarding assistance.",
     },
   ],
 };

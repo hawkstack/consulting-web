@@ -42,3 +42,18 @@ export interface RiskReductionSectionData {
   title: string;
   cards: RiskCard[];
 }
+
+// stats and benefits section
+export interface HiringStep {
+  stepNumber: string;
+  title: string;
+  description: string;
+}
+
+export interface StatsAndBenefitsSectionData {
+  badge: string;
+  statNumber: string;
+  title: string;
+  description: string;
+  steps: HiringStep[];
+}

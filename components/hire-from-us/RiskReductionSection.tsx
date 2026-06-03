@@ -8,7 +8,7 @@ export default function RiskReductionSection({
   data,
 }: RiskReductionSectionProps) {
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-20 xl:py-14">
       <div className="mx-auto w-full max-w-[1240px] px-5 md:px-8 lg:px-10">
         <div className="flex flex-col items-center text-center xl:items-start xl:text-left">
           <span className="mb-3 text-[10px] font-bold uppercase tracking-[2px] text-[#0048FF] md:text-xs">
