@@ -57,3 +57,18 @@ export interface StatsAndBenefitsSectionData {
   description: string;
   steps: HiringStep[];
 }
+
+// Services Overview Section
+export interface TalentCategory {
+  title: string;
+  description: string;
+  skills: string[];
+}
+
+export interface ServicesOverviewSectionData {
+  title: string;
+  description: string;
+  badge: string;
+  categories: TalentCategory[];
+  technologies: string[];
+}

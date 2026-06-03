@@ -9,6 +9,7 @@ import {
   ctaSectionData,
   heroSectionData,
   riskReductionSectionData,
+  servicesOverviewSectionData,
   solutionsShowcaseData,
   statsAndBenefitsSectionData,
 } from "@/data/hire-from-us/hire-from-us";
@@ -18,7 +19,7 @@ const page = () => {
     <div>
       <HeroSection data={heroSectionData} />
       <HiringRequestFormSection />
-      <ServicesOverviewSection />
+      <ServicesOverviewSection data={servicesOverviewSectionData} />
       <SolutionsShowcaseSection data={solutionsShowcaseData} />
       <StatsAndBenefitsSection data={statsAndBenefitsSectionData} />
       <RiskReductionSection data={riskReductionSectionData} />

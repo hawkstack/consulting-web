@@ -3,8 +3,10 @@ import {
   CTASectionData,
   HeroSectionData,
   RiskReductionSectionData,
+  ServicesOverviewSectionData,
   SolutionsShowcaseSectionData,
   StatsAndBenefitsSectionData,
+  TalentOfferSectionData,
 } from "@/app/types/hire-from-us/hire-from-us";
 
 export const heroSectionData: HeroSectionData = {
@@ -140,5 +142,68 @@ export const statsAndBenefitsSectionData: StatsAndBenefitsSectionData = {
       description:
         "You conduct your internal evaluation while Hawkstack supports coordination and onboarding assistance.",
     },
+  ],
+};
+
+// Services Overview Section
+
+export const servicesOverviewSectionData: ServicesOverviewSectionData = {
+  title: "Talent we offer",
+  description:
+    "Choose from verified talent categories mapped to modern infrastructure, automation and cloud transformation needs.",
+
+  badge: "TALENT CATEGORIES",
+
+  categories: [
+    {
+      title: "Linux & Cloud Administrators",
+      description:
+        "Best for hybrid-cloud management, enterprise server administration and infrastructure support.",
+      skills: [
+        "RHEL 10",
+        "Bash scripting",
+        "LVM & networking",
+        "System hardening",
+      ],
+    },
+    {
+      title: "DevOps & Automation Engineers",
+      description:
+        "Best for DevOps transformation, automation and release pipeline optimization.",
+      skills: [
+        "Ansible Automation",
+        "Git workflows",
+        "CI/CD pipelines",
+        "Infrastructure as Code",
+      ],
+    },
+    {
+      title: "Cloud-Native & Kubernetes Architects",
+      description:
+        "Best for microservices, containerized deployment and Kubernetes platform operations.",
+      skills: ["OpenShift", "Kubernetes", "Docker", "Service mesh"],
+    },
+    {
+      title: "Enterprise Cloud Engineers",
+      description:
+        "Best for private cloud deployments, virtualization and enterprise cloud transformation.",
+      skills: [
+        "OpenStack",
+        "KVM Virtualization",
+        "Ceph Storage",
+        "SDN technologies",
+      ],
+    },
+  ],
+
+  technologies: [
+    "Red Hat Enterprise Linux",
+    "OpenShift",
+    "Ansible",
+    "Kubernetes",
+    "OpenStack",
+    "Docker",
+    "Ceph",
+    "KVM",
   ],
 };
