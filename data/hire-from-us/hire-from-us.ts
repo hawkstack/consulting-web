@@ -6,7 +6,6 @@ import {
   ServicesOverviewSectionData,
   SolutionsShowcaseSectionData,
   StatsAndBenefitsSectionData,
-  TalentOfferSectionData,
 } from "@/app/types/hire-from-us/hire-from-us";
 
 export const heroSectionData: HeroSectionData = {
