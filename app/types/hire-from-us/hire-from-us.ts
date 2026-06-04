@@ -72,3 +72,18 @@ export interface ServicesOverviewSectionData {
   categories: TalentCategory[];
   technologies: string[];
 }
+
+// Hiring Request Form Section
+export interface HiringRequestFormField {
+  id: string;
+  name: string;
+  placeholder: string;
+  type?: string;
+  fullWidth?: boolean;
+}
+
+export interface HiringRequestFormProps {
+  title: string;
+  description: string;
+  fields: HiringRequestFormField[];
+}
