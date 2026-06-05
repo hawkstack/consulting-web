@@ -2,6 +2,7 @@
 import {
   CTASectionData,
   HeroSectionData,
+  HiringRequestFormProps,
   RiskReductionSectionData,
   ServicesOverviewSectionData,
   SolutionsShowcaseSectionData,
@@ -204,5 +205,73 @@ export const servicesOverviewSectionData: ServicesOverviewSectionData = {
     "Docker",
     "Ceph",
     "KVM",
+  ],
+};
+
+// Hire request form section
+
+export const hiringRequestFormData: HiringRequestFormProps = {
+  title: "Hire Pre-Qualified Engineers",
+  description:
+    "Share your requirement and our team will connect you with verified infrastructure talent.",
+
+  fields: [
+    {
+      id: "firstName",
+      name: "firstName",
+      placeholder: "First name",
+    },
+    {
+      id: "lastName",
+      name: "lastName",
+      placeholder: "Last name",
+    },
+    {
+      id: "contactNumber",
+      name: "contactNumber",
+      placeholder: "+91 00000 00000",
+      fullWidth: true,
+    },
+    {
+      id: "company",
+      name: "company",
+      placeholder: "Company",
+      fullWidth: true,
+    },
+    {
+      id: "companyWebsite",
+      name: "companyWebsite",
+      placeholder: "Company website",
+      fullWidth: true,
+    },
+    {
+      id: "email",
+      name: "email",
+      placeholder: "Email",
+      type: "email",
+      fullWidth: true,
+    },
+    {
+      id: "desiredRole",
+      name: "desiredRole",
+      placeholder: "Desired role",
+      fullWidth: true,
+    },
+    {
+      id: "hiringManager",
+      name: "hiringManager",
+      placeholder: "HM Manager / CTO",
+    },
+    {
+      id: "experience",
+      name: "experience",
+      placeholder: "Ex: 5",
+    },
+    {
+      id: "skills",
+      name: "skills",
+      placeholder: "UI/UX, DevOps Engineer, Cloud Architect",
+      fullWidth: true,
+    },
   ],
 };
