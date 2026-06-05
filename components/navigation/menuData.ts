@@ -88,7 +88,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Kubernetes and container solutions for scalable and secure cloud environments.",
       image: "/images/home/product-reseller/Mirantis.webp",
-      href: "/get-started",
+      href: "/coming-soon",
     },
     // {
     //   id: "lenovo",
@@ -104,7 +104,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",
       image: "/images/home/product-reseller/AWS.webp",
-      href: "/get-started",
+      href: "/coming-soon",
     },
     {
       id: "gcp",
@@ -112,7 +112,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Google Cloud solutions for data analytics, AI, and cloud-native innovation.",
       image: "/images/home/product-reseller/google-cloud.webp",
-      href: "/get-started",
+      href: "/coming-soon",
     },
     {
       id: "azure",
@@ -120,7 +120,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration.",
       image: "/images/home/product-reseller/Azure.webp",
-      href: "/get-started",
+      href: "/coming-soon",
     },
     // {
     //   id: "dell",
