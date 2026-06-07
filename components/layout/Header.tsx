@@ -23,6 +23,8 @@ export function Header(): JSX.Element {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const items = openMenu ? menuMap[openMenu] : null;
+  const trainingUrl =
+    process.env.NEXT_PUBLIC_TRAINING_URL ?? "https://training.hawkstack.com/";
 
   return (
     <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F] font-lexend">
@@ -41,8 +43,7 @@ export function Header(): JSX.Element {
           xl:rounded-[9px]
           border border-white bg-white
           flex items-center justify-center
-        "
-          >
+        ">
             <Image
               src="/images/hawkstack-logo.webp"
               alt="HawkStack Logo"
@@ -75,8 +76,7 @@ export function Header(): JSX.Element {
                   setOpenMenu(key);
                   setActiveItem(menuMap[key]?.[0] || null);
                 }}
-                className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
-              >
+                className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize">
                 {label}
               </li>
             );
@@ -86,11 +86,10 @@ export function Header(): JSX.Element {
         {/* DESKTOP CTA */}
         <div className="ml-10 hidden lg:block">
           <a
-            href={process.env.NEXT_PUBLIC_TRAINING_URL as string}
+            href={trainingUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] border border-white text-white"
-          >
+            className="inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] border border-white text-white">
             Training
           </a>
         </div>
@@ -99,8 +98,7 @@ export function Header(): JSX.Element {
         <button
           className="ml-auto lg:hidden text-white text-2xl"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle Menu"
-        >
+          aria-label="Toggle Menu">
           {mobileOpen ? "✕" : "☰"}
         </button>
 
@@ -109,8 +107,7 @@ export function Header(): JSX.Element {
           <div
             className="absolute left-1/2 top-full -translate-x-1/2 hidden lg:block"
             onMouseEnter={() => setOpenMenu(openMenu)}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
+            onMouseLeave={() => setOpenMenu(null)}>
             <MegaMenu
               items={items}
               activeItem={activeItem}
@@ -142,8 +139,7 @@ export function Header(): JSX.Element {
                           : `/${item.toLowerCase()}`
                     }
                     onClick={() => setMobileOpen(false)}
-                    className="text-white text-[16px]"
-                  >
+                    className="text-white text-[16px]">
                     {item}
                   </Link>
                 </li>
@@ -152,12 +148,11 @@ export function Header(): JSX.Element {
           </ul>
 
           <a
-            href={process.env.NEXT_PUBLIC_TRAINING_URL as string}
+            href={trainingUrl}
             target="_blank"
             rel="noreferrer"
             onClick={() => setMobileOpen(false)}
-            className="mt-6 inline-flex items-center justify-center w-full h-[44px] rounded-[14px] border border-white text-white text-[14px]"
-          >
+            className="mt-6 inline-flex items-center justify-center w-full h-[44px] rounded-[14px] border border-white text-white text-[14px]">
             Training
           </a>
         </div>
