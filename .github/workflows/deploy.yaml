@@ -96,6 +96,11 @@ jobs:
 
             cd $APP_DIR
 
+            echo "Loading environment variables..."
+            set -a
+            source /var/www/shared/consulting-web.env
+            set +a
+
             echo "Installing production dependencies..."
             npm install --omit=dev
 
