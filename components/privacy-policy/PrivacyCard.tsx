@@ -42,7 +42,7 @@ export default function PrivacyCard({
         className="flex lg:hidden items-center justify-between cursor-pointer"
       >
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-full bg-[#1e50da] flex items-center justify-center text-white text-[11px] font-semibold">
+          <div className="w-7 h-7 rounded-full bg-[#1e50da] flex items-center justify-center text-white text-[11px] font-semibold shrink-0">
             {index}
           </div>
 
