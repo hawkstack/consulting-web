@@ -36,6 +36,7 @@ jobs:
       - name: Build application
         env:
           NEXT_PUBLIC_TRAINING_URL: ${{ github.event.inputs.environment == 'prod' && secrets.NEXT_PUBLIC_TRAINING_URL_PROD || secrets.NEXT_PUBLIC_TRAINING_URL_TEST }}
+          NEXT_PUBLIC_API_BASE_URL: ${{ github.event.inputs.environment == 'prod' && secrets.NEXT_PUBLIC_API_BASE_URL_PROD || secrets.NEXT_PUBLIC_API_BASE_URL_TEST }}
         run: npm run build
 
       # Prepare deploy package
