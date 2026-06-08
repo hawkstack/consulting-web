@@ -32,8 +32,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Build app
+      # 🔥 Build app with ENV
       - name: Build application
+        env:
+          NEXT_PUBLIC_TRAINING_URL: ${{ github.event.inputs.environment == 'prod' && secrets.NEXT_PUBLIC_TRAINING_URL_PROD || secrets.NEXT_PUBLIC_TRAINING_URL_TEST }}
         run: npm run build
 
       # Prepare deploy package
@@ -46,7 +48,7 @@ jobs:
           cp package.json deploy/
           cp next.config.* deploy/
 
-      # Copy entire folderto ec2 (NOT deploy/*)
+      # Copy files to EC2
       - name: Copy files to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -97,29 +99,29 @@ jobs:
             cd $APP_DIR
 
             echo "Loading environment variables..."
+
+            if [ ! -f "/var/www/shared/consulting-web.env" ]; then
+              echo "ERROR: env file missing"
+              exit 1
+            fi
+
             set -a
             source /var/www/shared/consulting-web.env
             set +a
 
             echo "Installing production dependencies..."
-            npm install --omit=dev
+            npm ci --omit=dev
 
             echo "Restarting PM2..."
 
-            # Load nvm properly
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
             nvm use 20
 
-            # Get exact node path
             NODE_PATH=$(dirname $(which node))
 
-            echo "Node path: $NODE_PATH"
-            echo "PM2 path: $NODE_PATH/pm2"
-
-            # Use absolute pm2 path (fixes PATH issue completely)
-            $NODE_PATH/pm2 reload consulting-web || $NODE_PATH/pm2 start npm --name "consulting-web" -- start
+            $NODE_PATH/pm2 reload consulting-web || \
+            $NODE_PATH/pm2 start npm --name "consulting-web" -- start
 
             $NODE_PATH/pm2 save
 
