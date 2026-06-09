@@ -167,16 +167,16 @@ export const homePageData: HomePageData = {
         logo: "/images/home/product-reseller/google-cloud.webp",
         link: "/",
       },
-      {
-        id: "7",
-        count: "07",
-        category: "CLOUD NATIVE",
-        title: "The Linux Foundation",
-        description:
-          "Empowering open-source innovation through Linux, AI, and cloud-native technologies.",
-        logo: "/images/home/global-leaders/linux-partners.webp",
-        link: "/",
-      },
+      // {
+      //   id: "7",
+      //   count: "07",
+      //   category: "CLOUD NATIVE",
+      //   title: "The Linux Foundation",
+      //   description:
+      //     "Empowering open-source innovation through Linux, AI, and cloud-native technologies.",
+      //   logo: "/images/home/global-leaders/linux-partners.webp",
+      //   link: "/",
+      // },
     ],
   },
 
