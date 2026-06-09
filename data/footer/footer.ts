@@ -132,7 +132,7 @@ export const companyLinks = [
 export const policyLinks = [
   {
     title: "Privacy Policy",
-    href: "",
+    href: "/privacy-policy",
   },
   {
     title: "Terms & Conditions",
