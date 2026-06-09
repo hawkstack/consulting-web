@@ -1,11 +1,12 @@
 import { CTASectionData } from "@/app/types/hire-from-us/hire-from-us";
+import Link from "next/link";
 
 interface CTASectionProps {
   data: CTASectionData;
 }
 
 export default function CTASection({ data }: CTASectionProps) {
-  const { title, description, email, website, buttonText } = data;
+  const { title, description, email, website, buttonText, buttonLink } = data;
 
   return (
     <section className="w-full bg-[#F5F5F5] py-8 lg:bg-white lg:py-10 xl:py-14">
@@ -142,8 +143,9 @@ export default function CTASection({ data }: CTASectionProps) {
             </div>
 
             {/* Mobile Button */}
-            <button
-              className="
+            <Link href={buttonLink}>
+              <button
+                className="
                 mt-8
                 md:mt-4
                 h-[40px]
@@ -157,14 +159,16 @@ export default function CTASection({ data }: CTASectionProps) {
 
                 lg:hidden
               "
-            >
-              {buttonText}
-            </button>
+              >
+                {buttonText}
+              </button>
+            </Link>
           </div>
 
           {/* Desktop Button */}
-          <button
-            className="
+          <Link href={buttonLink}>
+            <button
+              className="
               hidden
               lg:block
               h-[38px]
@@ -180,9 +184,10 @@ export default function CTASection({ data }: CTASectionProps) {
               hover:bg-[#2149df]
               transition-colors
             "
-          >
-            {buttonText}
-          </button>
+            >
+              {buttonText}
+            </button>
+          </Link>
         </div>
       </div>
     </section>
