@@ -2,7 +2,10 @@ import HiringRequestForm from "./HiringRequestForm";
 
 export default function HiringRequestFormSection() {
   return (
-    <section className="w-full py-12 lg:py-24 xl:py-18">
+    <section
+      id="hiring-request-form"
+      className="w-full py-12 lg:py-24 xl:py-18 lg:scroll-mt-8 md:scroll-mt-[-300px] scroll-mt-[-360px]"
+    >
       <div className="mx-auto max-w-[1050px] px-4">
         <div className="flex flex-col-reverse items-center gap-8 lg:flex-row lg:items-center lg:justify-center xl:gap-26">
           <div className="w-full md:w-[530px] lg:w-[400px]">

@@ -13,6 +13,7 @@ export interface CTASectionData {
   email: string;
   website: string;
   buttonText: string;
+  buttonLink: string;
 }
 
 // Showcase Section

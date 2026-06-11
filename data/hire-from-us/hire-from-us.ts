@@ -26,6 +26,7 @@ export const ctaSectionData: CTASectionData = {
   email: "hr@hawkstack.com",
   website: "www.hawkstack.com",
   buttonText: "Contact Us",
+  buttonLink: "contact-us",
 };
 
 // Showcase Section

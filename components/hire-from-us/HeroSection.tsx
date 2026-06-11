@@ -1,3 +1,4 @@
+"use client";
 import { HeroSectionData } from "@/app/types/hire-from-us/hire-from-us";
 import Image from "next/image";
 
@@ -22,7 +23,14 @@ export default function HeroSection({ data }: HeroSectionProps) {
               {description}
             </p>
 
-            <button className="mt-6 xl:mt-8 h-[34px] lg:h-[48px] rounded-[8px] bg-[#0048FF] px-3 lg:px-4 xl:px-6 text-[14px] font-semibold text-white transition-all duration-300 hover:opacity-90">
+            <button
+              onClick={() =>
+                document
+                  .getElementById("hiring-request-form")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="mt-6 xl:mt-8 h-[34px] lg:h-[48px] rounded-[8px] bg-[#0048FF] px-3 lg:px-4 xl:px-6 text-[14px] font-semibold text-white transition-all duration-300 hover:opacity-90"
+            >
               {buttonText}
             </button>
           </div>
