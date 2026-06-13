@@ -44,6 +44,29 @@ export const privacySections: PrivacySection[] = [
     ],
   },
   {
+    title: "Account Responsibilities",
+    description:
+      "To access certain secure client portals or project tracking repositories, you must register for an authorized account. You agree to:",
+    points: [
+      {
+        description:
+          "Provide completely accurate, current, and true information during registration.",
+      },
+      {
+        description:
+          "Maintain the strict confidentiality of your project login credentials.",
+      },
+      {
+        description:
+          "Accept full responsibility for all activities that occur under your organizational account.",
+      },
+      {
+        description:
+          "Notify us immediately at support@hawkstack.com if you suspect any unauthorized use or security breach of your project workspace.",
+      },
+    ],
+  },
+  {
     title: "How We Use Your Information",
     description:
       "We utilize your data to fulfill enterprise consulting agreements, architect and manage active Red Hat staging or production environments, process secure business transactions, send critical infrastructure updates, maintain network security, and analyze performance trends to improve our enterprise delivery workflows.",

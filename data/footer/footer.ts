@@ -134,20 +134,20 @@ export const policyLinks = [
     title: "Privacy Policy",
     href: "/privacy-policy",
   },
-  {
-    title: "Terms & Conditions",
-    href: "",
-  },
+  // {
+  //   title: "Terms & Conditions",
+  //   href: "/terms-and-conditions",
+  // },
   {
     title: "Cookie Policy",
-    href: "",
+    href: "/cookie-policy",
   },
   {
     title: "Terms of Use",
-    href: "",
+    href: "/terms-of-use",
   },
-  {
-    title: "Code of Conduct",
-    href: "",
-  },
+  // {
+  //   title: "Code of Conduct",
+  //   href: "/code-of-conduct",
+  // },
 ];

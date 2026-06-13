@@ -5,17 +5,22 @@ import { useEffect, useRef, useState } from "react";
 import PrivacySidebar from "./PrivacySidebar";
 import PrivacyHeader from "./PrivacyHeader";
 import PrivacyCard from "./PrivacyCard";
+import type {
+  ContactInfo,
+  PrivacyPoint,
+} from "@/app/types/privacy-policy/privacy-policy";
 
 type Section = {
   title: string;
-  description?: string;
-  points?: any[];
+  description?: string | string[];
+  points?: PrivacyPoint[];
   note?: string;
   noteEmail?: string;
-  contactInfo?: any;
+  contactInfo?: ContactInfo;
 };
 
 type HeaderProps = {
+  brandName?: string;
   title?: string;
   effectiveDate?: string;
   intro?: string;
