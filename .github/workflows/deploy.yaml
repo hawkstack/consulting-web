@@ -1,4 +1,4 @@
-name: CI Deploy (consulting-web - Test/Prod with Rollback)
+name: CI Deploy (Test/Prod with Rollback)
 
 on:
   workflow_dispatch:
@@ -14,32 +14,39 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
 
     steps:
-      # Checkout correct branch
+      # 1. Set branch
+      - name: Set branch
+        run: |
+          if [ "${{ github.event.inputs.environment }}" == "prod" ]; then
+            echo "BRANCH=main" >> $GITHUB_ENV
+          else
+            echo "BRANCH=test" >> $GITHUB_ENV
+          fi
+
+      # 2. Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.inputs.environment == 'prod' && 'main' || 'test' }}
+          ref: ${{ env.BRANCH }}
 
-      # Setup Node
+      # 3. Setup Node
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      # Install dependencies
+      # 4. Install deps
       - name: Install dependencies
         run: npm ci
 
-      # Build app
+      # 5. Build
       - name: Build application
-        env:
-          NEXT_PUBLIC_TRAINING_URL: ${{ github.event.inputs.environment == 'prod' && secrets.NEXT_PUBLIC_TRAINING_URL_PROD || secrets.NEXT_PUBLIC_TRAINING_URL_TEST }}
-          NEXT_PUBLIC_API_BASE_URL: ${{ github.event.inputs.environment == 'prod' && secrets.NEXT_PUBLIC_API_BASE_URL_PROD || secrets.NEXT_PUBLIC_API_BASE_URL_TEST }}
         run: npm run build
 
-      # Prepare deploy package
+      # 6. Prepare deploy package
       - name: Prepare deploy files
         run: |
           rm -rf deploy
@@ -48,59 +55,42 @@ jobs:
           cp -r public deploy/
           cp package.json deploy/
           cp package-lock.json deploy/
-          cp next.config.* deploy/
 
-      # Copy files to EC2
+      # 7. Copy to EC2
       - name: Copy files to EC2
-        uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@v0.1.4
         with:
-          host: ${{ github.event.inputs.environment == 'prod' && secrets.EC2_HOST_PROD || secrets.EC2_HOST }}
+          host: ${{ secrets.EC2_HOST }}
           username: ubuntu
-          key: ${{ github.event.inputs.environment == 'prod' && secrets.EC2_SSH_KEY_PROD || secrets.EC2_SSH_KEY }}
-          source: "deploy"
-          target: "/var/www/frontend"
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "deploy/*"
+          target: "/var/www/frontend/consulting-web-ci-new"
+          rm: true
 
-      # Deploy + rollback
+      # 8. Deploy + rollback
       - name: Deploy and restart app
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ github.event.inputs.environment == 'prod' && secrets.EC2_HOST_PROD || secrets.EC2_HOST }}
+          host: ${{ secrets.EC2_HOST }}
           username: ubuntu
-          key: ${{ github.event.inputs.environment == 'prod' && secrets.EC2_SSH_KEY_PROD || secrets.EC2_SSH_KEY }}
-          command_timeout: 30m
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             set -e
 
-            echo "===== STARTING DEPLOYMENT ====="
-
-            rollback() {
-              echo "Deployment failed. Rolling back..."
-              if [ -d "/var/www/frontend/consulting-web-backup" ]; then
-                rm -rf /var/www/frontend/consulting-web
-                mv /var/www/frontend/consulting-web-backup /var/www/frontend/consulting-web
-                echo "Rollback completed"
-                pm2 reload consulting-web || true
-              else
-                echo "No backup found to rollback"
-              fi
-            }
-
-            trap rollback ERR
-
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
             nvm use 20
+
+            echo "Node version: $(node -v)"
 
             cd /var/www/frontend
 
-            APP_DIR="consulting-web"
-            NEW_DIR="deploy"
-            BACKUP_DIR="consulting-web-backup"
+            APP_DIR="consulting-web-ci"
+            NEW_DIR="consulting-web-ci-new"
+            BACKUP_DIR="consulting-web-ci-backup"
 
-            echo "Checking new build..."
-            if [ ! -f "$NEW_DIR/package.json" ]; then
-              echo "ERROR: package.json missing in deploy!"
+            if [ ! -d "$NEW_DIR" ]; then
+              echo "ERROR: New build not found!"
               exit 1
             fi
 
@@ -117,26 +107,35 @@ jobs:
 
             cd $APP_DIR
 
-            echo "Loading environment variables..."
-
-            if [ ! -f "/var/www/shared/consulting-web.env" ]; then
-              echo "ERROR: env file missing"
-              exit 1
+            if [ ! -f ".env" ]; then
+              echo "WARNING: .env file missing!"
             fi
 
-            set -a
-            source /var/www/shared/consulting-web.env
-            set +a
+            echo "Installing production dependencies..."
+            npm ci --omit=dev
 
-            if [ -d "/var/www/frontend/$BACKUP_DIR/node_modules" ]; then
-              cp -r /var/www/frontend/$BACKUP_DIR/node_modules . || true
+            # Ensure pm2 is available
+            if ! command -v pm2 >/dev/null 2>&1; then
+              echo "pm2 not found, installing globally..."
+              npm install -g pm2
             fi
 
-            npm ci --omit=dev --no-audit --no-fund
+            # If .env missing, try to restore from previous backup (if present)
+            if [ ! -f ".env" ]; then
+              if [ -f "../$BACKUP_DIR/.env" ]; then
+                echo "Restoring .env from backup..."
+                cp ../$BACKUP_DIR/.env .env
+              else
+                echo "WARNING: .env file missing!" >&2
+              fi
+            fi
 
-            pm2 reload consulting-web || \
-            pm2 start npm --name "consulting-web" -- start
+            echo "Restarting PM2 (reload, else start with proper args)..."
+
+            # Use --update-env to make pm2 reload pick up environment changes.
+            # If reload fails (process not present), start using npm so arguments are passed correctly.
+            pm2 reload consulting-web-ci --update-env || pm2 start npm --name "consulting-web-ci" -- start -- -p 3001
 
             pm2 save
 
-            echo "===== DEPLOYMENT COMPLETED SUCCESSFULLY ====="
+            echo "Deployment completed successfully!"
