@@ -125,20 +125,21 @@ export default function PrivacyCard({
               </div>
             ))}
 
-            {/* Note Box */}
-            {note && (
-              <div className="mt-5 bg-[#EEF4FF] border border-[#D9E6FF] rounded-[12px] px-4 py-3">
-                <p className="text-[13px] leading-6 text-[#4B5B7C]">
-                  {note}
+          </div>
+        )}
 
-                  {noteEmail && (
-                    <span className="text-[#1e50da] font-medium">
-                      {noteEmail}
-                    </span>
-                  )}
-                </p>
-              </div>
-            )}
+        {/* Note Box */}
+        {note && (
+          <div className="mt-5 bg-[#EEF4FF] border border-[#D9E6FF] rounded-[12px] px-4 py-3">
+            <p className="text-[13px] leading-6 text-[#4B5B7C]">
+              {note}
+
+              {noteEmail && (
+                <span className="text-[#1e50da] font-medium">
+                  {noteEmail}
+                </span>
+              )}
+            </p>
           </div>
         )}
 
