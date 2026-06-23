@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import type { AutomationWhyHawkstackSectionContent } from "@/app/types/automation";
+import { submitConsultingForm } from "@/lib/api/publicClient";
 import { validateEmail, validateRequired } from "@/utils/validation";
 
 type FormState = {
@@ -73,19 +74,13 @@ export default function WhyHawkstackSection({
     setStatus("idle");
 
     try {
-      const response = await fetch("/api/contacts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          source: content.form.source,
-          firstName: values.name,
-          lastName: "",
-          email: values.email,
-          phone: "",
-          message: values.message,
-        }),
+      const response = await submitConsultingForm({
+        source: content.form.source,
+        firstName: values.name,
+        lastName: "",
+        email: values.email,
+        phone: "",
+        query: values.message,
       });
 
       if (!response.ok) {
