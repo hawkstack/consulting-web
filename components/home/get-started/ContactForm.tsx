@@ -9,6 +9,7 @@ import {
   useEffect,
 } from "react";
 import { validatePhone } from "../../utils/validations";
+import { submitConsultingForm } from "@/lib/api/publicClient";
 import countriesLib from "i18n-iso-countries";
 import enLocale from "i18n-iso-countries/langs/en.json";
 import ReactCountryFlag from "react-country-flag";
@@ -166,17 +167,11 @@ const [formData, setFormData] = useState<ContactFormData & { source: FormSource 
     setLoading(true);
     setSubmitStatus("idle");
 
-    const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-
     try {
-      const response = await fetch(`${API_BASE_URL}/api/consultingForms`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          source,
-          country: formData.country?.code,
-        }),
+      const response = await submitConsultingForm({
+        ...formData,
+        source,
+        country: formData.country?.code,
       });
 
       if (response.ok) {

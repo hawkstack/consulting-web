@@ -9,6 +9,7 @@ import {
   validateName,
   validateRequired,
 } from "@/utils/validation";
+import { submitJobApplication } from "@/lib/api/publicClient";
 
 type JobContactFormProps = {
   onClose: () => void;
@@ -160,10 +161,7 @@ const JobContactForm = ({
         payload.append("resume", fileInputRef.current.files[0]);
       }
 
-      const response = await fetch("/api/job-application", {
-        method: "POST",
-        body: payload,
-      });
+      const response = await submitJobApplication(payload);
 
       const result = await response.json().catch(() => null);
 
