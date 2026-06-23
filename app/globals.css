@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --font-lexend-deca: "Lexend Deca", "Segoe UI", Arial, sans-serif;
+  --font-lexend: "Lexend", "Segoe UI", Arial, sans-serif;
 }
 
 /* Font utility */
 .font-lexend {
-  font-family: var(--font-lexend-deca), sans-serif;
+  font-family: var(--font-lexend), sans-serif;
 }
 
 /* Improve Figma-like rendering */
@@ -22,11 +22,6 @@ body {
   background-repeat: no-repeat;
   height: 574px;
   width: 100%; /* adjust as needed */
-}
-
-/* Font utility */
-.font-lexend {
-  font-family: var(--font-lexend-deca), sans-serif;
 }
 
 /* carousel css start */
@@ -49,6 +44,16 @@ body {
   opacity: 1;
 }
 /* carousel css end */
+
+/* contact setion */
+#contact-section {
+  scroll-margin-top: 70px;
+}
+
+/* Products reseller RedhatProductsSection */
+#redhat-products {
+  scroll-margin-top: 80px;
+}
 
 @keyframes partner-scroll {
   from {
@@ -254,5 +259,38 @@ body {
   }
   100% {
     transform: translate(0, 0) rotate(45deg);
+  }
+}
+
+/* =========================
+   RedHatClientsSection
+   ========================= */
+
+.rh-clients-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: rh-clients-scroll 20s linear infinite;
+}
+
+.rh-clients-track-reverse {
+  animation: rh-clients-scroll-reverse 20s linear infinite;
+}
+
+@keyframes rh-clients-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+@keyframes rh-clients-scroll-reverse {
+  0% {
+    transform: translateX(-33.33%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

@@ -6,8 +6,9 @@ type Props = {
 
 export default function FaqSection({ content }: Props) {
   return (
-    <section className="w-full bg-white font-lexend pt-12 md:pt-16 lg:pt-20 pb-10 px-4 md:px-18 xl:px-0">
-      <div className="max-w-[760px] mx-auto">
+    <section className="w-full bg-white font-lexend py-12 md:py-16 lg:py-24 xl:py-20 px-4 md:px-14 lg:px-20 xl:px-24">
+      <div className="max-w-7xl mx-auto">
+        <div className="max-w-[760px] mx-auto">
         
         {/* Heading */}
         <div className="text-center mb-6 md:mb-8">
@@ -38,6 +39,7 @@ export default function FaqSection({ content }: Props) {
           ))}
         </div>
 
+        </div>
       </div>
     </section>
   );

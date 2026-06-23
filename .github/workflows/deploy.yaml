@@ -112,10 +112,29 @@ jobs:
             fi
 
             echo "Installing production dependencies..."
-            npm ci --omit=dev   # ✅ updated (better than --only=production)
+            npm ci --omit=dev
 
-            echo "Restarting PM2..."
-            PORT=3001 pm2 reload consulting-web-ci || PORT=3001 pm2 start "npm run start" --name consulting-web-ci
+            # Ensure pm2 is available
+            if ! command -v pm2 >/dev/null 2>&1; then
+              echo "pm2 not found, installing globally..."
+              npm install -g pm2
+            fi
+
+            # If .env missing, try to restore from previous backup (if present)
+            if [ ! -f ".env" ]; then
+              if [ -f "../$BACKUP_DIR/.env" ]; then
+                echo "Restoring .env from backup..."
+                cp ../$BACKUP_DIR/.env .env
+              else
+                echo "WARNING: .env file missing!" >&2
+              fi
+            fi
+
+            echo "Restarting PM2 (reload, else start with proper args)..."
+
+            # Use --update-env to make pm2 reload pick up environment changes.
+            # If reload fails (process not present), start using npm so arguments are passed correctly.
+            pm2 reload consulting-web-ci --update-env || pm2 start npm --name "consulting-web-ci" -- start -- -p 3001
 
             pm2 save
 

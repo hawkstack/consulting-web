@@ -6,8 +6,8 @@ type Props = {
 
 export default function WhyChooseOpenShift({ content } : Props) {
     return(
-        <section className="relative w-full overflow-hidden font-lexend py-12 md:py-20">   
-           <div className="w-full mx-auto px-6 xl:px-20 lg:px-10 md:px-20">
+        <section className="relative w-full overflow-hidden font-lexend py-12 md:py-16 lg:py-24 xl:py-20 px-4 md:px-14 lg:px-20 xl:px-24">   
+           <div className="max-w-7xl mx-auto">
                 <div className="mb-3 md:mb-10 items-center text-center lg:items-start lg:text-start flex flex-col">
                     <h5 className="text-[#00B6CC] text-[14px] font-bold">
                         {content.highlightedTitle}

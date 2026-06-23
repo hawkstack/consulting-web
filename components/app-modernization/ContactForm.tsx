@@ -1,28 +1,21 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import type {
   AppModernizationFormContent,
   AppModernizationFormField,
 } from "@/app/types/app-modernization";
 import { validateEmail, validateRequired } from "@/utils/validation";
 
-type FormState = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-};
+type FormState = Partial<Record<AppModernizationFormField["name"], string>>;
+type FormErrors = Partial<Record<AppModernizationFormField["name"], string>>;
 
-type FormErrors = Partial<Record<keyof FormState, string>>;
-
-const INITIAL_FORM_STATE: FormState = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  phone: "",
-  message: "",
+const buildInitialFormState = (fields: AppModernizationFormField[]) => {
+  const initialState: FormState = {};
+  fields.forEach((field) => {
+    initialState[field.name] = "";
+  });
+  return initialState;
 };
 
 function getFieldError(
@@ -52,10 +45,27 @@ export default function AppModernizationContactForm({
 }: {
   form: AppModernizationFormContent;
 }) {
-  const [values, setValues] = useState<FormState>(INITIAL_FORM_STATE);
+  const [values, setValues] = useState<FormState>(() =>
+    buildInitialFormState(form.fields),
+  );
   const [errors, setErrors] = useState<FormErrors>({});
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  useEffect(() => {
+    if (status === "idle") {
+      return undefined;
+    }
+
+    const duration = status === "success" ? 5000 : 3000;
+    const timer = window.setTimeout(() => {
+      setStatus("idle");
+    }, duration);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [status]);
 
   const fieldMap = useMemo(
     () =>
@@ -83,10 +93,11 @@ export default function AppModernizationContactForm({
   const validateForm = () => {
     const nextErrors: FormErrors = {};
 
-    (Object.keys(values) as Array<keyof FormState>).forEach((key) => {
-      const error = getFieldError(fieldMap[key], values[key]);
+    form.fields.forEach((field) => {
+      const value = values[field.name] ?? "";
+      const error = getFieldError(field, value);
       if (error) {
-        nextErrors[key] = error;
+        nextErrors[field.name] = error;
       }
     });
 
@@ -104,23 +115,33 @@ export default function AppModernizationContactForm({
     setLoading(true);
     setStatus("idle");
 
+    const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
+    const endpoint = `${API_BASE_URL}/api/consultingForms`;
+
     try {
-      const response = await fetch("/api/contacts", {
+      const payload = {
+        source: form.source,
+        ...values,
+      } as Record<string, string>;
+
+      if (values.message !== undefined) {
+        payload.query = values.query ?? values.message;
+        delete payload.message;
+      }
+
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          source: form.source,
-          ...values,
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
         throw new Error("Request failed");
       }
 
-      setValues(INITIAL_FORM_STATE);
+      setValues(buildInitialFormState(form.fields));
       setErrors({});
       setStatus("success");
     } catch {
@@ -145,7 +166,7 @@ export default function AppModernizationContactForm({
             <div key={field.name}>
               <label
                 htmlFor={field.name}
-                className="mb-1 block text-[13px] font-semibold text-[#3A4256]"
+                className="mb-1 block text-[13px] font-normal text-[#3A4256]"
               >
                 {field.label}
                 {field.required ? " *" : ""}
@@ -158,7 +179,7 @@ export default function AppModernizationContactForm({
                   handleFieldChange(field.name, event.target.value)
                 }
                 placeholder={field.placeholder}
-                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[12px] text-[#20283A] outline-none transition ${
+                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[12px] text-[#20283A] outline-none placeholder:text-[#A5AFBD] transition ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#E3E5EA] focus:border-[#0EA5E9]"
@@ -177,7 +198,7 @@ export default function AppModernizationContactForm({
           <div key={field.name}>
             <label
               htmlFor={field.name}
-              className="mb-1 block text-[13px] font-semibold text-[#3A4256]"
+              className="mb-1 block text-[13px] font-normal text-[#3A4256]"
             >
               {field.label}
               {field.required ? " *" : ""}
@@ -192,7 +213,7 @@ export default function AppModernizationContactForm({
                 }
                 placeholder={field.placeholder}
                 rows={4}
-                className={`min-h-[96px] w-full resize-none rounded-[12px] border bg-white px-3 py-3 text-[12px] text-[#20283A] outline-none transition ${
+                className={`min-h-[96px] w-full resize-none rounded-[12px] border bg-white px-3 py-3 text-[12px] text-[#20283A] outline-none placeholder:text-[#A5AFBD] transition ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#E3E5EA] focus:border-[#0EA5E9]"
@@ -207,7 +228,7 @@ export default function AppModernizationContactForm({
                   handleFieldChange(field.name, event.target.value)
                 }
                 placeholder={field.placeholder}
-                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[11px] text-[#20283A] outline-none transition ${
+                className={`h-10 w-full rounded-[10px] border bg-white px-3 text-[11px] text-[#20283A] outline-none placeholder:text-[#A5AFBD] transition ${
                   errors[field.name]
                     ? "border-red-500"
                     : "border-[#E3E5EA] focus:border-[#0EA5E9]"

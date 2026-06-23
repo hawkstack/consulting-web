@@ -50,8 +50,8 @@ export default function ProcessSection({
 
   return (
     <section className="font-lexend bg-[#F8F9FB]">
-      <div className="mx-auto max-w-[1280px] px-4 pb-10 sm:px-6 md:px-8 md:pb-12 lg:px-12 lg:pb-[40px] lg:pt-[0px]">
-        <div className="mx-auto xl:max-w-[1416px] md:max-w-[600px]">
+      <div className="mx-auto max-w-[1280px] px-4 pb-10 md:px-8 md:pb-12 xl:px-6 xl:pb-14">
+        <div className="mx-auto max-w-[1160px] md:max-w-[600px] xl:max-w-[1160px]">
           <div className="mx-auto max-w-[285px] text-center md:max-w-[470px] lg:mx-0 lg:max-w-[620px] lg:text-left">
             <span className="text-[12px] font-medium uppercase tracking-[0.18em] text-[#008DFF] md:text-[13px] xl:text-[16px]">
               {content.badge}

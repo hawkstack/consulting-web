@@ -83,8 +83,8 @@ export default function CapabilitiesSection({
 
   return (
     <section className="bg-[#ffff] font-lexend">
-      <div className="mx-auto max-w-[1280px] px-4 py-8 sm:px-6 md:px-8 md:py-10 lg:px-12 lg:py-12">
-        <div className="mx-auto max-w-[1150px]">
+      <div className="px-4 py-12 md:px-14 md:py-16 lg:px-20 lg:py-24 xl:px-24 xl:py-20">
+        <div className="mx-auto max-w-7xl">
           {content.badge || content.title ? (
             <div className="mx-auto max-w-[420px] text-center md:max-w-[560px]">
               {content.badge ? (

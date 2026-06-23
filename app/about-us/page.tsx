@@ -1,16 +1,18 @@
 import EndtoEndServices from "@/components/about/EndtoEndServices";
 import AboutHero from "@/components/about/AboutHero";
 import WhatWeOffer from "@/components/about/WhatWeOffer";
+import PlatformJourney from "@/components/about/PlatformJourney";
 import { aboutusPageData } from "@/data/about-us/about-us";
 
 export default function AboutPage() {
-    const { endtoendServicesData, aboutHeroData, whatWeOfferData } = aboutusPageData;
+    const { endtoendServicesData, aboutHeroData, whatWeOfferData, platformJourneyData } = aboutusPageData;
 
     return (
         <>   
             <AboutHero content={aboutHeroData} />
             <EndtoEndServices content={endtoendServicesData}/> 
             <WhatWeOffer content={whatWeOfferData} />
+            <PlatformJourney content={platformJourneyData} />
         </>
     );
 }

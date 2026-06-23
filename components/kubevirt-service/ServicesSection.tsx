@@ -30,9 +30,9 @@ export default function ServicesSection({
 }) {
   return (
     <section className="bg-[#020617] font-lexend text-white">
-      <div className="mx-auto max-w-[1280px] px-[8px] pb-10 md:px-8 md:py-10 xl:max-w-[1330px] xl:px-4">
-        <div className="overflow-hidden px-[10px] py-[18px] md:rounded-[16px] md:border md:border-white/10 md:bg-[#202638] md:px-8 md:py-[40px] md:shadow-[0_22px_56px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.05)] xl:rounded-none xl:border-0 xl:bg-transparent xl:px-[66px] xl:py-[52px] xl:shadow-none">
-          <div className="mx-auto max-w-[1110px] xl:max-w-[1210px]">
+      <div className="px-4 pb-10 md:px-14 md:py-16 lg:px-20 lg:py-24 xl:px-24 xl:py-20">
+        <div className="mx-auto max-w-7xl overflow-hidden px-0 py-[18px] md:rounded-[16px] md:border md:border-white/10 md:bg-[#202638] md:px-8 md:py-[40px] md:shadow-[0_22px_56px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.05)] xl:rounded-none xl:border-0 xl:bg-transparent xl:px-0 xl:py-0 xl:shadow-none">
+          <div className="mx-auto max-w-7xl">
             <div className="xl:flex xl:items-end xl:justify-start xl:gap-4">
               <div className="max-w-[800px]">
                 <p className="text-center text-[10px] font-semibold uppercase tracking-[0.32em] text-[#6BE6FF] md:text-left md:text-[9px] xl:text-[10px]">
@@ -60,7 +60,7 @@ export default function ServicesSection({
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-[340px] md:max-w-[1170px] mt-10 md:mt-14 xl:max-w-[1170px]">
+        <div className="mx-auto mt-10 max-w-[340px] md:mt-14 md:max-w-7xl">
           <CommercialCtaSection content={content.commercialCta} />
           <AdoptionHighlightsSection content={adoptionContent} />
         </div>

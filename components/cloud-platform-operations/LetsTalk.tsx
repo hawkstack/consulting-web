@@ -6,8 +6,8 @@ type Props = {
 
 export default function LetsTalk({ content }: Props) {
   return (
-    <section className="w-full bg-[#020817] font-lexend px-4 py-7 md:px-15 md:py-10 lg:px-25 lg:py-20">
-        <div className="max-w-[1280px] mx-auto p-0 md:p-0 lg:p-10 lg:rounded-[28px] lg:border lg:border-[#22D3EE]/18 lg:shadow-[0px_20px_60px_0px_#00000059] lg:bg-[linear-gradient(90deg,_rgba(34,211,238,0.1)_0%,_rgba(59,130,246,0.1)_50%,_rgba(15,23,42,0.92)_100%)]">        
+    <section className="w-full bg-[#020817] font-lexend py-12 md:py-16 lg:py-24 xl:py-20 px-4 md:px-14 lg:px-20 xl:px-24">
+        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-10 lg:rounded-[28px] lg:border lg:border-[#22D3EE]/18 lg:shadow-[0px_20px_60px_0px_#00000059] lg:bg-[linear-gradient(90deg,_rgba(34,211,238,0.1)_0%,_rgba(59,130,246,0.1)_50%,_rgba(15,23,42,0.92)_100%)]">        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 items-center">
           
           {/* Left Content */}

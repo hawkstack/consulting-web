@@ -49,6 +49,7 @@ export const products: MegaItem[] = [
     description:
       "A cloud-native technology provider that delivers flexible Kubernetes and container solutions to run modern infrastructure at enterprise scale.",
     image: "/images/products/Mirantis.webp",
+    href: "productresellers/mirantis",
   },
 ];
 
@@ -62,7 +63,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
     description:
       "Explore KubeVirtStack solutions designed to unify virtualization and Kubernetes, enabling scalable, secure, and cloud-native infrastructure.",
     image: "/images/products/KubeVirtStack-AI.webp",
-    href: "/coming-soon",
+    primaryHref: "https://kubevirtstack.com",
   },
   resellers: [
     {
@@ -71,7 +72,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
       image: "/images/home/product-reseller/Redhat.webp",
-      href: "/get-started",
+      href: "/product-reseller/redhat",
     },
     {
       id: "cncf",
@@ -79,7 +80,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Cloud-native technologies and frameworks powering modern application development.",
       image: "/images/home/product-reseller/cncf.webp",
-      href: "/get-started",
+      href: "/product-reseller/cncf",
     },
     {
       id: "mirantis",
@@ -87,7 +88,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Kubernetes and container solutions for scalable and secure cloud environments.",
       image: "/images/home/product-reseller/Mirantis.webp",
-      href: "/get-started",
+      href: "/coming-soon",
     },
     // {
     //   id: "lenovo",
@@ -103,7 +104,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",
       image: "/images/home/product-reseller/AWS.webp",
-      href: "/get-started",
+      href: "/coming-soon",
     },
     {
       id: "gcp",
@@ -111,7 +112,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Google Cloud solutions for data analytics, AI, and cloud-native innovation.",
       image: "/images/home/product-reseller/google-cloud.webp",
-      href: "/get-started",
+      href: "/coming-soon",
     },
     {
       id: "azure",
@@ -119,7 +120,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration.",
       image: "/images/home/product-reseller/Azure.webp",
-      href: "/get-started",
+      href: "/coming-soon",
     },
     // {
     //   id: "dell",
@@ -216,7 +217,7 @@ export const company: MegaItem[] = [
     description:
       "HawkStack builds, modernizes, and operates scalable cloud-native platforms and applications",
     image: "/images/company/About-Us.webp",
-    href: "/about-us"
+    href: "/about-us",
     // href: "`${process.env.NEXT_PUBLIC_TRAINING_URL}/about`",
     // external: true,
   },
@@ -246,7 +247,16 @@ export const company: MegaItem[] = [
     description:
       "Let's connect to discuss how we can help you build and scale modern cloud solutions.",
     image: "/images/company/Contact-Us.webp",
-    href: "/get-started",
+    href: "/contact-us",
+  },
+  {
+    id: "hire from us",
+    label: "Hire from us",
+    title: "Hire from us",
+    description:
+      "Access skilled professionals ready to drive innovation, productivity, and growth for your business.",
+    image: "/images/company/Hire-from-us.webp",
+    href: "/hire-from-us",
   },
   // TODO
   // {

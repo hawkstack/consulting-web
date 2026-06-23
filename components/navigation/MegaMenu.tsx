@@ -102,7 +102,7 @@ export function MegaMenu({
                   </div>
 
                   <Link
-                    href={offeringsMenuContent.featured.href ?? "/get-started"}
+                    href={offeringsMenuContent.featured.primaryHref}
                     className="inline-flex text-[12px] font-medium text-[#56A8FF] transition hover:text-white"
                   >
                     {"Know More ->"}

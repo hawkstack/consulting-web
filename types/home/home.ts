@@ -1,12 +1,12 @@
 export type heroSlides = {
-    title: string;
-    desc: string;
-}
+  title: string;
+  desc: string;
+};
 
 export type HeroSectionData = {
-    slides: heroSlides[];
-    bgVideo: string;
-    bg: string;
+  slides: heroSlides[];
+  bgVideo: string;
+  bg: string;
 };
 
 export interface CloudServiceItem {
@@ -35,72 +35,65 @@ export type ProductCard = {
 };
 
 export type ProductsSectionData = {
+  maintitle: string;
   title: string;
   subtitle: string;
   products: ProductCard[];
 };
 
 export type PartnerCards = {
-    id: number;
-    partnerName: string;
-    status: string;
-    logo: string;
-    tags: string[];
-    link: string;
-};
-
-export type GlobalSectionData = {
-    highlightText: string;
-    title: string;
-    desc: string;
-    items: PartnerCards[];
+  id: number;
+  partnerName: string;
+  status: string;
+  logo: string;
+  tags: string[];
+  link: string;
 };
 
 export type PlatformFeature = {
-    id: number;
-    title: string;
-    icon: string; 
-    desc: string;
+  id: number;
+  title: string;
+  icon: string;
+  desc: string;
 };
 
 export type PlatformSectionData = {
-    bgImage: string;
-    title: string[];
-    description: string;
-    features: PlatformFeature[];
+  bgImage: string;
+  title: string[];
+  description: string;
+  features: PlatformFeature[];
 };
 
 export type CloudSectionData = {
-    title: {
-        main: string;
-        highlight: string;
-        suffix: string;
-    };
-    desc: string;
-    videoDesktop: string;
-    videoMobile: string;
+  title: {
+    main: string;
+    highlight: string;
+    suffix: string;
+  };
+  desc: string;
+  videoDesktop: string;
+  videoMobile: string;
 };
 
 export type OfferingCard = {
-    id: number;
-    title: string;
-    desc: string;
-    image: string;
-    link: string;
+  id: number;
+  title: string;
+  desc: string;
+  image: string;
+  link: string;
 };
 
 export type WhatWeDoSection = {
-    title: string;
-    description: string;
-    cards: OfferingCard[];
+  title: string;
+  description: string;
+  cards: OfferingCard[];
 };
 
 export type HomePageData = {
-    heroSectionData: HeroSectionData;
-    cloudServicesSectionData: EngineeringDrivenCloudServicesProps;
-    productsSectionData: ProductsSectionData;
-    globalSectionData: GlobalSectionData;
-    platformSectionData: PlatformSectionData;
-    cloudSectionData: CloudSectionData;
-    whatWeDoSectionData: WhatWeDoSection;
+  heroSectionData: HeroSectionData;
+  cloudServicesSectionData: EngineeringDrivenCloudServicesProps;
+  productsSectionData: ProductsSectionData;
+  platformSectionData: PlatformSectionData;
+  cloudSectionData: CloudSectionData;
+  whatWeDoSectionData: WhatWeDoSection;
 };

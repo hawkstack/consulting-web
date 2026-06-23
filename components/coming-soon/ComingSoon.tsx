@@ -25,7 +25,7 @@ export default function ComingSoon() {
 
         {/* Title */}
         <h1 className="md:text-4xl text-2xl font-bold text-black mb-3">
-          We're under <span className="text-[#0066FF]">Construction</span>
+          We&apos;re under <span className="text-[#0066FF]">Construction</span>
         </h1>
 
         {/* Subtitle */}

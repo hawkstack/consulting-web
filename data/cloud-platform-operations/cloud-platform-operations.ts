@@ -20,13 +20,14 @@ export const cloudPlatformOperationsPageData: CloudPlatformOperationsPageData = 
             },
         ],
         tags: ["AWS", "Azure", "Google Cloud", "Terraform", "Kubernetes"],
+         h1MaxWidth: "max-w-[500px]",
 
         form: {
             title: "GET IN TOUCH",
             submitLabel: "Send Message",
             successMessage: "Message sent successfully.",
             errorMessage: "Something went wrong. Please try again.",
-            source: "automation",
+            source: "cloud-platform-operations",
             fields: [
             {
                 name: "firstName",

@@ -5,7 +5,15 @@ export interface AppModernizationButton {
 }
 
 export interface AppModernizationFormField {
-  name: "firstName" | "lastName" | "email" | "phone" | "message";
+  name:
+    | "firstName"
+    | "lastName"
+    | "email"
+    | "phone"
+    | "message"
+    | "query"
+    | "jobtitle"
+    | "company";
   label: string;
   placeholder: string;
   type: "text" | "email" | "tel" | "textarea";

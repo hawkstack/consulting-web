@@ -1,0 +1,90 @@
+// Hero Section
+export interface HeroSectionData {
+  title: string;
+  description: string;
+  buttonText: string;
+  image: string;
+}
+
+// CTA Section
+export interface CTASectionData {
+  title: string;
+  description: string;
+  email: string;
+  website: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+// Showcase Section
+export interface SolutionCard {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface SolutionsShowcaseSectionData {
+  tag: string;
+  title: string;
+  description: string;
+  solutions: SolutionCard[];
+}
+
+// Risk Reduction Section
+export interface RiskCard {
+  title: string;
+  items: string[];
+  variant: "light" | "dark";
+}
+
+export interface RiskReductionSectionData {
+  badge: string;
+  title: string;
+  cards: RiskCard[];
+}
+
+// stats and benefits section
+export interface HiringStep {
+  stepNumber: string;
+  title: string;
+  description: string;
+}
+
+export interface StatsAndBenefitsSectionData {
+  badge: string;
+  statNumber: string;
+  title: string;
+  description: string;
+  steps: HiringStep[];
+}
+
+// Services Overview Section
+export interface TalentCategory {
+  title: string;
+  description: string;
+  skills: string[];
+}
+
+export interface ServicesOverviewSectionData {
+  title: string;
+  description: string;
+  badge: string;
+  categories: TalentCategory[];
+  technologies: string[];
+}
+
+// Hiring Request Form Section
+export interface HiringRequestFormField {
+  id: string;
+  name: string;
+  placeholder: string;
+  type?: string;
+  fullWidth?: boolean;
+}
+
+export interface HiringRequestFormProps {
+  title: string;
+  description: string;
+  fields: HiringRequestFormField[];
+}

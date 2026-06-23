@@ -8,8 +8,8 @@ export default function CtaSection({
 }) {
   return (
     <section className="bg-white font-lexend">
-      <div className="mx-auto max-w-[1280px] px-3 py-10 sm:px-6 md:px-8 md:pb-12 lg:px-12 lg:pb-14">
-        <div className="mx-auto max-w-[1120px] rounded-[18px] border border-[#D9E2EC] bg-[#F5F8FB] px-5 py-8 text-center shadow-[0_1px_2px_rgba(15,23,42,0.04)] sm:px-6 md:px-8 md:py-9 lg:px-10 lg:py-8">
+      <div className="mx-auto max-w-[1280px] px-4 py-10 md:px-8 md:pb-12 xl:px-6 xl:pb-14">
+        <div className="mx-auto max-w-[1160px] rounded-[18px] border border-[#D9E2EC] bg-[#F5F8FB] px-5 py-8 text-center shadow-[0_1px_2px_rgba(15,23,42,0.04)] sm:px-6 md:px-8 md:py-9 lg:px-10 lg:py-8">
           <span className="text-[12px] font-medium uppercase tracking-[0.18em] text-[#008DFF] md:text-[13px] lg:text-[16px]">
             {content.badge}
           </span>
