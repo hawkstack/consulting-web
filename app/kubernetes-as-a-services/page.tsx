@@ -1,4 +1,4 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
 import BenefitsSection from "@/components/kubernetes-as-a-services/BenefitsSection";
 import CtaSection from "@/components/kubernetes-as-a-services/CtaSection";
 import FeaturesSection from "@/components/kubernetes-as-a-services/FeaturesSection";

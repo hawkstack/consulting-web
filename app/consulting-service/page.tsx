@@ -1,4 +1,4 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
 import EngagementModelSection from "@/components/consulting-services/EngagementModelSection";
 import HowWeHelpClientsSection from "@/components/consulting-services/HowWeHelpClientsSection";
 import StartConversationSection from "@/components/consulting-services/StartConversationSection";

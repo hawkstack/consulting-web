@@ -1,4 +1,4 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
 import FaqSection from "@/components/cloud-platform-operations/FaqSection";
 import LetsTalk from "@/components/cloud-platform-operations/LetsTalk";
 import WhatWeDoSection from "@/components/cloud-platform-operations/WhatWeDo";

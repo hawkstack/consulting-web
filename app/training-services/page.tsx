@@ -1,4 +1,4 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
 import TrainingEcosystem from "@/components/training-services/TrainingEcosystem";
 import TrainingPortfolio from "@/components/training-services/TrainingPortfolio";
 import TrainingsWeGive from "@/components/training-services/TrainingsWeGive";

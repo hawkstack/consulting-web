@@ -1,4 +1,4 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
 import CapabilitiesSection from "@/components/automation/CapabilitiesSection";
 import OfferSection from "@/components/automation/OfferSection";
 import ProcessSection from "@/components/automation/ProcessSection";

@@ -1,4 +1,4 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
 import ProcessSection from "@/components/kubevirt-service/ProcessSection";
 import ServicesSection from "@/components/kubevirt-service/ServicesSection";
 import UseCasesSection from "@/components/kubevirt-service/UseCasesSection";
