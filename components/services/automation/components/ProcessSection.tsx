@@ -1,4 +1,4 @@
-import type { AutomationProcessSectionContent } from "@/app/types/automation";
+import type { AutomationProcessSectionContent } from "@/components/services/automation/types/automation";
 
 function ProcessCard({
   number,

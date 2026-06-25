@@ -1,4 +1,4 @@
-import { AppModernizationHeroContent } from "@/app/types/app-modernization";
+import { AppModernizationHeroContent } from "@/components/services/app-modernization/types/app-modernization";
 import {
   ConsultingServicesConversationSectionContent,
   ConsultingServicesEngagementModelSectionContent,

@@ -1,7 +1,7 @@
 import type {
   AppModernizationProcessItem,
   AppModernizationProcessSectionContent,
-} from "@/app/types/app-modernization";
+} from "@/components/services/app-modernization/types/app-modernization";
 
 function sortSteps(
   steps: AppModernizationProcessItem[],

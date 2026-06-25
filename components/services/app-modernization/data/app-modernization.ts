@@ -5,7 +5,7 @@ import type {
   AppModernizationProcessSectionContent,
   AppModernizationWhyHawkStackSectionContent,
   AppModernizationWhySectionContent,
-} from "@/app/types/app-modernization";
+} from "@/components/services/app-modernization/types/app-modernization";
 
 export const appModernizationHeroContent: AppModernizationHeroContent = {
   badge: "Strategic Partnership & Memberships",

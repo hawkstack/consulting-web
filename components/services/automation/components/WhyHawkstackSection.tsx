@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import type { AutomationWhyHawkstackSectionContent } from "@/app/types/automation";
+import type { AutomationWhyHawkstackSectionContent } from "@/components/services/automation/types/automation";
 import { validateEmail, validateRequired } from "@/utils/validation";
 
 type FormState = {

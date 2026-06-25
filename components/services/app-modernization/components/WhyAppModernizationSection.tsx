@@ -1,4 +1,4 @@
-import type { AppModernizationWhySectionContent } from "@/app/types/app-modernization";
+import type { AppModernizationWhySectionContent } from "@/components/services/app-modernization/types/app-modernization";
 
 export default function WhyAppModernizationSection({
   content,

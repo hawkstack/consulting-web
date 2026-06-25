@@ -1,4 +1,4 @@
-import type { AutomationOfferSectionContent } from "@/app/types/automation";
+import type { AutomationOfferSectionContent } from "@/components/services/automation/types/automation";
 
 function FitPoint({ point }: { point: string }) {
   return (

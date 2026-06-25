@@ -1,5 +1,5 @@
 import { ComponentType } from "react";
-import type { AppModernizationHeroContent } from "@/app/types/app-modernization";
+import type { AppModernizationHeroContent } from "@/components/services/app-modernization/types/app-modernization";
 
 export interface WhatWeDoCards {
     icon: ComponentType<{ className?: string }>;

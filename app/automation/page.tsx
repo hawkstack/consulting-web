@@ -1,24 +1,24 @@
 import { AppModernizationHeroSection } from "@/components/services/app-modernization";
-import CapabilitiesSection from "@/components/automation/CapabilitiesSection";
-import OfferSection from "@/components/automation/OfferSection";
-import ProcessSection from "@/components/automation/ProcessSection";
-import WhyHawkstackSection from "@/components/automation/WhyHawkstackSection";
 import {
+  AutomationCapabilitiesSection,
+  AutomationOfferSection,
+  AutomationProcessSection,
+  AutomationWhyHawkstackSection,
   automationHeroContent,
   automationCapabilitiesSectionContent,
   automationOfferSectionContent,
   automationProcessSectionContent,
   automationWhyHawkstackSectionContent,
-} from "@/data/automation/automation";
+} from "@/components/services/automation";
 
 export default function AutomationPage() {
   return (
     <>
       <AppModernizationHeroSection content={automationHeroContent} />
-      <CapabilitiesSection content={automationCapabilitiesSectionContent} />
-      <OfferSection content={automationOfferSectionContent} />
-      <ProcessSection content={automationProcessSectionContent} />
-      <WhyHawkstackSection content={automationWhyHawkstackSectionContent} />
+      <AutomationCapabilitiesSection content={automationCapabilitiesSectionContent} />
+      <AutomationOfferSection content={automationOfferSectionContent} />
+      <AutomationProcessSection content={automationProcessSectionContent} />
+      <AutomationWhyHawkstackSection content={automationWhyHawkstackSectionContent} />
     </>
   );
 }

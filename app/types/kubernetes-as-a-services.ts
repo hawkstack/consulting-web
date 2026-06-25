@@ -1,4 +1,4 @@
-import { AppModernizationHeroContent } from "./app-modernization";
+import type { AppModernizationHeroContent } from "@/components/services/app-modernization/types/app-modernization";
 
 // cta section
 export interface CtaButton {

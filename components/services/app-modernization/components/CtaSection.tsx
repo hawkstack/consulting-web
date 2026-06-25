@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { AppModernizationCtaSectionContent } from "@/app/types/app-modernization";
+import type { AppModernizationCtaSectionContent } from "@/components/services/app-modernization/types/app-modernization";
 
 export default function CtaSection({
   content,

@@ -1,10 +1,10 @@
-import type { AppModernizationHeroContent } from "@/app/types/app-modernization";
+import type { AppModernizationHeroContent } from "@/components/services/app-modernization/types/app-modernization";
 import type {
   AutomationCapabilitiesSectionContent,
   AutomationOfferSectionContent,
   AutomationProcessSectionContent,
   AutomationWhyHawkstackSectionContent,
-} from "@/app/types/automation";
+} from "@/components/services/automation/types/automation";
 
 export const automationHeroContent: AppModernizationHeroContent = {
   badge: "Enterprise Grade Ansible Solutions",

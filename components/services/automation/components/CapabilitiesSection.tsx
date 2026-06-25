@@ -2,7 +2,7 @@ import Image from "next/image";
 import type {
   AutomationCapabilitiesSectionContent,
   AutomationCapabilityItem,
-} from "@/app/types/automation";
+} from "@/components/services/automation/types/automation";
 
 const ICON_SRC: Record<AutomationCapabilityItem["icon"], string> = {
   infrastructure: "/icons/automation/infrastructure.svg",

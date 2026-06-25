@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useMemo, useState } from "react";
 import type {
   AppModernizationFormContent,
   AppModernizationFormField,
-} from "@/app/types/app-modernization";
+} from "@/components/services/app-modernization/types/app-modernization";
 import { validateEmail, validateRequired } from "@/utils/validation";
 
 type FormState = Partial<Record<AppModernizationFormField["name"], string>>;

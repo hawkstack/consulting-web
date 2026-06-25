@@ -1,7 +1,7 @@
 import type {
   AppModernizationCapabilitiesSectionContent,
   AppModernizationCapabilityItem,
-} from "@/app/types/app-modernization";
+} from "@/components/services/app-modernization/types/app-modernization";
 
 function sortServices(
   services: AppModernizationCapabilityItem[],

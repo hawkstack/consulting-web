@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { AppModernizationHeroContent } from "@/app/types/app-modernization";
+import type { AppModernizationHeroContent } from "@/components/services/app-modernization/types/app-modernization";
 import AppModernizationContactForm from "./ContactForm";
 
 export default function AppModernizationHeroSection({

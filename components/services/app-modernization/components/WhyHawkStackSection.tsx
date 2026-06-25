@@ -1,4 +1,4 @@
-import type { AppModernizationWhyHawkStackSectionContent } from "@/app/types/app-modernization";
+import type { AppModernizationWhyHawkStackSectionContent } from "@/components/services/app-modernization/types/app-modernization";
 
 export default function WhyHawkStackSection({
   content,
