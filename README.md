@@ -34,3 +34,26 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
    - `commit`
 3. Confirm the footer shows the same build version.
 4. Match the `runId` to the GitHub Actions workflow run.
+## Testing
+
+This app uses Jest and Testing Library for unit, component, and integration-style tests.
+
+Run the test suite locally:
+
+```bash
+npm test
+```
+
+Run tests in watch mode:
+
+```bash
+npm run test:watch
+```
+
+Generate a coverage report:
+
+```bash
+npm run test:coverage
+```
+
+Pull requests targeting `main` run `npm test -- --ci` in GitHub Actions and fail when tests fail.
