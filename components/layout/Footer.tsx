@@ -9,8 +9,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { JSX } from "react";
-import { VersionBadge } from "@/components/layout/VersionBadge";
-
 export const Footer = (): JSX.Element => {
   return (
     <footer className="font-lexend font-light bg-black relative overflow-hidden text-white w-full">
@@ -244,7 +242,6 @@ export const Footer = (): JSX.Element => {
         <div className="text-center text-sm mt-12 text-gray-300">
           © 2026 HawkStack. All Rights Reserved.
         </div>
-        <VersionBadge />
       </div>
     </footer>
   );
