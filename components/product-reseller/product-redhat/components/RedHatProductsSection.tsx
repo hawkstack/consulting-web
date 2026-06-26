@@ -1,4 +1,4 @@
-import { RedHatProductsSectionData } from "@/app/types/product-reseller/product-redhat/product-redhat";
+import { RedHatProductsSectionData } from "@/components/product-reseller/product-redhat/types/product-redhat";
 import Image from "next/image";
 import Link from "next/link";
 

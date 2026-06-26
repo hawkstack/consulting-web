@@ -1,4 +1,4 @@
-import { WhyChooseSectionData } from "@/app/types/product-reseller/product-redhat/product-redhat";
+import { WhyChooseSectionData } from "@/components/product-reseller/product-redhat/types/product-redhat";
 
 interface Props {
   data: WhyChooseSectionData;

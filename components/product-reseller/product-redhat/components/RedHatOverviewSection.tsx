@@ -1,4 +1,4 @@
-import { RedHatOverviewData } from "@/app/types/product-reseller/product-redhat/product-redhat";
+import { RedHatOverviewData } from "@/components/product-reseller/product-redhat/types/product-redhat";
 
 interface Props {
   data: RedHatOverviewData;

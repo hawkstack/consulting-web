@@ -9,7 +9,7 @@ import {
   ProductRedhatPageContent,
   RedHatProductsSectionData,
   WhyChooseSectionData,
-} from "@/app/types/product-reseller/product-redhat/product-redhat";
+} from "@/components/product-reseller/product-redhat/types/product-redhat";
 
 export const redHatHeroData: RedHatHeroData = {
   title: "Your business runs",

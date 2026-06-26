@@ -2,7 +2,7 @@ import Image from "next/image";
 import {
   ClientLogo,
   RedHatClientsSectionData,
-} from "@/app/types/product-reseller/product-redhat/product-redhat";
+} from "@/components/product-reseller/product-redhat/types/product-redhat";
 
 interface Props {
   data: RedHatClientsSectionData;
