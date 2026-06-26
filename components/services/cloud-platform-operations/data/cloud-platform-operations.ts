@@ -1,4 +1,4 @@
-import type { CloudPlatformOperationsPageData } from "@/app/types/cloud-platform-operations";
+import type { CloudPlatformOperationsPageData } from "@/components/services/cloud-platform-operations/types/cloud-platform-operations";
 import { CloudIcon, WaveIcon, DevopsIcon, DecrementIcon } from "@/components/icons/cloud-platform/cloud-platform";
 
 export const cloudPlatformOperationsPageData: CloudPlatformOperationsPageData = {

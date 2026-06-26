@@ -1,4 +1,4 @@
-import { WhatWeDoContent } from "@/app/types/cloud-platform-operations";
+import { WhatWeDoContent } from "@/components/services/cloud-platform-operations/types/cloud-platform-operations";
 
 type Props = {
     content: WhatWeDoContent;

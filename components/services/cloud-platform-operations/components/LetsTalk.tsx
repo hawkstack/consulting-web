@@ -1,4 +1,4 @@
-import { ContactCtaContent } from "@/app/types/cloud-platform-operations";
+import { ContactCtaContent } from "@/components/services/cloud-platform-operations/types/cloud-platform-operations";
 
 type Props = {
   content: ContactCtaContent;

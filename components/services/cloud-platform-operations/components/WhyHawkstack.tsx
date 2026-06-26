@@ -1,4 +1,4 @@
-import { WhyHawkstackContent } from "@/app/types/cloud-platform-operations";
+import { WhyHawkstackContent } from "@/components/services/cloud-platform-operations/types/cloud-platform-operations";
 
 type Props = {
     content: WhyHawkstackContent;

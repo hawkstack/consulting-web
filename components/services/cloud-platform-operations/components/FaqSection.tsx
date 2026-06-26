@@ -1,4 +1,4 @@
-import { FaqContent } from "@/app/types/cloud-platform-operations";
+import { FaqContent } from "@/components/services/cloud-platform-operations/types/cloud-platform-operations";
 
 type Props = {
   content: FaqContent;
