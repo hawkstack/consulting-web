@@ -1,4 +1,4 @@
-import type { ConsultingEngagementStepItem } from "@/app/types/consulting-services";
+import type { ConsultingEngagementStepItem } from "@/components/services/consulting-services/types/consulting-services";
 
 type EngagementStepCardProps = {
   step: ConsultingEngagementStepItem;

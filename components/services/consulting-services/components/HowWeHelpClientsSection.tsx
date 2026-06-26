@@ -1,9 +1,9 @@
 import type {
   ConsultingClientOutcomeItem,
   ConsultingServicesHowWeHelpSectionContent,
-} from "@/app/types/consulting-services";
+} from "@/components/services/consulting-services/types/consulting-services";
 
-import ClientOutcomePill from "@/components/consulting-services/ClientOutcomePill";
+import ClientOutcomePill from "@/components/services/consulting-services/components/ClientOutcomePill";
 
 function sortOutcomes(
   outcomes: ConsultingClientOutcomeItem[],

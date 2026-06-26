@@ -1,6 +1,6 @@
-import type { ConsultingServiceItem } from "@/app/types/consulting-services";
+import type { ConsultingServiceItem } from "@/components/services/consulting-services/types/consulting-services";
 
-import ServiceIcon from "@/components/consulting-services/ServiceIcon";
+import ServiceIcon from "@/components/services/consulting-services/components/ServiceIcon";
 
 type ServiceCardProps = {
   service: ConsultingServiceItem;
@@ -23,8 +23,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         {service.bullets.map((bullet) => (
           <li
             key={bullet}
-            className="flex w-70 items-start gap-3 text-[12px] leading-[1.55] text-[#30435F] md:text-[13px] lg:text-[13px] xl:text-[14px]"
-          >
+            className="flex w-70 items-start gap-3 text-[12px] leading-[1.55] text-[#30435F] md:text-[13px] lg:text-[13px] xl:text-[14px]">
             <span className="mt-[7px] h-[5px] w-[5px] flex-none rounded-full bg-[#35A8FF]" />
             <span>{bullet}</span>
           </li>

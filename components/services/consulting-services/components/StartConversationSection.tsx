@@ -1,6 +1,6 @@
-import type { ConsultingServicesConversationSectionContent } from "@/app/types/consulting-services";
+import type { ConsultingServicesConversationSectionContent } from "@/components/services/consulting-services/types/consulting-services";
 
-import ConsultingConversationForm from "@/components/consulting-services/ConsultingConversationForm";
+import ConsultingConversationForm from "@/components/services/consulting-services/components/ConsultingConversationForm";
 
 export default function StartConversationSection({
   content,
@@ -29,8 +29,7 @@ export default function StartConversationSection({
                 {content.points.map((point) => (
                   <div
                     key={point}
-                    className="rounded-[14px] border border-[#263244] bg-[#182332] px-4 py-4 text-left text-[12px] leading-[1.65] text-[#DDE6F2] shadow-[0_12px_32px_rgba(4,13,26,0.14)] md:px-5 md:py-4 md:text-[14px] xl:rounded-[12px] xl:px-4 xl:py-2.5 xl:text-[14px] xl:leading-[1.55]"
-                  >
+                    className="rounded-[14px] border border-[#263244] bg-[#182332] px-4 py-4 text-left text-[12px] leading-[1.65] text-[#DDE6F2] shadow-[0_12px_32px_rgba(4,13,26,0.14)] md:px-5 md:py-4 md:text-[14px] xl:rounded-[12px] xl:px-4 xl:py-2.5 xl:text-[14px] xl:leading-[1.55]">
                     {point}
                   </div>
                 ))}

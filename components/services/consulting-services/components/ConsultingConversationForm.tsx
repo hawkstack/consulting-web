@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import type {
   ConsultingServicesConversationFormField,
   ConsultingServicesConversationSectionContent,
-} from "@/app/types/consulting-services";
+} from "@/components/services/consulting-services/types/consulting-services";
 import { validateEmail, validateRequired } from "@/utils/validation";
 
 type FormState = {

@@ -1,9 +1,9 @@
 import type {
   ConsultingEngagementStepItem,
   ConsultingServicesEngagementModelSectionContent,
-} from "@/app/types/consulting-services";
+} from "@/components/services/consulting-services/types/consulting-services";
 
-import EngagementStepCard from "@/components/consulting-services/EngagementStepCard";
+import EngagementStepCard from "@/components/services/consulting-services/components/EngagementStepCard";
 
 function sortSteps(
   steps: ConsultingEngagementStepItem[],

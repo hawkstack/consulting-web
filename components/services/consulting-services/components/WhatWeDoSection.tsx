@@ -1,9 +1,9 @@
 import type {
   ConsultingServicesWhatWeDoSectionContent,
   ConsultingServiceItem,
-} from "@/app/types/consulting-services";
+} from "@/components/services/consulting-services/types/consulting-services";
 
-import ServiceCard from "@/components/consulting-services/ServiceCard";
+import ServiceCard from "@/components/services/consulting-services/components/ServiceCard";
 
 function sortServices(
   services: ConsultingServiceItem[],

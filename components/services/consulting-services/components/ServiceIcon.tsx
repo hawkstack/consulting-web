@@ -1,4 +1,4 @@
-import type { ConsultingServiceItem } from "@/app/types/consulting-services";
+import type { ConsultingServiceItem } from "@/components/services/consulting-services/types/consulting-services";
 import {
   AdvisoryIcon,
   ImplementationIcon,

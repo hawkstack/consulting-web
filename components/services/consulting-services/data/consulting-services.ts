@@ -4,7 +4,7 @@ import {
   ConsultingServicesEngagementModelSectionContent,
   ConsultingServicesHowWeHelpSectionContent,
   ConsultingServicesWhatWeDoSectionContent,
-} from "@/app/types/consulting-services";
+} from "@/components/services/consulting-services/types/consulting-services";
 
 export const consultingServicesHeroContent: AppModernizationHeroContent = {
   title:
