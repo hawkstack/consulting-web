@@ -7,7 +7,7 @@ import {
   RedHatAIOverviewData,
   RedHatAIProductionSectionData,
   RedHatAIStrategySectionData,
-} from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+} from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
 import { RedHatAnsibleHeroData } from "@/app/types/product-reseller/product-redhat/redhat-ansible/redhat-ansible";
 import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
 import AssessIcon from "@/components/icons/product-reseller/redhat-ai/AssessIcon";

@@ -1,7 +1,9 @@
-import RedHatAICapabilitiesSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAICapabilitiesSection";
-import RedHatAICtaSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAICtaSection";
-import RedHatAIFoundationSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIFoundationSection";
-import RedHatAIStrategySection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIStrategySection";
+import {
+  RedHatAICapabilitiesSection,
+  RedHatAICtaSection,
+  RedHatAIFoundationSection,
+  RedHatAIStrategySection,
+} from "@/components/product-reseller/product-redhat/redhat-ai";
 import RedHatApplicationServicesSection from "@/components/product-reseller/product-redhat/redhat-products/RedHatApplicationServicesSection";
 import RedHatProductsHeroSection from "@/components/product-reseller/product-redhat/redhat-products/RedHatProductsHeroSection";
 import {

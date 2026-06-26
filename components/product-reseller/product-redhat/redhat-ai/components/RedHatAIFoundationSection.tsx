@@ -1,7 +1,7 @@
 import {
   RedHatAIFoundationCard,
   RedHatAIFoundationSectionData,
-} from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+} from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
 import Link from "next/link";
 
 interface RedHatAIFoundationSectionProps {

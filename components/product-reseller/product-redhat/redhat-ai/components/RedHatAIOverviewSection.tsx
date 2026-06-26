@@ -1,4 +1,4 @@
-import { RedHatAIOverviewData } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+import { RedHatAIOverviewData } from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
 
 interface Props {
   data: RedHatAIOverviewData;

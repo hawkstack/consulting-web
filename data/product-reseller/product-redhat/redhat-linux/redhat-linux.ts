@@ -6,7 +6,7 @@ import {
   RedHatAIOverviewData,
   RedHatAIProductionSectionData,
   RedHatAIStrategySectionData,
-} from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+} from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
 import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
 import AssessIcon from "@/components/icons/product-reseller/redhat-ai/AssessIcon";
 import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";

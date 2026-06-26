@@ -3,7 +3,7 @@ import {
   RedHatAICtaData,
   RedHatAIFoundationSectionData,
   RedHatAIStrategySectionData,
-} from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+} from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
 import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
 import type { RedHatProductsHeroData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-products-hero";
 

@@ -1,7 +1,7 @@
 import {
   RedHatAIProductionCard,
   RedHatAIProductionSectionData,
-} from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+} from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
 
 interface RedHatAIProductionSectionProps {
   data: RedHatAIProductionSectionData;

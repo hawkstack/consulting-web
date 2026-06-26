@@ -1,9 +1,11 @@
-import RedHatAICapabilitiesSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAICapabilitiesSection";
-import RedHatAICtaSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAICtaSection";
-import RedHatAIFoundationSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIFoundationSection";
-import RedHatAIOverviewSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIOverviewSection";
-import RedHatAIProductionSection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIProductionSection";
-import RedHatAIStrategySection from "@/components/product-reseller/product-redhat/redhat-ai/RedHatAIStrategySection";
+import {
+  RedHatAICapabilitiesSection,
+  RedHatAICtaSection,
+  RedHatAIFoundationSection,
+  RedHatAIOverviewSection,
+  RedHatAIProductionSection,
+  RedHatAIStrategySection,
+} from "@/components/product-reseller/product-redhat/redhat-ai";
 import RedHatAnsibleHeroSection from "@/components/product-reseller/product-redhat/redhat-ansible/RedHatAnsibleHeroSection";
 import {
   redHatOpenShiftCapabilitiesData,

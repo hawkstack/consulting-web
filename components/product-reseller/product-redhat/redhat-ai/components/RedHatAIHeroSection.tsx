@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { RedHatAIHeroData } from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
+import { RedHatAIHeroData } from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
 
 interface Props {
   data: RedHatAIHeroData;
