@@ -1,4 +1,4 @@
-import type { ProductCncfPageContent } from "@/app/types/product-reseller/product-cncf/product-cncf";
+import type { ProductCncfPageContent } from "@/components/product-reseller/product-cncf/types/product-cncf";
 import ProductCncfHeroSection from "./herro-section";
 import ProductCncfKubeVirtPromoSection from "./kubevirt-promo-section";
 import ProductCncfOnePartnerSection from "./one-partner-section";
@@ -14,7 +14,9 @@ export default function ProductCncfPage({ pageData }: ProductCncfPageProps) {
       <ProductCncfHeroSection content={pageData.hero} />
       <ProductCncfOnePartnerSection content={pageData.onePartner} />
       <ProductCncfKubeVirtPromoSection content={pageData.kubeVirtPromo} />
-      <ProductCncfPlatformConfidenceSection content={pageData.platformConfidence} />
+      <ProductCncfPlatformConfidenceSection
+        content={pageData.platformConfidence}
+      />
     </>
   );
 }

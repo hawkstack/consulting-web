@@ -1,4 +1,4 @@
-import type { ProductCncfPlatformConfidenceContent } from "@/app/types/product-reseller/product-cncf/product-cncf";
+import type { ProductCncfPlatformConfidenceContent } from "@/components/product-reseller/product-cncf/types/product-cncf";
 import Image from "next/image";
 
 type ProductCncfPlatformConfidenceSectionProps = {

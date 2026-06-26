@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import ProductCncfPage from "@/components/product-reseller/product-cncf/product-cncf-page";
+import ProductCncfPage from "@/components/product-reseller/product-cncf/components/product-cncf-page";
 import ProductRedhatPage from "@/components/product-reseller/product-redhat/product-redhat-page";
-import { productCncfPageData } from "@/data/product-reseller/product-cncf/product-cncf";
+import { productCncfPageData } from "@/components/product-reseller/product-cncf/data/product-cncf";
 import { productRedhatPageData } from "@/data/product-reseller/product-redhat/product-redhat";
 
 const productPages = {

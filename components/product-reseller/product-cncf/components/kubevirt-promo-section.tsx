@@ -1,4 +1,4 @@
-import type { ProductCncfKubeVirtPromoContent } from "@/app/types/product-reseller/product-cncf/product-cncf";
+import type { ProductCncfKubeVirtPromoContent } from "@/components/product-reseller/product-cncf/types/product-cncf";
 
 type ProductCncfKubeVirtPromoSectionProps = {
   content: ProductCncfKubeVirtPromoContent;

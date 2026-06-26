@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { ProductCncfHeroContent } from "@/app/types/product-reseller/product-cncf/product-cncf";
+import type { ProductCncfHeroContent } from "@/components/product-reseller/product-cncf/types/product-cncf";
 
 type ProductCncfHeroProps = {
   content: ProductCncfHeroContent;

@@ -1,4 +1,4 @@
-import type { ProductCncfCtaContent } from "@/app/types/product-reseller/product-cncf/product-cncf";
+import type { ProductCncfCtaContent } from "@/components/product-reseller/product-cncf/types/product-cncf";
 
 type ProductCncfCtaSectionProps = {
   content: ProductCncfCtaContent;

@@ -1,4 +1,4 @@
-import type { ProductCncfPageContent } from "@/app/types/product-reseller/product-cncf/product-cncf";
+import type { ProductCncfPageContent } from "@/components/product-reseller/product-cncf/types/product-cncf";
 
 export const productCncfPageData: ProductCncfPageContent = {
   hero: {
