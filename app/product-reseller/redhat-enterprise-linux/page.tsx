@@ -15,7 +15,7 @@ import {
   redHatLinuxOverviewData,
   redHatLinuxProductionData,
   redHatLinuxStrategyData,
-} from "@/data/product-reseller/product-redhat/redhat-linux/redhat-linux";
+} from "@/components/product-reseller/product-redhat/redhat-linux";
 
 const page = () => {
   return (

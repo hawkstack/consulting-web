@@ -1,12 +1,12 @@
 import {
-  RedHatAICapabilitiesData,
-  RedHatAICtaData,
-  RedHatAIFoundationSectionData,
-  RedHatAIHeroData,
-  RedHatAIOverviewData,
-  RedHatAIProductionSectionData,
-  RedHatAIStrategySectionData,
-} from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
+  RedHatLinuxCapabilitiesData,
+  RedHatLinuxCtaData,
+  RedHatLinuxFoundationData,
+  RedHatLinuxHeroData,
+  RedHatLinuxOverviewData,
+  RedHatLinuxProductionData,
+  RedHatLinuxStrategyData,
+} from "../types/redhat-linux";
 import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
 import AssessIcon from "@/components/icons/product-reseller/redhat-ai/AssessIcon";
 import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";
@@ -14,7 +14,7 @@ import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";
 import ImplementIcon from "@/components/icons/product-reseller/redhat-ai/ImplementIcon";
 import OptimizeIcon from "@/components/icons/product-reseller/redhat-ai/OptimizeIcon";
 
-export const redHatLinuxHeroData: RedHatAIHeroData = {
+export const redHatLinuxHeroData: RedHatLinuxHeroData = {
   heading: "The enterprise Linux foundation for ",
   highlightedText: "hybrid cloud",
   titleSuffix: "",
@@ -58,7 +58,7 @@ export const redHatLinuxHeroData: RedHatAIHeroData = {
 };
 
 
-export const redHatLinuxOverviewData: RedHatAIOverviewData = {
+export const redHatLinuxOverviewData: RedHatLinuxOverviewData = {
   tag: "PLATFORM OVERVIEW",
   heading:
     "A stable, secure operating system for modern enterprise IT.",
@@ -86,7 +86,7 @@ export const redHatLinuxOverviewData: RedHatAIOverviewData = {
   ],
 };
 
-export const redHatLinuxCapabilitiesData: RedHatAICapabilitiesData = {
+export const redHatLinuxCapabilitiesData: RedHatLinuxCapabilitiesData = {
   cards: [
     {
       id: 1,
@@ -109,7 +109,7 @@ export const redHatLinuxCapabilitiesData: RedHatAICapabilitiesData = {
   ],
 };
 
-export const redHatLinuxStrategyData: RedHatAIStrategySectionData = {
+export const redHatLinuxStrategyData: RedHatLinuxStrategyData = {
   tag: "HAWKSTACK APPROACH",
   heading: "Deploy RHEL with clarity, control, and confidence.",
   description:
@@ -148,7 +148,7 @@ export const redHatLinuxStrategyData: RedHatAIStrategySectionData = {
 
 // RedHatAICtaSection data
 
-export const redHatLinuxCtaData: RedHatAICtaData = {
+export const redHatLinuxCtaData: RedHatLinuxCtaData = {
   tag: "MODERNIZE YOUR LINUX PLATFORM",
   title: "Ready to build on Red Hat Enterprise Linux with HawkStack?",
   description:
@@ -169,7 +169,7 @@ export const redHatLinuxCtaData: RedHatAICtaData = {
 
 // RedHatAIProductionSection data
 
-export const redHatLinuxProductionData: RedHatAIProductionSectionData = {
+export const redHatLinuxProductionData: RedHatLinuxProductionData = {
   tag: "USE CASES",
   title: "Power the workloads your business depends on.",
   description:
@@ -208,7 +208,7 @@ export const redHatLinuxProductionData: RedHatAIProductionSectionData = {
   ],
 };
 
-export const redHatAIFoundationData: RedHatAIFoundationSectionData = {
+export const redHatAIFoundationData: RedHatLinuxFoundationData = {
   tag: "RED HAT AI PORTFOLIO",
   title: "Choose the right foundation for every AI workload.",
   description:
