@@ -1,4 +1,4 @@
-import { BenefitsData } from "@/app/types/kubernetes-as-a-services";
+import { BenefitsData } from "@/components/services/kubernetes-as-a-services/types/kubernetes-as-a-services";
 
 interface Props {
   data: BenefitsData;

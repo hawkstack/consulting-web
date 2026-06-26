@@ -1,10 +1,10 @@
 import { AppModernizationHeroSection } from "@/components/services/app-modernization";
-import BenefitsSection from "@/components/kubernetes-as-a-services/BenefitsSection";
-import CtaSection from "@/components/kubernetes-as-a-services/CtaSection";
-import FeaturesSection from "@/components/kubernetes-as-a-services/FeaturesSection";
-import ProblemSection from "@/components/kubernetes-as-a-services/ProblemSection";
-import SolutionSection from "@/components/kubernetes-as-a-services/SolutionSection";
-import UseCasesSection from "@/components/kubernetes-as-a-services/UseCasesSection";
+import BenefitsSection from "@/components/services/kubernetes-as-a-services/components/BenefitsSection";
+import CtaSection from "@/components/services/kubernetes-as-a-services/components/CtaSection";
+import FeaturesSection from "@/components/services/kubernetes-as-a-services/components/FeaturesSection";
+import ProblemSection from "@/components/services/kubernetes-as-a-services/components/ProblemSection";
+import SolutionSection from "@/components/services/kubernetes-as-a-services/components/SolutionSection";
+import UseCasesSection from "@/components/services/kubernetes-as-a-services/components/UseCasesSection";
 import {
   benefitsData,
   ctaData,
@@ -13,7 +13,7 @@ import {
   problemData,
   solutionData,
   useCasesData,
-} from "@/data/kubernetes-as-a-services/kubernetes-as-a-services";
+} from "@/components/services/kubernetes-as-a-services/data/kubernetes-as-a-services";
 
 const page = () => {
   return (

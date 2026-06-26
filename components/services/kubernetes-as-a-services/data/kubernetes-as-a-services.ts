@@ -7,7 +7,7 @@ import {
   FeaturesData,
   ProblemData,
   UseCasesData,
-} from "@/app/types/kubernetes-as-a-services";
+} from "@/components/services/kubernetes-as-a-services/types/kubernetes-as-a-services";
 
 export const ctaData: CtaData = {
   tag: "GET STARTED",
@@ -119,7 +119,7 @@ export const howItWorksData: FeaturesData = {
 
 // solutions section
 
-import { SolutionData } from "@/app/types/kubernetes-as-a-services";
+import { SolutionData } from "@/components/services/kubernetes-as-a-services/types/kubernetes-as-a-services";
 
 export const solutionData: SolutionData = {
   header: {

@@ -1,4 +1,4 @@
-import { SolutionData } from "@/app/types/kubernetes-as-a-services";
+import { SolutionData } from "@/components/services/kubernetes-as-a-services/types/kubernetes-as-a-services";
 
 interface Props {
   data: SolutionData;

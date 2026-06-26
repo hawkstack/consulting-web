@@ -1,4 +1,4 @@
-import { UseCasesData } from "@/app/types/kubernetes-as-a-services";
+import { UseCasesData } from "@/components/services/kubernetes-as-a-services/types/kubernetes-as-a-services";
 
 interface Props {
   data: UseCasesData;

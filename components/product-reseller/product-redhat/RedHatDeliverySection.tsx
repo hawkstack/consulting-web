@@ -1,4 +1,4 @@
-import FeaturesSection from "@/components/kubernetes-as-a-services/FeaturesSection";
+import FeaturesSection from "@/components/services/kubernetes-as-a-services/components/FeaturesSection";
 import type { FeaturesData } from "@/app/types/product-reseller/product-redhat/product-redhat";
 
 type RedHatDeliverySectionProps = {
