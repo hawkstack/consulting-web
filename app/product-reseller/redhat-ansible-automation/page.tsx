@@ -6,9 +6,8 @@ import {
   RedHatAIProductionSection,
   RedHatAIStrategySection,
 } from "@/components/product-reseller/product-redhat/redhat-ai";
-import RedHatAnsibleHeroSection from "@/components/product-reseller/product-redhat/redhat-ansible/RedHatAnsibleHeroSection";
-
 import {
+  RedHatAnsibleHeroSection,
   redHatAnsibleCapabilitiesData,
   redHatAnsibleCtaData,
   redHatAnsibleFoundationData,
@@ -16,7 +15,7 @@ import {
   redHatAnsibleOverviewData,
   redHatAnsibleProductionData,
   redHatAnsibleStrategyData,
-} from "@/data/product-reseller/product-redhat/redhat-ansible/redhat-ansible";
+} from "@/components/product-reseller/product-redhat/redhat-ansible";
 
 const page = () => {
   return (

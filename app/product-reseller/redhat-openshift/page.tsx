@@ -6,7 +6,7 @@ import {
   RedHatAIProductionSection,
   RedHatAIStrategySection,
 } from "@/components/product-reseller/product-redhat/redhat-ai";
-import RedHatAnsibleHeroSection from "@/components/product-reseller/product-redhat/redhat-ansible/RedHatAnsibleHeroSection";
+import { RedHatAnsibleHeroSection } from "@/components/product-reseller/product-redhat/redhat-ansible";
 import {
   redHatOpenShiftCapabilitiesData,
   redHatOpenShiftCtaData,

@@ -1,4 +1,4 @@
-import { RedHatAnsibleHeroData } from "@/app/types/product-reseller/product-redhat/redhat-ansible/redhat-ansible";
+import { RedHatAnsibleHeroData } from "../types/redhat-ansible";
 import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";
 
 interface Props {
