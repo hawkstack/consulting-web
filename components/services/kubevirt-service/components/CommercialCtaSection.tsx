@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import type { KubevirtCommercialCtaContent } from "@/app/types/kubevirt-service";
+import type { KubevirtCommercialCtaContent } from "@/components/services/kubevirt-service/types/kubevirt-service";
 
 type CommercialCtaSectionProps = {
   content: KubevirtCommercialCtaContent;

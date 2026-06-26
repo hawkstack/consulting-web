@@ -1,5 +1,5 @@
-import type { KubevirtProcessSectionContent } from "@/app/types/kubevirt-service";
-import GetStarted from "@/components/kubevirt-service/GetStarted";
+import type { KubevirtProcessSectionContent } from "@/components/services/kubevirt-service/types/kubevirt-service";
+import GetStarted from "@/components/services/kubevirt-service/components/GetStarted";
 
 function ProcessCard({
   number,

@@ -1,4 +1,4 @@
-import type { KubevirtUseCasesSectionContent } from "@/app/types/kubevirt-service";
+import type { KubevirtUseCasesSectionContent } from "@/components/services/kubevirt-service/types/kubevirt-service";
 
 function UseCaseIcon() {
   return (

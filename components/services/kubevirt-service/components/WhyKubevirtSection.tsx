@@ -1,4 +1,4 @@
-import type { KubevirtServicePageData } from "@/app/types/kubevirt-service";
+import type { KubevirtServicePageData } from "@/components/services/kubevirt-service/types/kubevirt-service";
 
 function AdoptionCard({
   title,

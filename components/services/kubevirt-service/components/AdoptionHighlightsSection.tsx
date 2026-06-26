@@ -1,4 +1,4 @@
-import type { KubevirtAdoptionSectionContent } from "@/app/types/kubevirt-service";
+import type { KubevirtAdoptionSectionContent } from "@/components/services/kubevirt-service/types/kubevirt-service";
 
 type AdoptionHighlightsSectionProps = {
   content: KubevirtAdoptionSectionContent;

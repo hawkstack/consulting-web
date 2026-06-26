@@ -1,6 +1,6 @@
-import type { KubevirtServicePageData } from "@/app/types/kubevirt-service";
-import AdoptionHighlightsSection from "@/components/kubevirt-service/AdoptionHighlightsSection";
-import CommercialCtaSection from "@/components/kubevirt-service/CommercialCtaSection";
+import type { KubevirtServicePageData } from "@/components/services/kubevirt-service/types/kubevirt-service";
+import AdoptionHighlightsSection from "@/components/services/kubevirt-service/components/AdoptionHighlightsSection";
+import CommercialCtaSection from "@/components/services/kubevirt-service/components/CommercialCtaSection";
 
 function ServiceCard({
   title,

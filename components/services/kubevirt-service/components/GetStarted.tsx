@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import type { KubevirtProcessCtaContent } from "@/app/types/kubevirt-service";
+import type { KubevirtProcessCtaContent } from "@/components/services/kubevirt-service/types/kubevirt-service";
 
 type GetStartedProps = {
   content: KubevirtProcessCtaContent;
