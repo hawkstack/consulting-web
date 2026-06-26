@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DeliverOptionContent } from "@/app/types/training-services";
+import { DeliverOptionContent } from "@/components/services/training-services/types/training-services";
 
 type Props = {
   content: DeliverOptionContent;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { RightArrow } from "@/components/icons/Home/Home";
-import { TrainingsWeGiveContent } from "@/app/types/training-services";
+import { TrainingsWeGiveContent } from "@/components/services/training-services/types/training-services";
 
 type Props = {
   content: TrainingsWeGiveContent;

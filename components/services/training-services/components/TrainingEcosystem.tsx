@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TrainingEcosystemContent } from "@/app/types/training-services";
+import { TrainingEcosystemContent } from "@/components/services/training-services/types/training-services";
 
 type Props = {
   content: TrainingEcosystemContent;

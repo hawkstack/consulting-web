@@ -1,4 +1,4 @@
-import { TrainingPortfolioContent } from "@/app/types/training-services";
+import { TrainingPortfolioContent } from "@/components/services/training-services/types/training-services";
 
 type Props = {
   content: TrainingPortfolioContent;

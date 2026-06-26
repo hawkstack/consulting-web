@@ -1,4 +1,4 @@
-import type { TrainingServicesPageData } from "@/app/types/training-services";
+import type { TrainingServicesPageData } from "@/components/services/training-services/types/training-services";
 
 export const trainingServicesPageData: TrainingServicesPageData = {
     heroSectionData: {
