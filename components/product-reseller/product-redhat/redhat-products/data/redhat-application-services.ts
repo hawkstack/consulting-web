@@ -4,8 +4,8 @@ import {
   RedHatAIFoundationSectionData,
   RedHatAIStrategySectionData,
 } from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
-import type { RedHatApplicationServicesData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-application-services";
-import type { RedHatProductsHeroData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-products-hero";
+import type { RedHatApplicationServicesData } from "../types/redhat-application-services";
+import type { RedHatProductsHeroData } from "../types/redhat-products-hero";
 
 export const redHatProductsHeroData: RedHatProductsHeroData = {
   badge: "Red Hat product portfolio by HawkStack",

@@ -1,4 +1,4 @@
-import type { RedHatProductsHeroData } from "@/app/types/product-reseller/product-redhat/redhat-products/redhat-products-hero";
+import type { RedHatProductsHeroData } from "../types/redhat-products-hero";
 
 interface RedHatProductsHeroSectionProps {
   data: RedHatProductsHeroData;
