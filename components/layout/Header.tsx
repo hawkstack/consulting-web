@@ -25,6 +25,10 @@ export function Header(): JSX.Element {
   const items = openMenu ? menuMap[openMenu] : null;
   const trainingUrl =
     process.env.NEXT_PUBLIC_TRAINING_URL ?? "https://training.hawkstack.com/";
+  const closeMegaMenu = () => {
+    setOpenMenu(null);
+    setActiveItem(null);
+  };
 
   return (
     <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F] font-lexend">
@@ -112,7 +116,7 @@ export function Header(): JSX.Element {
               items={items}
               activeItem={activeItem}
               onHoverItem={setActiveItem}
-              onClose={() => setOpenMenu(null)}
+              onClose={closeMegaMenu}
               menuKey={openMenu}
             />
           </div>
