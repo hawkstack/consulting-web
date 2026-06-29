@@ -1,9 +1,9 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
-import ProcessSection from "@/components/kubevirt-service/ProcessSection";
-import ServicesSection from "@/components/kubevirt-service/ServicesSection";
-import UseCasesSection from "@/components/kubevirt-service/UseCasesSection";
-import WhyKubevirtSection from "@/components/kubevirt-service/WhyKubevirtSection";
-import { kubevirtServicePageData } from "@/data/kubevirt-service/kubevirt-service";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
+import ProcessSection from "@/components/services/kubevirt-service/components/ProcessSection";
+import ServicesSection from "@/components/services/kubevirt-service/components/ServicesSection";
+import UseCasesSection from "@/components/services/kubevirt-service/components/UseCasesSection";
+import WhyKubevirtSection from "@/components/services/kubevirt-service/components/WhyKubevirtSection";
+import { kubevirtServicePageData } from "@/components/services/kubevirt-service/data/kubevirt-service";
 
 export default function KubevirtServicePage() {
   const {
