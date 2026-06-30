@@ -27,12 +27,16 @@ export default function CommercialCtaSection({
         <div className="mt-6 flex flex-col gap-3 md:mt-0 md:w-[230px] md:flex-shrink-0 xl:w-[300px] lg:w-[300px]">
           <Link
             href={content.primaryHref}
+            target={content.primaryExternal ? "_blank" : undefined}
+            rel={content.primaryExternal ? "noopener noreferrer" : undefined}
             className="inline-flex min-h-[46px] items-center justify-center rounded-full bg-white px-6 text-center text-[15px] font-semibold tracking-[-0.02em] text-[#0F172A] transition-transform hover:scale-[1.01]"
           >
             {content.primaryLabel}
           </Link>
           <Link
             href={content.secondaryHref}
+            target={content.secondaryExternal ? "_blank" : undefined}
+            rel={content.secondaryExternal ? "noopener noreferrer" : undefined}
             className="inline-flex min-h-[46px] items-center justify-center rounded-full border border-white/10 bg-transparent px-6 text-center text-[15px] font-semibold tracking-[-0.02em] text-white transition-colors hover:bg-white/5"
           >
             {content.secondaryLabel}

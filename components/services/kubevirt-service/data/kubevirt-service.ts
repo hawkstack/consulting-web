@@ -155,7 +155,8 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
       primaryLabel: "Talk to HawkStack",
       primaryHref: "#app-modernization-form",
       secondaryLabel: "Explore KubeVirtStack",
-      secondaryHref: "/get-started",
+      secondaryHref: "https://kubevirtstack.com/",
+      secondaryExternal: true,
     },
   },
   servicesSectionData: {
@@ -202,6 +203,7 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
         "HawkStack also offers a dedicated commercial path for organizations that need an accelerated route to production, enterprise-focused capabilities, and platform support. Explore our dedicated offering on KubeVirtStack.",
       primaryLabel: "Visit KubeVirtStack.com",
       primaryHref: "https://kubevirtstack.com",
+      primaryExternal: true,
       secondaryLabel: "Request a Demo",
       secondaryHref: "/get-started",
     },
