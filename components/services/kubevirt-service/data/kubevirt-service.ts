@@ -14,8 +14,9 @@ export const kubevirtServicePageData: KubevirtServicePageData = {
       },
       {
         label: "Explore KubeVirtStack \u2192",
-        href: "/get-started",
+        href: "https://kubevirtstack.com/",
         variant: "secondary",
+        external: true,
       },
     ],
     h1MaxWidth: "max-w-[455px]",
