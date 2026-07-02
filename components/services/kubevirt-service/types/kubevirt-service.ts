@@ -47,8 +47,10 @@ export interface KubevirtProcessCtaContent {
   description: string;
   primaryLabel: string;
   primaryHref: string;
+  primaryExternal?: boolean;
   secondaryLabel: string;
   secondaryHref: string;
+  secondaryExternal?: boolean;
 }
 
 export interface KubevirtCommercialCtaContent {
@@ -57,8 +59,10 @@ export interface KubevirtCommercialCtaContent {
   description: string;
   primaryLabel: string;
   primaryHref: string;
+  primaryExternal?: boolean;
   secondaryLabel: string;
   secondaryHref: string;
+  secondaryExternal?: boolean;
 }
 
 export interface KubevirtServicesSectionContent {
