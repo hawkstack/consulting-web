@@ -12,6 +12,14 @@ export interface ProductAwsHeroContent {
   secondaryButton: ProductAwsAction;
 }
 
+export interface ProductAwsCtaContent {
+  title: string;
+  description: string;
+  primaryButton: ProductAwsAction;
+  secondaryButton: ProductAwsAction;
+}
+
 export interface ProductAwsPageContent {
   hero: ProductAwsHeroContent;
+  cta: ProductAwsCtaContent;
 }

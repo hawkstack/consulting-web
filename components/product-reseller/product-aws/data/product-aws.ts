@@ -18,4 +18,17 @@ export const productAwsPageData: ProductAwsPageContent = {
       href: "",
     },
   },
+  cta: {
+    title: "Ready to Modernize Your Stack?",
+    description:
+      "Schedule a direct technical consultation with our principal architects to discuss your AWS infrastructure roadmap.",
+    primaryButton: {
+      label: "Request Strategy Session",
+      href: "",
+    },
+    secondaryButton: {
+      label: "Talk to an Expert",
+      href: "",
+    },
+  },
 };
