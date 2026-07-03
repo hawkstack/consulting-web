@@ -1,13 +1,15 @@
 export interface ProductAwsAction {
   label: string;
   href: string;
-  ariaLabel: string;
 }
 
 export interface ProductAwsHeroContent {
   eyebrow: string;
   title: string;
   description: string;
+  image: string;
+  primaryButton: ProductAwsAction;
+  secondaryButton: ProductAwsAction;
 }
 
 export interface ProductAwsPageContent {

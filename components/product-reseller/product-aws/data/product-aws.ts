@@ -2,9 +2,20 @@ import type { ProductAwsPageContent } from "@/components/product-reseller/produc
 
 export const productAwsPageData: ProductAwsPageContent = {
   hero: {
-    eyebrow: "AWS Cloud Solutions",
-    title: "Build, modernize, and scale with AWS.",
+    eyebrow: "AWS PREMIER TIER PARTNER",
+    title: "Industrial Grade AWS Infrastructure for the Modern Enterprise.",
     description:
-      "HawkStack helps enterprises design secure AWS foundations, modernize workloads, and operate cloud platforms with confidence.",
+      "Deploy resilient, high-uptime Kubernetes clusters and Linux modernization engines with HawkStack. We bridge the gap between institutional reliability and cloud agility.",
+    image: "/images/product-aws/aws-hero.webp",
+
+    primaryButton: {
+      label: "Request Strategy Session",
+      href: "",
+    },
+
+    secondaryButton: {
+      label: "View Documentation",
+      href: "",
+    },
   },
 };
