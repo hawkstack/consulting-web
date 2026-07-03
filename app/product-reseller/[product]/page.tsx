@@ -1,11 +1,14 @@
 import { notFound } from "next/navigation";
 import ProductCncfPage from "@/components/product-reseller/product-cncf/components/product-cncf-page";
+import ProductMirantisPage from "@/components/product-reseller/product-mirantis/componets/product-mirantis-page";
 import ProductRedhatPage from "@/components/product-reseller/product-redhat/components/product-redhat-page";
 import { productCncfPageData } from "@/components/product-reseller/product-cncf/data/product-cncf";
+import { productMirantisPageData } from "@/components/product-reseller/product-mirantis/data/product-mirantis";
 import { productRedhatPageData } from "@/components/product-reseller/product-redhat/data/product-redhat";
 
 const productPages = {
   cncf: productCncfPageData,
+  mirantis: productMirantisPageData,
   redhat: productRedhatPageData,
 };
 
@@ -37,6 +40,10 @@ export default async function ProductResellerPage({
 
   if (product === "cncf") {
     return <ProductCncfPage pageData={productCncfPageData} />;
+  }
+
+  if (product === "mirantis") {
+    return <ProductMirantisPage pageData={productMirantisPageData} />;
   }
 
   return notFound();

@@ -49,7 +49,7 @@ export const products: MegaItem[] = [
     description:
       "A cloud-native technology provider that delivers flexible Kubernetes and container solutions to run modern infrastructure at enterprise scale.",
     image: "/images/products/Mirantis.webp",
-    href: "productresellers/mirantis",
+    href: "/product-reseller/mirantis",
   },
 ];
 
@@ -88,7 +88,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Kubernetes and container solutions for scalable and secure cloud environments.",
       image: "/images/home/product-reseller/Mirantis.webp",
-      href: "/coming-soon",
+      href: "/product-reseller/mirantis",
     },
     // {
     //   id: "lenovo",
