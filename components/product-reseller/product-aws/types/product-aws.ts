@@ -19,7 +19,22 @@ export interface ProductAwsCtaContent {
   secondaryButton: ProductAwsAction;
 }
 
+export interface ProductAwsInfrastructureSolution {
+  title: string;
+  description: string;
+  icon: ComponentType<{ className?: string }>;
+  href: string;
+}
+
+export interface ProductAwsInfrastructureContent {
+  title: string;
+  description: string;
+  solutions: ProductAwsInfrastructureSolution[];
+}
+
 export interface ProductAwsPageContent {
   hero: ProductAwsHeroContent;
+  infrastructure: ProductAwsInfrastructureContent;
   cta: ProductAwsCtaContent;
 }
+import type { ComponentType } from "react";
