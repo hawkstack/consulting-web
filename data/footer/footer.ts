@@ -90,7 +90,7 @@ export const solutionLinks = [
   },
   {
     title: "AWS",
-    href: "/coming-soon",
+    href: "/product-reseller/aws",
   },
   {
     title: "GCP",
