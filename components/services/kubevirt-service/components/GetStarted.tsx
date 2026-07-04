@@ -6,9 +6,7 @@ type GetStartedProps = {
   content: KubevirtProcessCtaContent;
 };
 
-export default function GetStarted({
-  content,
-}: GetStartedProps) {
+export default function GetStarted({ content }: GetStartedProps) {
   return (
     <div className="mt-8 md:mt-10 xl:mt-12">
       <div className="rounded-[28px] border border-[#21314A] bg-[#131B2D] px-6 py-7 shadow-[0_20px_45px_rgba(0,0,0,0.24),inset_0_1px_0_rgba(255,255,255,0.03)] md:px-8 md:py-8 xl:px-6 xl:py-[30px]">
@@ -30,12 +28,18 @@ export default function GetStarted({
           <div className="flex w-full max-w-[250px] flex-col items-center gap-3 md:mx-auto md:max-w-[860px] md:flex-row md:justify-center md:gap-4 xl:ml-auto xl:mr-0 xl:max-w-[550px] xl:w-auto xl:flex-shrink-0 xl:justify-end">
             <Link
               href={content.primaryHref}
+              target={content.primaryExternal ? "_blank" : undefined}
+              rel={content.primaryExternal ? "noopener noreferrer" : undefined}
               className="inline-flex min-h-[42px] items-center justify-center rounded-full bg-white px-5 text-center text-[14px] font-semibold tracking-[-0.02em] text-[#111827] transition-transform hover:scale-[1.01] md:min-h-[60px] md:text-[17px] xl:min-h-[48px] xl:w-[330px] xl:px-5 xl:text-[14px]"
             >
               {content.primaryLabel}
             </Link>
             <Link
               href={content.secondaryHref}
+              target={content.secondaryExternal ? "_blank" : undefined}
+              rel={
+                content.secondaryExternal ? "noopener noreferrer" : undefined
+              }
               className="inline-flex min-h-[42px] items-center justify-center rounded-full border border-[#22D3EEB2] bg-[#22D3EEB2] px-5 text-center text-[14px] font-semibold tracking-[-0.02em] text-white transition-colors hover:bg-[#1ea7cf] md:min-h-[60px] md:text-[17px] xl:min-h-[48px] xl:w-[360px] xl:px-5 xl:text-[14px]"
             >
               {content.secondaryLabel}

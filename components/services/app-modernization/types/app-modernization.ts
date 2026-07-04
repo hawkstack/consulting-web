@@ -2,6 +2,7 @@ export interface AppModernizationButton {
   label: string;
   href: string;
   variant: "primary" | "secondary";
+  external?: boolean;
 }
 
 export interface AppModernizationFormField {
