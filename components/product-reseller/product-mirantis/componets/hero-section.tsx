@@ -100,7 +100,7 @@ export default function ProductMirantisHeroSection({
             </div>
           </div>
 
-          <div className="absolute bottom-[2%] right-[-2%] w-[350px] rounded-[14px] border border-[#E7EDF7] bg-white p-4 shadow-[0_28px_64px_rgba(15,23,42,0.13)]  md:bottom-[-20%] md:right-[-15%]  lg:bottom-[-24%] lg:right-[-11%] lg:w-[430px] lg:rounded-[16px] lg:p-6">
+          <div className="absolute bottom-[2%] right-[-2%] w-[350px] rounded-[14px] border border-[#E7EDF7] bg-white p-4 shadow-[0_5px_20px_rgba(15,23,42,0.13)]  md:bottom-[-20%] md:right-[-15%]  lg:bottom-[-24%] lg:right-[-11%] lg:w-[430px] lg:rounded-[16px] lg:p-6">
             <h2 className="text-[12px] font-semibold text-[#111827] lg:text-[16px]">
               {content.floatingCards.operations.title}
             </h2>

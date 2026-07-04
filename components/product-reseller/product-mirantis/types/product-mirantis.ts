@@ -31,6 +31,25 @@ export interface ProductMirantisHeroContent {
   };
 }
 
+export type ProductMirantisSolutionIcon =
+  | "network"
+  | "shield"
+  | "automation"
+  | "hybrid";
+
+export interface ProductMirantisSolutionCard {
+  title: string;
+  description: string;
+  icon: ProductMirantisSolutionIcon;
+}
+
+export interface ProductMirantisSolutionsContent {
+  eyebrow: string;
+  title: string;
+  cards: ProductMirantisSolutionCard[];
+}
+
 export interface ProductMirantisPageContent {
   hero: ProductMirantisHeroContent;
+  solutions: ProductMirantisSolutionsContent;
 }
