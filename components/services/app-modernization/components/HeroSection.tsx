@@ -52,6 +52,8 @@ export default function AppModernizationHeroSection({
                 <Link
                   key={button.label}
                   href={button.href}
+                  target={button.external ? "_blank" : undefined}
+                  rel={button.external ? "noopener noreferrer" : undefined}
                   className={`inline-flex min-h-11 items-center justify-center rounded-[10px] border px-4 md:px-4 text-[13px] font-medium whitespace-nowrap transition ${
                     button.variant === "primary"
                       ? "border-[#1D6DFF] bg-[#1D6DFF] text-white hover:bg-[#1656c8]"
