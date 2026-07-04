@@ -3,6 +3,9 @@ import EnterpriseLinuxIcon from "@/components/icons/product-reseller/product-aws
 import ManagedOpenShiftIcon from "@/components/icons/product-reseller/product-aws/ManagedOpenShiftIcon";
 import AnsibleAutomationIcon from "@/components/icons/product-reseller/product-aws/AnsibleAutomationIcon";
 import HybridCloudIcon from "@/components/icons/product-reseller/product-aws/HybridCloudIcon";
+import ReadinessAssessmentIcon from "@/components/icons/product-reseller/product-aws/ReadinessAssessmentIcon";
+import HybridCloudIntegrationIcon from "@/components/icons/product-reseller/product-aws/HybridCloudIntegrationIcon";
+import OperationsVisibilityIcon from "@/components/icons/product-reseller/product-aws/OperationsVisibilityIcon";
 
 export const productAwsPageData: ProductAwsPageContent = {
   hero: {
@@ -54,6 +57,31 @@ export const productAwsPageData: ProductAwsPageContent = {
           "Seamlessly bridge your on-premise data centers with AWS cloud ecosystems.",
         icon: HybridCloudIcon,
         href: "",
+      },
+    ],
+  },
+  enterpriseCapabilities: {
+    title: "Enterprise Capabilities",
+    description:
+      "Our specialized framework for AWS infrastructure deployment ensures every technical decision is aligned with business value.",
+    capabilities: [
+      {
+        title: "Readiness Assessment",
+        description:
+          "Deep-dive technical audits of your current stack to identify bottlenecks, security gaps, and optimization opportunities before migration begins.",
+        icon: ReadinessAssessmentIcon,
+      },
+      {
+        title: "Hybrid Cloud Integration",
+        description:
+          "Architecture patterns that allow for seamless data portability and workload orchestration between private clouds and AWS public infrastructure.",
+        icon: HybridCloudIntegrationIcon,
+      },
+      {
+        title: "Operations Visibility",
+        description:
+          "Full-stack observability implementation using modern tools to provide real-time insights into system health and resource consumption.",
+        icon: OperationsVisibilityIcon,
       },
     ],
   },

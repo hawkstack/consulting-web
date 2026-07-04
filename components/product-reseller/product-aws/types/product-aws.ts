@@ -1,3 +1,5 @@
+import type { ComponentType } from "react";
+
 export interface ProductAwsAction {
   label: string;
   href: string;
@@ -32,9 +34,21 @@ export interface ProductAwsInfrastructureContent {
   solutions: ProductAwsInfrastructureSolution[];
 }
 
+export interface ProductAwsEnterpriseCapability {
+  title: string;
+  description: string;
+  icon: ComponentType<{ className?: string }>;
+}
+
+export interface ProductAwsEnterpriseCapabilitiesContent {
+  title: string;
+  description: string;
+  capabilities: ProductAwsEnterpriseCapability[];
+}
+
 export interface ProductAwsPageContent {
   hero: ProductAwsHeroContent;
   infrastructure: ProductAwsInfrastructureContent;
+  enterpriseCapabilities: ProductAwsEnterpriseCapabilitiesContent;
   cta: ProductAwsCtaContent;
 }
-import type { ComponentType } from "react";

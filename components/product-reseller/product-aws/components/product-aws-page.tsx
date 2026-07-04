@@ -1,6 +1,7 @@
 import HeroSection from "./HeroSection";
 import CtaSection from "./CtaSection";
 import CoreInfrastructureSolutionsSection from "./CoreInfrastructureSolutionsSection";
+import EnterpriseCapabilitiesSection from "./EnterpriseCapabilitiesSection";
 import type { ProductAwsPageContent } from "@/components/product-reseller/product-aws/types/product-aws";
 
 type ProductAwsPageProps = {
@@ -12,6 +13,7 @@ const ProductAwsPage = ({ pageData }: ProductAwsPageProps) => {
     <div>
       <HeroSection content={pageData.hero} />
       <CoreInfrastructureSolutionsSection content={pageData.infrastructure} />
+      <EnterpriseCapabilitiesSection content={pageData.enterpriseCapabilities} />
       <CtaSection content={pageData.cta} />
     </div>
   );
