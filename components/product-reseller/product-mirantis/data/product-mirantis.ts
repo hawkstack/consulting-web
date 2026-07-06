@@ -112,5 +112,25 @@ export const productMirantisPageData: ProductMirantisPageContent = {
         text: "Train engineering teams on Linux, containers, Kubernetes, and automation technologies",
       },
     ],
+    capabilities: [
+      {
+        title: "Readiness Assessment",
+        description:
+          "Evaluate existing environments, identify migration challenges, security gaps, and skills requirements before Kubernetes adoption.",
+        icon: "assessment",
+      },
+      {
+        title: "Cloud Integration",
+        description:
+          "Connect Kubernetes workloads across private infrastructure and cloud environments using consistent operational practices.",
+        icon: "integration",
+      },
+      {
+        title: "Skills Enablement",
+        description:
+          "Train teams on container management, Linux administration, Kubernetes concepts, automation, and production troubleshooting.",
+        icon: "enablement",
+      },
+    ],
   },
 };

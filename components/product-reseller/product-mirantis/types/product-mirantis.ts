@@ -54,10 +54,22 @@ export interface ProductMirantisTransformationItem {
   text: string;
 }
 
+export type ProductMirantisTransformationCapabilityIcon =
+  | "assessment"
+  | "integration"
+  | "enablement";
+
+export interface ProductMirantisTransformationCapability {
+  title: string;
+  description: string;
+  icon: ProductMirantisTransformationCapabilityIcon;
+}
+
 export interface ProductMirantisTransformationContent {
   title: string;
   description: string;
   items: ProductMirantisTransformationItem[];
+  capabilities: ProductMirantisTransformationCapability[];
 }
 
 export interface ProductMirantisPageContent {
