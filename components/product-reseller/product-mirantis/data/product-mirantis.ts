@@ -86,4 +86,31 @@ export const productMirantisPageData: ProductMirantisPageContent = {
       },
     ],
   },
+  transformation: {
+    title: "One Partner. Complete Kubernetes Transformation.",
+    description:
+      "HawkStack helps enterprises move from complex infrastructure management to modern container platforms. Combining Mirantis Kubernetes capabilities with Red Hat Linux expertise, automation knowledge, and hands-on training, we help teams build, operate, and scale secure cloud-native environments.",
+    items: [
+      {
+        id: 1,
+        text: "Modernize traditional applications by migrating workloads into enterprise Kubernetes platforms",
+      },
+      {
+        id: 2,
+        text: "Improve operational efficiency through automated Kubernetes deployment and management practices",
+      },
+      {
+        id: 3,
+        text: "Strengthen container security from image creation to production runtime",
+      },
+      {
+        id: 4,
+        text: "Enable developers with reliable Kubernetes workflows and cloud-native development practices",
+      },
+      {
+        id: 5,
+        text: "Train engineering teams on Linux, containers, Kubernetes, and automation technologies",
+      },
+    ],
+  },
 };
