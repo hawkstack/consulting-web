@@ -1,4 +1,5 @@
 import { MegaItem, OfferingsMenuContent } from "./types";
+import { PRODUCT_TYPES } from "@/constants/productReseller";
 
 /* ================= PRODUCTS ================= */
 export const products: MegaItem[] = [
@@ -35,7 +36,7 @@ export const products: MegaItem[] = [
     image: "/images/products/RedHat-OpenStack.webp",
   },
   {
-    id: "cncf",
+    id: PRODUCT_TYPES.CNCF,
     label: "CNCF",
     title: "CNCF",
     description:
@@ -43,7 +44,7 @@ export const products: MegaItem[] = [
     image: "/images/products/CNCF.webp",
   },
   {
-    id: "mirantis",
+    id: PRODUCT_TYPES.MIRANTIS,
     label: "Mirantis",
     title: "Mirantis",
     description:
@@ -67,7 +68,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
   },
   resellers: [
     {
-      id: "redhat",
+      id: PRODUCT_TYPES.REDHAT,
       title: "RedHat",
       description:
         "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
@@ -75,7 +76,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       href: "/product-reseller/redhat",
     },
     {
-      id: "cncf",
+      id: PRODUCT_TYPES.CNCF,
       title: "CNCF",
       description:
         "Cloud-native technologies and frameworks powering modern application development.",
@@ -83,7 +84,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       href: "/product-reseller/cncf",
     },
     {
-      id: "mirantis",
+      id: PRODUCT_TYPES.MIRANTIS,
       title: "Mirantis",
       description:
         "Kubernetes and container solutions for scalable and secure cloud environments.",
@@ -99,7 +100,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
     //   href: "/get-started",
     // },
     {
-      id: "aws",
+      id: PRODUCT_TYPES.AWS,
       title: "AWS",
       description:
         "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",

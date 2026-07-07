@@ -7,12 +7,13 @@ import { productMirantisPageData } from "@/components/product-reseller/product-m
 import { productRedhatPageData } from "@/components/product-reseller/product-redhat/data/product-redhat";
 import ProductAwsPage from "@/components/product-reseller/product-aws/components/product-aws-page";
 import { productAwsPageData } from "@/components/product-reseller/product-aws/data/product-aws";
+import { PRODUCT_TYPES } from "@/constants/productReseller";
 
 const productPages = {
-  cncf: productCncfPageData,
-  mirantis: productMirantisPageData,
-  redhat: productRedhatPageData,
-  aws: productAwsPageData,
+  [PRODUCT_TYPES.AWS]: productAwsPageData,
+  [PRODUCT_TYPES.CNCF]: productCncfPageData,
+  [PRODUCT_TYPES.MIRANTIS]: productMirantisPageData,
+  [PRODUCT_TYPES.REDHAT]: productRedhatPageData,
 };
 
 type ProductSlug = keyof typeof productPages;
@@ -37,17 +38,19 @@ export default async function ProductResellerPage({
     notFound();
   }
 
-  if (product === "redhat") {
+  if (product === PRODUCT_TYPES.REDHAT) {
     return <ProductRedhatPage pageData={productRedhatPageData} />;
   }
 
-  if (product === "cncf") {
+  if (product === PRODUCT_TYPES.CNCF) {
     return <ProductCncfPage pageData={productCncfPageData} />;
   }
 
-  if (product === "mirantis") {
+  if (product === PRODUCT_TYPES.MIRANTIS) {
     return <ProductMirantisPage pageData={productMirantisPageData} />;
-  if (product === "aws") {
+  }
+
+  if (product === PRODUCT_TYPES.AWS) {
     return <ProductAwsPage pageData={productAwsPageData} />;
   }
 
