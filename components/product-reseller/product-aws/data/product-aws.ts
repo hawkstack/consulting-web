@@ -85,6 +85,23 @@ export const productAwsPageData: ProductAwsPageContent = {
       },
     ],
   },
+  modernizationEngine: {
+    title: "The Modernization Engine",
+    description:
+      "See how HawkStack transforms fragmented legacy systems into unified, high-performance AWS cloud ecosystems.",
+    currentState: [
+      "Manual Patching Cycles",
+      "Fragmented Silos",
+      "Inconsistent Security Policies",
+      "High Operational Toil",
+    ],
+    targetState: [
+      "Automated CI/CD Pipelines",
+      "Unified Platform Governance",
+      "Continuous Compliance",
+      "Policy-as-Code Automation",
+    ],
+  },
   cta: {
     title: "Ready to Modernize Your Stack?",
     description:

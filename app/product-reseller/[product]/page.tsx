@@ -47,6 +47,7 @@ export default async function ProductResellerPage({
 
   if (product === "mirantis") {
     return <ProductMirantisPage pageData={productMirantisPageData} />;
+  }
   if (product === "aws") {
     return <ProductAwsPage pageData={productAwsPageData} />;
   }
