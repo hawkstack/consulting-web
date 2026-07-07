@@ -8,6 +8,15 @@ type ProductMirantisHeroSectionProps = {
 export default function ProductMirantisHeroSection({
   content,
 }: ProductMirantisHeroSectionProps) {
+  const {
+    badge,
+    title,
+    description,
+    actions,
+    platform,
+    floatingCards: { operations, supplyChain },
+  } = content;
+
   return (
     <section className="relative overflow-hidden bg-[#FDFEFF] font-lexend text-[#10182B]">
       <div className="pointer-events-none absolute right-[-10%] top-[-18%] hidden aspect-square w-[52%] rounded-full bg-[radial-gradient(circle,rgba(234,241,255,0.96)_0%,rgba(234,241,255,0.72)_48%,rgba(234,241,255,0)_74%)] md:block" />
@@ -19,11 +28,11 @@ export default function ProductMirantisHeroSection({
               aria-hidden="true"
               className="h-2 w-2 rounded-full bg-[#245DFF]"
             />
-            {content.badge}
+            {badge}
           </span>
 
           <h1 className="mx-auto mt-5 max-w-[720px] text-[25px] font-semibold leading-[1.16] tracking-normal text-[#111827] sm:text-[31px] md:mx-0 md:mt-4 md:max-w-[430px] md:text-[26px] md:leading-[1.15] lg:max-w-[500px] lg:text-[42px] xl:text-[52px] lg:leading-[1.17]">
-            {content.title}
+            {title}
           </h1>
 
           <p className="mx-auto mt-4 max-w-[700px] text-[13px] leading-[1.55] text-[#66708B] md:mx-0 md:max-w-[520px] md:text-[10px] md:leading-[1.65] lg:mt-5 lg:text-[14px] lg:leading-[1.72]">
@@ -32,11 +41,11 @@ export default function ProductMirantisHeroSection({
                 "HawkStack helps organizations design, deploy, and operate secure Kubernetes environments using Mirantis container technologies and enterprise Linux practices."
               }
             </span>
-            <span className="hidden md:inline">{content.description}</span>
+            <span className="hidden md:inline">{description}</span>
           </p>
 
           <div className="mt-7 flex items-stretch justify-center gap-3 md:mt-5 md:justify-start lg:mt-7">
-            {content.actions.map((action) => (
+            {actions.map((action) => (
               <Link
                 key={action.label}
                 href={action.href}
@@ -64,10 +73,10 @@ export default function ProductMirantisHeroSection({
         >
           <div className="absolute left-[8%] top-0 w-[260px] rounded-[14px] border border-[#E7EDF7] bg-white p-4 shadow-[0_4px_28px_rgba(15,23,42,0.13)] md:left-[-11%] md:top-[-18%] lg:left-[1%] lg:top-[-12%] lg:w-[330px] lg:rounded-[18px] lg:p-6 z-10">
             <h2 className="text-[11px] font-semibold text-[#111827] lg:text-[14px]">
-              {content.floatingCards.supplyChain.title}
+              {supplyChain.title}
             </h2>
             <p className="mt-2 text-[8px] leading-[1.55] text-[#66708B] lg:mt-3 lg:text-[11px]">
-              {content.floatingCards.supplyChain.description}
+              {supplyChain.description}
             </p>
           </div>
 
@@ -77,14 +86,14 @@ export default function ProductMirantisHeroSection({
                 aria-hidden="true"
                 className="h-1.5 w-1.5 rounded-full bg-[#245DFF]"
               />
-              {content.platform.badge}
+              {platform.badge}
             </span>
             <h2 className="mt-3 text-[13px] font-semibold text-[#111827] lg:mt-4 lg:text-[19px]">
-              {content.platform.title}
+              {platform.title}
             </h2>
 
             <div className="mt-4 grid grid-cols-2 gap-3 lg:mt-7 lg:gap-4">
-              {content.platform.metrics.map((metric) => (
+              {platform.metrics.map((metric) => (
                 <div
                   key={metric.value}
                   className="min-h-[66px] rounded-[10px] border border-[#E2E8F2] bg-[#F8FBFF] p-4 lg:min-h-[92px] lg:rounded-[12px] lg:p-5"
@@ -100,12 +109,12 @@ export default function ProductMirantisHeroSection({
             </div>
           </div>
 
-          <div className="absolute bottom-[2%] right-[-2%] w-[350px] rounded-[14px] border border-[#E7EDF7] bg-white p-4 shadow-[0_5px_20px_rgba(15,23,42,0.13)]  md:bottom-[-20%] md:right-[-15%]  lg:bottom-[-24%] lg:right-[-11%] lg:w-[430px] lg:rounded-[16px] lg:p-6">
+          <div className="absolute bottom-[2%] right-[-2%] w-[350px] rounded-[14px] border border-[#E7EDF7] bg-white p-4 shadow-[0_28px_64px_rgba(15,23,42,0.13)]  md:bottom-[-20%] md:right-[-15%]  lg:bottom-[-24%] lg:right-[-11%] lg:w-[430px] lg:rounded-[16px] lg:p-6">
             <h2 className="text-[12px] font-semibold text-[#111827] lg:text-[16px]">
-              {content.floatingCards.operations.title}
+              {operations.title}
             </h2>
             <p className="mt-2 text-[8px] leading-[1.55] text-[#66708B] lg:mt-3 lg:text-[11px]">
-              {content.floatingCards.operations.description}
+              {operations.description}
             </p>
           </div>
         </div>
