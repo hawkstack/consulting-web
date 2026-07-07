@@ -86,4 +86,14 @@ export const productMirantisPageData: ProductMirantisPageContent = {
       },
     ],
   },
+  cta: {
+    title: "Build Secure, Scalable Kubernetes Platforms with HawkStack",
+    description:
+      "Accelerate your cloud-native transformation with enterprise Kubernetes expertise, automation frameworks, and practical engineering enablement from HawkStack Technologies.",
+    action: {
+      label: "Talk to Our Experts",
+      href: "/contact-us",
+      ariaLabel: "Talk to HawkStack experts about Mirantis Kubernetes platforms",
+    },
+  },
 };

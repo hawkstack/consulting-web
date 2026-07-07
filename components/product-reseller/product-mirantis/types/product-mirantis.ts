@@ -49,7 +49,18 @@ export interface ProductMirantisSolutionsContent {
   cards: ProductMirantisSolutionCard[];
 }
 
+export interface ProductMirantisCtaContent {
+  title: string;
+  description: string;
+  action: {
+    label: string;
+    href: string;
+    ariaLabel: string;
+  };
+}
+
 export interface ProductMirantisPageContent {
   hero: ProductMirantisHeroContent;
   solutions: ProductMirantisSolutionsContent;
+  cta: ProductMirantisCtaContent;
 }
