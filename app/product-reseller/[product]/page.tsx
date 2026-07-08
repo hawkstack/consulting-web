@@ -9,13 +9,6 @@ import ProductAwsPage from "@/components/product-reseller/product-aws/components
 import { productAwsPageData } from "@/components/product-reseller/product-aws/data/product-aws";
 import { PRODUCT_TYPES } from "@/constants/productReseller";
 
-const PRODUCT_TYPES = {
-  AWS: "aws",
-  CNCF: "cncf",
-  MIRANTIS: "mirantis",
-  REDHAT: "redhat",
-} as const;
-
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
   [PRODUCT_TYPES.CNCF]: productCncfPageData,

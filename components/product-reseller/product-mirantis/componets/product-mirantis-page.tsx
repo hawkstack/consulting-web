@@ -16,6 +16,7 @@ export default function ProductMirantisPage({
       <ProductMirantisHeroSection content={pageData.hero} />
       <ProductMirantisSolutionsSection content={pageData.solutions} />
       <ProductMirantisTransformationSection content={pageData.transformation} />
+      <ProductMirantisCtaSection content={pageData.cta} />
     </>
   );
 }
