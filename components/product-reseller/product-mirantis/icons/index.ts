@@ -1,0 +1,1 @@
+export { MirantisSolutionIcon } from "./MirantisPageIcons";
