@@ -60,8 +60,15 @@ export interface ProductMirantisTransformationContent {
   items: ProductMirantisTransformationItem[];
 }
 
+export interface ProductMirantisCtaContent {
+  title: string;
+  description: string;
+  action: Omit<ProductMirantisAction, "variant">;
+}
+
 export interface ProductMirantisPageContent {
   hero: ProductMirantisHeroContent;
   solutions: ProductMirantisSolutionsContent;
   transformation: ProductMirantisTransformationContent;
+  cta: ProductMirantisCtaContent;
 }

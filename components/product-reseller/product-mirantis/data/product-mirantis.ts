@@ -113,4 +113,14 @@ export const productMirantisPageData: ProductMirantisPageContent = {
       },
     ],
   },
+  cta: {
+    title: "Ready to Build a Reliable Kubernetes Platform?",
+    description:
+      "Work with HawkStack to plan, deploy, secure, and operate Mirantis-powered container platforms for enterprise teams.",
+    action: {
+      label: "Talk to an Expert",
+      href: "/contact-us",
+      ariaLabel: "Talk to a HawkStack Mirantis expert",
+    },
+  },
 };
