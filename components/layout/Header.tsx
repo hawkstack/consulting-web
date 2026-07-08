@@ -20,7 +20,7 @@ const menuMap: Record<MenuKey, MegaItem[] | null> = {
 type OpenMenuState = MenuKey | null;
 
 export function Header(): JSX.Element {
-  const t = useTranslations("Header");
+  const tHeader = useTranslations("Header");
   const [openMenu, setOpenMenu] = useState<OpenMenuState>(null);
   const [activeItem, setActiveItem] = useState<MegaItem | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -63,12 +63,12 @@ export function Header(): JSX.Element {
         <ul className="ml-auto hidden lg:flex items-center gap-14">
           <li>
             <Link href="/" className="text-white">
-              {t("home")}
+              {tHeader("home")}
             </Link>
           </li>
 
           {(["products", "services", "company"] as MenuKey[]).map((key) => {
-            const label = t(key);
+            const label = tHeader(key);
 
             return (
               <li
@@ -94,7 +94,7 @@ export function Header(): JSX.Element {
             rel="noreferrer"
             className="inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] border border-white text-white"
           >
-            {t("training")}
+            {tHeader("training")}
           </a>
         </div>
 
@@ -102,7 +102,7 @@ export function Header(): JSX.Element {
         <button
           className="ml-auto lg:hidden text-white text-2xl"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={t("toggleMenu")}
+          aria-label={tHeader("toggleMenu")}
         >
           {mobileOpen ? "✕" : "☰"}
         </button>
@@ -138,7 +138,7 @@ export function Header(): JSX.Element {
                       onClick={() => setMobileOpen(false)}
                       className="text-white text-[16px]"
                     >
-                      {t(item)}
+                      {tHeader(item)}
                     </Link>
                   </li>
                 );
@@ -146,7 +146,7 @@ export function Header(): JSX.Element {
             )}
           </ul>
 
-          <div className="mt-6">
+          <div className="mt-6 w-[124px] max-w-full">
             <LanguageSwitcher />
           </div>
 
@@ -155,9 +155,9 @@ export function Header(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             onClick={() => setMobileOpen(false)}
-            className="mt-6 inline-flex items-center justify-center w-full h-[44px] rounded-[14px] border border-white text-white text-[14px]"
+            className="mt-6 inline-flex h-[44px] w-[124px] max-w-full items-center justify-center rounded-[14px] border border-white text-[14px] text-white"
           >
-            {t("training")}
+            {tHeader("training")}
           </a>
         </div>
       )}

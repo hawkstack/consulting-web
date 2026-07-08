@@ -12,7 +12,7 @@ import { JSX } from "react";
 import { useTranslations } from "next-intl";
 
 export const Footer = (): JSX.Element => {
-  const t = useTranslations("Footer");
+  const tFooter = useTranslations("Footer");
   return (
     <footer className="font-lexend font-light bg-black relative overflow-hidden text-white w-full">
       {/* Blur */}
@@ -49,15 +49,17 @@ export const Footer = (): JSX.Element => {
         {/* ================= MOBILE (< md) ================= */}
         <div className="block md:hidden space-y-10">
           <div>
-            <h4 className="mb-3 font-semibold text-[16px]">{t("about")}</h4>
+            <h4 className="mb-3 font-semibold text-[16px]">
+              {tFooter("about")}
+            </h4>
             <p className="text-sm leading-[150%] text-gray-300">
-              {t("description")}
+              {tFooter("description")}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h4 className="mb-3 font-semibold">{t("services")}</h4>
+              <h4 className="mb-3 font-semibold">{tFooter("services")}</h4>
 
               <ul className="space-y-2 text-sm text-gray-300">
                 {servicesLinks.map((item) => (
@@ -69,7 +71,7 @@ export const Footer = (): JSX.Element => {
             </div>
 
             <div className="md:-ml-80">
-              <h4 className="mb-3 font-semibold">{t("training")}</h4>
+              <h4 className="mb-3 font-semibold">{tFooter("training")}</h4>
 
               <ul className="space-y-2 text-sm text-gray-300">
                 {trainingLinks.map((item) => (
@@ -83,7 +85,7 @@ export const Footer = (): JSX.Element => {
 
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h4 className="mb-3 font-semibold">{t("products")}</h4>
+              <h4 className="mb-3 font-semibold">{tFooter("products")}</h4>
 
               <ul className="space-y-2 text-sm text-gray-300">
                 {solutionLinks.map((item) => (
@@ -107,7 +109,7 @@ export const Footer = (): JSX.Element => {
         {/* ================= IPAD / TABLET (md only) ================= */}
         <div className="hidden md:grid lg:hidden mt-12 grid-cols-[1fr_1fr_1fr_1.6fr] gap-x-6 text-[16px]">
           <div>
-            <h4 className="mb-4 font-semibold">{t("services")}</h4>
+            <h4 className="mb-4 font-semibold">{tFooter("services")}</h4>
 
             <ul className="space-y-3 text-gray-300">
               {servicesLinks.map((item) => (
@@ -120,7 +122,7 @@ export const Footer = (): JSX.Element => {
 
           <div className="col-span-2 grid grid-cols-5 gap-x-35">
             <div>
-              <h4 className="mb-4 font-semibold">{t("products")}</h4>
+              <h4 className="mb-4 font-semibold">{tFooter("products")}</h4>
 
               <ul className="space-y-3 text-gray-300">
                 {solutionLinks.map((item) => (
@@ -132,7 +134,7 @@ export const Footer = (): JSX.Element => {
             </div>
 
             <div>
-              <h4 className="mb-4 font-semibold">{t("training")}</h4>
+              <h4 className="mb-4 font-semibold">{tFooter("training")}</h4>
 
               <ul className="space-y-3 text-gray-300">
                 {trainingLinks.map((item) => (
@@ -145,10 +147,10 @@ export const Footer = (): JSX.Element => {
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold">{t("about")}</h4>
+            <h4 className="mb-4 font-semibold">{tFooter("about")}</h4>
 
             <p className="text-sm leading-[150%] text-gray-300 mb-6">
-              {t("description")}
+              {tFooter("description")}
             </p>
 
             <div className="grid grid-cols-2 gap-4 text-blue-400 text-sm">
@@ -164,7 +166,7 @@ export const Footer = (): JSX.Element => {
         {/* ================= DESKTOP (lg+) ================= */}
         <div className="hidden lg:grid mt-2 grid-cols-4 gap-x-4 text-[16px]">
           <div>
-            <h4 className="mb-4 font-semibold">{t("services")}</h4>
+            <h4 className="mb-4 font-semibold">{tFooter("services")}</h4>
 
             <ul className="space-y-3 text-gray-300">
               {servicesLinks.map((item) => (
@@ -176,7 +178,7 @@ export const Footer = (): JSX.Element => {
           </div>
 
           <div className="ml-10">
-            <h4 className="mb-4 font-semibold">{t("products")}</h4>
+            <h4 className="mb-4 font-semibold">{tFooter("products")}</h4>
 
             <ul className="space-y-3 text-gray-300">
               {solutionLinks.map((item) => (
@@ -188,7 +190,7 @@ export const Footer = (): JSX.Element => {
           </div>
 
           <div className="-ml-6">
-            <h4 className="mb-4 font-semibold">{t("training")}</h4>
+            <h4 className="mb-4 font-semibold">{tFooter("training")}</h4>
 
             <ul className="space-y-3 text-gray-300">
               {trainingLinks.map((item) => (
@@ -200,10 +202,12 @@ export const Footer = (): JSX.Element => {
           </div>
 
           <div className="-ml-10">
-            <h4 className="mb-4 font-semibold text-[16px]">{t("about")}</h4>
+            <h4 className="mb-4 font-semibold text-[16px]">
+              {tFooter("about")}
+            </h4>
 
             <p className="mb-6 text-sm leading-[150%] tracking-[-0.03em] text-gray-300 text-[16px]">
-              {t("description")}
+              {tFooter("description")}
             </p>
 
             <div className="grid grid-cols-2 gap-4 text-blue-400 text-[18px]">
@@ -234,7 +238,7 @@ export const Footer = (): JSX.Element => {
         </div>
 
         <div className="text-center text-sm mt-12 text-gray-300">
-          {t("rights")}
+          {tFooter("rights")}
         </div>
       </div>
     </footer>
