@@ -7,6 +7,7 @@ import { productMirantisPageData } from "@/components/product-reseller/product-m
 import { productRedhatPageData } from "@/components/product-reseller/product-redhat/data/product-redhat";
 import ProductAwsPage from "@/components/product-reseller/product-aws/components/product-aws-page";
 import { productAwsPageData } from "@/components/product-reseller/product-aws/data/product-aws";
+import { PRODUCT_TYPES } from "@/constants/productReseller";
 
 const PRODUCT_TYPES = {
   AWS: "aws",
