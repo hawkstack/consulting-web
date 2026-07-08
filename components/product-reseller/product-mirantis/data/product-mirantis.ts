@@ -56,4 +56,44 @@ export const productMirantisPageData: ProductMirantisPageContent = {
       },
     },
   },
+  solutions: {
+    eyebrow: "Expert Implementation",
+    title: "Enterprise Kubernetes Solutions",
+    cards: [
+      {
+        title: "Production Kubernetes with Mirantis",
+        description:
+          "Deploy and manage enterprise clusters with Mirantis while following proven Linux and container practices.",
+        icon: "network",
+      },
+      {
+        title: "Secure Container Supply Chains",
+        description:
+          "Build secure delivery workflows by implementing image management, vulnerability controls, and production pipelines.",
+        icon: "shield",
+      },
+      {
+        title: "Kubernetes Automation",
+        description:
+          "Reduce operational complexity by automating cluster management and application deployments using DevOps frameworks.",
+        icon: "automation",
+      },
+      {
+        title: "Hybrid & Multi-Cluster",
+        description:
+          "Manage environments across data centers, private cloud, and public platforms with consistent operational processes.",
+        icon: "hybrid",
+      },
+    ],
+  },
+  cta: {
+    title: "Build Secure, Scalable Kubernetes Platforms with HawkStack",
+    description:
+      "Accelerate your cloud-native transformation with enterprise Kubernetes expertise, automation frameworks, and practical engineering enablement from HawkStack Technologies.",
+    action: {
+      label: "Talk to Our Experts",
+      href: "/contact-us",
+      ariaLabel: "Talk to HawkStack experts about Mirantis Kubernetes platforms",
+    },
+  },
 };
