@@ -20,3 +20,21 @@ export function submitJobApplication(payload: FormData) {
     body: payload,
   });
 }
+
+export function fetchConsultingPrivacyPolicy() {
+  return fetch(publicApiRoutes.consultingPrivacyPolicy, {
+    cache: "no-store",
+  });
+}
+
+export function fetchConsultingCookiePolicy() {
+  return fetch(publicApiRoutes.consultingCookiePolicy, {
+    cache: "no-store",
+  });
+}
+
+export function fetchConsultingTermsOfUse() {
+  return fetch(publicApiRoutes.consultingTermsOfUse, {
+    cache: "no-store",
+  });
+}
