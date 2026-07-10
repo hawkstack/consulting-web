@@ -2,27 +2,15 @@ import type { ProductGcpPageContent } from "@/components/product-reseller/produc
 
 export const productGcpPageData: ProductGcpPageContent = {
   hero: {
-    eyebrow: "GOOGLE CLOUD PARTNER",
-    title: "",
-    description: "",
+    eyebrow: "NEXT GEN GCP ENGINEERING",
+    title:
+      "Build Google Cloud Expertise with Red Hat Powered Engineering Skills",
+    description:
+      "Unlock elite engineering capabilities across the Google Cloud ecosystem. We bridge the gap between enterprise Linux stability and hyperscale cloud agility.",
+    image: "/images/product-gcp/gcp.webp",
+    imageAlt: "Google Cloud engineering illustration",
   },
-  solutions: {
-    title: "",
-    description: "",
-    cards: [],
-  },
-  benefits: {
-    title: "",
-    description: "",
-    benefits: [],
-  },
-  cta: {
-    title: "",
-    description: "",
-    action: {
-      label: "",
-      href: "",
-      ariaLabel: "",
-    },
-  },
+  // solutions: {},
+  // benefits: {},
+  // cta: {},
 };
