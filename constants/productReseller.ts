@@ -1,6 +1,7 @@
 export const PRODUCT_TYPES = {
   AWS: "aws",
   CNCF: "cncf",
+  GCP: "gcp",
   MIRANTIS: "mirantis",
   REDHAT: "redhat",
 } as const;

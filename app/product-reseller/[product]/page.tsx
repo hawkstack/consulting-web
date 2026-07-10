@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import ProductCncfPage from "@/components/product-reseller/product-cncf/components/product-cncf-page";
+import ProductGcpPage from "@/components/product-reseller/product-gcp/components/product-gcp-page";
 import ProductMirantisPage from "@/components/product-reseller/product-mirantis/componets/product-mirantis-page";
 import ProductRedhatPage from "@/components/product-reseller/product-redhat/components/product-redhat-page";
 import { productCncfPageData } from "@/components/product-reseller/product-cncf/data/product-cncf";
+import { productGcpPageData } from "@/components/product-reseller/product-gcp/data/product-gcp";
 import { productMirantisPageData } from "@/components/product-reseller/product-mirantis/data/product-mirantis";
 import { productRedhatPageData } from "@/components/product-reseller/product-redhat/data/product-redhat";
 import ProductAwsPage from "@/components/product-reseller/product-aws/components/product-aws-page";
@@ -12,6 +14,7 @@ import { PRODUCT_TYPES } from "@/constants/productReseller";
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
   [PRODUCT_TYPES.CNCF]: productCncfPageData,
+  [PRODUCT_TYPES.GCP]: productGcpPageData,
   [PRODUCT_TYPES.MIRANTIS]: productMirantisPageData,
   [PRODUCT_TYPES.REDHAT]: productRedhatPageData,
 };
@@ -48,6 +51,10 @@ export default async function ProductResellerPage({
 
   if (product === PRODUCT_TYPES.MIRANTIS) {
     return <ProductMirantisPage pageData={productMirantisPageData} />;
+  }
+
+  if (product === PRODUCT_TYPES.GCP) {
+    return <ProductGcpPage pageData={productGcpPageData} />;
   }
 
   if (product === PRODUCT_TYPES.AWS) {
