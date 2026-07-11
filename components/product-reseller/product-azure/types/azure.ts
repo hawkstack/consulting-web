@@ -24,3 +24,16 @@ export interface AzureHeroData {
   trustedLabel: string;
   trustedCompanies: string[];
 }
+
+export interface AzureCompetencyCard {
+  title: string;
+  description: string;
+  icon: ComponentType<{ className?: string }>;
+}
+
+export interface AzureCompetenciesData {
+  title: string;
+  mobileTitle: string;
+  description: string;
+  cards: AzureCompetencyCard[];
+}
