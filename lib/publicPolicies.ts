@@ -1,18 +1,21 @@
 import type {
+  PolicyHeader,
+  PolicyPageData,
   PrivacyPoint,
   PrivacySection,
 } from "@/app/types/privacy-policy/privacy-policy";
 import {
-  type PolicyHeader,
-  type PolicyPageData,
-  policyPageFallbacks,
-} from "@/data/privacy-policy/policyPages";
+  getPublicBackendUrl,
+  publicBackendPaths,
+} from "@/lib/api/publicBackendEndpoints";
 
 export type { PolicyHeader, PolicyPageData };
 
 type PolicyResult = PolicyPageData & {
   ok: boolean;
 };
+
+type PolicyKey = "privacy" | "cookie" | "terms-of-use";
 
 type ApiTitleBullets = {
   title?: string | null;
@@ -27,8 +30,6 @@ type ApiTitleDescription = {
   desc?: string | null;
   descss?: string[] | null;
 };
-
-const DEFAULT_BASE_URL = "https://hawkstack.com";
 
 function cleanText(value: unknown): string {
   return typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
@@ -421,71 +422,59 @@ function mapApiPolicyPayload(
   return null;
 }
 
-function getApiUrls(policyKey: string) {
-  const explicitUrl =
-    process.env.CONSULTING_POLICY_API_URL ||
-    process.env.NEXT_PUBLIC_CONSULTING_POLICY_API_URL;
-  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const siteBase = process.env.NEXT_PUBLIC_BASE_URL || DEFAULT_BASE_URL;
-
-  if (explicitUrl) {
-    return [explicitUrl];
+function getPolicyBackendPath(policyKey: PolicyKey) {
+  if (policyKey === "cookie") {
+    return publicBackendPaths.consultingCookiePolicy;
   }
 
-  return Array.from(
-    new Set(
-      [apiBase, siteBase]
-        .filter(Boolean)
-        .map(
-          (base) =>
-            `${base}/api/public/policies/consulting?policy=${encodeURIComponent(
-              policyKey,
-            )}`,
-        ),
-    ),
-  );
-}
+  if (policyKey === "terms-of-use") {
+    return publicBackendPaths.consultingTermsOfUse;
+  }
 
-function getFallback(policyKey: string, fallbackTitle?: string): PolicyPageData {
-  const fallback = policyPageFallbacks[policyKey] ?? policyPageFallbacks.privacy;
-
-  return {
-    headerProps: {
-      ...fallback.headerProps,
-      ...(fallbackTitle ? { title: fallbackTitle } : {}),
-    },
-    sections: fallback.sections,
-  };
+  return publicBackendPaths.consultingPrivacyPolicy;
 }
 
 export async function fetchPublicPolicyResult(
-  policyKey: string,
+  policyKey: PolicyKey,
   options: { fallbackTitle?: string } = {},
 ): Promise<PolicyResult> {
-  const fallback = getFallback(policyKey, options.fallbackTitle);
-  const fallbackTitle = fallback.headerProps.title ?? options.fallbackTitle ?? "Policy";
+  const fallbackTitle = options.fallbackTitle ?? "Policy";
 
-  for (const url of getApiUrls(policyKey)) {
-    try {
-      const response = await fetch(url, { cache: "no-store" });
+  try {
+    const response = await fetch(getPublicBackendUrl(getPolicyBackendPath(policyKey)), {
+      cache: "no-store",
+    });
 
-      if (!response.ok) continue;
-
-      const apiPolicy = mapApiPolicyPayload(
-        await response.json(),
-        policyKey,
-        fallbackTitle,
-      );
-
-      if (apiPolicy?.sections.length) {
-        return { ...apiPolicy, ok: true };
-      }
-    } catch {
-      continue;
+    if (!response.ok) {
+      throw new Error("Policy request failed.");
     }
+
+    const apiPolicy = mapApiPolicyPayload(
+      await response.json(),
+      policyKey,
+      fallbackTitle,
+    );
+
+    if (apiPolicy?.sections.length) {
+      return { ...apiPolicy, ok: true };
+    }
+  } catch {
+    return {
+      headerProps: {
+        title: fallbackTitle,
+      },
+      sections: [],
+      ok: false,
+    };
   }
 
-  return { ...fallback, ok: false };
+  return {
+    headerProps: {
+      title: fallbackTitle,
+    },
+    sections: [],
+    ok: false,
+  };
 }
 
 export async function fetchPublicPrivacyPolicyResult() {

@@ -5,6 +5,7 @@ import type {
   ConsultingServicesConversationFormField,
   ConsultingServicesConversationSectionContent,
 } from "@/components/services/consulting-services/types/consulting-services";
+import { submitConsultingForm } from "@/lib/api/publicClient";
 import { validateEmail, validateRequired } from "@/utils/validation";
 
 type FormState = {
@@ -90,15 +91,20 @@ export default function ConsultingConversationForm({
     setStatus("idle");
 
     try {
-      const response = await fetch("/api/contacts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          source: content.source,
-          ...values,
-        }),
+      const [firstName, ...lastNameParts] = values.fullName.trim().split(/\s+/);
+
+      const response = await submitConsultingForm({
+        source: content.source,
+        firstName,
+        lastName: lastNameParts.join(" "),
+        email: values.workEmail,
+        company: values.company,
+        query: [
+          values.areaOfInterest,
+          values.projectRequirement,
+        ]
+          .filter(Boolean)
+          .join("\n\n"),
       });
 
       if (!response.ok) {

@@ -1,18 +1,16 @@
 import { NextResponse } from "next/server";
+import {
+  getPublicBackendUrl,
+  publicBackendPaths,
+} from "@/lib/api/publicBackendEndpoints";
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL;
-
-export async function POST(request: Request) {
+export async function GET() {
   try {
-    const formData = await request.formData();
-
     const response = await fetch(
-      `${API_BASE_URL}/api/job-application`,
+      getPublicBackendUrl(publicBackendPaths.consultingPrivacyPolicy),
       {
-        method: "POST",
-        body: formData,
-      }
+        cache: "no-store",
+      },
     );
 
     const data = await response.json();
@@ -24,11 +22,11 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: false,
-        message: "Unable to submit application.",
+        message: "Unable to load privacy policy.",
       },
       {
         status: 500,
-      }
+      },
     );
   }
 }
