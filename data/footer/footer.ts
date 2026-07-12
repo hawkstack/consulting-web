@@ -94,7 +94,7 @@ export const solutionLinks = [
   },
   {
     title: "GCP",
-    href: "/coming-soon",
+    href: "/product-reseller/gcp",
   },
   {
     title: "Azure",
