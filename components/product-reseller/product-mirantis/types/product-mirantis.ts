@@ -49,18 +49,26 @@ export interface ProductMirantisSolutionsContent {
   cards: ProductMirantisSolutionCard[];
 }
 
+export interface ProductMirantisTransformationItem {
+  id: number;
+  text: string;
+}
+
+export interface ProductMirantisTransformationContent {
+  title: string;
+  description: string;
+  items: ProductMirantisTransformationItem[];
+}
+
 export interface ProductMirantisCtaContent {
   title: string;
   description: string;
-  action: {
-    label: string;
-    href: string;
-    ariaLabel: string;
-  };
+  action: Omit<ProductMirantisAction, "variant">;
 }
 
 export interface ProductMirantisPageContent {
   hero: ProductMirantisHeroContent;
   solutions: ProductMirantisSolutionsContent;
+  transformation: ProductMirantisTransformationContent;
   cta: ProductMirantisCtaContent;
 }

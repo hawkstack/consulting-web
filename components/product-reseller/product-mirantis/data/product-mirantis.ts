@@ -86,14 +86,41 @@ export const productMirantisPageData: ProductMirantisPageContent = {
       },
     ],
   },
-  cta: {
-    title: "Build Secure, Scalable Kubernetes Platforms with HawkStack",
+  transformation: {
+    title: "One Partner. Complete Kubernetes Transformation.",
     description:
-      "Accelerate your cloud-native transformation with enterprise Kubernetes expertise, automation frameworks, and practical engineering enablement from HawkStack Technologies.",
+      "HawkStack helps enterprises move from complex infrastructure management to modern container platforms. Combining Mirantis Kubernetes capabilities with Red Hat Linux expertise, automation knowledge, and hands-on training, we help teams build, operate, and scale secure cloud-native environments.",
+    items: [
+      {
+        id: 1,
+        text: "Modernize traditional applications by migrating workloads into enterprise Kubernetes platforms",
+      },
+      {
+        id: 2,
+        text: "Improve operational efficiency through automated Kubernetes deployment and management practices",
+      },
+      {
+        id: 3,
+        text: "Strengthen container security from image creation to production runtime",
+      },
+      {
+        id: 4,
+        text: "Enable developers with reliable Kubernetes workflows and cloud-native development practices",
+      },
+      {
+        id: 5,
+        text: "Train engineering teams on Linux, containers, Kubernetes, and automation technologies",
+      },
+    ],
+  },
+  cta: {
+    title: "Ready to Build a Reliable Kubernetes Platform?",
+    description:
+      "Work with HawkStack to plan, deploy, secure, and operate Mirantis-powered container platforms for enterprise teams.",
     action: {
-      label: "Talk to Our Experts",
+      label: "Talk to an Expert",
       href: "/contact-us",
-      ariaLabel: "Talk to HawkStack experts about Mirantis Kubernetes platforms",
+      ariaLabel: "Talk to a HawkStack Mirantis expert",
     },
   },
 };
