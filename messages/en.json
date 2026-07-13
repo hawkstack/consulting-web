@@ -1,0 +1,19 @@
+{
+  "LanguageSwitcher": { "label": "Select language" },
+  "Header": {
+    "home": "Home",
+    "products": "What we Offer?",
+    "services": "Services",
+    "company": "Company",
+    "training": "Training",
+    "toggleMenu": "Toggle menu"
+  },
+  "Footer": {
+    "about": "About us",
+    "services": "Services",
+    "products": "Products",
+    "training": "Training",
+    "description": "HawkStack helps businesses accelerate digital transformation through cloud platforms, automation, and modern DevOps practices. From strategy to execution, we build systems that are resilient, scalable, and ready for the future.",
+    "rights": "© 2026 HawkStack. All Rights Reserved."
+  }
+}
