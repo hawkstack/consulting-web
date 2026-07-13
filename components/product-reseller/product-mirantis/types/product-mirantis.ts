@@ -72,8 +72,19 @@ export interface ProductMirantisTransformationContent {
   capabilities: ProductMirantisTransformationCapability[];
 }
 
+export interface ProductMirantisCtaContent {
+  title: string;
+  description: string;
+  action: {
+    label: string;
+    href: string;
+    ariaLabel: string;
+  };
+}
+
 export interface ProductMirantisPageContent {
   hero: ProductMirantisHeroContent;
   solutions: ProductMirantisSolutionsContent;
   transformation: ProductMirantisTransformationContent;
+  cta: ProductMirantisCtaContent;
 }

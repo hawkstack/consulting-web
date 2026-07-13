@@ -20,6 +20,7 @@ export default function ProductMirantisPage({
       <ProductMirantisTransformationCapabilitiesSection
         capabilities={pageData.transformation.capabilities}
       />
+      <ProductMirantisCtaSection content={pageData.cta} />
     </>
   );
 }

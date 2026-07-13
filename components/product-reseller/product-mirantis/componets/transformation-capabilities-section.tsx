@@ -9,7 +9,7 @@ export default function ProductMirantisTransformationCapabilitiesSection({
   capabilities,
 }: ProductMirantisTransformationCapabilitiesSectionProps) {
   return (
-    <section className="rounded-b-[30px] bg-[#E5F5FF] px-5 py-10 font-lexend text-[#0B1020] md:px-8 md:py-9 lg:px-12 lg:py-11 xl:px-24 xl:py-16">
+    <section className="rounded-b-[30px] bg-[#E5F5FF] px-5 py-10 font-lexend text-[#0B1020] md:px-8 md:py-9 lg:px-12 lg:py-11 xl:px-24 xl:py-16 ">
       <div className="mx-auto grid max-w-7xl gap-8 text-center md:grid-cols-3 md:gap-8 md:text-left xl:gap-16">
         {capabilities.map((capability) => (
           <article key={capability.title}>
