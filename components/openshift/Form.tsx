@@ -4,6 +4,7 @@ import countriesLib from "i18n-iso-countries";
 import enLocale from "i18n-iso-countries/langs/en.json";
 import ReactCountryFlag from "react-country-flag";
 import { validateEmail } from "@/components/utils/validations";
+import { submitConsultingForm } from "@/lib/api/publicClient";
 
 countriesLib.registerLocale(enLocale);
 type DiscussRedHatProps = {
@@ -163,25 +164,16 @@ export default function DiscussRedHat({ source }: DiscussRedHatProps) {
               setLoading(true);
 
               try {
-                const Response = await fetch(
-                  `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/consultingForms`,
-                  {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                      source,
-                      firstName: form.firstName,
-                      lastName: form.lastName,
-                      email: form.email,
-                      jobtitle: form.jobtitle,
-                      company: form.company,
-                      country: form.country.code,
-                      query: message,
-                    }),
-                  },
-                );
+                const Response = await submitConsultingForm({
+                  source,
+                  firstName: form.firstName,
+                  lastName: form.lastName,
+                  email: form.email,
+                  jobtitle: form.jobtitle,
+                  company: form.company,
+                  country: form.country.code,
+                  query: message,
+                });
 
                 if (!Response.ok) throw new Error();
 

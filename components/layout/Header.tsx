@@ -28,9 +28,13 @@ export function Header(): JSX.Element {
   const items = openMenu ? menuMap[openMenu] : null;
   const trainingUrl =
     process.env.NEXT_PUBLIC_TRAINING_URL ?? "https://training.hawkstack.com/";
+  const closeMegaMenu = () => {
+    setOpenMenu(null);
+    setActiveItem(null);
+  };
 
   return (
-    <header className="sticky top-0 z-51 w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F] font-lexend">
+    <header className="sticky top-0 z-[60] w-full bg-gradient-to-r from-[#0A1B3F] via-[#0B2458] to-[#0A1B3F] font-lexend">
       <nav className="relative w-full max-w-[1440px] mx-auto h-[72px] lg:h-[90px] px-4 md:px-8 lg:px-10  xl:px-24 flex items-center">
         {/* LOGO */}
         <Link href="/" className="cursor-default">
@@ -110,7 +114,7 @@ export function Header(): JSX.Element {
         {/* ✅ MEGA MENU — SAME AS PEHLE (CENTERED) */}
         {items && activeItem && openMenu && (
           <div
-            className="absolute left-1/2 top-full -translate-x-1/2 hidden lg:block"
+            className="absolute left-1/2 top-full z-[70] hidden -translate-x-1/2 lg:block"
             onMouseEnter={() => setOpenMenu(openMenu)}
             onMouseLeave={() => setOpenMenu(null)}
           >
@@ -118,7 +122,7 @@ export function Header(): JSX.Element {
               items={items}
               activeItem={activeItem}
               onHoverItem={setActiveItem}
-              onClose={() => setOpenMenu(null)}
+              onClose={closeMegaMenu}
               menuKey={openMenu}
             />
           </div>
