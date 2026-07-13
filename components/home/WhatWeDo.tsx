@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { WhatWeDoSection } from "@/types/home/home";
 import { ArrowIcon } from "@/components/icons/Home/Home";
+import { useTranslations } from "next-intl";
 
 type Props = {
   data: WhatWeDoSection;
 };
 
 export default function WhatWeDo({ data }: Props) {
+  const t = useTranslations("Home");
   return (
     <section className="w-full bg-white py-10 md:pt-8 md:pb-12 font-['Lexend_Deca'] overflow-hidden">
       <div className="max-w-[1280px] mx-auto md:px-0 md:pr-8 px-8">
@@ -23,7 +25,7 @@ export default function WhatWeDo({ data }: Props) {
             href="/coming-soon"
             className="hidden md:flex mt-4 md:mt-0 text-[#0048FF] font-medium text-[14px] flex items-center gap-1 group"
           >
-            SEE ALL OFFERINGS
+            {t("seeAllOfferings")}
             <span>
               <ArrowIcon className="w-[18px] h-[18px]" />
             </span>
@@ -76,7 +78,7 @@ export default function WhatWeDo({ data }: Props) {
             href="/coming-soon"
             className=" font-bold text-xs text-[#0048FF] font-medium text-[14px] flex items-center gap-1 group"
           >
-            SEE ALL OFFERINGS
+            {t("seeAllOfferings")}
             <span>
               <ArrowIcon className="w-[18px] h-[18px]" />
             </span>
