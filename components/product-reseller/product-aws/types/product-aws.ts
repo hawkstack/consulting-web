@@ -46,9 +46,33 @@ export interface ProductAwsEnterpriseCapabilitiesContent {
   capabilities: ProductAwsEnterpriseCapability[];
 }
 
+export interface ProductAwsModernizationEngineContent {
+  title: string;
+  description: string;
+  currentState: string[];
+  targetState: string[];
+}
+
+export interface ProductAwsArchitectureBenefit {
+  title: string;
+  description: string;
+}
+
+export interface ProductAwsArchitectureContent {
+  title: string;
+  description: string;
+  benefits: ProductAwsArchitectureBenefit[];
+  image: string;
+  metricLabel: string;
+  metricValue: string;
+  metricDescription: string;
+}
+
 export interface ProductAwsPageContent {
   hero: ProductAwsHeroContent;
   infrastructure: ProductAwsInfrastructureContent;
   enterpriseCapabilities: ProductAwsEnterpriseCapabilitiesContent;
+  modernizationEngine: ProductAwsModernizationEngineContent;
+  architecture: ProductAwsArchitectureContent;
   cta: ProductAwsCtaContent;
 }

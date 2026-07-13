@@ -121,7 +121,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration.",
       image: "/images/home/product-reseller/Azure.webp",
-      href: "/coming-soon",
+      href: "/product-reseller/azure",
     },
     // {
     //   id: "dell",

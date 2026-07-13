@@ -85,6 +85,49 @@ export const productAwsPageData: ProductAwsPageContent = {
       },
     ],
   },
+  modernizationEngine: {
+    title: "The Modernization Engine",
+    description:
+      "See how HawkStack transforms fragmented legacy systems into unified, high-performance AWS cloud ecosystems.",
+    currentState: [
+      "Manual Patching Cycles",
+      "Fragmented Silos",
+      "Inconsistent Security Policies",
+      "High Operational Toil",
+    ],
+    targetState: [
+      "Automated CI/CD Pipelines",
+      "Unified Platform Governance",
+      "Continuous Compliance",
+      "Policy-as-Code Automation",
+    ],
+  },
+  architecture: {
+    title: "Architecting the Great Infrastructure Pivot",
+    description:
+      "We help CTOs migrate from legacy technical debt to high-velocity modernization without risking system integrity.",
+    benefits: [
+      {
+        title: "Zero-Downtime Migration",
+        description:
+          "Move mission-critical clusters while maintaining 99.999% availability.",
+      },
+      {
+        title: "Security-First Baseline",
+        description:
+          "Compliance-ready infrastructure templates for HIPAA, SOC2, and PCI.",
+      },
+      {
+        title: "Predictable Cost Optimization",
+        description:
+          "Reduce AWS spend by up to 40% through intelligent resource scaling.",
+      },
+    ],
+    image: "/images/product-aws/aws-modernization-hero.webp",
+    metricLabel: "KPI METRIC",
+    metricValue: "85%",
+    metricDescription: "Efficiency increase post-modernization.",
+  },
   cta: {
     title: "Ready to Modernize Your Stack?",
     description:

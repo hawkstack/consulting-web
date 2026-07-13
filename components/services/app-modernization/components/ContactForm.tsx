@@ -5,6 +5,7 @@ import type {
   AppModernizationFormContent,
   AppModernizationFormField,
 } from "@/components/services/app-modernization/types/app-modernization";
+import { submitConsultingForm } from "@/lib/api/publicClient";
 import { validateEmail, validateRequired } from "@/utils/validation";
 
 type FormState = Partial<Record<AppModernizationFormField["name"], string>>;
@@ -115,9 +116,6 @@ export default function AppModernizationContactForm({
     setLoading(true);
     setStatus("idle");
 
-    const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-    const endpoint = `${API_BASE_URL}/api/consultingForms`;
-
     try {
       const payload = {
         source: form.source,
@@ -129,13 +127,7 @@ export default function AppModernizationContactForm({
         delete payload.message;
       }
 
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      const response = await submitConsultingForm(payload);
 
       if (!response.ok) {
         throw new Error("Request failed");

@@ -6,6 +6,7 @@ import {
   ChangeEvent,
   FormEvent,
 } from "react";
+import { submitConsultingForm } from "@/lib/api/publicClient";
 import { validateEmail, validatePhone } from "../utils/validations";
 
 type FormSource =
@@ -89,20 +90,8 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
       setLoading(true);
       setSubmitStatus("idle");
 
-      const API_BASE_URL =
-        process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
-
       try {
-        const response = await fetch(
-          `${API_BASE_URL}/api/consultingForms`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          }
-        );
+        const response = await submitConsultingForm(formData);
 
         await response.json();
 

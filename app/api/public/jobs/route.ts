@@ -1,13 +1,17 @@
 import { NextResponse } from "next/server";
-
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ;
+import {
+  getPublicBackendUrl,
+  publicBackendPaths,
+} from "@/lib/api/publicBackendEndpoints";
 
 export async function GET() {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/jobs`, {
-      cache: "no-store",
-    });
+    const response = await fetch(
+      getPublicBackendUrl(publicBackendPaths.jobs),
+      {
+        cache: "no-store",
+      },
+    );
 
     const data = await response.json();
 
@@ -22,7 +26,10 @@ export async function GET() {
       },
       {
         status: 500,
-      }
+      },
     );
   }
 }
+
+
+

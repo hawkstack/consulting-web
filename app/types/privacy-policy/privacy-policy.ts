@@ -17,3 +17,16 @@ export interface PrivacySection {
   noteEmail?: string;
   contactInfo?: ContactInfo;
 }
+
+export type PolicyHeader = {
+  brandName?: string;
+  title?: string;
+  effectiveDate?: string;
+  intro?: string;
+  siteUrl?: string;
+};
+
+export type PolicyPageData = {
+  headerProps: PolicyHeader;
+  sections: PrivacySection[];
+};
