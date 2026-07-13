@@ -81,7 +81,7 @@ export default function AzureHeroSection({ data }: AzureHeroSectionProps) {
               width={560}
               height={560}
               priority
-              className="h-auto w-full max-w-[168px] rounded-lg md:max-w-[300px] lg:max-w-[430px] xl:max-w-[530px]"
+              className="h-auto w-full max-w-[167px] rounded-lg md:max-w-[300px] lg:max-w-[430px] xl:max-w-[530px]"
             />
           </div>
         </div>
