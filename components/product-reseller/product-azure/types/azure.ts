@@ -50,3 +50,16 @@ export interface AzureEngineeringData {
   image: string;
   imageAlt: string;
 }
+
+export interface AzureSkillsAccelerationPillar {
+  step: string;
+  title: string;
+  desktopTitle: string;
+  description: string;
+}
+
+export interface AzureSkillsAccelerationData {
+  title: string;
+  description: string;
+  pillars: AzureSkillsAccelerationPillar[];
+}

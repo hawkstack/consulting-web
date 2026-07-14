@@ -12,6 +12,7 @@ import type {
   AzureCompetenciesData,
   AzureEngineeringData,
   AzureHeroData,
+  AzureSkillsAccelerationData,
 } from "../types/azure";
 
 export const azureHeroData: AzureHeroData = {
@@ -92,4 +93,33 @@ export const azureEngineeringData: AzureEngineeringData = {
   ],
   image: "/images/product-reseller/azure/azure-engineering.svg",
   imageAlt: "Azure cloud platform surrounded by connected engineering services",
+};
+
+export const azureSkillsAccelerationData: AzureSkillsAccelerationData = {
+  title: "The HawkStack Azure Skills Acceleration Framework",
+  description:
+    "A comprehensive 3-pillar system designed to transition engineering teams from legacy mindsets to modern cloud operational models.",
+  pillars: [
+    {
+      step: "01",
+      title: "Strategic Assessment",
+      desktopTitle: "Assessment",
+      description:
+        "Baseline analysis of current skills, infrastructure complexity, and cultural readiness for cloud adoption.",
+    },
+    {
+      step: "02",
+      title: "Immersive Training",
+      desktopTitle: "Training",
+      description:
+        "High-intensity modular labs covering Linux, Containers, and Infrastructure as Code specifically for Azure.",
+    },
+    {
+      step: "03",
+      title: "Operational Mastery",
+      desktopTitle: "Enablement",
+      description:
+        "Embedded engineering support to apply new skills to real-world production projects and internal roadmaps.",
+    },
+  ],
 };
