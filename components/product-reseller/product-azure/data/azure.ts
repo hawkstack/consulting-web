@@ -1,4 +1,9 @@
 import {
+  AzureBlueprintAssessIcon,
+  AzureBlueprintBuildIcon,
+  AzureBlueprintOperateIcon,
+} from "../icons/AzureBlueprintIcons";
+import {
   AzureAutomationIcon,
   AzureSkillsIcon,
   AzureInfrastructureIcon,
@@ -9,6 +14,7 @@ import {
   RedHatExpertiseIcon,
 } from "../icons/AzureHeroIcons";
 import type {
+  AzureBlueprintOperationalData,
   AzureCompetenciesData,
   AzureEngineeringData,
   AzureHeroData,
@@ -120,6 +126,39 @@ export const azureSkillsAccelerationData: AzureSkillsAccelerationData = {
       desktopTitle: "Enablement",
       description:
         "Embedded engineering support to apply new skills to real-world production projects and internal roadmaps.",
+    },
+  ],
+};
+
+export const azureBlueprintOperationalData: AzureBlueprintOperationalData = {
+  title: "From Blueprint to Operational Excellence",
+  steps: [
+    {
+      step: "1",
+      title: "Assess",
+      desktopDescription:
+        "Identifying capability gaps and defining your technical north star.",
+      mobileDescription:
+        "Auditing current infrastructure and engineering competencies.",
+      icon: AzureBlueprintAssessIcon,
+    },
+    {
+      step: "2",
+      title: "Build",
+      desktopDescription:
+        "Implementing the training curriculum and modern tooling stacks.",
+      mobileDescription:
+        "Execution of custom training paths and collaborative labs.",
+      icon: AzureBlueprintBuildIcon,
+    },
+    {
+      step: "3",
+      title: "Operate",
+      desktopDescription:
+        "Launching with confidence on a self-sustaining engineering foundation.",
+      mobileDescription:
+        "Sustained cloud confidence through ongoing certification support.",
+      icon: AzureBlueprintOperateIcon,
     },
   ],
 };

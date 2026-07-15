@@ -1,8 +1,10 @@
 import {
+  AzureBlueprintOperationalSection,
   AzureCompetenciesSection,
   AzureEngineeringSection,
   AzureHeroSection,
   AzureSkillsAccelerationSection,
+  azureBlueprintOperationalData,
   azureCompetenciesData,
   azureEngineeringData,
   azureHeroData,
@@ -16,6 +18,7 @@ export default function AzurePage() {
       <AzureCompetenciesSection data={azureCompetenciesData} />
       <AzureEngineeringSection data={azureEngineeringData} />
       <AzureSkillsAccelerationSection data={azureSkillsAccelerationData} />
+      <AzureBlueprintOperationalSection data={azureBlueprintOperationalData} />
     </>
   );
 }

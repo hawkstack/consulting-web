@@ -63,3 +63,16 @@ export interface AzureSkillsAccelerationData {
   description: string;
   pillars: AzureSkillsAccelerationPillar[];
 }
+
+export interface AzureBlueprintOperationalStep {
+  step: string;
+  title: string;
+  desktopDescription: string;
+  mobileDescription: string;
+  icon: ComponentType<{ className?: string }>;
+}
+
+export interface AzureBlueprintOperationalData {
+  title: string;
+  steps: AzureBlueprintOperationalStep[];
+}
