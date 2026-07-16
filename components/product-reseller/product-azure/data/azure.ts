@@ -16,6 +16,7 @@ import {
 import type {
   AzureBlueprintOperationalData,
   AzureCompetenciesData,
+  AzureCtaData,
   AzureEngineeringData,
   AzureHeroData,
   AzureSkillsAccelerationData,
@@ -161,4 +162,26 @@ export const azureBlueprintOperationalData: AzureBlueprintOperationalData = {
       icon: AzureBlueprintOperateIcon,
     },
   ],
+};
+
+export const azureCtaData: AzureCtaData = {
+  title: "Less Skill Gaps. More Cloud Confidence.",
+  description:
+    "Ready to transform your engineering culture? Join hundreds of enterprises that have optimized their Azure workloads through HawkStack.",
+  primaryAction: {
+    label: "Schedule Capability Assessment",
+    href: "/contact-us",
+  },
+  secondaryAction: {
+    label: "Download Solution Overview",
+    href: "/contact-us",
+  },
+  mobileTitleStart: "Less Skill Gaps.",
+  mobileTitleHighlight: "More Cloud Confidence.",
+  mobileDescription:
+    "Join leading enterprises who trust HawkStack to modernize their engineering workforce.",
+  mobileAction: {
+    label: "Contact Our Solutions Team",
+    href: "/contact-us",
+  },
 };
