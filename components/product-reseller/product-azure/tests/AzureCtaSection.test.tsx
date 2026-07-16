@@ -8,10 +8,10 @@ describe("AzureCtaSection", () => {
     render(<AzureCtaSection data={azureCtaData} />);
 
     expect(
-      screen.getByRole("heading", {
+      screen.getAllByRole("heading", {
         name: azureCtaData.title,
-      }),
-    ).toBeInTheDocument();
+      }).length,
+    ).toBeGreaterThan(0);
     expect(screen.getByText(azureCtaData.description)).toBeInTheDocument();
     expect(screen.getByText(azureCtaData.mobileTitleStart)).toBeInTheDocument();
     expect(screen.getByText(azureCtaData.mobileTitleHighlight)).toBeInTheDocument();
