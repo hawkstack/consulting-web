@@ -117,7 +117,7 @@ export const companyLinks = [
   },
   {
     title: "Partner",
-    href: "/coming-soon",
+    href: "/partner",
   },
   {
     title: "Events & Webinars",
