@@ -8,7 +8,11 @@ import {
   HandsOnLabsIcon,
   RedHatExpertiseIcon,
 } from "../icons/AzureHeroIcons";
-import type { AzureCompetenciesData, AzureHeroData } from "../types/azure";
+import type {
+  AzureCompetenciesData,
+  AzureEngineeringData,
+  AzureHeroData,
+} from "../types/azure";
 
 export const azureHeroData: AzureHeroData = {
   eyebrow: "RED HAT CERTIFIED PARTNER",
@@ -64,4 +68,28 @@ export const azureCompetenciesData: AzureCompetenciesData = {
       icon: AzurePlatformIcon,
     },
   ],
+};
+
+export const azureEngineeringData: AzureEngineeringData = {
+  title: "One Partner. Stronger Azure Engineering Capabilities.",
+  mobileTitle: "One Partner. Stronger Azure Engineering Capabilities.",
+  capabilities: [
+    {
+      title: "Customized Curriculum",
+      description:
+        "Tailored training paths that align specifically with your organization's Azure footprint.",
+    },
+    {
+      title: "Expert-Led Workshops",
+      description:
+        "Hands-on mentorship from certified Red Hat and Microsoft Azure architects.",
+    },
+    {
+      title: "Certification Readiness",
+      description:
+        "Direct path to achieving critical industry certifications for your entire team.",
+    },
+  ],
+  image: "/images/product-reseller/azure/azure-engineering.svg",
+  imageAlt: "Azure cloud platform surrounded by connected engineering services",
 };

@@ -37,3 +37,16 @@ export interface AzureCompetenciesData {
   description: string;
   cards: AzureCompetencyCard[];
 }
+
+export interface AzureEngineeringCapability {
+  title: string;
+  description: string;
+}
+
+export interface AzureEngineeringData {
+  title: string;
+  mobileTitle: string;
+  capabilities: AzureEngineeringCapability[];
+  image: string;
+  imageAlt: string;
+}
