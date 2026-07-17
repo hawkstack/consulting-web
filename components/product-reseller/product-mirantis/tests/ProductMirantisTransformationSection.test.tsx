@@ -28,8 +28,8 @@ describe("ProductMirantisTransformationSection", () => {
       <ProductMirantisTransformationSection content={content} />
     );
 
-    expect(container.querySelectorAll("article svg")).toHaveLength(
-      content.items.length
-    );
+    expect(
+      container.querySelectorAll("[data-testid='transformation-check-icon']")
+    ).toHaveLength(content.items.length);
   });
 });

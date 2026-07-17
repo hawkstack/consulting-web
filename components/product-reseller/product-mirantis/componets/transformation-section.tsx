@@ -1,3 +1,4 @@
+import { MirantisTransformationCheckIcon } from "@/components/product-reseller/product-mirantis/icons";
 import type { ProductMirantisTransformationContent } from "@/components/product-reseller/product-mirantis/types/product-mirantis";
 
 type ProductMirantisTransformationSectionProps = {
@@ -24,24 +25,10 @@ export default function ProductMirantisTransformationSection({
           {content.items.map((item) => (
             <article
               key={item.id}
-              className="flex min-h-[46px] items-center gap-3 rounded-md bg-white px-4 py-3 text-[#0B1020] shadow-[0_10px_24px_rgba(0,0,0,0.16)] md:min-h-[54px] md:gap-4 md:px-5 lg:min-h-[62px] lg:rounded-lg xl:min-h-[74px] xl:px-6"
+              className="flex min-h-[46px] items-center gap-3 rounded-xl bg-white px-4 py-3 text-[#0B1020] shadow-[0_10px_24px_rgba(0,0,0,0.16)] md:min-h-[54px] md:gap-4 md:px-5 lg:min-h-[62px] xl:min-h-[74px] xl:px-6"
             >
               <span className="flex size-4 shrink-0 items-center justify-center rounded-full bg-[#08204A] text-white md:size-5">
-                <svg
-                  aria-hidden="true"
-                  className="size-2.5 md:size-3"
-                  fill="none"
-                  viewBox="0 0 12 12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.3 6.1 4.8 8.5 9.7 3.5"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                  />
-                </svg>
+                <MirantisTransformationCheckIcon className="size-2.5 md:size-3" />
               </span>
 
               <p className="text-[10px] font-medium leading-[1.4] tracking-normal md:text-[11px] lg:text-[12px] xl:text-[15px]">
