@@ -11,5 +11,18 @@ export type PartnerHeroData = {
     text: string;
   };
   description: string;
-  buttons: PartnerHeroButton[];
+  // buttons: PartnerHeroButton[];
+};
+
+import type { ComponentType, SVGProps } from "react";
+
+export type HawkstackAdvantageCard = {
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
+};
+
+export type HawkstackAdvantageSectionData = {
+  heading: string;
+  cards: HawkstackAdvantageCard[];
 };

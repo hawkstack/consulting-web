@@ -1,10 +1,15 @@
 import HeroSection from "@/components/home/partner/components/HeroSection";
-import { partnerHeroData } from "@/components/home/partner/data/partner";
+import HawkstackAdvantageSection from "@/components/home/partner/components/HawkstackAdvantageSection";
+import {
+  partnerHeroData,
+  partnerHawkstackAdvantageData,
+} from "@/components/home/partner/data/partner";
 
 const PartnerPage = () => {
   return (
     <main>
       <HeroSection data={partnerHeroData} />
+      <HawkstackAdvantageSection data={partnerHawkstackAdvantageData} />
     </main>
   );
 };
