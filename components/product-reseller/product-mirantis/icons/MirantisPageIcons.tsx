@@ -1,4 +1,7 @@
-import type { ProductMirantisSolutionIcon } from "@/components/product-reseller/product-mirantis/types/product-mirantis";
+import type {
+  ProductMirantisSolutionIcon,
+  ProductMirantisTransformationCapabilityIcon,
+} from "@/components/product-reseller/product-mirantis/types/product-mirantis";
 
 type MirantisSolutionIconProps = {
   icon: ProductMirantisSolutionIcon;
@@ -71,6 +74,101 @@ export function MirantisSolutionIcon({
       <path
         d="M0 18.6667V16.3333H3.17917C2.1875 15.4778 1.40972 14.4472 0.845833 13.2417C0.281944 12.0361 0 10.7333 0 9.33333C0 7.15556 0.661111 5.23542 1.98333 3.57292C3.30556 1.91042 4.97778 0.816667 7 0.291667V2.74167C5.63889 3.22778 4.52083 4.06875 3.64583 5.26458C2.77083 6.46042 2.33333 7.81667 2.33333 9.33333C2.33333 10.3833 2.54236 11.3507 2.96042 12.2354C3.37847 13.1201 3.94722 13.8833 4.66667 14.525V11.6667H7V18.6667H0ZM12.8333 18.6667C11.8611 18.6667 11.0347 18.3264 10.3542 17.6458C9.67361 16.9653 9.33333 16.1389 9.33333 15.1667C9.33333 14.2333 9.65417 13.4313 10.2958 12.7604C10.9375 12.0896 11.725 11.7347 12.6583 11.6958C12.9889 10.9958 13.4799 10.4271 14.1313 9.98958C14.7826 9.55208 15.5167 9.33333 16.3333 9.33333C17.3639 9.33333 18.2535 9.66875 19.0021 10.3396C19.7507 11.0104 20.2028 11.8417 20.3583 12.8333C21.175 12.8333 21.875 13.1153 22.4583 13.6792C23.0417 14.2431 23.3333 14.9236 23.3333 15.7208C23.3333 16.5375 23.0514 17.2326 22.4875 17.8062C21.9236 18.3799 21.2333 18.6667 20.4167 18.6667H12.8333ZM16.2167 8.16667C16.0806 7.36944 15.8181 6.63056 15.4292 5.95C15.0403 5.26944 14.5639 4.66667 14 4.14167V7H11.6667V0H18.6667V2.33333H15.4875C16.3236 3.07222 17.009 3.9375 17.5438 4.92917C18.0785 5.92083 18.4236 7 18.5792 8.16667H16.2167ZM12.8333 16.3333H20.4167C20.5722 16.3333 20.7083 16.275 20.825 16.1583C20.9417 16.0417 21 15.9056 21 15.75C21 15.5944 20.9417 15.4583 20.825 15.3417C20.7083 15.225 20.5722 15.1667 20.4167 15.1667H18.375V13.7083C18.375 13.1444 18.1757 12.6632 17.7771 12.2646C17.3785 11.866 16.8972 11.6667 16.3333 11.6667C15.7694 11.6667 15.2882 11.866 14.8896 12.2646C14.491 12.6632 14.2917 13.1444 14.2917 13.7083V14H12.8333C12.5028 14 12.2257 14.1118 12.0021 14.3354C11.7785 14.559 11.6667 14.8361 11.6667 15.1667C11.6667 15.4972 11.7785 15.7743 12.0021 15.9979C12.2257 16.2215 12.5028 16.3333 12.8333 16.3333Z"
         fill="#0C1D48"
+      />
+    </svg>
+  );
+}
+
+type MirantisTransformationCheckIconProps = {
+  className?: string;
+};
+
+export function MirantisTransformationCheckIcon({
+  className,
+}: MirantisTransformationCheckIconProps) {
+  return (
+    <svg
+      aria-hidden="true"
+      data-testid="transformation-check-icon"
+      className={className}
+      fill="none"
+      viewBox="0 0 12 12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.3 6.1 4.8 8.5 9.7 3.5"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+}
+
+type MirantisTransformationCapabilityIconProps = {
+  icon: ProductMirantisTransformationCapabilityIcon;
+  className?: string;
+};
+
+export function MirantisTransformationCapabilityIcon({
+  icon,
+  className,
+}: MirantisTransformationCapabilityIconProps) {
+  if (icon === "integration") {
+    return (
+      <svg
+        aria-hidden="true"
+        className={className}
+        fill="none"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9 5h6v5H9V5ZM4 15h6v5H4v-5ZM14 15h6v5h-6v-5ZM12 10v2M7 15v-3h10v3"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+      </svg>
+    );
+  }
+
+  if (icon === "enablement") {
+    return (
+      <svg
+        aria-hidden="true"
+        className={className}
+        fill="none"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m12 4 8 4-8 4-8-4 8-4ZM6 10.5v4.2c1.6 1.7 3.6 2.6 6 2.6s4.4-.9 6-2.6v-4.2"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.8"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 4h8M7 7h10v13H7V7ZM10 11h4M10 14h4M10 17h2"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
       />
     </svg>
   );
