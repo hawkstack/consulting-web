@@ -20,7 +20,7 @@ export default function ProductMirantisHeroSection({
   return (
     <section className="relative overflow-hidden bg-[#FDFEFF] font-lexend text-[#10182B]">
       <div className="pointer-events-none absolute right-[-10%] top-[-18%] hidden aspect-square w-[52%] rounded-full bg-[radial-gradient(circle,rgba(234,241,255,0.96)_0%,rgba(234,241,255,0.72)_48%,rgba(234,241,255,0)_74%)] md:block" />
-      <div className="relative mx-auto grid min-h-[360px] max-w-[1250px] items-center gap-9 px-5 py-14 sm:px-8 md:min-h-[390px] md:grid-cols-[minmax(0,0.86fr)_minmax(330px,0.78fr)] md:gap-7 md:px-8 md:py-10 lg:min-h-[560px] lg:grid-cols-[minmax(0,500px)_minmax(520px,1fr)] lg:gap-12 lg:px-10 lg:py-14 xl:px-14">
+      <div className="relative mx-auto grid min-h-[360px] max-w-[1250px] items-center gap-9 px-5 py-14 sm:px-8 md:min-h-[390px] md:grid-cols-[minmax(0,0.86fr)_minmax(330px,0.78fr)] md:gap-7 md:px-8 md:py-10 lg:min-h-[560px] lg:grid-cols-[minmax(0,500px)_minmax(520px,1fr)] lg:gap-12 lg:px-10 lg:py-14 xl:px-14 xl:pl-0">
 
         <div className="relative z-10 mx-auto max-w-[760px] text-center md:mx-0 md:max-w-[580px] md:text-left">
           <span className="inline-flex min-h-8 items-center gap-2 rounded-full bg-[#EFF5FF] px-5 text-[11px] font-semibold leading-none text-[#245DFF] md:min-h-6 md:px-4 md:text-[9px] lg:min-h-7 lg:text-[11px]">

@@ -6,6 +6,8 @@ import Image from "next/image";
 import { MegaMenu } from "@/components/navigation/MegaMenu";
 import { products, services, company } from "@/components/navigation/menuData";
 import { MegaItem } from "@/components/navigation/types";
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 type MenuKey = "products" | "services" | "company";
 
@@ -18,6 +20,7 @@ const menuMap: Record<MenuKey, MegaItem[] | null> = {
 type OpenMenuState = MenuKey | null;
 
 export function Header(): JSX.Element {
+  const tHeader = useTranslations("Header");
   const [openMenu, setOpenMenu] = useState<OpenMenuState>(null);
   const [activeItem, setActiveItem] = useState<MegaItem | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -47,7 +50,8 @@ export function Header(): JSX.Element {
           xl:rounded-[9px]
           border border-white bg-white
           flex items-center justify-center
-        ">
+        "
+          >
             <Image
               src="/images/hawkstack-logo.webp"
               alt="HawkStack Logo"
@@ -63,15 +67,12 @@ export function Header(): JSX.Element {
         <ul className="ml-auto hidden lg:flex items-center gap-14">
           <li>
             <Link href="/" className="text-white">
-              Home
+              {tHeader("home")}
             </Link>
           </li>
 
           {(["products", "services", "company"] as MenuKey[]).map((key) => {
-            const label =
-              key === "products"
-                ? "What we Offer ?"
-                : key.charAt(0).toUpperCase() + key.slice(1);
+            const label = tHeader(key);
 
             return (
               <li
@@ -80,7 +81,8 @@ export function Header(): JSX.Element {
                   setOpenMenu(key);
                   setActiveItem(menuMap[key]?.[0] || null);
                 }}
-                className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize">
+                className="cursor-pointer text-white hover:text-[#7C8CFF] capitalize"
+              >
                 {label}
               </li>
             );
@@ -88,13 +90,15 @@ export function Header(): JSX.Element {
         </ul>
 
         {/* DESKTOP CTA */}
-        <div className="ml-10 hidden lg:block">
+        <div className="ml-8 hidden lg:flex items-center gap-3">
+          <LanguageSwitcher />
           <a
             href={trainingUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] border border-white text-white">
-            Training
+            className="inline-flex items-center justify-center w-[124px] h-[38.4px] rounded-[14px] border border-white text-white"
+          >
+            {tHeader("training")}
           </a>
         </div>
 
@@ -102,7 +106,8 @@ export function Header(): JSX.Element {
         <button
           className="ml-auto lg:hidden text-white text-2xl"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle Menu">
+          aria-label={tHeader("toggleMenu")}
+        >
           {mobileOpen ? "✕" : "☰"}
         </button>
 
@@ -111,7 +116,8 @@ export function Header(): JSX.Element {
           <div
             className="absolute left-1/2 top-full z-[70] hidden -translate-x-1/2 lg:block"
             onMouseEnter={() => setOpenMenu(openMenu)}
-            onMouseLeave={() => setOpenMenu(null)}>
+            onMouseLeave={() => setOpenMenu(null)}
+          >
             <MegaMenu
               items={items}
               activeItem={activeItem}
@@ -127,37 +133,35 @@ export function Header(): JSX.Element {
       {mobileOpen && (
         <div className="lg:hidden w-full bg-[#0B2458] px-6 pb-6">
           <ul className="flex flex-col gap-6 pt-6">
-            {["Home", "What we Offer ?", "Services", "Company"].map((item) => {
-              const isRedirectToGetStarted =
-                item === "What we Offer ?" ||
-                item === "Services" ||
-                item === "Company";
-              return (
-                <li key={item}>
-                  <Link
-                    href={
-                      item === "Home"
-                        ? "/"
-                        : isRedirectToGetStarted
-                          ? "/get-started"
-                          : `/${item.toLowerCase()}`
-                    }
-                    onClick={() => setMobileOpen(false)}
-                    className="text-white text-[16px]">
-                    {item}
-                  </Link>
-                </li>
-              );
-            })}
+            {(["home", "products", "services", "company"] as const).map(
+              (item) => {
+                return (
+                  <li key={item}>
+                    <Link
+                      href={item === "home" ? "/" : "/get-started"}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-white text-[16px]"
+                    >
+                      {tHeader(item)}
+                    </Link>
+                  </li>
+                );
+              },
+            )}
           </ul>
+
+          <div className="mt-6 w-[124px] max-w-full">
+            <LanguageSwitcher />
+          </div>
 
           <a
             href={trainingUrl}
             target="_blank"
             rel="noreferrer"
             onClick={() => setMobileOpen(false)}
-            className="mt-6 inline-flex items-center justify-center w-full h-[44px] rounded-[14px] border border-white text-white text-[14px]">
-            Training
+            className="mt-6 inline-flex h-[44px] w-[124px] max-w-full items-center justify-center rounded-[14px] border border-white text-[14px] text-white"
+          >
+            {tHeader("training")}
           </a>
         </div>
       )}

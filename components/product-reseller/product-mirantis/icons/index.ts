@@ -1,1 +1,5 @@
-export { MirantisSolutionIcon } from "./MirantisPageIcons";
+export {
+  MirantisSolutionIcon,
+  MirantisTransformationCapabilityIcon,
+  MirantisTransformationCheckIcon,
+} from "./MirantisPageIcons";
