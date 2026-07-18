@@ -10,7 +10,7 @@ export default function ProductMirantisSolutionsSection({
 }: ProductMirantisSolutionsSectionProps) {
   return (
     <section className="bg-[#FDFEFF] px-5 pb-10 pt-1 font-lexend text-[#070B16] sm:px-8 md:pb-14 md:pt-8 lg:pb-16 lg:pt-12">
-      <div className="mx-auto max-w-[1195px] rounded-[24px] bg-[#E8F5FF] px-6 py-8 sm:max-w-[646px] sm:px-8 sm:py-9 md:max-w-[720px] md:rounded-[22px] md:px-8 md:py-9 lg:max-w-[1185px] lg:rounded-[26px] lg:px-9 lg:py-12">
+      <div className="mx-auto max-w-[1195px] rounded-[24px] bg-[#E8F5FF] px-6 py-8 sm:max-w-[646px] sm:px-8 sm:py-9 md:max-w-[720px] md:rounded-[22px] md:px-8 md:py-9 lg:max-w-[1275px] lg:rounded-[26px] lg:px-9 lg:py-12">
         <div className="flex flex-col items-center gap-2 border-b border-[#C9DBEA] pb-5 text-center md:flex-row md:justify-between md:gap-6 md:pb-5 md:text-left lg:pb-6">
           <h2 className="order-2 text-[22px] font-semibold leading-tight md:order-1 md:text-[20px] lg:text-[28px]">
             {content.title}
