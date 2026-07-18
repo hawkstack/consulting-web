@@ -26,3 +26,15 @@ export type HawkstackAdvantageSectionData = {
   heading: string;
   cards: HawkstackAdvantageCard[];
 };
+
+export type PartnerCategory = {
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  title: string;
+  category: string;
+};
+
+export type PartnerCategoriesSectionData = {
+  heading: string;
+  description: string;
+  categories: PartnerCategory[];
+};
