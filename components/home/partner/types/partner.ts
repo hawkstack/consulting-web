@@ -38,3 +38,16 @@ export type PartnerCategoriesSectionData = {
   description: string;
   categories: PartnerCategory[];
 };
+
+export type PartnerCTASectionData = {
+  title: string;
+  description: string;
+  buttonLabel: string;
+  buttonHref: string;
+  image: string;
+  imageAlt: string;
+};
+
+export type PartnerTabsData = {
+  tabs: string[];
+};

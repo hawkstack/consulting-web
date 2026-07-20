@@ -1,6 +1,8 @@
 import type {
   HawkstackAdvantageSectionData,
   PartnerCategoriesSectionData,
+  PartnerCTASectionData,
+  PartnerTabsData,
   PartnerHeroData,
 } from "@/components/home/partner/types/partner";
 import AIDataAnalyticsIcon from "@/components/icons/partner/AIDataAnalyticsIcon";
@@ -36,6 +38,10 @@ export const partnerHeroData: PartnerHeroData = {
   //     variant: "secondary",
   //   },
   // ],
+};
+
+export const partnerTabsData: PartnerTabsData = {
+  tabs: ["Red Hat", "Mirantis", "CNCF", "AWS", "AZURE", "GCP"],
 };
 
 export const partnerHawkstackAdvantageData: HawkstackAdvantageSectionData = {
@@ -114,4 +120,14 @@ export const partnerCategoriesData: PartnerCategoriesSectionData = {
       category: "STRATEGY",
     },
   ],
+};
+
+export const partnerCTASectionData: PartnerCTASectionData = {
+  title: "Ready to Build Together?",
+  description:
+    "Join 500+ enterprises who are already redefining the technical landscape through the HawkStack partner portal.",
+  buttonLabel: "Contact Support",
+  buttonHref: "/contact-us",
+  image: "/images/partner/cta-placeholder.webp",
+  imageAlt: "Partner collaboration illustration placeholder",
 };
