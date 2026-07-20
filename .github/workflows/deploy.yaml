@@ -142,7 +142,7 @@ jobs:
             npm ci --omit=dev --no-audit --no-fund
 
 
-          echo "Restarting PM2..."
+            echo "Restarting PM2..."
 
             if pm2 describe consulting-web >/dev/null 2>&1; then
               pm2 reload consulting-web --update-env
