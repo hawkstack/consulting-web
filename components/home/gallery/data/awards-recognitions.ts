@@ -1,6 +1,7 @@
 import {
   AwardsRecognitionsSectionData,
   GalleryStatsSectionData,
+  RedHatRecognitionSectionData,
 } from "../types/awards-recognitions";
 
 export const awardsRecognitionsSectionData: AwardsRecognitionsSectionData = {
@@ -51,6 +52,31 @@ export const galleryStatsSectionData: GalleryStatsSectionData = {
       valueClassName: "text-[#087b3c]",
       mobileOrder: "order-4",
       desktopOrder: "lg:order-4",
+    },
+  ],
+};
+
+export const redHatRecognitionSectionData: RedHatRecognitionSectionData = {
+  eyebrow: "Strategic Partnership",
+  title: "Red Hat Recognition",
+  description:
+    "Honoring our deep collaboration and technical proficiency across the entire OpenShift and Ansible portfolio.",
+  cards: [
+    {
+      badge: "2023 Award",
+      badgeClassName: "bg-[#ffd8d4] text-[#b4140d]",
+      category: "Innovation Category",
+      title: "Red Hat Apex Partner of the Year",
+      description:
+        "Recognized for delivering the most complex multi-cloud architecture migrations utilizing OpenShift 4.x for Fortune 500 financial institutions.",
+    },
+    {
+      badge: "Certification",
+      badgeClassName: "bg-[#008e48] text-white",
+      category: "Consulting Specialization",
+      title: "Elite Consulting Specialization",
+      description:
+        "One of the few global partners to maintain a 100% certified engineering bench across Advanced Automation and Managed Services.",
     },
   ],
 };

@@ -22,3 +22,18 @@ export type GalleryStat = {
 export type GalleryStatsSectionData = {
   stats: GalleryStat[];
 };
+
+export type RedHatRecognitionCard = {
+  badge: string;
+  badgeClassName: string;
+  category: string;
+  title: string;
+  description: string;
+};
+
+export type RedHatRecognitionSectionData = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: RedHatRecognitionCard[];
+};
