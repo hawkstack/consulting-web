@@ -10,3 +10,15 @@ export type AwardsRecognitionsSectionData = {
   description: string;
   actions: AwardsRecognitionAction[];
 };
+
+export type GalleryStat = {
+  value: string;
+  label: string;
+  valueClassName: string;
+  mobileOrder: string;
+  desktopOrder: string;
+};
+
+export type GalleryStatsSectionData = {
+  stats: GalleryStat[];
+};

@@ -1,5 +1,9 @@
 import AwardsRecognitionsSection from "@/components/home/gallery/components/AwardsRecognitionsSection";
-import { awardsRecognitionsSectionData } from "@/components/home/gallery/data/awards-recognitions";
+import GalleryStatsSection from "@/components/home/gallery/components/GalleryStatsSection";
+import {
+  awardsRecognitionsSectionData,
+  galleryStatsSectionData,
+} from "@/components/home/gallery/data/awards-recognitions";
 import { seoMeta } from "@/components/seo/seoMeta";
 
 export const metadata = seoMeta({
@@ -9,5 +13,10 @@ export const metadata = seoMeta({
 });
 
 export default function GalleryPage() {
-  return <AwardsRecognitionsSection data={awardsRecognitionsSectionData} />;
+  return (
+    <>
+      <AwardsRecognitionsSection data={awardsRecognitionsSectionData} />
+      <GalleryStatsSection data={galleryStatsSectionData} />
+    </>
+  );
 }
