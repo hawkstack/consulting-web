@@ -1,3 +1,5 @@
+import type { ComponentType } from "react";
+
 // Hero section types
 export type TrendsInsightsHeroData = {
   eyebrow: string;
@@ -33,4 +35,21 @@ export type RealWorldImpactData = {
     description: string;
     linkLabel: string;
   };
+};
+
+export type TechnologyInsightStatistic = {
+  value: string;
+  label: string;
+  description: string;
+  icon: ComponentType<{ className?: string }>;
+};
+
+// Technology insights newsletter types
+export type TechnologyInsightsNewsletterData = {
+  title: {
+    prefix: string;
+    highlight: string;
+  };
+  description: string;
+  statistics: TechnologyInsightStatistic[];
 };

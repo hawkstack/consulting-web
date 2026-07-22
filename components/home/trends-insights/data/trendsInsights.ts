@@ -1,7 +1,11 @@
 import type {
   RealWorldImpactData,
+  TechnologyInsightsNewsletterData,
   TrendsInsightsHeroData,
 } from "@/components/home/trends-insights/types/trendsInsights";
+import SubscribersIcon from "@/components/icons/trends-insights/SubscribersIcon";
+import TechnicalArticlesIcon from "@/components/icons/trends-insights/TechnicalArticlesIcon";
+import WebinarsHostedIcon from "@/components/icons/trends-insights/WebinarsHostedIcon";
 
 // Hero Section data
 export const trendsInsightsHeroData: TrendsInsightsHeroData = {
@@ -46,3 +50,34 @@ export const realWorldImpactData: RealWorldImpactData = {
     linkLabel: "Read Success Story",
   },
 };
+
+// Technology insights newsletter data
+export const technologyInsightsNewsletterData: TechnologyInsightsNewsletterData =
+  {
+    title: {
+      prefix: "Stay Updated with the Lates ",
+      highlight: "Technology Insights",
+    },
+    description:
+      "Explore the expert articles, real-world guides, webinars, and industry news delivered directly to your inbox.",
+    statistics: [
+      {
+        value: "15,000+",
+        label: "Subscribers",
+        description: "Join a growing community of tech professionals",
+        icon: SubscribersIcon,
+      },
+      {
+        value: "250+",
+        label: "Technical Articles",
+        description: "In depth insights on emerging technologies",
+        icon: TechnicalArticlesIcon,
+      },
+      {
+        value: "50+",
+        label: "Webinars Hosted",
+        description: "Live sessions with industry experts",
+        icon: WebinarsHostedIcon,
+      },
+    ],
+  };
