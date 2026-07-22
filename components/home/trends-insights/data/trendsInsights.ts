@@ -1,4 +1,5 @@
 import type {
+  CategoriesTabsData,
   RealWorldImpactData,
   TechnologyInsightsNewsletterData,
   TrendsInsightsHeroData,
@@ -6,6 +7,9 @@ import type {
 import SubscribersIcon from "@/components/icons/trends-insights/SubscribersIcon";
 import TechnicalArticlesIcon from "@/components/icons/trends-insights/TechnicalArticlesIcon";
 import WebinarsHostedIcon from "@/components/icons/trends-insights/WebinarsHostedIcon";
+import CloudNativePlatformsIcon from "@/components/icons/trends-insights/CloudNativePlatformsIcon";
+import ModernizeLegacyIcon from "@/components/icons/trends-insights/ModernizeLegacyIcon";
+import SecureHybridCloudIcon from "@/components/icons/trends-insights/SecureHybridCloudIcon";
 
 // Hero Section data
 export const trendsInsightsHeroData: TrendsInsightsHeroData = {
@@ -81,3 +85,30 @@ export const technologyInsightsNewsletterData: TechnologyInsightsNewsletterData 
       },
     ],
   };
+
+// Categories section data
+export const categoriesTabsData: CategoriesTabsData = {
+  categories: [
+    {
+      title: "Secure Hybrid Cloud",
+      description:
+        "Zero-trust security implementation across multi-cloud environments for high-compliance healthcare providers.",
+      accentColor: "#0644B8",
+      icon: SecureHybridCloudIcon,
+    },
+    {
+      title: "Cloud-Native Platforms",
+      description:
+        "Building future-proof foundations that scale horizontally with zero manual intervention.",
+      accentColor: "#8D2904",
+      icon: CloudNativePlatformsIcon,
+    },
+    {
+      title: "Modernize Legacy",
+      description:
+        "Seamless transition of monolithic systems into agile, containerized microservices without downtime.",
+      accentColor: "#0644B8",
+      icon: ModernizeLegacyIcon,
+    },
+  ],
+};

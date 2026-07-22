@@ -37,6 +37,7 @@ export type RealWorldImpactData = {
   };
 };
 
+// Technology insights newsletter types
 export type TechnologyInsightStatistic = {
   value: string;
   label: string;
@@ -44,7 +45,6 @@ export type TechnologyInsightStatistic = {
   icon: ComponentType<{ className?: string }>;
 };
 
-// Technology insights newsletter types
 export type TechnologyInsightsNewsletterData = {
   title: {
     prefix: string;
@@ -52,4 +52,17 @@ export type TechnologyInsightsNewsletterData = {
   };
   description: string;
   statistics: TechnologyInsightStatistic[];
+};
+
+// Categories section types
+
+export type TrendsInsightsCategory = {
+  title: string;
+  description: string;
+  accentColor: string;
+  icon: ComponentType<{ className?: string }>;
+};
+
+export type CategoriesTabsData = {
+  categories: TrendsInsightsCategory[];
 };

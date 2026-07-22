@@ -4,6 +4,7 @@ import RealWorldImpactSection from "@/components/home/trends-insights/components
 import TechnologyInsightsNewsletterSection from "@/components/home/trends-insights/components/TechnologyInsightsNewsletterSection";
 import TrendsInsightsHeroSection from "@/components/home/trends-insights/components/TrendsInsightsHeroSection";
 import {
+  categoriesTabsData,
   realWorldImpactData,
   technologyInsightsNewsletterData,
   trendsInsightsHeroData,
@@ -15,7 +16,7 @@ const TrendsInsightsPage = () => {
       <TrendsInsightsHeroSection data={trendsInsightsHeroData} />
       <LatestTechnicalPerspectivesSection />
       <RealWorldImpactSection data={realWorldImpactData} />
-      <CategoriesTabsSection />
+      <CategoriesTabsSection data={categoriesTabsData} />
       <TechnologyInsightsNewsletterSection data={technologyInsightsNewsletterData} />
     </main>
   );
