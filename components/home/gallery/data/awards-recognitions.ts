@@ -1,5 +1,6 @@
 import {
   AwardsRecognitionsSectionData,
+  CommunityPresenceSectionData,
   GalleryStatsSectionData,
   RedHatRecognitionSectionData,
 } from "../types/awards-recognitions";
@@ -79,4 +80,10 @@ export const redHatRecognitionSectionData: RedHatRecognitionSectionData = {
         "One of the few global partners to maintain a 100% certified engineering bench across Advanced Automation and Managed Services.",
     },
   ],
+};
+
+export const communityPresenceSectionData: CommunityPresenceSectionData = {
+  title: "Community Presence",
+  description:
+    "Tracking our path through the Kubernetes ecosystem and the labs where tomorrow's tech is born.",
 };

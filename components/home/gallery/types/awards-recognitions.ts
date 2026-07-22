@@ -37,3 +37,8 @@ export type RedHatRecognitionSectionData = {
   description: string;
   cards: RedHatRecognitionCard[];
 };
+
+export type CommunityPresenceSectionData = {
+  title: string;
+  description: string;
+};
