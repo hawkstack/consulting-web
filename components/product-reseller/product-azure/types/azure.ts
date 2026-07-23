@@ -84,11 +84,11 @@ export interface AzureCtaAction {
 
 export interface AzureCtaData {
   title: string;
-  description: string;
-  primaryAction: AzureCtaAction;
-  secondaryAction: AzureCtaAction;
   mobileTitleStart: string;
   mobileTitleHighlight: string;
+  description: string;
   mobileDescription: string;
+  primaryAction: AzureCtaAction;
+  secondaryAction: AzureCtaAction;
   mobileAction: AzureCtaAction;
 }

@@ -21,7 +21,6 @@ export default function AzurePage() {
       <AzureEngineeringSection data={azureEngineeringData} />
       <AzureSkillsAccelerationSection data={azureSkillsAccelerationData} />
       <AzureBlueprintOperationalSection data={azureBlueprintOperationalData} />
-      <AzureCtaSection data={azureCtaData} />
     </>
   );
 }

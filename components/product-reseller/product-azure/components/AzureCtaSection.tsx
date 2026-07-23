@@ -1,12 +1,15 @@
 import Link from "next/link";
 
+import { azureCtaData } from "../data/azure";
 import type { AzureCtaData } from "../types/azure";
 
 type AzureCtaSectionProps = {
-  data: AzureCtaData;
+  data?: AzureCtaData;
 };
 
-export default function AzureCtaSection({ data }: AzureCtaSectionProps) {
+export default function AzureCtaSection({
+  data = azureCtaData,
+}: AzureCtaSectionProps) {
   return (
     <section className="bg-white px-3 pb-9 pt-8 text-center text-[#05080F] min-[480px]:px-11 min-[480px]:pb-12 min-[480px]:pt-[54px] lg:px-[42px] lg:pb-[52px] lg:pt-[62px]">
       <div className="mx-auto w-full max-w-[775px] md:max-w-[775px] rounded-[20px] border border-[#C8DBFB] bg-[linear-gradient(145deg,#EEF5FF_0%,#F8FBFF_58%,#EAF2FF_100%)] px-7 py-[29px] shadow-[0_18px_38px_rgba(10,72,165,0.07)] min-[480px]:max-w-[432px] min-[480px]:rounded-[16px] min-[480px]:px-11 min-[480px]:py-[42px] lg:max-w-[1075px] lg:px-12 lg:pb-[43px] lg:pt-[46px]">
