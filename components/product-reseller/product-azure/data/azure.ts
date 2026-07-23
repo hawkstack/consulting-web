@@ -130,3 +130,58 @@ export const azureSkillsAccelerationData: AzureSkillsAccelerationData = {
     },
   ],
 };
+
+export const azureBlueprintOperationalData: AzureBlueprintOperationalData = {
+  title: "Azure Operational Blueprint",
+  steps: [
+    {
+      step: "01",
+      title: "Assess",
+      desktopDescription:
+        "Map current workloads, skills, and cloud readiness across your Azure estate.",
+      mobileDescription:
+        "Map workloads, skills, and cloud readiness across your Azure estate.",
+      icon: AzureBlueprintAssessIcon,
+    },
+    {
+      step: "02",
+      title: "Build",
+      desktopDescription:
+        "Create secure landing zones, automation paths, and migration-ready operating patterns.",
+      mobileDescription:
+        "Create secure landing zones and migration-ready operating patterns.",
+      icon: AzureBlueprintBuildIcon,
+    },
+    {
+      step: "03",
+      title: "Operate",
+      desktopDescription:
+        "Enable teams to run, govern, and optimize Azure environments with confidence.",
+      mobileDescription:
+        "Enable teams to run and optimize Azure environments with confidence.",
+      icon: AzureBlueprintOperateIcon,
+    },
+  ],
+};
+
+export const azureCtaData: AzureCtaData = {
+  title: "Ready to Strengthen Your Azure Engineering Capability?",
+  mobileTitleStart: "Ready to Strengthen",
+  mobileTitleHighlight: "Your Azure Capability?",
+  description:
+    "Partner with HawkStack to accelerate Azure adoption with practical Red Hat expertise and hands-on enablement.",
+  mobileDescription:
+    "Accelerate Azure adoption with practical Red Hat expertise.",
+  primaryAction: {
+    label: "Start Your Azure Journey",
+    href: "/contact-us",
+  },
+  secondaryAction: {
+    label: "Talk to an Expert",
+    href: "/contact-us",
+  },
+  mobileAction: {
+    label: "Get Started",
+    href: "/contact-us",
+  },
+};

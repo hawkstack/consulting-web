@@ -1,7 +1,8 @@
+import { azureBlueprintOperationalData } from "../data/azure";
 import type { AzureBlueprintOperationalData } from "../types/azure";
 
 type AzureBlueprintOperationalSectionProps = {
-  data: AzureBlueprintOperationalData;
+  data?: AzureBlueprintOperationalData;
 };
 
 const StepIcon = ({ Icon }: { Icon: AzureBlueprintOperationalData["steps"][number]["icon"] }) => {
@@ -13,7 +14,7 @@ const StepIcon = ({ Icon }: { Icon: AzureBlueprintOperationalData["steps"][numbe
 };
 
 export default function AzureBlueprintOperationalSection({
-  data,
+  data = azureBlueprintOperationalData,
 }: AzureBlueprintOperationalSectionProps) {
   return (
     <section className="bg-[#0759D8] px-5 py-[68px] text-white min-[480px]:px-8 min-[480px]:pb-[66px] min-[480px]:pt-[84px] md:px-12 lg:px-[68px] lg:pb-[86px] lg:pt-[88px]">
