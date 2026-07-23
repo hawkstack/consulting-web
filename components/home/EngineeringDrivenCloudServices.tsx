@@ -4,6 +4,7 @@ import type { CloudServiceItem,EngineeringDrivenCloudServicesProps } from "@/typ
 import { useState } from "react";
 import Link from "next/link";
 import { RightArrow } from "@/components/icons/Home/Home";
+import { useTranslations } from "next-intl";
 
 type Props = {
   data: EngineeringDrivenCloudServicesProps;
@@ -96,6 +97,7 @@ function MobileServiceRow({ item, active, onClick }: { item: CloudServiceItem; a
 }
 
 export default function EngineeringDrivenCloudServices({ data }: Props) {
+  const t = useTranslations("Home");
   const { services = [] } = data || {};
   
   const [activeIndex, setActiveIndex] = useState(0);
@@ -150,7 +152,7 @@ export default function EngineeringDrivenCloudServices({ data }: Props) {
             </div>
             <Link href={activeService.href}>
               <div className="mt-6 lg:mt-10 inline-flex items-center gap-2 rounded-full border border-[#5272FF] px-5 py-2 text-[12px] xl:text-[18px] font-medium text-[#5272FF]">
-                <span>Learn More</span>
+                <span>{t("learnMore")}</span>
                 <span aria-hidden="true">
                   <RightArrow className="text-[#5272FF] h-[10px]"/>
                 </span>

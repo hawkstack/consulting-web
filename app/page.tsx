@@ -7,7 +7,8 @@ import CloudInnovation from "@/components/home/CloudInnovation";
 import WhatWeDo from "@/components/home/WhatWeDo";
 import ContactCTA from "@/components/home/ContactFormSection";
 import ProductReseller from "@/components/home/ProductReseller";
-import { homePageData } from "@/data/home/home";
+import { getLocalizedHomePageData } from "@/lib/home/getLocalizedHomePageData";
+import { getTranslations } from "next-intl/server";
 
 // Page-level metadata (SEO)
 export const metadata = seoMeta({
@@ -15,7 +16,8 @@ export const metadata = seoMeta({
   description: "HawkStack Consulting | Digital Transformation & Growth",
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  const t = await getTranslations("Home");
   const {
     heroSectionData,
     cloudServicesSectionData,
@@ -23,7 +25,7 @@ export default function HomePage() {
     platformSectionData,
     whatWeDoSectionData,
     cloudSectionData,
-  } = homePageData;
+  } = getLocalizedHomePageData(t);
   return (
     <div>
       <HeroSection data={heroSectionData} />

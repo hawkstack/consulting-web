@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { HeroSectionData } from "@/types/home/home";
 import { DownwardsArrow, UpwardsArrow, VideoIcon, StraightArrow } from "@/components/icons/Home/Home";
+import { useTranslations } from "next-intl";
 
 type HeroProps = {
   data: HeroSectionData;
 }
 
 export default function HeroSection({ data }: HeroProps) {
+  const t = useTranslations("Home");
   const [active, setActive] = useState(0);
   const { slides } = data;
 
@@ -102,7 +104,7 @@ export default function HeroSection({ data }: HeroProps) {
           <Link href="/get-started">
             <button className="flex items-center gap-2 px-3 py-3 md:px-4 xl:px-8 md:py-3 rounded-full bg-gradient-to-r from-[#219E5C] to-[#122FAD] text-white text-[11px] md:text-[12px] xl:text-[15px] font-medium whitespace-nowrap">
               <VideoIcon/>
-              Schedule a Consultation
+              {t("scheduleConsultation")}
             </button>
           </Link>
           
@@ -112,7 +114,7 @@ export default function HeroSection({ data }: HeroProps) {
           >
             <span className="flex items-center gap-2">
               <StraightArrow/>
-              View Our solutions
+              {t("viewSolutions")}
             </span> 
           </button>
         </div>

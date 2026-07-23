@@ -8,6 +8,7 @@ import {
 } from "react";
 import { submitConsultingForm } from "@/lib/api/publicClient";
 import { validateEmail, validatePhone } from "../utils/validations";
+import { useTranslations } from "next-intl";
 
 type FormSource =
   | "openshift"
@@ -31,6 +32,7 @@ type ContactFormProps = {
 
 const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
   ({ source }, ref) => {
+    const t = useTranslations("Home.contact");
     const [formData, setFormData] = useState<ContactFormData & { source: FormSource }>({
       source : "demo_call",
       firstName: "",
@@ -140,13 +142,13 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
             {/* Heading */}
             <div className="text-center">
               <h2 className="font-['Lexend_Deca'] text-[24px] md:text-[32px] lg:text-[36px] font-medium leading-tight">
-                Let’s Build Your Platform, the Right Way
+                {t("title")}
               </h2>
 
               <p className="mt-4 font-['Lexend_Deca'] text-[14px] md:text-[16px] max-w-xl mx-auto">
-                From Red Hat training to enterprise consulting,
+                {t("descriptionLine1")}
                 <br className="hidden md:block" />
-                we’ll help you move faster and smarter.
+                {t("descriptionLine2")}
               </p>
             </div>
 
@@ -162,14 +164,14 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                 {/* First Name */}
                 <div>
                   <label className="block mb-2 pl-4 text-[12px] font-medium">
-                    First Name <span className="text-red-500">*</span>
+                    {t("firstName")} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     name="firstName"
                     value={firstName}
                     onChange={handleChange}
-                    placeholder="Enter your first name"
+                    placeholder={t("firstNamePlaceholder")}
                     className="w-full h-12 rounded-xl bg-[#020916]
                     px-4 text-sm outline-none"
                   />
@@ -178,14 +180,14 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                 {/* Last Name */}
                 <div>
                   <label className="block mb-2 pl-4 text-[12px] font-medium">
-                    Last Name <span className="text-red-500">*</span>
+                    {t("lastName")} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     name="lastName"
                     value={lastName}
                     onChange={handleChange}
-                    placeholder="Enter your last name"
+                    placeholder={t("lastNamePlaceholder")}
                     className="w-full h-12 rounded-xl bg-[#020916]
                     px-4 text-sm outline-none"
                   />
@@ -194,7 +196,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                 {/* Email */}
                 <div>
                   <label className="block mb-2 pl-4 text-[12px] font-medium">
-                    Work Email Address{" "}
+                    {t("workEmail")}{" "}
                     <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -202,7 +204,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                     name="email"
                     value={email}
                     onChange={handleChange}
-                    placeholder="Enter your work email"
+                    placeholder={t("workEmailPlaceholder")}
                     className="w-full h-12 rounded-xl bg-[#020916]
                     px-4 text-sm outline-none"
                   />
@@ -217,7 +219,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                 {/* Phone */}
                 <div>
                   <label className="block mb-2 pl-4 text-[12px] font-medium">
-                    Contact Number{" "}
+                    {t("contactNumber")}{" "}
                     <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -225,7 +227,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                     name="phone"
                     value={phone}
                     onChange={handleChange}
-                    placeholder="Enter your contact number"
+                    placeholder={t("contactNumberPlaceholder")}
                     className="w-full h-12 rounded-xl bg-[#020916]
                     px-4 text-sm outline-none"
                   />
@@ -239,10 +241,10 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
 
               <div className="mt-8 text-center">
                 <h4 className="text-[16px] md:text-[18px] font-bold text-[#DDDEDF]">
-                  Schedule a Demo Call
+                  {t("demoTitle")}
                 </h4>
                 <p className="mt-1 text-[14px] text-[#7F858B]">
-                  Arrange a demo with a member of our team.
+                  {t("demoDescription")}
                 </p>
               </div>
 
@@ -252,7 +254,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                 className="font-semibold text-center mt-8 w-full h-12 rounded-full bg-[#0E245A]
                 hover:bg-[#1b3a8f]"
               >
-                {loading ? "Submitting..." : "Submit"}
+                {loading ? t("submitting") : t("submit")}
               </button>
             </form>
           </div>
