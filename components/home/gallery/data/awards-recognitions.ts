@@ -1,6 +1,5 @@
 import {
   AwardsRecognitionsSectionData,
-  CommunityPresenceSectionData,
   GalleryStatsSectionData,
   RedHatRecognitionSectionData,
 } from "../types/awards-recognitions";
