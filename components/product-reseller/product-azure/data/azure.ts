@@ -16,6 +16,7 @@ import {
 import type {
   AzureBlueprintOperationalData,
   AzureCompetenciesData,
+  AzureCtaData,
   AzureEngineeringData,
   AzureHeroData,
   AzureSkillsAccelerationData,
