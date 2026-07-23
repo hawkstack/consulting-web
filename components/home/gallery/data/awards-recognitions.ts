@@ -86,4 +86,33 @@ export const communityPresenceSectionData: CommunityPresenceSectionData = {
   title: "Community Presence",
   description:
     "Tracking our path through the Kubernetes ecosystem and the labs where tomorrow's tech is born.",
+  milestones: [
+    {
+      quarter: "Q1 2024",
+      title: "Kubernetes Community Days",
+      description:
+        "Platinum sponsorship of the regional KCD events, fostering education and open-source contributions to the CNCF ecosystem.",
+      side: "left",
+      accentTextClassName: "text-[#065bd4]",
+      accentDotClassName: "bg-[#065bd4]",
+    },
+    {
+      quarter: "Q4 2023",
+      title: "QCS DC Lab Launch",
+      description:
+        "The inauguration of our Washington DC innovation hub, dedicated to testing edge computing scenarios and secure hybrid cloud deployments.",
+      side: "right",
+      accentTextClassName: "text-[#007a3d]",
+      accentDotClassName: "bg-[#007a3d]",
+    },
+    {
+      quarter: "Q2 2023",
+      title: "Enterprise Sponsorships",
+      description:
+        "Strategic alignment with global digital summits, highlighting our commitment to enterprise-scale digital literacy and DevOps maturity.",
+      side: "left",
+      accentTextClassName: "text-[#065bd4]",
+      accentDotClassName: "bg-[#065bd4]",
+    },
+  ],
 };
