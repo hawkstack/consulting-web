@@ -1,11 +1,12 @@
+import { communityPresenceSectionData } from "../data/awards-recognitions";
 import { CommunityPresenceSectionData } from "../types/awards-recognitions";
 
 type CommunityPresenceSectionProps = {
-  data: CommunityPresenceSectionData;
+  data?: CommunityPresenceSectionData;
 };
 
 export default function CommunityPresenceSection({
-  data,
+  data = communityPresenceSectionData,
 }: CommunityPresenceSectionProps) {
   return (
     <section className="w-full bg-[#eaf4ff] font-lexend">

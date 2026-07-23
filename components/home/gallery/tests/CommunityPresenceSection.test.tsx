@@ -21,4 +21,14 @@ describe("CommunityPresenceSection", () => {
       screen.getByText(communityPresenceSectionData.description),
     ).toBeInTheDocument();
   });
+
+  it("renders default content when data is not provided", () => {
+    render(<CommunityPresenceSection />);
+
+    expect(
+      screen.getByRole("heading", {
+        name: communityPresenceSectionData.title,
+      }),
+    ).toBeInTheDocument();
+  });
 });
