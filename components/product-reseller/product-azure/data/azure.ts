@@ -163,3 +163,25 @@ export const azureBlueprintOperationalData: AzureBlueprintOperationalData = {
     },
   ],
 };
+
+export const azureCtaData: AzureCtaData = {
+  title: "Ready to Build Azure-Ready Engineering Teams?",
+  mobileTitleStart: "Ready to Build",
+  mobileTitleHighlight: "Azure-Ready Teams?",
+  description:
+    "Partner with HawkStack to accelerate Azure adoption with Red Hat expertise, practical labs, and enterprise-ready enablement.",
+  mobileDescription:
+    "Accelerate Azure adoption with practical Red Hat expertise.",
+  primaryAction: {
+    label: "Start Your Azure Journey",
+    href: "/contact-us",
+  },
+  secondaryAction: {
+    label: "Talk to an Expert",
+    href: "/contact-us",
+  },
+  mobileAction: {
+    label: "Get Started",
+    href: "/contact-us",
+  },
+};

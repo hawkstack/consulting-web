@@ -76,3 +76,19 @@ export interface AzureBlueprintOperationalData {
   title: string;
   steps: AzureBlueprintOperationalStep[];
 }
+
+export interface AzureCtaAction {
+  label: string;
+  href: string;
+}
+
+export interface AzureCtaData {
+  title: string;
+  mobileTitleStart: string;
+  mobileTitleHighlight: string;
+  description: string;
+  mobileDescription: string;
+  primaryAction: AzureCtaAction;
+  secondaryAction: AzureCtaAction;
+  mobileAction: AzureCtaAction;
+}
