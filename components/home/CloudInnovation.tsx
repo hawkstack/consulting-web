@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { CloudSectionData } from "@/types/home/home";
+import { useTranslations } from "next-intl";
 
 type CloudProps = {
   data: CloudSectionData;
 }
 
 export default function CloudInnovation({ data }: CloudProps) {
+  const t = useTranslations("Home");
   return (
     <section className="relative w-full bg-white pb-16 md:py-24 overflow-hidden font-lexend">
       <div className="absolute top-0 right-0 w-full h-full z-0 pointer-events-none overflow-hidden">
@@ -59,7 +63,7 @@ export default function CloudInnovation({ data }: CloudProps) {
           <div className="flex flex-row items-center justify-center md:justify-start gap-3 w-full">
             <Link href="/career">
               <button className="px-5 py-2 md:py-1 xl:px-6 xl:py-2 bg-[#21A3E8] text-white rounded-full font-medium text-[12px] xl:text-[14px] whitespace-nowrap">
-                Explore Open Roles
+                {t("exploreOpenRoles")}
               </button>
             </Link>
             {/* TODO : Implement CTA link */}   

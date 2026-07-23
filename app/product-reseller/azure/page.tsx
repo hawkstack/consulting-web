@@ -1,9 +1,12 @@
 import {
+  AzureBlueprintOperationalSection,
   AzureCompetenciesSection,
+  AzureCtaSection,
   AzureEngineeringSection,
   AzureHeroSection,
   AzureSkillsAccelerationSection,
   azureCompetenciesData,
+  azureCtaData,
   azureEngineeringData,
   azureHeroData,
   azureSkillsAccelerationData,

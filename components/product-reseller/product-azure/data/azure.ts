@@ -1,4 +1,9 @@
 import {
+  AzureBlueprintAssessIcon,
+  AzureBlueprintBuildIcon,
+  AzureBlueprintOperateIcon,
+} from "../icons/AzureBlueprintIcons";
+import {
   AzureAutomationIcon,
   AzureSkillsIcon,
   AzureInfrastructureIcon,
@@ -9,7 +14,9 @@ import {
   RedHatExpertiseIcon,
 } from "../icons/AzureHeroIcons";
 import type {
+  AzureBlueprintOperationalData,
   AzureCompetenciesData,
+  AzureCtaData,
   AzureEngineeringData,
   AzureHeroData,
   AzureSkillsAccelerationData,
