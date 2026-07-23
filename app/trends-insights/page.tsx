@@ -5,6 +5,7 @@ import TechnologyInsightsNewsletterSection from "@/components/home/trends-insigh
 import TrendsInsightsHeroSection from "@/components/home/trends-insights/components/TrendsInsightsHeroSection";
 import {
   categoriesTabsData,
+  latestTechnicalPerspectivesData,
   realWorldImpactData,
   technologyInsightsNewsletterData,
   trendsInsightsHeroData,
@@ -14,10 +15,14 @@ const TrendsInsightsPage = () => {
   return (
     <main>
       <TrendsInsightsHeroSection data={trendsInsightsHeroData} />
-      <LatestTechnicalPerspectivesSection />
+      <LatestTechnicalPerspectivesSection
+        data={latestTechnicalPerspectivesData}
+      />
       <RealWorldImpactSection data={realWorldImpactData} />
       <CategoriesTabsSection data={categoriesTabsData} />
-      <TechnologyInsightsNewsletterSection data={technologyInsightsNewsletterData} />
+      <TechnologyInsightsNewsletterSection
+        data={technologyInsightsNewsletterData}
+      />
     </main>
   );
 };

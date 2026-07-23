@@ -4,8 +4,9 @@ type TrendsInsightsHeroSectionProps = {
   data: TrendsInsightsHeroData;
 };
 
-const TrendsInsightsHeroSection = ({ data }: TrendsInsightsHeroSectionProps) => {
-
+const TrendsInsightsHeroSection = ({
+  data,
+}: TrendsInsightsHeroSectionProps) => {
   return (
     <section className="flex min-h-[640px] w-full flex-col items-center bg-white px-5 pb-10 pt-14 text-center font-lexend sm:px-8 sm:pb-12 sm:pt-16">
       <span className="inline-flex items-center gap-2 rounded-full border border-[#9ebff5] bg-[#E5EBF6] px-4 py-[6px] text-[12px] font-semibold tracking-[0.12em] text-[#0745ae]">
