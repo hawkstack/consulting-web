@@ -63,8 +63,19 @@ const RealWorldImpactSection = ({ data }: RealWorldImpactSectionProps) => {
           </div>
 
           <article className="rounded-[22px] bg-[#1744ab] px-8 py-8 text-white sm:px-10 sm:py-10 md:px-6 md:py-7 lg:min-h-[280px] lg:px-10 lg:py-11">
-            <svg aria-hidden="true" className="h-7 w-7" fill="none" viewBox="0 0 24 24">
-              <path d="M5 16.5 8.5 13l2.5 2.5L18.5 8M18.5 8H14m4.5 0v4.5M19 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" />
+            <svg
+              aria-hidden="true"
+              className="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 16.5 8.5 13l2.5 2.5L18.5 8M18.5 8H14m4.5 0v4.5M19 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.7"
+              />
             </svg>
             <h3 className="mt-5 text-[22px] font-medium tracking-[-0.03em] sm:text-[24px]">
               {devOps.title}
@@ -72,7 +83,10 @@ const RealWorldImpactSection = ({ data }: RealWorldImpactSectionProps) => {
             <p className="mt-4 max-w-[275px] text-[12px] leading-[1.55] text-[#e5edff] sm:text-[13px] xl:text-[14px]">
               {devOps.description}
             </p>
-            <a className="mt-8 inline-flex items-center gap-2 text-[11px] font-medium text-white hover:text-[#c8d9ff]" href="#success-story">
+            <a
+              className="mt-8 inline-flex items-center gap-2 text-[11px] font-medium text-white hover:text-[#c8d9ff]"
+              href="#success-story"
+            >
               {devOps.linkLabel}
               <span aria-hidden="true">›</span>
             </a>
