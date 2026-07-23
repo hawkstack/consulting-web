@@ -21,4 +21,16 @@ describe("CommunityPresenceSection", () => {
       screen.getByText(communityPresenceSectionData.description),
     ).toBeInTheDocument();
   });
+
+  it("renders the community timeline milestones", () => {
+    render(<CommunityPresenceSection data={communityPresenceSectionData} />);
+
+    communityPresenceSectionData.milestones.forEach((milestone) => {
+      expect(screen.getByText(milestone.quarter)).toBeInTheDocument();
+      expect(
+        screen.getByRole("heading", { name: milestone.title }),
+      ).toBeInTheDocument();
+      expect(screen.getByText(milestone.description)).toBeInTheDocument();
+    });
+  });
 });
