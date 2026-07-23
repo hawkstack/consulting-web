@@ -113,7 +113,7 @@ export const companyLinks = [
   },
   {
     title: "Gallery",
-    href: "/coming-soon",
+    href: "/gallery",
   },
   {
     title: "Partner",
