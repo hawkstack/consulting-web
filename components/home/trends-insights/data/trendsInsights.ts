@@ -1,5 +1,6 @@
 import type {
   CategoriesTabsData,
+  LatestTechnicalPerspectivesData,
   RealWorldImpactData,
   TechnologyInsightsNewsletterData,
   TrendsInsightsHeroData,
@@ -11,13 +12,9 @@ import CloudNativePlatformsIcon from "@/components/icons/trends-insights/CloudNa
 import ModernizeLegacyIcon from "@/components/icons/trends-insights/ModernizeLegacyIcon";
 import SecureHybridCloudIcon from "@/components/icons/trends-insights/SecureHybridCloudIcon";
 
-// Hero Section data
 export const trendsInsightsHeroData: TrendsInsightsHeroData = {
   eyebrow: "EXPERT KNOWLEDGE BASE",
-  title: {
-    prefix: "Trends &",
-    highlight: " Insights",
-  },
+  title: { prefix: "Trends &", highlight: " Insights" },
   description:
     "Technology is transforming the way businesses innovate, operate, and compete. We share expert perspectives, technical best practices, and industry insights to help organizations navigate cloud transformation, AI adoption, and enterprise infrastructure modernization.",
   curatedForLabel: "Curated for:",
@@ -30,7 +27,50 @@ export const trendsInsightsHeroData: TrendsInsightsHeroData = {
   scrollLabel: "SCROLL TO EXPLORE",
 };
 
-// Real world impact data
+export const latestTechnicalPerspectivesData: LatestTechnicalPerspectivesData =
+  {
+    title: { prefix: "Latest", highlight: " Technical Perspectives" },
+    description: "Deep dives into the architectures shaping the real decade.",
+    articles: [
+      {
+        title: "Modernizing Legacy Applications with Kubernetes",
+        description:
+          "Implement cloud-native microservices, containers, and DevOps patterns to achieve unprecedented scalability and speed in enterprise environments.",
+        tags: ["Microservices", "Cloud Migration"],
+        image: "/images/trends-insights/kubernetes-modernization.webp",
+        imageAlt: "Article image placeholder",
+        imageSide: "start",
+      },
+      {
+        title: "The Future of Enterprise AI",
+        description:
+          "How organizations are shifting from experimentation to production-scale operational efficiency and intelligent automation.",
+        tags: ["Enterprise AI"],
+        image: "/images/trends-insights/enterprise-ai.webp",
+        imageAlt: "Article image placeholder",
+        imageSide: "end",
+      },
+      {
+        title: "Why Cloud-Native Architecture Matters",
+        description:
+          "The core principles behind cloud-native design that enable faster innovation, scale and robust dynamic resilience.",
+        tags: ["Resilience", "Scalability"],
+        image: "/images/trends-insights/cloud-native-architecture.webp",
+        imageAlt: "Article image placeholder",
+        imageSide: "start",
+      },
+      {
+        title: "Kubernetes Virtualization with KubeVirt",
+        description:
+          "Bridge the gap between legacy and modern. Run traditional VMs alongside containers on a unified Kubernetes control plane for gradual, risk-free modernization.",
+        tags: ["KubeVirt", "Modernization"],
+        image: "/images/trends-insights/kubevirt-virtualization.webp",
+        imageAlt: "Article image placeholder",
+        imageSide: "end",
+      },
+    ],
+  };
+
 export const realWorldImpactData: RealWorldImpactData = {
   title: "Real-World Impact",
   description:
@@ -55,7 +95,6 @@ export const realWorldImpactData: RealWorldImpactData = {
   },
 };
 
-// Technology insights newsletter data
 export const technologyInsightsNewsletterData: TechnologyInsightsNewsletterData =
   {
     title: {
@@ -86,7 +125,6 @@ export const technologyInsightsNewsletterData: TechnologyInsightsNewsletterData 
     ],
   };
 
-// Categories section data
 export const categoriesTabsData: CategoriesTabsData = {
   categories: [
     {

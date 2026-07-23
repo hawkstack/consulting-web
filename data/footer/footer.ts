@@ -125,7 +125,7 @@ export const companyLinks = [
   },
   {
     title: "Trends & Insights",
-    href: "/coming-soon",
+    href: "/trends-insights",
   },
 ];
 

@@ -1,24 +1,16 @@
 import type { ComponentType } from "react";
 
-// Hero section types
 export type TrendsInsightsHeroData = {
   eyebrow: string;
-  title: {
-    prefix: string;
-    highlight: string;
-  };
+  title: { prefix: string; highlight: string };
   description: string;
   curatedForLabel: string;
   audiences: string[];
   scrollLabel: string;
 };
 
-export type ImpactStatistic = {
-  value: string;
-  label: string;
-};
+export type ImpactStatistic = { value: string; label: string };
 
-// Real world impact types
 export type RealWorldImpactData = {
   title: string;
   description: string;
@@ -30,14 +22,9 @@ export type RealWorldImpactData = {
     description: string;
     statistics: ImpactStatistic[];
   };
-  devOps: {
-    title: string;
-    description: string;
-    linkLabel: string;
-  };
+  devOps: { title: string; description: string; linkLabel: string };
 };
 
-// Technology insights newsletter types
 export type TechnologyInsightStatistic = {
   value: string;
   label: string;
@@ -46,15 +33,10 @@ export type TechnologyInsightStatistic = {
 };
 
 export type TechnologyInsightsNewsletterData = {
-  title: {
-    prefix: string;
-    highlight: string;
-  };
+  title: { prefix: string; highlight: string };
   description: string;
   statistics: TechnologyInsightStatistic[];
 };
-
-// Categories section types
 
 export type TrendsInsightsCategory = {
   title: string;
@@ -63,6 +45,19 @@ export type TrendsInsightsCategory = {
   icon: ComponentType<{ className?: string }>;
 };
 
-export type CategoriesTabsData = {
-  categories: TrendsInsightsCategory[];
+export type CategoriesTabsData = { categories: TrendsInsightsCategory[] };
+
+export type LatestTechnicalPerspective = {
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  imageAlt: string;
+  imageSide: "start" | "end";
+};
+
+export type LatestTechnicalPerspectivesData = {
+  title: { prefix: string; highlight: string };
+  description: string;
+  articles: LatestTechnicalPerspective[];
 };
