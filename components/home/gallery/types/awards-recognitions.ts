@@ -37,3 +37,18 @@ export type RedHatRecognitionSectionData = {
   description: string;
   cards: RedHatRecognitionCard[];
 };
+
+export type CommunityPresenceMilestone = {
+  quarter: string;
+  title: string;
+  description: string;
+  side: "left" | "right";
+  accentTextClassName: string;
+  accentDotClassName: string;
+};
+
+export type CommunityPresenceSectionData = {
+  title: string;
+  description: string;
+  milestones: CommunityPresenceMilestone[];
+};
