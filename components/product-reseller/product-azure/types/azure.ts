@@ -50,3 +50,45 @@ export interface AzureEngineeringData {
   image: string;
   imageAlt: string;
 }
+
+export interface AzureSkillsAccelerationPillar {
+  step: string;
+  title: string;
+  desktopTitle: string;
+  description: string;
+}
+
+export interface AzureSkillsAccelerationData {
+  title: string;
+  description: string;
+  pillars: AzureSkillsAccelerationPillar[];
+}
+
+export interface AzureBlueprintOperationalStep {
+  step: string;
+  title: string;
+  desktopDescription: string;
+  mobileDescription: string;
+  icon: ComponentType<{ className?: string }>;
+}
+
+export interface AzureBlueprintOperationalData {
+  title: string;
+  steps: AzureBlueprintOperationalStep[];
+}
+
+export interface AzureCtaAction {
+  label: string;
+  href: string;
+}
+
+export interface AzureCtaData {
+  title: string;
+  description: string;
+  primaryAction: AzureCtaAction;
+  secondaryAction: AzureCtaAction;
+  mobileTitleStart: string;
+  mobileTitleHighlight: string;
+  mobileDescription: string;
+  mobileAction: AzureCtaAction;
+}

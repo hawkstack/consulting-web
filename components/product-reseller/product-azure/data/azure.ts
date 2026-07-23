@@ -1,4 +1,9 @@
 import {
+  AzureBlueprintAssessIcon,
+  AzureBlueprintBuildIcon,
+  AzureBlueprintOperateIcon,
+} from "../icons/AzureBlueprintIcons";
+import {
   AzureAutomationIcon,
   AzureSkillsIcon,
   AzureInfrastructureIcon,
@@ -9,9 +14,12 @@ import {
   RedHatExpertiseIcon,
 } from "../icons/AzureHeroIcons";
 import type {
+  AzureBlueprintOperationalData,
   AzureCompetenciesData,
+  AzureCtaData,
   AzureEngineeringData,
   AzureHeroData,
+  AzureSkillsAccelerationData,
 } from "../types/azure";
 
 export const azureHeroData: AzureHeroData = {
@@ -92,4 +100,88 @@ export const azureEngineeringData: AzureEngineeringData = {
   ],
   image: "/images/product-reseller/azure/azure-engineering.svg",
   imageAlt: "Azure cloud platform surrounded by connected engineering services",
+};
+
+export const azureSkillsAccelerationData: AzureSkillsAccelerationData = {
+  title: "The HawkStack Azure Skills Acceleration Framework",
+  description:
+    "A comprehensive 3-pillar system designed to transition engineering teams from legacy mindsets to modern cloud operational models.",
+  pillars: [
+    {
+      step: "01",
+      title: "Strategic Assessment",
+      desktopTitle: "Assessment",
+      description:
+        "Baseline analysis of current skills, infrastructure complexity, and cultural readiness for cloud adoption.",
+    },
+    {
+      step: "02",
+      title: "Immersive Training",
+      desktopTitle: "Training",
+      description:
+        "High-intensity modular labs covering Linux, Containers, and Infrastructure as Code specifically for Azure.",
+    },
+    {
+      step: "03",
+      title: "Operational Mastery",
+      desktopTitle: "Enablement",
+      description:
+        "Embedded engineering support to apply new skills to real-world production projects and internal roadmaps.",
+    },
+  ],
+};
+
+export const azureBlueprintOperationalData: AzureBlueprintOperationalData = {
+  title: "From Blueprint to Operational Excellence",
+  steps: [
+    {
+      step: "1",
+      title: "Assess",
+      desktopDescription:
+        "Identifying capability gaps and defining your technical north star.",
+      mobileDescription:
+        "Auditing current infrastructure and engineering competencies.",
+      icon: AzureBlueprintAssessIcon,
+    },
+    {
+      step: "2",
+      title: "Build",
+      desktopDescription:
+        "Implementing the training curriculum and modern tooling stacks.",
+      mobileDescription:
+        "Execution of custom training paths and collaborative labs.",
+      icon: AzureBlueprintBuildIcon,
+    },
+    {
+      step: "3",
+      title: "Operate",
+      desktopDescription:
+        "Launching with confidence on a self-sustaining engineering foundation.",
+      mobileDescription:
+        "Sustained cloud confidence through ongoing certification support.",
+      icon: AzureBlueprintOperateIcon,
+    },
+  ],
+};
+
+export const azureCtaData: AzureCtaData = {
+  title: "Less Skill Gaps. More Cloud Confidence.",
+  description:
+    "Ready to transform your engineering culture? Join hundreds of enterprises that have optimized their Azure workloads through HawkStack.",
+  primaryAction: {
+    label: "Schedule Capability Assessment",
+    href: "/contact-us",
+  },
+  secondaryAction: {
+    label: "Download Solution Overview",
+    href: "/contact-us",
+  },
+  mobileTitleStart: "Less Skill Gaps.",
+  mobileTitleHighlight: "More Cloud Confidence.",
+  mobileDescription:
+    "Join leading enterprises who trust HawkStack to modernize their engineering workforce.",
+  mobileAction: {
+    label: "Contact Our Solutions Team",
+    href: "/contact-us",
+  },
 };
