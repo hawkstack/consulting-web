@@ -1,5 +1,13 @@
 import AwardsRecognitionsSection from "@/components/home/gallery/components/AwardsRecognitionsSection";
-import { awardsRecognitionsSectionData } from "@/components/home/gallery/data/awards-recognitions";
+import CommunityPresenceSection from "@/components/home/gallery/components/CommunityPresenceSection";
+import GalleryStatsSection from "@/components/home/gallery/components/GalleryStatsSection";
+import RedHatRecognitionSection from "@/components/home/gallery/components/RedHatRecognitionSection";
+import {
+  awardsRecognitionsSectionData,
+  communityPresenceSectionData,
+  galleryStatsSectionData,
+  redHatRecognitionSectionData,
+} from "@/components/home/gallery/data/awards-recognitions";
 import { seoMeta } from "@/components/seo/seoMeta";
 
 export const metadata = seoMeta({
@@ -9,5 +17,12 @@ export const metadata = seoMeta({
 });
 
 export default function GalleryPage() {
-  return <AwardsRecognitionsSection data={awardsRecognitionsSectionData} />;
+  return (
+    <>
+      <AwardsRecognitionsSection data={awardsRecognitionsSectionData} />
+      <GalleryStatsSection data={galleryStatsSectionData} />
+      <RedHatRecognitionSection data={redHatRecognitionSectionData} />
+      <CommunityPresenceSection data={communityPresenceSectionData} />
+    </>
+  );
 }
