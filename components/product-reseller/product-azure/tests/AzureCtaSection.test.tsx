@@ -31,4 +31,14 @@ describe("AzureCtaSection", () => {
       ).toHaveAttribute("href", action.href);
     });
   });
+
+  it("renders default CTA data when no data prop is provided", () => {
+    render(<AzureCtaSection />);
+
+    expect(
+      screen.getAllByRole("heading", {
+        name: azureCtaData.title,
+      }).length,
+    ).toBeGreaterThan(0);
+  });
 });

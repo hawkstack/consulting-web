@@ -165,23 +165,23 @@ export const azureBlueprintOperationalData: AzureBlueprintOperationalData = {
 };
 
 export const azureCtaData: AzureCtaData = {
-  title: "Less Skill Gaps. More Cloud Confidence.",
+  title: "Ready to Build Azure-Ready Engineering Teams?",
+  mobileTitleStart: "Ready to Build",
+  mobileTitleHighlight: "Azure-Ready Teams?",
   description:
-    "Ready to transform your engineering culture? Join hundreds of enterprises that have optimized their Azure workloads through HawkStack.",
+    "Partner with HawkStack to accelerate Azure adoption with Red Hat expertise, practical labs, and enterprise-ready enablement.",
+  mobileDescription:
+    "Accelerate Azure adoption with practical Red Hat expertise.",
   primaryAction: {
-    label: "Schedule Capability Assessment",
+    label: "Start Your Azure Journey",
     href: "/contact-us",
   },
   secondaryAction: {
-    label: "Download Solution Overview",
+    label: "Talk to an Expert",
     href: "/contact-us",
   },
-  mobileTitleStart: "Less Skill Gaps.",
-  mobileTitleHighlight: "More Cloud Confidence.",
-  mobileDescription:
-    "Join leading enterprises who trust HawkStack to modernize their engineering workforce.",
   mobileAction: {
-    label: "Contact Our Solutions Team",
+    label: "Get Started",
     href: "/contact-us",
   },
 };
