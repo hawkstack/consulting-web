@@ -1,5 +1,7 @@
 import {
   AwardsRecognitionsSectionData,
+  CommunityPresenceSectionData,
+  ExcellenceInMotionSectionData,
   GalleryStatsSectionData,
   RedHatRecognitionSectionData,
 } from "../types/awards-recognitions";
@@ -52,6 +54,33 @@ export const galleryStatsSectionData: GalleryStatsSectionData = {
       valueClassName: "text-[#087b3c]",
       mobileOrder: "order-4",
       desktopOrder: "lg:order-4",
+    },
+  ],
+};
+
+export const excellenceInMotionSectionData: ExcellenceInMotionSectionData = {
+  title: "Excellence in Motion",
+  backgroundImage: "/images/gallery/excellence-background.webp",
+  images: [
+    {
+      src: "/images/gallery/excellence-datacenter.webp",
+      alt: "Modern data center infrastructure",
+      className: "col-start-1 row-start-1 aspect-[194/208]",
+    },
+    {
+      src: "/images/gallery/excellence-motion.webp",
+      alt: "HawkStack platform architecture visualization",
+      className: "col-start-2 row-span-2 row-start-1 aspect-[194/282]",
+    },
+    {
+      src: "/images/gallery/excellence-cloud.webp",
+      alt: "Enterprise digital workspace with cloud systems",
+      className: "col-start-3 row-start-1 aspect-[194/166]",
+    },
+    {
+      src: "/images/gallery/excellence-team.webp",
+      alt: "Consulting team reviewing a delivery plan",
+      className: "col-start-1 row-start-2 aspect-[194/108]",
     },
   ],
 };
