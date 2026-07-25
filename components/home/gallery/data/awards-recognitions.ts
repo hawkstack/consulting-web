@@ -2,6 +2,7 @@ import {
   AwardsRecognitionsSectionData,
   CommunityPresenceSectionData,
   ExcellenceInMotionSectionData,
+  GalleryCtaSectionData,
   GalleryStatsSectionData,
   RedHatRecognitionSectionData,
 } from "../types/awards-recognitions";
@@ -81,6 +82,27 @@ export const excellenceInMotionSectionData: ExcellenceInMotionSectionData = {
       src: "/images/gallery/excellence-team.webp",
       alt: "Consulting team reviewing a delivery plan",
       className: "col-start-1 row-start-2 aspect-[194/108]",
+    },
+  ],
+};
+
+export const galleryCtaSectionData: GalleryCtaSectionData = {
+  cards: [
+    {
+      title: "Corporate Consulting",
+      description:
+        "Scale your infrastructure with the same award-winning architects who power the world's most resilient clouds.",
+      actionLabel: "Request Consultation",
+      href: "/contact-us",
+      variant: "consulting",
+    },
+    {
+      title: "Enterprise Training",
+      description:
+        "Upskill your engineering teams with hands-on labs led by certified Red Hat and CNCF instructors.",
+      actionLabel: "View Course Catalog",
+      href: "/training-services",
+      variant: "training",
     },
   ],
 };
