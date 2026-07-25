@@ -139,7 +139,6 @@ jobs:
 
 
             echo "Installing production dependencies..."
-           # npm ci --omit=dev --no-audit --no-fund
             npm ci --no-audit --no-fund
 
 
