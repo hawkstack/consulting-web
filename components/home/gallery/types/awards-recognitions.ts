@@ -23,6 +23,18 @@ export type GalleryStatsSectionData = {
   stats: GalleryStat[];
 };
 
+export type ExcellenceInMotionImage = {
+  src: string;
+  alt: string;
+  className: string;
+};
+
+export type ExcellenceInMotionSectionData = {
+  title: string;
+  backgroundImage: string;
+  images: ExcellenceInMotionImage[];
+};
+
 export type RedHatRecognitionCard = {
   badge: string;
   badgeClassName: string;
