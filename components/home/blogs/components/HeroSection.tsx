@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { BlogHeroData } from "@/components/home/blogs/types/data";
+import type { BlogHeroData } from "@/components/home/blogs/types/blogs";
 
 type HeroSectionProps = {
   data: BlogHeroData;

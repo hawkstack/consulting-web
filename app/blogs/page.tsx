@@ -8,8 +8,10 @@ import HeroSection from "@/components/home/blogs/components/HeroSection";
 import LatestEngineeringUpdatesSection from "@/components/home/blogs/components/LatestEngineeringUpdatesSection";
 import SuccessStoriesSection from "@/components/home/blogs/components/SuccessStoriesSection";
 import {
+  blogCategoriesData,
   blogHeroData,
   featuredBlogData,
+  latestEngineeringUpdatesData,
 } from "@/components/home/blogs/data/blogs";
 import React from "react";
 
@@ -19,8 +21,8 @@ const page = () => {
       <HeroSection data={blogHeroData} />
       <BlogTopicsSection />
       <FeaturedBlogSection data={featuredBlogData} />
-      <LatestEngineeringUpdatesSection />
-      <BlogCategoriesSection />
+      <LatestEngineeringUpdatesSection data={latestEngineeringUpdatesData} />
+      <BlogCategoriesSection data={blogCategoriesData} />
       <SuccessStoriesSection />
       <CertificationPathsSection />
       <EngineeringToolkitSection />

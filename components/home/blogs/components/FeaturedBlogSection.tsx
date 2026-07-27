@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { FeaturedBlogData } from "@/components/home/blogs/types/data";
+import type { FeaturedBlogData } from "@/components/home/blogs/types/blogs";
 
 type FeaturedBlogSectionProps = {
   data: FeaturedBlogData;
