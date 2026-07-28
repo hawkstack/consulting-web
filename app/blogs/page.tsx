@@ -12,6 +12,8 @@ import {
   blogHeroData,
   featuredBlogData,
   latestEngineeringUpdatesData,
+  successStoriesData,
+  certificationPathsData,
 } from "@/components/home/blogs/data/blogs";
 import React from "react";
 
@@ -23,8 +25,8 @@ const page = () => {
       <FeaturedBlogSection data={featuredBlogData} />
       <LatestEngineeringUpdatesSection data={latestEngineeringUpdatesData} />
       <BlogCategoriesSection data={blogCategoriesData} />
-      <SuccessStoriesSection />
-      <CertificationPathsSection />
+      <SuccessStoriesSection data={successStoriesData} />
+      <CertificationPathsSection data={certificationPathsData} />
       <EngineeringToolkitSection />
       <CTASection />
     </div>

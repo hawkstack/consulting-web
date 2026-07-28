@@ -3,11 +3,19 @@ import type {
   BlogCategoriesData,
   FeaturedBlogData,
   LatestEngineeringUpdatesData,
+  SuccessStoriesData,
+  CertificationPathsData,
 } from "@/components/home/blogs/types/blogs";
 import CloudIcon from "@/components/icons/blogs/CloudIcon";
 import DatabaseIcon from "@/components/icons/blogs/DatabaseIcon";
 import GitBranchIcon from "@/components/icons/blogs/GitBranchIcon";
 import ShieldIcon from "@/components/icons/blogs/ShieldIcon";
+import AutomationArmIcon from "@/components/icons/blogs/AutomationArmIcon";
+import BidirectionalArrowsIcon from "@/components/icons/blogs/BidirectionalArrowsIcon";
+import CertificateCardIcon from "@/components/icons/blogs/CertificateCardIcon";
+import GridIcon from "@/components/icons/blogs/GridIcon";
+import PerformanceIcon from "@/components/icons/blogs/PerformanceIcon";
+import UptimeIcon from "@/components/icons/blogs/UptimeIcon";
 
 export const blogHeroData: BlogHeroData = {
   title: "HawkStack Engineering Hub",
@@ -99,6 +107,62 @@ export const blogCategoriesData: BlogCategoriesData = {
       title: "HA Storage Layer",
       description: "Persistent storage for stateful workloads.",
       icon: DatabaseIcon,
+    },
+  ],
+};
+
+export const successStoriesData: SuccessStoriesData = {
+  title: "Engineering Success Stories",
+  stories: [
+    {
+      label: "CASE STUDY #42",
+      title: "Financial Services Modernization with KubeVirt",
+      description:
+        "Consolidated legacy VMs and modern containers onto a single control plane for a Tier-1 global bank.",
+      metrics: [
+        { label: "40% reduction in infra overhead", icon: PerformanceIcon },
+        { label: "99.99% uptime during migration", icon: PerformanceIcon },
+      ],
+      tags: ["KubeVirt", "OpenShift"],
+    },
+    {
+      label: "CASE STUDY #38",
+      title: "Automated DevOps for Healthcare Provider",
+      description:
+        "Reduced deployment times from 3 weeks to 15 minutes using GitOps and Ansible automation.",
+      metrics: [
+        { label: "Zero-touch provisioning enabled", icon: PerformanceIcon },
+        { label: "HIPAA-compliant security pipelines", icon: UptimeIcon },
+      ],
+      tags: ["Ansible", "GitOps"],
+    },
+  ],
+};
+
+export const certificationPathsData: CertificationPathsData = {
+  title: "Certification Mastery",
+  description:
+    "Focused learning paths designed by engineers for engineers. Accelerate your professional career.",
+  paths: [
+    {
+      title: "RHCSA",
+      description: "Red Hat Certified System Administrator path.",
+      icon: CertificateCardIcon,
+    },
+    {
+      title: "RHCE",
+      description: "Red Hat Certified Engineer & Automation.",
+      icon: BidirectionalArrowsIcon,
+    },
+    {
+      title: "CKA / CKAD",
+      description: "Certified Kubernetes Admin & Dev.",
+      icon: GridIcon,
+    },
+    {
+      title: "EX407",
+      description: "Ansible Automation Specialist pathway.",
+      icon: AutomationArmIcon,
     },
   ],
 };

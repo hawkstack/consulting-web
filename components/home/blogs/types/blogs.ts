@@ -47,3 +47,33 @@ export type BlogCategoriesData = {
   blueprintsTitle: string;
   blueprints: ArchitectureBlueprint[];
 };
+
+export type SuccessStoryMetric = {
+  label: string;
+  icon: BlogCategoryIcon;
+};
+
+export type SuccessStory = {
+  label: string;
+  title: string;
+  description: string;
+  metrics: SuccessStoryMetric[];
+  tags: string[];
+};
+
+export type SuccessStoriesData = {
+  title: string;
+  stories: SuccessStory[];
+};
+
+export type CertificationPath = {
+  title: string;
+  description: string;
+  icon: BlogCategoryIcon;
+};
+
+export type CertificationPathsData = {
+  title: string;
+  description: string;
+  paths: CertificationPath[];
+};
