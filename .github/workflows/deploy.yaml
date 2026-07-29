@@ -133,14 +133,8 @@ jobs:
             source /var/www/shared/consulting-web.env
             set +a
 
-            if [ -d "/var/www/frontend/$BACKUP_DIR/node_modules" ]; then
-              cp -r /var/www/frontend/$BACKUP_DIR/node_modules . || true
-            fi
-
-
             echo "Installing production dependencies..."
             npm ci --no-audit --no-fund
-
 
             echo "Restarting PM2..."
 
