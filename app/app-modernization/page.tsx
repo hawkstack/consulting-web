@@ -1,9 +1,11 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
-import CapabilitiesSection from "@/components/app-modernization/CapabilitiesSection";
-import CtaSection from "@/components/app-modernization/CtaSection";
-import ProcessSection from "@/components/app-modernization/ProcessSection";
-import WhyHawkStackSection from "@/components/app-modernization/WhyHawkStackSection";
-import WhyAppModernizationSection from "@/components/app-modernization/WhyAppModernizationSection";
+import {
+  AppModernizationHeroSection,
+  CapabilitiesSection,
+  CtaSection,
+  ProcessSection,
+  WhyAppModernizationSection,
+  WhyHawkStackSection,
+} from "@/components/services/app-modernization";
 import {
   appModernizationCtaSectionContent,
   appModernizationCapabilitiesSectionContent,
@@ -11,7 +13,7 @@ import {
   appModernizationProcessSectionContent,
   appModernizationWhyHawkStackSectionContent,
   appModernizationWhySectionContent,
-} from "@/data/app-modernization/app-modernization";
+} from "@/components/services/app-modernization/data/app-modernization";
 
 export default function AppModernizationPage() {
   return (

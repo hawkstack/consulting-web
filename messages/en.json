@@ -1,0 +1,208 @@
+{
+  "LanguageSwitcher": { "label": "Select language" },
+  "Header": {
+    "home": "Home",
+    "products": "What we Offer?",
+    "services": "Services",
+    "company": "Company",
+    "training": "Training",
+    "toggleMenu": "Toggle menu"
+  },
+  "Home": {
+    "scheduleConsultation": "Schedule a Consultation",
+    "viewSolutions": "View Our Solutions",
+    "learnMore": "Learn More",
+    "seeAllOfferings": "SEE ALL OFFERINGS",
+    "exploreOpenRoles": "Explore Open Roles",
+    "content": {
+      "heroSectionData": {
+        "slides": [
+          {
+            "title": "KubeVirtStack Virtualization Platform",
+            "desc": "Run VMs and containers together on Kubernetes. Modernize workloads on a unified platform."
+          },
+          {
+            "title": "Modernize Applications with OpenShift",
+            "desc": "Build and run microservices on Red Hat OpenShift with secure, enterprise Kubernetes."
+          },
+          {
+            "title": "Digital Transformation with Kubernetes",
+            "desc": "Adopt cloud-native architectures for scalable, resilient, faster delivery."
+          },
+          {
+            "title": "Fully Managed Kubernetes Service Platform",
+            "desc": "Operate Kubernetes with built-in security, observability, scaling, upgrades, and lifecycle management."
+          }
+        ]
+      },
+      "cloudServicesSectionData": {
+        "title": "Engineering Driven Cloud Services",
+        "services": [
+          {
+            "title": "App Modernization",
+            "description": "Transform legacy applications into scalable, cloud-native microservices with Kubernetes, DevOps, and CI/CD."
+          },
+          {
+            "title": "KubeVirt",
+            "description": "Run virtual machines alongside containers on Kubernetes with unified orchestration and portability."
+          },
+          {
+            "title": "Automation",
+            "description": "Accelerate operations with IaC, GitOps, and CI/CD for consistent, reliable deployments."
+          },
+          {
+            "title": "Cloud Service Provider",
+            "description": "Operate and optimize Kubernetes and cloud platforms with end-to-end multi-cloud management."
+          },
+          {
+            "title": "Consulting Services",
+            "description": "Strategic guidance for secure, scalable cloud-native transformation and infrastructure design."
+          },
+          {
+            "title": "Kubernetes as a Service (KaaS)",
+            "description": "Enterprise-ready Kubernetes, fully managed with security and observability."
+          },
+          {
+            "title": "Training Services",
+            "description": "Hands-on cloud-native training for Kubernetes, DevOps, automation, and cloud platforms."
+          }
+        ]
+      },
+      "productsSectionData": {
+        "maintitle": "Trusted by Global Technology Leaders",
+        "title": "HawkStack - Product Resellers, Redefined",
+        "subtitle": "End-to-end cloud and DevOps solutions tailored for modern enterprise needs.",
+        "products": [
+          {
+            "category": "ENTERPRISE PLATFORM",
+            "title": "RedHat",
+            "description": "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms."
+          },
+          {
+            "category": "CLOUD NATIVE",
+            "title": "Mirantis",
+            "description": "Kubernetes and container solutions for scalable, secure cloud environments."
+          },
+          {
+            "category": "CLOUD NATIVE",
+            "title": "CNCF",
+            "description": "Cloud-native technologies powering modern application development."
+          },
+          {
+            "category": "CLOUD NATIVE",
+            "title": "Azure",
+            "description": "Microsoft cloud platform for hybrid cloud, DevOps, and enterprise integration."
+          },
+          {
+            "category": "CLOUD NATIVE",
+            "title": "AWS",
+            "description": "Cloud services for compute, storage, AI/ML, and scalable applications."
+          },
+          {
+            "category": "CLOUD NATIVE",
+            "title": "GCP",
+            "description": "Google Cloud solutions for analytics, AI, and cloud-native innovation."
+          }
+        ]
+      },
+      "platformSectionData": {
+        "title": [
+          "A Simpler",
+          "Stronger foundation",
+          "for modern platform",
+          "operations."
+        ],
+        "description": "HawkStack helps teams standardize infrastructure, improve reliability, strengthen security, and streamline delivery.",
+        "features": [
+          {
+            "title": "Cloud Native Architecture",
+            "desc": "Scalable, resilient systems built for the cloud."
+          },
+          {
+            "title": "Operational Excellence",
+            "desc": "Improve reliability, efficiency, and performance."
+          },
+          {
+            "title": "Observability",
+            "desc": "End-to-end visibility for faster issue resolution."
+          },
+          {
+            "title": "Security & Compliance",
+            "desc": "Enterprise-grade protection and regulatory alignment."
+          },
+          {
+            "title": "Continuity & Lifecycle",
+            "desc": "Structured lifecycle management and continuous improvement."
+          },
+          {
+            "title": "Unified Platform",
+            "desc": "Integrate tools, teams, and workflows seamlessly."
+          }
+        ]
+      },
+      "whatWeDoSectionData": {
+        "title": "What we do?",
+        "description": "Innovative Digital Solutions Powering Modern Industries",
+        "cards": [
+          {
+            "title": "E-commerce & Retail",
+            "desc": "Scalable cloud and microservices for digital commerce and customer experience."
+          },
+          {
+            "title": "Telecom & Connectivity",
+            "desc": "Cloud-native automation for stronger telecom networks and connectivity."
+          },
+          {
+            "title": "DevOps & Automation",
+            "desc": "CI/CD and automation to accelerate delivery and improve reliability."
+          },
+          {
+            "title": "AI & Data Intelligence",
+            "desc": "AI-driven analytics that turn data into actionable insights."
+          },
+          {
+            "title": "Healthcare & Life Sciences",
+            "desc": "Secure, scalable digital solutions for better healthcare outcomes."
+          },
+          {
+            "title": "Manufacturing & Industry 4.0",
+            "desc": "Smart automation and IoT systems for industrial efficiency and innovation."
+          }
+        ]
+      },
+      "cloudSectionData": {
+        "title": {
+          "main": "Build the",
+          "highlight": "next wave",
+          "suffix": "of cloud innovation."
+        },
+        "desc": "As a CNCF silver member, HawkStack contributes to the cloud-native community through initiatives like KubeVirtStack for modern virtualization on Kubernetes."
+      }
+    },
+    "contact": {
+      "title": "Let's Build Your Platform, the Right Way",
+      "descriptionLine1": "From Red Hat training to enterprise consulting,",
+      "descriptionLine2": "we'll help you move faster and smarter.",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Enter your last name",
+      "workEmail": "Work Email Address",
+      "workEmailPlaceholder": "Enter your work email",
+      "contactNumber": "Contact Number",
+      "contactNumberPlaceholder": "Enter your contact number",
+      "demoTitle": "Schedule a Demo Call",
+      "demoDescription": "Arrange a demo with a member of our team.",
+      "submitting": "Submitting...",
+      "submit": "Submit"
+    }
+  },
+  "Footer": {
+    "about": "About us",
+    "services": "Services",
+    "products": "Products",
+    "training": "Training",
+    "description": "HawkStack helps businesses accelerate digital transformation through cloud platforms, automation, and modern DevOps practices. From strategy to execution, we build systems that are resilient, scalable, and ready for the future.",
+    "rights": "© 2026 HawkStack. All Rights Reserved."
+  }
+}

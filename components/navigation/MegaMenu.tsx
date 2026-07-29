@@ -103,6 +103,9 @@ export function MegaMenu({
 
                   <Link
                     href={offeringsMenuContent.featured.primaryHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={onClose}
                     className="inline-flex text-[12px] font-medium text-[#56A8FF] transition hover:text-white"
                   >
                     {"Know More ->"}
@@ -131,6 +134,7 @@ export function MegaMenu({
                           </p>
                           <Link
                             href={item.href ?? "/get-started"}
+                            onClick={onClose}
                             className="mt-2 inline-flex text-[11px] font-medium text-[#56A8FF] transition hover:text-white"
                           >
                             {"Know More ->"}
@@ -181,6 +185,7 @@ export function MegaMenu({
                   onMouseEnter={() => onHoverItem(item)}
                   onClick={() => {
                     if (item.href) {
+                      onClose();
                       window.location.href = item.href;
                     }
                   }}
@@ -221,6 +226,7 @@ export function MegaMenu({
             {menuKey === "services" && activeItem.href ? (
               <Link
                 href={activeItem.href}
+                onClick={onClose}
                 className="mt-2 inline-flex text-[12px] font-medium text-[#56A8FF] transition hover:text-white"
               >
                 {"Know More ->"}

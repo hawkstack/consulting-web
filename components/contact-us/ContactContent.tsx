@@ -1,7 +1,7 @@
 import { contactInfoData } from "@/data/contact/contact";
 import ContactInfo from "./ContactInfo";
-import AppModernizationContactForm from "../app-modernization/ContactForm";
-import { appModernizationHeroContent } from "@/data/app-modernization/app-modernization";
+import { ContactForm as AppModernizationContactForm } from "@/components/services/app-modernization";
+import { appModernizationHeroContent } from "@/components/services/app-modernization";
 
 const ContactContent = () => {
   return (

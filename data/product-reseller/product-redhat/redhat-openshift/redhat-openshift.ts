@@ -7,104 +7,48 @@ import {
   RedHatAIOverviewData,
   RedHatAIProductionSectionData,
   RedHatAIStrategySectionData,
-} from "@/app/types/product-reseller/product-redhat/redhat-ai/redhat-ai";
-import { RedHatAnsibleHeroData } from "@/app/types/product-reseller/product-redhat/redhat-ansible/redhat-ansible";
+} from "@/components/product-reseller/product-redhat/redhat-ai/types/redhat-ai";
+import { RedHatAnsibleHeroData } from "@/components/product-reseller/product-redhat/redhat-ansible";
 import ArchitectIcon from "@/components/icons/product-reseller/redhat-ai/ArchitectIcon";
 import AssessIcon from "@/components/icons/product-reseller/redhat-ai/AssessIcon";
 import ImplementIcon from "@/components/icons/product-reseller/redhat-ai/ImplementIcon";
 import OptimizeIcon from "@/components/icons/product-reseller/redhat-ai/OptimizeIcon";
 import CheckIcon from "@/components/icons/product-reseller/redhat-ai/CheckIcon";
 
-// RedHatOpenShiftHeroSection data
-
 export const redHatOpenShiftHeroData: RedHatAnsibleHeroData = {
   badge: "Red Hat OpenShift by HawkStack",
-
   heading: {
     title: "Build, modernize, and deploy apps at",
     highlight: "enterprise scale.",
   },
-
   description:
     "HawkStack helps organizations adopt Red Hat OpenShift as atrusted Kubernetes application platform for cloud-nativedevelopment, modernization, AI workloads, virtualization, and hybrid cloud operations.",
-
   primaryButtonText: "Book a consultation",
-
   secondaryButtonText: "Explore OpenShift",
-
   features: [
-    {
-      id: 1,
-      text: "Kubernetes at the core",
-      icon: CheckIcon,
-    },
-    {
-      id: 2,
-      text: "Hybrid cloud ready",
-      icon: CheckIcon,
-    },
-    {
-      id: 3,
-      text: "Built for modern apps",
-      icon: CheckIcon,
-    },
+    { id: 1, text: "Kubernetes at the core", icon: CheckIcon },
+    { id: 2, text: "Hybrid cloud ready", icon: CheckIcon },
+    { id: 3, text: "Built for modern apps", icon: CheckIcon },
   ],
-
   statusList: [
-    {
-      id: 1,
-      title: "Code committed",
-      status: "READY",
-    },
-    {
-      id: 2,
-      title: "Container image built",
-      status: "PASSED",
-    },
-    {
-      id: 3,
-      title: "Security policy checked",
-      status: "SECURE",
-    },
-    {
-      id: 4,
-      title: "App deployed to cluster",
-      status: "LIVE",
-    },
+    { id: 1, title: "Code committed", status: "READY" },
+    { id: 2, title: "Container image built", status: "PASSED" },
+    { id: 3, title: "Security policy checked", status: "SECURE" },
+    { id: 4, title: "App deployed to cluster", status: "LIVE" },
   ],
-
   capabilityCards: [
-    {
-      id: 1,
-      title: "CI/CD",
-      subtitle: "Automated delivery",
-    },
-    {
-      id: 2,
-      title: "GitOps",
-      subtitle: "Declarative control",
-    },
-    {
-      id: 3,
-      title: "AI/ML",
-      subtitle: "Modern workloads",
-    },
-    {
-      id: 4,
-      title: "VMs",
-      subtitle: "Virtualization ready",
-    },
+    { id: 1, title: "CI/CD", subtitle: "Automated delivery" },
+    { id: 2, title: "GitOps", subtitle: "Declarative control" },
+    { id: 3, title: "AI/ML", subtitle: "Modern workloads" },
+    { id: 4, title: "VMs", subtitle: "Virtualization ready" },
   ],
 };
-
-// RedHatOpenShiftOverview data
 
 export const redHatOpenShiftOverviewData: RedHatAIOverviewData = {
   tag: "PLATFORM OVERVIEW",
   heading: "A unified application platform for cloud native innovation.",
   description:
     "Red Hat OpenShift helps teams develop, modernize, deploy, and operate applications on a consistent Kubernetes-based platform. HawkStack adds implementation expertise, platform engineering, migration planning, security configuration, and managed support.",
-
   cards: [
     {
       id: 1,
@@ -127,8 +71,6 @@ export const redHatOpenShiftOverviewData: RedHatAIOverviewData = {
   ],
 };
 
-// RedHatOpenShiftFoundationSection data
-
 export const redHatOpenShiftFoundationData: RedHatAIFoundationSectionData = {
   tag: "Core capabilities",
   title: "One platform for apps, AI, containers, and virtual machines.",
@@ -139,34 +81,32 @@ export const redHatOpenShiftFoundationData: RedHatAIFoundationSectionData = {
       title: "Cloud-native applications",
       description:
         "Build and run microservices, APIs, web apps, and distributed systems using Kubernetes- native workflows.",
-      ctaText: "Modernize apps →",
+      ctaText: "Modernize apps ->",
       href: "/",
     },
     {
       title: "Managed or self- managed",
       description:
         "Choose managed cloud services or self-managed editions depending on your control, compliance, and infrastructure needs.",
-      ctaText: "Choose your model →",
+      ctaText: "Choose your model ->",
       href: "/",
     },
     {
       title: "AI and ML workloads",
       description:
         "Support predictive and generative AI workflows with scalable infrastructure, model operations, and integrated platform services.",
-      ctaText: "Scale AI workloads →",
+      ctaText: "Scale AI workloads ->",
       href: "/",
     },
     {
       title: "Virtualization",
       description:
         "Migrate and manage virtual machines alongside containers on a consistent hybrid cloud application platform.",
-      ctaText: "Plan VM migration →",
+      ctaText: "Plan VM migration ->",
       href: "/",
     },
   ],
 };
-
-// RedHatOpenShiftCapabilitiesSection data
 
 export const redHatOpenShiftCapabilitiesData: RedHatAICapabilitiesData = {
   cards: [
@@ -190,8 +130,6 @@ export const redHatOpenShiftCapabilitiesData: RedHatAICapabilitiesData = {
     },
   ],
 };
-
-// RedHatOpenShiftProductionSection data
 
 export const redHatOpenShiftProductionData: RedHatAIProductionSectionData = {
   tag: "USE CASES",
@@ -232,16 +170,11 @@ export const redHatOpenShiftProductionData: RedHatAIProductionSectionData = {
   ],
 };
 
-// RedHatOpenShiftStrategySection data
-
 export const redHatOpenShiftStrategyData: RedHatAIStrategySectionData = {
   tag: "HAWKSTACK APPROACH",
-
   heading: "Design, deploy, and operate OpenShift with confidence.",
-
   description:
     "We help your teams move from Kubernetes complexity to a reliable application platform operating model.",
-
   cards: [
     {
       id: 1,
@@ -274,23 +207,13 @@ export const redHatOpenShiftStrategyData: RedHatAIStrategySectionData = {
   ],
 };
 
-// RedHatOpenShiftCtaSection data
-
 export const redHatOpenShiftCtaData: RedHatAICtaData = {
   tag: "Modernize your application platform",
   title: "Ready to build on Red Hat OpenShift with HawkStack?",
   description:
     "Talk to our team about your Kubernetes strategy, application modernization roadmap, cloud requirements, and OpenShift deployment goals.",
   buttons: [
-    {
-      label: "Schedule a consultation",
-      href: "/",
-      variant: "primary",
-    },
-    {
-      label: "View capabilities",
-      href: "/",
-      variant: "secondary",
-    },
+    { label: "Schedule a consultation", href: "/", variant: "primary" },
+    { label: "View capabilities", href: "/", variant: "secondary" },
   ],
 };

@@ -1,15 +1,15 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
-import EngagementModelSection from "@/components/consulting-services/EngagementModelSection";
-import HowWeHelpClientsSection from "@/components/consulting-services/HowWeHelpClientsSection";
-import StartConversationSection from "@/components/consulting-services/StartConversationSection";
-import WhatWeDoSection from "@/components/consulting-services/WhatWeDoSection";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
+import EngagementModelSection from "@/components/services/consulting-services/components/EngagementModelSection";
+import HowWeHelpClientsSection from "@/components/services/consulting-services/components/HowWeHelpClientsSection";
+import StartConversationSection from "@/components/services/consulting-services/components/StartConversationSection";
+import WhatWeDoSection from "@/components/services/consulting-services/components/WhatWeDoSection";
 import {
   consultingServicesConversationSectionContent,
   consultingServicesEngagementModelSectionContent,
   consultingServicesHeroContent,
   consultingServicesHowWeHelpSectionContent,
   consultingServicesWhatWeDoSectionContent,
-} from "@/data/consulting-services/consulting-services";
+} from "@/components/services/consulting-services/data/consulting-services";
 
 export default function ConsultingPage() {
   return (

@@ -1,0 +1,95 @@
+{
+  "LanguageSwitcher": { "label": "भाषा चुनें" },
+  "Header": {
+    "home": "होम",
+    "products": "हमारी पेशकश",
+    "services": "सेवाएँ",
+    "company": "कंपनी",
+    "training": "प्रशिक्षण",
+    "toggleMenu": "मेन्यू खोलें या बंद करें"
+  },
+  
+  "Home": {
+    "scheduleConsultation": "परामर्श शेड्यूल करें",
+    "viewSolutions": "हमारे समाधान देखें",
+    "learnMore": "और जानें",
+    "seeAllOfferings": "सभी पेशकशें देखें",
+    "exploreOpenRoles": "खुली भूमिकाएँ देखें",
+    "content": {
+      "heroSectionData": {
+        "slides": [
+          {
+            "title": "KubeVirtStack वर्चुअलाइज़ेशन प्लेटफ़ॉर्म",
+            "desc": "Kubernetes पर VM और कंटेनर साथ चलाएँ। एकीकृत प्लेटफ़ॉर्म पर वर्कलोड आधुनिक बनाएँ।"
+          },
+          {
+            "title": "OpenShift के साथ एप्लिकेशन आधुनिक बनाएँ",
+            "desc": "Red Hat OpenShift पर सुरक्षित एंटरप्राइज़ Kubernetes के साथ माइक्रोसर्विस बनाएँ और चलाएँ।"
+          },
+          {
+            "title": "Kubernetes के साथ डिजिटल परिवर्तन",
+            "desc": "स्केलेबल, लचीली और तेज़ डिलीवरी के लिए क्लाउड-नेटिव आर्किटेक्चर अपनाएँ।"
+          },
+          {
+            "title": "पूर्णतः प्रबंधित Kubernetes सेवा प्लेटफ़ॉर्म",
+            "desc": "सुरक्षा, अवलोकनीयता, स्केलिंग और अपग्रेड के साथ Kubernetes संचालित करें।"
+          }
+        ]
+      },
+      "cloudServicesSectionData": {
+        "title": "इंजीनियरिंग आधारित क्लाउड सेवाएँ"
+      },
+      "productsSectionData": {
+        "maintitle": "वैश्विक तकनीकी अग्रणियों का विश्वसनीय साझेदार",
+        "title": "HawkStack - प्रोडक्ट रीसेलर, नए रूप में",
+        "subtitle": "आधुनिक एंटरप्राइज़ आवश्यकताओं के लिए संपूर्ण क्लाउड और DevOps समाधान।"
+      },
+      "platformSectionData": {
+        "title": [
+          "एक सरल",
+          "और मजबूत आधार",
+          "आधुनिक प्लेटफ़ॉर्म",
+          "संचालन के लिए।"
+        ],
+        "description": "HawkStack टीमों को इन्फ्रास्ट्रक्चर मानकीकृत करने, विश्वसनीयता और सुरक्षा बढ़ाने में मदद करता है।"
+      },
+      "whatWeDoSectionData": {
+        "title": "हम क्या करते हैं?",
+        "description": "आधुनिक उद्योगों को सशक्त बनाने वाले नवीन डिजिटल समाधान"
+      },
+      "cloudSectionData": {
+        "title": {
+          "main": "क्लाउड नवाचार की",
+          "highlight": "अगली लहर",
+          "suffix": "निर्मित करें।"
+        },
+        "desc": "CNCF के सिल्वर सदस्य के रूप में HawkStack, Kubernetes पर आधुनिक वर्चुअलाइज़ेशन के लिए KubeVirtStack जैसी पहलों में योगदान देता है।"
+      }
+    },
+    "contact": {
+      "title": "अपना प्लेटफ़ॉर्म सही तरीके से बनाइए",
+      "descriptionLine1": "Red Hat प्रशिक्षण से एंटरप्राइज़ परामर्श तक,",
+      "descriptionLine2": "हम आपको तेज़ और बेहतर तरीके से आगे बढ़ने में मदद करेंगे।",
+      "firstName": "पहला नाम",
+      "firstNamePlaceholder": "अपना पहला नाम लिखें",
+      "lastName": "अंतिम नाम",
+      "lastNamePlaceholder": "अपना अंतिम नाम लिखें",
+      "workEmail": "कार्य ईमेल पता",
+      "workEmailPlaceholder": "अपना कार्य ईमेल लिखें",
+      "contactNumber": "संपर्क नंबर",
+      "contactNumberPlaceholder": "अपना संपर्क नंबर लिखें",
+      "demoTitle": "डेमो कॉल शेड्यूल करें",
+      "demoDescription": "हमारी टीम के सदस्य के साथ डेमो तय करें।",
+      "submitting": "सबमिट हो रहा है...",
+      "submit": "सबमिट करें"
+    }
+  },
+  "Footer": {
+    "about": "हमारे बारे में",
+    "services": "सेवाएँ",
+    "products": "उत्पाद",
+    "training": "प्रशिक्षण",
+    "description": "HawkStack क्लाउड प्लेटफ़ॉर्म, ऑटोमेशन और आधुनिक DevOps प्रथाओं के माध्यम से व्यवसायों के डिजिटल परिवर्तन को तेज़ करता है। रणनीति से क्रियान्वयन तक, हम लचीले, विस्तार योग्य और भविष्य के लिए तैयार सिस्टम बनाते हैं।",
+    "rights": "© 2026 HawkStack. सर्वाधिकार सुरक्षित।"
+  }
+}

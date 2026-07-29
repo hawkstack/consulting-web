@@ -90,11 +90,11 @@ export const solutionLinks = [
   },
   {
     title: "AWS",
-    href: "/coming-soon",
+    href: "/product-reseller/aws",
   },
   {
     title: "GCP",
-    href: "/coming-soon",
+    href: "/product-reseller/gcp",
   },
   {
     title: "Azure",
@@ -105,7 +105,7 @@ export const solutionLinks = [
 export const companyLinks = [
   {
     title: "Blog",
-    href: "/coming-soon",
+    href: "/blogs",
   },
   {
     title: "Career",
@@ -113,11 +113,11 @@ export const companyLinks = [
   },
   {
     title: "Gallery",
-    href: "/coming-soon",
+    href: "/gallery",
   },
   {
     title: "Partner",
-    href: "/coming-soon",
+    href: "/partner",
   },
   {
     title: "Events & Webinars",
@@ -125,7 +125,7 @@ export const companyLinks = [
   },
   {
     title: "Trends & Insights",
-    href: "/coming-soon",
+    href: "/trends-insights",
   },
 ];
 

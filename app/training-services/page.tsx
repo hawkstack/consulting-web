@@ -1,9 +1,9 @@
-import AppModernizationHeroSection from "@/components/app-modernization/HeroSection";
-import TrainingEcosystem from "@/components/training-services/TrainingEcosystem";
-import TrainingPortfolio from "@/components/training-services/TrainingPortfolio";
-import TrainingsWeGive from "@/components/training-services/TrainingsWeGive";
-import DeliveryOptions from "@/components/training-services/DeliveryOptions";
-import { trainingServicesPageData } from "@/data/training-services/training-services";
+import { AppModernizationHeroSection } from "@/components/services/app-modernization";
+import TrainingEcosystem from "@/components/services/training-services/components/TrainingEcosystem";
+import TrainingPortfolio from "@/components/services/training-services/components/TrainingPortfolio";
+import TrainingsWeGive from "@/components/services/training-services/components/TrainingsWeGive";
+import DeliveryOptions from "@/components/services/training-services/components/DeliveryOptions";
+import { trainingServicesPageData } from "@/components/services/training-services/data/training-services";
 
 export default function TrainingServicesPage() {
     const { heroSectionData, trainingEcosystemData, trainingPortfolioData, trainingsWeGiveData, deliveryOptionData } = trainingServicesPageData;

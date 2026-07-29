@@ -1,4 +1,5 @@
 import { MegaItem, OfferingsMenuContent } from "./types";
+import { PRODUCT_TYPES } from "@/constants/productReseller";
 
 /* ================= PRODUCTS ================= */
 export const products: MegaItem[] = [
@@ -35,7 +36,7 @@ export const products: MegaItem[] = [
     image: "/images/products/RedHat-OpenStack.webp",
   },
   {
-    id: "cncf",
+    id: PRODUCT_TYPES.CNCF,
     label: "CNCF",
     title: "CNCF",
     description:
@@ -43,13 +44,13 @@ export const products: MegaItem[] = [
     image: "/images/products/CNCF.webp",
   },
   {
-    id: "mirantis",
+    id: PRODUCT_TYPES.MIRANTIS,
     label: "Mirantis",
     title: "Mirantis",
     description:
       "A cloud-native technology provider that delivers flexible Kubernetes and container solutions to run modern infrastructure at enterprise scale.",
     image: "/images/products/Mirantis.webp",
-    href: "productresellers/mirantis",
+    href: "/product-reseller/mirantis",
   },
 ];
 
@@ -63,11 +64,11 @@ export const offeringsMenuContent: OfferingsMenuContent = {
     description:
       "Explore KubeVirtStack solutions designed to unify virtualization and Kubernetes, enabling scalable, secure, and cloud-native infrastructure.",
     image: "/images/products/KubeVirtStack-AI.webp",
-    primaryHref: "https://kubevirtstack.com",
+    primaryHref: "https://kubevirtstack.com/",
   },
   resellers: [
     {
-      id: "redhat",
+      id: PRODUCT_TYPES.REDHAT,
       title: "RedHat",
       description:
         "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
@@ -75,7 +76,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       href: "/product-reseller/redhat",
     },
     {
-      id: "cncf",
+      id: PRODUCT_TYPES.CNCF,
       title: "CNCF",
       description:
         "Cloud-native technologies and frameworks powering modern application development.",
@@ -83,12 +84,12 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       href: "/product-reseller/cncf",
     },
     {
-      id: "mirantis",
+      id: PRODUCT_TYPES.MIRANTIS,
       title: "Mirantis",
       description:
         "Kubernetes and container solutions for scalable and secure cloud environments.",
       image: "/images/home/product-reseller/Mirantis.webp",
-      href: "/coming-soon",
+      href: "/product-reseller/mirantis",
     },
     // {
     //   id: "lenovo",
@@ -99,7 +100,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
     //   href: "/get-started",
     // },
     {
-      id: "aws",
+      id: PRODUCT_TYPES.AWS,
       title: "AWS",
       description:
         "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",
@@ -120,7 +121,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration.",
       image: "/images/home/product-reseller/Azure.webp",
-      href: "/coming-soon",
+      href: "/product-reseller/azure",
     },
     // {
     //   id: "dell",

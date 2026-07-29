@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ArrowRight from "@/components/icons/career/ArrowRight";
 import YourClockIcon from "@/components/icons/career/YourClockIcon";
 import YourLocationIcon from "@/components/icons/career/YourLocationIcon";
+import { fetchPublicJobs } from "@/lib/api/publicClient";
 import JobContactForm from "./JobContactForm";
 
 type Job = {
@@ -62,7 +63,7 @@ export default function JobOpeningsSection() {
         setIsLoadingJobs(true);
         setJobsError("");
 
-        const response = await fetch("/api/jobs");
+        const response = await fetchPublicJobs();
         const result = (await response.json()) as JobsResponse;
 
         if (!response.ok || !result.success) {
