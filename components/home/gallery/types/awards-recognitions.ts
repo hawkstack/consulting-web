@@ -35,6 +35,18 @@ export type ExcellenceInMotionSectionData = {
   images: ExcellenceInMotionImage[];
 };
 
+export type GalleryCtaCard = {
+  title: string;
+  description: string;
+  actionLabel: string;
+  href: string;
+  variant: "consulting" | "training";
+};
+
+export type GalleryCtaSectionData = {
+  cards: GalleryCtaCard[];
+};
+
 export type RedHatRecognitionCard = {
   badge: string;
   badgeClassName: string;
