@@ -103,6 +103,8 @@ export function MegaMenu({
 
                   <Link
                     href={offeringsMenuContent.featured.primaryHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={onClose}
                     className="inline-flex text-[12px] font-medium text-[#56A8FF] transition hover:text-white"
                   >
