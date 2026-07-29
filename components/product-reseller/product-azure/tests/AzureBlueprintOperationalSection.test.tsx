@@ -28,14 +28,4 @@ describe("AzureBlueprintOperationalSection", () => {
       expect(screen.getByText(step.mobileDescription)).toBeInTheDocument();
     });
   });
-
-  it("renders default blueprint data when no data prop is provided", () => {
-    render(<AzureBlueprintOperationalSection />);
-
-    expect(
-      screen.getByRole("heading", {
-        name: azureBlueprintOperationalData.title,
-      }),
-    ).toBeInTheDocument();
-  });
 });

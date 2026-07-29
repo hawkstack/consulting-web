@@ -132,33 +132,33 @@ export const azureSkillsAccelerationData: AzureSkillsAccelerationData = {
 };
 
 export const azureBlueprintOperationalData: AzureBlueprintOperationalData = {
-  title: "Azure Operational Blueprint",
+  title: "From Blueprint to Operational Excellence",
   steps: [
     {
-      step: "01",
+      step: "1",
       title: "Assess",
       desktopDescription:
-        "Map current workloads, skills, and cloud readiness across your Azure estate.",
+        "Identifying capability gaps and defining your technical north star.",
       mobileDescription:
-        "Map workloads, skills, and cloud readiness across your Azure estate.",
+        "Auditing current infrastructure and engineering competencies.",
       icon: AzureBlueprintAssessIcon,
     },
     {
-      step: "02",
+      step: "2",
       title: "Build",
       desktopDescription:
-        "Create secure landing zones, automation paths, and migration-ready operating patterns.",
+        "Implementing the training curriculum and modern tooling stacks.",
       mobileDescription:
-        "Create secure landing zones and migration-ready operating patterns.",
+        "Execution of custom training paths and collaborative labs.",
       icon: AzureBlueprintBuildIcon,
     },
     {
-      step: "03",
+      step: "3",
       title: "Operate",
       desktopDescription:
-        "Enable teams to run, govern, and optimize Azure environments with confidence.",
+        "Launching with confidence on a self-sustaining engineering foundation.",
       mobileDescription:
-        "Enable teams to run and optimize Azure environments with confidence.",
+        "Sustained cloud confidence through ongoing certification support.",
       icon: AzureBlueprintOperateIcon,
     },
   ],
