@@ -105,7 +105,7 @@ export const solutionLinks = [
 export const companyLinks = [
   {
     title: "Blog",
-    href: "/coming-soon",
+    href: "/blogs",
   },
   {
     title: "Career",
