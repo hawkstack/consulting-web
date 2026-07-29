@@ -14,6 +14,9 @@ import {
   latestEngineeringUpdatesData,
   successStoriesData,
   certificationPathsData,
+  engineeringToolkitData,
+  ctaData,
+  blogTopicsData,
 } from "@/components/home/blogs/data/blogs";
 import React from "react";
 
@@ -21,14 +24,14 @@ const page = () => {
   return (
     <div>
       <HeroSection data={blogHeroData} />
-      <BlogTopicsSection />
+      <BlogTopicsSection data={blogTopicsData} />
       <FeaturedBlogSection data={featuredBlogData} />
       <LatestEngineeringUpdatesSection data={latestEngineeringUpdatesData} />
       <BlogCategoriesSection data={blogCategoriesData} />
       <SuccessStoriesSection data={successStoriesData} />
       <CertificationPathsSection data={certificationPathsData} />
-      <EngineeringToolkitSection />
-      <CTASection />
+      <EngineeringToolkitSection data={engineeringToolkitData} />
+      <CTASection data={ctaData} />
     </div>
   );
 };

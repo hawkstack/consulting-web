@@ -5,6 +5,9 @@ import type {
   LatestEngineeringUpdatesData,
   SuccessStoriesData,
   CertificationPathsData,
+  EngineeringToolkitData,
+  CTAData,
+  BlogTopicsData,
 } from "@/components/home/blogs/types/blogs";
 import CloudIcon from "@/components/icons/blogs/CloudIcon";
 import DatabaseIcon from "@/components/icons/blogs/DatabaseIcon";
@@ -16,6 +19,9 @@ import CertificateCardIcon from "@/components/icons/blogs/CertificateCardIcon";
 import GridIcon from "@/components/icons/blogs/GridIcon";
 import PerformanceIcon from "@/components/icons/blogs/PerformanceIcon";
 import UptimeIcon from "@/components/icons/blogs/UptimeIcon";
+import CheatSheetIcon from "@/components/icons/blogs/CheatSheetIcon";
+import CodeBracketsIcon from "@/components/icons/blogs/CodeBracketsIcon";
+import TemplateIcon from "@/components/icons/blogs/TemplateIcon";
 
 export const blogHeroData: BlogHeroData = {
   title: "HawkStack Engineering Hub",
@@ -164,5 +170,50 @@ export const certificationPathsData: CertificationPathsData = {
       description: "Ansible Automation Specialist pathway.",
       icon: AutomationArmIcon,
     },
+  ],
+};
+
+export const engineeringToolkitData: EngineeringToolkitData = {
+  title: "Engineering Toolbox",
+  items: [
+    {
+      title: "Linux Cheat Sheets",
+      description: "Essential commands for RHEL/Fedora.",
+      icon: CheatSheetIcon,
+    },
+    {
+      title: "CLI Guides",
+      description: "Advanced oc, kubectl, and podman tips.",
+      icon: CodeBracketsIcon,
+    },
+    {
+      title: "YAML Templates",
+      description: "Copy-paste production resources.",
+      icon: TemplateIcon,
+    },
+  ],
+};
+
+export const ctaData: CTAData = {
+  title: "Need Expert Guidance for Your Infrastructure?",
+  description:
+    "Our senior engineers are ready to help you navigate modernization, automation, and hybrid cloud challenges.",
+  buttonLabel: "Book a Technical Consultation",
+  buttonHref: "/contact-us",
+};
+
+export const blogTopicsData: BlogTopicsData = {
+  topics: [
+    "Linux",
+    "Red Hat",
+    "OpenShift",
+    "Kubernetes",
+    "Containers",
+    "Podman",
+    "Buildah",
+    "Ansible",
+    "KubeVirt",
+    "GitOps",
+    "Cloud",
   ],
 };

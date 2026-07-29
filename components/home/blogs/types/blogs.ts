@@ -77,3 +77,25 @@ export type CertificationPathsData = {
   description: string;
   paths: CertificationPath[];
 };
+
+export type EngineeringToolkitItem = {
+  title: string;
+  description: string;
+  icon: BlogCategoryIcon;
+};
+
+export type EngineeringToolkitData = {
+  title: string;
+  items: EngineeringToolkitItem[];
+};
+
+export type CTAData = {
+  title: string;
+  description: string;
+  buttonLabel: string;
+  buttonHref: string;
+};
+
+export type BlogTopicsData = {
+  topics: string[];
+};
