@@ -32,6 +32,28 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # 5. Generate version file
+      - name: Generate version file
+        run: |
+          mkdir -p public
+
+          VERSION="0.1.${{ github.run_number }}"
+          echo "NEXT_PUBLIC_APP_VERSION=$VERSION" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_DEPLOY_RUN_ID=${{ github.run_id }}" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_DEPLOY_COMMIT_SHA=${{ github.sha }}" >> $GITHUB_ENV
+
+          cat > public/version.json << EOF
+          {
+            "version": "$VERSION",
+            "runId": "${{ github.run_id }}",
+            "commit": "${{ github.sha }}"
+          }
+          EOF
+
+          echo "Generated version file:"
+          cat public/version.json
+
+      # 6. Build
       # Build app
       - name: Build application
         env:
@@ -39,7 +61,7 @@ jobs:
           NEXT_PUBLIC_API_BASE_URL: ${{ github.event.inputs.environment == 'prod' && secrets.NEXT_PUBLIC_API_BASE_URL_PROD || secrets.NEXT_PUBLIC_API_BASE_URL_TEST }}
         run: npm run build
 
-      # Prepare deploy package
+      # 7. Prepare deploy package
       - name: Prepare deploy files
         run: |
           rm -rf deploy
@@ -53,7 +75,7 @@ jobs:
           echo "Deploy package contents:"
           ls -la deploy
 
-      # Copy files to EC2
+      # 8. Copy files to EC2
       - name: Copy files to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -63,7 +85,7 @@ jobs:
           source: "deploy"
           target: "/var/www/frontend"
 
-      # Deploy
+      # 9. Deploy + rollback
       - name: Deploy and restart app
         uses: appleboy/ssh-action@v1.0.3
         with:
