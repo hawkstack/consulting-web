@@ -86,7 +86,7 @@ export const solutionLinks = [
   },
   {
     title: "Mirantis",
-    href: "/coming-soon",
+    href: "/product-reseller/mirantis",
   },
   {
     title: "AWS",
@@ -98,7 +98,7 @@ export const solutionLinks = [
   },
   {
     title: "Azure",
-    href: "/coming-soon",
+    href: "/product-reseller/azure",
   },
 ];
 

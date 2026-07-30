@@ -105,7 +105,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",
       image: "/images/home/product-reseller/AWS.webp",
-      href: "/coming-soon",
+      href: "/product-reseller/aws",
     },
     {
       id: "gcp",
@@ -113,7 +113,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       description:
         "Google Cloud solutions for data analytics, AI, and cloud-native innovation.",
       image: "/images/home/product-reseller/google-cloud.webp",
-      href: "/coming-soon",
+      href: "/product-reseller/gcp",
     },
     {
       id: "azure",
