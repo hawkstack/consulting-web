@@ -4,6 +4,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 const lexend = Lexend({
   subsets: ["latin"],
