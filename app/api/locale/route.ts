@@ -13,6 +13,7 @@ export async function POST(request: Request) {
   }
 
   const response = NextResponse.json({locale});
+  response.headers.set("Cache-Control", "no-store");
   response.cookies.set(localeCookieName, locale, {
     httpOnly: true,
     maxAge: 60 * 60 * 24 * 365,
