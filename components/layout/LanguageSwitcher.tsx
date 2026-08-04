@@ -1,14 +1,12 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { AppLocale, localeNames, locales } from "@/i18n/config";
 
 export function LanguageSwitcher() {
   const locale = useLocale() as AppLocale;
   const tLanguageSwitcher = useTranslations("LanguageSwitcher");
-  const router = useRouter();
   const [isPending, setIsPending] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const switcherRef = useRef<HTMLDivElement>(null);
@@ -45,7 +43,10 @@ export function LanguageSwitcher() {
       });
 
       if (!response.ok) throw new Error("Could not update language");
-      router.refresh();
+      // A full navigation makes the next request read the newly saved locale
+      // cookie. This also avoids serving a stale RSC payload from a production
+      // cache after a client-side refresh.
+      window.location.reload();
     } finally {
       setIsPending(false);
     }
