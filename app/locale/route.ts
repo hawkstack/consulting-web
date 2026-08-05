@@ -1,5 +1,5 @@
-import {NextResponse} from "next/server";
-import {isAppLocale, localeCookieName} from "@/i18n/config";
+import { NextResponse } from "next/server";
+import { isAppLocale, localeCookieName } from "@/i18n/config";
 
 export async function POST(request: Request) {
   const body: unknown = await request.json().catch(() => null);
@@ -9,10 +9,10 @@ export async function POST(request: Request) {
       : undefined;
 
   if (!isAppLocale(locale)) {
-    return NextResponse.json({error: "Unsupported locale"}, {status: 400});
+    return NextResponse.json({ error: "Unsupported locale" }, { status: 400 });
   }
 
-  const response = NextResponse.json({locale});
+  const response = NextResponse.json({ locale });
   response.headers.set("Cache-Control", "no-store");
   response.cookies.set(localeCookieName, locale, {
     httpOnly: true,

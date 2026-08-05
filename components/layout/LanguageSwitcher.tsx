@@ -36,7 +36,9 @@ export function LanguageSwitcher() {
     setIsPending(true);
 
     try {
-      const response = await fetch("/api/locale", {
+      // `/api/*` is reserved for the upstream backend in production, so this
+      // Next.js route deliberately lives outside that proxy namespace.
+      const response = await fetch("/locale", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ locale: nextLocale }),
