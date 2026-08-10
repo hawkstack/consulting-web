@@ -6,7 +6,8 @@ import PlatformSection from "@/components/home/PlatformSection";
 import CloudInnovation from "@/components/home/CloudInnovation";
 import WhatWeDo from "@/components/home/WhatWeDo";
 import ContactCTA from "@/components/home/ContactFormSection";
-import ProductReseller from "@/components/home/ProductReseller";
+// import ProductReseller from "@/components/home/ProductReseller";
+import DigitalTransformation from "@/components/home/DigitalTransformation";
 import { getLocalizedHomePageData } from "@/lib/home/getLocalizedHomePageData";
 import { getTranslations } from "next-intl/server";
 
@@ -21,7 +22,8 @@ export default async function HomePage() {
   const {
     heroSectionData,
     cloudServicesSectionData,
-    productsSectionData,
+    // productsSectionData,
+    digitalTransformationSectionData,
     platformSectionData,
     whatWeDoSectionData,
     cloudSectionData,
@@ -30,9 +32,10 @@ export default async function HomePage() {
     <div>
       <HeroSection data={heroSectionData} />
       <EngineeringDrivenCloudServices data={cloudServicesSectionData} />
-      <ProductReseller data={productsSectionData} />
-      <PlatformSection data={platformSectionData} />
+      {/* <ProductReseller data={productsSectionData} /> */}
+      <DigitalTransformation data={digitalTransformationSectionData} />
       <WhatWeDo data={whatWeDoSectionData} />
+      <PlatformSection data={platformSectionData} />
       <CloudInnovation data={cloudSectionData} />
       <ContactCTA />
     </div>
