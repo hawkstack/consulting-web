@@ -105,6 +105,68 @@
           }
         ]
       },
+      "digitalTransformationSectionData": {
+        "title": "End-to-end expertise for your digital transformation.",
+        "highlights": [
+          "Modern platforms",
+          "Intelligent automation",
+          "Cloud-native operations",
+          "Workforce enablement"
+        ],
+        "services": [
+          { "title": "Consulting" },
+          { "title": "Solution Design" },
+          { "title": "System Integration" },
+          { "title": "Training Solutions" }
+        ],
+        "servicesCaption": "Integrated services across the transformation lifecycle",
+        "primaryPartners": [
+          {
+            "name": "Red Hat",
+            "caption": "OpenShift · Ansible · Virtualization · AI",
+            "description": "Consulting, solution design, system integration, modernization, operations, and technical training.",
+            "badge": "Strategic partner",
+            "secondaryBadge": "Premier",
+            "footerLabel": "Verify here →"
+          },
+          {
+            "name": "SUSE",
+            "caption": "SUSE Linux · Rancher · RKE · Edge",
+            "description": "Consulting, solution design, system integration, modernization, resilience, and technical training.",
+            "badge": "Strategic partner",
+            "footerLabel": "Enterprise Linux & Kubernetes"
+          }
+        ],
+        "ecosystemTitle": "Digital transformation delivery ecosystem",
+        "ecosystemPartners": [
+          {
+            "name": "Mirantis",
+            "caption": "Kubernetes Platforms",
+            "footerLabel": "Strategic partner"
+          },
+          {
+            "name": "CNCF",
+            "caption": "Cloud-Native Architecture",
+            "footerLabel": "Silver member"
+          },
+          {
+            "name": "Microsoft Azure",
+            "caption": "Hybrid Cloud & DevOps",
+            "footerLabel": "Strategic partner"
+          },
+          {
+            "name": "AWS",
+            "caption": "Modernization & AI",
+            "footerLabel": "Strategic partner"
+          },
+          {
+            "name": "Google Cloud",
+            "caption": "Data, AI & Platforms",
+            "footerLabel": "Strategic partner"
+          }
+        ],
+        "footerText": "One partner for consulting, solution design, system integration, and workforce enablement."
+      },
       "platformSectionData": {
         "title": [
           "A Simpler",

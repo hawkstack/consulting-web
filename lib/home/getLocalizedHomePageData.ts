@@ -8,42 +8,79 @@ type HomeTranslator = {
 
 /** Combines locale-specific copy with the shared homepage media and links. */
 export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
-  const copy = t.raw("content") as Pick<
-    HomePageData,
-    | "heroSectionData"
-    | "cloudServicesSectionData"
-    | "productsSectionData"
-    | "digitalTransformationSectionData"
-    | "platformSectionData"
-    | "whatWeDoSectionData"
-    | "cloudSectionData"
+  const copy = t.raw("content") as Partial<
+    Pick<
+      HomePageData,
+      | "heroSectionData"
+      | "cloudServicesSectionData"
+      | "productsSectionData"
+      | "digitalTransformationSectionData"
+      | "platformSectionData"
+      | "whatWeDoSectionData"
+      | "cloudSectionData"
+    >
   >;
+
+  const heroCopy = copy.heroSectionData;
+  const cloudServicesCopy = copy.cloudServicesSectionData;
+  const productsCopy = copy.productsSectionData;
+  const digitalTransformationCopy = copy.digitalTransformationSectionData;
+  const platformCopy = copy.platformSectionData;
+  const whatWeDoCopy = copy.whatWeDoSectionData;
+  const cloudCopy = copy.cloudSectionData;
 
   return {
     heroSectionData: {
       ...homePageData.heroSectionData,
-      slides:
-        copy.heroSectionData.slides ?? homePageData.heroSectionData.slides,
+      slides: heroCopy?.slides ?? homePageData.heroSectionData.slides,
     },
     cloudServicesSectionData: {
       ...homePageData.cloudServicesSectionData,
-      title: copy.cloudServicesSectionData.title,
+      title:
+        cloudServicesCopy?.title ?? homePageData.cloudServicesSectionData.title,
       services: homePageData.cloudServicesSectionData.services.map(
         (service, index) => ({
           ...service,
-          ...copy.cloudServicesSectionData.services?.[index],
+          ...cloudServicesCopy?.services?.[index],
         }),
       ),
     },
     productsSectionData: {
       ...homePageData.productsSectionData,
-      ...copy.productsSectionData,
+      ...productsCopy,
       products: homePageData.productsSectionData.products.map(
         (product, index) => ({
           ...product,
-          ...copy.productsSectionData.products?.[index],
+          ...productsCopy?.products?.[index],
         }),
       ),
+    },
+    digitalTransformationSectionData: {
+      ...homePageData.digitalTransformationSectionData,
+      ...digitalTransformationCopy,
+      highlights:
+        digitalTransformationCopy?.highlights ??
+        homePageData.digitalTransformationSectionData.highlights,
+      services: homePageData.digitalTransformationSectionData.services.map(
+        (service, index) => ({
+          ...service,
+          ...digitalTransformationCopy?.services?.[index],
+        }),
+      ),
+      primaryPartners:
+        homePageData.digitalTransformationSectionData.primaryPartners.map(
+          (partner, index) => ({
+            ...partner,
+            ...digitalTransformationCopy?.primaryPartners?.[index],
+          }),
+        ),
+      ecosystemPartners:
+        homePageData.digitalTransformationSectionData.ecosystemPartners.map(
+          (partner, index) => ({
+            ...partner,
+            ...digitalTransformationCopy?.ecosystemPartners?.[index],
+          }),
+        ),
     },
     digitalTransformationSectionData: {
       ...homePageData.digitalTransformationSectionData,
@@ -51,25 +88,25 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
     },
     platformSectionData: {
       ...homePageData.platformSectionData,
-      ...copy.platformSectionData,
+      ...platformCopy,
       features: homePageData.platformSectionData.features.map(
         (feature, index) => ({
           ...feature,
-          ...copy.platformSectionData.features?.[index],
+          ...platformCopy?.features?.[index],
         }),
       ),
     },
     whatWeDoSectionData: {
       ...homePageData.whatWeDoSectionData,
-      ...copy.whatWeDoSectionData,
+      ...whatWeDoCopy,
       cards: homePageData.whatWeDoSectionData.cards.map((card, index) => ({
         ...card,
-        ...copy.whatWeDoSectionData.cards?.[index],
+        ...whatWeDoCopy?.cards?.[index],
       })),
     },
     cloudSectionData: {
       ...homePageData.cloudSectionData,
-      ...copy.cloudSectionData,
+      ...cloudCopy,
     },
   };
 }

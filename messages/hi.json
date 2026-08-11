@@ -8,7 +8,7 @@
     "training": "प्रशिक्षण",
     "toggleMenu": "मेन्यू खोलें या बंद करें"
   },
-  
+
   "Home": {
     "scheduleConsultation": "परामर्श शेड्यूल करें",
     "viewSolutions": "हमारे समाधान देखें",
@@ -43,6 +43,68 @@
         "maintitle": "वैश्विक तकनीकी अग्रणियों का विश्वसनीय साझेदार",
         "title": "HawkStack - प्रोडक्ट रीसेलर, नए रूप में",
         "subtitle": "आधुनिक एंटरप्राइज़ आवश्यकताओं के लिए संपूर्ण क्लाउड और DevOps समाधान।"
+      },
+      "digitalTransformationSectionData": {
+        "title": "अपने डिजिटल परिवर्तन के लिए अंततः विशेषज्ञता।",
+        "highlights": [
+          "आधुनिक प्लेटफ़ॉर्म",
+          "स्मार्ट ऑटोमेशन",
+          "क्लाउड-नेटिव संचालन",
+          "कार्यबल-सक्षमता"
+        ],
+        "services": [
+          { "title": "परामर्श" },
+          { "title": "समाधान डिज़ाइन" },
+          { "title": "प्रणाली एकीकरण" },
+          { "title": "प्रशिक्षण समाधान" }
+        ],
+        "servicesCaption": "परिवर्तन चक्र के पूरे माध्यम में एकीकृत सेवाएँ",
+        "primaryPartners": [
+          {
+            "name": "Red Hat",
+            "caption": "OpenShift · Ansible · Virtualization · AI",
+            "description": "परामर्श, समाधान डिज़ाइन, प्रणाली एकीकरण, आधुनिकीकरण, संचालन और तकनीकी प्रशिक्षण।",
+            "badge": "रणनीतिक साझेदार",
+            "secondaryBadge": "प्रीमियर",
+            "footerLabel": "यहाँ सत्यापित करें →"
+          },
+          {
+            "name": "SUSE",
+            "caption": "SUSE Linux · Rancher · RKE · Edge",
+            "description": "परामर्श, समाधान डिज़ाइन, प्रणाली एकीकरण, आधुनिकीकरण, लचीलापन और तकनीकी प्रशिक्षण।",
+            "badge": "रणनीतिक साझेदार",
+            "footerLabel": "एंटरप्राइज़ Linux और Kubernetes"
+          }
+        ],
+        "ecosystemTitle": "डिजिटल परिवर्तन डिलीवरी पारिस्थितिकी तंत्र",
+        "ecosystemPartners": [
+          {
+            "name": "Mirantis",
+            "caption": "Kubernetes प्लेटफ़ॉर्म",
+            "footerLabel": "रणनीतिक साझेदार"
+          },
+          {
+            "name": "CNCF",
+            "caption": "क्लाउड-नेटिव आर्किटेक्चर",
+            "footerLabel": "सिल्वर सदस्य"
+          },
+          {
+            "name": "Microsoft Azure",
+            "caption": "हाइब्रिड क्लाउड और DevOps",
+            "footerLabel": "रणनीतिक साझेदार"
+          },
+          {
+            "name": "AWS",
+            "caption": "आधुनिकीकरण और AI",
+            "footerLabel": "रणनीतिक साझेदार"
+          },
+          {
+            "name": "Google Cloud",
+            "caption": "डेटा, AI और प्लेटफ़ॉर्म",
+            "footerLabel": "रणनीतिक साझेदार"
+          }
+        ],
+        "footerText": "परामर्श, समाधान डिज़ाइन, प्रणाली एकीकरण और कार्यबल-सक्षमता के लिए एक साझेदार।"
       },
       "platformSectionData": {
         "title": [

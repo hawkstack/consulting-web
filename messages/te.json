@@ -43,6 +43,68 @@
         "title": "HawkStack - ప్రొడక్ట్ రీసెల్లర్‌లకు కొత్త నిర్వచనం",
         "subtitle": "ఆధునిక ఎంటర్‌ప్రైజ్ అవసరాలకు సమగ్ర క్లౌడ్ మరియు DevOps పరిష్కారాలు."
       },
+      "digitalTransformationSectionData": {
+        "title": "మీ డిజిటల్ పరివర్తన కోసం సంపూర్ణ నిపుణత।",
+        "highlights": [
+          "ఆధునిక ప్లాట్‌ఫారమ్‌లు",
+          "బుద్ధివంతమైన ఆటోమేషన్",
+          "క్లౌడ్-నేటివ్ ఆపరేషన్లు",
+          "కార్మిక శక్తి శిక్షణ"
+        ],
+        "services": [
+          { "title": "సలహా" },
+          { "title": "పరిష్కార రూపకల్పన" },
+          { "title": "వ్యవస్థ ఏకీకరణ" },
+          { "title": "శిక్షణ పరిష్కారాలు" }
+        ],
+        "servicesCaption": "పరివర్తన జీవితచక్రం అంతటా ఏకీకృత సేవలు",
+        "primaryPartners": [
+          {
+            "name": "Red Hat",
+            "caption": "OpenShift · Ansible · Virtualization · AI",
+            "description": "సలహా, పరిష్కార రూపకల్పన, వ్యవస్థ ఏకీకరణ, ఆధునీకరణ, కార్యకలాపాలు మరియు సాంకేతిక శిక్షణ.",
+            "badge": "వ్యూహాత్మక భాగస్వామి",
+            "secondaryBadge": "ప్రీమియర్",
+            "footerLabel": "ఇక్కడ ధృవీకరించండి →"
+          },
+          {
+            "name": "SUSE",
+            "caption": "SUSE Linux · Rancher · RKE · Edge",
+            "description": "సలహా, పరిష్కార రూపకల్పన, వ్యవస్థ ఏకీకరణ, ఆధునీకరణ, స్థిరత్వం మరియు సాంకేతిక శిక్షణ.",
+            "badge": "వ్యూహాత్మక భాగస్వామి",
+            "footerLabel": "ఎంటర్‌ప్రైజ్ Linux & Kubernetes"
+          }
+        ],
+        "ecosystemTitle": "డిజిటల్ పరివర్తన వితరణ పర్యావరణ వ్యవస్థ",
+        "ecosystemPartners": [
+          {
+            "name": "Mirantis",
+            "caption": "Kubernetes ప్లాట్‌ఫారమ్‌లు",
+            "footerLabel": "వ్యూహాత్మక భాగస్వామి"
+          },
+          {
+            "name": "CNCF",
+            "caption": "క్లౌడ్-నేటివ్ ఆర్కిటెక్చర్",
+            "footerLabel": "సిల్వర్ సభ్యుడు"
+          },
+          {
+            "name": "Microsoft Azure",
+            "caption": "హైబ్రిడ్ క్లౌడ్ & DevOps",
+            "footerLabel": "వ్యూహాత్మక భాగస్వామి"
+          },
+          {
+            "name": "AWS",
+            "caption": "ఆధునీకరణ & AI",
+            "footerLabel": "వ్యూహాత్మక భాగస్వామి"
+          },
+          {
+            "name": "Google Cloud",
+            "caption": "డేటా, AI & ప్లాట్‌ఫారమ్‌లు",
+            "footerLabel": "వ్యూహాత్మక భాగస్వామి"
+          }
+        ],
+        "footerText": "సలహా, పరిష్కార రూపకల్పన, వ్యవస్థ ఏకీకరణ మరియు కార్మిక శక్తి శిక్షణ కోసం ఒక భాగస్వామి."
+      },
       "platformSectionData": {
         "title": [
           "సరళమైన",
