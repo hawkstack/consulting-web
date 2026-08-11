@@ -82,10 +82,6 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
           }),
         ),
     },
-    digitalTransformationSectionData: {
-      ...homePageData.digitalTransformationSectionData,
-      ...copy.digitalTransformationSectionData,
-    },
     platformSectionData: {
       ...homePageData.platformSectionData,
       ...platformCopy,
