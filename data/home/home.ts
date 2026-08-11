@@ -1,4 +1,10 @@
 import { HomePageData } from "@/types/home/home";
+import {
+  ConsultingIcon,
+  IntegrationIcon,
+  SolutionDesignIcon,
+  TrainingIcon,
+} from "@/components/icons/Home/digital-transformation/DigitalTransformationIcons";
 
 export const homePageData: HomePageData = {
   heroSectionData: {
@@ -178,6 +184,94 @@ export const homePageData: HomePageData = {
       //   link: "/",
       // },
     ],
+  },
+
+  digitalTransformationSectionData: {
+    title: "End-to-end expertise for your digital transformation.",
+    highlights: [
+      "Modern platforms",
+      "Intelligent automation",
+      "Cloud-native operations",
+      "Workforce enablement",
+    ],
+    services: [
+      { title: "Consulting", icon: ConsultingIcon },
+      { title: "Solution Design", icon: SolutionDesignIcon },
+      { title: "System Integration", icon: IntegrationIcon },
+      { title: "Training Solutions", icon: TrainingIcon },
+    ],
+    servicesCaption: "Integrated services across the transformation lifecycle",
+    primaryPartners: [
+      {
+        id: "red-hat",
+        name: "Red Hat",
+        caption: "OpenShift · Ansible · Virtualization · AI",
+        description:
+          "Consulting, solution design, system integration, modernization, operations, and technical training.",
+        badge: "Strategic partner",
+        secondaryBadge: "Premier",
+        footerLabel: "Verify here →",
+        footerLink: "https://www.credly.com/badges/a89d1d73-c4e0-4395-92a2-e03641af5d6c/public_url",
+        image: "/images/home/digital-transformation/red-hat.webp",
+        accent: "red",
+      },
+      {
+        id: "suse",
+        name: "SUSE",
+        caption: "SUSE Linux · Rancher · RKE · Edge",
+        description:
+          "Consulting, solution design, system integration, modernization, resilience, and technical training.",
+        badge: "Strategic partner",
+        footerLabel: "Enterprise Linux & Kubernetes",
+        image: "/images/home/digital-transformation/suse.webp",
+        accent: "green",
+      },
+    ],
+    ecosystemTitle: "Digital transformation delivery ecosystem",
+    ecosystemPartners: [
+      {
+        id: "mirantis",
+        name: "Mirantis",
+        caption: "Kubernetes Platforms",
+        footerLabel: "Strategic partner",
+        image: "/images/home/digital-transformation/mirantis.webp",
+        accent: "blue",
+      },
+      {
+        id: "cncf",
+        name: "CNCF",
+        caption: "Cloud-Native Architecture",
+        footerLabel: "Silver member",
+        image: "/images/home/digital-transformation/cncf.webp",
+        accent: "blue",
+      },
+      {
+        id: "azure",
+        name: "Microsoft Azure",
+        caption: "Hybrid Cloud & DevOps",
+        footerLabel: "Strategic partner",
+        image: "/images/home/digital-transformation/azure.webp",
+        accent: "blue",
+      },
+      {
+        id: "aws",
+        name: "AWS",
+        caption: "Modernization & AI",
+        footerLabel: "Strategic partner",
+        image: "/images/home/digital-transformation/aws.webp",
+        accent: "blue",
+      },
+      {
+        id: "google-cloud",
+        name: "Google Cloud",
+        caption: "Data, AI & Platforms",
+        footerLabel: "Strategic partner",
+        image: "/images/home/digital-transformation/google-cloud.webp",
+        accent: "blue",
+      },
+    ],
+    footerText:
+      "One partner for consulting, solution design, system integration, and workforce enablement.",
   },
 
   // globalSectionData: {
