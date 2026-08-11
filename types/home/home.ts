@@ -1,3 +1,5 @@
+import type { ComponentType, SVGProps } from "react";
+
 export type heroSlides = {
   title: string;
   desc: string;
@@ -93,7 +95,39 @@ export type HomePageData = {
   heroSectionData: HeroSectionData;
   cloudServicesSectionData: EngineeringDrivenCloudServicesProps;
   productsSectionData: ProductsSectionData;
+  digitalTransformationSectionData: DigitalTransformationSectionData;
   platformSectionData: PlatformSectionData;
   cloudSectionData: CloudSectionData;
   whatWeDoSectionData: WhatWeDoSection;
+};
+
+export type DigitalTransformationIcon = ComponentType<SVGProps<SVGSVGElement>>;
+
+export type DigitalTransformationService = {
+  title: string;
+  icon: DigitalTransformationIcon;
+};
+
+export type DigitalTransformationPartner = {
+  id: string;
+  name: string;
+  caption: string;
+  description?: string;
+  badge?: string;
+  secondaryBadge?: string;
+  footerLink?: string;
+  footerLabel?: string;
+  image: string;
+  accent: "red" | "green" | "blue";
+};
+
+export type DigitalTransformationSectionData = {
+  title: string;
+  highlights: string[];
+  services: DigitalTransformationService[];
+  servicesCaption: string;
+  primaryPartners: DigitalTransformationPartner[];
+  ecosystemTitle: string;
+  ecosystemPartners: DigitalTransformationPartner[];
+  footerText: string;
 };

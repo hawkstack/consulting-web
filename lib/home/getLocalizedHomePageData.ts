@@ -13,6 +13,7 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
     | "heroSectionData"
     | "cloudServicesSectionData"
     | "productsSectionData"
+    | "digitalTransformationSectionData"
     | "platformSectionData"
     | "whatWeDoSectionData"
     | "cloudSectionData"
@@ -43,6 +44,10 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
           ...copy.productsSectionData.products?.[index],
         }),
       ),
+    },
+    digitalTransformationSectionData: {
+      ...homePageData.digitalTransformationSectionData,
+      ...copy.digitalTransformationSectionData,
     },
     platformSectionData: {
       ...homePageData.platformSectionData,
