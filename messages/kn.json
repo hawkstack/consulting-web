@@ -43,6 +43,68 @@
         "title": "HawkStack - ಪ್ರೊಡಕ್ಟ್ ರೀಸೆಲ್ಲರ್‌ಗಳಿಗೆ ಹೊಸ ವ್ಯಾಖ್ಯಾನ",
         "subtitle": "ಆಧುನಿಕ ಎಂಟರ್‌ಪ್ರೈಸ್ ಅಗತ್ಯಗಳಿಗೆ ಸಂಪೂರ್ಣ ಕ್ಲೌಡ್ ಮತ್ತು DevOps ಪರಿಹಾರಗಳು."
       },
+      "digitalTransformationSectionData": {
+        "title": "ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಪರಿವರ್ತನೆಗಾಗಿ ಸಂಪೂರ್ಣ ಪರಿಣತಿ।",
+        "highlights": [
+          "ಆಧುನಿಕ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು",
+          "ಬುದ್ಧಿವಂತ ಆಟೋಮೇಷನ್",
+          "ಕ್ಲೌಡ್-ನೇಟಿವ್ ಕಾರ್ಯಾಚರಣೆಗಳು",
+          "ಕর্ম력 ಸಶಕ್ತಗೊಳಿಸುವಿಕೆ"
+        ],
+        "services": [
+          { "title": "ಸಲಹaconsulting" },
+          { "title": "ಪರಿಹಾರ ವಿನ್ಯಾಸ" },
+          { "title": "ವ್ಯವಸ್ಥೆ ಏಕೀಕರಣ" },
+          { "title": "ತರಬೇತಿ ಪರಿಹಾರಗಳು" }
+        ],
+        "servicesCaption": "ಪರಿವರ್ತನೆಯ ಜೀವನಚಕ್ರದಾದ್ಯಂತ ಏಕೀಕೃತ ಸೇವೆಗಳು",
+        "primaryPartners": [
+          {
+            "name": "Red Hat",
+            "caption": "OpenShift · Ansible · Virtualization · AI",
+            "description": "ಸಲಹೆ, ಪರಿಹಾರ ವಿನ್ಯಾಸ, ವ್ಯವಸ್ಥೆ ಏಕೀಕರಣ, ನವೀಕರಣ, ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ತಾಂತ್ರಿಕ ತರಬೇತಿ.",
+            "badge": "रणਨੀતિક ಪಾಲುದಾರ",
+            "secondaryBadge": "ಪ್ರೀಮಿಯರ್",
+            "footerLabel": "ಇಲ್ಲಿ ಪರಿಶೀಲಿಸಿ →"
+          },
+          {
+            "name": "SUSE",
+            "caption": "SUSE Linux · Rancher · RKE · Edge",
+            "description": "ಸಲಹೆ, ಪರಿಹಾರ ವಿನ್ಯಾಸ, ವ್ಯವಸ್ಥೆ ಏಕೀಕರಣ, ನವೀಕರಣ, ಪ್ರತಿರೋಧಶಕ್ತಿ ಮತ್ತು ತಾಂತ್ರಿಕ ತರಬೇತಿ.",
+            "badge": "रणਨੀતિક ಪಾಲುದಾರ",
+            "footerLabel": "ಎಂಟರ್‌ಪ್ರೈಸ್ Linux ಮತ್ತು Kubernetes"
+          }
+        ],
+        "ecosystemTitle": "ಡಿಜಿಟಲ್ ಪರಿವರ್ತನೆ ವಿತರಣಾ சுற்றಪರಿಸರ",
+        "ecosystemPartners": [
+          {
+            "name": "Mirantis",
+            "caption": "Kubernetes ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು",
+            "footerLabel": "ರಣਨੀતિક ಪಾಲುದಾರ"
+          },
+          {
+            "name": "CNCF",
+            "caption": "ಕ್ಲೌಡ್-ನೇಟಿವ್ ಆರ್ಕಿಟೆಕ್ಚರ್",
+            "footerLabel": "ಸಿಲ್ವರ್ ಸದಸ್ಯ"
+          },
+          {
+            "name": "Microsoft Azure",
+            "caption": "ಹೈಬ್ರಿಡ್ ಕ್ಲೌಡ್ ಮತ್ತು DevOps",
+            "footerLabel": "ರಣਨੀ틱 ಪಾಲುದಾರ"
+          },
+          {
+            "name": "AWS",
+            "caption": "ನವೀಕರಣ ಮತ್ತು AI",
+            "footerLabel": "ರಣਨੀ틱 ಪಾಲುದಾರ"
+          },
+          {
+            "name": "Google Cloud",
+            "caption": "ಡೇಟಾ, AI ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು",
+            "footerLabel": "ರಣਨੀ틱 ಪಾಲುದಾರ"
+          }
+        ],
+        "footerText": "ಸಲಹೆ, ಪರಿಹಾರ ವಿನ್ಯಾಸ, ವ್ಯವಸ್ಥೆ ಏಕೀಕರಣ ಮತ್ತು কর্ম력 ಸಶಕ್ತಗೊಳಿಸುವಿಕೆಯಿಗಾಗಿ ಒಂದು ಪಾಲುದಾರ।"
+      },
       "platformSectionData": {
         "title": [
           "ಸರಳವಾದ",
