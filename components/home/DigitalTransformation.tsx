@@ -13,7 +13,7 @@ const accentClasses = {
 export default function DigitalTransformation({ data }: Props) {
   return (
     <section className="bg-[#070d19] px-5 py-10 font-lexend text-slate-100 sm:px-8 md:py-14 lg:px-12 xl:px-20">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <div className="grid gap-7 lg:grid-cols-[1.7fr_1fr] lg:items-start">
           <div>
             <h2 className="max-w-xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl xl:text-[43px]">
