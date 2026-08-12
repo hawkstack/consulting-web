@@ -4,13 +4,17 @@ import TechnicalArticlesSection from "@/components/home/events-webinars/componen
 import TechnicalDomainsSection from "@/components/home/events-webinars/components/TechnicalDomainsSection";
 import UpcomingEventsSection from "@/components/home/events-webinars/components/UpcomingEventsSection";
 import WhyHawkStackSection from "@/components/home/events-webinars/components/WhyHawkStackSection";
+import {
+  eventsHeroData,
+  whyAttendEventsData,
+} from "@/components/home/events-webinars/data/events-webinars";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <EventsHeroSection />
-      <WhyHawkStackSection />
+      <EventsHeroSection data={eventsHeroData} />
+      <WhyHawkStackSection data={whyAttendEventsData} />
       <TechnicalDomainsSection />
       <UpcomingEventsSection />
       <TechnicalArticlesSection />
