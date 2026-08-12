@@ -10,7 +10,7 @@ type Props = {
 export default function WhatWeDo({ data }: Props) {
   const t = useTranslations("Home");
   return (
-    <section className="w-full bg-white py-10 md:pt-8 md:pb-12 font-['Lexend_Deca'] overflow-hidden">
+    <section className="w-full bg-white py-10 md:pt-8 md:pb-12 font-lexend overflow-hidden">
       <div className="max-w-[1280px] mx-auto md:px-0 md:pr-8 px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between md:text-left text-center md:pl-8">
           <div>
