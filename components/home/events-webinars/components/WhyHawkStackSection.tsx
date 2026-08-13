@@ -6,7 +6,7 @@ type WhyHawkStackSectionProps = {
 
 const WhyHawkStackSection = ({ data }: WhyHawkStackSectionProps) => {
   return (
-    <section className="border-t border-[#E7ECF4] bg-white font-lexend">
+    <section className="bg-white font-lexend">
       <div className="mx-auto w-full max-w-[1170px] px-4 py-10 sm:px-9 sm:py-16 lg:px-10 lg:py-[72px] xl:px-0">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-[24px] font-semibold leading-[1.25] tracking-[-0.035em] text-[#191C1E] sm:text-[30px] lg:text-[34px] xl:text-[30px]">

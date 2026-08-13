@@ -6,6 +6,7 @@ import UpcomingEventsSection from "@/components/home/events-webinars/components/
 import WhyHawkStackSection from "@/components/home/events-webinars/components/WhyHawkStackSection";
 import {
   eventsHeroData,
+  upcomingEventsData,
   whyAttendEventsData,
 } from "@/components/home/events-webinars/data/events-webinars";
 import React from "react";
@@ -16,7 +17,7 @@ const page = () => {
       <EventsHeroSection data={eventsHeroData} />
       <WhyHawkStackSection data={whyAttendEventsData} />
       <TechnicalDomainsSection />
-      <UpcomingEventsSection />
+      <UpcomingEventsSection data={upcomingEventsData} />
       <TechnicalArticlesSection />
       <EventsCTASection />
     </div>
