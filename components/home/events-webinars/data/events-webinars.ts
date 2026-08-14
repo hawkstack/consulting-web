@@ -1,5 +1,6 @@
 import type {
   EventsHeroData,
+  TechnicalArchiveData,
   UpcomingEventsData,
   WhyAttendEventsData,
 } from "@/components/home/events-webinars/types/events-webinars";
@@ -117,6 +118,74 @@ export const upcomingEventsData: UpcomingEventsData = {
         { label: "Migration Paths", icon: KeyTopicIcon },
         { label: "Cloud Governance", icon: KeyTopicIcon },
         { label: "Cost Management", icon: KeyTopicIcon },
+      ],
+    },
+  ],
+};
+
+export const technicalArchiveData: TechnicalArchiveData = {
+  title: "Technical Archive",
+  description:
+    "Missed a session? Browse our library of past technical deep dives.",
+  tabs: [
+    {
+      label: "Past Events",
+      items: [
+        {
+          title: "Building Scalable Cloud-Native Applications",
+          description:
+            "A deep-dive into microservices architecture and serverless deployments at global scale.",
+        },
+        {
+          title: "Enterprise Security & Compliance",
+          description:
+            "How to implement zero-trust security models across distributed engineering teams.",
+        },
+        {
+          title: "Cloud Migration Made Simple",
+          description:
+            "Strategies for migrating legacy monoliths to AWS and Azure with zero downtime.",
+        },
+      ],
+    },
+    {
+      label: "Past Webinars",
+      items: [
+        {
+          title: "AI in Enterprise Applications",
+          description:
+            "Explore practical AI use cases that improve productivity and customer experience.",
+        },
+        {
+          title: "Modern Cloud Migration Strategies",
+          description:
+            "Learn how organizations successfully migrate workloads to the cloud while reducing risk and cost.",
+        },
+        {
+          title: "Cybersecurity in 2026",
+          description:
+            "Understand evolving cyber threats and discover proactive security strategies for modern enterprises.",
+        },
+      ],
+    },
+    {
+      label: "Past Workshops",
+      items: [
+        {
+          title: "Hands-on Kubernetes Bootcamp",
+          description:
+            "Build, deploy, and manage applications using Kubernetes with live demonstrations and practical exercises.",
+        },
+        {
+          title: "OpenShift Platform Administration",
+          description:
+            "Learn enterprise container platform management using Red Hat OpenShift.",
+        },
+        {
+          title: "Infrastructure as Code using Terraform",
+          description:
+            "Automate cloud infrastructure provisioning using Terraform and industry best practices.",
+        },
       ],
     },
   ],

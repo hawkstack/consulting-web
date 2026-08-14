@@ -42,3 +42,19 @@ export type UpcomingEventsData = {
   };
   events: UpcomingEventItem[];
 };
+
+export type TechnicalArchiveItem = {
+  title: string;
+  description: string;
+};
+
+export type TechnicalArchiveTab = {
+  label: string;
+  items: TechnicalArchiveItem[];
+};
+
+export type TechnicalArchiveData = {
+  title: string;
+  description: string;
+  tabs: TechnicalArchiveTab[];
+};
