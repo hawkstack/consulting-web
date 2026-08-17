@@ -10,6 +10,25 @@ export type EventsHeroData = {
   };
 };
 
+export type EventsCTAData = {
+  title: string;
+  description: string;
+  cta: {
+    label: string;
+    href: string;
+  };
+};
+
+export type TechnicalDomainItem = {
+  label: string;
+  icon: ComponentType<{ className?: string }>;
+};
+
+export type TechnicalDomainsData = {
+  title: string;
+  items: TechnicalDomainItem[];
+};
+
 export type WhyAttendEventItem = {
   title: string;
   description: string;

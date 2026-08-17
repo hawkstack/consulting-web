@@ -1,9 +1,19 @@
 import type {
+  EventsCTAData,
   EventsHeroData,
+  TechnicalDomainsData,
   TechnicalArchiveData,
   UpcomingEventsData,
   WhyAttendEventsData,
 } from "@/components/home/events-webinars/types/events-webinars";
+import ArtificialIntelligenceIcon from "@/components/home/icons/events-webinars/ArtificialIntelligenceIcon";
+import CloudComputingIcon from "@/components/home/icons/events-webinars/CloudComputingIcon";
+import CybersecurityIcon from "@/components/home/icons/events-webinars/CybersecurityIcon";
+import DigitalTransformationIcon from "@/components/home/icons/events-webinars/DigitalTransformationIcon";
+import ProductEngineeringIcon from "@/components/home/icons/events-webinars/ProductEngineeringIcon";
+import RedHatTechnologyIcon from "@/components/home/icons/events-webinars/RedHatTechnologyIcon";
+import SoftwareDevelopmentIcon from "@/components/home/icons/events-webinars/SoftwareDevelopmentIcon";
+import UiUxDesignIcon from "@/components/home/icons/events-webinars/UiUxDesignIcon";
 import CertifiedProfessionalsIcon from "@/components/icons/events-webinars/CertifiedProfessionalsIcon";
 import DiscoverTrendsIcon from "@/components/icons/events-webinars/DiscoverTrendsIcon";
 import LeaderNetworkingIcon from "@/components/icons/events-webinars/LeaderNetworkingIcon";
@@ -21,6 +31,30 @@ export const eventsHeroData: EventsHeroData = {
     label: "Register for Upcoming Events",
     href: "/contact-us",
   },
+};
+
+export const eventsCTAData: EventsCTAData = {
+  title: "Never Miss a Session.\nJoin the HawkStack Community.",
+  description:
+    "Get monthly updates on upcoming technical deep-dives, industry panels, and hands-on workshops delivered to your inbox.",
+  cta: {
+    label: "Register Now",
+    href: "/contact-us",
+  },
+};
+
+export const technicalDomainsData: TechnicalDomainsData = {
+  title: "Focused Technical Domains",
+  items: [
+    { label: "Red Hat Technology", icon: RedHatTechnologyIcon },
+    { label: "Artificial Intelligence", icon: ArtificialIntelligenceIcon },
+    { label: "Cloud Computing", icon: CloudComputingIcon },
+    { label: "Cybersecurity", icon: CybersecurityIcon },
+    { label: "Digital Transformation", icon: DigitalTransformationIcon },
+    { label: "Software Development", icon: SoftwareDevelopmentIcon },
+    { label: "UI/UX Design", icon: UiUxDesignIcon },
+    { label: "Product Engineering", icon: ProductEngineeringIcon },
+  ],
 };
 
 export const whyAttendEventsData: WhyAttendEventsData = {

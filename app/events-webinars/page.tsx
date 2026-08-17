@@ -5,7 +5,9 @@ import TechnicalDomainsSection from "@/components/home/events-webinars/component
 import UpcomingEventsSection from "@/components/home/events-webinars/components/UpcomingEventsSection";
 import WhyHawkStackSection from "@/components/home/events-webinars/components/WhyHawkStackSection";
 import {
+  eventsCTAData,
   eventsHeroData,
+  technicalDomainsData,
   technicalArchiveData,
   upcomingEventsData,
   whyAttendEventsData,
@@ -17,10 +19,10 @@ const page = () => {
     <div>
       <EventsHeroSection data={eventsHeroData} />
       <WhyHawkStackSection data={whyAttendEventsData} />
-      <TechnicalDomainsSection />
+      <TechnicalDomainsSection data={technicalDomainsData} />
       <UpcomingEventsSection data={upcomingEventsData} />
       <TechnicalArticlesSection data={technicalArchiveData} />
-      <EventsCTASection />
+      <EventsCTASection data={eventsCTAData} />
     </div>
   );
 };
