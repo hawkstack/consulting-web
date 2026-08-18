@@ -60,46 +60,50 @@
         "servicesCaption": "ಪರಿವರ್ತನೆಯ ಜೀವನಚಕ್ರದಾದ್ಯಂತ ಏಕೀಕೃತ ಸೇವೆಗಳು",
         "primaryPartners": [
           {
-            "name": "Red Hat",
-            "caption": "OpenShift · Ansible · Virtualization · AI",
+            "name": "ರೆಡ್ ಹ್ಯಾಟ್",
+            "caption": "ಓಪನ್‌ಶಿಫ್ಟ್ · ಆನ್ಸಿಬಲ್ · ವರ್ಚುವಲೈಸೇಶನ್ · ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ",
             "description": "ಸಲಹೆ, ಪರಿಹಾರ ವಿನ್ಯಾಸ, ವ್ಯವಸ್ಥೆ ಏಕೀಕರಣ, ನವೀಕರಣ, ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ತಾಂತ್ರಿಕ ತರಬೇತಿ.",
             "badge": "रणਨੀતિક ಪಾಲುದಾರ",
             "secondaryBadge": "ಪ್ರೀಮಿಯರ್",
             "footerLabel": "ಇಲ್ಲಿ ಪರಿಶೀಲಿಸಿ →"
           },
           {
-            "name": "SUSE",
-            "caption": "SUSE Linux · Rancher · RKE · Edge",
+            "name": "ಎಸ್‌ಯುಎಸ್‌ಇ",
+            "caption": "ಎಸ್‌ಯುಎಸ್‌ಇ ಲಿನಕ್ಸ್ · ರಾಂಚರ್ · ಆರ್‌ಕೆಇ · ಎಡ್ಜ್",
             "description": "ಸಲಹೆ, ಪರಿಹಾರ ವಿನ್ಯಾಸ, ವ್ಯವಸ್ಥೆ ಏಕೀಕರಣ, ನವೀಕರಣ, ಪ್ರತಿರೋಧಶಕ್ತಿ ಮತ್ತು ತಾಂತ್ರಿಕ ತರಬೇತಿ.",
             "badge": "रणਨੀતિક ಪಾಲುದಾರ",
-            "footerLabel": "ಎಂಟರ್‌ಪ್ರೈಸ್ Linux ಮತ್ತು Kubernetes"
+            "footerLabel": "ಇಲ್ಲಿ ಪರಿಶೀಲಿಸಿ →",
+            "partnerAccount": {
+              "label": "ಪಾರ್ಟ್ನರ್ ಖಾತೆ:",
+              "number": "ಎಸ್‌ಎಫ್ ಖಾತೆ ಸಂಖ್ಯೆ A245270"
+            }
           }
         ],
         "ecosystemTitle": "ಡಿಜಿಟಲ್ ಪರಿವರ್ತನೆ ವಿತರಣಾ சுற்றಪರಿಸರ",
         "ecosystemPartners": [
           {
-            "name": "Mirantis",
-            "caption": "Kubernetes ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು",
+            "name": "ಮಿರಾಂಟಿಸ್",
+            "caption": "ಕುಬರ್ನೆಟಿಸ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು",
             "footerLabel": "ರಣਨੀતિક ಪಾಲುದಾರ"
           },
           {
-            "name": "CNCF",
+            "name": "ಸಿಎನ್‌ಸಿಎಫ್",
             "caption": "ಕ್ಲೌಡ್-ನೇಟಿವ್ ಆರ್ಕಿಟೆಕ್ಚರ್",
             "footerLabel": "ಸಿಲ್ವರ್ ಸದಸ್ಯ"
           },
           {
-            "name": "Microsoft Azure",
-            "caption": "ಹೈಬ್ರಿಡ್ ಕ್ಲೌಡ್ ಮತ್ತು DevOps",
+            "name": "ಮೈಕ್ರೋಸಾಫ್ಟ್ ಅಜೂರ್",
+            "caption": "ಹೈಬ್ರಿಡ್ ಕ್ಲೌಡ್ ಮತ್ತು ಡೆವ್‌ಆಪ್ಸ್",
             "footerLabel": "ರಣਨੀ틱 ಪಾಲುದಾರ"
           },
           {
-            "name": "AWS",
-            "caption": "ನವೀಕರಣ ಮತ್ತು AI",
+            "name": "ಎಡಬ್ಲ್ಯೂಎಸ್",
+            "caption": "ಆಧುನೀಕರಣ ಮತ್ತು ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ",
             "footerLabel": "ರಣਨੀ틱 ಪಾಲುದಾರ"
           },
           {
-            "name": "Google Cloud",
-            "caption": "ಡೇಟಾ, AI ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು",
+            "name": "ಗೂಗಲ್ ಕ್ಲೌಡ್",
+            "caption": "ಡೇಟಾ, ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು",
             "footerLabel": "ರಣਨੀ틱 ಪಾಲುದಾರ"
           }
         ],

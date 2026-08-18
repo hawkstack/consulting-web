@@ -61,46 +61,50 @@
         "servicesCaption": "परिवर्तन चक्र के पूरे माध्यम में एकीकृत सेवाएँ",
         "primaryPartners": [
           {
-            "name": "Red Hat",
-            "caption": "OpenShift · Ansible · Virtualization · AI",
+            "name": "रेड हैट",
+            "caption": "ओपनशिफ्ट · एन्सिबल · वर्चुअलाइजेशन · कृत्रिम बुद्धिमत्ता",
             "description": "परामर्श, समाधान डिज़ाइन, प्रणाली एकीकरण, आधुनिकीकरण, संचालन और तकनीकी प्रशिक्षण।",
             "badge": "रणनीतिक साझेदार",
             "secondaryBadge": "प्रीमियर",
             "footerLabel": "यहाँ सत्यापित करें →"
           },
           {
-            "name": "SUSE",
-            "caption": "SUSE Linux · Rancher · RKE · Edge",
+            "name": "एसयूएसई",
+            "caption": "एसयूएसई लिनक्स · रैंचर · आरकेई · एज",
             "description": "परामर्श, समाधान डिज़ाइन, प्रणाली एकीकरण, आधुनिकीकरण, लचीलापन और तकनीकी प्रशिक्षण।",
             "badge": "रणनीतिक साझेदार",
-            "footerLabel": "एंटरप्राइज़ Linux और Kubernetes"
+            "footerLabel": "यहाँ सत्यापित करें →",
+            "partnerAccount": {
+              "label": "पार्टनर अकाउंट:",
+              "number": "एसएफ खाता संख्या A245270"
+            }
           }
         ],
         "ecosystemTitle": "डिजिटल परिवर्तन डिलीवरी पारिस्थितिकी तंत्र",
         "ecosystemPartners": [
           {
-            "name": "Mirantis",
-            "caption": "Kubernetes प्लेटफ़ॉर्म",
+            "name": "मिरांटिस",
+            "caption": "कुबेरनेट्स प्लेटफ़ॉर्म",
             "footerLabel": "रणनीतिक साझेदार"
           },
           {
-            "name": "CNCF",
+            "name": "सीएनसीएफ",
             "caption": "क्लाउड-नेटिव आर्किटेक्चर",
             "footerLabel": "सिल्वर सदस्य"
           },
           {
-            "name": "Microsoft Azure",
-            "caption": "हाइब्रिड क्लाउड और DevOps",
+            "name": "माइक्रोसॉफ्ट ऐज़्योर",
+            "caption": "हाइब्रिड क्लाउड और डेवऑप्स",
             "footerLabel": "रणनीतिक साझेदार"
           },
           {
-            "name": "AWS",
-            "caption": "आधुनिकीकरण और AI",
+            "name": "एडब्ल्यूएस",
+            "caption": "आधुनिकीकरण और कृत्रिम बुद्धिमत्ता",
             "footerLabel": "रणनीतिक साझेदार"
           },
           {
-            "name": "Google Cloud",
-            "caption": "डेटा, AI और प्लेटफ़ॉर्म",
+            "name": "गूगल क्लाउड",
+            "caption": "डेटा, कृत्रिम बुद्धिमत्ता और प्लेटफ़ॉर्म",
             "footerLabel": "रणनीतिक साझेदार"
           }
         ],

@@ -134,7 +134,11 @@
             "caption": "SUSE Linux · Rancher · RKE · Edge",
             "description": "Consulting, solution design, system integration, modernization, resilience, and technical training.",
             "badge": "Strategic partner",
-            "footerLabel": "Enterprise Linux & Kubernetes"
+            "footerLabel": "Verify here →",
+            "partnerAccount": {
+              "label": "Partner Account:",
+              "number": "SF Account No. A245270"
+            }
           }
         ],
         "ecosystemTitle": "Digital transformation delivery ecosystem",
