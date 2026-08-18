@@ -224,7 +224,7 @@ export const homePageData: HomePageData = {
           "Consulting, solution design, system integration, modernization, resilience, and technical training.",
         badge: "Strategic partner",
         footerLabel: "Verify here →",
-        footerLink: "",
+        footerLink: "/certificates/suse-partnership.pdf",
         partnerAccount: {
           label: "Partner Account:",
           number: "SF Account No. A245270",
