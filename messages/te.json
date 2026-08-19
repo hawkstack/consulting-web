@@ -232,6 +232,45 @@
     }
   },
   "Footer": {
+    "links": {
+      "services": {
+        "appModernization": "యాప్ ఆధునికీకరణ",
+        "kubevirt": "క్యూబ్‌వర్ట్",
+        "automation": "ఆటోమేషన్",
+        "cloudPlatformOperation": "క్లౌడ్ ప్లాట్‌ఫారమ్ నిర్వహణ",
+        "consultingServices": "కన్సల్టింగ్ సేవలు",
+        "trainingServices": "శిక్షణ సేవలు",
+        "kubernetesAsAService": "సేవగా కుబెర్నెటీస్"
+      },
+      "training": {
+        "mirantis": "మిరాంటిస్",
+        "cncf": "సీఎన్‌సీఎఫ్",
+        "redhatSolution": "రెడ్ హ్యాట్ పరిష్కారం",
+        "linuxFoundation": "ది లైనక్స్ ఫౌండేషన్",
+        "customisedTraining": "అనుకూలీకరించిన శిక్షణ"
+      },
+      "products": {
+        "redhat": "రెడ్ హ్యాట్",
+        "cncf": "సీఎన్‌సీఎఫ్",
+        "mirantis": "మిరాంటిస్",
+        "aws": "ఏడబ్ల్యూఎస్",
+        "gcp": "జీసీపీ",
+        "azure": "అజ్యూర్"
+      },
+      "company": {
+        "blog": "బ్లాగ్",
+        "career": "కెరీర్",
+        "gallery": "గ్యాలరీ",
+        "partner": "భాగస్వామి",
+        "eventsWebinars": "ఈవెంట్‌లు మరియు వెబినార్‌లు",
+        "trendsInsights": "ట్రెండ్‌లు మరియు అంతర్దృష్టులు"
+      },
+      "policies": {
+        "privacyPolicy": "గోప్యతా విధానం",
+        "cookiePolicy": "కుకీ విధానం",
+        "termsOfUse": "వినియోగ నిబంధనలు"
+      }
+    },
     "about": "మా గురించి",
     "services": "సేవలు",
     "products": "ఉత్పత్తులు",

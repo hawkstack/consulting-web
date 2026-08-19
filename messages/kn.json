@@ -232,6 +232,45 @@
     }
   },
   "Footer": {
+    "links": {
+      "services": {
+        "appModernization": "ಅಪ್ಲಿಕೇಶನ್ ಆಧುನೀಕರಣ",
+        "kubevirt": "ಕ್ಯೂಬ್‌ವಿರ್ಟ್",
+        "automation": "ಸ್ವಯಂಚಾಲನೆ",
+        "cloudPlatformOperation": "ಕ್ಲೌಡ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಕಾರ್ಯಾಚರಣೆ",
+        "consultingServices": "ಸಮಾಲೋಚನಾ ಸೇವೆಗಳು",
+        "trainingServices": "ತರಬೇತಿ ಸೇವೆಗಳು",
+        "kubernetesAsAService": "ಸೇವೆಯಾಗಿ ಕುಬರ್ನೆಟಿಸ್"
+      },
+      "training": {
+        "mirantis": "ಮಿರಾಂಟಿಸ್",
+        "cncf": "ಸಿಎನ್‌ಸಿಎಫ್",
+        "redhatSolution": "ರೆಡ್ ಹ್ಯಾಟ್ ಪರಿಹಾರ",
+        "linuxFoundation": "ದಿ ಲಿನಕ್ಸ್ ಫೌಂಡೇಶನ್",
+        "customisedTraining": "ಕಸ್ಟಮೈಸ್ ಮಾಡಿದ ತರಬೇತಿ"
+      },
+      "products": {
+        "redhat": "ರೆಡ್ ಹ್ಯಾಟ್",
+        "cncf": "ಸಿಎನ್‌ಸಿಎಫ್",
+        "mirantis": "ಮಿರಾಂಟಿಸ್",
+        "aws": "ಎಡಬ್ಲ್ಯೂಎಸ್",
+        "gcp": "ಜಿಸಿಪಿ",
+        "azure": "ಅಜೂರ್"
+      },
+      "company": {
+        "blog": "ಬ್ಲಾಗ್",
+        "career": "ವೃತ್ತಿ",
+        "gallery": "ಗ್ಯಾಲರಿ",
+        "partner": "ಪಾಲುದಾರ",
+        "eventsWebinars": "ಕಾರ್ಯಕ್ರಮಗಳು ಮತ್ತು ವೆಬಿನಾರ್‌ಗಳು",
+        "trendsInsights": "ಪ್ರವೃತ್ತಿಗಳು ಮತ್ತು ಒಳನೋಟಗಳು"
+      },
+      "policies": {
+        "privacyPolicy": "ಗೌಪ್ಯತಾ ನೀತಿ",
+        "cookiePolicy": "ಕುಕೀ ನೀತಿ",
+        "termsOfUse": "ಬಳಕೆಯ ನಿಯಮಗಳು"
+      }
+    },
     "about": "ನಮ್ಮ ಬಗ್ಗೆ",
     "services": "ಸೇವೆಗಳು",
     "products": "ಉತ್ಪನ್ನಗಳು",

@@ -264,6 +264,45 @@
     }
   },
   "Footer": {
+    "links": {
+      "services": {
+        "appModernization": "App Modernization",
+        "kubevirt": "KubeVirt",
+        "automation": "Automation",
+        "cloudPlatformOperation": "Cloud Platform Operation",
+        "consultingServices": "Consulting Services",
+        "trainingServices": "Training Services",
+        "kubernetesAsAService": "Kubernetes as a Service"
+      },
+      "training": {
+        "mirantis": "Mirantis",
+        "cncf": "CNCF",
+        "redhatSolution": "Red Hat Solution",
+        "linuxFoundation": "The Linux Foundation",
+        "customisedTraining": "Customised Training"
+      },
+      "products": {
+        "redhat": "Red Hat",
+        "cncf": "CNCF",
+        "mirantis": "Mirantis",
+        "aws": "AWS",
+        "gcp": "GCP",
+        "azure": "Azure"
+      },
+      "company": {
+        "blog": "Blog",
+        "career": "Career",
+        "gallery": "Gallery",
+        "partner": "Partner",
+        "eventsWebinars": "Events & Webinars",
+        "trendsInsights": "Trends & Insights"
+      },
+      "policies": {
+        "privacyPolicy": "Privacy Policy",
+        "cookiePolicy": "Cookie Policy",
+        "termsOfUse": "Terms of Use"
+      }
+    },
     "about": "About us",
     "services": "Services",
     "products": "Products",
