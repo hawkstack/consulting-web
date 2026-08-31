@@ -1,3 +1,8 @@
+export type FooterLink = {
+  id: string;
+  href: string;
+};
+
 export const socialIcons = [
   {
     src: "/images/socialmedia/facebook.webp",
@@ -21,133 +26,44 @@ export const socialIcons = [
   },
 ];
 
-export const servicesLinks = [
-  {
-    title: "App Modernization",
-    href: "/app-modernization",
-  },
-  {
-    title: "KubeVirt",
-    href: "/kubevirt-service",
-  },
-  {
-    title: "Automation",
-    href: "/automation",
-  },
-  {
-    title: "Cloud Platform Operation",
-    href: "/cloud-platform-operations",
-  },
-  {
-    title: "Consulting Services",
-    href: "/consulting-service",
-  },
-  {
-    title: "Training Services",
-    href: "/training-services",
-  },
-  {
-    title: "Kubernetes as a Service",
-    href: "/kubernetes-as-a-services",
-  },
+export const servicesLinks: FooterLink[] = [
+  { id: "appModernization", href: "/app-modernization" },
+  { id: "kubevirt", href: "/kubevirt-service" },
+  { id: "automation", href: "/automation" },
+  { id: "cloudPlatformOperation", href: "/cloud-platform-operations" },
+  { id: "consultingServices", href: "/consulting-service" },
+  { id: "trainingServices", href: "/training-services" },
+  { id: "kubernetesAsAService", href: "/kubernetes-as-a-services" },
 ];
 
-export const trainingLinks = [
-  {
-    title: "Mirantis",
-    href: "/coming-soon",
-  },
-  {
-    title: "CNCF",
-    href: "/coming-soon",
-  },
-  {
-    title: "Redhat Solution",
-    href: "/coming-soon",
-  },
-  {
-    title: "The Linux Foundation",
-    href: "/coming-soon",
-  },
-  {
-    title: "Customised Training",
-    href: "/coming-soon",
-  },
+export const trainingLinks: FooterLink[] = [
+  { id: "mirantis", href: "/coming-soon" },
+  { id: "cncf", href: "/coming-soon" },
+  { id: "redhatSolution", href: "/coming-soon" },
+  { id: "linuxFoundation", href: "/coming-soon" },
+  { id: "customisedTraining", href: "/coming-soon" },
 ];
 
-export const solutionLinks = [
-  {
-    title: "RedHat",
-    href: "/product-reseller/redhat",
-  },
-  {
-    title: "CNCF",
-    href: "/product-reseller/cncf",
-  },
-  {
-    title: "Mirantis",
-    href: "/product-reseller/mirantis",
-  },
-  {
-    title: "AWS",
-    href: "/product-reseller/aws",
-  },
-  {
-    title: "GCP",
-    href: "/product-reseller/gcp",
-  },
-  {
-    title: "Azure",
-    href: "/product-reseller/azure",
-  },
+export const solutionLinks: FooterLink[] = [
+  { id: "redhat", href: "/product-reseller/redhat" },
+  { id: "cncf", href: "/product-reseller/cncf" },
+  { id: "mirantis", href: "/product-reseller/mirantis" },
+  { id: "aws", href: "/product-reseller/aws" },
+  { id: "gcp", href: "/product-reseller/gcp" },
+  { id: "azure", href: "/product-reseller/azure" },
 ];
 
-export const companyLinks = [
-  {
-    title: "Blog",
-    href: "/blogs",
-  },
-  {
-    title: "Career",
-    href: "/career",
-  },
-  {
-    title: "Gallery",
-    href: "/gallery",
-  },
-  {
-    title: "Partner",
-    href: "/partner",
-  },
-  {
-    title: "Events & Webinars",
-    href: "/coming-soon",
-  },
-  {
-    title: "Trends & Insights",
-    href: "/trends-insights",
-  },
+export const companyLinks: FooterLink[] = [
+  { id: "blog", href: "/blogs" },
+  { id: "career", href: "/career" },
+  { id: "gallery", href: "/gallery" },
+  { id: "partner", href: "/partner" },
+  { id: "eventsWebinars", href: "/events-webinars" },
+  { id: "trendsInsights", href: "/trends-insights" },
 ];
 
-export const policyLinks = [
-  {
-    title: "Privacy Policy",
-    href: "/privacy-policy",
-  },
-  // {
-  //   title: "Terms & Conditions",
-  //   href: "/terms-and-conditions",
-  // },
-  {
-    title: "Cookie Policy",
-    href: "/cookie-policy",
-  },
-  {
-    title: "Terms of Use",
-    href: "/terms-of-use",
-  },
-  // {
-  //   title: "Code of Conduct",
-  //   href: "/code-of-conduct",
-  // },
+export const policyLinks: FooterLink[] = [
+  { id: "privacyPolicy", href: "/privacy-policy" },
+  { id: "cookiePolicy", href: "/cookie-policy" },
+  { id: "termsOfUse", href: "/terms-of-use" },
 ];

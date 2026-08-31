@@ -211,7 +211,8 @@ export const homePageData: HomePageData = {
         badge: "Strategic partner",
         secondaryBadge: "Premier",
         footerLabel: "Verify here →",
-        footerLink: "https://www.credly.com/badges/a89d1d73-c4e0-4395-92a2-e03641af5d6c/public_url",
+        footerLink:
+          "https://www.credly.com/badges/a89d1d73-c4e0-4395-92a2-e03641af5d6c/public_url",
         image: "/images/home/digital-transformation/red-hat.webp",
         accent: "red",
       },
@@ -222,7 +223,12 @@ export const homePageData: HomePageData = {
         description:
           "Consulting, solution design, system integration, modernization, resilience, and technical training.",
         badge: "Strategic partner",
-        footerLabel: "Enterprise Linux & Kubernetes",
+        footerLabel: "Verify here →",
+        footerLink: "/certificates/suse-partnership.pdf",
+        partnerAccount: {
+          label: "Partner Account:",
+          number: "SF Account No. A245270",
+        },
         image: "/images/home/digital-transformation/suse.webp",
         accent: "green",
       },

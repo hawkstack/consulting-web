@@ -54,7 +54,7 @@ export default function DigitalTransformation({ data }: Props) {
           </div>
         </div>
 
-        <div className="my-8 h-px bg-gradient-to-r from-transparent via-blue-500/70 to-transparent" />
+        <div className="my-8 h-px bg-linear-to-r from-transparent via-blue-500/70 to-transparent" />
 
         <div className="grid gap-4 md:grid-cols-2">
           {data.primaryPartners.map((partner) => {
@@ -68,59 +68,73 @@ export default function DigitalTransformation({ data }: Props) {
             return (
               <article
                 key={partner.id}
-                className={`group relative rounded-lg border border-slate-700/70 border-t-2 bg-[#0a1425]/75 p-5 ${accentClasses[partner.accent]} transition-transform duration-200 hover:scale-[1.03] hover:shadow-lg`}
+                className={`group relative overflow-hidden rounded-lg border border-slate-700/70 border-t-2 bg-[#0a1425]/75 p-5 ${accentClasses[partner.accent]} transition-transform duration-200 hover:scale-[1.03] hover:shadow-lg`}
               >
-                <div className="flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3">
+                <div className="flex items-start justify-between gap-2 sm:gap-3">
+                  <div className="flex min-w-0 flex-1 items-center gap-3">
                     <img
                       src={partner.image}
                       alt={`${partner.name} logo`}
-                      className="h-10 w-10 rounded-lg object-contain"
+                      className="h-10 w-10 shrink-0 rounded-lg object-contain"
                     />
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-base xl:text-2xl font-semibold truncate">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="truncate text-base font-semibold xl:text-2xl">
                         {partner.name}
                       </h3>
-                      <p className="mt-0.5 text-[10px] xl:text-[13px] text-slate-400 truncate">
+                      <p className="mt-0.5 truncate text-[10px] text-slate-400 xl:text-[13px]">
                         {partner.caption}
                       </p>
                     </div>
                   </div>
                   {partner.badge && (
                     <span
-                      className={`${badgeClass} whitespace-nowrap flex-shrink-0 inline-flex items-center`}
+                      className={`${badgeClass} inline-flex shrink-0 items-center whitespace-nowrap self-start`}
                     >
                       • {partner.badge}
                     </span>
                   )}
                 </div>
                 {partner.description && (
-                  <p className="mt-5 min-h-9 text-[11px] xl:text-[13px]   leading-relaxed text-slate-400">
+                  <p className="mt-5 min-h-9 text-[11px] leading-relaxed text-slate-400 xl:text-[13px]">
                     {partner.description}
                   </p>
                 )}
-                {partner.footerLabel && (
-                  <div className="mt-4 border-t border-slate-700/50 pt-3 text-[10px] xl:text-[12px]  text-[#0DA2FF]">
-                    {partner.footerLink ? (
-                      <a
-                        href={partner.footerLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline"
-                      >
-                        {partner.footerLabel}
-                      </a>
-                    ) : (
-                      partner.footerLabel
+                {(partner.footerLabel || partner.partnerAccount) && (
+                  <div className="mt-1 flex flex-col gap-2 border-t border-slate-700/50 pt-3 sm:flex-row sm:items-start sm:justify-between">
+                    {partner.footerLabel && (
+                      <div className="pt-1 text-[10px] text-[#0DA2FF] xl:text-[12px]">
+                        {partner.footerLink ? (
+                          <a
+                            href={partner.footerLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="wrap-break-word hover:underline"
+                          >
+                            {partner.footerLabel}
+                          </a>
+                        ) : (
+                          partner.footerLabel
+                        )}
+                      </div>
+                    )}
+                    {partner.partnerAccount && (
+                      <div className="w-full max-w-36 rounded-md border border-slate-700/70 bg-[#101b31] px-2 py-1 text-[8px] leading-tight xl:text-[10px] sm:w-36">
+                        <p className="text-slate-300">
+                          {partner.partnerAccount.label}
+                        </p>
+                        <p className="text-[#0DA2FF]">
+                          {partner.partnerAccount.number}
+                        </p>
+                      </div>
                     )}
                   </div>
                 )}
 
                 {partner.secondaryBadge && (
-                  <div className="absolute right-4 bottom-4 z-10">
+                  <div className="mt-4 flex justify-end sm:absolute sm:bottom-4 sm:right-4 sm:mt-0 sm:justify-start">
                     <div className="flex items-center gap-2 rounded-md border border-yellow-600/30 bg-[#071018] px-3 py-1 text-xs text-[#FFD27A] shadow-sm">
                       <span className="text-[#FFD27A]">★</span>
-                      <span className="font-medium text-[12px]">
+                      <span className="text-[12px] font-medium">
                         {partner.secondaryBadge}
                       </span>
                     </div>
