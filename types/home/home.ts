@@ -117,6 +117,10 @@ export type DigitalTransformationPartner = {
   secondaryBadge?: string;
   footerLink?: string;
   footerLabel?: string;
+  partnerAccount?: {
+    label: string;
+    number: string;
+  };
   image: string;
   accent: "red" | "green" | "blue";
 };

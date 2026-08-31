@@ -1,23 +1,14 @@
 "use client";
 
-import {
-  forwardRef,
-  useState,
-  ChangeEvent,
-  FormEvent,
-} from "react";
+import { forwardRef, useState, ChangeEvent, FormEvent } from "react";
 import { submitConsultingForm } from "@/lib/api/publicClient";
 import { validateEmail, validatePhone } from "../utils/validations";
 import { useTranslations } from "next-intl";
 
-type FormSource =
-  | "openshift"
-  | "unified"
-  | "get_started"
-  | "demo_call";
+type FormSource = "openshift" | "unified" | "get_started" | "demo_call";
 
 interface ContactFormData {
- source: FormSource;
+  source: FormSource;
   firstName: string;
   lastName: string;
   email: string;
@@ -33,8 +24,10 @@ type ContactFormProps = {
 const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
   ({ source }, ref) => {
     const t = useTranslations("Home.contact");
-    const [formData, setFormData] = useState<ContactFormData & { source: FormSource }>({
-      source : "demo_call",
+    const [formData, setFormData] = useState<
+      ContactFormData & { source: FormSource }
+    >({
+      source: "demo_call",
       firstName: "",
       lastName: "",
       email: "",
@@ -42,8 +35,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
     });
 
     const [loading, setLoading] = useState(false);
-    const [submitStatus, setSubmitStatus] =
-      useState<SubmitStatus>("idle");
+    const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
     const [phoneError, setPhoneError] = useState("");
     const [emailError, setEmailError] = useState("");
 
@@ -130,22 +122,22 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
     return (
       <div ref={ref} className="w-full bg-white pt-8 xl:pt-15 overflow-hidden">
         <div className="relative w-full">
-          <div 
+          <div
             className="absolute -top-250 left-1/2 -translate-x-1/2 w-[250%] md:w-[190%] lg:w-[180%] xl:w-[160%] h-[2000px] 
-            bg-[#0E245A] shadow-[inset_0px_4px_16px_0px_#09A4FFB2,inset_0px_24px_240px_0px_#0057FF] transition-all duration-700" 
+            bg-[#0E245A] shadow-[inset_0px_4px_16px_0px_#09A4FFB2,inset_0px_24px_240px_0px_#0057FF] transition-all duration-700"
             style={{
-              borderRadius: '90% 90% 0 0',
-              transform: 'translateX(0%) translateY(50%)' 
+              borderRadius: "90% 90% 0 0",
+              transform: "translateX(0%) translateY(50%)",
             }}
           />
           <div className="relative flex flex-col items-center px-4 pt-20 md:pt-28 pb-10 md:pb-15 z-10 text-white">
             {/* Heading */}
             <div className="text-center">
-              <h2 className="font-['Lexend_Deca'] text-[24px] md:text-[32px] lg:text-[36px] font-medium leading-tight">
+              <h2 className="font-lexend text-[24px] md:text-[32px] lg:text-[36px] font-medium leading-tight">
                 {t("title")}
               </h2>
 
-              <p className="mt-4 font-['Lexend_Deca'] text-[14px] md:text-[16px] max-w-xl mx-auto">
+              <p className="mt-4 font-lexend text-[14px] md:text-[16px] max-w-xl mx-auto">
                 {t("descriptionLine1")}
                 <br className="hidden md:block" />
                 {t("descriptionLine2")}
@@ -196,8 +188,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                 {/* Email */}
                 <div>
                   <label className="block mb-2 pl-4 text-[12px] font-medium">
-                    {t("workEmail")}{" "}
-                    <span className="text-red-500">*</span>
+                    {t("workEmail")} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -219,8 +210,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                 {/* Phone */}
                 <div>
                   <label className="block mb-2 pl-4 text-[12px] font-medium">
-                    {t("contactNumber")}{" "}
-                    <span className="text-red-500">*</span>
+                    {t("contactNumber")} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="tel"
@@ -266,8 +256,8 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
                   submitStatus === "success"
                     ? "success"
                     : submitStatus === "error"
-                    ? "error"
-                    : "oops"
+                      ? "error"
+                      : "oops"
                 }.webp`}
                 alt={submitStatus}
                 className="max-w-full max-h-[80%] object-contain"
@@ -277,7 +267,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 ContactForm.displayName = "ContactForm";

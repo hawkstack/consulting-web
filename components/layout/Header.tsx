@@ -135,15 +135,23 @@ export function Header(): JSX.Element {
           <ul className="flex flex-col gap-6 pt-6">
             {(["home", "products", "services", "company"] as const).map(
               (item) => {
+                const isHome = item === "home";
+
                 return (
                   <li key={item}>
-                    <Link
-                      href={item === "home" ? "/" : "/get-started"}
-                      onClick={() => setMobileOpen(false)}
-                      className="text-white text-[16px]"
-                    >
-                      {tHeader(item)}
-                    </Link>
+                    {isHome ? (
+                      <Link
+                        href="/"
+                        onClick={() => setMobileOpen(false)}
+                        className="text-white text-[16px]"
+                      >
+                        {tHeader(item)}
+                      </Link>
+                    ) : (
+                      <span className="text-white text-[16px] cursor-default">
+                        {tHeader(item)}
+                      </span>
+                    )}
                   </li>
                 );
               },

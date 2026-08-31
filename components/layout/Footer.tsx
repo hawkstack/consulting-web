@@ -63,8 +63,10 @@ export const Footer = (): JSX.Element => {
 
               <ul className="space-y-2 text-sm text-gray-300">
                 {servicesLinks.map((item) => (
-                  <li key={item.title}>
-                    <Link href={item.href}>{item.title}</Link>
+                  <li key={item.id}>
+                    <Link href={item.href}>
+                      {tFooter(`links.services.${item.id}`)}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -75,8 +77,10 @@ export const Footer = (): JSX.Element => {
 
               <ul className="space-y-2 text-sm text-gray-300">
                 {trainingLinks.map((item) => (
-                  <li key={item.title}>
-                    <Link href={item.href}>{item.title}</Link>
+                  <li key={item.id}>
+                    <Link href={item.href}>
+                      {tFooter(`links.training.${item.id}`)}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -89,8 +93,10 @@ export const Footer = (): JSX.Element => {
 
               <ul className="space-y-2 text-sm text-gray-300">
                 {solutionLinks.map((item) => (
-                  <li key={item.title}>
-                    <Link href={item.href}>{item.title}</Link>
+                  <li key={item.id}>
+                    <Link href={item.href}>
+                      {tFooter(`links.products.${item.id}`)}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -98,8 +104,8 @@ export const Footer = (): JSX.Element => {
 
             <div className="grid grid-cols-1 gap-3 text-blue-400 text-sm">
               {companyLinks.map((item) => (
-                <Link key={item.title} href={item.href}>
-                  {item.title}
+                <Link key={item.id} href={item.href}>
+                  {tFooter(`links.company.${item.id}`)}
                 </Link>
               ))}
             </div>
@@ -113,8 +119,10 @@ export const Footer = (): JSX.Element => {
 
             <ul className="space-y-3 text-gray-300">
               {servicesLinks.map((item) => (
-                <li key={item.title}>
-                  <Link href={item.href}>{item.title}</Link>
+                <li key={item.id}>
+                  <Link href={item.href}>
+                    {tFooter(`links.services.${item.id}`)}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -126,8 +134,10 @@ export const Footer = (): JSX.Element => {
 
               <ul className="space-y-3 text-gray-300">
                 {solutionLinks.map((item) => (
-                  <li key={item.title}>
-                    <Link href={item.href}>{item.title}</Link>
+                  <li key={item.id}>
+                    <Link href={item.href}>
+                      {tFooter(`links.products.${item.id}`)}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -138,8 +148,10 @@ export const Footer = (): JSX.Element => {
 
               <ul className="space-y-3 text-gray-300">
                 {trainingLinks.map((item) => (
-                  <li key={item.title}>
-                    <Link href={item.href}>{item.title}</Link>
+                  <li key={item.id}>
+                    <Link href={item.href}>
+                      {tFooter(`links.training.${item.id}`)}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -155,8 +167,8 @@ export const Footer = (): JSX.Element => {
 
             <div className="grid grid-cols-2 gap-4 text-blue-400 text-sm">
               {companyLinks.map((item) => (
-                <Link key={item.title} href={item.href}>
-                  {item.title}
+                <Link key={item.id} href={item.href}>
+                  {tFooter(`links.company.${item.id}`)}
                 </Link>
               ))}
             </div>
@@ -170,8 +182,10 @@ export const Footer = (): JSX.Element => {
 
             <ul className="space-y-3 text-gray-300">
               {servicesLinks.map((item) => (
-                <li key={item.title}>
-                  <Link href={item.href}>{item.title}</Link>
+                <li key={item.id}>
+                  <Link href={item.href}>
+                    {tFooter(`links.services.${item.id}`)}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -182,8 +196,10 @@ export const Footer = (): JSX.Element => {
 
             <ul className="space-y-3 text-gray-300">
               {solutionLinks.map((item) => (
-                <li key={item.title}>
-                  <Link href={item.href}>{item.title}</Link>
+                <li key={item.id}>
+                  <Link href={item.href}>
+                    {tFooter(`links.products.${item.id}`)}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -194,8 +210,10 @@ export const Footer = (): JSX.Element => {
 
             <ul className="space-y-3 text-gray-300">
               {trainingLinks.map((item) => (
-                <li key={item.title}>
-                  <Link href={item.href}>{item.title}</Link>
+                <li key={item.id}>
+                  <Link href={item.href}>
+                    {tFooter(`links.training.${item.id}`)}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -212,8 +230,8 @@ export const Footer = (): JSX.Element => {
 
             <div className="grid grid-cols-2 gap-4 text-blue-400 text-[18px]">
               {companyLinks.map((item) => (
-                <Link key={item.title} href={item.href}>
-                  {item.title}
+                <Link key={item.id} href={item.href}>
+                  {tFooter(`links.company.${item.id}`)}
                 </Link>
               ))}
             </div>
@@ -224,15 +242,11 @@ export const Footer = (): JSX.Element => {
         <div className="mt-16 flex flex-wrap justify-center gap-6 text-blue-400 text-[18px]">
           {policyLinks.map((item) =>
             item.href ? (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="cursor-pointer"
-              >
-                {item.title}
+              <Link key={item.id} href={item.href} className="cursor-pointer">
+                {tFooter(`links.policies.${item.id}`)}
               </Link>
             ) : (
-              <span key={item.title}>{item.title}</span>
+              <span key={item.id}>{tFooter(`links.policies.${item.id}`)}</span>
             ),
           )}
         </div>
