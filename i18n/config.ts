@@ -1,4 +1,4 @@
-export const locales = ["en", "hi", "kn", "te"] as const;
+export const locales = ["en", "hi", "kn", "te", "ar"] as const;
 
 export type AppLocale = (typeof locales)[number];
 
@@ -10,6 +10,7 @@ export const localeNames: Record<AppLocale, string> = {
   hi: "हिन्दी",
   kn: "ಕನ್ನಡ",
   te: "తెలుగు",
+  ar: "العربية",
 };
 
 export function isAppLocale(value: string | undefined): value is AppLocale {
