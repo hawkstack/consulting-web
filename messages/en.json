@@ -6,7 +6,129 @@
     "services": "Services",
     "company": "Company",
     "training": "Training",
-    "toggleMenu": "Toggle menu"
+    "toggleMenu": "Toggle menu",
+    "megaMenu": {
+      "knowMore": "Know More ->",
+      "products": {
+        "tabs": {
+          "product": "Product",
+          "productResellers": "Product Resellers"
+        },
+        "featured": {
+          "title": "KubeVirtStack",
+          "description": "Explore KubeVirtStack solutions designed to unify virtualization and Kubernetes, enabling scalable, secure, and cloud-native infrastructure."
+        },
+        "linux": {
+          "title": "Red Hat Linux",
+          "description": "Build a secure and stable enterprise Linux foundation for mission-critical workloads. Optimized for performance, compliance, and long-term production operations across on-premises and cloud."
+        },
+        "ansible": {
+          "title": "Red Hat Ansible",
+          "description": "Automate infrastructure, applications, and operations at scale. Reduce manual effort, eliminate configuration drift, and deliver consistent outcomes through automation."
+        },
+        "openshift": {
+          "title": "Red Hat OpenShift",
+          "description": "Run and manage containerized applications with confidence. A production-ready Kubernetes platform designed for hybrid cloud, DevSecOps, and platform engineering teams."
+        },
+        "openstack": {
+          "title": "Red Hat OpenStack",
+          "description": "Design and operate private clouds with full control and flexibility. Deliver scalable compute, storage, and networking for enterprise and cloud-native workloads."
+        },
+        "cncf": {
+          "title": "CNCF",
+          "description": "A leading open-source foundation that fosters cloud-native innovation by supporting projects like Kubernetes and driving industry standards."
+        },
+        "mirantis": {
+          "title": "Mirantis",
+          "description": "A cloud-native technology provider that delivers flexible Kubernetes and container solutions to run modern infrastructure at enterprise scale."
+        },
+        "resellers": {
+          "redhat": {
+            "title": "Red Hat",
+            "description": "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms."
+          },
+          "cncf": {
+            "title": "CNCF",
+            "description": "Cloud-native technologies and frameworks powering modern application development."
+          },
+          "mirantis": {
+            "title": "Mirantis",
+            "description": "Kubernetes and container solutions for scalable and secure cloud environments."
+          },
+          "aws": {
+            "title": "AWS",
+            "description": "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications."
+          },
+          "gcp": {
+            "title": "GCP",
+            "description": "Google Cloud solutions for data analytics, AI, and cloud-native innovation."
+          },
+          "azure": {
+            "title": "Azure",
+            "description": "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration."
+          }
+        }
+      },
+      "services": {
+        "appModernization": {
+          "label": "App Modernization",
+          "title": "App Modernization",
+          "description": "Upgrade and re-architect legacy applications using modern frameworks, cloud platforms, and microservices for agility and growth."
+        },
+        "kubevirt": {
+          "label": "KubeVirt",
+          "title": "KubeVirt",
+          "description": "Modernize virtualization by managing VMs alongside containers with Kubernetes-native scalability and control."
+        },
+        "automation": {
+          "label": "Automation",
+          "title": "Automation",
+          "description": "Streamline infrastructure, CI/CD, and operational tasks through intelligent automation and orchestration."
+        },
+        "cloudPlatformOperation": {
+          "label": "Cloud Platform Operation",
+          "title": "Cloud Platform Operation",
+          "description": "Automate cloud infrastructure provisioning, configuration, and operations for consistent and scalable platforms."
+        },
+        "consultingServices": {
+          "label": "Consulting Services",
+          "title": "Consulting Services",
+          "description": "Strategic guidance across cloud, platforms, and modern applications that turns decisions into measurable outcomes."
+        },
+        "trainingServices": {
+          "label": "Training Services",
+          "title": "Training Services",
+          "description": "Empower teams with industry-relevant training that accelerates learning and real-world application."
+        },
+        "kubernetesAsAService": {
+          "label": "Kubernetes as a Service",
+          "title": "Kubernetes as a Service",
+          "description": "End-to-end Kubernetes management with governance, monitoring, and lifecycle support."
+        }
+      },
+      "company": {
+        "aboutUs": {
+          "label": "About Us",
+          "title": "About HawkStack",
+          "description": "HawkStack builds, modernizes, and operates scalable cloud-native platforms and applications."
+        },
+        "career": {
+          "label": "Career",
+          "title": "Career",
+          "description": "Build meaningful technology. Grow your career with modern cloud and platform engineering."
+        },
+        "contactUs": {
+          "label": "Contact Us",
+          "title": "Contact Us",
+          "description": "Let's connect to discuss how we can help you build and scale modern cloud solutions."
+        },
+        "hireFromUs": {
+          "label": "Hire from Us",
+          "title": "Hire from Us",
+          "description": "Access skilled professionals ready to drive innovation, productivity, and growth for your business."
+        }
+      }
+    }
   },
   "Home": {
     "scheduleConsultation": "Schedule a Consultation",

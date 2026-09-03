@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { JSX, useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { offeringsMenuContent } from "./menuData";
 import { MegaItem } from "./types";
@@ -22,6 +23,7 @@ export function MegaMenu({
   onClose,
   menuKey,
 }: Props): JSX.Element {
+  const t = useTranslations("Header.megaMenu");
   const [offeringsView, setOfferingsView] = useState<
     "product" | "productResellers"
   >("product");
@@ -48,7 +50,7 @@ export function MegaMenu({
                   }`}
                 >
                   <span className="min-w-[150px] text-left">
-                    {offeringsMenuContent.tabs.product}
+                    {t(`products.tabs.${offeringsMenuContent.tabs.product}`)}
                   </span>
                   <span className="pl-6 text-[17px] font-medium leading-none">
                     {offeringsView === "product" ? "→" : "›"}
@@ -67,7 +69,9 @@ export function MegaMenu({
                   }`}
                 >
                   <span className="min-w-[150px] text-left">
-                    {offeringsMenuContent.tabs.productResellers}
+                    {t(
+                      `products.tabs.${offeringsMenuContent.tabs.productResellers}`,
+                    )}
                   </span>
                   <span className="pl-6 text-[17px] font-medium leading-none">
                     {offeringsView === "productResellers" ? "→" : "›"}
@@ -82,18 +86,24 @@ export function MegaMenu({
               {offeringsView === "product" ? (
                 <div className="max-w-[585px]">
                   <h3 className="mb-6 font-lexend text-[16px] font-medium leading-[150%] tracking-[-0.03em] text-[#FFFFFF] md:text-[18px] lg:text-[20px]">
-                    {offeringsMenuContent.featured.title}
+                    {t(
+                      `products.${offeringsMenuContent.featured.translationKey}.title`,
+                    )}
                   </h3>
 
                   <p className="max-w-[555px] font-lexend text-[12px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] md:text-[14px] lg:text-[16px]">
-                    {offeringsMenuContent.featured.description}
+                    {t(
+                      `products.${offeringsMenuContent.featured.translationKey}.description`,
+                    )}
                   </p>
 
                   <div className="relative mt-6 mb-6 h-[86px] w-[312px] overflow-hidden rounded-2xl">
                     <div className="relative h-full w-full">
                       <Image
                         src={offeringsMenuContent.featured.image}
-                        alt={offeringsMenuContent.featured.title}
+                        alt={t(
+                          `products.${offeringsMenuContent.featured.translationKey}.title`,
+                        )}
                         fill
                         className="object-contain"
                         sizes="412px"
@@ -108,7 +118,7 @@ export function MegaMenu({
                     onClick={onClose}
                     className="inline-flex text-[12px] font-medium text-[#56A8FF] transition hover:text-white"
                   >
-                    {"Know More ->"}
+                    {t("knowMore")}
                   </Link>
                 </div>
               ) : (
@@ -127,17 +137,21 @@ export function MegaMenu({
                       <div className="flex items-start justify-between gap-4">
                         <div>
                           <h3 className="text-[20px] font-medium leading-none text-white">
-                            {item.title}
+                            {t(
+                              `products.resellers.${item.translationKey}.title`,
+                            )}
                           </h3>
                           <p className="mt-2 max-w-[180px] text-[11px] leading-[1.6] text-[#D9E2F3]">
-                            {item.description}
+                            {t(
+                              `products.resellers.${item.translationKey}.description`,
+                            )}
                           </p>
                           <Link
                             href={item.href ?? "/get-started"}
                             onClick={onClose}
                             className="mt-2 inline-flex text-[11px] font-medium text-[#56A8FF] transition hover:text-white"
                           >
-                            {"Know More ->"}
+                            {t("knowMore")}
                           </Link>
                         </div>
 
@@ -145,7 +159,9 @@ export function MegaMenu({
                           <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white">
                             <Image
                               src={item.image}
-                              alt={item.title}
+                              alt={t(
+                                `products.resellers.${item.translationKey}.title`,
+                              )}
                               width={30}
                               height={30}
                               className="h-7 w-7 object-contain"
@@ -190,10 +206,14 @@ export function MegaMenu({
                     }
                   }}
                   className={`flex gap-10 items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] cursor-pointer transition-colors duration-200 ${
-                    isActive ? "text-[#5272FF]" : "text-white/90 hover:text-white"
+                    isActive
+                      ? "text-[#5272FF]"
+                      : "text-white/90 hover:text-white"
                   }`}
                 >
-                  <span className="min-w-[150px] text-left">{item.label}</span>
+                  <span className="min-w-[150px] text-left">
+                    {t(`${menuKey}.${item.translationKey}.label`)}
+                  </span>
                   <span className="inline-flex w-8 shrink-0 justify-center text-[17px] font-medium leading-none">
                     {isActive ? "→" : "›"}
                   </span>
@@ -206,13 +226,13 @@ export function MegaMenu({
 
           <div className="flex-1 ">
             <h3 className="mb-6 font-lexend text-[16px] font-medium leading-[150%] tracking-[-0.03em] text-[#FFFFFF] md:text-[18px] lg:text-[20px]">
-              {activeItem.title}
+              {t(`${menuKey}.${activeItem.translationKey}.title`)}
             </h3>
 
             <div className="relative mb-6 h-[195px] w-[312px] overflow-hidden rounded-2xl">
               <Image
                 src={activeItem.image}
-                alt={activeItem.title}
+                alt={t(`${menuKey}.${activeItem.translationKey}.title`)}
                 fill
                 className="object-cover"
                 sizes="312px"
@@ -220,7 +240,7 @@ export function MegaMenu({
             </div>
 
             <p className="max-w-[555px] font-lexend text-[12px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] md:text-[14px] lg:text-[16px]">
-              {activeItem.description}
+              {t(`${menuKey}.${activeItem.translationKey}.description`)}
             </p>
 
             {menuKey === "services" && activeItem.href ? (
@@ -229,7 +249,7 @@ export function MegaMenu({
                 onClick={onClose}
                 className="mt-2 inline-flex text-[12px] font-medium text-[#56A8FF] transition hover:text-white"
               >
-                {"Know More ->"}
+                {t("knowMore")}
               </Link>
             ) : null}
           </div>
