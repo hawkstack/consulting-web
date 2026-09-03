@@ -1,8 +1,9 @@
 export type MegaItem = {
   id: string;
-  label: string;
-  title: string;
-  description: string;
+  translationKey: string;
+  label?: string;
+  title?: string;
+  description?: string;
   image: string;
   href?: string;
   external?: boolean;
@@ -10,16 +11,14 @@ export type MegaItem = {
 
 export type OfferingsMenuItem = {
   id: string;
-  title: string;
-  description: string;
+  translationKey: string;
   image?: string;
   badge?: string;
   href?: string;
 };
 
 export type OfferingsMenuFeature = {
-  title: string;
-  description: string;
+  translationKey: string;
   image: string;
   primaryHref: string;
 };
