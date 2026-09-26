@@ -15,6 +15,12 @@ export type TechnologyPartner = {
   logo: string;
   href?: string;
   external?: boolean;
+  mark?: string;
+};
+export type TechnologyPartnerGroup = {
+  id: string;
+  title: string;
+  partners: TechnologyPartner[];
 };
 export type MembershipCard = {
   id: string;
@@ -23,4 +29,5 @@ export type MembershipCard = {
   description: string;
   logo?: string;
   logoText?: string;
+  tone: "blue" | "purple";
 };
