@@ -55,7 +55,7 @@ export default function TechnologyPartnerCard({
       brand
     );
   const style =
-    "flex h-[88px] items-center justify-center rounded-xl border border-slate-200 bg-white px-4 shadow-[0_4px_14px_rgba(15,45,85,0.06)] lg:h-[50px] lg:rounded-lg lg:px-2 lg:shadow-[0_2px_4px_rgba(15,23,42,0.12)] xl:h-[86px] xl:rounded-[9px] xl:px-4 xl:shadow-[0_2px_5px_rgba(15,23,42,0.12)]";
+    "flex h-[88px] items-center justify-center rounded-xl border border-slate-200 bg-white px-4 shadow-[0_4px_14px_rgba(15,45,85,0.06)] transition-[background-color,box-shadow,transform] duration-200 hover:bg-[#F5F9FF] hover:shadow-md motion-reduce:transition-none lg:h-[50px] lg:rounded-lg lg:px-2 lg:shadow-[0_2px_4px_rgba(15,23,42,0.12)] xl:h-[86px] xl:rounded-[9px] xl:px-4 xl:shadow-[0_2px_5px_rgba(15,23,42,0.12)]";
 
   return partner.href ? (
     <a
@@ -63,7 +63,7 @@ export default function TechnologyPartnerCard({
       target={partner.external ? "_blank" : undefined}
       rel={partner.external ? "noopener noreferrer" : undefined}
       aria-label={`Verify ${partner.name} partnership`}
-      className={`${style} transition-shadow hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-500`}
+      className={`${style} hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-blue-500`}
     >
       {contents}
     </a>
