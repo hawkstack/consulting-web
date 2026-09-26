@@ -71,3 +71,64 @@ export const TrainingIcon = (props: IconProps) => (
     />
   </ServiceIcon>
 );
+
+export const JourneyNetworkIcon = (props: IconProps) => (
+  <ServiceIcon {...props}>
+    <path
+      d="m8.4 10 5.2-3M8.4 14l5.2 3"
+      stroke="currentColor"
+      strokeWidth="1.6"
+    />
+    <circle cx="6.5" cy="12" r="2.7" stroke="currentColor" strokeWidth="1.6" />
+    <circle
+      cx="16.5"
+      cy="5.5"
+      r="2.7"
+      stroke="currentColor"
+      strokeWidth="1.6"
+    />
+    <circle
+      cx="16.5"
+      cy="18.5"
+      r="2.7"
+      stroke="currentColor"
+      strokeWidth="1.6"
+    />
+  </ServiceIcon>
+);
+
+export const JourneyBulbIcon = (props: IconProps) => (
+  <ServiceIcon {...props}>
+    <path
+      d="M9 15.2a6 6 0 1 1 6 0c-.9.6-1.2 1.3-1.3 2.3h-3.4c-.1-1-.4-1.7-1.3-2.3Z"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.4 20h3.2M12 2v1.5M4.9 5l1.1 1.1M19.1 5 18 6.1"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+    />
+  </ServiceIcon>
+);
+
+export const JourneyGearIcon = (props: IconProps) => (
+  <ServiceIcon {...props}>
+    <path
+      d="m10.1 3.9.4-1.2h3l.4 1.2a8 8 0 0 1 1.7.7l1.1-.6 2.1 2.1-.6 1.1c.3.5.6 1.1.7 1.7l1.2.4v3l-1.2.4a8 8 0 0 1-.7 1.7l.6 1.1-2.1 2.1-1.1-.6a8 8 0 0 1-1.7.7l-.4 1.2h-3l-.4-1.2a8 8 0 0 1-1.7-.7l-1.1.6-2.1-2.1.6-1.1a8 8 0 0 1-.7-1.7L3.9 12v-3l1.2-.4a8 8 0 0 1 .7-1.7l-.6-1.1 2.1-2.1 1.1.6a8 8 0 0 1 1.7-.7Z"
+      stroke="currentColor"
+      strokeWidth="1.45"
+      strokeLinejoin="round"
+    />
+    <circle
+      cx="12"
+      cy="10.5"
+      r="2.5"
+      stroke="currentColor"
+      strokeWidth="1.45"
+    />
+  </ServiceIcon>
+);
