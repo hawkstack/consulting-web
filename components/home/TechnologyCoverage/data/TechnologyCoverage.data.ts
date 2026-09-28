@@ -117,7 +117,7 @@ export const technologyPartnerGroups: TechnologyPartnerGroup[] = [
 export const membershipCards: MembershipCard[] = [
   {
     id: "dell",
-    badge: "ODM & INFRASTRUCTURE PARTNER",
+    badge: "OEM & INFRASTRUCTURE PARTNER",
     name: "Dell Technologies",
     description: "Enterprise servers, storage and edge infrastructure.",
     logo: "/images/home/digital-transformation/dell-technologies.webp",
