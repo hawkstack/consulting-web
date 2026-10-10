@@ -15,11 +15,13 @@ export const homePageData: HomePageData = {
     secondaryAction: { label: "Schedule a consultation", href: "/get-started" },
     marketplace: {
       brand: "GeM",
+      logo: "/images/home/gem-logo.png",
+      emblem: "/images/home/national-emblem.svg",
       brandDescription: "Government e Marketplace",
       title: "Available on GeM",
       description: "Procure HawkStack solutions through the Government e Marketplace",
     },
-    status: { cluster: "GPU cluster online", uptime: "99.95% uptime" },
+    status: { cluster: "GPU cluster online", uptime: "99.99% uptime" },
     controls: { show: "Show", resume: "Resume service animation", pause: "Pause service animation", play: "Play", stop: "Pause" },
     services: [
   {
@@ -256,12 +258,12 @@ export const homePageData: HomePageData = {
       {
         id: "red-hat",
         name: "Red Hat",
-        caption: "OpenShift Â· Ansible Â· Virtualization Â· AI",
+        caption: "OpenShift Ãƒâ€šÃ‚Â· Ansible Ãƒâ€šÃ‚Â· Virtualization Ãƒâ€šÃ‚Â· AI",
         description:
           "Consulting, solution design, system integration, modernization, operations, and technical training.",
         badge: "Strategic partner",
         secondaryBadge: "Premier",
-        footerLabel: "Verify here â†’",
+        footerLabel: "Verify here ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢",
         footerLink:
           "https://www.credly.com/badges/a89d1d73-c4e0-4395-92a2-e03641af5d6c/public_url",
         image: "/images/home/digital-transformation/red-hat.webp",
@@ -270,11 +272,11 @@ export const homePageData: HomePageData = {
       {
         id: "suse",
         name: "SUSE",
-        caption: "SUSE Linux Â· Rancher Â· RKE Â· Edge",
+        caption: "SUSE Linux Ãƒâ€šÃ‚Â· Rancher Ãƒâ€šÃ‚Â· RKE Ãƒâ€šÃ‚Â· Edge",
         description:
           "Consulting, solution design, system integration, modernization, resilience, and technical training.",
         badge: "Strategic partner",
-        footerLabel: "Verify here â†’",
+        footerLabel: "Verify here ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢",
         footerLink: "/certificates/suse-partnership.pdf",
         partnerAccount: {
           label: "Partner Account:",
