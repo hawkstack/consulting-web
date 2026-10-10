@@ -73,7 +73,7 @@ body {
   }
 }
 
-/* Step rotation (90° every 4s) */
+/* Step rotation (90ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° every 4s) */
 @keyframes rotateSteps {
   0% {
     transform: rotate(0deg);
@@ -293,4 +293,146 @@ body {
   100% {
     transform: translateX(0);
   }
+}
+
+/* Homepage hero animations */
+.hero-orbit-outer,
+.hero-orbit-inner {
+  transform-origin: 264px 264px;
+  animation: home-hero-orbit 100s linear infinite;
+}
+.hero-orbit-inner {
+  animation-direction: reverse;
+  animation-duration: 80s;
+}
+.hero-orbit-line {
+  animation: home-hero-flow 1.5s linear infinite;
+}
+.hero-orbit-glow {
+  animation: home-hero-breathe 4s ease-in-out infinite;
+}
+.hero-service-reveal {
+  animation: home-hero-card-cycle 4s ease-in-out both;
+}
+.hero-progress-track > span {
+  animation: home-hero-progress 4s linear forwards;
+}
+.hero-service-icon[data-active="true"] {
+  animation: home-hero-icon-glow 2s ease-in-out infinite;
+}
+.hero-orbit-particle-cyan,
+.hero-orbit-particle-green,
+.hero-orbit-particle-inner {
+  transform-origin: 264px 264px;
+  filter: drop-shadow(0 0 5px #12c8f088);
+}
+.hero-orbit-particle-cyan {
+  animation: home-hero-orbit 18s linear infinite;
+}
+.hero-orbit-particle-green {
+  animation: home-hero-orbit 24s linear infinite reverse;
+}
+.hero-orbit-particle-inner {
+  animation: home-hero-orbit 12s linear infinite reverse;
+}
+@keyframes home-hero-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes home-hero-flow {
+  to {
+    stroke-dashoffset: -30;
+  }
+}
+@keyframes home-hero-breathe {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.06);
+  }
+}
+@keyframes home-hero-card-cycle {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  8%,
+  94% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+@keyframes home-hero-icon-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 3px #12c8f010,
+      0 0 0 5px #12c8f025,
+      0 0 19px #12c8f033;
+  }
+  50% {
+    box-shadow:
+      0 0 0 5px #12c8f018,
+      0 0 0 7px #12c8f030,
+      0 0 20px #12c8f044;
+  }
+}
+@keyframes home-hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-animation-scope *,
+  .hero-animation-scope *::before,
+  .hero-animation-scope *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* GeM card hover effect */
+.hero-marketplace-hover {
+  transition:
+    transform 260ms ease,
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-marketplace-hover:hover {
+    transform: translateY(-2px);
+    border-color: #12c8f066;
+    box-shadow:
+      0 0 0 1px #12c8f020,
+      0 0 22px #12c8f02b,
+      0 8px 24px #00000026;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-marketplace-hover:hover {
+    transform: none;
+  }
+}
+
+/* Light sweep across the GeM card on mouse entry. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero-marketplace-hover:hover .hero-marketplace-shine {
+    animation: home-hero-marketplace-shine 950ms ease-out forwards;
+  }
+}
+@keyframes home-hero-marketplace-shine {
+  from { transform: translateX(-150%) skewX(-20deg); }
+  to { transform: translateX(350%) skewX(-20deg); }
 }
