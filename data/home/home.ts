@@ -8,27 +8,58 @@ import {
 
 export const homePageData: HomePageData = {
   heroSectionData: {
-    slides: [
-      {
-        title: "KubeVirtStack Virtualization Platform",
-        desc: "Run VMs and containers together on Kubernetes. Modernize workloads on a unified platform.",
-      },
-      {
-        title: "Modernize Applications with OpenShift",
-        desc: "Build and run microservices on Red Hat OpenShift. Accelerate delivery with secure, enterprise Kubernetes.",
-      },
-      {
-        title: "Digital Transformation with Kubernetes",
-        desc: "Adopt Kubernetes and cloud-native architectures. Enable scalable, resilient, and faster delivery.",
-      },
-      {
-        title: "Fully Managed Kubernetes Service Platform",
-        desc: "Operate Kubernetes with built-in security and observability. Automate scaling, upgrades, and lifecycle management.",
-      },
-    ],
-
-    bgVideo: "/videos/home/hero/hero.mp4",
-    bg: "/videos/home/hero/hero-mobile.mp4",
+    eyebrow: "AI DATA CENTER SOLUTIONS",
+    title: ["Build the foundation", "for enterprise AI."],
+    description: "Connect compute, storage, networking and AI platforms to turn ambitious ideas into operational capability.",
+    primaryAction: { label: "Explore our solutions", targetId: "our-solutions" },
+    secondaryAction: { label: "Schedule a consultation", href: "/get-started" },
+    marketplace: {
+      brand: "GeM",
+      logo: "/images/home/gem-logo.png",
+      emblem: "/images/home/national-emblem.svg",
+      brandDescription: "Government e Marketplace",
+      title: "Available on GeM",
+      description: "Procure HawkStack solutions through the Government e Marketplace",
+    },
+    status: { cluster: "GPU cluster online", uptime: "99.99% uptime" },
+    services: [
+  {
+    title: "Data Center Solutions",
+    description:
+      "Design and build AI-ready compute, storage and networking that scales with your workloads.",
+    icon: "server",
+  },
+  {
+    title: "Application Modernization",
+    description:
+      "Move legacy applications to containers and cloud-native platforms without losing momentum.",
+    icon: "refresh",
+  },
+  {
+    title: "Enterprise Infrastructure & Security",
+    description:
+      "Harden the stack from servers to network edge with resilient, policy-driven protection.",
+    icon: "shield",
+  },
+  {
+    title: "Virtualization & Migration",
+    description:
+      "Migrate VMs to modern platforms with minimal downtime and a clear rollback path.",
+    icon: "cube",
+  },
+  {
+    title: "Technology Consulting",
+    description:
+      "Turn goals into a practical roadmap, architecture and delivery plan with expert guidance.",
+    icon: "chat",
+  },
+  {
+    title: "Enterprise Skills & Enablement",
+    description:
+      "Train your teams to run, secure and evolve the platforms you deploy.",
+    icon: "cap",
+  },
+],
   },
 
   cloudServicesSectionData: {
@@ -205,12 +236,12 @@ export const homePageData: HomePageData = {
       {
         id: "red-hat",
         name: "Red Hat",
-        caption: "OpenShift · Ansible · Virtualization · AI",
+        caption: "OpenShift Ãƒâ€šÃ‚Â· Ansible Ãƒâ€šÃ‚Â· Virtualization Ãƒâ€šÃ‚Â· AI",
         description:
           "Consulting, solution design, system integration, modernization, operations, and technical training.",
         badge: "Strategic partner",
         secondaryBadge: "Premier",
-        footerLabel: "Verify here →",
+        footerLabel: "Verify here ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢",
         footerLink:
           "https://www.credly.com/badges/a89d1d73-c4e0-4395-92a2-e03641af5d6c/public_url",
         image: "/images/home/digital-transformation/red-hat.webp",
@@ -219,11 +250,11 @@ export const homePageData: HomePageData = {
       {
         id: "suse",
         name: "SUSE",
-        caption: "SUSE Linux · Rancher · RKE · Edge",
+        caption: "SUSE Linux Ãƒâ€šÃ‚Â· Rancher Ãƒâ€šÃ‚Â· RKE Ãƒâ€šÃ‚Â· Edge",
         description:
           "Consulting, solution design, system integration, modernization, resilience, and technical training.",
         badge: "Strategic partner",
-        footerLabel: "Verify here →",
+        footerLabel: "Verify here ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢",
         footerLink: "/certificates/suse-partnership.pdf",
         partnerAccount: {
           label: "Partner Account:",

@@ -138,22 +138,52 @@
     "exploreOpenRoles": "Explore Open Roles",
     "content": {
       "heroSectionData": {
-        "slides": [
+        "eyebrow": "AI DATA CENTER SOLUTIONS",
+        "title": [
+          "Build the foundation",
+          "for enterprise AI."
+        ],
+        "description": "Connect compute, storage, networking and AI platforms to turn ambitious ideas into operational capability.",
+        "primaryAction": {
+          "label": "Explore our solutions"
+        },
+        "secondaryAction": {
+          "label": "Schedule a consultation"
+        },
+        "marketplace": {
+          "brand": "GeM",
+          "brandDescription": "Government e Marketplace",
+          "title": "Available on GeM",
+          "description": "Procure HawkStack solutions through the Government e Marketplace"
+        },
+        "status": {
+          "cluster": "GPU cluster online",
+          "uptime": "99.99% uptime"
+        },
+        "services": [
           {
-            "title": "KubeVirtStack Virtualization Platform",
-            "desc": "Run VMs and containers together on Kubernetes. Modernize workloads on a unified platform."
+            "title": "Data Center Solutions",
+            "description": "Design and build AI-ready compute, storage and networking that scales with your workloads."
           },
           {
-            "title": "Modernize Applications with OpenShift",
-            "desc": "Build and run microservices on Red Hat OpenShift with secure, enterprise Kubernetes."
+            "title": "Application Modernization",
+            "description": "Move legacy applications to containers and cloud-native platforms without losing momentum."
           },
           {
-            "title": "Digital Transformation with Kubernetes",
-            "desc": "Adopt cloud-native architectures for scalable, resilient, faster delivery."
+            "title": "Enterprise Infrastructure & Security",
+            "description": "Harden the stack from servers to network edge with resilient, policy-driven protection."
           },
           {
-            "title": "Fully Managed Kubernetes Service Platform",
-            "desc": "Operate Kubernetes with built-in security, observability, scaling, upgrades, and lifecycle management."
+            "title": "Virtualization & Migration",
+            "description": "Migrate VMs to modern platforms with minimal downtime and a clear rollback path."
+          },
+          {
+            "title": "Technology Consulting",
+            "description": "Turn goals into a practical roadmap, architecture and delivery plan with expert guidance."
+          },
+          {
+            "title": "Enterprise Skills & Enablement",
+            "description": "Train your teams to run, secure and evolve the platforms you deploy."
           }
         ]
       },

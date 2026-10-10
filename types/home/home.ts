@@ -1,14 +1,14 @@
 import type { ComponentType, SVGProps } from "react";
 
-export type heroSlides = {
-  title: string;
-  desc: string;
-};
-
 export type HeroSectionData = {
-  slides: heroSlides[];
-  bgVideo: string;
-  bg: string;
+  eyebrow: string;
+  title: [string, string];
+  description: string;
+  primaryAction: { label: string; targetId: string };
+  secondaryAction: { label: string; href: string };
+  marketplace: { logo: string; emblem: string; brand: string; brandDescription: string; title: string; description: string };
+  status: { cluster: string; uptime: string };
+  services: { title: string; description: string; icon: "server" | "refresh" | "shield" | "cube" | "chat" | "cap" }[];
 };
 
 export interface CloudServiceItem {
