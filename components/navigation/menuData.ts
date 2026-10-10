@@ -5,50 +5,32 @@ import { PRODUCT_TYPES } from "@/constants/productReseller";
 export const products: MegaItem[] = [
   {
     id: "linux",
-    label: "RedHat Linux",
-    title: "RedHat Linux",
-    description:
-      "Build a secure and stable enterprise Linux foundation for mission-critical workloads.Optimized for performance, compliance, and long-term production operations across on-prem and cloud.",
+    translationKey: "linux",
     image: "/images/products/RedHat-Linux.webp",
   },
   {
     id: "ansible",
-    label: "RedHat Ansible",
-    title: "RedHat Ansible",
-    description:
-      "Automate infrastructure, applications, and operations at scale.Reduce manual effort, eliminate configuration drift, and deliver consistent outcomes through automation.",
+    translationKey: "ansible",
     image: "/images/products/RedHat-Ansible.webp",
   },
   {
     id: "openshift",
-    label: "RedHat OpenShift",
-    title: "RedHat OpenShift",
-    description:
-      "Run and manage containerized applications with confidence.A production-ready Kubernetes platform designed for hybrid cloud, DevSecOps, and platform engineering teams.",
+    translationKey: "openshift",
     image: "/images/products/RedHat-OpenShift.webp",
   },
   {
     id: "openstack",
-    label: "RedHat OpenStack",
-    title: "RedHat OpenStack",
-    description:
-      "Design and operate private clouds with full control and flexibility.Deliver scalable compute, storage, and networking for enterprise and cloud-native workloads.",
+    translationKey: "openstack",
     image: "/images/products/RedHat-OpenStack.webp",
   },
   {
     id: PRODUCT_TYPES.CNCF,
-    label: "CNCF",
-    title: "CNCF",
-    description:
-      "A leading open-source foundation that fosters cloud-native innovation by supporting projects like Kubernetes and driving industry standards.",
+    translationKey: "cncf",
     image: "/images/products/CNCF.webp",
   },
   {
     id: PRODUCT_TYPES.MIRANTIS,
-    label: "Mirantis",
-    title: "Mirantis",
-    description:
-      "A cloud-native technology provider that delivers flexible Kubernetes and container solutions to run modern infrastructure at enterprise scale.",
+    translationKey: "mirantis",
     image: "/images/products/Mirantis.webp",
     href: "/product-reseller/mirantis",
   },
@@ -56,38 +38,30 @@ export const products: MegaItem[] = [
 
 export const offeringsMenuContent: OfferingsMenuContent = {
   tabs: {
-    product: "Product",
-    productResellers: "Product Resellers",
+    product: "product",
+    productResellers: "productResellers",
   },
   featured: {
-    title: "KubeVirtStack",
-    description:
-      "Explore KubeVirtStack solutions designed to unify virtualization and Kubernetes, enabling scalable, secure, and cloud-native infrastructure.",
+    translationKey: "featured",
     image: "/images/products/KubeVirtStack-AI.webp",
     primaryHref: "https://kubevirtstack.com/",
   },
   resellers: [
     {
       id: PRODUCT_TYPES.REDHAT,
-      title: "RedHat",
-      description:
-        "Enterprise open-source solutions for hybrid cloud, automation, and Kubernetes platforms.",
+      translationKey: "redhat",
       image: "/images/home/product-reseller/Redhat.webp",
       href: "/product-reseller/redhat",
     },
     {
       id: PRODUCT_TYPES.CNCF,
-      title: "CNCF",
-      description:
-        "Cloud-native technologies and frameworks powering modern application development.",
+      translationKey: "cncf",
       image: "/images/home/product-reseller/cncf.webp",
       href: "/product-reseller/cncf",
     },
     {
       id: PRODUCT_TYPES.MIRANTIS,
-      title: "Mirantis",
-      description:
-        "Kubernetes and container solutions for scalable and secure cloud environments.",
+      translationKey: "mirantis",
       image: "/images/home/product-reseller/Mirantis.webp",
       href: "/product-reseller/mirantis",
     },
@@ -101,25 +75,19 @@ export const offeringsMenuContent: OfferingsMenuContent = {
     // },
     {
       id: PRODUCT_TYPES.AWS,
-      title: "AWS",
-      description:
-        "Comprehensive cloud services for compute, storage, AI/ML, and scalable applications.",
+      translationKey: "aws",
       image: "/images/home/product-reseller/AWS.webp",
       href: "/product-reseller/aws",
     },
     {
       id: "gcp",
-      title: "GCP",
-      description:
-        "Google Cloud solutions for data analytics, AI, and cloud-native innovation.",
+      translationKey: "gcp",
       image: "/images/home/product-reseller/google-cloud.webp",
       href: "/product-reseller/gcp",
     },
     {
       id: "azure",
-      title: "Azure",
-      description:
-        "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration.",
+      translationKey: "azure",
       image: "/images/home/product-reseller/Azure.webp",
       href: "/product-reseller/azure",
     },
@@ -146,64 +114,43 @@ export const offeringsMenuContent: OfferingsMenuContent = {
 export const services: MegaItem[] = [
   {
     id: "app modernization",
-    label: "App Modernization",
-    title: "App Modernization",
-    description:
-      "Upgrade and re-architect legacy applications using modern frameworks, cloud platforms, and microservices for agility and growth. ",
+    translationKey: "appModernization",
     image: "/images/services/App-Modernization.webp",
     href: "/app-modernization",
   },
   {
     id: "kubeVirt",
-    label: "KubeVirt",
-    title: "KubeVirt",
-    description:
-      "Modernize virtualization by managing VMs alongside containers with Kubernetes-native scalability and control.",
+    translationKey: "kubevirt",
     image: "/images/services/KubeVirt.webp",
     href: "/kubevirt-service",
   },
   {
     id: "automation",
-    label: "Automation",
-    title: "Automation",
-    description:
-      "Streamline infrastructure, CI/CD, and operational tasks through intelligent automation and orchestration.",
+    translationKey: "automation",
     image: "/images/services/Automation.webp",
     href: "/automation",
   },
   {
     id: "cloud platform operation",
-    label: "Cloud Platform Operation",
-    title: "Cloud Platform Operation",
-    description:
-      "Automate cloud infrastructure provisioning, configuration, and operations for consistent and scalable platforms.",
+    translationKey: "cloudPlatformOperation",
     image: "/images/services/Cloud-Platform-Operation.webp",
     href: "/cloud-platform-operations",
   },
   {
     id: "consulting services",
-    label: "Consulting Services",
-    title: "Consulting Services",
-    description:
-      "Strategic guidance across cloud, platforms, and modern applications that turns decisions into measurable outcomes.",
+    translationKey: "consultingServices",
     image: "/images/services/Consulting-Services.webp",
     href: "/consulting-service",
   },
   {
     id: "training services",
-    label: "Training Services",
-    title: "Training Services",
-    description:
-      "Empower teams with industry-relevant training that accelerates learning and real-world application.",
+    translationKey: "trainingServices",
     image: "/images/services/Training-Services.webp",
     href: "/training-services",
   },
   {
     id: "kubernetes as a services",
-    label: "Kubernetes as a Services",
-    title: "Kubernetes as a Services",
-    description:
-      "End-to-end Kubernetes management with governance, monitoring, and lifecycle support.",
+    translationKey: "kubernetesAsAService",
     image: "/images/services/Kubernetes-as-a-Services.webp",
     href: "/kubernetes-as-a-services",
   },
@@ -213,10 +160,7 @@ export const services: MegaItem[] = [
 export const company: MegaItem[] = [
   {
     id: "about us",
-    label: "About Us",
-    title: "About HawkStack",
-    description:
-      "HawkStack builds, modernizes, and operates scalable cloud-native platforms and applications",
+    translationKey: "aboutUs",
     image: "/images/company/About-Us.webp",
     href: "/about-us",
     // href: "`${process.env.NEXT_PUBLIC_TRAINING_URL}/about`",
@@ -224,10 +168,7 @@ export const company: MegaItem[] = [
   },
   {
     id: "career",
-    label: "Career",
-    title: "Career",
-    description:
-      "Build meaningful technology. Grow your career with modern cloud and platform engineering.",
+    translationKey: "career",
     image: "/images/company/Career.webp",
     href: "/career",
   },
@@ -243,19 +184,13 @@ export const company: MegaItem[] = [
   // },
   {
     id: "contact us",
-    label: "Contact Us",
-    title: "Contact Us",
-    description:
-      "Let's connect to discuss how we can help you build and scale modern cloud solutions.",
+    translationKey: "contactUs",
     image: "/images/company/Contact-Us.webp",
     href: "/contact-us",
   },
   {
     id: "hire from us",
-    label: "Hire from us",
-    title: "Hire from us",
-    description:
-      "Access skilled professionals ready to drive innovation, productivity, and growth for your business.",
+    translationKey: "hireFromUs",
     image: "/images/company/Hire-from-us.webp",
     href: "/hire-from-us",
   },
@@ -275,30 +210,22 @@ export const company: MegaItem[] = [
 export const training: MegaItem[] = [
   {
     id: "red hat",
-    label: "Red hat",
-    title: "Red hat",
-    description:
-      "Industry-aligned Red Hat training focused on real-world enterprise Linux and OpenShift skills.",
+    translationKey: "redHat",
     image: "/images/training/Red-hat.webp",
   },
   {
     id: "mirantis",
-    label: "Mirantis",
-    title: "Mirantis",
-    description:
-      "Hands-on Mirantis training designed for production-ready Kubernetes and container platforms.",
+    translationKey: "mirantis",
     image: "/images/training/The-Mirantis.webp",
   },
   {
     id: "cncf",
-    label: "CNCF",
-    title: "CNCF",
-    description:
-      "Cloud-native training built around CNCF projects like Kubernetes, Prometheus, and Envoy.",
+    translationKey: "cncf",
     image: "/images/training/CNCF.webp",
   },
   {
     id: "the linux foundation",
+    translationKey: "linuxFoundation",
     label: "The Linux Foundation",
     title: "The Linux Foundation",
     description:
@@ -307,6 +234,7 @@ export const training: MegaItem[] = [
   },
   {
     id: "customised training",
+    translationKey: "customisedTraining",
     label: "Customised Training",
     title: "Customised Training",
     description:
