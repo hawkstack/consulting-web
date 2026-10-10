@@ -41,9 +41,9 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
     <section
       className="[background:#020d22] [color:#fff] [overflow:hidden] [font-family:var(--font-lexend),_sans-serif] hero-animation-scope"
       aria-labelledby="home-hero-title">
-      <div className="mx-auto grid max-w-[1440px] grid-cols-2 items-center gap-12 px-12 pt-5 pb-8 min-[761px]:min-h-[calc(100svh-72px)] lg:min-h-[calc(100svh-90px)] xl:px-16 max-[1100px]:gap-8 max-[760px]:grid-cols-1 max-[760px]:gap-7 max-[760px]:px-6 max-[760px]:pt-8 max-[760px]:pb-12 max-[400px]:px-[18px]">
-        <div className="min-[761px]:-translate-y-2 [padding-bottom:20px] [&_h1]:[font-size:clamp(32px,_3.4vw,_48px)] [&_h1]:[line-height:1.08] [&_h1]:[font-weight:600] [&_h1]:[letter-spacing:-0.8px] [&_h1]:[margin:0_0_16px] max-[1100px]:[padding-bottom:20px] max-[760px]:[padding-bottom:0] max-[760px]:[&_h1]:[font-size:clamp(30px,_7vw,_42px)]">
-          <p className="[color:#00d2ef] [font-size:12px] [font-weight:600] [letter-spacing:2.3px] [margin:0_0_22px]">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-2 items-center gap-12 px-12 pt-5 pb-8 min-[761px]:min-h-[calc(100svh-70px)] xl:px-[68px] max-[1100px]:gap-8 max-[760px]:grid-cols-1 max-[760px]:gap-7 max-[760px]:px-6 max-[760px]:pt-8 max-[760px]:pb-12 max-[400px]:px-[18px]">
+        <div className="min-[761px]:-translate-y-3 [padding-bottom:20px] [&_h1]:[font-size:clamp(32px,_3.4vw,_48px)] [&_h1]:[line-height:1.08] [&_h1]:[font-weight:600] [&_h1]:[letter-spacing:-0.8px] [&_h1]:[margin:0_0_16px] max-[1100px]:[padding-bottom:20px] max-[760px]:[padding-bottom:0] max-[760px]:[&_h1]:[font-size:clamp(30px,_7vw,_42px)]">
+          <p className="[color:#00d2ef] [font-size:12px] [font-weight:600] [letter-spacing:2.3px] [margin:0_0_14px]">
             {data.eyebrow}
           </p>
           <h1 id="home-hero-title">
@@ -51,10 +51,10 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
             <br />
             {data.title[1]}
           </h1>
-          <p className="[max-width:510px] [color:#c4d1e5] [font-size:16px] [font-weight:400] [line-height:1.55] [margin:0] max-[1100px]:[font-size:14px] max-[760px]:[max-width:470px]">
+          <p className="[max-width:510px] [color:#c4d1e5] [font-size:16px] [font-weight:400] [line-height:1.45] [margin:0] max-[1100px]:[font-size:14px] max-[760px]:[max-width:470px]">
             {data.description}
           </p>
-          <div className="[display:flex] [flex-wrap:wrap] [gap:14px] [margin-top:28px] max-[400px]:[gap:10px]">
+          <div className="[display:flex] [flex-wrap:wrap] [gap:14px] [margin-top:24px] max-[400px]:[gap:10px]">
             <span className="[border-radius:999px] [padding:14px_20px] [font-size:13px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:white] [border:0] [background:linear-gradient(100deg,_#1fb28a,_#075be0)]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:13px_16px] max-[400px]:[padding:12px_14px] max-[400px]:[font-size:11px]">
               {data.primaryAction.label}
             </span>
