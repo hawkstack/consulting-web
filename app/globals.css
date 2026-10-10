@@ -73,7 +73,7 @@ body {
   }
 }
 
-/* Step rotation (90Ãƒâ€šÃ‚Â° every 4s) */
+/* Step rotation (90ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â° every 4s) */
 @keyframes rotateSteps {
   0% {
     transform: rotate(0deg);
@@ -372,18 +372,17 @@ body {
   }
 }
 @keyframes home-hero-icon-glow {
-  0%,
-  100% {
+  0%, 100% {
     box-shadow:
-      0 0 0 6px #12c8f01a,
-      0 0 0 8px #12c8f044,
-      0 0 28px #12c8f066;
+      0 0 0 3px #12c8f010,
+      0 0 0 5px #12c8f025,
+      0 0 19px #12c8f033;
   }
   50% {
     box-shadow:
-      0 0 0 7px #12c8f025,
-      0 0 0 9px #12c8f055,
-      0 0 40px #12c8f088;
+      0 0 0 5px #12c8f018,
+      0 0 0 7px #12c8f030,
+      0 0 20px #12c8f044;
   }
 }
 @keyframes home-hero-progress {

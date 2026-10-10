@@ -55,10 +55,10 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
             {data.description}
           </p>
           <div className="[display:flex] [flex-wrap:wrap] [gap:14px] [margin-top:28px] max-[400px]:[gap:10px]">
-            <span className="[border-radius:999px] [padding:16px_24px] [font-size:14px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:white] [border:0] [background:linear-gradient(100deg,_#1fb28a,_#075be0)]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:15px_18px] max-[400px]:[padding:13px_15px] max-[400px]:[font-size:11px]">
+            <span className="[border-radius:999px] [padding:14px_20px] [font-size:13px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:white] [border:0] [background:linear-gradient(100deg,_#1fb28a,_#075be0)]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:13px_16px] max-[400px]:[padding:12px_14px] max-[400px]:[font-size:11px]">
               {data.primaryAction.label}
             </span>
-            <span className="[border-radius:999px] [padding:16px_24px] [font-size:14px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:#071731] [border:1px_solid_#cbd6e9] [background:white]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:15px_18px] max-[400px]:[padding:13px_15px] max-[400px]:[font-size:11px]">
+            <span className="[border-radius:999px] [padding:14px_20px] [font-size:13px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:#071731] [border:1px_solid_#cbd6e9] [background:white]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:13px_16px] max-[400px]:[padding:12px_14px] max-[400px]:[font-size:11px]">
               {data.secondaryAction.label}
             </span>
           </div>
@@ -119,7 +119,7 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
                   "hero-service-icon [&_svg]:w-[5.303cqw] [&_svg]:h-[5.303cqw] [width:10.985cqw] [height:10.985cqw] [display:grid] [place-items:center] [border-radius:3.409cqw] [border:0.189cqw_solid_#78aaff4d] [transition:background_0.45s,_box-shadow_0.45s,_color_0.45s,_transform_0.45s]" +
                   " " +
                   (active === index
-                    ? "bg-[linear-gradient(140deg,#1fb28a,#0861d9)] text-white [transform:scale(1.12)] shadow-[0_0_0_1.136cqw_#12c8f01a,0_0_0_1.515cqw_#12c8f044,0_0_6.629cqw_#12c8f066]"
+                    ? "bg-[linear-gradient(140deg,#1fb28a,#0861d9)] text-white [transform:scale(1.12)] shadow-[0_0_0_0.758cqw_#12c8f010,0_0_0_1.136cqw_#12c8f025,0_0_4.167cqw_#12c8f033]"
                     : "bg-[rgba(10,30,70,0.85)] text-[#8fb4ff]")
                 }>
                 <ServiceIcon name={item.icon} />
@@ -130,19 +130,19 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
             </div>
           ))}
           <div
-            className="[position:absolute] [z-index:4] [left:26%] [top:35%] [width:48%] [min-height:30%] [padding:3.409cqw_3.788cqw_3.03cqw] [border:0.189cqw_solid_#78aaff4d] [border-radius:4.545cqw] [background:linear-gradient(140deg,_#143867,_#071831)] [box-shadow:0_3.788cqw_8.523cqw_#0004] [&_h2]:[font-size:3.5cqw] [&_h2]:[color:#0085ff] [&_h2]:[font-weight:600] [&_h2]:[line-height:1.2] [&_h2]:[margin:0_0_1.894cqw]"
+            className="[position:absolute] [z-index:4] [left:26%] [top:35%] [width:48%] [height:156px] [display:flex] [flex-direction:column] [justify-content:space-between] [padding:2.652cqw_3.409cqw] [border:0.189cqw_solid_#78aaff4d] [border-radius:4.545cqw] [background:linear-gradient(140deg,_#143867,_#071831)] [box-shadow:0_3.788cqw_8.523cqw_#0004] [&_h2]:[color:#0085ff] [&_h2]:[font-weight:600] [&_h2]:[line-height:1.2] [&_h2]:[margin:0_0_1.136cqw]"
             aria-live="off"
             aria-atomic="true">
             <div key={active} className="hero-service-reveal">
-              <p className="[color:#12c8f0] [font-size:2.083cqw] [font-weight:500] [letter-spacing:0.189cqw] [margin:0_0_1.515cqw]">
+              <p className="[color:#12c8f0] [font-size:2.083cqw] [font-weight:500] [letter-spacing:0.189cqw] [margin:0_0_1.136cqw]">
                 {active + 1} / {services.length}
               </p>
-              <h2>{service.title}</h2>
-              <p className="[color:#b5c3df] [font-size:2.273cqw] [font-weight:400] [line-height:1.6] [margin:0]">
+              <h2 className={active >= 1 && active <= 3 ? "text-[2.8cqw]" : "text-[3.5cqw]"}>{service.title}</h2>
+              <p className={`text-[#b5c3df] font-normal leading-[1.45] m-0 ${active >= 1 && active <= 3 ? "text-[2cqw]" : "text-[2.273cqw]"}`}>
                 {service.description}
               </p>
             </div>
-            <div className="[height:0.568cqw] [border-radius:189.205cqw] [background:#12c8f025] [margin-top:2.273cqw] [overflow:hidden] [&_span]:[display:block] [&_span]:[height:100%] [&_span]:[background:linear-gradient(90deg,_#1fb28a,_#12c8f0)] [&_span]:[transform-origin:left] hero-progress-track">
+            <div className="[height:0.568cqw] [flex-shrink:0] [border-radius:189.205cqw] [background:#12c8f025] [margin-top:1.136cqw] [overflow:hidden] [&_span]:[display:block] [&_span]:[height:100%] [&_span]:[background:linear-gradient(90deg,_#1fb28a,_#12c8f0)] [&_span]:[transform-origin:left] hero-progress-track">
               <span
                 key={active + "-" + reducedMotion}
                 className={reducedMotion ? "[animation:none]" : undefined}
