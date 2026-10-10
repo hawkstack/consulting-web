@@ -1,10 +1,5 @@
 import type { ComponentType, SVGProps } from "react";
 
-export type heroSlides = {
-  title: string;
-  desc: string;
-};
-
 export type HeroSectionData = {
   eyebrow: string;
   title: [string, string];
@@ -13,11 +8,7 @@ export type HeroSectionData = {
   secondaryAction: { label: string; href: string };
   marketplace: { logo: string; emblem: string; brand: string; brandDescription: string; title: string; description: string };
   status: { cluster: string; uptime: string };
-  controls: { show: string; resume: string; pause: string; play: string; stop: string };
   services: { title: string; description: string; icon: "server" | "refresh" | "shield" | "cube" | "chat" | "cap" }[];
-  slides: heroSlides[];
-  bgVideo: string;
-  bg: string;
 };
 
 export interface CloudServiceItem {

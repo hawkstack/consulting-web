@@ -22,7 +22,6 @@ export const homePageData: HomePageData = {
       description: "Procure HawkStack solutions through the Government e Marketplace",
     },
     status: { cluster: "GPU cluster online", uptime: "99.99% uptime" },
-    controls: { show: "Show", resume: "Resume service animation", pause: "Pause service animation", play: "Play", stop: "Pause" },
     services: [
   {
     title: "Data Center Solutions",
@@ -61,27 +60,6 @@ export const homePageData: HomePageData = {
     icon: "cap",
   },
 ],
-    slides: [
-      {
-        title: "KubeVirtStack Virtualization Platform",
-        desc: "Run VMs and containers together on Kubernetes. Modernize workloads on a unified platform.",
-      },
-      {
-        title: "Modernize Applications with OpenShift",
-        desc: "Build and run microservices on Red Hat OpenShift. Accelerate delivery with secure, enterprise Kubernetes.",
-      },
-      {
-        title: "Digital Transformation with Kubernetes",
-        desc: "Adopt Kubernetes and cloud-native architectures. Enable scalable, resilient, and faster delivery.",
-      },
-      {
-        title: "Fully Managed Kubernetes Service Platform",
-        desc: "Operate Kubernetes with built-in security and observability. Automate scaling, upgrades, and lifecycle management.",
-      },
-    ],
-
-    bgVideo: "/videos/home/hero/hero.mp4",
-    bg: "/videos/home/hero/hero-mobile.mp4",
   },
 
   cloudServicesSectionData: {

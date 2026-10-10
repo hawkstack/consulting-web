@@ -33,7 +33,27 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
     heroSectionData: {
       ...homePageData.heroSectionData,
       ...heroCopy,
-      slides: heroCopy?.slides ?? homePageData.heroSectionData.slides,
+      primaryAction: {
+        ...homePageData.heroSectionData.primaryAction,
+        ...heroCopy?.primaryAction,
+      },
+      secondaryAction: {
+        ...homePageData.heroSectionData.secondaryAction,
+        ...heroCopy?.secondaryAction,
+      },
+      marketplace: {
+        ...homePageData.heroSectionData.marketplace,
+        ...heroCopy?.marketplace,
+      },
+      status: {
+        ...homePageData.heroSectionData.status,
+        ...heroCopy?.status,
+      },
+      services: homePageData.heroSectionData.services.map((service, index) => ({
+        ...service,
+        title: heroCopy?.services?.[index]?.title ?? service.title,
+        description: heroCopy?.services?.[index]?.description ?? service.description,
+      })),
     },
     cloudServicesSectionData: {
       ...homePageData.cloudServicesSectionData,
