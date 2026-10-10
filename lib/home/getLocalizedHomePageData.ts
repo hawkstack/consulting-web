@@ -32,6 +32,7 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
   return {
     heroSectionData: {
       ...homePageData.heroSectionData,
+      ...heroCopy,
       slides: heroCopy?.slides ?? homePageData.heroSectionData.slides,
     },
     cloudServicesSectionData: {

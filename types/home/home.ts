@@ -6,6 +6,15 @@ export type heroSlides = {
 };
 
 export type HeroSectionData = {
+  eyebrow: string;
+  title: [string, string];
+  description: string;
+  primaryAction: { label: string; targetId: string };
+  secondaryAction: { label: string; href: string };
+  marketplace: { brand: string; brandDescription: string; title: string; description: string };
+  status: { cluster: string; uptime: string };
+  controls: { show: string; resume: string; pause: string; play: string; stop: string };
+  services: { title: string; description: string; icon: "server" | "refresh" | "shield" | "cube" | "chat" | "cap" }[];
   slides: heroSlides[];
   bgVideo: string;
   bg: string;

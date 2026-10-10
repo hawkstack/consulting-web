@@ -8,6 +8,57 @@ import {
 
 export const homePageData: HomePageData = {
   heroSectionData: {
+    eyebrow: "AI DATA CENTER SOLUTIONS",
+    title: ["Build the foundation", "for enterprise AI."],
+    description: "Connect compute, storage, networking and AI platforms to turn ambitious ideas into operational capability.",
+    primaryAction: { label: "Explore our solutions", targetId: "our-solutions" },
+    secondaryAction: { label: "Schedule a consultation", href: "/get-started" },
+    marketplace: {
+      brand: "GeM",
+      brandDescription: "Government e Marketplace",
+      title: "Available on GeM",
+      description: "Procure HawkStack solutions through the Government e Marketplace",
+    },
+    status: { cluster: "GPU cluster online", uptime: "99.95% uptime" },
+    controls: { show: "Show", resume: "Resume service animation", pause: "Pause service animation", play: "Play", stop: "Pause" },
+    services: [
+  {
+    title: "Data Center Solutions",
+    description:
+      "Design and build AI-ready compute, storage and networking that scales with your workloads.",
+    icon: "server",
+  },
+  {
+    title: "Application Modernization",
+    description:
+      "Move legacy applications to containers and cloud-native platforms without losing momentum.",
+    icon: "refresh",
+  },
+  {
+    title: "Enterprise Infrastructure & Security",
+    description:
+      "Harden the stack from servers to network edge with resilient, policy-driven protection.",
+    icon: "shield",
+  },
+  {
+    title: "Virtualization & Migration",
+    description:
+      "Migrate VMs to modern platforms with minimal downtime and a clear rollback path.",
+    icon: "cube",
+  },
+  {
+    title: "Technology Consulting",
+    description:
+      "Turn goals into a practical roadmap, architecture and delivery plan with expert guidance.",
+    icon: "chat",
+  },
+  {
+    title: "Enterprise Skills & Enablement",
+    description:
+      "Train your teams to run, secure and evolve the platforms you deploy.",
+    icon: "cap",
+  },
+],
     slides: [
       {
         title: "KubeVirtStack Virtualization Platform",
@@ -205,12 +256,12 @@ export const homePageData: HomePageData = {
       {
         id: "red-hat",
         name: "Red Hat",
-        caption: "OpenShift · Ansible · Virtualization · AI",
+        caption: "OpenShift Â· Ansible Â· Virtualization Â· AI",
         description:
           "Consulting, solution design, system integration, modernization, operations, and technical training.",
         badge: "Strategic partner",
         secondaryBadge: "Premier",
-        footerLabel: "Verify here →",
+        footerLabel: "Verify here â†’",
         footerLink:
           "https://www.credly.com/badges/a89d1d73-c4e0-4395-92a2-e03641af5d6c/public_url",
         image: "/images/home/digital-transformation/red-hat.webp",
@@ -219,11 +270,11 @@ export const homePageData: HomePageData = {
       {
         id: "suse",
         name: "SUSE",
-        caption: "SUSE Linux · Rancher · RKE · Edge",
+        caption: "SUSE Linux Â· Rancher Â· RKE Â· Edge",
         description:
           "Consulting, solution design, system integration, modernization, resilience, and technical training.",
         badge: "Strategic partner",
-        footerLabel: "Verify here →",
+        footerLabel: "Verify here â†’",
         footerLink: "/certificates/suse-partnership.pdf",
         partnerAccount: {
           label: "Partner Account:",
