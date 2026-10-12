@@ -16,7 +16,6 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
       | "productsSectionData"
       | "digitalTransformationSectionData"
       | "platformSectionData"
-      | "whatWeDoSectionData"
       | "cloudSectionData"
     >
   >;
@@ -26,7 +25,6 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
   const productsCopy = copy.productsSectionData;
   const digitalTransformationCopy = copy.digitalTransformationSectionData;
   const platformCopy = copy.platformSectionData;
-  const whatWeDoCopy = copy.whatWeDoSectionData;
   const cloudCopy = copy.cloudSectionData;
 
   return {
@@ -52,11 +50,17 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
       services: homePageData.heroSectionData.services.map((service, index) => ({
         ...service,
         title: heroCopy?.services?.[index]?.title ?? service.title,
-        description: heroCopy?.services?.[index]?.description ?? service.description,
+        description:
+          heroCopy?.services?.[index]?.description ?? service.description,
       })),
     },
     cloudServicesSectionData: {
       ...homePageData.cloudServicesSectionData,
+      intro:
+        cloudServicesCopy?.intro ?? homePageData.cloudServicesSectionData.intro,
+      actionLabel:
+        cloudServicesCopy?.actionLabel ??
+        homePageData.cloudServicesSectionData.actionLabel,
       title:
         cloudServicesCopy?.title ?? homePageData.cloudServicesSectionData.title,
       services: homePageData.cloudServicesSectionData.services.map(
@@ -112,14 +116,6 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
           ...platformCopy?.features?.[index],
         }),
       ),
-    },
-    whatWeDoSectionData: {
-      ...homePageData.whatWeDoSectionData,
-      ...whatWeDoCopy,
-      cards: homePageData.whatWeDoSectionData.cards.map((card, index) => ({
-        ...card,
-        ...whatWeDoCopy?.cards?.[index],
-      })),
     },
     cloudSectionData: {
       ...homePageData.cloudSectionData,
