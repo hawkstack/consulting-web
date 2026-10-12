@@ -67,38 +67,11 @@ export type PartnerCards = {
   link: string;
 };
 
-export type PlatformFeature = {
-  id: number;
-  title: string;
-  icon: string;
-  desc: string;
-};
-
-export type PlatformSectionData = {
-  bgImage: string;
-  title: string[];
-  description: string;
-  features: PlatformFeature[];
-};
-
-export type CloudSectionData = {
-  title: {
-    main: string;
-    highlight: string;
-    suffix: string;
-  };
-  desc: string;
-  videoDesktop: string;
-  videoMobile: string;
-};
-
 export type HomePageData = {
   heroSectionData: HeroSectionData;
   cloudServicesSectionData: EngineeringDrivenCloudServicesProps;
   productsSectionData: ProductsSectionData;
   digitalTransformationSectionData: DigitalTransformationSectionData;
-  platformSectionData: PlatformSectionData;
-  cloudSectionData: CloudSectionData;
 };
 
 export type DigitalTransformationIcon = ComponentType<SVGProps<SVGSVGElement>>;

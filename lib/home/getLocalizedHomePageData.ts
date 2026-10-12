@@ -15,8 +15,6 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
       | "cloudServicesSectionData"
       | "productsSectionData"
       | "digitalTransformationSectionData"
-      | "platformSectionData"
-      | "cloudSectionData"
     >
   >;
 
@@ -24,8 +22,6 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
   const cloudServicesCopy = copy.cloudServicesSectionData;
   const productsCopy = copy.productsSectionData;
   const digitalTransformationCopy = copy.digitalTransformationSectionData;
-  const platformCopy = copy.platformSectionData;
-  const cloudCopy = copy.cloudSectionData;
 
   return {
     heroSectionData: {
@@ -106,20 +102,6 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
             ...digitalTransformationCopy?.ecosystemPartners?.[index],
           }),
         ),
-    },
-    platformSectionData: {
-      ...homePageData.platformSectionData,
-      ...platformCopy,
-      features: homePageData.platformSectionData.features.map(
-        (feature, index) => ({
-          ...feature,
-          ...platformCopy?.features?.[index],
-        }),
-      ),
-    },
-    cloudSectionData: {
-      ...homePageData.cloudSectionData,
-      ...cloudCopy,
     },
   };
 }

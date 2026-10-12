@@ -134,7 +134,6 @@
     "scheduleConsultation": "Schedule a Consultation",
     "viewSolutions": "View Our Solutions",
     "learnMore": "Learn More",
-    "exploreOpenRoles": "Explore Open Roles",
     "content": {
       "heroSectionData": {
         "eyebrow": "AI DATA CENTER SOLUTIONS",
@@ -361,49 +360,6 @@
           }
         ],
         "footerText": "One partner for consulting, solution design, system integration, and workforce enablement."
-      },
-      "platformSectionData": {
-        "title": [
-          "A Simpler",
-          "Stronger foundation",
-          "for modern platform",
-          "operations."
-        ],
-        "description": "HawkStack helps teams standardize infrastructure, improve reliability, strengthen security, and streamline delivery.",
-        "features": [
-          {
-            "title": "Cloud Native Architecture",
-            "desc": "Scalable, resilient systems built for the cloud."
-          },
-          {
-            "title": "Operational Excellence",
-            "desc": "Improve reliability, efficiency, and performance."
-          },
-          {
-            "title": "Observability",
-            "desc": "End-to-end visibility for faster issue resolution."
-          },
-          {
-            "title": "Security & Compliance",
-            "desc": "Enterprise-grade protection and regulatory alignment."
-          },
-          {
-            "title": "Continuity & Lifecycle",
-            "desc": "Structured lifecycle management and continuous improvement."
-          },
-          {
-            "title": "Unified Platform",
-            "desc": "Integrate tools, teams, and workflows seamlessly."
-          }
-        ]
-      },
-      "cloudSectionData": {
-        "title": {
-          "main": "Build the",
-          "highlight": "next wave",
-          "suffix": "of cloud innovation."
-        },
-        "desc": "As a CNCF silver member, HawkStack contributes to the cloud-native community through initiatives like KubeVirtStack for modern virtualization on Kubernetes."
       }
     },
     "contact": {
@@ -511,6 +467,30 @@
         "gemName": "GeM — Government e Marketplace"
       },
       "ctaLabel": "View More"
+    }
+  },
+"ProductShowcase": {
+    "content": {
+      "eyebrow": "HawkStack Products",
+      "title": [
+        "Modernize with confidence.",
+        "Operate with clarity."
+      ],
+      "description": "AI-assisted products that help enterprises assess readiness, plan technology change and validate critical platforms.",
+      "product": {
+        "category": "Enterprise Virtualization & Migration Readiness",
+        "status": "Under Development",
+        "summary": "A clearer path to modern virtualization.",
+        "description": "Make informed migration decisions with AI-assisted readiness assessments, workload analysis and practical execution plans. KubeVirtStack helps your business identify risks early and prepare for KubeVirt-based enterprise virtualization.",
+        "features": [
+          "Understand migration readiness and potential blockers.",
+          "Review workloads, dependencies and assessment findings.",
+          "Turn analysis into a phased execution plan.",
+          "Validate the approach through a PoC and team enablement."
+        ],
+        "ctaLabel": "Plan Your Migration",
+        "imageAlt": "Enterprise servers connected to virtual cloud platforms"
+      }
     }
   }
 }
