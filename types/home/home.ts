@@ -6,23 +6,38 @@ export type HeroSectionData = {
   description: string;
   primaryAction: { label: string; targetId: string };
   secondaryAction: { label: string; href: string };
-  marketplace: { logo: string; emblem: string; brand: string; brandDescription: string; title: string; description: string };
+  marketplace: {
+    logo: string;
+    emblem: string;
+    brand: string;
+    brandDescription: string;
+    title: string;
+    description: string;
+  };
   status: { cluster: string; uptime: string };
-  services: { title: string; description: string; icon: "server" | "refresh" | "shield" | "cube" | "chat" | "cap" }[];
+  services: {
+    title: string;
+    description: string;
+    icon: "server" | "refresh" | "shield" | "cube" | "chat" | "cap";
+  }[];
 };
 
 export interface CloudServiceItem {
   id: string;
   number: string;
   title: string;
+  headline: string;
   description: string;
-  video: string;
+  benefits: string[];
+  image: string;
   imageAlt: string;
   href: string;
 }
 
 export interface EngineeringDrivenCloudServicesProps {
   title: string;
+  intro: string;
+  actionLabel: string;
   services: CloudServiceItem[];
 }
 
@@ -77,20 +92,6 @@ export type CloudSectionData = {
   videoMobile: string;
 };
 
-export type OfferingCard = {
-  id: number;
-  title: string;
-  desc: string;
-  image: string;
-  link: string;
-};
-
-export type WhatWeDoSection = {
-  title: string;
-  description: string;
-  cards: OfferingCard[];
-};
-
 export type HomePageData = {
   heroSectionData: HeroSectionData;
   cloudServicesSectionData: EngineeringDrivenCloudServicesProps;
@@ -98,7 +99,6 @@ export type HomePageData = {
   digitalTransformationSectionData: DigitalTransformationSectionData;
   platformSectionData: PlatformSectionData;
   cloudSectionData: CloudSectionData;
-  whatWeDoSectionData: WhatWeDoSection;
 };
 
 export type DigitalTransformationIcon = ComponentType<SVGProps<SVGSVGElement>>;
