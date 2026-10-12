@@ -4,7 +4,6 @@ import HeroSection from "@/components/home/HeroSection";
 import EngineeringDrivenCloudServices from "@/components/home/EngineeringDrivenCloudServices";
 import PlatformSection from "@/components/home/PlatformSection";
 import CloudInnovation from "@/components/home/CloudInnovation";
-import WhatWeDo from "@/components/home/WhatWeDo";
 import ContactCTA from "@/components/home/ContactFormSection";
 // import ProductReseller from "@/components/home/ProductReseller";
 // import DigitalTransformation from "@/components/home/DigitalTransformation";
@@ -25,17 +24,15 @@ export default async function HomePage() {
     cloudServicesSectionData,
     // productsSectionData,
     platformSectionData,
-    whatWeDoSectionData,
     cloudSectionData,
   } = getLocalizedHomePageData(t);
   return (
     <div>
       <HeroSection data={heroSectionData} />
-      <EngineeringDrivenCloudServices data={cloudServicesSectionData} />
       {/* <ProductReseller data={productsSectionData} /> */}
       {/* <DigitalTransformation data={digitalTransformationSectionData} /> */}
       <TechnologyCoverage />
-      <WhatWeDo data={whatWeDoSectionData} />
+      <EngineeringDrivenCloudServices data={cloudServicesSectionData} />
       <PlatformSection data={platformSectionData} />
       <CloudInnovation data={cloudSectionData} />
       <ContactCTA />

@@ -12,7 +12,6 @@
     "scheduleConsultation": "Schedule a Consultation",
     "viewSolutions": "View Our Solutions",
     "learnMore": "Learn More",
-    "seeAllOfferings": "SEE ALL OFFERINGS",
     "exploreOpenRoles": "Explore Open Roles",
     "content": {
       "heroSectionData": {
@@ -66,35 +65,75 @@
         ]
       },
       "cloudServicesSectionData": {
-        "title": "Engineering Driven Cloud Services",
+        "title": "Technology that moves your business forward.",
+        "intro": "Build resilience, accelerate change and strengthen your teams—with connected solutions for enterprises, government and the public sector.",
+        "actionLabel": "Discuss this solution",
         "services": [
           {
-            "title": "App Modernization",
-            "description": "Transform legacy applications into scalable, cloud-native microservices with Kubernetes, DevOps, and CI/CD."
+            "title": "Data Center Solutions",
+            "headline": "Build a resilient foundation for growth.",
+            "description": "Design and modernize data centers to keep critical services running, use resources efficiently and scale with business demand.",
+            "benefits": [
+              "Business continuity",
+              "Resource efficiency",
+              "Capacity for growth"
+            ],
+            "imageAlt": "Modern data center with rows of server racks"
           },
           {
-            "title": "KubeVirt",
-            "description": "Run virtual machines alongside containers on Kubernetes with unified orchestration and portability."
+            "title": "Application Modernization",
+            "headline": "Modernize applications. Accelerate business.",
+            "description": "Transform applications with containers, enterprise Kubernetes platforms and cloud-native technologies to release faster, scale reliably and respond to changing business needs.",
+            "benefits": [
+              "Faster time to market",
+              "Agility to scale",
+              "Reliable application delivery"
+            ],
+            "imageAlt": "Enterprise servers connected to cloud-native platforms"
           },
           {
-            "title": "Automation",
-            "description": "Accelerate operations with IaC, GitOps, and CI/CD for consistent, reliable deployments."
+            "title": "Enterprise Infrastructure & Security",
+            "headline": "Build integrated infrastructure. Strengthen security.",
+            "description": "Design, deploy and integrate servers, enterprise Kubernetes platforms, firewalls and network devices to simplify IT operations, protect critical workloads and support business growth.",
+            "benefits": [
+              "Simplified infrastructure management",
+              "Secure platforms & networks",
+              "Operational resilience"
+            ],
+            "imageAlt": "Secure enterprise infrastructure and integrated server systems"
           },
           {
-            "title": "Cloud Service Provider",
-            "description": "Operate and optimize Kubernetes and cloud platforms with end-to-end multi-cloud management."
+            "title": "Virtualization & Migration",
+            "headline": "Modernize virtualization. Migrate with confidence.",
+            "description": "Assess, plan and migrate virtual machines to OpenShift Virtualization, supported by KubeVirtStack for AI-assisted readiness assessment, migration planning and validation.",
+            "benefits": [
+              "Reduce migration risk",
+              "Greater platform flexibility",
+              "Business continuity"
+            ],
+            "imageAlt": "Server infrastructure migrating to modern virtual cloud platforms"
           },
           {
-            "title": "Consulting Services",
-            "description": "Strategic guidance for secure, scalable cloud-native transformation and infrastructure design."
+            "title": "Enterprise Technology Consulting",
+            "headline": "Design. Integrate. Operate with confidence.",
+            "description": "Design and implement servers, routers, switches and firewalls with enterprise Linux, Kubernetes and Ansible Automation Platform. Integrate hardware and software with ongoing operational support.",
+            "benefits": [
+              "Architecture & system integration",
+              "Hardware & software implementation",
+              "Operations support & optimization"
+            ],
+            "imageAlt": "Enterprise technology consulting and infrastructure planning session"
           },
           {
-            "title": "Kubernetes as a Service (KaaS)",
-            "description": "Enterprise-ready Kubernetes, fully managed with security and observability."
-          },
-          {
-            "title": "Training Services",
-            "description": "Hands-on cloud-native training for Kubernetes, DevOps, automation, and cloud platforms."
+            "title": "Enterprise Skills & Enablement",
+            "headline": "Build expertise. Accelerate technology adoption.",
+            "description": "Equip teams with enterprise training, learning subscriptions and hands-on labs across infrastructure, cloud, cybersecurity, AI and automation to turn learning into operational capability.",
+            "benefits": [
+              "Practical skills & certification readiness",
+              "Faster platform & AI adoption",
+              "Stronger operational capability"
+            ],
+            "imageAlt": "Team working together on enterprise technology and infrastructure"
           }
         ]
       },
@@ -233,36 +272,6 @@
           {
             "title": "Unified Platform",
             "desc": "Integrate tools, teams, and workflows seamlessly."
-          }
-        ]
-      },
-      "whatWeDoSectionData": {
-        "title": "What we do?",
-        "description": "Innovative Digital Solutions Powering Modern Industries",
-        "cards": [
-          {
-            "title": "E-commerce & Retail",
-            "desc": "Scalable cloud and microservices for digital commerce and customer experience."
-          },
-          {
-            "title": "Telecom & Connectivity",
-            "desc": "Cloud-native automation for stronger telecom networks and connectivity."
-          },
-          {
-            "title": "DevOps & Automation",
-            "desc": "CI/CD and automation to accelerate delivery and improve reliability."
-          },
-          {
-            "title": "AI & Data Intelligence",
-            "desc": "AI-driven analytics that turn data into actionable insights."
-          },
-          {
-            "title": "Healthcare & Life Sciences",
-            "desc": "Secure, scalable digital solutions for better healthcare outcomes."
-          },
-          {
-            "title": "Manufacturing & Industry 4.0",
-            "desc": "Smart automation and IoT systems for industrial efficiency and innovation."
           }
         ]
       },

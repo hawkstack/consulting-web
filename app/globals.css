@@ -433,6 +433,30 @@ body {
   }
 }
 @keyframes home-hero-marketplace-shine {
-  from { transform: translateX(-150%) skewX(-20deg); }
-  to { transform: translateX(350%) skewX(-20deg); }
+  from {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  to {
+    transform: translateX(350%) skewX(-20deg);
+  }
+}
+
+/* Solution panel selection transition */
+.home-solutions-panel {
+  animation: home-solutions-reveal 240ms ease-out;
+}
+@keyframes home-solutions-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-solutions-panel {
+    animation: none;
+  }
 }

@@ -10,8 +10,12 @@ export const homePageData: HomePageData = {
   heroSectionData: {
     eyebrow: "AI DATA CENTER SOLUTIONS",
     title: ["Build the foundation", "for enterprise AI."],
-    description: "Connect compute, storage, networking and AI platforms to turn ambitious ideas into operational capability.",
-    primaryAction: { label: "Explore our solutions", targetId: "our-solutions" },
+    description:
+      "Connect compute, storage, networking and AI platforms to turn ambitious ideas into operational capability.",
+    primaryAction: {
+      label: "Explore our solutions",
+      targetId: "our-solutions",
+    },
     secondaryAction: { label: "Schedule a consultation", href: "/get-started" },
     marketplace: {
       brand: "GeM",
@@ -19,121 +23,155 @@ export const homePageData: HomePageData = {
       emblem: "/images/home/national-emblem.svg",
       brandDescription: "Government e Marketplace",
       title: "Available on GeM",
-      description: "Procure HawkStack solutions through the Government e Marketplace",
+      description:
+        "Procure HawkStack solutions through the Government e Marketplace",
     },
     status: { cluster: "GPU cluster online", uptime: "99.99% uptime" },
     services: [
-  {
-    title: "Data Center Solutions",
-    description:
-      "Design and build AI-ready compute, storage and networking that scales with your workloads.",
-    icon: "server",
-  },
-  {
-    title: "Application Modernization",
-    description:
-      "Move legacy applications to containers and cloud-native platforms without losing momentum.",
-    icon: "refresh",
-  },
-  {
-    title: "Enterprise Infrastructure & Security",
-    description:
-      "Harden the stack from servers to network edge with resilient, policy-driven protection.",
-    icon: "shield",
-  },
-  {
-    title: "Virtualization & Migration",
-    description:
-      "Migrate VMs to modern platforms with minimal downtime and a clear rollback path.",
-    icon: "cube",
-  },
-  {
-    title: "Technology Consulting",
-    description:
-      "Turn goals into a practical roadmap, architecture and delivery plan with expert guidance.",
-    icon: "chat",
-  },
-  {
-    title: "Enterprise Skills & Enablement",
-    description:
-      "Train your teams to run, secure and evolve the platforms you deploy.",
-    icon: "cap",
-  },
-],
+      {
+        title: "Data Center Solutions",
+        description:
+          "Design and build AI-ready compute, storage and networking that scales with your workloads.",
+        icon: "server",
+      },
+      {
+        title: "Application Modernization",
+        description:
+          "Move legacy applications to containers and cloud-native platforms without losing momentum.",
+        icon: "refresh",
+      },
+      {
+        title: "Enterprise Infrastructure & Security",
+        description:
+          "Harden the stack from servers to network edge with resilient, policy-driven protection.",
+        icon: "shield",
+      },
+      {
+        title: "Virtualization & Migration",
+        description:
+          "Migrate VMs to modern platforms with minimal downtime and a clear rollback path.",
+        icon: "cube",
+      },
+      {
+        title: "Technology Consulting",
+        description:
+          "Turn goals into a practical roadmap, architecture and delivery plan with expert guidance.",
+        icon: "chat",
+      },
+      {
+        title: "Enterprise Skills & Enablement",
+        description:
+          "Train your teams to run, secure and evolve the platforms you deploy.",
+        icon: "cap",
+      },
+    ],
   },
 
   cloudServicesSectionData: {
-    title: "Engineering Driven Cloud Services",
+    title: "Technology that moves your business forward.",
+    intro:
+      "Build resilience, accelerate change and strengthen your teams—with connected solutions for enterprises, government and the public sector.",
+    actionLabel: "Discuss this solution",
     services: [
       {
-        id: "app-modernization",
+        id: "data-center-solutions",
         number: "01",
-        title: "App Modernization",
+        title: "Data Center Solutions",
+        headline: "Build a resilient foundation for growth.",
         description:
-          "Transform legacy applications into scalable, cloud-native architectures by refactoring monoliths into containerized microservices using Kubernetes enabling DevOps, CI/CD, and faster, more resilient deployments",
-        video: "/videos/home/services/app-modernization.mp4",
-        imageAlt: "App modernization service preview",
-        href: "/app-modernization",
+          "Design and modernize data centers to keep critical services running, use resources efficiently and scale with business demand.",
+        benefits: [
+          "Business continuity",
+          "Resource efficiency",
+          "Capacity for growth",
+        ],
+        image: "/images/home/solutions/data-center.webp",
+        imageAlt: "Modern data center with rows of server racks",
+        href: "/get-started?solution=data-center-solutions",
       },
       {
-        id: "kubevirt",
+        id: "application-modernization",
         number: "02",
-        title: "KubeVirt",
+        title: "Application Modernization",
+        headline: "Modernize applications. Accelerate business.",
         description:
-          "Run virtual machines alongside containers on Kubernetes with unified orchestration using KubeVirt enabling seamless coexistence, workload portability, and efficient resource utilization through Kubernetes-native tools.",
-        video: "/videos/home/services/kubevirt.mp4 ",
-        imageAlt: "KubeVirt service preview",
-        href: "/kubevirt-service",
+          "Transform applications with containers, enterprise Kubernetes platforms and cloud-native technologies to release faster, scale reliably and respond to changing business needs.",
+        benefits: [
+          "Faster time to market",
+          "Agility to scale",
+          "Reliable application delivery",
+        ],
+        image: "/images/home/solutions/application-modernization.webp",
+        imageAlt: "Enterprise servers connected to cloud-native platforms",
+        href: "/get-started?solution=application-modernization",
       },
       {
-        id: "automation",
+        id: "enterprise-infrastructure-security",
         number: "03",
-        title: "Automation",
+        title: "Enterprise Infrastructure & Security",
+        headline: "Build integrated infrastructure. Strengthen security.",
         description:
-          "Accelerate operations with intelligent automation using IaC, GitOps, and CI/CD eliminating manual work, ensuring consistency, and enabling faster, reliable deployments at scale.",
-        video: "/videos/home/services/automation.mp4",
-        imageAlt: "Automation service preview",
-        href: "/automation",
+          "Design, deploy and integrate servers, enterprise Kubernetes platforms, firewalls and network devices to simplify IT operations, protect critical workloads and support business growth.",
+        benefits: [
+          "Simplified infrastructure management",
+          "Secure platforms & networks",
+          "Operational resilience",
+        ],
+        image: "/images/home/solutions/infrastructure-security.webp",
+        imageAlt:
+          "Secure enterprise infrastructure and integrated server systems",
+        href: "/get-started?solution=enterprise-infrastructure-security",
       },
       {
-        id: "cloud-service-provider",
+        id: "virtualization-migration",
         number: "04",
-        title: "Cloud Service Provider",
+        title: "Virtualization & Migration",
+        headline: "Modernize virtualization. Migrate with confidence.",
         description:
-          "Operate and optimize Kubernetes and cloud platforms at scale with end-to-end management, ensuring high availability, scalability, and cost efficiency across multi-cloud and hybrid environments.",
-        video: "/videos/home/services/cloud-service-provider.mp4",
-        imageAlt: "Cloud service provider preview",
-        href: "/cloud-platform-operations",
+          "Assess, plan and migrate virtual machines to OpenShift Virtualization, supported by KubeVirtStack for AI-assisted readiness assessment, migration planning and validation.",
+        benefits: [
+          "Reduce migration risk",
+          "Greater platform flexibility",
+          "Business continuity",
+        ],
+        image: "/images/home/solutions/virtualization-migration.webp",
+        imageAlt:
+          "Server infrastructure migrating to modern virtual cloud platforms",
+        href: "/get-started?solution=virtualization-migration",
       },
       {
-        id: "consulting-services",
+        id: "enterprise-technology-consulting",
         number: "05",
-        title: "Consulting Services",
+        title: "Enterprise Technology Consulting",
+        headline: "Design. Integrate. Operate with confidence.",
         description:
-          "Strategic guidance for cloud-native transformation and infrastructure design helping you build secure, scalable, compliant architectures with the right platforms and migration strategies aligned to your business goals.",
-        video: "/videos/home/services/consulting.mp4",
-        imageAlt: "Consulting services preview",
-        href: "/consulting-service",
+          "Design and implement servers, routers, switches and firewalls with enterprise Linux, Kubernetes and Ansible Automation Platform. Integrate hardware and software with ongoing operational support.",
+        benefits: [
+          "Architecture & system integration",
+          "Hardware & software implementation",
+          "Operations support & optimization",
+        ],
+        image: "/images/home/solutions/technology-consulting.webp",
+        imageAlt:
+          "Enterprise technology consulting and infrastructure planning session",
+        href: "/get-started?solution=enterprise-technology-consulting",
       },
       {
-        id: "kaas",
+        id: "enterprise-skills-enablement",
         number: "06",
-        title: "Kubernetes as a Service (KaaS)",
+        title: "Enterprise Skills & Enablement",
+        headline: "Build expertise. Accelerate technology adoption.",
         description:
-          "Enterprise-ready Kubernetes, fully managed with security and observability so you can build while we handle provisioning, scaling, upgrades, and maintenance.",
-        video: "/videos/home/services/KAAS.mp4",
-        imageAlt: "Kubernetes as a Service preview",
-        href: "/kubernetes-as-a-services",
-      },
-      {
-        id: "training-services",
-        number: "07",
-        title: "Training Services",
-        description:
-          "Upskill teams with hands-on cloud-native training covering Kubernetes, DevOps, automation, and cloud platforms through real-world labs empowering confident management of modern infrastructure.",
-        video: "/videos/home/services/Training.mp4",
-        imageAlt: "Training services preview",
-        href: "/training-services",
+          "Equip teams with enterprise training, learning subscriptions and hands-on labs across infrastructure, cloud, cybersecurity, AI and automation to turn learning into operational capability.",
+        benefits: [
+          "Practical skills & certification readiness",
+          "Faster platform & AI adoption",
+          "Stronger operational capability",
+        ],
+        image: "/images/home/solutions/skills-enablement.webp",
+        imageAlt:
+          "Team working together on enterprise technology and infrastructure",
+        href: "/get-started?solution=enterprise-skills-enablement",
       },
     ],
   },
@@ -236,7 +274,8 @@ export const homePageData: HomePageData = {
       {
         id: "red-hat",
         name: "Red Hat",
-        caption: "OpenShift Ãƒâ€šÃ‚Â· Ansible Ãƒâ€šÃ‚Â· Virtualization Ãƒâ€šÃ‚Â· AI",
+        caption:
+          "OpenShift Ãƒâ€šÃ‚Â· Ansible Ãƒâ€šÃ‚Â· Virtualization Ãƒâ€šÃ‚Â· AI",
         description:
           "Consulting, solution design, system integration, modernization, operations, and technical training.",
         badge: "Strategic partner",
@@ -416,55 +455,6 @@ export const homePageData: HomePageData = {
         title: "Unified Platform",
         icon: "layers",
         desc: "Seamlessly integrate tools, teams, and workflows.",
-      },
-    ],
-  },
-
-  whatWeDoSectionData: {
-    title: "What we do?",
-    description: "Innovative Digital Solutions Powering Modern Industries",
-    cards: [
-      {
-        id: 1,
-        title: "E-commerce & Retail",
-        desc: "Scalable cloud and microservices solutions to enhance digital commerce and customer experience.",
-        image: "/images/home/whatwedo/retail.webp",
-        link: "",
-      },
-      {
-        id: 2,
-        title: "Telecom & Connectivity",
-        desc: "Cloud-native and automated solutions to enhance telecom networks and connectivity.",
-        image: "/images/home/whatwedo/telecom.webp",
-        link: "",
-      },
-      {
-        id: 3,
-        title: "DevOps & Automation",
-        desc: "CI/CD and automation solutions to accelerate development and improve system reliability.",
-        image: "/images/home/whatwedo/devops.webp",
-        link: "",
-      },
-      {
-        id: 4,
-        title: "AI & Data Intelligence",
-        desc: "AI-driven analytics to turn data into actionable insights for smarter decision-making.",
-        image: "/images/home/whatwedo/ai-data.webp",
-        link: "",
-      },
-      {
-        id: 5,
-        title: "Healthcare & Life Sciences",
-        desc: "Secure and scalable digital solutions to improve healthcare systems and patient outcomes.",
-        image: "/images/home/whatwedo/healthcare.webp",
-        link: "",
-      },
-      {
-        id: 6,
-        title: "Manufacturing & Industry 4.0",
-        desc: "Smart automation and IoT-driven systems to boost industrial efficiency and innovation.",
-        image: "/images/home/whatwedo/industry.webp",
-        link: "",
       },
     ],
   },
