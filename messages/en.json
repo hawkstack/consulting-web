@@ -470,5 +470,47 @@
     "training": "Training",
     "description": "HawkStack helps businesses accelerate digital transformation through cloud platforms, automation, and modern DevOps practices. From strategy to execution, we build systems that are resilient, scalable, and ready for the future.",
     "rights": "© 2026 HawkStack. All Rights Reserved."
+  },
+  "TechnologyEcosystem": {
+    "content": {
+      "title": "End to End Expertise for Your",
+      "highlight": "Digital Transformation.",
+      "description": "Integrated solutions to modernize IT, strengthen resilience and accelerate business growth.",
+      "benefits": {
+        "modernize": {
+          "title": [
+            "Modernize",
+            "Enterprise IT"
+          ],
+          "description": "Unify infrastructure, cloud and platforms."
+        },
+        "resilience": {
+          "title": [
+            "Strengthen",
+            "Business Resilience"
+          ],
+          "description": "Build reliable, scalable operations."
+        },
+        "value": {
+          "title": [
+            "Maximize",
+            "Technology Value"
+          ],
+          "description": "Align investments with business priorities."
+        }
+      },
+      "groups": {
+        "enterprise": "Enterprise Platforms",
+        "cloud": "Cloud Platforms",
+        "infrastructure": "Infrastructure Partner"
+      },
+      "distribution": {
+        "eyebrow": "Distribution Channel",
+        "title": "Partners",
+        "description": "Procurement & fulfilment network",
+        "gemName": "GeM — Government e Marketplace"
+      },
+      "ctaLabel": "View More"
+    }
   }
 }

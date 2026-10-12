@@ -1,5 +1,6 @@
 import type {
   CoverageItem,
+  TechnologyEcosystemData,
   MembershipCard,
   TechnologyJourneyItem,
   TechnologyPartner,
@@ -142,3 +143,141 @@ export const technologyCategories = [
   "Cybersecurity",
   "AI",
 ];
+
+export const technologyEcosystemData: TechnologyEcosystemData = {
+  "title": "End to End Expertise for Your",
+  "highlight": "Digital Transformation.",
+  "description": "Integrated solutions to modernize IT, strengthen resilience and accelerate business growth.",
+  "benefits": [
+    {
+      "id": "modernize",
+      "title": [
+        "Modernize",
+        "Enterprise IT"
+      ],
+      "description": "Unify infrastructure, cloud and platforms.",
+      "icon": "platform"
+    },
+    {
+      "id": "resilience",
+      "title": [
+        "Strengthen",
+        "Business Resilience"
+      ],
+      "description": "Build reliable, scalable operations.",
+      "icon": "shield"
+    },
+    {
+      "id": "value",
+      "title": [
+        "Maximize",
+        "Technology Value"
+      ],
+      "description": "Align investments with business priorities.",
+      "icon": "growth"
+    }
+  ],
+  "groups": [
+    {
+      "id": "enterprise",
+      "title": "Enterprise Platforms",
+      "partners": [
+        {
+          "id": "red-hat",
+          "name": "Red Hat",
+          "kind": "image",
+          "logo": "/images/home/product-reseller/Redhat.webp",
+          "href": "https://www.credly.com/badges/a89d1d73-c4e0-4395-92a2-e03641af5d6c/public_url",
+          "external": true
+        },
+        {
+          "id": "suse",
+          "name": "SUSE",
+          "kind": "image",
+          "logo": "/images/home/product-reseller/Suse.webp",
+          "href": "/certificates/suse-partnership.pdf",
+          "external": true
+        },
+        {
+          "id": "mirantis",
+          "name": "MIRANTIS",
+          "kind": "image",
+          "logo": "/images/home/product-reseller/Mirantis.webp"
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud Platforms",
+      "partners": [
+        {
+          "id": "aws",
+          "name": "Amazon Web Services",
+          "kind": "aws"
+        },
+        {
+          "id": "azure",
+          "name": "Microsoft Azure",
+          "kind": "image",
+          "logo": "/images/home/product-reseller/Azure.webp"
+        },
+        {
+          "id": "google-cloud",
+          "name": "Google Cloud",
+          "kind": "image",
+          "logo": "/images/home/product-reseller/google-cloud.webp"
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "title": "Infrastructure Partner",
+      "partners": [
+        {
+          "id": "dell",
+          "name": "Dell Technologies",
+          "kind": "dell"
+        },
+        {
+          "id": "lenovo",
+          "name": "Lenovo",
+          "kind": "lenovo"
+        },
+        {
+          "id": "cncf",
+          "name": "Cloud Native",
+          "subtitle": "Computing Foundation",
+          "kind": "image",
+          "logo": "/images/home/product-reseller/cncf.webp"
+        }
+      ]
+    }
+  ],
+  "distribution": {
+    "eyebrow": "Distribution Channel",
+    "title": "Partners",
+    "description": "Procurement & fulfilment network",
+    "partners": [
+      {
+        "id": "ingram",
+        "name": "Ingram Micro",
+        "logo": "/images/home/technology-ecosystem/ingram-micro.svg"
+      },
+      {
+        "id": "redington",
+        "name": "Redington",
+        "logo": "/images/home/technology-ecosystem/redington.svg"
+      },
+      {
+        "id": "gem",
+        "name": "GeM — Government e Marketplace",
+        "logo": "/images/home/gem-logo.png",
+        "emblem": "/images/home/national-emblem.svg"
+      }
+    ]
+  },
+  "cta": {
+    "label": "View More",
+    "href": "/partner"
+  }
+};
