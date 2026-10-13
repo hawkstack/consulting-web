@@ -22,7 +22,7 @@ export default function ProductShowcaseSection() {
               {data.title[0]}<br />{data.title[1]}
             </h2>
           </div>
-          <p dir={textDirection} className="max-w-[480px] text-left text-xs leading-[1.6] text-[#405b82] md:justify-self-end md:text-right xl:text-sm">{data.description}</p>
+          <p dir={textDirection} className="max-w-[480px] text-left text-xs leading-[1.6] text-[#405b82] md:justify-self-end md:text-left xl:text-sm">{data.description}</p>
         </div>
 
         <article className="mt-6 grid min-w-0 overflow-hidden rounded-[16px] border border-[#d4e1f0] bg-[#e9f1f9] shadow-[0_4px_12px_#1737530a] md:min-h-[clamp(280px,50svh,340px)] md:grid-cols-[minmax(0,37.5%)_minmax(0,1fr)]">

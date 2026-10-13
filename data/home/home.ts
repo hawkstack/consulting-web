@@ -16,7 +16,7 @@ export const homePageData: HomePageData = {
       label: "Explore our solutions",
       targetId: "our-solutions",
     },
-    secondaryAction: { label: "Schedule a consultation", href: "/get-started" },
+    secondaryAction: { label: "Schedule a consultation", href: "https://calendar.app.google/X7vJXHcMjjBP661w5" },
     marketplace: {
       brand: "GeM",
       logo: "/images/home/gem-logo.png",
