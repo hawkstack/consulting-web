@@ -138,10 +138,7 @@
     "content": {
       "heroSectionData": {
         "eyebrow": "AI DATA CENTER SOLUTIONS",
-        "title": [
-          "Build the foundation",
-          "for enterprise AI."
-        ],
+        "title": ["Build the foundation", "for enterprise AI."],
         "description": "Connect compute, storage, networking and AI platforms to turn ambitious ideas into operational capability.",
         "primaryAction": {
           "label": "Explore our solutions"
@@ -435,24 +432,15 @@
       "description": "Integrated solutions to modernize IT, strengthen resilience and accelerate business growth.",
       "benefits": {
         "modernize": {
-          "title": [
-            "Modernize",
-            "Enterprise IT"
-          ],
+          "title": ["Modernize", "Enterprise IT"],
           "description": "Unify infrastructure, cloud and platforms."
         },
         "resilience": {
-          "title": [
-            "Strengthen",
-            "Business Resilience"
-          ],
+          "title": ["Strengthen", "Business Resilience"],
           "description": "Build reliable, scalable operations."
         },
         "value": {
-          "title": [
-            "Maximize",
-            "Technology Value"
-          ],
+          "title": ["Maximize", "Technology Value"],
           "description": "Align investments with business priorities."
         }
       },
@@ -470,13 +458,10 @@
       "ctaLabel": "View More"
     }
   },
-"ProductShowcase": {
+  "ProductShowcase": {
     "content": {
       "eyebrow": "HawkStack Products",
-      "title": [
-        "Modernize with confidence.",
-        "Operate with clarity."
-      ],
+      "title": ["Modernize with confidence.", "Operate with clarity."],
       "description": "AI-assisted products that help enterprises assess readiness, plan technology change and validate critical platforms.",
       "product": {
         "category": "Enterprise Virtualization & Migration Readiness",
@@ -492,6 +477,70 @@
         "ctaLabel": "Plan Your Migration",
         "imageAlt": "Enterprise servers connected to virtual cloud platforms"
       }
+    }
+  },
+
+  "WhyHawkStack": {
+    "eyebrow": "WHY HAWKSTACK?",
+    "title": "Expertise that connects strategy to execution.",
+    "intro": "We unite hardware, software and services to build technology environments aligned with your business priorities.",
+    "imageAlt": "Technology professionals collaborating in front of cloud and infrastructure diagrams",
+    "principles": [
+      {
+        "id": "connected-approach",
+        "number": "01",
+        "title": "One connected approach",
+        "description": "Consulting, platforms, infrastructure and enablement work together around your priorities."
+      },
+      {
+        "id": "operations",
+        "number": "02",
+        "title": "Built for operations",
+        "description": "Architecture and delivery decisions account for security, resilience and ongoing management."
+      },
+      {
+        "id": "outcomes",
+        "number": "03",
+        "title": "Business outcomes first",
+        "description": "Every engagement starts with what needs to improve for the organization and its teams."
+      }
+    ]
+  },
+  "BuildYourCareer": {
+    "eyebrow": "BUILD YOUR CAREER WITH US",
+    "title": "Grow your career with HawkStack.",
+    "description": "Join a team solving meaningful technology challenges while learning, collaborating and building solutions that create real impact.",
+    "buttonText": "View open positions",
+    "card": {
+      "eyebrow": "LIFE AT HAWKSTACK",
+      "title": "Learn. Build. Grow together.",
+      "description": "A supportive environment for meaningful work and continuous growth.",
+      "features": [
+        {
+          "id": "meaningful-work",
+          "number": "01",
+          "title": "Work that matters",
+          "description": "Solve meaningful challenges"
+        },
+        {
+          "id": "learning",
+          "number": "02",
+          "title": "Keep learning",
+          "description": "Grow through projects and mentors"
+        },
+        {
+          "id": "teamwork",
+          "number": "03",
+          "title": "Build together",
+          "description": "Collaborate with supportive teams"
+        },
+        {
+          "id": "career-growth",
+          "number": "04",
+          "title": "Grow your career",
+          "description": "Expand skills and opportunities"
+        }
+      ]
     }
   }
 }
