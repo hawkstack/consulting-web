@@ -137,11 +137,21 @@
     "exploreOpenRoles": "Explore Open Roles",
     "content": {
       "heroSectionData": {
-        "eyebrow": "AI DATA CENTER SOLUTIONS",
-        "title": [
-          "Build the foundation",
-          "for enterprise AI."
+        "textSlides": [
+          {
+            "eyebrow": "APPLICATION MODERNIZATION",
+            "title": ["Modernize applications.", "Accelerate innovation."],
+            "description": "Transform legacy applications with enterprise Kubernetes to deliver faster, scale confidently, and strengthen resilience."
+          },
+          {
+            "eyebrow": "KUBEVIRTSTACK",
+            "title": ["Move beyond hypervisors.","Build on KubeVirt."],
+            "description": "Plan your VM migration to Kubernetes-native virtualization with AI-assisted readiness assessment and migration planning.",
+            "badge": "Under Development"
+          }
         ],
+        "eyebrow": "AI DATA CENTER SOLUTIONS",
+        "title": ["Build the foundation", "for enterprise AI."],
         "description": "Connect compute, storage, networking and AI platforms to turn ambitious ideas into operational capability.",
         "primaryAction": {
           "label": "Explore our solutions"
@@ -435,24 +445,15 @@
       "description": "Integrated solutions to modernize IT, strengthen resilience and accelerate business growth.",
       "benefits": {
         "modernize": {
-          "title": [
-            "Modernize",
-            "Enterprise IT"
-          ],
+          "title": ["Modernize", "Enterprise IT"],
           "description": "Unify infrastructure, cloud and platforms."
         },
         "resilience": {
-          "title": [
-            "Strengthen",
-            "Business Resilience"
-          ],
+          "title": ["Strengthen", "Business Resilience"],
           "description": "Build reliable, scalable operations."
         },
         "value": {
-          "title": [
-            "Maximize",
-            "Technology Value"
-          ],
+          "title": ["Maximize", "Technology Value"],
           "description": "Align investments with business priorities."
         }
       },
@@ -470,13 +471,10 @@
       "ctaLabel": "View More"
     }
   },
-"ProductShowcase": {
+  "ProductShowcase": {
     "content": {
       "eyebrow": "HawkStack Products",
-      "title": [
-        "Modernize with confidence.",
-        "Operate with clarity."
-      ],
+      "title": ["Modernize with confidence.", "Operate with clarity."],
       "description": "AI-assisted products that help enterprises assess readiness, plan technology change and validate critical platforms.",
       "product": {
         "category": "Enterprise Virtualization & Migration Readiness",
@@ -494,7 +492,7 @@
       }
     }
   },
-"SectorsSection": {
+  "SectorsSection": {
     "content": {
       "eyebrow": "Who we serve",
       "title": "Enterprises. Government. Public Sector.",

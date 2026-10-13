@@ -1,6 +1,14 @@
 import type { ComponentType, SVGProps } from "react";
 
+export type HeroTextSlide = {
+  eyebrow: string;
+  title: string[];
+  description: string;
+  badge?: string;
+};
+
 export type HeroSectionData = {
+  textSlides?: HeroTextSlide[];
   eyebrow: string;
   title: [string, string];
   description: string;
