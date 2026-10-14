@@ -34,7 +34,7 @@ export default async function HomePage() {
       {/* <DigitalTransformation data={digitalTransformationSectionData} /> */}
       <TechnologyCoverage />
       <EngineeringDrivenCloudServices data={cloudServicesSectionData} />
-        <SectorsSection />
+      <SectorsSection />
       <WhyHawkStack />
       <BuildYourCareer />
       <ContactCTA />
