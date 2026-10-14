@@ -56,7 +56,7 @@ export default function EngineeringDrivenCloudServices({ data }: Props) {
             className="max-w-[600px] text-[clamp(28px,2.8vw,40px)] font-semibold leading-[1.16] tracking-[-0.6px] text-[#08152f]">
             {data.title}
           </h2>
-          <p className="max-w-[390px] text-sm leading-[1.55] text-[#40577b] md:justify-self-end md:text-right">
+          <p className="max-w-[390px] text-sm leading-[1.55] text-[#40577b] md:justify-self-end md:text-left">
             {data.intro}
           </p>
         </div>

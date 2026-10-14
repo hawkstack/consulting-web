@@ -16,6 +16,10 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
     "[left:14.3%] [top:32.6%]",
   ];
   const [active, setActive] = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
+  const [previousTextIndex, setPreviousTextIndex] = useState<number | null>(null);
+  const textSlides = [data, ...(data.textSlides ?? [])];
+
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -35,6 +39,17 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
     return () => window.clearInterval(timer);
   }, [reducedMotion, services.length]);
 
+  useEffect(() => {
+    if (reducedMotion || !data.textSlides?.length) return;
+    let cleanupTimer: number | undefined;
+    const timer = window.setInterval(() => {
+      setPreviousTextIndex(textIndex);
+      setTextIndex(current => (current + 1) % (1 + (data.textSlides?.length ?? 0)));
+      cleanupTimer = window.setTimeout(() => setPreviousTextIndex(null), 650);
+    }, 6000);
+    return () => { window.clearInterval(timer); window.clearTimeout(cleanupTimer); };
+  }, [reducedMotion, data.textSlides?.length, textIndex]);
+
   const service = services[active];
 
   return (
@@ -43,27 +58,68 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
       aria-labelledby="home-hero-title">
       <div className="mx-auto grid max-w-[1440px] grid-cols-2 items-center gap-12 px-12 pt-5 pb-8 min-[761px]:min-h-[calc(100svh-70px)] xl:px-[68px] max-[1100px]:gap-8 max-[760px]:grid-cols-1 max-[760px]:gap-7 max-[760px]:px-6 max-[760px]:pt-8 max-[760px]:pb-12 max-[400px]:px-[18px]">
         <div className="min-[761px]:-translate-y-3 [padding-bottom:20px] [&_h1]:[font-size:clamp(32px,_3.4vw,_48px)] [&_h1]:[line-height:1.08] [&_h1]:[font-weight:600] [&_h1]:[letter-spacing:-0.8px] [&_h1]:[margin:0_0_16px] max-[1100px]:[padding-bottom:20px] max-[760px]:[padding-bottom:0] max-[760px]:[&_h1]:[font-size:clamp(30px,_7vw,_42px)]">
-          <p className="[color:#00d2ef] [font-size:12px] [font-weight:600] [letter-spacing:2.3px] [margin:0_0_14px]">
-            {data.eyebrow}
-          </p>
-          <h1 id="home-hero-title">
-            {data.title[0]}
-            <br />
-            {data.title[1]}
-          </h1>
-          <p className="[max-width:510px] [color:#c4d1e5] [font-size:16px] [font-weight:400] [line-height:1.45] [margin:0] max-[1100px]:[font-size:14px] max-[760px]:[max-width:470px]">
-            {data.description}
-          </p>
+          <div className="grid [container-type:inline-size]">
+            {[...new Set([textIndex, ...(previousTextIndex === null ? [] : [previousTextIndex])])].map(index => {
+              const heroText = textSlides[index % textSlides.length];
+              const outgoing = index !== textIndex;
+              return (
+                <div key={index} aria-hidden={outgoing || undefined} className={"col-start-1 row-start-1 " + (outgoing ? "hero-copy-leave pointer-events-none" : previousTextIndex === null ? "" : "hero-copy-enter")}>
+            <p className="[color:#00d2ef] [font-size:12px] [font-weight:600] [letter-spacing:2.3px] [margin:0_0_14px]">
+              {heroText.eyebrow}
+            </p>
+            <h1 id={outgoing ? undefined : "home-hero-title"} style={heroText.eyebrow === "KUBEVIRTSTACK" ? { fontSize: "clamp(18px, 6.1cqw, 42px)" } : undefined}>
+              {heroText.title.map((line, index) => (
+                <span key={index} className="block">
+                  {line}
+                </span>
+              ))}
+            </h1>
+            <p className="[max-width:510px] [color:#c4d1e5] [font-size:16px] [font-weight:400] [line-height:1.45] [margin:0] max-[1100px]:[font-size:14px] max-[760px]:[max-width:470px]">
+              {heroText.description}
+            </p>
+            {"badge" in heroText && heroText.badge && (
+              <p className="mt-2 text-[10px] text-[#c4d1e5]">
+                {heroText.badge}
+              </p>
+            )}
+
+                </div>
+              );
+            })}
+          </div>
           <div className="[display:flex] [flex-wrap:wrap] [gap:14px] [margin-top:24px] max-[400px]:[gap:10px]">
-            <span className="[border-radius:999px] [padding:14px_20px] [font-size:13px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:white] [border:0] [background:linear-gradient(100deg,_#1fb28a,_#075be0)]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:13px_16px] max-[400px]:[padding:12px_14px] max-[400px]:[font-size:11px]">
+            <a
+              href={"#" + data.primaryAction.targetId}
+              onClick={(event) => {
+                event.preventDefault();
+                document
+                  .getElementById(data.primaryAction.targetId)
+                  ?.scrollIntoView({
+                    behavior: window.matchMedia(
+                      "(prefers-reduced-motion: reduce)",
+                    ).matches
+                      ? "instant"
+                      : "smooth",
+                    block: "start",
+                  });
+              }}
+              className="[border-radius:999px] [padding:14px_20px] [font-size:13px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:white] [border:0] [background:linear-gradient(100deg,_#1fb28a,_#075be0)]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:13px_16px] max-[400px]:[padding:12px_14px] max-[400px]:[font-size:11px]">
               {data.primaryAction.label}
-            </span>
-            <span className="[border-radius:999px] [padding:14px_20px] [font-size:13px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:#071731] [border:1px_solid_#cbd6e9] [background:white]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:13px_16px] max-[400px]:[padding:12px_14px] max-[400px]:[font-size:11px]">
+            </a>
+            <a
+              href={data.secondaryAction.href || undefined}
+              aria-disabled={!data.secondaryAction.href || undefined}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="[border-radius:999px] [padding:14px_20px] [font-size:13px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:#071731] [border:1px_solid_#cbd6e9] [background:white]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:13px_16px] max-[400px]:[padding:12px_14px] max-[400px]:[font-size:11px]">
               {data.secondaryAction.label}
-            </span>
+            </a>
           </div>
           <div className="hero-marketplace-hover relative isolate overflow-hidden [display:flex] [align-items:center] [gap:18px] [width:440px] [max-width:100%] [margin-top:48px] [padding:12px_24px] [border:1px_solid_transparent] [border-radius:18px] [background:linear-gradient(110deg,_#202637,_#092039)_padding-box,_linear-gradient(110deg,_#ee8b47,_#1fb28a,_#1685ff)_border-box] [&_strong]:[font-size:15px] [&_strong]:[font-weight:500] [&_p]:[margin:4px_0_0] [&_p]:[color:#c1cad8] [&_p]:[font-size:11px] [&_p]:[font-weight:400] [&_p]:[line-height:1.5] max-[1100px]:[gap:12px] max-[1100px]:[padding:12px_16px] max-[760px]:[margin-top:28px] max-[400px]:[padding:12px] max-[400px]:[&_strong]:[font-size:12px] max-[400px]:[&_p]:[font-size:9px]">
-            <span aria-hidden="true" className="hero-marketplace-shine pointer-events-none absolute inset-y-0 left-0 z-10 w-[45%] -translate-x-[150%] -skew-x-[20deg] bg-[linear-gradient(90deg,transparent,rgba(18,200,240,0.12),rgba(255,255,255,0.32),rgba(18,200,240,0.12),transparent)]" />
+            <span
+              aria-hidden="true"
+              className="hero-marketplace-shine pointer-events-none absolute inset-y-0 left-0 z-10 w-[45%] -translate-x-[150%] -skew-x-[20deg] bg-[linear-gradient(90deg,transparent,rgba(18,200,240,0.12),rgba(255,255,255,0.32),rgba(18,200,240,0.12),transparent)]"
+            />
             <div className="flex shrink-0 items-center gap-2 border-r border-[#607383] pr-[18px] max-[400px]:gap-1 max-[400px]:pr-3">
               <Image
                 src={data.marketplace.emblem}
@@ -138,8 +194,14 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
               <p className="[color:#12c8f0] [font-size:2.083cqw] [font-weight:500] [letter-spacing:0.189cqw] [margin:0_0_1.136cqw]">
                 {active + 1} / {services.length}
               </p>
-              <h2 className={active >= 1 && active <= 3 ? "text-[2.8cqw]" : "text-[3.5cqw]"}>{service.title}</h2>
-              <p className={`text-[#b5c3df] font-normal leading-[1.45] m-0 ${active >= 1 && active <= 3 ? "text-[2cqw]" : "text-[2.273cqw]"}`}>
+              <h2
+                className={
+                  active >= 1 && active <= 3 ? "text-[2.8cqw]" : "text-[3.5cqw]"
+                }>
+                {service.title}
+              </h2>
+              <p
+                className={`text-[#b5c3df] font-normal leading-[1.45] m-0 ${active >= 1 && active <= 3 ? "text-[2cqw]" : "text-[2.273cqw]"}`}>
                 {service.description}
               </p>
             </div>
