@@ -142,7 +142,8 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
             </div>
             <div>
               <strong>{data.marketplace.title}</strong>
-              <p>{data.marketplace.description}</p>
+              <p>Procure HawkStack solutions on GeM.</p>
+              <p className="break-words"><span className="font-semibold text-[#35d6ed]">GeM Seller ID:</span>{" "}<span className="rounded border border-[#35d6ed]/30 bg-[#00d2ef]/10 px-1.5 py-0.5 font-bold text-white">6QX3260014928264</span></p>
             </div>
           </div>
         </div>
