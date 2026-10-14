@@ -1,5 +1,6 @@
 import { MegaItem, OfferingsMenuContent } from "./types";
 import { PRODUCT_TYPES } from "@/constants/productReseller";
+import { homePageData } from "@/data/home/home";
 
 /* ================= PRODUCTS ================= */
 export const products: MegaItem[] = [
@@ -110,52 +111,14 @@ export const offeringsMenuContent: OfferingsMenuContent = {
   ],
 };
 
-/* ================= SERVICES ================= */
-export const services: MegaItem[] = [
-  {
-    id: "app modernization",
-    translationKey: "appModernization",
-    image: "/images/services/App-Modernization.webp",
-    href: "/app-modernization",
-  },
-  {
-    id: "kubeVirt",
-    translationKey: "kubevirt",
-    image: "/images/services/KubeVirt.webp",
-    href: "/kubevirt-service",
-  },
-  {
-    id: "automation",
-    translationKey: "automation",
-    image: "/images/services/Automation.webp",
-    href: "/automation",
-  },
-  {
-    id: "cloud platform operation",
-    translationKey: "cloudPlatformOperation",
-    image: "/images/services/Cloud-Platform-Operation.webp",
-    href: "/cloud-platform-operations",
-  },
-  {
-    id: "consulting services",
-    translationKey: "consultingServices",
-    image: "/images/services/Consulting-Services.webp",
-    href: "/consulting-service",
-  },
-  {
-    id: "training services",
-    translationKey: "trainingServices",
-    image: "/images/services/Training-Services.webp",
-    href: "/training-services",
-  },
-  {
-    id: "kubernetes as a services",
-    translationKey: "kubernetesAsAService",
-    image: "/images/services/Kubernetes-as-a-Services.webp",
-    href: "/kubernetes-as-a-services",
-  },
-];
-
+/* ================= SOLUTIONS ================= */
+export const services: MegaItem[] =
+  homePageData.cloudServicesSectionData.services.map((solution, index) => ({
+    id: solution.id,
+    translationKey: String(index),
+    image: solution.image,
+    href: solution.href,
+  }));
 /* ================= COMPANY ================= */
 export const company: MegaItem[] = [
   {
