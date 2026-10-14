@@ -557,7 +557,11 @@
           "number": "04",
           "title": "طوّر مسيرتك المهنية",
           "description": "وسّع مهاراتك وفرصك"
-"SectorsSection": {
+        }
+      ]
+    }
+  },
+  "SectorsSection": {
     "content": {
       "eyebrow": "القطاعات التي نخدمها",
       "title": "المؤسسات. الحكومة. القطاع العام.",

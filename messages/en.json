@@ -539,7 +539,11 @@
           "number": "04",
           "title": "Grow your career",
           "description": "Expand skills and opportunities"
-"SectorsSection": {
+        }
+      ]
+    }
+  },
+  "SectorsSection": {
     "content": {
       "eyebrow": "Who we serve",
       "title": "Enterprises. Government. Public Sector.",
