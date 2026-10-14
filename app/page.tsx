@@ -3,6 +3,8 @@ import { seoMeta } from "../components/seo/seoMeta";
 import HeroSection from "@/components/home/HeroSection";
 import ProductShowcaseSection from "@/components/home/ProductShowcaseSection";
 import EngineeringDrivenCloudServices from "@/components/home/EngineeringDrivenCloudServices";
+import WhyHawkStack from "@/components/home/WhyHawkStack/components/WhyHawkStack";
+import BuildYourCareer from "@/components/home/BuildYourCareer/components/BuildYourCareer";
 import SectorsSection from "@/components/home/SectorsSection";
 import ContactCTA from "@/components/home/ContactFormSection";
 // import ProductReseller from "@/components/home/ProductReseller";
@@ -33,6 +35,9 @@ export default async function HomePage() {
       <TechnologyCoverage />
       <EngineeringDrivenCloudServices data={cloudServicesSectionData} />
       <SectorsSection />
+      <WhyHawkStack />
+      <BuildYourCareer />
+
       <ContactCTA />
     </div>
   );
