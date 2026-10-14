@@ -21,7 +21,7 @@ export const productShowcaseData: ProductShowcaseData = {
     ],
     "ctaLabel": "Plan Your Migration",
     "href": "/get-started?solution=virtualization-migration&product=KubeVirtStack",
-    "image": "/images/home/products/kubevirtstack-readiness.webp",
+    "image": "/images/home/products/kubevirtstack-platform.svg",
     "imageAlt": "Enterprise servers connected to virtual cloud platforms",
     "logo": "/images/home/products/kubevirtstack-logo.svg"
   }

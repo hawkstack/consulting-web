@@ -539,6 +539,28 @@
           "number": "04",
           "title": "Grow your career",
           "description": "Expand skills and opportunities"
+"SectorsSection": {
+    "content": {
+      "eyebrow": "Who we serve",
+      "title": "Enterprises. Government. Public Sector.",
+      "description": "Modernizing infrastructure. Strengthening operations. Enabling growth.",
+      "footer": "One integrated approach. Across critical sectors.",
+      "ctaLabel": "Discuss Your Requirements",
+      "sectors": [
+        {
+          "title": "Enterprises",
+          "description": "Technology aligned with business ambition.",
+          "imageAlt": "Enterprise teams overlooking a modern city"
+        },
+        {
+          "title": "Government",
+          "description": "Digital foundations for public service.",
+          "imageAlt": "Government buildings in New Delhi"
+        },
+        {
+          "title": "Public Sector",
+          "description": "Resilient systems for essential services.",
+          "imageAlt": "Urban transport and essential public infrastructure"
         }
       ]
     }
