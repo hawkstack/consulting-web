@@ -8,6 +8,21 @@ import {
 
 export const homePageData: HomePageData = {
   heroSectionData: {
+    textSlides: [
+      {
+        eyebrow: "APPLICATION MODERNIZATION",
+        title: ["Modernize applications.", "Accelerate innovation."],
+        description:
+          "Transform legacy applications with enterprise Kubernetes to deliver faster, scale confidently, and strengthen resilience.",
+      },
+      {
+        eyebrow: "KUBEVIRTSTACK",
+        title: ["Move beyond hypervisors.", "Build on KubeVirt."],
+        description:
+          "Plan your VM migration to Kubernetes-native virtualization with AI-assisted readiness assessment and migration planning.",
+        badge: "Under Development",
+      },
+    ],
     eyebrow: "AI DATA CENTER SOLUTIONS",
     title: ["Build the foundation", "for enterprise AI."],
     description:
@@ -16,7 +31,10 @@ export const homePageData: HomePageData = {
       label: "Explore our solutions",
       targetId: "our-solutions",
     },
-    secondaryAction: { label: "Schedule a consultation", href: "/get-started" },
+    secondaryAction: {
+      label: "Schedule a consultation",
+      href: "",
+    },
     marketplace: {
       brand: "GeM",
       logo: "/images/home/gem-logo.png",
@@ -408,5 +426,4 @@ export const homePageData: HomePageData = {
   //     },
   //   ],
   // },
-
 };
