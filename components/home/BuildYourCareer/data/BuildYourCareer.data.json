@@ -1,0 +1,37 @@
+{
+  "eyebrow": "BUILD YOUR CAREER WITH US",
+  "title": "Grow your career with HawkStack.",
+  "description": "Join a team solving meaningful technology challenges while learning, collaborating and building solutions that create real impact.",
+  "cta": { "label": "View open positions", "href": "/career" },
+  "card": {
+    "eyebrow": "LIFE AT HAWKSTACK",
+    "title": "Learn. Build. Grow together.",
+    "description": "A supportive environment for meaningful work and continuous growth.",
+    "features": [
+      {
+        "id": "meaningful-work",
+        "number": "01",
+        "title": "Work that matters",
+        "description": "Solve meaningful challenges"
+      },
+      {
+        "id": "learning",
+        "number": "02",
+        "title": "Keep learning",
+        "description": "Grow through projects and mentors"
+      },
+      {
+        "id": "teamwork",
+        "number": "03",
+        "title": "Build together",
+        "description": "Collaborate with supportive teams"
+      },
+      {
+        "id": "career-growth",
+        "number": "04",
+        "title": "Grow your career",
+        "description": "Expand skills and opportunities"
+      }
+    ]
+  }
+}
