@@ -271,7 +271,7 @@ export const trainingServicesPageData: TrainingServicesPageData = {
             },
             secondaryButton: {
             label: "Browse All Training",
-            href: "/training-services",
+            href: "/get-started?solution=enterprise-skills-enablement",
             },
         },
     }

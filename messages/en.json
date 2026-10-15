@@ -3,7 +3,7 @@
   "Header": {
     "home": "Home",
     "products": "What we Offer?",
-    "services": "Services",
+    "services": "Solutions",
     "company": "Company",
     "training": "Training",
     "toggleMenu": "Toggle menu",
@@ -553,10 +553,9 @@
           "title": "Grow your career",
           "description": "Expand skills and opportunities"
         }
-      ] 
+      ]
     }
   },
-  
 "SectorsSection": {
     "content": {
       "eyebrow": "Who we serve",
