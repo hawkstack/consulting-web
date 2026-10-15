@@ -48,7 +48,7 @@ export default function EngineeringDrivenCloudServices({ data }: Props) {
     <section
       id="our-solutions"
       aria-labelledby="solutions-heading"
-      className="scroll-mt-20 bg-white px-5 py-10 font-lexend md:px-10 xl:px-[68px]">
+      className="scroll-mt-20 bg-white px-5 font-lexend md:px-10 xl:px-[68px] py-12">
       <div className="mx-auto max-w-[1240px]">
         <div className="grid items-center gap-5 md:grid-cols-[45fr_55fr] md:gap-7">
           <h2
