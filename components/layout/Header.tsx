@@ -94,13 +94,25 @@ export function Header(): JSX.Element {
 
         {/* MOBILE MENU BUTTON */}
         <button
-          className="ml-auto lg:hidden text-white text-2xl"
+          className="ml-auto flex size-11 items-center justify-center rounded-md text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={tHeader("toggleMenu")}>
-          {mobileOpen ? "Ã¢Å“â€¢" : "Ã¢ËœÂ°"}
+          aria-label={tHeader("toggleMenu")}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation">
+          <span aria-hidden="true" className="relative block h-5 w-6">
+            <span
+              className={`absolute left-0 top-0 h-0.5 w-6 rounded-full bg-current transition-transform duration-200 motion-reduce:transition-none ${mobileOpen ? "translate-y-[9px] rotate-45" : ""}`}
+            />
+            <span
+              className={`absolute left-0 top-[9px] h-0.5 w-6 rounded-full bg-current transition-opacity duration-200 motion-reduce:transition-none ${mobileOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`absolute bottom-0 left-0 h-0.5 w-6 rounded-full bg-current transition-transform duration-200 motion-reduce:transition-none ${mobileOpen ? "-translate-y-[9px] -rotate-45" : ""}`}
+            />
+          </span>
         </button>
 
-        {/* Ã¢Å“â€¦ MEGA MENU Ã¢â‚¬â€ SAME AS PEHLE (CENTERED) */}
+        {/* DESKTOP MEGA MENU */}
         {items && activeItem && openMenu && (
           <div
             className="absolute left-1/2 top-full z-[70] hidden -translate-x-1/2 lg:block"
@@ -119,7 +131,9 @@ export function Header(): JSX.Element {
 
       {/* MOBILE MENU */}
       {mobileOpen && (
-        <div className="lg:hidden w-full bg-[#0B2458] px-6 pb-6">
+        <div
+          id="mobile-navigation"
+          className="lg:hidden w-full bg-[#0B2458] px-6 pb-6">
           <ul className="flex flex-col gap-6 pt-6">
             {(["home", "products", "services", "company"] as const).map(
               (item) => {
