@@ -27,6 +27,8 @@ export function getLocalizedHomePageData(t: HomeTranslator): HomePageData {
     heroSectionData: {
       ...homePageData.heroSectionData,
       ...heroCopy,
+      textSlides:
+        heroCopy?.textSlides ?? homePageData.heroSectionData.textSlides,
       primaryAction: {
         ...homePageData.heroSectionData.primaryAction,
         ...heroCopy?.primaryAction,

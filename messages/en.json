@@ -137,6 +137,19 @@
     "exploreOpenRoles": "Explore Open Roles",
     "content": {
       "heroSectionData": {
+        "textSlides": [
+          {
+            "eyebrow": "APPLICATION MODERNIZATION",
+            "title": ["Modernize applications.", "Accelerate innovation."],
+            "description": "Transform legacy applications with enterprise Kubernetes to deliver faster, scale confidently, and strengthen resilience."
+          },
+          {
+            "eyebrow": "KUBEVIRTSTACK",
+            "title": ["Move beyond hypervisors.","Build on KubeVirt."],
+            "description": "Plan your VM migration to Kubernetes-native virtualization with AI-assisted readiness assessment and migration planning.",
+            "badge": "Under Development"
+          }
+        ],
         "eyebrow": "AI DATA CENTER SOLUTIONS",
         "title": ["Build the foundation", "for enterprise AI."],
         "description": "Connect compute, storage, networking and AI platforms to turn ambitious ideas into operational capability.",
