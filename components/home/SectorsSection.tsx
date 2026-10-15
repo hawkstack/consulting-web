@@ -17,7 +17,7 @@ export default function SectorsSection() {
       id="who-we-serve"
       dir="ltr"
       aria-labelledby="sectors-title"
-      className="scroll-mt-[70px] bg-[#031527] px-5 py-8 font-lexend text-white md:flex md:min-h-[calc(100svh-70px)] md:items-center md:px-10 md:py-7 xl:px-[68px]">
+      className="scroll-mt-[70px] bg-[#031527] px-5 py-8 font-lexend text-white md:flex md:min-h-0 xl:min-h-[calc(100svh-70px)] md:items-center md:px-10 md:py-7 xl:px-[68px]">
       <div className="mx-auto w-full max-w-[1240px]">
         <p
           dir={textDirection}

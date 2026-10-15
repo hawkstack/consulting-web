@@ -116,7 +116,7 @@ export default function EngineeringDrivenCloudServices({ data }: Props) {
             <h3 className="text-[clamp(20px,1.8vw,24px)] font-semibold leading-[1.2] tracking-[-0.3px]">
               {activeService.headline}
             </h3>
-            <p className="mt-2 text-xs leading-[1.5] text-[#40577b]">
+            <p className="mt-2 line-clamp-2 text-xs leading-[1.5] text-[#40577b]">
               {activeService.description}
             </p>
             <div className="mt-3 grid flex-1 items-center gap-4 sm:grid-cols-[0.85fr_1.15fr]">

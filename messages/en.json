@@ -3,7 +3,7 @@
   "Header": {
     "home": "Home",
     "products": "What we Offer?",
-    "services": "Services",
+    "services": "Solutions",
     "company": "Company",
     "training": "Training",
     "toggleMenu": "Toggle menu",
@@ -556,7 +556,7 @@
       ]
     }
   },
-  "SectorsSection": {
+"SectorsSection": {
     "content": {
       "eyebrow": "Who we serve",
       "title": "Enterprises. Government. Public Sector.",
