@@ -13,6 +13,8 @@ import { useTranslations } from "next-intl";
 
 export const Footer = (): JSX.Element => {
   const tFooter = useTranslations("Footer");
+  const tHeader = useTranslations("Header");
+  const tSolutions = useTranslations("Home.content.cloudServicesSectionData.services");
   return (
     <footer className="font-lexend font-light bg-black relative overflow-hidden text-white w-full">
       {/* Blur */}
@@ -59,13 +61,13 @@ export const Footer = (): JSX.Element => {
 
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h4 className="mb-3 font-semibold">{tFooter("services")}</h4>
+              <h4 className="mb-3 font-semibold">{tHeader("services")}</h4>
 
               <ul className="space-y-2 text-sm text-gray-300">
                 {servicesLinks.map((item) => (
                   <li key={item.id}>
                     <Link href={item.href}>
-                      {tFooter(`links.services.${item.id}`)}
+                      {tSolutions(`${item.id}.title`)}
                     </Link>
                   </li>
                 ))}
@@ -115,13 +117,13 @@ export const Footer = (): JSX.Element => {
         {/* ================= IPAD / TABLET (md only) ================= */}
         <div className="hidden md:grid lg:hidden mt-12 grid-cols-[1fr_1fr_1fr_1.6fr] gap-x-6 text-[16px]">
           <div>
-            <h4 className="mb-4 font-semibold">{tFooter("services")}</h4>
+            <h4 className="mb-4 font-semibold">{tHeader("services")}</h4>
 
             <ul className="space-y-3 text-gray-300">
               {servicesLinks.map((item) => (
                 <li key={item.id}>
                   <Link href={item.href}>
-                    {tFooter(`links.services.${item.id}`)}
+                    {tSolutions(`${item.id}.title`)}
                   </Link>
                 </li>
               ))}
@@ -178,13 +180,13 @@ export const Footer = (): JSX.Element => {
         {/* ================= DESKTOP (lg+) ================= */}
         <div className="hidden lg:grid mt-2 grid-cols-4 gap-x-4 text-[16px]">
           <div>
-            <h4 className="mb-4 font-semibold">{tFooter("services")}</h4>
+            <h4 className="mb-4 font-semibold">{tHeader("services")}</h4>
 
             <ul className="space-y-3 text-gray-300">
               {servicesLinks.map((item) => (
                 <li key={item.id}>
                   <Link href={item.href}>
-                    {tFooter(`links.services.${item.id}`)}
+                    {tSolutions(`${item.id}.title`)}
                   </Link>
                 </li>
               ))}

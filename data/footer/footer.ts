@@ -1,3 +1,5 @@
+import { homePageData } from "@/data/home/home";
+
 export type FooterLink = {
   id: string;
   href: string;
@@ -26,15 +28,11 @@ export const socialIcons = [
   },
 ];
 
-export const servicesLinks: FooterLink[] = [
-  { id: "appModernization", href: "/app-modernization" },
-  { id: "kubevirt", href: "/kubevirt-service" },
-  { id: "automation", href: "/automation" },
-  { id: "cloudPlatformOperation", href: "/cloud-platform-operations" },
-  { id: "consultingServices", href: "/consulting-service" },
-  { id: "trainingServices", href: "/training-services" },
-  { id: "kubernetesAsAService", href: "/kubernetes-as-a-services" },
-];
+export const servicesLinks: FooterLink[] =
+  homePageData.cloudServicesSectionData.services.map((solution, index) => ({
+    id: String(index),
+    href: solution.href,
+  }));
 
 export const trainingLinks: FooterLink[] = [
   { id: "mirantis", href: "/coming-soon" },

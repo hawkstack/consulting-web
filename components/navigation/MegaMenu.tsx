@@ -24,6 +24,11 @@ export function MegaMenu({
   menuKey,
 }: Props): JSX.Element {
   const t = useTranslations("Header.megaMenu");
+  const tSolutions = useTranslations("Home.content.cloudServicesSectionData.services");
+  const itemCopy = (item: MegaItem, field: "label" | "title" | "description") =>
+    menuKey === "services"
+      ? tSolutions(`${item.translationKey}.${field === "label" ? "title" : field}`)
+      : t(`${menuKey}.${item.translationKey}.${field}`);
   const [offeringsView, setOfferingsView] = useState<
     "product" | "productResellers"
   >("product");
@@ -212,7 +217,7 @@ export function MegaMenu({
                   }`}
                 >
                   <span className="min-w-[150px] text-left">
-                    {t(`${menuKey}.${item.translationKey}.label`)}
+                    {itemCopy(item, "label")}
                   </span>
                   <span className="inline-flex w-8 shrink-0 justify-center text-[17px] font-medium leading-none">
                     {isActive ? "→" : "›"}
@@ -226,21 +231,21 @@ export function MegaMenu({
 
           <div className="flex-1 ">
             <h3 className="mb-6 font-lexend text-[16px] font-medium leading-[150%] tracking-[-0.03em] text-[#FFFFFF] md:text-[18px] lg:text-[20px]">
-              {t(`${menuKey}.${activeItem.translationKey}.title`)}
+              {itemCopy(activeItem, "title")}
             </h3>
 
             <div className="relative mb-6 h-[195px] w-[312px] overflow-hidden rounded-2xl">
               <Image
                 src={activeItem.image}
-                alt={t(`${menuKey}.${activeItem.translationKey}.title`)}
+                alt={itemCopy(activeItem, "title")}
                 fill
                 className="object-cover"
                 sizes="312px"
               />
             </div>
 
-            <p className="max-w-[555px] font-lexend text-[12px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] md:text-[14px] lg:text-[16px]">
-              {t(`${menuKey}.${activeItem.translationKey}.description`)}
+            <p className={`max-w-[555px] font-lexend text-[12px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] md:text-[14px] lg:text-[16px] ${menuKey === "services" ? "line-clamp-2" : ""}`}>
+              {itemCopy(activeItem, "description")}
             </p>
 
             {menuKey === "services" && activeItem.href ? (
