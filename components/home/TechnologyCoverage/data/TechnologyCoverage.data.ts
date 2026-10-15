@@ -195,6 +195,8 @@ export const technologyEcosystemData: TechnologyEcosystemData = {
           name: "MIRANTIS",
           kind: "image",
           logo: "/images/home/product-reseller/Mirantis.webp",
+          href: "https://www.mirantis.com/partners/hawkstack/",
+          external: true,
         },
       ],
     },
