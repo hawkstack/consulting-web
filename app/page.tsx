@@ -37,7 +37,6 @@ export default async function HomePage() {
       <SectorsSection />
       <WhyHawkStack />
       <BuildYourCareer />
-
       <ContactCTA />
     </div>
   );
