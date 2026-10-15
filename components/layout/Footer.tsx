@@ -25,11 +25,11 @@ export const Footer = (): JSX.Element => {
         <div className="flex items-center justify-between mb-10">
           <Link href="/" className="inline-block">
             <Image
-              src="/images/hawkstack-logo.webp"
+              src="/images/hawkstack-registered-logo.svg"
               alt="HawkStack"
-              width={120}
-              height={40}
-              className="bg-white rounded-[10px]"
+              width={150}
+              height={44}
+              className="h-auto w-[120px] rounded-[10px] bg-white"
             />
           </Link>
 
