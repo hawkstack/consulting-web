@@ -13,8 +13,8 @@ export default function ProductShowcaseSection() {
   const { product } = data;
 
   return (
-    <section id="hawkstack-products" dir="ltr" aria-labelledby="product-showcase-title" className="scroll-mt-[70px] bg-[#f5f8fc] px-5 py-8 font-lexend text-[#0a1731] md:flex md:min-h-[calc(50svh-70px)] xl:min-h-[calc(100svh-70px)] md:items-center md:py-7 md:px-10 xl:px-[68px]">
-      <div className="mx-auto w-full max-w-[1240px] xl:py-10">
+    <section id="hawkstack-products" dir="ltr" aria-labelledby="product-showcase-title" className="scroll-mt-[70px] bg-[#f5f8fc] px-5 font-lexend text-[#0a1731] md:flex md:items-center md:px-10 xl:px-[68px] py-12">
+      <div className="mx-auto w-full max-w-[1240px]">
         <div className="grid items-center gap-5 md:grid-cols-2 md:gap-10">
           <div>
             <p dir={textDirection} className="mb-3 text-left text-[10px] font-semibold uppercase tracking-[0.03em] text-[#0066ff]">{data.eyebrow}</p>
