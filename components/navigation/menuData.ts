@@ -1,6 +1,7 @@
 import { MegaItem, OfferingsMenuContent } from "./types";
 import { PRODUCT_TYPES } from "@/constants/productReseller";
 import { homePageData } from "@/data/home/home";
+import { solutions } from "@/data/solutions";
 
 /* ================= PRODUCTS ================= */
 export const products: MegaItem[] = [
@@ -112,13 +113,24 @@ export const offeringsMenuContent: OfferingsMenuContent = {
 };
 
 /* ================= SOLUTIONS ================= */
-export const services: MegaItem[] =
-  homePageData.cloudServicesSectionData.services.map((solution, index) => ({
-    id: solution.id,
-    translationKey: String(index),
-    image: solution.image,
-    href: solution.href,
-  }));
+export const services: MegaItem[] = Object.values(solutions).map(
+  (solution, index) => {
+    const menuContent = homePageData.cloudServicesSectionData.services.find(
+      (item) => item.id === solution.slug,
+    );
+
+    if (!menuContent) {
+      throw new Error(`Missing mega menu content for solution: ${solution.slug}`);
+    }
+
+    return {
+      id: solution.slug,
+      translationKey: String(index),
+      image: menuContent.image,
+      href: `/solutions/${solution.slug}`,
+    };
+  },
+);
 /* ================= COMPANY ================= */
 export const company: MegaItem[] = [
   {
