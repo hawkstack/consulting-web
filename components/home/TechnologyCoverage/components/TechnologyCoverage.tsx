@@ -85,12 +85,7 @@ export default function TechnologyCoverage() {
   ) as Partial<TechnologyEcosystemCopy>;
   const data = getLocalizedTechnologyEcosystemData(copy);
   return (
-    <section
-      dir="ltr"
-      id="technology-ecosystem"
-      aria-labelledby="technology-ecosystem-title"
-      className="scroll-mt-[70px] overflow-hidden bg-[#041222] px-5 py-8 md:flex md:min-h-0 xl:min-h-[calc(100svh-70px)] md:items-center font-lexend text-[#f0f4fc] sm:px-8 md:px-12 min-[900px]:px-[60px] xl:px-[68px]"
-    >
+    <section dir="ltr" id="technology-ecosystem" aria-labelledby="technology-ecosystem-title" className="scroll-mt-[70px] overflow-hidden bg-[#041222] px-5 md:flex md:items-center font-lexend text-[#f0f4fc] sm:px-8 md:px-12 min-[900px]:px-[60px] xl:px-[68px] py-12">
       <div className="mx-auto w-full max-w-[1240px]">
         <h2
           dir={textDirection}

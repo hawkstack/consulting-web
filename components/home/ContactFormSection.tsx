@@ -120,7 +120,7 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
     };
 
     return (
-      <div ref={ref} className="w-full bg-[#eff6ff] pt-8 xl:pt-15 overflow-hidden">
+      <div ref={ref} className="w-full bg-[#eff6ff] py-12 overflow-hidden">
         <div className="relative w-full">
           <div
             className="absolute -top-250 left-1/2 -translate-x-1/2 w-[250%] md:w-[190%] lg:w-[180%] xl:w-[160%] h-[2000px] 
