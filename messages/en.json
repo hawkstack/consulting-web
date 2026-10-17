@@ -375,8 +375,8 @@
     },
     "contact": {
       "title": "Let's Build Your Platform, the Right Way",
-      "descriptionLine1": "From Red Hat training to enterprise consulting,",
-      "descriptionLine2": "we'll help you move faster and smarter.",
+      "descriptionLine1": "From Red Hat training to enterprise consulting, we'll help",
+      "descriptionLine2": "you move faster and smarter.",
       "firstName": "First Name",
       "firstNamePlaceholder": "Enter your first name",
       "lastName": "Last Name",
