@@ -105,7 +105,7 @@ export const homePageData: HomePageData = {
         ],
         image: "/images/home/solutions/data-center.webp",
         imageAlt: "Modern data center with rows of server racks",
-        href: "/get-started?solution=data-center-solutions",
+        href: "/solutions/data-center-solutions",
       },
       {
         id: "application-modernization",
@@ -121,7 +121,7 @@ export const homePageData: HomePageData = {
         ],
         image: "/images/home/solutions/application-modernization.webp",
         imageAlt: "Enterprise servers connected to cloud-native platforms",
-        href: "/get-started?solution=application-modernization",
+        href: "/solutions/application-modernization",
       },
       {
         id: "enterprise-infrastructure-security",
@@ -138,7 +138,7 @@ export const homePageData: HomePageData = {
         image: "/images/home/solutions/infrastructure-security.webp",
         imageAlt:
           "Secure enterprise infrastructure and integrated server systems",
-        href: "/get-started?solution=enterprise-infrastructure-security",
+        href: "/solutions/enterprise-infrastructure-security",
       },
       {
         id: "virtualization-migration",
@@ -155,7 +155,7 @@ export const homePageData: HomePageData = {
         image: "/images/home/solutions/virtualization-migration.webp",
         imageAlt:
           "Server infrastructure migrating to modern virtual cloud platforms",
-        href: "/get-started?solution=virtualization-migration",
+        href: "/solutions/virtualization-migration",
       },
       {
         id: "enterprise-technology-consulting",
@@ -172,7 +172,7 @@ export const homePageData: HomePageData = {
         image: "/images/home/solutions/technology-consulting.webp",
         imageAlt:
           "Enterprise technology consulting and infrastructure planning session",
-        href: "/get-started?solution=enterprise-technology-consulting",
+        href: "/solutions/enterprise-technology-consulting",
       },
       {
         id: "enterprise-skills-enablement",
@@ -189,7 +189,7 @@ export const homePageData: HomePageData = {
         image: "/images/home/solutions/skills-enablement.webp",
         imageAlt:
           "Team working together on enterprise technology and infrastructure",
-        href: "/get-started?solution=enterprise-skills-enablement",
+        href: "/solutions/enterprise-skills-enablement",
       },
     ],
   },
