@@ -3,7 +3,10 @@ import type {
   SolutionExpertiseIcon,
 } from "@/data/solutions/types";
 
-type SolutionsExpertiseSectionProps = { content: SolutionExpertiseContent };
+type SolutionsExpertiseSectionProps = {
+  content: SolutionExpertiseContent;
+  textDirection?: "ltr" | "rtl";
+};
 
 function ExpertiseIcon({ name }: { name: SolutionExpertiseIcon }) {
   const common = {
@@ -72,6 +75,7 @@ function ExpertiseIcon({ name }: { name: SolutionExpertiseIcon }) {
 
 export default function SolutionsExpertiseSection({
   content,
+  textDirection = "ltr",
 }: SolutionsExpertiseSectionProps) {
   return (
     <section
@@ -81,11 +85,12 @@ export default function SolutionsExpertiseSection({
       <div className="mx-auto flex min-h-[138px] max-w-[1280px] flex-col items-center justify-center text-center xl:h-[150px] xl:min-h-0">
         <h2
           id="solutions-expertise-heading"
+          dir={textDirection}
           className="font-lexend text-[clamp(22px,2.3vw,33px)] font-semibold leading-[1.15] tracking-[-0.025em]"
         >
           {content.heading}
         </h2>
-        <p className="mt-2 max-w-[940px] font-lexend text-[11px] leading-[1.35] text-[#7789a8] sm:text-[13px]">
+        <p dir={textDirection} className="mt-2 max-w-[940px] font-lexend text-[11px] leading-[1.35] text-[#7789a8] sm:text-[13px]">
           {content.description}
         </p>
       </div>
@@ -100,10 +105,10 @@ export default function SolutionsExpertiseSection({
               <ExpertiseIcon name={card.icon} />
             </span>
             <div className="min-w-0">
-              <h3 className="font-lexend text-[13px] font-medium leading-[1.2] sm:text-lg">
+              <h3 dir={textDirection} className="text-left font-lexend text-[13px] font-medium leading-[1.2] sm:text-lg">
                 {card.title}
               </h3>
-              <p className="mt-1 font-lexend text-[11px] leading-[1.3] text-[#7b8ca7] sm:text-[14px]">
+              <p dir={textDirection} className="mt-1 text-left font-lexend text-[11px] leading-[1.3] text-[#7b8ca7] sm:text-[14px]">
                 {card.description}
               </p>
             </div>
