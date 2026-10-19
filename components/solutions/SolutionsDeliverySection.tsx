@@ -1,9 +1,13 @@
 import type { SolutionDeliveryContent } from "@/data/solutions/types";
 
-type SolutionsDeliverySectionProps = { content: SolutionDeliveryContent };
+type SolutionsDeliverySectionProps = {
+  content: SolutionDeliveryContent;
+  textDirection?: "ltr" | "rtl";
+};
 
 export default function SolutionsDeliverySection({
   content,
+  textDirection = "ltr",
 }: SolutionsDeliverySectionProps) {
   return (
     <section
@@ -13,11 +17,12 @@ export default function SolutionsDeliverySection({
       <div className="mx-auto max-w-[1160px] xl:pt-[96px]">
         <h2
           id="solutions-delivery-heading"
+          dir={textDirection}
           className="font-lexend text-[clamp(27px,2.7vw,38px)] font-semibold leading-[1.15] tracking-[-0.025em]"
         >
           {content.heading}
         </h2>
-        <p className="mx-auto mt-3 max-w-[720px] font-lexend text-sm leading-[1.4] text-[#d2dbea] sm:text-base">
+        <p dir={textDirection} className="mx-auto mt-3 max-w-[720px] font-lexend text-sm leading-[1.4] text-[#d2dbea] sm:text-base">
           {content.description}
         </p>
 
@@ -27,10 +32,10 @@ export default function SolutionsDeliverySection({
               <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#08659b] font-lexend text-2xl font-semibold text-white sm:h-16 sm:w-16">
                 {step.number}
               </span>
-              <h3 className="mt-4 font-lexend text-lg font-semibold leading-tight sm:text-xl">
+              <h3 dir={textDirection} className="mt-4 font-lexend text-lg font-semibold leading-tight sm:text-xl">
                 {step.title}
               </h3>
-              <p className="mt-2 max-w-[285px] font-lexend text-sm leading-[1.4] text-[#c3cedd] sm:text-base">
+              <p dir={textDirection} className="mt-2 max-w-[285px] font-lexend text-sm leading-[1.4] text-[#c3cedd] sm:text-base">
                 {step.description}
               </p>
             </li>
