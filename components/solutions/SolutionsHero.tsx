@@ -1,9 +1,15 @@
 import Link from "next/link";
 import type { SolutionHeroConfig } from "@/data/solutions/types";
 
-type SolutionsHeroProps = { content: SolutionHeroConfig };
+type SolutionsHeroProps = {
+  content: SolutionHeroConfig;
+  textDirection?: "ltr" | "rtl";
+};
 
-export default function SolutionsHero({ content }: SolutionsHeroProps) {
+export default function SolutionsHero({
+  content,
+  textDirection = "ltr",
+}: SolutionsHeroProps) {
   return (
     <section className="relative isolate flex min-h-[570px] w-full items-center justify-center overflow-hidden bg-[#03172c] px-5 py-20 text-center sm:min-h-[540px] sm:px-8 sm:py-16 lg:min-h-[534px] lg:px-10 lg:py-14">
       <div
@@ -29,17 +35,17 @@ export default function SolutionsHero({ content }: SolutionsHeroProps) {
 
       <div className="relative mx-auto flex w-full max-w-[1080px] flex-col items-center">
         <span className="inline-flex max-w-full items-center justify-center rounded-full border border-cyan-500/35 bg-cyan-500/[0.035] px-5 py-2 font-lexend text-[10px] font-bold tracking-[0.08em] text-[#04c4f4] sm:px-5 sm:text-[11px]">
-          {content.eyebrow}
+          <span dir={textDirection}>{content.eyebrow}</span>
         </span>
 
         <h1 className="mt-3 flex flex-col items-center font-lexend text-[clamp(2rem,3.35vw,3rem)] font-semibold leading-[1.12] tracking-[-0.025em] sm:mt-3">
-          <span className="text-white">{content.heading}</span>
-          <span className="bg-gradient-to-r from-[#32d2e5] via-[#16aef5] to-[#0878fa] bg-clip-text text-transparent">
+          <span dir={textDirection} className="text-white">{content.heading}</span>
+          <span dir={textDirection} className="bg-gradient-to-r from-[#32d2e5] via-[#16aef5] to-[#0878fa] bg-clip-text text-transparent">
             {content.highlightedHeading}
           </span>
         </h1>
 
-        <p className="mt-4 max-w-[880px] font-lexend text-[15px] font-normal leading-[1.35] text-[#d2dae5] sm:mt-4 sm:text-base lg:text-[17px]">
+        <p dir={textDirection} className="mt-4 max-w-[880px] font-lexend text-[15px] font-normal leading-[1.35] text-[#d2dae5] sm:mt-4 sm:text-base lg:text-[17px]">
           {content.description}
         </p>
 
@@ -47,7 +53,7 @@ export default function SolutionsHero({ content }: SolutionsHeroProps) {
           href={content.ctaHref}
           className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-to-r from-[#16b89c] to-[#075ee8] px-6 py-3 font-lexend text-sm font-medium text-white transition duration-200 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 sm:mt-6 sm:px-6"
         >
-          {content.ctaLabel}
+          <span dir={textDirection}>{content.ctaLabel}</span>
         </Link>
       </div>
     </section>
