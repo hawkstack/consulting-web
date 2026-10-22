@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -24,19 +24,26 @@ export function MegaMenu({
   menuKey,
 }: Props): JSX.Element {
   const t = useTranslations("Header.megaMenu");
-  const tSolutions = useTranslations("Home.content.cloudServicesSectionData.services");
-  const itemCopy = (item: MegaItem, field: "label" | "title" | "description") =>
+  const tSolutions = useTranslations(
+    "Home.content.cloudServicesSectionData.services",
+  );
+  const itemCopy = (
+    item: MegaItem,
+    field: "label" | "title" | "description",
+  ) =>
     menuKey === "services"
-      ? tSolutions(`${item.translationKey}.${field === "label" ? "title" : field}`)
+      ? tSolutions(
+          `${item.translationKey}.${field === "label" ? "title" : field}`,
+        )
       : t(`${menuKey}.${item.translationKey}.${field}`);
   const [offeringsView, setOfferingsView] = useState<
-    "product" | "productResellers"
+    "product" | "productResellers" | "distributionChannel"
   >("product");
 
   if (menuKey === "products") {
     return (
       <div
-        className="absolute left-1/2 top-full -translate-x-1/2 w-[1100px] lg:w-[1000px] xl:h-[464px] xl:w-[1221px]"
+        className="absolute left-1/2 top-full z-50 w-[min(1100px,calc(100vw-1rem))] -translate-x-1/2 lg:w-[1000px] xl:h-[464px] xl:w-[1221px]"
         onMouseLeave={onClose}
       >
         <div className="relative overflow-hidden rounded-b-[20px] bg-[#2B3859]/90 p-10 shadow-2xl backdrop-blur-md">
@@ -47,6 +54,7 @@ export function MegaMenu({
               <li>
                 <button
                   type="button"
+                  onClick={() => setOfferingsView("product")}
                   onMouseEnter={() => setOfferingsView("product")}
                   className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] transition-colors duration-200 ${
                     offeringsView === "product"
@@ -62,10 +70,10 @@ export function MegaMenu({
                   </span>
                 </button>
               </li>
-
               <li>
                 <button
                   type="button"
+                  onClick={() => setOfferingsView("productResellers")}
                   onMouseEnter={() => setOfferingsView("productResellers")}
                   className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] transition-colors duration-200 ${
                     offeringsView === "productResellers"
@@ -80,6 +88,27 @@ export function MegaMenu({
                   </span>
                   <span className="pl-6 text-[17px] font-medium leading-none">
                     {offeringsView === "productResellers" ? "→" : "›"}
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => setOfferingsView("distributionChannel")}
+                  onMouseEnter={() => setOfferingsView("distributionChannel")}
+                  className={`flex items-center justify-between font-lexend text-[18px] font-normal leading-tight tracking-[-0.03em] transition-colors duration-200 ${
+                    offeringsView === "distributionChannel"
+                      ? "text-[#5272FF]"
+                      : "text-white/90 hover:text-white"
+                  }`}
+                >
+                  <span className="min-w-[150px] text-left">
+                    {t(
+                      `products.tabs.${offeringsMenuContent.tabs.distributionChannel}`,
+                    )}
+                  </span>
+                  <span className="pl-6 text-[17px] font-medium leading-none">
+                    {offeringsView === "distributionChannel" ? "→" : "›"}
                   </span>
                 </button>
               </li>
@@ -127,26 +156,32 @@ export function MegaMenu({
                   </Link>
                 </div>
               ) : (
-                <div className="grid grid-cols-3">
-                  {offeringsMenuContent.resellers.map((item, index) => (
+                <div
+                  className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${offeringsView === "distributionChannel" ? "min-h-[188px]" : ""}`}
+                >
+                  {(offeringsView === "productResellers"
+                    ? offeringsMenuContent.resellers
+                    : offeringsMenuContent.distribution
+                  ).map((item, index, list) => (
                     <div
                       key={item.id}
                       className={`border-white/10 px-4 py-2 ${
+                        offeringsView === "productResellers" &&
                         index < offeringsMenuContent.resellers.length - 3
                           ? "border-b"
                           : ""
-                      } ${index % 3 !== 2 ? "border-r" : ""} ${
+                      } ${index % 3 !== 2 && index < list.length ? "lg:border-r" : ""} ${
                         index % 3 === 0 ? "pl-0" : ""
                       } ${index % 3 === 2 ? "pr-0" : ""}`}
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div>
-                          <h3 className="text-[20px] font-medium leading-none text-white">
+                          <h3 className="text-[16px] font-medium leading-none text-white">
                             {t(
                               `products.resellers.${item.translationKey}.title`,
                             )}
                           </h3>
-                          <p className="mt-2 max-w-[180px] text-[11px] leading-[1.6] text-[#D9E2F3]">
+                          <p className="mt-1 max-w-[180px] text-[9px] leading-[1.45] text-[#D9E2F3]">
                             {t(
                               `products.resellers.${item.translationKey}.description`,
                             )}
@@ -154,7 +189,7 @@ export function MegaMenu({
                           <Link
                             href={item.href ?? "/get-started"}
                             onClick={onClose}
-                            className="mt-2 inline-flex text-[11px] font-medium text-[#56A8FF] transition hover:text-white"
+                            className="mt-1 inline-flex text-[9px] font-medium text-[#56A8FF] transition hover:text-white"
                           >
                             {t("knowMore")}
                           </Link>
@@ -167,9 +202,9 @@ export function MegaMenu({
                               alt={t(
                                 `products.resellers.${item.translationKey}.title`,
                               )}
-                              width={30}
-                              height={30}
-                              className="h-7 w-7 object-contain"
+                              width={item.id === "gem" ? 54 : 42}
+                              height={24}
+                              className="h-6 w-auto max-w-[54px] object-contain"
                             />
                           </div>
                         ) : (
@@ -244,7 +279,9 @@ export function MegaMenu({
               />
             </div>
 
-            <p className={`max-w-[555px] font-lexend text-[12px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] md:text-[14px] lg:text-[16px] ${menuKey === "services" ? "line-clamp-2" : ""}`}>
+            <p
+              className={`max-w-[555px] font-lexend text-[12px] font-light leading-[1.6] tracking-[-0.01em] text-[#D1D5DC] md:text-[14px] lg:text-[16px] ${menuKey === "services" ? "line-clamp-2" : ""}`}
+            >
               {itemCopy(activeItem, "description")}
             </p>
 
