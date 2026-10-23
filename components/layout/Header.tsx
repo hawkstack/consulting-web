@@ -33,7 +33,7 @@ export function Header(): JSX.Element {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSections, setMobileSections] = useState<Set<MenuKey>>(new Set());
   const [mobileOfferingsView, setMobileOfferingsView] = useState<
-    "product" | "productResellers"
+    "product" | "productResellers" | "distributionChannel"
   >("product");
   const tMega = useTranslations("Header.megaMenu");
   const tHomeSolutions = useTranslations(
@@ -161,7 +161,7 @@ export function Header(): JSX.Element {
       {mobileOpen && (
         <div
           id="mobile-navigation"
-          className="lg:hidden max-h-[calc(100dvh-70px)] w-full overflow-y-auto overscroll-contain bg-[#0B2458] px-6 pb-6"
+          className="lg:hidden max-h-[calc(100dvh-70px)] w-full overflow-x-hidden overflow-y-auto overscroll-contain bg-[#0B2458] px-6 pb-6"
         >
           <ul className="flex flex-col gap-4 pt-6">
             {(["home", "products", "services", "company"] as const).map(
@@ -202,9 +202,13 @@ export function Header(): JSX.Element {
                           >
                             {item === "products" ? (
                               <>
-                                <div className="mb-3 flex gap-2">
+                                <div className="mb-3 flex flex-wrap gap-2">
                                   {(
-                                    ["product", "productResellers"] as const
+                                    [
+                                      "product",
+                                      "productResellers",
+                                      "distributionChannel",
+                                    ] as const
                                   ).map((view) => (
                                     <button
                                       key={view}
@@ -215,11 +219,19 @@ export function Header(): JSX.Element {
                                       aria-pressed={
                                         mobileOfferingsView === view
                                       }
-                                      className={`rounded-full border px-3 py-2 text-sm ${mobileOfferingsView === view ? "border-[#7C8CFF] text-white" : "border-white/25 text-white/75"}`}
+                                      className={`inline-flex max-w-full items-center gap-2 rounded-full border px-3 py-2 text-sm ${mobileOfferingsView === view ? "border-[#7C8CFF] text-white" : "border-white/25 text-white/75"}`}
                                     >
                                       {tMega(
                                         `products.tabs.${offeringsMenuContent.tabs[view]}`,
                                       )}
+                                      <span
+                                        aria-hidden="true"
+                                        className="shrink-0 text-xs"
+                                      >
+                                        {mobileOfferingsView === view
+                                          ? "→"
+                                          : "›"}
+                                      </span>
                                     </button>
                                   ))}
                                 </div>
@@ -237,7 +249,8 @@ export function Header(): JSX.Element {
                                       `products.${offeringsMenuContent.featured.translationKey}.title`,
                                     )}
                                   </Link>
-                                ) : (
+                                ) : mobileOfferingsView ===
+                                  "productResellers" ? (
                                   offeringsMenuContent.resellers.map(
                                     (reseller) => (
                                       <Link
@@ -248,6 +261,21 @@ export function Header(): JSX.Element {
                                       >
                                         {tMega(
                                           `products.resellers.${reseller.translationKey}.title`,
+                                        )}
+                                      </Link>
+                                    ),
+                                  )
+                                ) : (
+                                  offeringsMenuContent.distribution.map(
+                                    (partner) => (
+                                      <Link
+                                        key={partner.id}
+                                        href={partner.href ?? "/get-started"}
+                                        onClick={() => setMobileOpen(false)}
+                                        className="block py-2 text-sm text-white"
+                                      >
+                                        {tMega(
+                                          `products.resellers.${partner.translationKey}.title`,
                                         )}
                                       </Link>
                                     ),
