@@ -12,7 +12,8 @@
       "products": {
         "tabs": {
           "product": "Product",
-          "productResellers": "Product Resellers"
+          "productResellers": "Product Resellers",
+          "distributionChannel": "Distribution Channel"
         },
         "featured": {
           "title": "KubeVirtStack",
@@ -66,6 +67,26 @@
           "azure": {
             "title": "Azure",
             "description": "Microsoft's cloud platform enabling hybrid cloud, DevOps, and enterprise integration."
+          },
+          "suse": {
+            "title": "SUSE",
+            "description": "Enterprise Linux and open-source solutions for secure, adaptable infrastructure."
+          },
+          "dell": {
+            "title": "Dell",
+            "description": "Reliable enterprise hardware and infrastructure for modern data centers."
+          },
+          "ingram": {
+            "title": "Ingram Micro",
+            "description": "Global technology distribution and supply chain services for enterprise IT solutions."
+          },
+          "redington": {
+            "title": "Redington",
+            "description": "Technology distribution and services supporting cloud and enterprise transformation."
+          },
+          "gem": {
+            "title": "GeM",
+            "description": "Government e-Marketplace enabling transparent public-sector procurement and fulfillment."
           }
         }
       },
@@ -145,7 +166,7 @@
           },
           {
             "eyebrow": "KUBEVIRTSTACK",
-            "title": ["Move beyond hypervisors.","Build on KubeVirt."],
+            "title": ["Move beyond hypervisors.", "Build on KubeVirt."],
             "description": "Plan your VM migration to Kubernetes-native virtualization with AI-assisted readiness assessment and migration planning.",
             "badge": "Under Development"
           }
@@ -556,7 +577,7 @@
       ]
     }
   },
-"SectorsSection": {
+  "SectorsSection": {
     "content": {
       "eyebrow": "Who we serve",
       "title": "Enterprises. Government. Public Sector.",

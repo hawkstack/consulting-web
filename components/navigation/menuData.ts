@@ -42,6 +42,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
   tabs: {
     product: "product",
     productResellers: "productResellers",
+    distributionChannel: "distributionChannel",
   },
   featured: {
     translationKey: "featured",
@@ -93,14 +94,18 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       image: "/images/home/product-reseller/Azure.webp",
       href: "/product-reseller/azure",
     },
-    // {
-    //   id: "dell",
-    //   title: "Dell",
-    //   description:
-    //     "Reliable enterprise hardware and infrastructure for modern data centers.",
-    //   badge: "D",
-    //   href: "/get-started",
-    // },
+    {
+      id: "suse",
+      translationKey: "suse",
+      image: "/images/home/product-reseller/Suse.webp",
+      href: "/certificates/suse-partnership.pdf",
+    },
+    {
+      id: "dell",
+      translationKey: "dell",
+      image: "/images/home/digital-transformation/dell-technologies.webp",
+      href: "/get-started",
+    },
     // {
     //   id: "veeam",
     //   title: "Veeam",
@@ -109,6 +114,26 @@ export const offeringsMenuContent: OfferingsMenuContent = {
     //   badge: "V",
     //   href: "/get-started",
     // },
+  ],
+  distribution: [
+    {
+      id: "ingram",
+      translationKey: "ingram",
+      image: "/images/home/technology-ecosystem/ingram-micro.svg",
+      href: "/get-started",
+    },
+    {
+      id: "redington",
+      translationKey: "redington",
+      image: "/images/home/technology-ecosystem/redington.svg",
+      href: "/get-started",
+    },
+    {
+      id: "gem",
+      translationKey: "gem",
+      image: "/images/home/gem-logo.png",
+      href: "/get-started",
+    },
   ],
 };
 
@@ -120,7 +145,9 @@ export const services: MegaItem[] = Object.values(solutions).map(
     );
 
     if (!menuContent) {
-      throw new Error(`Missing mega menu content for solution: ${solution.slug}`);
+      throw new Error(
+        `Missing mega menu content for solution: ${solution.slug}`,
+      );
     }
 
     return {
