@@ -4,6 +4,7 @@ export const PRODUCT_TYPES = {
   GCP: "gcp",
   MIRANTIS: "mirantis",
   REDHAT: "redhat",
+  SUSE: "suse",
 } as const;
 
 export type ProductType = (typeof PRODUCT_TYPES)[keyof typeof PRODUCT_TYPES];
