@@ -17,6 +17,8 @@ export type OfferingsMenuItem = {
   href?: string;
 };
 
+export type DistributionMenuItem = OfferingsMenuItem;
+
 export type OfferingsMenuFeature = {
   translationKey: string;
   image: string;
@@ -27,7 +29,9 @@ export type OfferingsMenuContent = {
   tabs: {
     product: string;
     productResellers: string;
+    distributionChannel: string;
   };
   featured: OfferingsMenuFeature;
   resellers: OfferingsMenuItem[];
+  distribution: DistributionMenuItem[];
 };
