@@ -98,7 +98,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       id: "suse",
       translationKey: "suse",
       image: "/images/home/product-reseller/Suse.webp",
-      href: "/certificates/suse-partnership.pdf",
+      href: "/product-reseller/suse",
     },
     {
       id: "dell",
