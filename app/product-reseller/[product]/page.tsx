@@ -10,6 +10,7 @@ import { productRedhatPageData } from "@/components/product-reseller/product-red
 import ProductAwsPage from "@/components/product-reseller/product-aws/components/product-aws-page";
 import { productAwsPageData } from "@/components/product-reseller/product-aws/data/product-aws";
 import { PRODUCT_TYPES } from "@/constants/productReseller";
+import SUSEHero from "@/components/product-reseller/product-suse/components/SUSEHero";
 
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
@@ -28,13 +29,16 @@ type ProductPageProps = {
 };
 
 export function generateStaticParams() {
-  return Object.keys(productPages).map((product) => ({ product }));
+  return [...Object.keys(productPages), PRODUCT_TYPES.SUSE].map((product) => ({
+    product,
+  }));
 }
 
 export default async function ProductResellerPage({
   params,
 }: ProductPageProps) {
   const { product } = await params;
+  if (product === PRODUCT_TYPES.SUSE) return <SUSEHero />;
   const pageData = productPages[product as ProductSlug];
 
   if (!pageData) {
