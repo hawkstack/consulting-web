@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -174,7 +174,7 @@ export function MegaMenu({
                         index % 3 === 0 ? "pl-0" : ""
                       } ${index % 3 === 2 ? "pr-0" : ""}`}
                     >
-                      <div className="flex items-start justify-between gap-4">
+                      <div className="flex flex-row-reverse items-start justify-end gap-4">
                         <div>
                           <h3 className="text-[16px] font-medium leading-none text-white">
                             {t(
