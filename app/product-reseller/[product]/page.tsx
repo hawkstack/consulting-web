@@ -12,6 +12,8 @@ import { productAwsPageData } from "@/components/product-reseller/product-aws/da
 import { PRODUCT_TYPES } from "@/constants/productReseller";
 import SUSEHero from "@/components/product-reseller/product-suse/components/SUSEHero";
 
+import SUSESolutions from "@/components/product-reseller/product-suse/components/SUSESolutions";
+
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
   [PRODUCT_TYPES.CNCF]: productCncfPageData,
@@ -38,7 +40,14 @@ export default async function ProductResellerPage({
   params,
 }: ProductPageProps) {
   const { product } = await params;
-  if (product === PRODUCT_TYPES.SUSE) return <SUSEHero />;
+  if (product === PRODUCT_TYPES.SUSE) {
+    return (
+      <>
+        <SUSEHero />
+        <SUSESolutions />
+      </>
+    );
+  }
   const pageData = productPages[product as ProductSlug];
 
   if (!pageData) {
