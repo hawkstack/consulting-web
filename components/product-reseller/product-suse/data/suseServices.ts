@@ -10,15 +10,18 @@ export const suseServicesContent = {
     },
     {
       icon: "linux",
-      description: "Enterprise Linux deployment, hardening, and lifecycle management.",
+      description:
+        "Enterprise Linux deployment, hardening, and lifecycle management.",
     },
     {
       icon: "kubernetes",
-      description: "Rancher Prime architecture, Kubernetes deployment, and cluster operations.",
+      description:
+        "Rancher Prime architecture, Kubernetes deployment, and cluster operations.",
     },
     {
       icon: "virtualization",
-      description: "Virtualization assessment, proof of concept, and migration planning.",
+      description:
+        "Virtualization assessment, proof of concept, and migration planning.",
     },
     {
       icon: "security",
@@ -26,7 +29,8 @@ export const suseServicesContent = {
     },
     {
       icon: "support",
-      description: "Platform upgrades, troubleshooting, and technical enablement.",
+      description:
+        "Platform upgrades, troubleshooting, and technical enablement.",
     },
   ],
 } as const satisfies SuseServicesContent;
