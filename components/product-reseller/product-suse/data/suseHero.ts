@@ -9,7 +9,7 @@ export const suseHeroContent: SuseHeroContent = {
   actions: [
     {
       label: "Explore SUSE solutions",
-      href: "",
+      href: "#suse-solutions",
       variant: "primary",
     },
     { label: "Talk to an expert", href: "/contact-us", variant: "secondary" },
