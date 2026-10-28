@@ -18,6 +18,7 @@ import BuildAroundYourPriorities from "@/components/product-reseller/product-sus
 import OurDeliveryApproach from "@/components/product-reseller/product-suse/components/OurDeliveryApproach";
 
 import SUSEServices from "@/components/product-reseller/product-suse/components/SUSEServices";
+import SUSEContactCTA from "@/components/product-reseller/product-suse/components/SUSEContactCTA";
 
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
@@ -54,6 +55,7 @@ export default async function ProductResellerPage({
         <SUSEServices />
         <BuildAroundYourPriorities />
         <OurDeliveryApproach />
+        <SUSEContactCTA />
       </>
     );
   }
