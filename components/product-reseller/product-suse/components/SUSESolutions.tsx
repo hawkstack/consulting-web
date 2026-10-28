@@ -15,14 +15,16 @@ export default function SUSESolutions() {
     <section
       id="suse-solutions"
       aria-labelledby="suse-solutions-heading"
-      className="scroll-mt-24 bg-[#f4f9f6] text-[#162b28]">
-      <div className="mx-auto max-w-[1220px] px-6 py-8 sm:px-9 lg:px-10">
+      className="scroll-mt-24 bg-[#f4f9f6] text-[#162b28]"
+    >
+      <div className="mx-auto max-w-[1230px] px-6 py-8 sm:px-9 lg:px-10 xl:px-8">
         <p className="text-[12px] font-semibold uppercase tracking-[0.06em] text-[#008c45]">
           Our solutions
         </p>
         <h2
           id="suse-solutions-heading"
-          className="mt-3 text-[clamp(28px,2.8vw,36px)] font-bold leading-[1.2] tracking-[-0.025em]">
+          className="mt-3 text-[clamp(28px,2.8vw,36px)] font-bold leading-[1.2] tracking-[-0.025em]"
+        >
           Open foundations. Greater possibilities.
         </h2>
         <p className="mt-3 max-w-[850px] text-[15px] leading-[1.65] text-[#5b756d]">
@@ -34,7 +36,8 @@ export default function SUSESolutions() {
           {suseSolutions.map((solution) => (
             <article
               key={solution.name}
-              className="flex min-w-0 flex-col rounded-xl lg:min-h-[170px] border border-[#d7e3dc] bg-white p-[18px]">
+              className="flex min-w-0 flex-col rounded-xl lg:min-h-[170px] border border-[#d7e3dc] bg-white p-[18px]"
+            >
               <div className="flex items-center gap-3">
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#eaf5ef] text-[#14965c]">
                   <svg
@@ -46,7 +49,8 @@ export default function SUSESolutions() {
                     stroke="currentColor"
                     strokeWidth="1.4"
                     strokeLinecap="round"
-                    strokeLinejoin="round">
+                    strokeLinejoin="round"
+                  >
                     <path d={iconPaths[solution.icon]} />
                   </svg>
                 </span>
@@ -60,7 +64,8 @@ export default function SUSESolutions() {
               <a
                 href={solution.href}
                 aria-label={`Explore ${solution.name}`}
-                className="mt-auto border-t border-[#d7e3dc] pt-3 text-[12px] font-medium text-[#008c45] transition-colors hover:text-[#005c2e] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008c45]">
+                className="mt-auto border-t border-[#d7e3dc] pt-3 text-[12px] font-medium text-[#008c45] transition-colors hover:text-[#005c2e] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008c45]"
+              >
                 Explore Product <span aria-hidden="true">&rarr;</span>
               </a>
             </article>

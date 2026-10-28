@@ -13,6 +13,7 @@ import { PRODUCT_TYPES } from "@/constants/productReseller";
 import SUSEHero from "@/components/product-reseller/product-suse/components/SUSEHero";
 
 import SUSESolutions from "@/components/product-reseller/product-suse/components/SUSESolutions";
+import SUSEWhyChoose from "@/components/product-reseller/product-suse/components/SUSEWhyChoose";
 
 import SUSEServices from "@/components/product-reseller/product-suse/components/SUSEServices";
 
@@ -47,6 +48,7 @@ export default async function ProductResellerPage({
       <>
         <SUSEHero />
         <SUSESolutions />
+        <SUSEWhyChoose />
         <SUSEServices />
       </>
     );
