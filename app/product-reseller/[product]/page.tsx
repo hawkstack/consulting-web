@@ -16,6 +16,7 @@ import SUSESolutions from "@/components/product-reseller/product-suse/components
 import SUSEWhyChoose from "@/components/product-reseller/product-suse/components/SUSEWhyChoose";
 
 import SUSEServices from "@/components/product-reseller/product-suse/components/SUSEServices";
+import SUSEContactCTA from "@/components/product-reseller/product-suse/components/SUSEContactCTA";
 
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
@@ -50,6 +51,7 @@ export default async function ProductResellerPage({
         <SUSESolutions />
         <SUSEWhyChoose />
         <SUSEServices />
+        <SUSEContactCTA />
       </>
     );
   }
