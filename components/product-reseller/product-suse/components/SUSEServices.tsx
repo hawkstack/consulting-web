@@ -20,7 +20,7 @@ export default function SUSEServices() {
       aria-labelledby="suse-services-heading"
       className="bg-white text-[#162b28]"
     >
-      <div className="mx-auto w-full max-w-[1180px] px-6 py-12 sm:px-9 lg:px-10 lg:py-16 xl:px-0">
+      <div className="mx-auto w-full max-w-[1170px] px-6 py-12 sm:px-9 lg:px-10 lg:py-16 xl:px-0">
         <p className="text-[11px] font-semibold uppercase tracking-[0.025em] text-[#14965c]">
           {content.eyebrow}
         </p>
