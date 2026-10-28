@@ -14,6 +14,8 @@ import SUSEHero from "@/components/product-reseller/product-suse/components/SUSE
 
 import SUSESolutions from "@/components/product-reseller/product-suse/components/SUSESolutions";
 
+import SUSEServices from "@/components/product-reseller/product-suse/components/SUSEServices";
+
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
   [PRODUCT_TYPES.CNCF]: productCncfPageData,
@@ -45,6 +47,7 @@ export default async function ProductResellerPage({
       <>
         <SUSEHero />
         <SUSESolutions />
+        <SUSEServices />
       </>
     );
   }
