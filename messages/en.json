@@ -501,12 +501,12 @@
         "category": "Enterprise Virtualization & Migration Readiness",
         "status": "Under Development",
         "summary": "A clearer path to modern virtualization.",
-        "description": "Make informed migration decisions with AI-assisted readiness assessments, workload analysis and practical execution plans. KubeVirtStack helps your business identify risks early and prepare for KubeVirt-based enterprise virtualization.",
+        "description": "Assess readiness, uncover risks and turn workload insights into a practical KubeVirt migration plan.",
         "features": [
-          "Understand migration readiness and potential blockers.",
-          "Review workloads, dependencies and assessment findings.",
-          "Turn analysis into a phased execution plan.",
-          "Validate the approach through a PoC and team enablement."
+          "Identify readiness and blockers.",
+          "Review workloads and dependencies.",
+          "Build a phased execution plan.",
+          "Validate with a PoC."
         ],
         "ctaLabel": "Plan Your Migration",
         "imageAlt": "Enterprise servers connected to virtual cloud platforms"
@@ -1139,4 +1139,31 @@
       }
     }
   }
+,
+  "AboutHawkStack": {
+    "eyebrow":  "About HawkStack",
+    "capabilities":  [
+                         {
+                             "title":  "Infrastructure",
+                             "description":  "Compute • Storage • Networking"
+                         },
+                         {
+                             "title":  "Enterprise Platforms",
+                             "description":  "Cloud • Kubernetes • Virtualization"
+                         },
+                         {
+                             "title":  "Automation \u0026 AI",
+                             "description":  "Automate operations. Enable AI adoption."
+                         },
+                         {
+                             "title":  "Skills \u0026 Enablement",
+                             "description":  "Train teams. Build lasting capability."
+                         }
+                     ],
+    "footer":  "Consulting \u0026 implementation at every stage.",
+    "title":  "Enterprise technology for digital transformation and AI adoption.",
+    "description":  "We deliver end-to-end solutions across infrastructure, cloud, automation and modern applications.",
+    "supportingCopy":  "We combine consulting, hardware and software solutions, implementation services and enterprise training.",
+    "actionLabel":  "Explore more"
+}
 }

@@ -1,6 +1,8 @@
 import { seoMeta } from "../components/seo/seoMeta";
 
 import HeroSection from "@/components/home/HeroSection";
+import AboutHawkStack from "@/components/home/AboutHawkStack";
+import { aboutSectionData } from "@/data/home/about";
 import ProductShowcaseSection from "@/components/home/ProductShowcaseSection";
 import EngineeringDrivenCloudServices from "@/components/home/EngineeringDrivenCloudServices";
 import WhyHawkStack from "@/components/home/WhyHawkStack/components/WhyHawkStack";
@@ -29,7 +31,10 @@ export default async function HomePage() {
   return (
     <div>
       <HeroSection data={heroSectionData} />
-      <ProductShowcaseSection />
+      <div id="home-overview" className="scroll-mt-[70px] bg-white lg:flex lg:min-h-[calc(100svh-70px)] lg:flex-col lg:justify-center lg:gap-4 lg:py-4">
+        <AboutHawkStack data={aboutSectionData} />
+        <ProductShowcaseSection />
+      </div>
       {/* <ProductReseller data={productsSectionData} /> */}
       {/* <DigitalTransformation data={digitalTransformationSectionData} /> */}
       <TechnologyCoverage />
