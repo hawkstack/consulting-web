@@ -5,7 +5,7 @@ export default function DellProductPortfolio() {
   const data = dellProductPortfolioData;
 
   return (
-    <section className="border-t-[3px] border-[#eaf4fb] bg-white px-5 pb-8 pt-7 sm:px-8 md:px-12 lg:px-16 lg:pb-9 lg:pt-8 xl:px-[6.8vw]">
+    <section className="border-t-[3px] border-[#eaf4fb] bg-white px-5 pb-8 pt-7 sm:px-8 md:px-12 lg:px-10 lg:pb-9 lg:pt-8 xl:px-[6.8vw]">
       <div className="mx-auto max-w-[1214px]">
         <header className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-center lg:mb-9">
           <div>
