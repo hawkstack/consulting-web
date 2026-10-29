@@ -14,6 +14,8 @@ import SUSEHero from "@/components/product-reseller/product-suse/components/SUSE
 
 import SUSESolutions from "@/components/product-reseller/product-suse/components/SUSESolutions";
 import SUSEWhyChoose from "@/components/product-reseller/product-suse/components/SUSEWhyChoose";
+import BuildAroundYourPriorities from "@/components/product-reseller/product-suse/components/BuildAroundYourPriorities";
+import OurDeliveryApproach from "@/components/product-reseller/product-suse/components/OurDeliveryApproach";
 
 import SUSEServices from "@/components/product-reseller/product-suse/components/SUSEServices";
 import SUSEContactCTA from "@/components/product-reseller/product-suse/components/SUSEContactCTA";
@@ -51,6 +53,8 @@ export default async function ProductResellerPage({
         <SUSESolutions />
         <SUSEWhyChoose />
         <SUSEServices />
+        <BuildAroundYourPriorities />
+        <OurDeliveryApproach />
         <SUSEContactCTA />
       </>
     );
