@@ -12,16 +12,16 @@ export const productShowcaseData: ProductShowcaseData = {
     "category": "Enterprise Virtualization & Migration Readiness",
     "status": "Under Development",
     "summary": "A clearer path to modern virtualization.",
-    "description": "Make informed migration decisions with AI-assisted readiness assessments, workload analysis and practical execution plans. KubeVirtStack helps your business identify risks early and prepare for KubeVirt-based enterprise virtualization.",
+    "description": "Assess readiness, uncover risks and turn workload insights into a practical KubeVirt migration plan.",
     "features": [
-      "Understand migration readiness and potential blockers.",
-      "Review workloads, dependencies and assessment findings.",
-      "Turn analysis into a phased execution plan.",
-      "Validate the approach through a PoC and team enablement."
+      "Identify readiness and blockers.",
+      "Review workloads and dependencies.",
+      "Build a phased execution plan.",
+      "Validate with a PoC."
     ],
     "ctaLabel": "Plan Your Migration",
-    "href": "/get-started?solution=virtualization-migration&product=KubeVirtStack",
-    "image": "/images/home/products/kubevirtstack-platform.svg",
+    "href": "https://kubevirtstack.com/",
+    "image": "/images/home/products/kubevirtstack-overview.svg",
     "imageAlt": "Enterprise servers connected to virtual cloud platforms",
     "logo": "/images/home/products/kubevirtstack-logo.svg"
   }
