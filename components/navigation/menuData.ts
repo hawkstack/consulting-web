@@ -104,7 +104,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       id: "dell",
       translationKey: "dell",
       image: "/images/home/product-reseller/dell-logo.png",
-      href: "/get-started",
+      href: "/product-reseller/dell",
     },
     // {
     //   id: "veeam",
