@@ -19,6 +19,8 @@ import OurDeliveryApproach from "@/components/product-reseller/product-suse/comp
 
 import SUSEServices from "@/components/product-reseller/product-suse/components/SUSEServices";
 import SUSEContactCTA from "@/components/product-reseller/product-suse/components/SUSEContactCTA";
+import DellHeroSection from "@/components/product-reseller/product-dell/components/DellHeroSection";
+import DellProductPortfolio from "@/components/product-reseller/product-dell/components/DellProductPortfolio";
 
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
@@ -37,7 +39,11 @@ type ProductPageProps = {
 };
 
 export function generateStaticParams() {
-  return [...Object.keys(productPages), PRODUCT_TYPES.SUSE].map((product) => ({
+  return [
+    ...Object.keys(productPages),
+    PRODUCT_TYPES.SUSE,
+    PRODUCT_TYPES.DELL,
+  ].map((product) => ({
     product,
   }));
 }
@@ -56,6 +62,14 @@ export default async function ProductResellerPage({
         <BuildAroundYourPriorities />
         <OurDeliveryApproach />
         <SUSEContactCTA />
+      </>
+    );
+  }
+  if (product === PRODUCT_TYPES.DELL) {
+    return (
+      <>
+        <DellHeroSection />
+        <DellProductPortfolio />
       </>
     );
   }
