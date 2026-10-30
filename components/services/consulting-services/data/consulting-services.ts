@@ -14,7 +14,7 @@ export const consultingServicesHeroContent: AppModernizationHeroContent = {
   buttons: [
     {
       label: "Schedule a Consultation",
-      href: "#app-modernization-form",
+      href: "/schedule-consultation",
       variant: "primary",
     },
     {
