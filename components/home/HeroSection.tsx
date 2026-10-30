@@ -109,7 +109,7 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
             <a
               href={data.secondaryAction.href || undefined}
               aria-disabled={!data.secondaryAction.href || undefined}
-              target="_blank"
+              target={data.secondaryAction.href?.startsWith("https://") ? "_blank" : undefined}
               rel="noopener noreferrer"
               className="[border-radius:999px] [padding:14px_20px] [font-size:13px] [font-weight:500] [line-height:1.2] [text-align:center]  [text-decoration:none] [color:#071731] [border:1px_solid_#cbd6e9] [background:white]  max-[1100px]:[font-size:12px] max-[1100px]:[padding:13px_16px] max-[400px]:[padding:12px_14px] max-[400px]:[font-size:11px]">
               {data.secondaryAction.label}

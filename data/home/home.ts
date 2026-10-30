@@ -33,7 +33,7 @@ export const homePageData: HomePageData = {
     },
     secondaryAction: {
       label: "Schedule a consultation",
-      href: "",
+      href: "/schedule-consultation",
     },
     marketplace: {
       brand: "GeM",
