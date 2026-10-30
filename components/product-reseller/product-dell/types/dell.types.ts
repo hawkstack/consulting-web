@@ -36,3 +36,27 @@ export interface DellProductPortfolioData {
     href: string;
   };
 }
+
+export interface DellIntegrationStep {
+  number: string;
+  heading: string;
+  items: string[];
+}
+
+export interface DellIntegrationData {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  steps: DellIntegrationStep[];
+}
+
+export interface DellWhyHawkstackItem {
+  heading: string;
+  description: string;
+}
+
+export interface DellWhyHawkstackData {
+  eyebrow: string;
+  heading: string[];
+  items: DellWhyHawkstackItem[];
+}
