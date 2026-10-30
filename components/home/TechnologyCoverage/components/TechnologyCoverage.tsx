@@ -14,7 +14,11 @@ import {
 } from "@/components/icons/Home/EcosystemIcons";
 
 function PartnerCard({ partner }: { partner: EcosystemPartner }) {
-  const brand = (
+  const brand = partner.id === "nutanix" && partner.logo ? (
+    <span className="inline-flex max-w-full items-center">
+      <Image src={partner.logo} alt={partner.name} width={129} height={33} className="h-auto w-[129px] max-w-full object-contain" />
+    </span>
+  ) : (
     <>
       {partner.kind === "aws" && (
         <EcosystemAwsMark className="h-8 w-12 shrink-0" />
