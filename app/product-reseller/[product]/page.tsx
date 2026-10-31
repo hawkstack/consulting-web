@@ -23,6 +23,8 @@ import DellHeroSection from "@/components/product-reseller/product-dell/componen
 import DellProductPortfolio from "@/components/product-reseller/product-dell/components/DellProductPortfolio";
 import DellIntegrationSection from "@/components/product-reseller/product-dell/components/DellIntegrationSection";
 import DellWhyHawkstackSection from "@/components/product-reseller/product-dell/components/DellWhyHawkstackSection";
+import DellProcessSection from "@/components/product-reseller/product-dell/components/DellProcessSection";
+import DellCtaSection from "@/components/product-reseller/product-dell/components/DellCtaSection";
 
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
@@ -74,6 +76,8 @@ export default async function ProductResellerPage({
         <DellProductPortfolio />
         <DellIntegrationSection />
         <DellWhyHawkstackSection />
+        <DellProcessSection />
+        <DellCtaSection />
       </>
     );
   }

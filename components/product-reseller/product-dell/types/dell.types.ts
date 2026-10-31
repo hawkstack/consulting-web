@@ -60,3 +60,25 @@ export interface DellWhyHawkstackData {
   heading: string[];
   items: DellWhyHawkstackItem[];
 }
+
+export interface DellProcessStep {
+  number: string;
+  heading: string;
+  description: string;
+}
+
+export interface DellProcessData {
+  eyebrow: string;
+  heading: string[];
+  description: string;
+  cta: { label: string; href: string };
+  steps: DellProcessStep[];
+}
+
+export interface DellCtaData {
+  eyebrow: string;
+  heading: string;
+  description: string[];
+  cta: { label: string; href: string };
+  supportingItems: string[];
+}
