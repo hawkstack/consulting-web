@@ -23,6 +23,8 @@ import SUSEServices from "@/components/product-reseller/product-suse/components/
 import SUSEContactCTA from "@/components/product-reseller/product-suse/components/SUSEContactCTA";
 import DellHeroSection from "@/components/product-reseller/product-dell/components/DellHeroSection";
 import DellProductPortfolio from "@/components/product-reseller/product-dell/components/DellProductPortfolio";
+import DellIntegrationSection from "@/components/product-reseller/product-dell/components/DellIntegrationSection";
+import DellWhyHawkstackSection from "@/components/product-reseller/product-dell/components/DellWhyHawkstackSection";
 
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
@@ -75,6 +77,8 @@ export default async function ProductResellerPage({
       <>
         <DellHeroSection />
         <DellProductPortfolio />
+        <DellIntegrationSection />
+        <DellWhyHawkstackSection />
       </>
     );
   }

@@ -1,7 +1,72 @@
 import type {
   DellHeroData,
+  DellIntegrationData,
   DellProductPortfolioData,
+  DellWhyHawkstackData,
 } from "../types/dell.types";
+
+export const dellWhyHawkstackData: DellWhyHawkstackData = {
+  eyebrow: "WHY HAWKSTACK",
+  heading: ["The right infrastructure.", "A team that sees the whole picture."],
+  items: [
+    {
+      heading: "Workloads first",
+      description:
+        "Start with application needs, capacity and growth before selecting a configuration.",
+    },
+    {
+      heading: "Platform expertise",
+      description:
+        "Connect hardware choices with Linux, Kubernetes, virtualization and AI.",
+    },
+    {
+      heading: "Technical clarity",
+      description:
+        "Align configurations and procurement with the deployment you actually need.",
+    },
+    {
+      heading: "Practical handover",
+      description:
+        "Give teams a validated environment, clear documentation and operational context.",
+    },
+  ],
+};
+
+export const dellIntegrationData: DellIntegrationData = {
+  eyebrow: "FROM PLATFORM TO PRODUCTION",
+  heading: "Hardware is the start. Integration makes it work.",
+  description:
+    "HawkStack connects Dell infrastructure with the platforms, applications and operational practices your teams rely on.",
+  steps: [
+    {
+      number: "01",
+      heading: "Plan the foundation",
+      items: [
+        "Infrastructure assessments",
+        "Workload sizing & architecture",
+        "Compute, storage & network design",
+      ],
+    },
+    {
+      number: "02",
+      heading: "Connect your platforms",
+      items: [
+        "Linux & virtualization",
+        "Kubernetes & application platforms",
+        "AI infrastructure planning",
+      ],
+    },
+    {
+      number: "03",
+      heading: "Deliver with confidence",
+      items: [
+        "Deployment & validation",
+        "Migration & operational handover",
+        "Documentation & team enablement",
+      ],
+    },
+  ],
+};
 
 export const dellHeroData: DellHeroData = {
   brand: { first: "DELL", second: "Technologies" },
