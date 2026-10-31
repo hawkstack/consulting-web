@@ -1,3 +1,5 @@
+import { getLocale, getTranslations } from "next-intl/server";
+import { getLocalizedSusePageData } from "@/lib/product-reseller/getLocalizedSusePageData";
 import { notFound } from "next/navigation";
 import ProductCncfPage from "@/components/product-reseller/product-cncf/components/product-cncf-page";
 import ProductGcpPage from "@/components/product-reseller/product-gcp/components/product-gcp-page";
@@ -53,16 +55,19 @@ export default async function ProductResellerPage({
 }: ProductPageProps) {
   const { product } = await params;
   if (product === PRODUCT_TYPES.SUSE) {
+    const locale = await getLocale();
+    const t = await getTranslations("Suse");
+    const data = getLocalizedSusePageData(t);
     return (
-      <>
-        <SUSEHero />
-        <SUSESolutions />
-        <SUSEWhyChoose />
-        <SUSEServices />
-        <BuildAroundYourPriorities />
-        <OurDeliveryApproach />
-        <SUSEContactCTA />
-      </>
+      <div lang={locale} dir="ltr">
+        <SUSEHero data={data.hero} />
+        <SUSESolutions data={data.solutions} />
+        <SUSEWhyChoose data={data.whyChoose} />
+        <SUSEServices data={data.services} />
+        <BuildAroundYourPriorities data={data.priorities} />
+        <OurDeliveryApproach data={data.delivery} />
+        <SUSEContactCTA data={data.contact} />
+      </div>
     );
   }
   if (product === PRODUCT_TYPES.DELL) {

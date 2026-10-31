@@ -1,6 +1,6 @@
-import { suseDeliverySteps } from "../data/suseDeliveryApproach";
+import type { SusePageData } from "@/lib/product-reseller/getLocalizedSusePageData";
 
-export default function OurDeliveryApproach() {
+export default function OurDeliveryApproach({ data: content }: { data: SusePageData["delivery"] }) {
   return (
     <section
       aria-labelledby="suse-delivery-heading"
@@ -8,16 +8,16 @@ export default function OurDeliveryApproach() {
     >
       <div className="mx-auto max-w-[1170px] px-6 py-12 sm:px-9 lg:py-[62px] xl:px-0">
         <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#318D60]">
-          A clear path forward
+          {content.eyebrow}
         </p>
         <h2
           id="suse-delivery-heading"
           className="mt-5 text-[34px] font-bold leading-[1.2] tracking-[-0.02em] lg:text-[38px] text-[#142725"
         >
-          Our Delivery Approach
+          {content.heading}
         </h2>
         <ol className="mt-11 grid grid-cols-1 gap-x-8 gap-y-9 sm:grid-cols-2 xl:grid-cols-4 xl:gap-x-9">
-          {suseDeliverySteps.map((step) => (
+          {content.steps.map((step) => (
             <li key={step.number} className="min-w-0">
               <div className="flex items-center gap-6">
                 <span className="text-[29px] font-semibold leading-none tracking-[0.01em] text-[#318D60] lg:text-[30px]">
