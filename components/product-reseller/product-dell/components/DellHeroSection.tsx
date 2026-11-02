@@ -1,7 +1,6 @@
-import { dellHeroData } from "../data/dellData";
+import type { DellHeroData } from "../types/dell.types";
 
-export default function DellHeroSection() {
-  const data = dellHeroData;
+export default function DellHeroSection({ data }: { data: DellHeroData }) {
 
   return (
     <section className="w-full bg-[#EAF4FB] px-5 py-10 text-[#102b41] sm:px-8 md:px-9 md:py-12 lg:px-10 xl:px-[6.8vw]">

@@ -1,7 +1,6 @@
-import { dellProcessData } from "../data/dellData";
+import type { DellProcessData } from "../types/dell.types";
 
-export default function DellProcessSection() {
-  const data = dellProcessData;
+export default function DellProcessSection({ data }: { data: DellProcessData }) {
 
   return (
     <section className="bg-white px-5 py-12 text-[#102b41] sm:px-8 sm:py-14 md:px-12 lg:px-10 lg:py-[64px] xl:px-[6.8vw]">
