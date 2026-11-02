@@ -495,21 +495,23 @@
   "ProductShowcase": {
     "content": {
       "eyebrow": "HawkStack Products",
-      "title": ["Modernize with confidence.", "Operate with clarity."],
+      "title": [
+        "Modernize with confidence.",
+        "Operate with clarity."
+      ],
       "description": "AI-assisted products that help enterprises assess readiness, plan technology change and validate critical platforms.",
       "product": {
         "category": "Enterprise Virtualization & Migration Readiness",
         "status": "Under Development",
-        "summary": "A clearer path to modern virtualization.",
-        "description": "Assess readiness, uncover risks and turn workload insights into a practical KubeVirt migration plan.",
+        "summary": "Know Your Readiness. Plan Your Migration.",
+        "description": "Assess workloads, identify risks and build a practical migration roadmap to KubeVirt.",
         "features": [
-          "Identify readiness and blockers.",
-          "Review workloads and dependencies.",
-          "Build a phased execution plan.",
-          "Validate with a PoC."
+          "Assess",
+          "Plan",
+          "Validate"
         ],
-        "ctaLabel": "Plan Your Migration",
-        "imageAlt": "Enterprise servers connected to virtual cloud platforms"
+        "ctaLabel": "Explore KubeVirtStack",
+        "imageAlt": "Silver servers with virtual machine cubes and a blue Kubernetes emblem on a light background"
       }
     }
   },
@@ -1141,31 +1143,31 @@
   }
 ,
   "AboutHawkStack": {
-    "eyebrow":  "About HawkStack",
-    "capabilities":  [
-                         {
-                             "title":  "Infrastructure",
-                             "description":  "Compute • Storage • Networking"
-                         },
-                         {
-                             "title":  "Enterprise Platforms",
-                             "description":  "Cloud • Kubernetes • Virtualization"
-                         },
-                         {
-                             "title":  "Automation \u0026 AI",
-                             "description":  "Automate operations. Enable AI adoption."
-                         },
-                         {
-                             "title":  "Skills \u0026 Enablement",
-                             "description":  "Train teams. Build lasting capability."
-                         }
-                     ],
-    "footer":  "Consulting \u0026 implementation at every stage.",
-    "title":  "Enterprise technology for digital transformation and AI adoption.",
-    "description":  "We deliver end-to-end solutions across infrastructure, cloud, automation and modern applications.",
-    "supportingCopy":  "We combine consulting, hardware and software solutions, implementation services and enterprise training.",
-    "actionLabel":  "Explore more"
-},
+    "eyebrow": "About HawkStack",
+    "title": "From infrastructure to enterprise AI.",
+    "description": "We help enterprises, government and public sector organizations modernize infrastructure, platforms and operations.",
+    "supportingCopy": "Technology consulting, implementation and enablement—from strategy to operations.",
+    "actionLabel": "Explore HawkStack",
+    "technologiesLabel": "Technologies we work with",
+    "capabilities": [
+      {
+        "title": "Build the foundation",
+        "description": "Compute, storage, networking and security for a dependable enterprise foundation."
+      },
+      {
+        "title": "Modernize your platforms",
+        "description": "Cloud, Kubernetes and virtualization to modernize enterprise platforms."
+      },
+      {
+        "title": "Automate & enable AI",
+        "description": "Streamline operations with automation and enable enterprise AI adoption."
+      },
+      {
+        "title": "Empower your teams",
+        "description": "Enterprise training and enablement for confident, operations-ready teams."
+      }
+    ]
+  },
   "Suse": {
     "content": {
       "hero": {

@@ -1,14 +1,27 @@
-﻿export const aboutSectionData = {
+import type { AboutSectionData } from "@/types/home/about";
+
+export const aboutSectionData: AboutSectionData = {
   eyebrow: "About HawkStack",
+  title: "From infrastructure to enterprise AI.",
+  description: "We help enterprises, government and public sector organizations modernize infrastructure, platforms and operations.",
+  supportingCopy: "Technology consulting, implementation and enablement—from strategy to operations.",
+  action: { label: "Explore HawkStack", href: "/about-us" },
   capabilities: [
-    { title: "Infrastructure", description: "Compute • Storage • Networking", icon: "server" },
-    { title: "Enterprise Platforms", description: "Cloud • Kubernetes • Virtualization", icon: "cube" },
-    { title: "Automation & AI", description: "Automate operations. Enable AI adoption.", icon: "refresh" },
-    { title: "Skills & Enablement", description: "Train teams. Build lasting capability.", icon: "cap" },
+    { id: "foundation", title: "Build the foundation", description: "Compute, storage, networking and security for a dependable enterprise foundation.", icon: "foundation" },
+    { id: "platforms", title: "Modernize your platforms", description: "Cloud, Kubernetes and virtualization to modernize enterprise platforms.", icon: "platforms" },
+    { id: "ai", title: "Automate & enable AI", description: "Streamline operations with automation and enable enterprise AI adoption.", icon: "ai" },
+    { id: "teams", title: "Empower your teams", description: "Enterprise training and enablement for confident, operations-ready teams.", icon: "teams" },
   ],
-  footer: "Consulting & implementation at every stage.",
-  title: "Enterprise technology for digital transformation and AI adoption.",
-  description: "We deliver end-to-end solutions across infrastructure, cloud, automation and modern applications.",
-  supportingCopy: "We combine consulting, hardware and software solutions, implementation services and enterprise training.",
-  action: { label: "Explore more", href: "/about-us" },
+  technologiesLabel: "Technologies we work with",
+  technologies: [
+    { name: "Red Hat", logo: "/images/home/product-reseller/Redhat.webp" },
+    { name: "SUSE", logo: "/images/home/product-reseller/Suse.webp" },
+    { name: "Dell Technologies", logo: "/images/home/product-reseller/dell-logo.png" },
+    { name: "AWS", logo: "/images/home/product-reseller/AWS.webp", wordmark: true },
+    { name: "Azure", logo: "/images/home/product-reseller/Azure.webp" },
+    { name: "Google Cloud", logo: "/images/home/product-reseller/google-cloud.webp" },
+    { name: "MIRANTIS", logo: "/images/home/product-reseller/Mirantis.webp", wordmark: true },
+    { name: "CNCF", logo: "/images/home/product-reseller/cncf.webp" },
+    { name: "Nutanix", logo: "/images/home/product-reseller/nutanix-about.svg", wordmark: true },
+  ],
 };

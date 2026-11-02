@@ -476,3 +476,46 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .hero-copy-enter, .hero-copy-leave { animation: none; }
 }
+
+/* About section technology-logo marquee. */
+.about-logo-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: about-logo-marquee 29s linear infinite;
+  will-change: transform;
+}
+
+.about-logo-marquee-sequence {
+  display: flex;
+  flex: none;
+  align-items: flex-start;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+@keyframes about-logo-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-logo-marquee-track {
+    animation: none;
+    will-change: auto;
+  }
+}
+
+/* Home product banner dimensions mirror the About-section content grid. */
+.home-product-showcase-card {
+  min-height: 250px;
+}
+
+.home-product-showcase-action {
+  min-width: 220px;
+}
+
+@media (min-width: 1200px) {
+  .home-product-showcase-action {
+    margin-right: 64px;
+  }
+}
