@@ -1,4 +1,4 @@
-import { suseServicesContent as content } from "../data/suseServices";
+import type { SusePageData } from "@/lib/product-reseller/getLocalizedSusePageData";
 import type { SuseServiceIcon } from "../types/suseServices";
 
 const iconPaths: Record<SuseServiceIcon, string> = {
@@ -13,7 +13,7 @@ const iconPaths: Record<SuseServiceIcon, string> = {
     "M14.5 6.5a6 6 0 0 0-7.8 7.8L2 19a2.1 2.1 0 0 0 3 3l9.7-9.7a6 6 0 0 0 7.8-7.8L18 9l-3-3 4.5-4.5a6 6 0 0 0-5 5Z",
 };
 
-export default function SUSEServices() {
+export default function SUSEServices({ data: content }: { data: SusePageData["services"] }) {
   return (
     <section
       id="suse-services"

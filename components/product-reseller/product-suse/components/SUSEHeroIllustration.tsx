@@ -1,4 +1,5 @@
-import type { SuseHeroContent, SuseIllustrationNode } from "../types/suseHero";
+import type { SusePageData } from "@/lib/product-reseller/getLocalizedSusePageData";
+import type { SuseIllustrationNode } from "../types/suseHero";
 
 function NodeIcon({ id }: { id: SuseIllustrationNode["id"] }) {
   if (id === "linux")
@@ -65,12 +66,12 @@ function NodeIcon({ id }: { id: SuseIllustrationNode["id"] }) {
 export default function SUSEHeroIllustration({
   content,
 }: {
-  content: SuseHeroContent;
+  content: SusePageData["hero"];
 }) {
   return (
     <div
       className="relative mx-auto aspect-square w-full max-w-[470px] select-none"
-      aria-label="SUSE ecosystem: Linux, Kubernetes, and virtualization"
+      aria-label={content.illustrationLabel}
       role="img"
     >
       <div className="absolute inset-[8%] rounded-full border border-[#c5d9d2]" />
