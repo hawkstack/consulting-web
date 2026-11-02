@@ -1,5 +1,5 @@
 import type { SusePriorityIcon } from "../types/susePriorities";
-import { susePriorities } from "../data/susePriorities";
+import type { SusePageData } from "@/lib/product-reseller/getLocalizedSusePageData";
 
 const iconPaths: Record<SusePriorityIcon, string> = {
   enterprise:
@@ -9,7 +9,7 @@ const iconPaths: Record<SusePriorityIcon, string> = {
     "M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm0 0c2.5-2.7 4-6.1 4-10s-1.5-7.3-4-10c-2.5 2.7-4 6.1-4 10s1.5 7.3 4 10ZM2 12h20",
 };
 
-export default function BuildAroundYourPriorities() {
+export default function BuildAroundYourPriorities({ data: content }: { data: SusePageData["priorities"] }) {
   return (
     <section
       aria-labelledby="suse-priorities-heading"
@@ -20,10 +20,10 @@ export default function BuildAroundYourPriorities() {
           id="suse-priorities-heading"
           className="text-[30px] font-bold leading-[1.2] tracking-[-0.02em] lg:text-[34px]"
         >
-          Built Around Your Priorities
+          {content.heading}
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 xl:grid-cols-3 xl:gap-x-6">
-          {susePriorities.map((priority) => (
+          {content.items.map((priority) => (
             <article
               key={priority.title}
               className="border-t border-[#C5DACD] pt-6"

@@ -1165,5 +1165,169 @@
     "description":  "We deliver end-to-end solutions across infrastructure, cloud, automation and modern applications.",
     "supportingCopy":  "We combine consulting, hardware and software solutions, implementation services and enterprise training.",
     "actionLabel":  "Explore more"
-}
+},
+  "Suse": {
+    "content": {
+      "hero": {
+        "brandTagline": "OPEN BY DESIGN",
+        "heading": [
+          "Your infrastructure.",
+          "Your choice.",
+          "Modernize with SUSE."
+        ],
+        "description": "Build a resilient Linux foundation, simplify Kubernetes operations, and modernize virtualization—with HawkStack guiding every step.",
+        "actions": [
+          {
+            "label": "Explore SUSE solutions"
+          },
+          {
+            "label": "Talk to an expert"
+          }
+        ],
+        "audience": "FOR ENTERPRISES, GOVERNMENT & PUBLIC SECTOR",
+        "nodes": [
+          {
+            "label": "LINUX"
+          },
+          {
+            "label": "KUBERNETES"
+          },
+          {
+            "label": "VIRTUALIZATION"
+          }
+        ],
+        "caption": [
+          "One connected strategy.",
+          "More room to move forward."
+        ],
+        "illustrationLabel": "SUSE ecosystem: Linux, Kubernetes, and virtualization",
+        "brand": "SUSE"
+      },
+      "solutions": {
+        "eyebrow": "Our solutions",
+        "heading": "Open foundations. Greater possibilities.",
+        "description": "Connect your Linux, Kubernetes, and virtualization strategy with SUSE solutions designed for flexibility across data centers, cloud, and edge environments.",
+        "actionLabel": "Explore Product",
+        "exploreLabel": "Explore",
+        "items": [
+          {
+            "name": "SUSE Linux Enterprise Server",
+            "description": "Run business-critical applications on an enterprise Linux platform built for reliability, security, and long-term operational stability."
+          },
+          {
+            "name": "SUSE Rancher Prime",
+            "description": "Simplify Kubernetes management across environments with centralized administration, consistent policies, and enterprise support."
+          },
+          {
+            "name": "SUSE Virtualization",
+            "description": "Modernize virtual infrastructure with a Kubernetes-native platform that brings virtual machines and container operations closer together."
+          },
+          {
+            "name": "SUSE Security",
+            "description": "Strengthen container security with vulnerability management, runtime protection, and policies that help safeguard cloud-native workloads."
+          },
+          {
+            "name": "SUSE Multi Linux Manager",
+            "description": "Centralize provisioning, patching, configuration, and compliance management across supported Linux distributions."
+          },
+          {
+            "name": "SUSE Observability",
+            "description": "Understand application dependencies, investigate issues, and improve visibility across Kubernetes environments."
+          }
+        ]
+      },
+      "whyChoose": {
+        "heading": "Why Choose HawkStack for SUSE?",
+        "description": "Open technology. Practical expertise. Business focused delivery.",
+        "items": [
+          {
+            "title": "Architecture before acquisition:",
+            "description": "Align subscriptions and platform choices with your workloads, operating model, and growth plans."
+          },
+          {
+            "title": "Connected infrastructure expertise:",
+            "description": "Bring Linux, Kubernetes, virtualization, storage, and networking into one implementation roadmap."
+          },
+          {
+            "title": "Migration with clarity:",
+            "description": "Assess dependencies, validate compatibility, and plan a phased transition."
+          },
+          {
+            "title": "Operational readiness:",
+            "description": "Prepare your teams with documentation, knowledge transfer, and practical enablement."
+          }
+        ]
+      },
+      "services": {
+        "eyebrow": "From advisory to operations",
+        "heading": "SUSE Services We Deliver",
+        "services": [
+          {
+            "description": "Subscription advisory, procurement, and renewal planning."
+          },
+          {
+            "description": "Enterprise Linux deployment, hardening, and lifecycle management."
+          },
+          {
+            "description": "Rancher Prime architecture, Kubernetes deployment, and cluster operations."
+          },
+          {
+            "description": "Virtualization assessment, proof of concept, and migration planning."
+          },
+          {
+            "description": "Container security and observability integration."
+          },
+          {
+            "description": "Platform upgrades, troubleshooting, and technical enablement."
+          }
+        ]
+      },
+      "priorities": {
+        "heading": "Built Around Your Priorities",
+        "items": [
+          {
+            "title": "Enterprise IT",
+            "description": "Simplify infrastructure and support application modernization."
+          },
+          {
+            "title": "Government & Public Sector",
+            "description": "Align platform architecture with procurement, security, and operational requirements."
+          },
+          {
+            "title": "Distributed Operations",
+            "description": "Establish consistent management across data centers, cloud, and edge locations."
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "A clear path forward",
+        "heading": "Our Delivery Approach",
+        "steps": [
+          {
+            "title": "Assess",
+            "description": "Review infrastructure, workloads, dependencies, and modernization goals."
+          },
+          {
+            "title": "Design",
+            "description": "Define the architecture, subscription requirements, migration plan, and success criteria."
+          },
+          {
+            "title": "Implement",
+            "description": "Deploy platforms, integrate services, and validate agreed workloads."
+          },
+          {
+            "title": "Enable & Support",
+            "description": "Deliver documentation, team enablement, optimization, and ongoing operational assistance."
+          }
+        ]
+      },
+      "contact": {
+        "heading": "Ready to Build Your Next Chapter with SUSE?",
+        "description": "Talk to HawkStack about SUSE subscriptions, Linux modernization, Kubernetes management, and virtualization migration.",
+        "action": {
+          "label": "Discuss Your SUSE Requirements"
+        }
+      }
+    }
+  }
 }

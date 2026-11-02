@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
-import { suseContactContent as content } from "../data/suseContact";
+import type { SusePageData } from "@/lib/product-reseller/getLocalizedSusePageData";
 
-export default function SUSEContactCTA() {
+export default function SUSEContactCTA({ data: content }: { data: SusePageData["contact"] }) {
   return (
     <section
       aria-labelledby="suse-contact-heading"

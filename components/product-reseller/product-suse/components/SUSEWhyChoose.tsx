@@ -1,5 +1,5 @@
 import type { SuseWhyChooseIcon } from "../types/suseWhyChoose";
-import { suseWhyChooseFeatures } from "../data/suseWhyChoose";
+import type { SusePageData } from "@/lib/product-reseller/getLocalizedSusePageData";
 
 const iconSvgs: Record<
   SuseWhyChooseIcon,
@@ -37,7 +37,7 @@ const iconSvgs: Record<
   },
 };
 
-export default function SUSEWhyChoose() {
+export default function SUSEWhyChoose({ data: content }: { data: SusePageData["whyChoose"] }) {
   return (
     <section
       aria-labelledby="suse-why-choose-heading"
@@ -49,16 +49,16 @@ export default function SUSEWhyChoose() {
             id="suse-why-choose-heading"
             className="max-w-[390px] text-[28px] font-semibold leading-[1.3] tracking-[-0.02em] lg:text-[34px]"
           >
-            Why Choose HawkStack for SUSE?
+            {content.heading}
           </h2>
 
           <p className="mt-10 max-w-[370px] text-[17px] leading-[1.5] text-[#B3C9BD] lg:text-[21px]">
-            Open technology. Practical expertise. Business focused delivery.
+            {content.description}
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-x-10 gap-y-9 sm:grid-cols-2 sm:gap-x-12 md:pl-1 lg:gap-x-14 lg:gap-y-14">
-          {suseWhyChooseFeatures.map((feature) => {
+          {content.items.map((feature) => {
             const icon = iconSvgs[feature.icon];
 
             return (

@@ -1,8 +1,8 @@
-import { suseHeroContent as content } from "../data/suseHero";
+import type { SusePageData } from "@/lib/product-reseller/getLocalizedSusePageData";
 import SUSECtaButtons from "./SUSECtaButtons";
 import SUSEHeroIllustration from "./SUSEHeroIllustration";
 
-export default function SUSEHero() {
+export default function SUSEHero({ data: content }: { data: SusePageData["hero"] }) {
   return (
     <section className="relative isolate overflow-hidden bg-[#f8fcfa] text-[#101d1c]">
       <div
