@@ -1,9 +1,60 @@
 import type {
   DellHeroData,
+  DellCtaData,
   DellIntegrationData,
+  DellProcessData,
   DellProductPortfolioData,
   DellWhyHawkstackData,
 } from "../types/dell.types";
+
+export const dellCtaData: DellCtaData = {
+  eyebrow: "READY FOR YOUR NEXT MOVE?",
+  heading: "Let’s build around your workload.",
+  description: [
+    "Share your workloads, current infrastructure and growth plans.",
+    "We’ll help shape the right Dell solution and a practical path forward.",
+  ],
+  cta: { label: "Discuss your project", href: "/contact-us" },
+  supportingItems: [
+    "Infrastructure planning",
+    "Solution design",
+    "Implementation support",
+  ],
+};
+
+export const dellProcessData: DellProcessData = {
+  eyebrow: "HOW WE WORK",
+  heading: ["Clear steps.", "A stronger outcome."],
+  description:
+    "A practical path from business requirements to an infrastructure platform your team can operate.",
+  cta: { label: "Let's map your next project", href: "/contact-us" },
+  steps: [
+    {
+      number: "01",
+      heading: "Assess & scope",
+      description:
+        "Understand workloads, existing assets and business priorities.",
+    },
+    {
+      number: "02",
+      heading: "Design & configure",
+      description:
+        "Shape the architecture, configurations and implementation plan.",
+    },
+    {
+      number: "03",
+      heading: "Deploy & validate",
+      description:
+        "Install, integrate and validate against agreed requirements.",
+    },
+    {
+      number: "04",
+      heading: "Enable & optimize",
+      description:
+        "Document the platform and prepare teams for ongoing operations.",
+    },
+  ],
+};
 
 export const dellWhyHawkstackData: DellWhyHawkstackData = {
   eyebrow: "WHY HAWKSTACK",
