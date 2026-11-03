@@ -1,7 +1,6 @@
-import { dellWhyHawkstackData } from "../data/dellData";
+import type { DellWhyHawkstackData } from "../types/dell.types";
 
-export default function DellWhyHawkstackSection() {
-  const data = dellWhyHawkstackData;
+export default function DellWhyHawkstackSection({ data }: { data: DellWhyHawkstackData }) {
 
   return (
     <section className="bg-[#F7FAFC] px-5 pb-14 pt-10 text-[#102b41] sm:px-8 sm:pb-16 sm:pt-11 md:px-12 lg:px-10 lg:pb-[58px] lg:pt-[41px] xl:px-[6.8vw]">
