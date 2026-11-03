@@ -27,6 +27,7 @@ import DellIntegrationSection from "@/components/product-reseller/product-dell/c
 import DellWhyHawkstackSection from "@/components/product-reseller/product-dell/components/DellWhyHawkstackSection";
 import DellProcessSection from "@/components/product-reseller/product-dell/components/DellProcessSection";
 import DellCtaSection from "@/components/product-reseller/product-dell/components/DellCtaSection";
+import { getLocalizedDellPageData } from "@/lib/product-reseller/getLocalizedDellPageData";
 
 const productPages = {
   [PRODUCT_TYPES.AWS]: productAwsPageData,
@@ -75,15 +76,18 @@ export default async function ProductResellerPage({
     );
   }
   if (product === PRODUCT_TYPES.DELL) {
+    const locale = await getLocale();
+    const t = await getTranslations("Dell");
+    const data = getLocalizedDellPageData(t);
     return (
-      <>
-        <DellHeroSection />
-        <DellProductPortfolio />
-        <DellIntegrationSection />
-        <DellWhyHawkstackSection />
-        <DellProcessSection />
-        <DellCtaSection />
-      </>
+      <div lang={locale}>
+        <DellHeroSection data={data.hero} />
+        <DellProductPortfolio data={data.portfolio} />
+        <DellIntegrationSection data={data.integration} />
+        <DellWhyHawkstackSection data={data.whyHawkstack} />
+        <DellProcessSection data={data.process} />
+        <DellCtaSection data={data.cta} />
+      </div>
     );
   }
   const pageData = productPages[product as ProductSlug];
