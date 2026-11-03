@@ -1,5 +1,7 @@
 {
-  "LanguageSwitcher": { "label": "Select language" },
+  "LanguageSwitcher": {
+    "label": "Select language"
+  },
   "Header": {
     "home": "Home",
     "products": "What we Offer?",
@@ -336,10 +338,18 @@
           "Workforce enablement"
         ],
         "services": [
-          { "title": "Consulting" },
-          { "title": "Solution Design" },
-          { "title": "System Integration" },
-          { "title": "Training Solutions" }
+          {
+            "title": "Consulting"
+          },
+          {
+            "title": "Solution Design"
+          },
+          {
+            "title": "System Integration"
+          },
+          {
+            "title": "Training Solutions"
+          }
         ],
         "servicesCaption": "Integrated services across the transformation lifecycle",
         "primaryPartners": [
@@ -515,7 +525,6 @@
       }
     }
   },
-
   "WhyHawkStack": {
     "eyebrow": "WHY HAWKSTACK?",
     "title": "Expertise that connects strategy to execution.",
@@ -1140,8 +1149,7 @@
         ]
       }
     }
-  }
-,
+  },
   "AboutHawkStack": {
     "eyebrow": "About HawkStack",
     "title": "From infrastructure to enterprise AI.",
@@ -1198,10 +1206,7 @@
             "label": "VIRTUALIZATION"
           }
         ],
-        "caption": [
-          "One connected strategy.",
-          "More room to move forward."
-        ],
+        "caption": ["One connected strategy.", "More room to move forward."],
         "illustrationLabel": "SUSE ecosystem: Linux, Kubernetes, and virtualization",
         "brand": "SUSE"
       },
@@ -1329,6 +1334,202 @@
         "action": {
           "label": "Discuss Your SUSE Requirements"
         }
+      }
+    }
+  },
+  "Dell": {
+    "content": {
+      "hero": {
+        "brand": {
+          "first": "DELL",
+          "second": "Technologies"
+        },
+        "eyebrow": "ENTERPRISE INFRASTRUCTURE · POWERED BY EXPERTISE",
+        "heading": {
+          "lines": ["Your ambitions need", "a powerful foundation."],
+          "highlight": "Build it with Dell."
+        },
+        "description": "Power business-critical applications, modern virtualization, and enterprise AI with infrastructure designed around your workloads.",
+        "primaryCta": {
+          "label": "Explore Dell solutions",
+          "href": ""
+        },
+        "secondaryCta": {
+          "label": "Talk to an expert",
+          "href": "/contact-us"
+        },
+        "footerLabel": "FOR ENTERPRISES, GOVERNMENT & PUBLIC SECTOR",
+        "imagePath": "/images/product-dell/dell-hero-illustration.svg",
+        "imageAlt": "",
+        "imageTopLabel": "YOUR INFRASTRUCTURE. CONNECTED.",
+        "imageHeading": "One strategy. Every workload.",
+        "imageCaption": "Data center  /  Cloud  /  Edge"
+      },
+      "portfolio": {
+        "eyebrow": "THE DELL PORTFOLIO",
+        "heading": "The right foundation for what’s next.",
+        "headerDescription": [
+          "Choose the building blocks for your business.",
+          "We help connect them into one practical solution."
+        ],
+        "featured": {
+          "id": "poweredge",
+          "category": "01 / COMPUTE",
+          "title": "Dell PowerEdge Servers",
+          "description": "A foundation for business applications, virtualization, Kubernetes and demanding AI workloads.",
+          "linkLabel": "Explore compute solutions",
+          "href": "/contact-us",
+          "imagePath": "/images/product-dell/dell-poweredge-servers.svg",
+          "imageAlt": "Dell PowerEdge rack servers"
+        },
+        "products": [
+          {
+            "id": "powerstore",
+            "category": "02 / STORAGE",
+            "title": "Dell PowerStore",
+            "description": "Support application and database workloads with adaptable enterprise storage.",
+            "linkLabel": "Discuss solution",
+            "href": "/contact-us"
+          },
+          {
+            "id": "powerscale",
+            "category": "03 / UNSTRUCTURED DATA",
+            "title": "Dell PowerScale",
+            "description": "Bring growing file data together for analytics, AI and enterprise content.",
+            "linkLabel": "Discuss solution",
+            "href": "/contact-us"
+          },
+          {
+            "id": "powerprotect",
+            "category": "04 / DATA PROTECTION",
+            "title": "Dell PowerProtect",
+            "description": "Strengthen backup and recovery across your application landscape.",
+            "linkLabel": "Discuss solution",
+            "href": "/contact-us"
+          },
+          {
+            "id": "networking",
+            "category": "05 / CONNECTIVITY",
+            "title": "Dell Networking",
+            "description": "Connect servers, storage and applications with a consistent network foundation.",
+            "linkLabel": "Discuss solution",
+            "href": "/contact-us"
+          }
+        ],
+        "apex": {
+          "category": "06 / DELL APEX",
+          "heading": "Infrastructure on your terms.",
+          "description": "Explore consumption-based infrastructure options.",
+          "linkLabel": "Explore",
+          "href": "/contact-us"
+        }
+      },
+      "integration": {
+        "eyebrow": "FROM PLATFORM TO PRODUCTION",
+        "heading": "Hardware is the start. Integration makes it work.",
+        "description": "HawkStack connects Dell infrastructure with the platforms, applications and operational practices your teams rely on.",
+        "steps": [
+          {
+            "number": "01",
+            "heading": "Plan the foundation",
+            "items": [
+              "Infrastructure assessments",
+              "Workload sizing & architecture",
+              "Compute, storage & network design"
+            ]
+          },
+          {
+            "number": "02",
+            "heading": "Connect your platforms",
+            "items": [
+              "Linux & virtualization",
+              "Kubernetes & application platforms",
+              "AI infrastructure planning"
+            ]
+          },
+          {
+            "number": "03",
+            "heading": "Deliver with confidence",
+            "items": [
+              "Deployment & validation",
+              "Migration & operational handover",
+              "Documentation & team enablement"
+            ]
+          }
+        ]
+      },
+      "whyHawkstack": {
+        "eyebrow": "WHY HAWKSTACK",
+        "heading": [
+          "The right infrastructure.",
+          "A team that sees the whole picture."
+        ],
+        "items": [
+          {
+            "heading": "Workloads first",
+            "description": "Start with application needs, capacity and growth before selecting a configuration."
+          },
+          {
+            "heading": "Platform expertise",
+            "description": "Connect hardware choices with Linux, Kubernetes, virtualization and AI."
+          },
+          {
+            "heading": "Technical clarity",
+            "description": "Align configurations and procurement with the deployment you actually need."
+          },
+          {
+            "heading": "Practical handover",
+            "description": "Give teams a validated environment, clear documentation and operational context."
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "HOW WE WORK",
+        "heading": ["Clear steps.", "A stronger outcome."],
+        "description": "A practical path from business requirements to an infrastructure platform your team can operate.",
+        "cta": {
+          "label": "Let's map your next project",
+          "href": "/contact-us"
+        },
+        "steps": [
+          {
+            "number": "01",
+            "heading": "Assess & scope",
+            "description": "Understand workloads, existing assets and business priorities."
+          },
+          {
+            "number": "02",
+            "heading": "Design & configure",
+            "description": "Shape the architecture, configurations and implementation plan."
+          },
+          {
+            "number": "03",
+            "heading": "Deploy & validate",
+            "description": "Install, integrate and validate against agreed requirements."
+          },
+          {
+            "number": "04",
+            "heading": "Enable & optimize",
+            "description": "Document the platform and prepare teams for ongoing operations."
+          }
+        ]
+      },
+      "cta": {
+        "eyebrow": "READY FOR YOUR NEXT MOVE?",
+        "heading": "Let’s build around your workload.",
+        "description": [
+          "Share your workloads, current infrastructure and growth plans.",
+          "We’ll help shape the right Dell solution and a practical path forward."
+        ],
+        "cta": {
+          "label": "Discuss your project",
+          "href": "/contact-us"
+        },
+        "supportingItems": [
+          "Infrastructure planning",
+          "Solution design",
+          "Implementation support"
+        ]
       }
     }
   }

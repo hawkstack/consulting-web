@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { dellProductPortfolioData } from "../data/dellData";
+import type { DellProductPortfolioData } from "../types/dell.types";
 
-export default function DellProductPortfolio() {
-  const data = dellProductPortfolioData;
+export default function DellProductPortfolio({ data }: { data: DellProductPortfolioData }) {
 
   return (
     <section className="border-t-[3px] border-[#eaf4fb] bg-white px-5 pb-8 pt-7 sm:px-8 md:px-12 lg:px-10 lg:pb-9 lg:pt-8 xl:px-[6.8vw]">

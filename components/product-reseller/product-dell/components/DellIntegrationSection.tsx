@@ -1,7 +1,6 @@
-import { dellIntegrationData } from "../data/dellData";
+import type { DellIntegrationData } from "../types/dell.types";
 
-export default function DellIntegrationSection() {
-  const data = dellIntegrationData;
+export default function DellIntegrationSection({ data }: { data: DellIntegrationData }) {
 
   return (
     <section className="bg-[#102C46] px-5 pb-16 pt-12 text-white sm:px-8 sm:pb-20 sm:pt-14 md:px-12 lg:px-10 lg:pb-[96px] lg:pt-[63px] xl:px-[6.8vw]">

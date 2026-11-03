@@ -1,7 +1,6 @@
-import { dellCtaData } from "../data/dellData";
+import type { DellCtaData } from "../types/dell.types";
 
-export default function DellCtaSection() {
-  const data = dellCtaData;
+export default function DellCtaSection({ data }: { data: DellCtaData }) {
 
   return (
     <section className="bg-[#102C46] px-5 pb-10 pt-12 text-white sm:px-8 sm:pb-11 sm:pt-14 md:px-12 lg:px-10 lg:pb-[62px] lg:pt-[62px] xl:px-[6.8vw]">
