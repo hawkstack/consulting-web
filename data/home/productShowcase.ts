@@ -11,18 +11,17 @@ export const productShowcaseData: ProductShowcaseData = {
     "name": "KubeVirtStack",
     "category": "Enterprise Virtualization & Migration Readiness",
     "status": "Under Development",
-    "summary": "A clearer path to modern virtualization.",
-    "description": "Assess readiness, uncover risks and turn workload insights into a practical KubeVirt migration plan.",
+    "summary": "Know Your Readiness. Plan Your Migration.",
+    "description": "Assess workloads, identify risks and build a practical migration roadmap to KubeVirt.",
     "features": [
-      "Identify readiness and blockers.",
-      "Review workloads and dependencies.",
-      "Build a phased execution plan.",
-      "Validate with a PoC."
+      "Assess",
+      "Plan",
+      "Validate"
     ],
-    "ctaLabel": "Plan Your Migration",
+    "ctaLabel": "Explore KubeVirtStack",
     "href": "https://kubevirtstack.com/",
-    "image": "/images/home/products/kubevirtstack-overview.svg",
-    "imageAlt": "Enterprise servers connected to virtual cloud platforms",
+    "image": "/images/home/products/kubevirtstack-light.webp",
+    "imageAlt": "Silver servers with virtual machine cubes and a blue Kubernetes emblem on a light background",
     "logo": "/images/home/products/kubevirtstack-logo.svg"
   }
 };

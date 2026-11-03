@@ -1,0 +1,38 @@
+.layout {
+  display: grid;
+  width: 100%;
+  max-width: 1214px;
+  margin-inline: auto;
+  gap: 28px;
+}
+
+.heading {
+  max-width: 385px;
+  font-size: clamp(30px, 2.7vw, 36px);
+}
+
+.capabilityCard {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #dbe5f7;
+  border-radius: 14px;
+  background: rgb(246 248 254 / 90%);
+}
+
+.primaryAction {
+  min-width: 220px;
+  min-height: 42px;
+}
+
+@media (min-width: 640px) {
+  .capabilityCard {
+    min-height: 112px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 36.5%) minmax(0, 1fr);
+    column-gap: 40px;
+  }
+}
