@@ -31,7 +31,7 @@ export default async function HomePage() {
   return (
     <div>
       <HeroSection data={heroSectionData} />
-      <div id="home-overview" className="scroll-mt-[70px] bg-white lg:flex lg:min-h-[calc(100svh-70px)] lg:flex-col lg:justify-center lg:gap-4 lg:py-4">
+      <div id="home-overview" className="scroll-mt-[70px] bg-white">
         <AboutHawkStack data={aboutSectionData} />
         <ProductShowcaseSection />
       </div>
