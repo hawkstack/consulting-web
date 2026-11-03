@@ -46,7 +46,7 @@ export const offeringsMenuContent: OfferingsMenuContent = {
   },
   featured: {
     translationKey: "featured",
-    image: "/images/products/KubeVirtStack-AI.webp",
+    image: "/images/products/KubeVirtStack-TM.webp",
     primaryHref: "https://kubevirtstack.com/",
   },
   resellers: [
@@ -120,19 +120,19 @@ export const offeringsMenuContent: OfferingsMenuContent = {
       id: "ingram",
       translationKey: "ingram",
       image: "/images/home/technology-ecosystem/ingram-micro.svg",
-      href: "/get-started",
+      href: "/distribution-channel",
     },
     {
       id: "redington",
       translationKey: "redington",
       image: "/images/home/technology-ecosystem/redington.svg",
-      href: "/get-started",
+      href: "/distribution-channel",
     },
     {
       id: "gem",
       translationKey: "gem",
       image: "/images/home/gem-logo.png",
-      href: "/get-started",
+      href: "/distribution-channel",
     },
   ],
 };
