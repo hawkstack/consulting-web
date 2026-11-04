@@ -1,4 +1,8 @@
-import type { DistributionChannelContent } from "../types/distributionChannel.types";
+import type {
+  DistributionChannelContent,
+  InfrastructurePlatformsContent,
+  DistributionPlatformsContent,
+} from "../types/distributionChannel.types";
 
 export const distributionChannelContent: DistributionChannelContent = {
   eyebrow: "OUR TECHNOLOGY ECOSYSTEM",
@@ -104,4 +108,104 @@ export const distributionChannelContent: DistributionChannelContent = {
       },
     ],
   },
+};
+
+export const distributionPlatformsContent: DistributionPlatformsContent = {
+  eyebrow: "01 / ENTERPRISE PLATFORMS",
+  heading: ["Build the platform.", "Enable what comes next."],
+  introduction:
+    "Enterprise Linux, Kubernetes, automation and private cloud—connected with HawkStack’s architecture, integration and enablement expertise.",
+  items: [
+    {
+      brand: "Red Hat",
+      logo: "/images/home/product-reseller/Redhat.webp",
+      category: "ENTERPRISE PLATFORMS & AUTOMATION",
+      heading: "Build an open foundation for transformation.",
+      description:
+        "Red Hat brings together enterprise Linux, Kubernetes, virtualization, automation and AI platforms to run and modernize business-critical workloads.",
+      technologies:
+        "Red Hat Enterprise Linux · OpenShift · OpenShift Virtualization · Ansible Automation Platform · OpenShift AI",
+      hawkstackHelps:
+        "Platform architecture, implementation, integration, automation and enterprise training.",
+      discussionLabel: "Discuss your Red Hat requirements",
+      discussionHref: "/contact-us",
+    },
+    {
+      brand: "SUSE",
+      logo: "/images/home/product-reseller/Suse.webp",
+      category: "ENTERPRISE LINUX & KUBERNETES",
+      heading: "Bring choice and control to hybrid IT.",
+      description:
+        "SUSE combines enterprise Linux with Rancher-based Kubernetes management and virtualization to support applications across data centers, cloud and edge environments.",
+      technologies:
+        "SUSE Linux Enterprise · Rancher Prime · SUSE Virtualization",
+      hawkstackHelps:
+        "Linux and Kubernetes architecture, cluster integration, migration planning and team enablement.",
+      discussionLabel: "Discuss your SUSE requirements",
+      discussionHref: "/contact-us",
+    },
+    {
+      brand: "Mirantis",
+      logo: "/images/home/product-reseller/Mirantis.webp",
+      category: "KUBERNETES & PRIVATE CLOUD",
+      heading: "Make cloud native capability operational.",
+      description:
+        "Mirantis provides Kubernetes, container and OpenStack technologies for building and operating cloud native platforms and private cloud environments.",
+      technologies:
+        "Mirantis Kubernetes Engine · Mirantis OpenStack for Kubernetes · Mirantis Secure Registry",
+      hawkstackHelps:
+        "Platform consulting, integration and practical training to build deployment and operational capability.",
+      discussionLabel: "Discuss your Mirantis requirements",
+      discussionHref: "/contact-us",
+    },
+  ],
+};
+
+export const infrastructurePlatformsContent: InfrastructurePlatformsContent = {
+  eyebrow: "02 / INFRASTRUCTURE & VIRTUALIZATION",
+  heading: "A stronger foundation for every workload.",
+  items: [
+    {
+      brand: "Dell Technologies",
+      logo: "/images/home/digital-transformation/dell-technologies.webp",
+      category: "COMPUTE, STORAGE & DATA PROTECTION",
+      heading: "Power your enterprise. Prepare for AI.",
+      description:
+        "Dell Technologies provides the compute, storage and data protection foundations for enterprise applications, virtualization platforms and demanding AI workloads.",
+      technologies: [
+        "PowerEdge servers",
+        "Enterprise storage",
+        "Data protection",
+        "AI infrastructure",
+      ],
+      hawkstackHelps: [
+        "Infrastructure sizing",
+        "Solution sourcing",
+        "Deployment and integration with enterprise software platforms",
+      ],
+      discussionLabel: "Discuss your Dell Technologies requirements",
+      discussionHref: "/contact-us",
+    },
+    {
+      brand: "Nutanix",
+      logo: "/images/home/product-reseller/nutanix-updated.svg",
+      category: "VIRTUALIZATION & HYBRID CLOUD",
+      heading: "Simplify the infrastructure behind your business.",
+      description:
+        "Nutanix brings compute, storage and virtualization together through hyperconverged infrastructure and a unified hybrid cloud platform.",
+      technologies: [
+        "Nutanix Cloud Infrastructure",
+        "AHV Virtualization",
+        "Prism management",
+      ],
+      hawkstackHelps: [
+        "Infrastructure assessment",
+        "Workload sizing",
+        "Virtualization planning",
+        "Migration validation and platform integration",
+      ],
+      discussionLabel: "Discuss your Nutanix requirements",
+      discussionHref: "/contact-us",
+    },
+  ],
 };
