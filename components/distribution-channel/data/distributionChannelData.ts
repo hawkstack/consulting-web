@@ -1,6 +1,8 @@
 import type {
   DistributionChannelContent,
   InfrastructurePlatformsContent,
+  CloudPlatformsContent,
+  CloudEcosystemContent,
   DistributionPlatformsContent,
 } from "../types/distributionChannel.types";
 
@@ -208,4 +210,92 @@ export const infrastructurePlatformsContent: InfrastructurePlatformsContent = {
       discussionHref: "/contact-us",
     },
   ],
+};
+
+export const cloudPlatformsContent: CloudPlatformsContent = {
+  eyebrow: "03 / CLOUD PLATFORMS",
+  heading: ["More possibility.", "One connected cloud approach."],
+  introduction:
+    "Cloud readiness, architecture, migration and operational automation shaped around your business priorities.",
+  items: [
+    {
+      brand: "Amazon Web Services",
+      logo: "/images/home/product-reseller/AWS.webp",
+      category: "",
+      heading: "Build for changing business demand.",
+      description:
+        "AWS offers compute, storage, networking, managed Kubernetes and AI services to support cloud migration and modern application delivery.",
+      technologies: [
+        "Amazon EC2",
+        "Amazon S3",
+        "Amazon EKS",
+        "Cloud networking",
+        "AI services",
+      ],
+      hawkstackHelps: [
+        "Cloud readiness assessment",
+        "architecture",
+        "workload migration",
+        "Kubernetes integration and operational automation",
+      ],
+      discussionLabel: "Discuss your requirements",
+      discussionHref: "/contact-us",
+    },
+    {
+      brand: "Microsoft Azure",
+      logo: "/images/home/product-reseller/Azure.webp",
+      category: "",
+      heading: "Connect enterprise IT with cloud opportunity.",
+      description:
+        "Microsoft Azure brings together cloud infrastructure, containers, identity, data and AI services to support connected enterprise and hybrid environments.",
+      technologies: [
+        "Azure Virtual Machines",
+        "Azure Kubernetes Service",
+        "Azure Arc",
+        "Azure Machine Learning",
+      ],
+      hawkstackHelps: [
+        "Hybrid cloud design",
+        "platform integration",
+        "migration planning and enterprise enablement",
+      ],
+      discussionLabel: "Discuss your requirements",
+      discussionHref: "/contact-us",
+    },
+    {
+      brand: "Google Cloud",
+      logo: "/images/home/product-reseller/google-cloud.webp",
+      category: "",
+      heading: "Turn cloud capability into new possibilities.",
+      description:
+        "Google Cloud combines infrastructure, managed Kubernetes, analytics and AI capabilities for organizations modernizing applications and building data-driven services.",
+      technologies: [
+        "Compute Engine",
+        "Google Kubernetes Engine",
+        "BigQuery",
+        "Cloud Storage",
+        "AI services",
+      ],
+      hawkstackHelps: [
+        "Cloud architecture",
+        "container platform integration",
+        "migration planning and implementation guidance",
+      ],
+      discussionLabel: "Discuss your requirements",
+      discussionHref: "/contact-us",
+    },
+  ],
+};
+
+export const cloudEcosystemContent: CloudEcosystemContent = {
+  eyebrow: "BEYOND TECHNOLOGY VENDORS",
+  heading: "Open technologies. Shared progress.",
+  description:
+    "CNCF brings together the projects, people and practices shaping cloud native computing. HawkStack’s engagement with this ecosystem complements our platform expertise and enterprise enablement.",
+  supportingText: [
+    "Kubernetes ecosystem",
+    "Open source practices",
+    "Technical capability",
+  ],
+  logo: "/images/home/product-reseller/cncf.webp",
 };

@@ -67,3 +67,18 @@ export interface InfrastructurePlatformsContent {
   heading: string;
   items: InfrastructurePlatform[];
 }
+
+export interface CloudPlatformsContent {
+  eyebrow: string;
+  heading: [string, string];
+  introduction: string;
+  items: InfrastructurePlatform[];
+}
+
+export interface CloudEcosystemContent {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  supportingText: string[];
+  logo: string;
+}
