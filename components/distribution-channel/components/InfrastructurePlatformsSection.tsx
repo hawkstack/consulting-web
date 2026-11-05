@@ -8,7 +8,7 @@ export default function InfrastructurePlatformsSection() {
         <p className="text-[10px] font-bold tracking-[0.12em] text-[#3454ff]">
           {content.eyebrow}
         </p>
-        <h2 className="mt-3 text-[28px] font-semibold leading-[1.25] tracking-[-0.02em] sm:text-[34px]">
+        <h2 className="mt-3 text-[28px] font-semibold leading-[1.25] tracking-[-0.02em] sm:text-[32px] xl:text-[34px]">
           {content.heading}
         </h2>
 

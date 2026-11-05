@@ -9,7 +9,7 @@ export default function DistributionPlatformsSection() {
           {content.eyebrow}
         </p>
         <div className="mt-3 grid gap-6 md:grid-cols-[1.2fr_.88fr] md:items-center">
-          <h2 className="text-[32px] font-semibold leading-[1.22] tracking-[-0.02em] sm:text-[38px]">
+          <h2 className="text-[32px] font-semibold leading-[1.22] tracking-[-0.02em] sm:text-[32px] xl:text-[38px]">
             {content.heading[0]}
             <br />
             {content.heading[1]}

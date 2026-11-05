@@ -19,7 +19,7 @@ export default function CloudEcosystemSection() {
           <p className="text-[10px] font-bold tracking-[0.14em] text-[#69dced]">
             {content.eyebrow}
           </p>
-          <h2 className="mt-[18px] text-[27px] font-semibold leading-[1.2] tracking-[-0.02em] sm:text-[34px]">
+          <h2 className="mt-[18px] text-[27px] font-semibold leading-[1.2] tracking-[-0.02em] sm:text-[32px] xl:text-[34px]">
             {content.heading}
           </h2>
           <p className="mt-[24px] max-w-[1010px] text-[14px] leading-[1.75] text-[#b8c7dc] sm:text-[15px]">
