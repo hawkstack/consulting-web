@@ -30,3 +30,78 @@ export interface DistributionOutcomesContent {
   heading: string;
   items: DistributionOutcome[];
 }
+
+export interface DistributionPlatform {
+  brand: string;
+  logo: string;
+  category: string;
+  heading: string;
+  description: string;
+  technologies: string;
+  hawkstackHelps: string;
+  discussionLabel: string;
+  discussionHref: string;
+}
+
+export interface DistributionPlatformsContent {
+  eyebrow: string;
+  heading: [string, string];
+  introduction: string;
+  items: DistributionPlatform[];
+}
+
+export interface InfrastructurePlatform {
+  brand: string;
+  logo: string;
+  category: string;
+  heading: string;
+  description: string;
+  technologies: string[];
+  hawkstackHelps: string[];
+  discussionLabel: string;
+  discussionHref: string;
+}
+
+export interface InfrastructurePlatformsContent {
+  eyebrow: string;
+  heading: string;
+  items: InfrastructurePlatform[];
+}
+
+export interface CloudPlatformsContent {
+  eyebrow: string;
+  heading: [string, string];
+  introduction: string;
+  items: InfrastructurePlatform[];
+}
+
+export interface CloudEcosystemContent {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  supportingText: string[];
+  logo: string;
+}
+
+export interface WhyHawkStackItem {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface WhyHawkStackContent {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  actionLabel: string;
+  actionHref: string;
+  items: WhyHawkStackItem[];
+}
+
+export interface CollaborateCtaContent {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  actionLabel: string;
+  actionHref: string;
+}
