@@ -4,6 +4,8 @@ import DistributionPlatformsSection from "@/components/distribution-channel/comp
 import InfrastructurePlatformsSection from "@/components/distribution-channel/components/InfrastructurePlatformsSection";
 import CloudPlatformsSection from "@/components/distribution-channel/components/CloudPlatformsSection";
 import CloudEcosystemSection from "@/components/distribution-channel/components/CloudEcosystemSection";
+import WhyHawkStackSection from "@/components/distribution-channel/components/WhyHawkStackSection";
+import CollaborateCtaSection from "@/components/distribution-channel/components/CollaborateCtaSection";
 
 export default function DistributionChannelPage() {
   return (
@@ -14,6 +16,8 @@ export default function DistributionChannelPage() {
       <InfrastructurePlatformsSection />
       <CloudPlatformsSection />
       <CloudEcosystemSection />
+      <WhyHawkStackSection />
+      <CollaborateCtaSection />
     </main>
   );
 }

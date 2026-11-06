@@ -82,3 +82,26 @@ export interface CloudEcosystemContent {
   supportingText: string[];
   logo: string;
 }
+
+export interface WhyHawkStackItem {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface WhyHawkStackContent {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  actionLabel: string;
+  actionHref: string;
+  items: WhyHawkStackItem[];
+}
+
+export interface CollaborateCtaContent {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  actionLabel: string;
+  actionHref: string;
+}

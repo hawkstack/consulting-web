@@ -4,6 +4,8 @@ import type {
   CloudPlatformsContent,
   CloudEcosystemContent,
   DistributionPlatformsContent,
+  WhyHawkStackContent,
+  CollaborateCtaContent,
 } from "../types/distributionChannel.types";
 
 export const distributionChannelContent: DistributionChannelContent = {
@@ -298,4 +300,42 @@ export const cloudEcosystemContent: CloudEcosystemContent = {
     "Technical capability",
   ],
   logo: "/images/home/product-reseller/cncf.webp",
+};
+
+export const whyHawkStackContent: WhyHawkStackContent = {
+  eyebrow: "WHY HAWKSTACK",
+  heading: "Technology connected. Business enabled.",
+  description:
+    "The value is in how it all works together. HawkStack combines technologies and services into a practical path from your current environment to your next stage of growth.",
+  actionLabel: "Discuss your requirements",
+  actionHref: "/contact-us",
+  items: [
+    {
+      number: "01",
+      title: "Complete solution delivery",
+      description:
+        "Consulting, hardware, software, implementation and training brought together around your requirements.",
+    },
+    {
+      number: "02",
+      title: "Business priorities first",
+      description:
+        "Technology choices shaped by your workloads, existing investments and operational goals.",
+    },
+    {
+      number: "03",
+      title: "Capability beyond deployment",
+      description:
+        "Integration, automation and practical enablement that help teams operate and evolve their platforms.",
+    },
+  ],
+};
+
+export const collaborateCtaContent: CollaborateCtaContent = {
+  eyebrow: "COLLABORATE WITH HAWKSTACK",
+  heading: "Build more. Together.",
+  description:
+    "Bring your business priorities, technology expertise or next opportunity. Let's create the right solution—and a practical path forward.",
+  actionLabel: "Start a conversation",
+  actionHref: "/contact-us",
 };
