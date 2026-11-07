@@ -1,20 +1,36 @@
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { cloudPlatformsContent as content } from "@/components/distribution-channel/data/distributionChannelData";
+import { getCloudPlatformsContent } from "@/components/distribution-channel/data/distributionChannelData";
 
 export default function CloudPlatformsSection() {
+  const t = useTranslations("DistributionChannel");
+  const direction = useLocale() === "ar" ? "rtl" : "ltr";
+  const content = getCloudPlatformsContent(t);
   return (
-    <section className="bg-white px-5 py-10 font-lexend text-[#172a47] sm:px-8 lg:px-12 lg:py-[34px] xl:px-[5%]">
+    <section
+      dir="ltr"
+      className="bg-white px-5 py-10 font-lexend text-[#172a47] sm:px-8 lg:px-12 lg:py-[34px] xl:px-[5%]"
+    >
       <div className="mx-auto max-w-[1170px]">
-        <p className="text-[10px] font-bold tracking-[0.12em] text-[#3454ff]">
+        <p
+          dir={direction}
+          className="text-left text-[10px] font-bold tracking-[0.12em] text-[#3454ff]"
+        >
           {content.eyebrow}
         </p>
         <div className="mt-3 grid gap-5 md:grid-cols-[1.2fr_.88fr] md:items-end">
-          <h2 className="text-[28px] font-semibold leading-[1.25] tracking-[-0.02em] sm:text-[32px] xl:text-[34px]">
+          <h2
+            dir={direction}
+            className="text-left text-[28px] font-semibold leading-[1.25] tracking-[-0.02em] sm:text-[32px] xl:text-[34px]"
+          >
             {content.heading[0]}
             <br />
             {content.heading[1]}
           </h2>
-          <p className="max-w-[410px] text-[14px] leading-[1.65] text-[#40536f] md:justify-self-end text-left md:text-right">
+          <p
+            dir={direction}
+            className="max-w-[410px] text-[14px] leading-[1.65] text-[#40536f] md:justify-self-end text-left md:text-right"
+          >
             {content.introduction}
           </p>
         </div>
@@ -29,44 +45,68 @@ export default function CloudPlatformsSection() {
             >
               <Image
                 src={platform.logo}
-                alt={`${platform.brand} logo`}
+                alt={t("common.logoAlt", { brand: platform.brand })}
                 width={90}
                 height={40}
                 className="h-[32px] w-[58px] object-contain object-left"
               />
-              <h3 className="mt-[13px] text-[18px] font-semibold leading-tight text-[#3454ff]">
+              <h3
+                dir={direction}
+                className="text-left mt-[13px] text-[18px] font-semibold leading-tight text-[#3454ff]"
+              >
                 {platform.brand}
               </h3>
-              <h4 className="mt-[9px] text-[18px] font-semibold leading-[1.35] tracking-[-0.01em]">
+              <h4
+                dir={direction}
+                className="text-left mt-[9px] text-[18px] font-semibold leading-[1.35] tracking-[-0.01em]"
+              >
                 {platform.heading}
               </h4>
-              <p className="mt-[11px] text-[12px] leading-[1.45] text-[#40536f]">
+              <p
+                dir={direction}
+                className="text-left mt-[11px] text-[12px] leading-[1.45] text-[#40536f]"
+              >
                 {platform.description}
               </p>
 
               <div className="mt-[7px]">
-                <p className="text-[10px] font-bold tracking-[0.13em] text-[#3454ff]">
-                  KEY TECHNOLOGIES
+                <p
+                  dir={direction}
+                  className="text-left text-[10px] font-bold tracking-[0.13em] text-[#3454ff]"
+                >
+                  {t("common.keyTechnologies")}
                 </p>
-                <p className="mt-[6px] text-[11px] leading-[1.55] text-[#40536f]">
+                <p
+                  dir={direction}
+                  className="text-left mt-[6px] text-[11px] leading-[1.55] text-[#40536f]"
+                >
                   {platform.technologies.join(" · ")}
                 </p>
               </div>
 
               <div className="mt-[9px]">
-                <p className="text-[10px] font-bold tracking-[0.13em] text-[#3454ff]">
-                  HOW HAWKSTACK HELPS
+                <p
+                  dir={direction}
+                  className="text-left text-[10px] font-bold tracking-[0.13em] text-[#3454ff]"
+                >
+                  {t("common.howHawkStackHelps")}
                 </p>
-                <p className="mt-[6px] text-[11px] leading-[1.55] text-[#40536f]">
-                  {platform.hawkstackHelps.join(", ")}
+                <p
+                  dir={direction}
+                  className="text-left mt-[6px] text-[11px] leading-[1.55] text-[#40536f]"
+                >
+                  {platform.hawkstackHelps.join(
+                    direction === "rtl" ? "، " : ", ",
+                  )}
                 </p>
               </div>
 
               <a
+                dir="ltr"
                 href={platform.discussionHref}
                 className="mt-auto inline-flex w-fit items-center gap-2 pt-3 text-[11px] font-medium text-[#304cff] hover:underline"
               >
-                {platform.discussionLabel}
+                <span dir={direction}>{platform.discussionLabel}</span>
                 <span aria-hidden="true">→</span>
               </a>
             </article>
