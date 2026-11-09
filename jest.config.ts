@@ -19,4 +19,15 @@ const customJestConfig = {
   ],
 };
 
-export default createJestConfig(customJestConfig);
+const getJestConfig = createJestConfig(customJestConfig);
+
+export default async function jestConfig() {
+  const config = await getJestConfig();
+  return {
+    ...config,
+    // Transform next-intl and its ESM dependencies for provider integration tests.
+    transformIgnorePatterns: [
+      "node_modules/(?!(next-intl|use-intl|intl-messageformat|@formatjs)/)",
+    ],
+  };
+}

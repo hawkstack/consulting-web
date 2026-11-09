@@ -64,7 +64,7 @@ export const aboutusPageData: AboutUsPageData = {
       {
         id: 1,
         title: "KubeVirtStack",
-        logo: "/images/products/KubeVirtStack-AI.webp",
+        logo: "/images/products/KubeVirtStack-TM.webp",
         description:
           "Explore KubeVirtStack,your force for digital security with automation, virtalizatiom,  monitoring, resilience, security and observability.",
       },

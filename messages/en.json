@@ -1532,5 +1532,254 @@
         ]
       }
     }
+  },
+  "DistributionChannel": {
+    "common": {
+      "keyTechnologies": "KEY TECHNOLOGIES",
+      "howHawkStackHelps": "HOW HAWKSTACK HELPS",
+      "logoAlt": "{brand} logo",
+      "discussRequirements": "Discuss your requirements",
+      "brands": {
+        "hawkstack": "HawkStack",
+        "redHat": "Red Hat",
+        "suse": "SUSE",
+        "nutanix": "Nutanix",
+        "dell": "Dell",
+        "dellTechnologies": "Dell Technologies",
+        "mirantis": "Mirantis",
+        "aws": "AWS",
+        "amazon": "Amazon Web Services",
+        "azure": "Microsoft Azure",
+        "googleCloud": "Google Cloud",
+        "cncf": "CNCF"
+      }
+    },
+    "distributionChannel": {
+      "eyebrow": "OUR TECHNOLOGY ECOSYSTEM",
+      "heading": {
+        "0": "Global technology.",
+        "1": "Delivered as one."
+      },
+      "subheading": {
+        "0": "The platforms you trust.",
+        "1": "The expertise to bring them together."
+      },
+      "description": "Accelerate digital transformation and AI adoption with HawkStack. We connect leading OEMs and cloud platforms with consulting, implementation and enterprise enablement—from your data center to your next innovation.",
+      "actions": {
+        "0": {
+          "label": "Explore our ecosystem"
+        }
+      },
+      "audience": "FOR ENTERPRISES · GOVERNMENT · PUBLIC SECTOR",
+      "cardEyebrow": "ONE CONNECTED APPROACH",
+      "cardHeading": {
+        "0": "Technology,",
+        "1": "working together."
+      },
+      "steps": {
+        "0": {
+          "title": "Strategy",
+          "description": "Align technology to your priorities."
+        },
+        "1": {
+          "title": "Integration",
+          "description": "Connect platforms and operations."
+        },
+        "2": {
+          "title": "Delivery",
+          "description": "Implement. Enable. Move forward."
+        }
+      },
+      "logoPanelHeading": "THE TECHNOLOGIES BEHIND YOUR NEXT MOVE",
+      "outcomes": {
+        "eyebrow": "THE OUTCOME COMES FIRST",
+        "heading": "From technology choices to business outcomes.",
+        "items": {
+          "0": {
+            "title": "AI-ready data centers",
+            "description": "Align compute, storage, networking and platforms with enterprise AI requirements."
+          },
+          "1": {
+            "title": "Modern applications",
+            "description": "Connect Kubernetes, cloud and automation for more consistent delivery."
+          },
+          "2": {
+            "title": "Virtualization that fits",
+            "description": "Assess workloads and plan migration around business continuity."
+          },
+          "3": {
+            "title": "Stronger operations",
+            "description": "Combine resilient architecture, security and enterprise enablement."
+          }
+        }
+      }
+    },
+    "distributionPlatforms": {
+      "eyebrow": "01 / ENTERPRISE PLATFORMS",
+      "heading": {
+        "0": "Build the platform.",
+        "1": "Enable what comes next."
+      },
+      "introduction": "Enterprise Linux, Kubernetes, automation and private cloud—connected with HawkStack’s architecture, integration and enablement expertise.",
+      "items": {
+        "0": {
+          "category": "ENTERPRISE PLATFORMS & AUTOMATION",
+          "heading": "Build an open foundation for transformation.",
+          "description": "Red Hat brings together enterprise Linux, Kubernetes, virtualization, automation and AI platforms to run and modernize business-critical workloads.",
+          "technologies": "Red Hat Enterprise Linux · OpenShift · OpenShift Virtualization · Ansible Automation Platform · OpenShift AI",
+          "hawkstackHelps": "Platform architecture, implementation, integration, automation and enterprise training.",
+          "discussionLabel": "Discuss your Red Hat requirements"
+        },
+        "1": {
+          "category": "ENTERPRISE LINUX & KUBERNETES",
+          "heading": "Bring choice and control to hybrid IT.",
+          "description": "SUSE combines enterprise Linux with Rancher-based Kubernetes management and virtualization to support applications across data centers, cloud and edge environments.",
+          "technologies": "SUSE Linux Enterprise · Rancher Prime · SUSE Virtualization",
+          "hawkstackHelps": "Linux and Kubernetes architecture, cluster integration, migration planning and team enablement.",
+          "discussionLabel": "Discuss your SUSE requirements"
+        },
+        "2": {
+          "category": "KUBERNETES & PRIVATE CLOUD",
+          "heading": "Make cloud native capability operational.",
+          "description": "Mirantis provides Kubernetes, container and OpenStack technologies for building and operating cloud native platforms and private cloud environments.",
+          "technologies": "Mirantis Kubernetes Engine · Mirantis OpenStack for Kubernetes · Mirantis Secure Registry",
+          "hawkstackHelps": "Platform consulting, integration and practical training to build deployment and operational capability.",
+          "discussionLabel": "Discuss your Mirantis requirements"
+        }
+      }
+    },
+    "infrastructurePlatforms": {
+      "eyebrow": "02 / INFRASTRUCTURE & VIRTUALIZATION",
+      "heading": "A stronger foundation for every workload.",
+      "items": {
+        "0": {
+          "category": "COMPUTE, STORAGE & DATA PROTECTION",
+          "heading": "Power your enterprise. Prepare for AI.",
+          "description": "Dell Technologies provides the compute, storage and data protection foundations for enterprise applications, virtualization platforms and demanding AI workloads.",
+          "technologies": {
+            "0": "PowerEdge servers",
+            "1": "Enterprise storage",
+            "2": "Data protection",
+            "3": "AI infrastructure"
+          },
+          "hawkstackHelps": {
+            "0": "Infrastructure sizing",
+            "1": "Solution sourcing",
+            "2": "Deployment and integration with enterprise software platforms"
+          },
+          "discussionLabel": "Discuss your Dell Technologies requirements"
+        },
+        "1": {
+          "category": "VIRTUALIZATION & HYBRID CLOUD",
+          "heading": "Simplify the infrastructure behind your business.",
+          "description": "Nutanix brings compute, storage and virtualization together through hyperconverged infrastructure and a unified hybrid cloud platform.",
+          "technologies": {
+            "0": "Nutanix Cloud Infrastructure",
+            "1": "AHV Virtualization",
+            "2": "Prism management"
+          },
+          "hawkstackHelps": {
+            "0": "Infrastructure assessment",
+            "1": "Workload sizing",
+            "2": "Virtualization planning",
+            "3": "Migration validation and platform integration"
+          },
+          "discussionLabel": "Discuss your Nutanix requirements"
+        }
+      }
+    },
+    "cloudPlatforms": {
+      "eyebrow": "03 / CLOUD PLATFORMS",
+      "heading": {
+        "0": "More possibility.",
+        "1": "One connected cloud approach."
+      },
+      "introduction": "Cloud readiness, architecture, migration and operational automation shaped around your business priorities.",
+      "items": {
+        "0": {
+          "heading": "Build for changing business demand.",
+          "description": "AWS offers compute, storage, networking, managed Kubernetes and AI services to support cloud migration and modern application delivery.",
+          "technologies": {
+            "0": "Amazon EC2",
+            "1": "Amazon S3",
+            "2": "Amazon EKS",
+            "3": "Cloud networking",
+            "4": "AI services"
+          },
+          "hawkstackHelps": {
+            "0": "Cloud readiness assessment",
+            "1": "architecture",
+            "2": "workload migration",
+            "3": "Kubernetes integration and operational automation"
+          }
+        },
+        "1": {
+          "heading": "Connect enterprise IT with cloud opportunity.",
+          "description": "Microsoft Azure brings together cloud infrastructure, containers, identity, data and AI services to support connected enterprise and hybrid environments.",
+          "technologies": {
+            "0": "Azure Virtual Machines",
+            "1": "Azure Kubernetes Service",
+            "2": "Azure Arc",
+            "3": "Azure Machine Learning"
+          },
+          "hawkstackHelps": {
+            "0": "Hybrid cloud design",
+            "1": "platform integration",
+            "2": "migration planning and enterprise enablement"
+          }
+        },
+        "2": {
+          "heading": "Turn cloud capability into new possibilities.",
+          "description": "Google Cloud combines infrastructure, managed Kubernetes, analytics and AI capabilities for organizations modernizing applications and building data-driven services.",
+          "technologies": {
+            "0": "Compute Engine",
+            "1": "Google Kubernetes Engine",
+            "2": "BigQuery",
+            "3": "Cloud Storage",
+            "4": "AI services"
+          },
+          "hawkstackHelps": {
+            "0": "Cloud architecture",
+            "1": "container platform integration",
+            "2": "migration planning and implementation guidance"
+          }
+        }
+      }
+    },
+    "cloudEcosystem": {
+      "eyebrow": "BEYOND TECHNOLOGY VENDORS",
+      "heading": "Open technologies. Shared progress.",
+      "description": "CNCF brings together the projects, people and practices shaping cloud native computing. HawkStack’s engagement with this ecosystem complements our platform expertise and enterprise enablement.",
+      "supportingText": {
+        "0": "Kubernetes ecosystem",
+        "1": "Open source practices",
+        "2": "Technical capability"
+      }
+    },
+    "whyHawkStack": {
+      "eyebrow": "WHY HAWKSTACK",
+      "heading": "Technology connected. Business enabled.",
+      "description": "The value is in how it all works together. HawkStack combines technologies and services into a practical path from your current environment to your next stage of growth.",
+      "items": {
+        "0": {
+          "title": "Complete solution delivery",
+          "description": "Consulting, hardware, software, implementation and training brought together around your requirements."
+        },
+        "1": {
+          "title": "Business priorities first",
+          "description": "Technology choices shaped by your workloads, existing investments and operational goals."
+        },
+        "2": {
+          "title": "Capability beyond deployment",
+          "description": "Integration, automation and practical enablement that help teams operate and evolve their platforms."
+        }
+      }
+    },
+    "collaborateCta": {
+      "eyebrow": "COLLABORATE WITH HAWKSTACK",
+      "heading": "Build more. Together.",
+      "description": "Bring your business priorities, technology expertise or next opportunity. Let's create the right solution—and a practical path forward.",
+      "actionLabel": "Start a conversation"
+    }
   }
 }

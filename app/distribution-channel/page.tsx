@@ -1,11 +1,23 @@
 import DistributionChannelHero from "@/components/distribution-channel/components/DistributionChannelHero";
 import DistributionOutcomesSection from "@/components/distribution-channel/components/DistributionOutcomesSection";
+import DistributionPlatformsSection from "@/components/distribution-channel/components/DistributionPlatformsSection";
+import InfrastructurePlatformsSection from "@/components/distribution-channel/components/InfrastructurePlatformsSection";
+import CloudPlatformsSection from "@/components/distribution-channel/components/CloudPlatformsSection";
+import CloudEcosystemSection from "@/components/distribution-channel/components/CloudEcosystemSection";
+import WhyHawkStackSection from "@/components/distribution-channel/components/WhyHawkStackSection";
+import CollaborateCtaSection from "@/components/distribution-channel/components/CollaborateCtaSection";
 
 export default function DistributionChannelPage() {
   return (
     <main>
       <DistributionChannelHero />
       <DistributionOutcomesSection />
+      <DistributionPlatformsSection />
+      <InfrastructurePlatformsSection />
+      <CloudPlatformsSection />
+      <CloudEcosystemSection />
+      <WhyHawkStackSection />
+      <CollaborateCtaSection />
     </main>
   );
 }

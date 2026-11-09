@@ -10,7 +10,6 @@ export default function WhatWeOffer({ content }: Props) {
   return (
     <section className="w-full bg-[#F8FAFC] font-lexend px-4 md:px-8 lg:px-12 xl:px-20 py-10 md:py-7">
       <div className="max-w-[1280px] mx-auto">
-
         {/* Heading */}
         <h2 className="text-center text-[#001A52] text-[24px] md:text-[26px] xl:text-[40px] font-medium uppercase">
           {content.title}
@@ -18,7 +17,6 @@ export default function WhatWeOffer({ content }: Props) {
 
         {/* Main Box */}
         <div className="mt-8 overflow-hidden rounded-[28px] bg-[#0F172A]">
-
           {content.rows.map((row, index) => (
             <div
               key={row.id}
@@ -28,7 +26,9 @@ export default function WhatWeOffer({ content }: Props) {
             >
               {/* Arrow */}
               <div className="hidden md:flex items-start justify-center lg:pt-2">
-                <span className="text-white text-[20px]"><CrossDownArrow/></span>
+                <span className="text-white text-[20px]">
+                  <CrossDownArrow />
+                </span>
               </div>
 
               {/* Left Title / Logo */}
@@ -65,16 +65,15 @@ export default function WhatWeOffer({ content }: Props) {
                         key={item.id}
                         className="rounded-[12px] bg-[#394A57] border border-[#3B3B3B] py-2 pl-2 md:py-4 md:pl-5 flex items-center gap-3"
                       >
-
                         <div className="relative shrink-0 h-10 w-10 bg-[#E5E5E5] rounded-xl flex items-center justify-center">
-                            <div className="relative w-[28px] h-[23px]">
-                                <Image
-                                src={item.logo}
-                                alt={item.name}
-                                fill
-                                className="object-contain"
-                                />
-                            </div>
+                          <div className="relative w-[28px] h-[23px]">
+                            <Image
+                              src={item.logo}
+                              alt={item.name}
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
                         </div>
 
                         <div>
@@ -90,11 +89,9 @@ export default function WhatWeOffer({ content }: Props) {
                   </div>
                 )}
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
